@@ -22,7 +22,6 @@ namespace InterfazDATMA.Administrador
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             dgvPsico.AutoGenerateColumns = false;
             dgvPsico.DataSource = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
-            //HOLA HICE UN PUSH XD 
 
         }
 
