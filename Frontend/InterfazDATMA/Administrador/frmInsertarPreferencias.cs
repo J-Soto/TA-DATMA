@@ -37,5 +37,15 @@ namespace InterfazDATMA.Administrador
         {
             formPlantilla.abrirFormulario(formAnterior);
         }
+
+        private void frmInsertarPreferencias_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chblDispositivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using InterfazDATMA.plantilla;
+using InterfazDATMA.validacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +27,6 @@ namespace InterfazDATMA.Administrador
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
             daoTutor = new TutorWS.TutorWSClient();
-            tutor = new TutorWS.tutor();
 
             inicializarComponentes();
         }
@@ -38,7 +39,15 @@ namespace InterfazDATMA.Administrador
             cboDistrito.DataSource = distritos;
             cboDistrito.DisplayMember = "nombre";
 
-
+            txtNombre.Text = "";
+            txtApPat.Text = "";
+            txtApMat.Text = "";
+            txtCorreo.Text = "";
+            txtDni.Text = "";
+            txtTelf.Text = "";
+            txtCel.Text = "";
+            rbtnHombre.Checked = false;
+            rbtnMujer.Checked = false;
         }
 
         private void rbtnMujer_Click(object sender, EventArgs e)
