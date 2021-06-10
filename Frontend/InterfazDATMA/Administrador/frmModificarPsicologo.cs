@@ -31,8 +31,6 @@ namespace InterfazDATMA.Administrador
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
 
-            this.formPlantilla = formPlantilla;
-            this.formOperacionPersona = formOperacionPersona;
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             inicializarComponentes();
             completarDatosPsicologos();
@@ -229,6 +227,23 @@ namespace InterfazDATMA.Administrador
             {
                 MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void nuevoDistrito_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito formDistrito = new frmInsertarDistrito();
+            if (formDistrito.ShowDialog() == DialogResult.OK)
+            {
+                DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
+                BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+                cboDistrito.DataSource = distritos;
+                cboDistrito.DisplayMember = "nombre";
+            }
+        }
+
+        private void frmModificarPsicologo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

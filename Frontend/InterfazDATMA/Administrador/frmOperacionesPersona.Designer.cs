@@ -43,9 +43,6 @@ namespace InterfazDATMA.Administrador
             this.btnModificarTutor = new System.Windows.Forms.Button();
             this.btnModificarPsi = new System.Windows.Forms.Button();
             this.dgvTutores = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pict = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -56,6 +53,9 @@ namespace InterfazDATMA.Administrador
             this.btnBuscarPsi = new System.Windows.Forms.Button();
             this.btnListarTut = new System.Windows.Forms.Button();
             this.btnListarPsi = new System.Windows.Forms.Button();
+            this.NombreCompletoTutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FotoTutor = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ActivoTutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             this.SuspendLayout();
@@ -173,9 +173,9 @@ namespace InterfazDATMA.Administrador
             this.dgvTutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTutores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.pict,
-            this.dataGridViewTextBoxColumn2});
+            this.NombreCompletoTutor,
+            this.FotoTutor,
+            this.ActivoTutor});
             this.dgvTutores.EnableHeadersVisualStyles = false;
             this.dgvTutores.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvTutores.Location = new System.Drawing.Point(42, 88);
@@ -199,31 +199,8 @@ namespace InterfazDATMA.Administrador
             this.dgvTutores.RowTemplate.Height = 28;
             this.dgvTutores.Size = new System.Drawing.Size(934, 212);
             this.dgvTutores.TabIndex = 19;
+            this.dgvTutores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutores_CellContentClick);
             this.dgvTutores.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTutores_CellFormatting);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre Completo";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // pict
-            // 
-            this.pict.HeaderText = "Foto";
-            this.pict.MinimumWidth = 8;
-            this.pict.Name = "pict";
-            this.pict.ReadOnly = true;
-            this.pict.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // dgvPsicologos
             // 
@@ -375,6 +352,30 @@ namespace InterfazDATMA.Administrador
             this.btnListarPsi.UseVisualStyleBackColor = false;
             this.btnListarPsi.Click += new System.EventHandler(this.btnListarPsi_Click);
             // 
+            // NombreCompletoTutor
+            // 
+            this.NombreCompletoTutor.HeaderText = "Nombre Completo";
+            this.NombreCompletoTutor.MinimumWidth = 8;
+            this.NombreCompletoTutor.Name = "NombreCompletoTutor";
+            this.NombreCompletoTutor.ReadOnly = true;
+            this.NombreCompletoTutor.Width = 150;
+            // 
+            // FotoTutor
+            // 
+            this.FotoTutor.HeaderText = "Foto";
+            this.FotoTutor.MinimumWidth = 8;
+            this.FotoTutor.Name = "FotoTutor";
+            this.FotoTutor.ReadOnly = true;
+            this.FotoTutor.Width = 150;
+            // 
+            // ActivoTutor
+            // 
+            this.ActivoTutor.HeaderText = "Activo";
+            this.ActivoTutor.MinimumWidth = 8;
+            this.ActivoTutor.Name = "ActivoTutor";
+            this.ActivoTutor.ReadOnly = true;
+            this.ActivoTutor.Width = 150;
+            // 
             // frmOperacionesPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -416,9 +417,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Button btnModificarTutor;
         private System.Windows.Forms.Button btnModificarPsi;
         private System.Windows.Forms.DataGridView dgvTutores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn pict;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.TextBox txtBusqTutor;
         private System.Windows.Forms.TextBox txtBusqPsi;
@@ -429,5 +427,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
         private System.Windows.Forms.Button btnListarTut;
         private System.Windows.Forms.Button btnListarPsi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompletoTutor;
+        private System.Windows.Forms.DataGridViewImageColumn FotoTutor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivoTutor;
     }
 }

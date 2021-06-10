@@ -62,6 +62,7 @@ namespace InterfazDATMA.Administrador
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
+            this.nuevoDistrito = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -400,6 +401,22 @@ namespace InterfazDATMA.Administrador
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 103;
             this.pbFoto.TabStop = false;
+            this.pbFoto.WaitOnLoad = true;
+            // 
+            // nuevoDistrito
+            // 
+            this.nuevoDistrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.nuevoDistrito.FlatAppearance.BorderSize = 0;
+            this.nuevoDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nuevoDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nuevoDistrito.ForeColor = System.Drawing.Color.White;
+            this.nuevoDistrito.Location = new System.Drawing.Point(545, 269);
+            this.nuevoDistrito.Name = "nuevoDistrito";
+            this.nuevoDistrito.Size = new System.Drawing.Size(161, 40);
+            this.nuevoDistrito.TabIndex = 105;
+            this.nuevoDistrito.Text = "Nuevo Distrito";
+            this.nuevoDistrito.UseVisualStyleBackColor = false;
+            this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
             // 
             // frmModificarPsicologo
             // 
@@ -407,6 +424,7 @@ namespace InterfazDATMA.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.nuevoDistrito);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.label1);
@@ -442,6 +460,7 @@ namespace InterfazDATMA.Administrador
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmModificarPsicologo";
             this.Text = "frmModificarPsicologo";
+            this.Load += new System.EventHandler(this.frmModificarPsicologo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -483,5 +502,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
+        private System.Windows.Forms.Button nuevoDistrito;
     }
 }

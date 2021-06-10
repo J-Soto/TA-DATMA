@@ -53,6 +53,7 @@ namespace InterfazDATMA.Administrador
             this.lblGenero = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.nuevoDistrito = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTutores
@@ -318,12 +319,28 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // nuevoDistrito
+            // 
+            this.nuevoDistrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.nuevoDistrito.FlatAppearance.BorderSize = 0;
+            this.nuevoDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nuevoDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nuevoDistrito.ForeColor = System.Drawing.Color.White;
+            this.nuevoDistrito.Location = new System.Drawing.Point(639, 281);
+            this.nuevoDistrito.Name = "nuevoDistrito";
+            this.nuevoDistrito.Size = new System.Drawing.Size(161, 40);
+            this.nuevoDistrito.TabIndex = 106;
+            this.nuevoDistrito.Text = "Nuevo Distrito";
+            this.nuevoDistrito.UseVisualStyleBackColor = false;
+            this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
+            // 
             // frmInsertarTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.nuevoDistrito);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblGenero);
@@ -381,5 +398,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button nuevoDistrito;
     }
 }
