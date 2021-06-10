@@ -175,6 +175,7 @@ namespace InterfazDATMA.Administrador
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(416, 26);
             this.dtpFechaNacimiento.TabIndex = 51;
+            this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
             // rbtnHombre
             // 
@@ -211,6 +212,7 @@ namespace InterfazDATMA.Administrador
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(416, 26);
             this.txtNombre.TabIndex = 48;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblApMat
             // 

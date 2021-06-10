@@ -175,5 +175,10 @@ namespace InterfazDATMA.Administrador
 
             dgvTutores.Rows[e.RowIndex].Cells["Activo"].Value = 1;
         }
+
+        private void dgvPsicologos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

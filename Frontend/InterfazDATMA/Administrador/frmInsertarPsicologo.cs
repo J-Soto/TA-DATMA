@@ -202,5 +202,15 @@ namespace InterfazDATMA.Administrador
         {
             Validar.SoloNumeros(e);
         }
+
+        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

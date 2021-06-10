@@ -26,8 +26,20 @@ namespace InterfazDATMA.Administrador
             this.formOperacionPersona = formOperacionPersona;
             daoTutor = new TutorWS.TutorWSClient();
             tutor = new TutorWS.tutor();
+
+            inicializarComponentes();
         }
 
+        private void inicializarComponentes()
+        {
+            //Inicializar el combo box para distrito
+            DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
+            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+            cboDistrito.DataSource = distritos;
+            cboDistrito.DisplayMember = "nombre";
+
+
+        }
 
         private void rbtnMujer_Click(object sender, EventArgs e)
         {
