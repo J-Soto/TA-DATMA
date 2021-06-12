@@ -66,10 +66,6 @@ namespace InterfazDATMA.plantilla
                 throw new Exception(ex.Message);
             }
         }
-        private void frmPlantillaGestion_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
@@ -78,12 +74,17 @@ namespace InterfazDATMA.plantilla
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             abrirFormulario(formPerfil);
+        }
+
+        private void frmPlantillaGestion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
