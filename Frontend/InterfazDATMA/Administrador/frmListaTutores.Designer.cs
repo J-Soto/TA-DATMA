@@ -52,10 +52,10 @@ namespace InterfazDATMA.Administrador
             this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Header.Font = new System.Drawing.Font("Century Gothic", 25F);
             this.Header.ForeColor = System.Drawing.Color.White;
-            this.Header.Location = new System.Drawing.Point(208, 30);
-            this.Header.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Header.Location = new System.Drawing.Point(117, 19);
+            this.Header.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(420, 81);
+            this.Header.Size = new System.Drawing.Size(311, 61);
             this.Header.TabIndex = 2;
             this.Header.Text = "Lista Tutores";
             this.Header.Click += new System.EventHandler(this.Header_Click);
@@ -74,12 +74,12 @@ namespace InterfazDATMA.Administrador
             this.colTelf,
             this.colCel,
             this.colEmail});
-            this.dgvTutor.Location = new System.Drawing.Point(220, 403);
-            this.dgvTutor.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvTutor.Location = new System.Drawing.Point(124, 260);
+            this.dgvTutor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvTutor.Name = "dgvTutor";
             this.dgvTutor.RowHeadersWidth = 82;
             this.dgvTutor.RowTemplate.Height = 33;
-            this.dgvTutor.Size = new System.Drawing.Size(2088, 609);
+            this.dgvTutor.Size = new System.Drawing.Size(1174, 393);
             this.dgvTutor.TabIndex = 11;
             // 
             // colNombre
@@ -177,35 +177,38 @@ namespace InterfazDATMA.Administrador
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1802, 270);
+            this.btnBuscar.Location = new System.Drawing.Point(1014, 174);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(232, 57);
+            this.btnBuscar.Size = new System.Drawing.Size(130, 37);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(816, 289);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(459, 186);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(816, 38);
+            this.txtBuscar.Size = new System.Drawing.Size(461, 26);
             this.txtBuscar.TabIndex = 9;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // frmListaTutores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(2529, 1282);
+            this.ClientSize = new System.Drawing.Size(1095, 714);
             this.Controls.Add(this.dgvTutor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmListaTutores";
             this.Text = "frmListaTutores";
+            this.Load += new System.EventHandler(this.frmListaTutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

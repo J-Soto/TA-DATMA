@@ -15,27 +15,74 @@ namespace InterfazDATMA.Administrador
     {
         private frmPlantillaGestion formPlantilla;
         private frmInsertarTutor formAnterior;
-        public frmInsertarPreferencias(frmInsertarTutor formAnterior, frmPlantillaGestion formPlantilla)
+        private TutorWS.tutor tutorAux;
+        private TutorWS.TutorWSClient daoTutor;
+        public frmInsertarPreferencias(frmInsertarTutor formAnterior, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
             InitializeComponent();
             this.formPlantilla = formPlantilla;
             this.formAnterior = formAnterior;
+            daoTutor = new TutorWS.TutorWSClient();
 
             chblDias.CheckOnClick = true;
             chblDispositivos.CheckOnClick = true;
             chblInternet.CheckOnClick = true;
             chblTurno.CheckOnClick = true;
             chblRedes.CheckOnClick = true;
+            tutorAux = tutor;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            formPlantilla.abrirFormulario(formAnterior.formOperacionPersona);
+            tutorAux.dispositivos = 1;
+            tutorAux.tiposConexion = 1;
+            tutorAux.gestante = 1;
+            tutorAux.turno = 1;
+            tutorAux.dia = 1;
+            tutorAux.bajoRecursos = 1;
+            tutorAux.redesSociales = 1;
+
+            //Validaciones:
+            if (tutorAux.DNI.Length != 8)
+            {
+                MessageBox.Show("El DNI debe tener 8 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutorAux.correo.Contains("@") != true)
+            {
+                MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    int idTutor = daoTutor.insertarTutor(tutorAux);
+                    if (idTutor == 0)
+                    {
+                        MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tutorAux.idPersona = idTutor;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception();
+                }
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(formAnterior);
+        }
+
+        private void frmInsertarPreferencias_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chblDispositivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

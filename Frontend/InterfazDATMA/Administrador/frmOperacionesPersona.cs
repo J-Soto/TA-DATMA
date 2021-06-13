@@ -106,7 +106,17 @@ namespace InterfazDATMA.Administrador
 
         private void btnModificarTutor_Click(object sender, EventArgs e)
         {
-            formPlantilla.abrirFormulario(new frmModificarTutor(this, formPlantilla));
+
+            if (dgvTutores.RowCount != 0)
+            {
+                TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.CurrentRow.DataBoundItem;
+                frmModificarTutor formModificarTutor = new frmModificarTutor(this, formPlantilla, tutor);
+
+                formPlantilla.abrirFormulario(new frmModificarTutor(this, formPlantilla, tutor));
+            }
+
+
+            
         }
 
         private void txtBusqTutor_MouseClick(object sender, MouseEventArgs e)
@@ -171,9 +181,19 @@ namespace InterfazDATMA.Administrador
         private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
-            dgvTutores.Rows[e.RowIndex].Cells["NombreCompleto"].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
+            dgvTutores.Rows[e.RowIndex].Cells["NombreCompletoTutor"].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
 
-            dgvTutores.Rows[e.RowIndex].Cells["Activo"].Value = 1;
+            dgvTutores.Rows[e.RowIndex].Cells["ActivoTutor"].Value = 1;
+        }
+
+        private void dgvPsicologos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvTutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

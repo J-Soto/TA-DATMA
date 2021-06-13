@@ -54,7 +54,7 @@ namespace InterfazDATMA.plantilla
             this.pnlMenuVertical.Controls.Add(this.pictureBox1);
             this.pnlMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuVertical.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuVertical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMenuVertical.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMenuVertical.Name = "pnlMenuVertical";
             this.pnlMenuVertical.Size = new System.Drawing.Size(254, 573);
             this.pnlMenuVertical.TabIndex = 10;
@@ -63,7 +63,7 @@ namespace InterfazDATMA.plantilla
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel4.Location = new System.Drawing.Point(1, 505);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(7, 36);
             this.panel4.TabIndex = 8;
@@ -77,7 +77,7 @@ namespace InterfazDATMA.plantilla
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(15, 505);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(237, 36);
             this.btnSalir.TabIndex = 7;
@@ -89,7 +89,7 @@ namespace InterfazDATMA.plantilla
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel2.Location = new System.Drawing.Point(2, 253);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(7, 36);
             this.panel2.TabIndex = 4;
@@ -105,7 +105,7 @@ namespace InterfazDATMA.plantilla
             this.btnPerfil.Image = global::InterfazDATMA.Properties.Resources.empleados;
             this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.Location = new System.Drawing.Point(15, 253);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(237, 36);
             this.btnPerfil.TabIndex = 3;
@@ -117,7 +117,7 @@ namespace InterfazDATMA.plantilla
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel1.Location = new System.Drawing.Point(2, 205);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(7, 36);
             this.panel1.TabIndex = 2;
@@ -133,7 +133,7 @@ namespace InterfazDATMA.plantilla
             this.btnInicio.Image = global::InterfazDATMA.Properties.Resources.producto;
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.Location = new System.Drawing.Point(15, 205);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(237, 36);
             this.btnInicio.TabIndex = 1;
@@ -145,7 +145,7 @@ namespace InterfazDATMA.plantilla
             // 
             this.pictureBox1.Image = global::InterfazDATMA.Properties.Resources.LogoDatmaV2;
             this.pictureBox1.Location = new System.Drawing.Point(43, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -156,7 +156,7 @@ namespace InterfazDATMA.plantilla
             // 
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(254, 0);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(815, 573);
             this.pnlContenedor.TabIndex = 11;
@@ -169,10 +169,10 @@ namespace InterfazDATMA.plantilla
             this.ClientSize = new System.Drawing.Size(1069, 573);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenuVertical);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPlantillaGestion";
             this.Text = "frmPlantillaGestion";
-            this.Load += new System.EventHandler(this.frmPlantillaGestion_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPlantillaGestion_FormClosed);
             this.pnlMenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

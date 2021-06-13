@@ -18,7 +18,11 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
             daoTutor = new TutorWS.TutorWSClient();
             dgvTutor.AutoGenerateColumns = false;
-            dgvTutor.DataSource = new BindingList<TutorWS.tutor>(daoTutor.listarTodosTutores().ToList());
+
+            if (daoTutor.listarTodosTutores() != null)
+            {
+                dgvTutor.DataSource = new BindingList<TutorWS.tutor>(daoTutor.listarTodosTutores().ToList());
+            }
         }
 
         private void Header_Click(object sender, EventArgs e)
@@ -33,6 +37,16 @@ namespace InterfazDATMA.Administrador
                 }
             }
             dgvTutor.DataSource = tutores;
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmListaTutores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

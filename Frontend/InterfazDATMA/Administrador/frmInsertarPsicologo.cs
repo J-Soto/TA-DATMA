@@ -202,5 +202,27 @@ namespace InterfazDATMA.Administrador
         {
             Validar.SoloNumeros(e);
         }
+
+        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
+                BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+                cboDistrito.DataSource = distritos;
+                cboDistrito.DisplayMember = "nombre";
+            }
+        }
     }
 }

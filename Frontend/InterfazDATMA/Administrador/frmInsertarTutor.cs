@@ -1,9 +1,11 @@
 ﻿using InterfazDATMA.plantilla;
+using InterfazDATMA.validacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,18 +18,33 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantilla;
         public frmOperacionesPersona formOperacionPersona;
 
-        private TutorWS.TutorWSClient daoTutor;
-        public TutorWS.tutor tutor;
-
         public frmInsertarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
         {
             InitializeComponent();
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
-            daoTutor = new TutorWS.TutorWSClient();
-            tutor = new TutorWS.tutor();
+
+            inicializarComponentes();
         }
 
+        private void inicializarComponentes()
+        {
+            //Inicializar el combo box para distrito
+            DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
+            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+            cboDistrito.DataSource = distritos;
+            cboDistrito.DisplayMember = "nombre";
+
+            txtNombre.Text = "";
+            txtApPat.Text = "";
+            txtApMat.Text = "";
+            txtCorreo.Text = "";
+            txtDni.Text = "";
+            txtTelf.Text = "";
+            txtCel.Text = "";
+            rbtnHombre.Checked = false;
+            rbtnMujer.Checked = false;
+        }
 
         private void rbtnMujer_Click(object sender, EventArgs e)
         {
@@ -44,7 +61,33 @@ namespace InterfazDATMA.Administrador
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla));
+            TutorWS.tutor tutor = new TutorWS.tutor();
+
+            tutor.nombre = txtNombre.Text;
+            tutor.apellidoPaterno = txtApPat.Text;
+            tutor.apellidoMaterno = txtApMat.Text;
+            tutor.correo = txtCorreo.Text;
+            tutor.DNI = txtDni.Text;
+            tutor.telefono = txtTelf.Text;
+            tutor.celular = txtCel.Text;
+            tutor.fechaNacimiento = dtpFechaNacimiento.Value;
+            tutor.fechaNacimientoSpecified = true;
+            tutor.distrito = new TutorWS.distrito();
+            DistritoWS.distrito distritoSelected = cboDistrito.SelectedItem as DistritoWS.distrito;
+            tutor.distrito = new TutorWS.distrito();
+            tutor.distrito.idDistrito = distritoSelected.idDistrito;
+
+            if (rbtnHombre.Checked == true)
+            {
+                tutor.genero = 'M';
+            }
+            else
+            {
+                tutor.genero = 'F';
+            }
+
+            // Se inserta también el tutor para la siguiente pantalla
+            formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -164,6 +207,18 @@ namespace InterfazDATMA.Administrador
         private void lblTutores_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void nuevoDistrito_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
+                BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+                cboDistrito.DataSource = distritos;
+                cboDistrito.DisplayMember = "nombre";
+            }
         }
     }
 }
