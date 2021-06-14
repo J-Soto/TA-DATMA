@@ -15,6 +15,8 @@ namespace InterfazDATMA.plantilla
     {
         private Form formularioActivo = null;
         private Form formInicial;
+        //Comentario 1
+        //Comentario 2
         public frmPlantillaV2(int tipoUser)
         {
             InitializeComponent();
