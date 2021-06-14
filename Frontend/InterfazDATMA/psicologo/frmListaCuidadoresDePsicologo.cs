@@ -1,4 +1,5 @@
 ﻿using InterfazDATMA.plantilla;
+using InterfazDATMA.TutorWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace InterfaceDATMA
 {
     public partial class frmListaCuidadoresDePsicologo : Form
     {
+        private TutorWS.TutorWSClient daoTutor;
         private frmConfigurarModuloPsicologo formConfigurarModulo;
         private frmPlantillaGestion formPlantillaGestion;
 
@@ -36,6 +38,11 @@ namespace InterfaceDATMA
         private void btnRegresarCurso_Click(object sender, EventArgs e)
         {
             formPlantillaGestion.abrirFormulario(formConfigurarModulo);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
