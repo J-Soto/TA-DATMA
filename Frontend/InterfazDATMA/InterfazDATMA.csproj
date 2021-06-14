@@ -420,6 +420,9 @@
     <EmbeddedResource Include="Administrador\frmVerGruposCurso.resx">
       <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\prueba.resx">
+      <DependentUpon>prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cuidador\frmPerfilCuidador.resx">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>
     </EmbeddedResource>
