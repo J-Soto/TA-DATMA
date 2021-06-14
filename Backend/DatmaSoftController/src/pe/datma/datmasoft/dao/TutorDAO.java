@@ -10,4 +10,5 @@ public interface TutorDAO {
     public int eliminarTutor(int idTutor, int idUsuario);
     public ArrayList<Tutor> listarTutores(String nombre);
     public ArrayList<Tutor> listarTodosTutores();
+    int verificarDNI(String dni,String nom,String app,String apm);
 }
