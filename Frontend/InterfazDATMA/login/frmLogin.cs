@@ -65,7 +65,7 @@ namespace InterfazDATMA
           
             BindingList<UsuarioWS.usuario> usuarios = new BindingList<UsuarioWS.usuario>(
                 daoUsuario.listarUsuarios().ToList());
-            
+
             foreach (UsuarioWS.usuario item in usuarios)
             {
                 if (item.user.Contains(user) && item.password.Contains(password))
