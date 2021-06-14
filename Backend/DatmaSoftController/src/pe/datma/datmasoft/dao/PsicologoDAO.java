@@ -10,5 +10,6 @@ public interface PsicologoDAO {
      int modificarPsicologo(Psicologo psicologo);
      int eliminarPsicologo(int idPsicologo, int idUsuario);
      ArrayList<Psicologo> listarTodosPsicologos();
+     int verificarDNI(String dni,String nom,String app,String apm);
 }
 
