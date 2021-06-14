@@ -182,18 +182,7 @@ namespace InterfazDATMA.Administrador
         {
             TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
             dgvTutores.Rows[e.RowIndex].Cells["NombreCompletoTutor"].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-
             dgvTutores.Rows[e.RowIndex].Cells["ActivoTutor"].Value = 1;
-        }
-
-        private void dgvPsicologos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvTutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
