@@ -12,7 +12,7 @@
   <xs:element name="modificarTutorResponse" type="tns:modificarTutorResponse" />
   <xs:element name="verificarDNI" type="tns:verificarDNI" />
   <xs:element name="verificarDNIResponse" type="tns:verificarDNIResponse" />
-  <xs:complexType name="insertarTutor">
+  <xs:complexType name="modificarTutor">
     <xs:sequence>
       <xs:element minOccurs="0" name="tutor" type="tns:tutor" />
     </xs:sequence>
@@ -132,17 +132,17 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarTutorResponse">
+  <xs:complexType name="modificarTutorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarTutor">
+  <xs:complexType name="insertarTutor">
     <xs:sequence>
       <xs:element minOccurs="0" name="tutor" type="tns:tutor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarTutorResponse">
+  <xs:complexType name="insertarTutorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

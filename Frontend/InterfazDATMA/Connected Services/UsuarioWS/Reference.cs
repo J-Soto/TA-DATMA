@@ -34,6 +34,16 @@ namespace InterfazDATMA.UsuarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.datmasoft.datma.pe/UsuarioWS/insertarUsuarioResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.insertarUsuarioResponse> insertarUsuarioAsync(InterfazDATMA.UsuarioWS.insertarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/UsuarioWS/verificarUsuarioRequest", ReplyAction="http://services.datmasoft.datma.pe/UsuarioWS/verificarUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.UsuarioWS.verificarUsuarioResponse verificarUsuario(InterfazDATMA.UsuarioWS.verificarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/UsuarioWS/verificarUsuarioRequest", ReplyAction="http://services.datmasoft.datma.pe/UsuarioWS/verificarUsuarioResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.verificarUsuarioResponse> verificarUsuarioAsync(InterfazDATMA.UsuarioWS.verificarUsuarioRequest request);
     }
     
     /// <remarks/>
@@ -440,6 +450,47 @@ namespace InterfazDATMA.UsuarioWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuario", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class verificarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string user;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string pass;
+        
+        public verificarUsuarioRequest() {
+        }
+        
+        public verificarUsuarioRequest(string user, string pass) {
+            this.user = user;
+            this.pass = pass;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuarioResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class verificarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public verificarUsuarioResponse() {
+        }
+        
+        public verificarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : InterfazDATMA.UsuarioWS.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -509,6 +560,31 @@ namespace InterfazDATMA.UsuarioWS {
             InterfazDATMA.UsuarioWS.insertarUsuarioRequest inValue = new InterfazDATMA.UsuarioWS.insertarUsuarioRequest();
             inValue.usuario = usuario;
             return ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).insertarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.UsuarioWS.verificarUsuarioResponse InterfazDATMA.UsuarioWS.UsuarioWS.verificarUsuario(InterfazDATMA.UsuarioWS.verificarUsuarioRequest request) {
+            return base.Channel.verificarUsuario(request);
+        }
+        
+        public int verificarUsuario(string user, string pass) {
+            InterfazDATMA.UsuarioWS.verificarUsuarioRequest inValue = new InterfazDATMA.UsuarioWS.verificarUsuarioRequest();
+            inValue.user = user;
+            inValue.pass = pass;
+            InterfazDATMA.UsuarioWS.verificarUsuarioResponse retVal = ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).verificarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.verificarUsuarioResponse> InterfazDATMA.UsuarioWS.UsuarioWS.verificarUsuarioAsync(InterfazDATMA.UsuarioWS.verificarUsuarioRequest request) {
+            return base.Channel.verificarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.verificarUsuarioResponse> verificarUsuarioAsync(string user, string pass) {
+            InterfazDATMA.UsuarioWS.verificarUsuarioRequest inValue = new InterfazDATMA.UsuarioWS.verificarUsuarioRequest();
+            inValue.user = user;
+            inValue.pass = pass;
+            return ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).verificarUsuarioAsync(inValue);
         }
     }
 }

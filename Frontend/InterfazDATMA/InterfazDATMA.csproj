@@ -755,6 +755,9 @@
     <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.verificarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\UsuarioWS.wsdl" />
     <None Include="Connected Services\UsuarioWS\UsuarioWS.xsd">
       <SubType>Designer</SubType>
