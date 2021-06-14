@@ -62,16 +62,29 @@ namespace InterfazDATMA
 
         private int verificarLogin(string user,string password)
         {
-          
             BindingList<UsuarioWS.usuario> usuarios = new BindingList<UsuarioWS.usuario>(
-                daoUsuario.listarUsuarios().ToList());
-
+                    daoUsuario.listarUsuarios().ToList());
             foreach (UsuarioWS.usuario item in usuarios)
             {
-                if (item.user.Contains(user) && item.password.Contains(password))
+                if (user.Equals(item.user) && password.Equals(item.password))
                     return item.tipo;
             }
             return -1;
+            /*
+            BindingList<UsuarioWS.usuario> usuarios;
+            try
+            {
+                usuarios = new BindingList<UsuarioWS.usuario>(
+                    daoUsuario.verificarUsuarios(user,password).ToList());
+            }
+            catch (Exception)
+            {
+                usuarios = null;
+            }
+            
+            if (usuarios != null) return usuarios[0].tipo;
+            else return -1;
+            */
         }
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
