@@ -8,5 +8,6 @@ namespace InterfazDATMA
 {
     class prueba
     {
+        int b;
     }
 }
