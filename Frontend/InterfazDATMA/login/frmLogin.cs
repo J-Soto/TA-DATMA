@@ -71,26 +71,30 @@ namespace InterfazDATMA
             }
             return -1;
             */
-            
-            int resultado = daoUsuario.verificarUsuario(user, password);
-        
 
-            return resultado;
+            //int resultado = daoUsuario.verificarUsuario(user, password);
+
+
+            //return resultado;
+            return 0;
         }
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
-            int tipo = verificarLogin(txtUsuario.Text, txtContraseña.Text);
-            if (tipo >= 0)
+            UsuarioWS.usuario user = daoUsuario.verificarUsuario(txtUsuario.Text, txtContraseña.Text);
+            
+            if (user is null)
             {
-                abrirFormulario(new frmPlantillaGestion(tipo));
+                MessageBox.Show("Datos incorrectos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else MessageBox.Show("Datos incorrectos","Mensaje de Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+            abrirFormulario(new frmPlantillaGestion(user));
             //abrirFormulario(new frmWalkthrough());
             //0->cuidador
             //1->psicologo
             //2->admin
-            
+
         }
     }
 }
