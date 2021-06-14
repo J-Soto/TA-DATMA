@@ -16,5 +16,10 @@ namespace InterfazDATMA.Administrador
         {
             InitializeComponent();
         }
+
+        private void prueba_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
