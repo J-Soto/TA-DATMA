@@ -1,5 +1,4 @@
 ﻿using InterfazDATMA.plantilla;
-using InterfazDATMA.TutorWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InterfaceDATMA
+namespace InterfazDATMA
 {
     public partial class frmListaCuidadoresDePsicologo : Form
     {
@@ -21,9 +20,17 @@ namespace InterfaceDATMA
         public frmListaCuidadoresDePsicologo(frmConfigurarModuloPsicologo formConfigurarModulo, frmPlantillaGestion formPlantillaGestion)
         {
             InitializeComponent();
+            daoTutor = new TutorWS.TutorWSClient();
+            dgvModulos.AutoGenerateColumns = false;
             this.formConfigurarModulo = formConfigurarModulo;
             this.formPlantillaGestion = formPlantillaGestion;
+
+            if (daoTutor.listarTodosTutores() != null)
+            {
+                dgvModulos.DataSource = new BindingList<TutorWS.tutor>(daoTutor.listarTodosTutores().ToList());
+            }
         }
+
 
         private void frmListaCuidadoresDePsicologo_Load(object sender, EventArgs e)
         {
@@ -41,6 +48,11 @@ namespace InterfaceDATMA
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvModulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

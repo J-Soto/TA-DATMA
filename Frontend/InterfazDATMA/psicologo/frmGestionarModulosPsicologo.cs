@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.plantilla;
 
-namespace InterfaceDATMA
+namespace InterfazDATMA
 {
     public partial class frmGestionarModulosPsicologo : Form
     {

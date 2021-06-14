@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using InterfaceDATMA;
 using InterfazDATMA.Administrador;
 using InterfazDATMA.cuidador;
 using InterfazDATMA.psicologo;

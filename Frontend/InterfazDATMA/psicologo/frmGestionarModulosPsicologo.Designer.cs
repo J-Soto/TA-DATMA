@@ -1,5 +1,5 @@
 ﻿
-namespace InterfaceDATMA
+namespace InterfazDATMA
 {
     partial class frmGestionarModulosPsicologo
     {
@@ -266,7 +266,7 @@ namespace InterfaceDATMA
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1232, 927);
             this.pnlContenido.TabIndex = 8;
-            
+
             // 
             // frmGestionarModulosPsicologo
             // 

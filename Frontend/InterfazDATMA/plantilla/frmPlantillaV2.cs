@@ -1,5 +1,4 @@
-﻿using InterfaceDATMA;
-using InterfazDATMA.Administrador;
+﻿using InterfazDATMA.Administrador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
