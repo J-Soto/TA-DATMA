@@ -19,6 +19,7 @@ namespace InterfazDATMA.Administrador
         public frmOperacionesPersona formOperacionPersona;
 
         private TutorWS.distrito distrito;
+        private TutorWS.TutorWSClient daoTutor;
 
         public frmInsertarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
         {
@@ -27,6 +28,7 @@ namespace InterfazDATMA.Administrador
             this.formOperacionPersona = formOperacionPersona;
 
             txtDistrito.ReadOnly = true;
+            daoTutor = new TutorWS.TutorWSClient();
             inicializarComponentes();
         }
 
@@ -83,7 +85,19 @@ namespace InterfazDATMA.Administrador
             }
 
             // Se inserta también el tutor para la siguiente pantalla
-            formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+            int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
+            if (verificado == -1)
+            {
+                var resultado=MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+                }
+            }
+            else if(verificado==0)
+                MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

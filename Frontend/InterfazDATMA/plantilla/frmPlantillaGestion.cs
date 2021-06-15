@@ -18,13 +18,15 @@ namespace InterfazDATMA.plantilla
         private Form formularioActivo = null;
         private Form formInicial;
         private Form formPerfil;
-        public static UsuarioWS.usuario user;
+        public static UsuarioWS.usuario user = null;
+        public static PsicologoWS.psicologo psico = null;
+        public static TutorWS.tutor tutor = null;
 
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
             frmPlantillaGestion.user = user;
-            int tipoUser = 2;
+            int tipoUser = user.tipo;
             //Psicologo
             if(tipoUser == 1)
             {
