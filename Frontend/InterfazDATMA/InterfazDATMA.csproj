@@ -115,6 +115,12 @@
     <Compile Include="Administrador\frmListaTutores.Designer.cs">
       <DependentUpon>frmListaTutores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\frmModificarGrupoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmModificarGrupoCurso.Designer.cs">
+      <DependentUpon>frmModificarGrupoCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmModificarPreferencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,12 @@
     </Compile>
     <Compile Include="Administrador\frmVerGruposCurso.Designer.cs">
       <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\prueba.Designer.cs">
+      <DependentUpon>prueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\ActividadWS\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -359,6 +371,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\Grupo_Curso.cs" />
+    <Compile Include="validacion\clase extra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="validacion\clase extra.Designer.cs">
+      <DependentUpon>clase extra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="validacion\frmPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="validacion\frmPrueba.Designer.cs">
+      <DependentUpon>frmPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="validacion\Validar.cs" />
     <EmbeddedResource Include="Administrador\frmBuscarPsicologoGrupo.resx">
       <DependentUpon>frmBuscarPsicologoGrupo.cs</DependentUpon>
@@ -393,6 +418,9 @@
     <EmbeddedResource Include="Administrador\frmListaTutores.resx">
       <DependentUpon>frmListaTutores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmModificarGrupoCurso.resx">
+      <DependentUpon>frmModificarGrupoCurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmModificarPreferencias.resx">
       <DependentUpon>frmModificarPreferencias.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmVerGruposCurso.resx">
       <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\prueba.resx">
+      <DependentUpon>prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\frmPerfilCuidador.resx">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>
@@ -753,9 +784,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.usuario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.verificarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\UsuarioWS.wsdl" />

@@ -16,6 +16,7 @@ namespace InterfazDATMA
         private TutorWS.TutorWSClient daoTutor;
         private frmConfigurarModuloPsicologo formConfigurarModulo;
         private frmPlantillaGestion formPlantillaGestion;
+        
 
         public frmListaCuidadoresDePsicologo(frmConfigurarModuloPsicologo formConfigurarModulo, frmPlantillaGestion formPlantillaGestion)
         {

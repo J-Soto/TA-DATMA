@@ -81,12 +81,13 @@ namespace InterfazDATMA.Administrador
             this.btnGuardarTema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardarTema.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarTema.Location = new System.Drawing.Point(213, 317);
+            this.btnGuardarTema.Location = new System.Drawing.Point(238, 317);
             this.btnGuardarTema.Name = "btnGuardarTema";
             this.btnGuardarTema.Size = new System.Drawing.Size(161, 46);
             this.btnGuardarTema.TabIndex = 22;
             this.btnGuardarTema.Text = "Guardar";
             this.btnGuardarTema.UseVisualStyleBackColor = false;
+            this.btnGuardarTema.Click += new System.EventHandler(this.btnGuardarTema_Click);
             // 
             // btnCancelar
             // 
@@ -95,7 +96,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(437, 317);
+            this.btnCancelar.Location = new System.Drawing.Point(466, 317);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(161, 46);
             this.btnCancelar.TabIndex = 23;

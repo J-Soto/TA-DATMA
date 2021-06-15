@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using InterfazDATMA;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
