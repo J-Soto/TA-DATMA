@@ -68,7 +68,7 @@
   </xs:complexType>
   <xs:complexType name="verificarUsuarioResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
