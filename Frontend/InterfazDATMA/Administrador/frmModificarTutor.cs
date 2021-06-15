@@ -27,6 +27,8 @@ namespace InterfazDATMA.Administrador
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
 
+
+            txtDistrito.ReadOnly = true;
             daoTutor = new TutorWS.TutorWSClient();
             inicializarComponentes();
             completarDatosTutores();
@@ -34,12 +36,6 @@ namespace InterfazDATMA.Administrador
 
         private void inicializarComponentes()
         {
-            //Inicializar el combo box para distrito
-            DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
-            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-            cboDistrito.DataSource = distritos;
-            cboDistrito.DisplayMember = "nombre";
-
             txtNombre.Text = "";
             txtApPat.Text = "";
             txtApMat.Text = "";
@@ -65,6 +61,7 @@ namespace InterfazDATMA.Administrador
             txtDni.Text = tutor.DNI;
             txtTelf.Text = tutor.telefono;
             txtCel.Text = tutor.celular;
+            txtDistrito.Text = tutor.distrito.nombre;
             if (tutor.genero == 'M')
             {
                 rbtnHombre.Checked = true;
@@ -79,11 +76,6 @@ namespace InterfazDATMA.Administrador
                 MemoryStream ms = new MemoryStream(tutor.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
-
-            DistritoWS.distrito distrito = new DistritoWS.distrito();
-
-            distrito.nombre = tutor.distrito.nombre;
-            cboDistrito.SelectedItem = distrito;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -102,10 +94,6 @@ namespace InterfazDATMA.Administrador
             tutor.celular = txtCel.Text;
             tutor.fechaNacimiento = dtpFechaNacimiento.Value;
             tutor.fechaNacimientoSpecified = true;
-            tutor.distrito = new TutorWS.distrito();
-            DistritoWS.distrito distritoSelected = cboDistrito.SelectedItem as DistritoWS.distrito;
-            tutor.distrito = new TutorWS.distrito();
-            tutor.distrito.idDistrito = distritoSelected.idDistrito;
 
             if (rbtnHombre.Checked == true)
             {
@@ -125,16 +113,14 @@ namespace InterfazDATMA.Administrador
             frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
             if (frmDistrito.ShowDialog() == DialogResult.OK)
             {
-                DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
-                BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-                cboDistrito.DataSource = distritos;
-                cboDistrito.DisplayMember = "nombre";
+                if (frmDistrito.distrito != null)
+                {
+                    tutor.distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    tutor.distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = tutor.distrito.nombre;
+                }
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

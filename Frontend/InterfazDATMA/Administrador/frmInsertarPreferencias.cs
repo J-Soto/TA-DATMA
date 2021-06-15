@@ -56,11 +56,13 @@ namespace InterfazDATMA.Administrador
                 try
                 {
                     int idTutor = daoTutor.insertarTutor(tutorAux);
-                    if (idTutor == 0)
+                    if (idTutor != 0)
                     {
                         MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tutorAux.idPersona = idTutor;
+                        formPlantilla.abrirFormulario(formAnterior.formOperacionPersona);
                     }
+
 
                 }
                 catch (Exception ex)

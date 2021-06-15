@@ -18,23 +18,20 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantilla;
         public frmOperacionesPersona formOperacionPersona;
 
+        private TutorWS.distrito distrito;
+
         public frmInsertarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
         {
             InitializeComponent();
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
 
+            txtDistrito.ReadOnly = true;
             inicializarComponentes();
         }
 
         private void inicializarComponentes()
         {
-            //Inicializar el combo box para distrito
-            DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
-            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-            cboDistrito.DataSource = distritos;
-            cboDistrito.DisplayMember = "nombre";
-
             txtNombre.Text = "";
             txtApPat.Text = "";
             txtApMat.Text = "";
@@ -73,9 +70,8 @@ namespace InterfazDATMA.Administrador
             tutor.fechaNacimiento = dtpFechaNacimiento.Value;
             tutor.fechaNacimientoSpecified = true;
             tutor.distrito = new TutorWS.distrito();
-            DistritoWS.distrito distritoSelected = cboDistrito.SelectedItem as DistritoWS.distrito;
             tutor.distrito = new TutorWS.distrito();
-            tutor.distrito.idDistrito = distritoSelected.idDistrito;
+            tutor.distrito = distrito;
 
             if (rbtnHombre.Checked == true)
             {
@@ -95,129 +91,18 @@ namespace InterfazDATMA.Administrador
             formPlantilla.abrirFormulario(formOperacionPersona);
         }
 
-        private void btnNuevoDistrito_Click(object sender, EventArgs e)
-        {
-            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
-            if (frmDistrito.ShowDialog() == DialogResult.OK)
-            {
-                
-            }
-        }
-
-        private void lblGenero_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnHombre_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnMujer_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblApMat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCorreo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDni_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDistrito_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCelular_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblApPat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFechaNacimiento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTelefono_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTutores_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void nuevoDistrito_Click(object sender, EventArgs e)
         {
             frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
             if (frmDistrito.ShowDialog() == DialogResult.OK)
             {
-                DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
-                BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-                cboDistrito.DataSource = distritos;
-                cboDistrito.DisplayMember = "nombre";
+                if (frmDistrito.distrito != null)
+                {
+                    distrito = new TutorWS.distrito();
+                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = distrito.nombre;
+                }
             }
         }
     }

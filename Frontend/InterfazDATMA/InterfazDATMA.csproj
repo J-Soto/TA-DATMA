@@ -163,12 +163,6 @@
     <Compile Include="Administrador\frmVerGruposCurso.Designer.cs">
       <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\prueba.Designer.cs">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\ActividadWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -429,9 +423,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmVerGruposCurso.resx">
       <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\prueba.resx">
-      <DependentUpon>prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\frmPerfilCuidador.resx">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>

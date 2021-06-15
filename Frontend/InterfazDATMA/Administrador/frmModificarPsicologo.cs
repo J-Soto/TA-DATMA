@@ -19,6 +19,7 @@ namespace InterfazDATMA.Administrador
         public frmOperacionesPersona formOperacionPersona;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
 
+        private PsicologoWS.distrito distrito;
         private PsicologoWS.psicologo psicologo;
         private string rutaFoto = "";
 
@@ -32,6 +33,7 @@ namespace InterfazDATMA.Administrador
             this.formOperacionPersona = formOperacionPersona;
 
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            txtDistrito.ReadOnly = true;
             inicializarComponentes();
             completarDatosPsicologos();
 
@@ -43,12 +45,6 @@ namespace InterfazDATMA.Administrador
 
         private void inicializarComponentes()
         {
-            //Inicializar el combo box para distrito
-            DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
-            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-            cboDistrito.DataSource = distritos;
-            cboDistrito.DisplayMember = "nombre";
-
             txtNombre.Text = "";
             txtApellidoPat.Text = "";
             txtApellidoMat.Text = "";
@@ -91,10 +87,7 @@ namespace InterfazDATMA.Administrador
                 pbFoto.Image = new Bitmap(ms);
             }
 
-            DistritoWS.distrito distrito = new DistritoWS.distrito();
-
-            distrito.nombre = psicologo.distrito.nombre;
-            cboDistrito.SelectedItem = distrito;
+            txtDistrito.Text = psicologo.distrito.nombre;
         }
 
       
@@ -108,9 +101,7 @@ namespace InterfazDATMA.Administrador
             psicologo.fechaNacimiento = dtpFechaNacimiento.Value;
             psicologo.fechaNacimientoSpecified = true;
             psicologo.distrito = new PsicologoWS.distrito();
-            DistritoWS.distrito distritoSelected = cboDistrito.SelectedItem as DistritoWS.distrito;
-            psicologo.distrito = new PsicologoWS.distrito();
-            psicologo.distrito.idDistrito = distritoSelected.idDistrito;
+            psicologo.distrito = distrito;
             psicologo.correo = txtCorreo.Text;
 
             psicologo.DNI = txtDni.Text;
@@ -158,6 +149,7 @@ namespace InterfazDATMA.Administrador
                 {
                     int idPsicologo = daoPsicologo.modificarPsicologo(psicologo);
                     MessageBox.Show("Se ha guardado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    formPlantilla.abrirFormulario(formOperacionPersona);
                 }
                 catch (Exception ex)
                 {
@@ -234,10 +226,13 @@ namespace InterfazDATMA.Administrador
             frmInsertarDistrito formDistrito = new frmInsertarDistrito();
             if (formDistrito.ShowDialog() == DialogResult.OK)
             {
-                DistritoWS.DistritoWSClient daoDistrito = new DistritoWS.DistritoWSClient();
-                BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-                cboDistrito.DataSource = distritos;
-                cboDistrito.DisplayMember = "nombre";
+                if (formDistrito.distrito != null)
+                {
+                    distrito = new PsicologoWS.distrito();
+                    distrito.idDistrito = formDistrito.distrito.idDistrito;
+                    distrito.nombre = formDistrito.distrito.nombre;
+                    txtDistrito.Text = distrito.nombre;
+                }
             }
         }
 

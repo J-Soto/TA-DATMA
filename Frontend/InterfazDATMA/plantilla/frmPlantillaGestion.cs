@@ -24,7 +24,7 @@ namespace InterfazDATMA.plantilla
         {
             InitializeComponent();
             frmPlantillaGestion.user = user;
-            int tipoUser = user.tipo;
+            int tipoUser = 2;
             //Psicologo
             if(tipoUser == 1)
             {

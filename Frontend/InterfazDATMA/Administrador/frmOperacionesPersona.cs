@@ -28,6 +28,7 @@ namespace InterfazDATMA.Administrador
             this.formGestionarModulos = formGestionarModulos;
 
             dgvTutores.AutoGenerateColumns = false;
+            dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             BindingList<TutorWS.tutor> tutores;
             try
             {
@@ -41,6 +42,7 @@ namespace InterfazDATMA.Administrador
 
 
             dgvPsicologos.AutoGenerateColumns = false;
+            dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             BindingList<PsicologoWS.psicologo> psicologos;
             try
             {
@@ -184,5 +186,21 @@ namespace InterfazDATMA.Administrador
             dgvTutores.Rows[e.RowIndex].Cells["NombreCompletoTutor"].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
             dgvTutores.Rows[e.RowIndex].Cells["ActivoTutor"].Value = 1;
         }
+
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvTutores_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvPsicologos.ClearSelection();
+        }
+
+        private void dgvPsicologos_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvTutores.ClearSelection();
+        }
+
     }
 }

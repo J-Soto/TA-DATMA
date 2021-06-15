@@ -52,5 +52,15 @@ namespace InterfazDATMA.Administrador
             PsicologoWS.psicologo psi = (PsicologoWS.psicologo)dgvPsicologos.Rows[e.RowIndex].DataBoundItem;
             dgvPsicologos.Rows[e.RowIndex].Cells[0].Value = psi.nombre + " " + psi.apellidoPaterno + " " + psi.apellidoMaterno;
         }
+
+        private void dgvTutores_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvTutores.ClearSelection();
+        }
+
+        private void dgvPsicologos_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvPsicologos.ClearSelection();
+        }
     }
 }
