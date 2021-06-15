@@ -67,30 +67,33 @@ namespace InterfazDATMA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 20F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(63, 28);
+            this.label1.Location = new System.Drawing.Point(42, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(567, 49);
+            this.label1.Size = new System.Drawing.Size(342, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Programa: Que aprenderás";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(566, 94);
+            this.label2.Location = new System.Drawing.Point(377, 61);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
             // 
             // lblSemana
             // 
             this.lblSemana.AutoSize = true;
-            this.lblSemana.Font = new System.Drawing.Font("Montserrat", 17F);
+            this.lblSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.lblSemana.ForeColor = System.Drawing.Color.White;
-            this.lblSemana.Location = new System.Drawing.Point(163, 124);
+            this.lblSemana.Location = new System.Drawing.Point(109, 81);
+            this.lblSemana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSemana.Name = "lblSemana";
-            this.lblSemana.Size = new System.Drawing.Size(178, 42);
+            this.lblSemana.Size = new System.Drawing.Size(121, 29);
             this.lblSemana.TabIndex = 2;
             this.lblSemana.Text = "Semana 1";
             // 
@@ -98,11 +101,12 @@ namespace InterfazDATMA
             // 
             this.rtxtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.rtxtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtDescripcion.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.rtxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.rtxtDescripcion.ForeColor = System.Drawing.Color.White;
-            this.rtxtDescripcion.Location = new System.Drawing.Point(170, 195);
+            this.rtxtDescripcion.Location = new System.Drawing.Point(113, 127);
+            this.rtxtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rtxtDescripcion.Name = "rtxtDescripcion";
-            this.rtxtDescripcion.Size = new System.Drawing.Size(729, 102);
+            this.rtxtDescripcion.Size = new System.Drawing.Size(486, 66);
             this.rtxtDescripcion.TabIndex = 5;
             this.rtxtDescripcion.Text = "Texto de Prueba";
             // 
@@ -110,11 +114,12 @@ namespace InterfazDATMA
             // 
             this.rtxtTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.rtxtTema.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtTema.Font = new System.Drawing.Font("Montserrat", 15F);
+            this.rtxtTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rtxtTema.ForeColor = System.Drawing.Color.White;
-            this.rtxtTema.Location = new System.Drawing.Point(445, 128);
+            this.rtxtTema.Location = new System.Drawing.Point(297, 83);
+            this.rtxtTema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rtxtTema.Name = "rtxtTema";
-            this.rtxtTema.Size = new System.Drawing.Size(454, 48);
+            this.rtxtTema.Size = new System.Drawing.Size(303, 31);
             this.rtxtTema.TabIndex = 6;
             this.rtxtTema.Text = "Introduccion";
             // 
@@ -123,14 +128,16 @@ namespace InterfazDATMA
             this.btnEditarDescrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnEditarDescrip.FlatAppearance.BorderSize = 0;
             this.btnEditarDescrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarDescrip.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnEditarDescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEditarDescrip.ForeColor = System.Drawing.Color.White;
-            this.btnEditarDescrip.Location = new System.Drawing.Point(916, 223);
+            this.btnEditarDescrip.Location = new System.Drawing.Point(611, 145);
+            this.btnEditarDescrip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditarDescrip.Name = "btnEditarDescrip";
-            this.btnEditarDescrip.Size = new System.Drawing.Size(168, 34);
+            this.btnEditarDescrip.Size = new System.Drawing.Size(112, 22);
             this.btnEditarDescrip.TabIndex = 7;
             this.btnEditarDescrip.Text = "Editar";
             this.btnEditarDescrip.UseVisualStyleBackColor = false;
+            this.btnEditarDescrip.Click += new System.EventHandler(this.btnEditarDescrip_Click);
             // 
             // dgvReuniones
             // 
@@ -153,7 +160,8 @@ namespace InterfazDATMA
             this.UnirseReunion});
             this.dgvReuniones.EnableHeadersVisualStyles = false;
             this.dgvReuniones.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvReuniones.Location = new System.Drawing.Point(170, 392);
+            this.dgvReuniones.Location = new System.Drawing.Point(113, 255);
+            this.dgvReuniones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvReuniones.Name = "dgvReuniones";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -165,13 +173,13 @@ namespace InterfazDATMA
             this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvReuniones.RowHeadersWidth = 62;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
             this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvReuniones.RowTemplate.Height = 28;
-            this.dgvReuniones.Size = new System.Drawing.Size(918, 195);
+            this.dgvReuniones.Size = new System.Drawing.Size(612, 127);
             this.dgvReuniones.TabIndex = 8;
             // 
             // Fecha
@@ -222,7 +230,8 @@ namespace InterfazDATMA
             this.Descargar});
             this.dgvMateriales.EnableHeadersVisualStyles = false;
             this.dgvMateriales.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvMateriales.Location = new System.Drawing.Point(170, 703);
+            this.dgvMateriales.Location = new System.Drawing.Point(113, 457);
+            this.dgvMateriales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMateriales.Name = "dgvMateriales";
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -234,13 +243,13 @@ namespace InterfazDATMA
             this.dgvMateriales.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvMateriales.RowHeadersWidth = 62;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
             this.dgvMateriales.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvMateriales.RowTemplate.Height = 28;
-            this.dgvMateriales.Size = new System.Drawing.Size(729, 170);
+            this.dgvMateriales.Size = new System.Drawing.Size(486, 110);
             this.dgvMateriales.TabIndex = 9;
             // 
             // Descripcion
@@ -260,30 +269,33 @@ namespace InterfazDATMA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 17F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(167, 658);
+            this.label3.Location = new System.Drawing.Point(111, 428);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 42);
+            this.label3.Size = new System.Drawing.Size(131, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Materiales:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(250, 412);
+            this.label4.Location = new System.Drawing.Point(167, 268);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
+            this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 17F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(167, 347);
+            this.label5.Location = new System.Drawing.Point(111, 226);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 42);
+            this.label5.Size = new System.Drawing.Size(135, 29);
             this.label5.TabIndex = 12;
             this.label5.Text = "Reuniones:";
             // 
@@ -292,11 +304,12 @@ namespace InterfazDATMA
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(916, 263);
+            this.btnGuardar.Location = new System.Drawing.Point(611, 171);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(168, 34);
+            this.btnGuardar.Size = new System.Drawing.Size(112, 22);
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -306,11 +319,12 @@ namespace InterfazDATMA
             this.btnAsitencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnAsitencia.FlatAppearance.BorderSize = 0;
             this.btnAsitencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsitencia.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnAsitencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnAsitencia.ForeColor = System.Drawing.Color.White;
-            this.btnAsitencia.Location = new System.Drawing.Point(738, 593);
+            this.btnAsitencia.Location = new System.Drawing.Point(492, 385);
+            this.btnAsitencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAsitencia.Name = "btnAsitencia";
-            this.btnAsitencia.Size = new System.Drawing.Size(172, 40);
+            this.btnAsitencia.Size = new System.Drawing.Size(115, 26);
             this.btnAsitencia.TabIndex = 14;
             this.btnAsitencia.Text = "Asistencia";
             this.btnAsitencia.UseVisualStyleBackColor = false;
@@ -321,11 +335,12 @@ namespace InterfazDATMA
             this.bntConfigurarTiempo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.bntConfigurarTiempo.FlatAppearance.BorderSize = 0;
             this.bntConfigurarTiempo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntConfigurarTiempo.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.bntConfigurarTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.bntConfigurarTiempo.ForeColor = System.Drawing.Color.White;
-            this.bntConfigurarTiempo.Location = new System.Drawing.Point(916, 593);
+            this.bntConfigurarTiempo.Location = new System.Drawing.Point(611, 385);
+            this.bntConfigurarTiempo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bntConfigurarTiempo.Name = "bntConfigurarTiempo";
-            this.bntConfigurarTiempo.Size = new System.Drawing.Size(172, 40);
+            this.bntConfigurarTiempo.Size = new System.Drawing.Size(115, 26);
             this.bntConfigurarTiempo.TabIndex = 15;
             this.bntConfigurarTiempo.Text = "Editar";
             this.bntConfigurarTiempo.UseVisualStyleBackColor = false;
@@ -335,11 +350,12 @@ namespace InterfazDATMA
             this.btnAgregarReunion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnAgregarReunion.FlatAppearance.BorderSize = 0;
             this.btnAgregarReunion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarReunion.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnAgregarReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnAgregarReunion.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarReunion.Location = new System.Drawing.Point(1094, 392);
+            this.btnAgregarReunion.Location = new System.Drawing.Point(729, 255);
+            this.btnAgregarReunion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarReunion.Name = "btnAgregarReunion";
-            this.btnAgregarReunion.Size = new System.Drawing.Size(41, 40);
+            this.btnAgregarReunion.Size = new System.Drawing.Size(27, 26);
             this.btnAgregarReunion.TabIndex = 16;
             this.btnAgregarReunion.Text = "+";
             this.btnAgregarReunion.UseVisualStyleBackColor = false;
@@ -350,11 +366,12 @@ namespace InterfazDATMA
             this.btnEliminarReunion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnEliminarReunion.FlatAppearance.BorderSize = 0;
             this.btnEliminarReunion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarReunion.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnEliminarReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminarReunion.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarReunion.Location = new System.Drawing.Point(1094, 438);
+            this.btnEliminarReunion.Location = new System.Drawing.Point(729, 285);
+            this.btnEliminarReunion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarReunion.Name = "btnEliminarReunion";
-            this.btnEliminarReunion.Size = new System.Drawing.Size(41, 40);
+            this.btnEliminarReunion.Size = new System.Drawing.Size(27, 26);
             this.btnEliminarReunion.TabIndex = 17;
             this.btnEliminarReunion.Text = "-";
             this.btnEliminarReunion.UseVisualStyleBackColor = false;
@@ -364,11 +381,12 @@ namespace InterfazDATMA
             this.btnAgregarMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnAgregarMaterial.FlatAppearance.BorderSize = 0;
             this.btnAgregarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarMaterial.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnAgregarMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnAgregarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMaterial.Location = new System.Drawing.Point(905, 703);
+            this.btnAgregarMaterial.Location = new System.Drawing.Point(603, 457);
+            this.btnAgregarMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarMaterial.Name = "btnAgregarMaterial";
-            this.btnAgregarMaterial.Size = new System.Drawing.Size(41, 40);
+            this.btnAgregarMaterial.Size = new System.Drawing.Size(27, 26);
             this.btnAgregarMaterial.TabIndex = 18;
             this.btnAgregarMaterial.Text = "+";
             this.btnAgregarMaterial.UseVisualStyleBackColor = false;
@@ -379,11 +397,12 @@ namespace InterfazDATMA
             this.btnEliminarMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnEliminarMaterial.FlatAppearance.BorderSize = 0;
             this.btnEliminarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarMaterial.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnEliminarMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarMaterial.Location = new System.Drawing.Point(905, 749);
+            this.btnEliminarMaterial.Location = new System.Drawing.Point(603, 487);
+            this.btnEliminarMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarMaterial.Name = "btnEliminarMaterial";
-            this.btnEliminarMaterial.Size = new System.Drawing.Size(41, 40);
+            this.btnEliminarMaterial.Size = new System.Drawing.Size(27, 26);
             this.btnEliminarMaterial.TabIndex = 19;
             this.btnEliminarMaterial.Text = "-";
             this.btnEliminarMaterial.UseVisualStyleBackColor = false;
@@ -393,11 +412,12 @@ namespace InterfazDATMA
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(966, 861);
+            this.button1.Location = new System.Drawing.Point(644, 560);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 40);
+            this.button1.Size = new System.Drawing.Size(145, 26);
             this.button1.TabIndex = 21;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -405,10 +425,10 @@ namespace InterfazDATMA
             // 
             // frmModificarPrograma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1233, 931);
+            this.ClientSize = new System.Drawing.Size(882, 613);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminarMaterial);
             this.Controls.Add(this.btnAgregarMaterial);
@@ -428,6 +448,7 @@ namespace InterfazDATMA
             this.Controls.Add(this.lblSemana);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmModificarPrograma";
             this.Text = "frmModificarPrograma";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).EndInit();

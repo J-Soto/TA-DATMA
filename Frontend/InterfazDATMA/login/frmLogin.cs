@@ -75,8 +75,7 @@ namespace InterfazDATMA
             //int resultado = daoUsuario.verificarUsuario(user, password);
 
 
-            //return resultado;
-            return 0;
+            return resultado;
         }
 
         private void btnIngresar_Click_1(object sender, EventArgs e)

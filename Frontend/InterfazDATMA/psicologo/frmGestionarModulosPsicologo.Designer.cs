@@ -63,11 +63,12 @@ namespace InterfazDATMA
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(88, 45);
+            this.label2.Location = new System.Drawing.Point(59, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(473, 42);
+            this.label2.Size = new System.Drawing.Size(297, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Lista de Modulos Dictando";
             // 
@@ -91,7 +92,8 @@ namespace InterfazDATMA
             this.FechaFin});
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvModulos.Location = new System.Drawing.Point(95, 127);
+            this.dgvModulos.Location = new System.Drawing.Point(63, 83);
+            this.dgvModulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvModulos.Name = "dgvModulos";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -103,13 +105,13 @@ namespace InterfazDATMA
             this.dgvModulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvModulos.RowHeadersWidth = 62;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             this.dgvModulos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvModulos.RowTemplate.Height = 28;
-            this.dgvModulos.Size = new System.Drawing.Size(933, 272);
+            this.dgvModulos.Size = new System.Drawing.Size(622, 177);
             this.dgvModulos.TabIndex = 2;
             // 
             // Modulo
@@ -144,11 +146,12 @@ namespace InterfazDATMA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(99, 507);
+            this.label3.Location = new System.Drawing.Point(66, 330);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 42);
+            this.label3.Size = new System.Drawing.Size(131, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Calendario";
             // 
@@ -173,7 +176,8 @@ namespace InterfazDATMA
             this.Eje});
             this.dgvCalendario.EnableHeadersVisualStyles = false;
             this.dgvCalendario.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCalendario.Location = new System.Drawing.Point(95, 576);
+            this.dgvCalendario.Location = new System.Drawing.Point(63, 374);
+            this.dgvCalendario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCalendario.Name = "dgvCalendario";
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -185,13 +189,13 @@ namespace InterfazDATMA
             this.dgvCalendario.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvCalendario.RowHeadersWidth = 62;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCalendario.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCalendario.RowTemplate.Height = 28;
-            this.dgvCalendario.Size = new System.Drawing.Size(1083, 272);
+            this.dgvCalendario.Size = new System.Drawing.Size(722, 177);
             this.dgvCalendario.TabIndex = 4;
             // 
             // Actividad
@@ -243,11 +247,12 @@ namespace InterfazDATMA
             this.btnAccederModulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnAccederModulo.FlatAppearance.BorderSize = 0;
             this.btnAccederModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccederModulo.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccederModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccederModulo.ForeColor = System.Drawing.Color.White;
-            this.btnAccederModulo.Location = new System.Drawing.Point(822, 425);
+            this.btnAccederModulo.Location = new System.Drawing.Point(548, 276);
+            this.btnAccederModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAccederModulo.Name = "btnAccederModulo";
-            this.btnAccederModulo.Size = new System.Drawing.Size(206, 40);
+            this.btnAccederModulo.Size = new System.Drawing.Size(137, 26);
             this.btnAccederModulo.TabIndex = 5;
             this.btnAccederModulo.Text = "Acceder Modulo";
             this.btnAccederModulo.UseVisualStyleBackColor = false;
@@ -263,17 +268,18 @@ namespace InterfazDATMA
             this.pnlContenido.Controls.Add(this.label2);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Size = new System.Drawing.Size(1232, 927);
+            this.pnlContenido.Size = new System.Drawing.Size(872, 585);
             this.pnlContenido.TabIndex = 8;
-
             // 
             // frmGestionarModulosPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 927);
+            this.ClientSize = new System.Drawing.Size(872, 585);
             this.Controls.Add(this.pnlContenido);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmGestionarModulosPsicologo";
             this.Text = "frmGestionarCursosPsicologo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).EndInit();

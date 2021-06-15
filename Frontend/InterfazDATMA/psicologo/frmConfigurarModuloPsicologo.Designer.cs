@@ -46,22 +46,24 @@ namespace InterfazDATMA
             // lblNombreModulo
             // 
             this.lblNombreModulo.AutoSize = true;
-            this.lblNombreModulo.Font = new System.Drawing.Font("Montserrat", 20F);
+            this.lblNombreModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblNombreModulo.ForeColor = System.Drawing.Color.White;
-            this.lblNombreModulo.Location = new System.Drawing.Point(133, 24);
+            this.lblNombreModulo.Location = new System.Drawing.Point(89, 16);
+            this.lblNombreModulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreModulo.Name = "lblNombreModulo";
-            this.lblNombreModulo.Size = new System.Drawing.Size(203, 49);
+            this.lblNombreModulo.Size = new System.Drawing.Size(124, 31);
             this.lblNombreModulo.TabIndex = 0;
             this.lblNombreModulo.Text = "Modulo 1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 17F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(220, 136);
+            this.label1.Location = new System.Drawing.Point(147, 88);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 42);
+            this.label1.Size = new System.Drawing.Size(125, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Programa:";
             // 
@@ -70,11 +72,12 @@ namespace InterfazDATMA
             this.btnModificarPrograma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnModificarPrograma.FlatAppearance.BorderSize = 0;
             this.btnModificarPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarPrograma.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnModificarPrograma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnModificarPrograma.ForeColor = System.Drawing.Color.White;
-            this.btnModificarPrograma.Location = new System.Drawing.Point(715, 707);
+            this.btnModificarPrograma.Location = new System.Drawing.Point(477, 460);
+            this.btnModificarPrograma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificarPrograma.Name = "btnModificarPrograma";
-            this.btnModificarPrograma.Size = new System.Drawing.Size(313, 44);
+            this.btnModificarPrograma.Size = new System.Drawing.Size(209, 29);
             this.btnModificarPrograma.TabIndex = 3;
             this.btnModificarPrograma.Text = "Modificar Semana";
             this.btnModificarPrograma.UseVisualStyleBackColor = false;
@@ -85,11 +88,12 @@ namespace InterfazDATMA
             this.btnListaCuidadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnListaCuidadores.FlatAppearance.BorderSize = 0;
             this.btnListaCuidadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaCuidadores.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnListaCuidadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnListaCuidadores.ForeColor = System.Drawing.Color.White;
-            this.btnListaCuidadores.Location = new System.Drawing.Point(715, 140);
+            this.btnListaCuidadores.Location = new System.Drawing.Point(477, 91);
+            this.btnListaCuidadores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnListaCuidadores.Name = "btnListaCuidadores";
-            this.btnListaCuidadores.Size = new System.Drawing.Size(313, 44);
+            this.btnListaCuidadores.Size = new System.Drawing.Size(209, 29);
             this.btnListaCuidadores.TabIndex = 4;
             this.btnListaCuidadores.Text = "Lista de Cuidadores";
             this.btnListaCuidadores.UseVisualStyleBackColor = false;
@@ -100,11 +104,12 @@ namespace InterfazDATMA
             this.btnListaCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnListaCursos.FlatAppearance.BorderSize = 0;
             this.btnListaCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaCursos.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.btnListaCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnListaCursos.ForeColor = System.Drawing.Color.White;
-            this.btnListaCursos.Location = new System.Drawing.Point(805, 829);
+            this.btnListaCursos.Location = new System.Drawing.Point(537, 539);
+            this.btnListaCursos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnListaCursos.Name = "btnListaCursos";
-            this.btnListaCursos.Size = new System.Drawing.Size(370, 44);
+            this.btnListaCursos.Size = new System.Drawing.Size(247, 29);
             this.btnListaCursos.TabIndex = 5;
             this.btnListaCursos.Text = "Volver a la lista de modulos";
             this.btnListaCursos.UseVisualStyleBackColor = false;
@@ -129,7 +134,8 @@ namespace InterfazDATMA
             this.Tema});
             this.dgvPrograma.EnableHeadersVisualStyles = false;
             this.dgvPrograma.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPrograma.Location = new System.Drawing.Point(227, 202);
+            this.dgvPrograma.Location = new System.Drawing.Point(151, 131);
+            this.dgvPrograma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPrograma.Name = "dgvPrograma";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -141,13 +147,13 @@ namespace InterfazDATMA
             this.dgvPrograma.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPrograma.RowHeadersWidth = 62;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvPrograma.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrograma.RowTemplate.Height = 28;
-            this.dgvPrograma.Size = new System.Drawing.Size(801, 484);
+            this.dgvPrograma.Size = new System.Drawing.Size(534, 315);
             this.dgvPrograma.TabIndex = 9;
             // 
             // Semana
@@ -166,16 +172,17 @@ namespace InterfazDATMA
             // 
             // frmConfigurarModuloPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1234, 935);
+            this.ClientSize = new System.Drawing.Size(837, 573);
             this.Controls.Add(this.dgvPrograma);
             this.Controls.Add(this.btnListaCursos);
             this.Controls.Add(this.btnListaCuidadores);
             this.Controls.Add(this.btnModificarPrograma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNombreModulo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmConfigurarModuloPsicologo";
             this.Text = "frmConfigurarModuloPsicologo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrograma)).EndInit();

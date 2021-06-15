@@ -22,6 +22,9 @@ namespace InterfazDATMA
             InitializeComponent();
             this.formConfigurarModuloPsicologo = formConfigurarModuloPsicologo;
             this.formPlantillaGestion = formPlantillaGestion;
+
+            rtxtDescripcion.ReadOnly = true;
+            rtxtTema.ReadOnly = true;
         }
 
         private void btnAgregarMaterial_Click(object sender, EventArgs e)
@@ -50,6 +53,12 @@ namespace InterfazDATMA
         private void btnAsitencia_Click(object sender, EventArgs e)
         {
             formPlantillaGestion.abrirFormulario(new frmRegistrarAsistenciaCuidadores(this, formPlantillaGestion));
+        }
+
+        private void btnEditarDescrip_Click(object sender, EventArgs e)
+        {
+            rtxtDescripcion.ReadOnly = false;
+            rtxtTema.ReadOnly = false;
         }
     }
 }
