@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InterfaceDATMA
+namespace InterfazDATMA
 {
     public partial class frmListaCuidadoresDePsicologo : Form
     {
         private frmConfigurarModuloPsicologo formConfigurarModulo;
         private frmPlantillaGestion formPlantillaGestion;
+        
 
         public frmListaCuidadoresDePsicologo(frmConfigurarModuloPsicologo formConfigurarModulo, frmPlantillaGestion formPlantillaGestion)
         {

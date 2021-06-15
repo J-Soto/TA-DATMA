@@ -40,10 +40,11 @@
             // txtUsuario
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Location = new System.Drawing.Point(198, 325);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUsuario.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(148, 260);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(300, 24);
+            this.txtUsuario.Size = new System.Drawing.Size(225, 27);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clickUsuario);
@@ -51,10 +52,11 @@
             // txtContraseña
             // 
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Location = new System.Drawing.Point(198, 390);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtContraseña.Font = new System.Drawing.Font("Montserrat", 11F);
+            this.txtContraseña.Location = new System.Drawing.Point(148, 312);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(300, 24);
+            this.txtContraseña.Size = new System.Drawing.Size(225, 27);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickContraseña);
@@ -66,10 +68,9 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(264, 523);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngresar.Location = new System.Drawing.Point(185, 419);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(182, 46);
+            this.btnIngresar.Size = new System.Drawing.Size(136, 37);
             this.btnIngresar.TabIndex = 21;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -82,10 +83,9 @@
             this.btnOlvido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOlvido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline);
             this.btnOlvido.ForeColor = System.Drawing.Color.Blue;
-            this.btnOlvido.Location = new System.Drawing.Point(184, 577);
-            this.btnOlvido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOlvido.Location = new System.Drawing.Point(148, 461);
             this.btnOlvido.Name = "btnOlvido";
-            this.btnOlvido.Size = new System.Drawing.Size(318, 46);
+            this.btnOlvido.Size = new System.Drawing.Size(225, 37);
             this.btnOlvido.TabIndex = 22;
             this.btnOlvido.Text = "Olvidó su contraseña?";
             this.btnOlvido.UseVisualStyleBackColor = false;
@@ -94,10 +94,10 @@
             // 
             this.checkBoxRecordarme.AutoSize = true;
             this.checkBoxRecordarme.ForeColor = System.Drawing.Color.White;
-            this.checkBoxRecordarme.Location = new System.Drawing.Point(198, 460);
-            this.checkBoxRecordarme.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBoxRecordarme.Location = new System.Drawing.Point(148, 368);
+            this.checkBoxRecordarme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxRecordarme.Name = "checkBoxRecordarme";
-            this.checkBoxRecordarme.Size = new System.Drawing.Size(161, 29);
+            this.checkBoxRecordarme.Size = new System.Drawing.Size(123, 24);
             this.checkBoxRecordarme.TabIndex = 23;
             this.checkBoxRecordarme.Text = "Recordarme";
             this.checkBoxRecordarme.UseVisualStyleBackColor = true;
@@ -105,27 +105,27 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::InterfazDATMA.Properties.Resources.DATMA_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(264, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Location = new System.Drawing.Point(198, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 204);
+            this.pictureBox1.Size = new System.Drawing.Size(142, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(706, 638);
+            this.ClientSize = new System.Drawing.Size(530, 510);
             this.Controls.Add(this.checkBoxRecordarme);
             this.Controls.Add(this.btnOlvido);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLogin";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using InterfaceDATMA;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InterfaceDATMA
+namespace InterfazDATMA
 {
     public partial class frmConfigurarModuloPsicologo : Form
     {
