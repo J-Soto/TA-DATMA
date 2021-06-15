@@ -29,12 +29,12 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSemana = new System.Windows.Forms.Label();
@@ -104,7 +104,7 @@ namespace InterfazDATMA
             this.rtxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.rtxtDescripcion.ForeColor = System.Drawing.Color.White;
             this.rtxtDescripcion.Location = new System.Drawing.Point(113, 127);
-            this.rtxtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtxtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.rtxtDescripcion.Name = "rtxtDescripcion";
             this.rtxtDescripcion.Size = new System.Drawing.Size(486, 66);
             this.rtxtDescripcion.TabIndex = 5;
@@ -117,7 +117,7 @@ namespace InterfazDATMA
             this.rtxtTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rtxtTema.ForeColor = System.Drawing.Color.White;
             this.rtxtTema.Location = new System.Drawing.Point(297, 83);
-            this.rtxtTema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtxtTema.Margin = new System.Windows.Forms.Padding(2);
             this.rtxtTema.Name = "rtxtTema";
             this.rtxtTema.Size = new System.Drawing.Size(303, 31);
             this.rtxtTema.TabIndex = 6;
@@ -131,7 +131,7 @@ namespace InterfazDATMA
             this.btnEditarDescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEditarDescrip.ForeColor = System.Drawing.Color.White;
             this.btnEditarDescrip.Location = new System.Drawing.Point(611, 145);
-            this.btnEditarDescrip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarDescrip.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarDescrip.Name = "btnEditarDescrip";
             this.btnEditarDescrip.Size = new System.Drawing.Size(112, 22);
             this.btnEditarDescrip.TabIndex = 7;
@@ -144,14 +144,14 @@ namespace InterfazDATMA
             this.dgvReuniones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvReuniones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReuniones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReuniones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReuniones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReuniones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -161,23 +161,23 @@ namespace InterfazDATMA
             this.dgvReuniones.EnableHeadersVisualStyles = false;
             this.dgvReuniones.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvReuniones.Location = new System.Drawing.Point(113, 255);
-            this.dgvReuniones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvReuniones.Margin = new System.Windows.Forms.Padding(2);
             this.dgvReuniones.Name = "dgvReuniones";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReuniones.RowHeadersWidth = 62;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvReuniones.RowTemplate.Height = 28;
             this.dgvReuniones.Size = new System.Drawing.Size(612, 127);
             this.dgvReuniones.TabIndex = 8;
@@ -216,14 +216,14 @@ namespace InterfazDATMA
             this.dgvMateriales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvMateriales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMateriales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMateriales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMateriales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMateriales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Descripcion,
@@ -231,23 +231,23 @@ namespace InterfazDATMA
             this.dgvMateriales.EnableHeadersVisualStyles = false;
             this.dgvMateriales.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvMateriales.Location = new System.Drawing.Point(113, 457);
-            this.dgvMateriales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMateriales.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMateriales.Name = "dgvMateriales";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMateriales.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMateriales.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMateriales.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvMateriales.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvMateriales.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvMateriales.RowTemplate.Height = 28;
             this.dgvMateriales.Size = new System.Drawing.Size(486, 110);
             this.dgvMateriales.TabIndex = 9;
@@ -307,12 +307,13 @@ namespace InterfazDATMA
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(611, 171);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(112, 22);
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnAsitencia
             // 
@@ -322,7 +323,7 @@ namespace InterfazDATMA
             this.btnAsitencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnAsitencia.ForeColor = System.Drawing.Color.White;
             this.btnAsitencia.Location = new System.Drawing.Point(492, 385);
-            this.btnAsitencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAsitencia.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsitencia.Name = "btnAsitencia";
             this.btnAsitencia.Size = new System.Drawing.Size(115, 26);
             this.btnAsitencia.TabIndex = 14;
@@ -338,7 +339,7 @@ namespace InterfazDATMA
             this.bntConfigurarTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.bntConfigurarTiempo.ForeColor = System.Drawing.Color.White;
             this.bntConfigurarTiempo.Location = new System.Drawing.Point(611, 385);
-            this.bntConfigurarTiempo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bntConfigurarTiempo.Margin = new System.Windows.Forms.Padding(2);
             this.bntConfigurarTiempo.Name = "bntConfigurarTiempo";
             this.bntConfigurarTiempo.Size = new System.Drawing.Size(115, 26);
             this.bntConfigurarTiempo.TabIndex = 15;
@@ -353,7 +354,7 @@ namespace InterfazDATMA
             this.btnAgregarReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnAgregarReunion.ForeColor = System.Drawing.Color.White;
             this.btnAgregarReunion.Location = new System.Drawing.Point(729, 255);
-            this.btnAgregarReunion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarReunion.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarReunion.Name = "btnAgregarReunion";
             this.btnAgregarReunion.Size = new System.Drawing.Size(27, 26);
             this.btnAgregarReunion.TabIndex = 16;
@@ -369,7 +370,7 @@ namespace InterfazDATMA
             this.btnEliminarReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminarReunion.ForeColor = System.Drawing.Color.White;
             this.btnEliminarReunion.Location = new System.Drawing.Point(729, 285);
-            this.btnEliminarReunion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarReunion.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarReunion.Name = "btnEliminarReunion";
             this.btnEliminarReunion.Size = new System.Drawing.Size(27, 26);
             this.btnEliminarReunion.TabIndex = 17;
@@ -384,7 +385,7 @@ namespace InterfazDATMA
             this.btnAgregarMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnAgregarMaterial.ForeColor = System.Drawing.Color.White;
             this.btnAgregarMaterial.Location = new System.Drawing.Point(603, 457);
-            this.btnAgregarMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarMaterial.Name = "btnAgregarMaterial";
             this.btnAgregarMaterial.Size = new System.Drawing.Size(27, 26);
             this.btnAgregarMaterial.TabIndex = 18;
@@ -400,7 +401,7 @@ namespace InterfazDATMA
             this.btnEliminarMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminarMaterial.ForeColor = System.Drawing.Color.White;
             this.btnEliminarMaterial.Location = new System.Drawing.Point(603, 487);
-            this.btnEliminarMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarMaterial.Name = "btnEliminarMaterial";
             this.btnEliminarMaterial.Size = new System.Drawing.Size(27, 26);
             this.btnEliminarMaterial.TabIndex = 19;
@@ -415,7 +416,7 @@ namespace InterfazDATMA
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(644, 560);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 26);
             this.button1.TabIndex = 21;
@@ -448,7 +449,7 @@ namespace InterfazDATMA
             this.Controls.Add(this.lblSemana);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmModificarPrograma";
             this.Text = "frmModificarPrograma";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).EndInit();

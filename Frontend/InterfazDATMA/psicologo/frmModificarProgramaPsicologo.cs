@@ -17,12 +17,14 @@ namespace InterfazDATMA
         private frmConfigurarModuloPsicologo formConfigurarModuloPsicologo;
         private frmPlantillaGestion formPlantillaGestion;
 
+        private SemanaWS.SemanaWSClient daoSemana;
         public frmModificarPrograma(frmConfigurarModuloPsicologo formConfigurarModuloPsicologo, frmPlantillaGestion formPlantillaGestion)
         {
             InitializeComponent();
             this.formConfigurarModuloPsicologo = formConfigurarModuloPsicologo;
             this.formPlantillaGestion = formPlantillaGestion;
 
+            daoSemana = new SemanaWS.SemanaWSClient();
             rtxtDescripcion.ReadOnly = true;
             rtxtTema.ReadOnly = true;
         }
@@ -59,6 +61,16 @@ namespace InterfazDATMA
         {
             rtxtDescripcion.ReadOnly = false;
             rtxtTema.ReadOnly = false;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            SemanaWS.semana semana = new SemanaWS.semana();
+            semana.nombre = rtxtTema.Text;
+            semana.descripcion = rtxtDescripcion.Text;
+            int resultado = daoSemana.modificarSemana(semana);
+            rtxtDescripcion.ReadOnly = true;
+            rtxtTema.ReadOnly = true;
         }
     }
 }

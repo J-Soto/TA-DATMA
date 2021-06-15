@@ -93,7 +93,7 @@ namespace InterfazDATMA
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvModulos.Location = new System.Drawing.Point(63, 83);
-            this.dgvModulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvModulos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvModulos.Name = "dgvModulos";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -177,7 +177,7 @@ namespace InterfazDATMA
             this.dgvCalendario.EnableHeadersVisualStyles = false;
             this.dgvCalendario.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvCalendario.Location = new System.Drawing.Point(63, 374);
-            this.dgvCalendario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCalendario.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCalendario.Name = "dgvCalendario";
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -250,11 +250,11 @@ namespace InterfazDATMA
             this.btnAccederModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccederModulo.ForeColor = System.Drawing.Color.White;
             this.btnAccederModulo.Location = new System.Drawing.Point(548, 276);
-            this.btnAccederModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAccederModulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccederModulo.Name = "btnAccederModulo";
             this.btnAccederModulo.Size = new System.Drawing.Size(137, 26);
             this.btnAccederModulo.TabIndex = 5;
-            this.btnAccederModulo.Text = "Acceder Modulo";
+            this.btnAccederModulo.Text = "Acceder Curso";
             this.btnAccederModulo.UseVisualStyleBackColor = false;
             this.btnAccederModulo.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -268,7 +268,7 @@ namespace InterfazDATMA
             this.pnlContenido.Controls.Add(this.label2);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(872, 585);
             this.pnlContenido.TabIndex = 8;
@@ -279,9 +279,9 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 585);
             this.Controls.Add(this.pnlContenido);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGestionarModulosPsicologo";
-            this.Text = "frmGestionarCursosPsicologo";
+            this.Text = "Gestionar Cursos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).EndInit();
             this.pnlContenido.ResumeLayout(false);
