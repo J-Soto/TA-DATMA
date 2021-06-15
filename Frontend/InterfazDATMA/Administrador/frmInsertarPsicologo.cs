@@ -119,24 +119,51 @@ namespace InterfazDATMA.Administrador
             }
             else
             {
-                try
+                int verificado = daoPsicologo.verificarDNI(psicologo.DNI, psicologo.nombre, psicologo.apellidoPaterno, psicologo.apellidoMaterno);
+                if (verificado == -1)
                 {
-                    int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
-                    if (idPsicologo != 0)
+                    var resultado = MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.Yes)
                     {
-                        MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        psicologo.idPersona = idPsicologo;
-                        formPlantilla.abrirFormulario(formOperacionPersona);
+                        try
+                        {
+                            int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
+                            if (idPsicologo != 0)
+                            {
+                                MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                psicologo.idPersona = idPsicologo;
+                                formPlantilla.abrirFormulario(formOperacionPersona);
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception();
+                        }
                     }
-
                 }
-                catch (Exception ex)
+                else if (verificado == 0)
+                    MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
                 {
-                    throw new Exception();
+                    try
+                    {
+                        int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
+                        if (idPsicologo != 0)
+                        {
+                            MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            psicologo.idPersona = idPsicologo;
+                            formPlantilla.abrirFormulario(formOperacionPersona);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception();
+                    }
                 }
+                
             }
-
-
         }
 
         private void rbtnHombre_Click(object sender, EventArgs e)
