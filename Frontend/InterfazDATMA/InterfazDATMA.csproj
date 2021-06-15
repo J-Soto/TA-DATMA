@@ -636,8 +636,8 @@
     <None Include="Connected Services\DistritoWS\InterfazDATMA.DistritoWS.modificarDistritoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GrupoWS\GrupoWS1.wsdl" />
-    <None Include="Connected Services\GrupoWS\GrupoWS1.xsd">
+    <None Include="Connected Services\GrupoWS\GrupoWS.wsdl" />
+    <None Include="Connected Services\GrupoWS\GrupoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.eliminarGrupoPsicologoResponse.datasource">
@@ -750,8 +750,8 @@
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.semana.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\SemanaWS\SemanaWS1.wsdl" />
-    <None Include="Connected Services\SemanaWS\SemanaWS1.xsd">
+    <None Include="Connected Services\SemanaWS\SemanaWS.wsdl" />
+    <None Include="Connected Services\SemanaWS\SemanaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TemaWS\InterfazDATMA.TemaWS.insertarTemaResponse.datasource">

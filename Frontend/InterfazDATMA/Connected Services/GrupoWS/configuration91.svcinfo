@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="upjcG6gcAr31q/la604Z0AjFTMFONnseu+7yrpr1xKs=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/aLbswQtohtrF13btJSIzqHP8dWi9qM2joOa0wgvJTE=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="GrupoWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="GrupoWSPort" contract="GrupoWS.GrupoWS" bindingType="basicHttpBinding" address="http://localhost:9999/DatmaSoftWebServices/GrupoWS" bindingConfiguration="GrupoWSPortBinding">
+    <endpoint name="GrupoWSPort" contract="GrupoWS.GrupoWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/DatmaSoftWebServices/GrupoWS" bindingConfiguration="GrupoWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:9999/DatmaSoftWebServices/GrupoWS</serializedValue>
+          <serializedValue>http://54.157.215.104:8080/DatmaSoftWebServices/GrupoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

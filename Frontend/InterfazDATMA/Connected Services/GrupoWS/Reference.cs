@@ -16,14 +16,14 @@ namespace InterfazDATMA.GrupoWS {
     public interface GrupoWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.GrupoWS.modificarGrupoResponse modificarGrupo(InterfazDATMA.GrupoWS.modificarGrupoRequest request);
+        InterfazDATMA.GrupoWS.insertarGrupoResponse insertarGrupo(InterfazDATMA.GrupoWS.insertarGrupoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.modificarGrupoResponse> modificarGrupoAsync(InterfazDATMA.GrupoWS.modificarGrupoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoResponse> insertarGrupoAsync(InterfazDATMA.GrupoWS.insertarGrupoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoResponse")]
@@ -36,34 +36,14 @@ namespace InterfazDATMA.GrupoWS {
         System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.eliminarGrupoResponse> eliminarGrupoAsync(InterfazDATMA.GrupoWS.eliminarGrupoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.GrupoWS.insertarGrupoResponse insertarGrupo(InterfazDATMA.GrupoWS.insertarGrupoRequest request);
+        InterfazDATMA.GrupoWS.modificarGrupoResponse modificarGrupo(InterfazDATMA.GrupoWS.modificarGrupoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoResponse> insertarGrupoAsync(InterfazDATMA.GrupoWS.insertarGrupoRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.GrupoWS.insertarGrupoTutorResponse insertarGrupoTutor(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoTutorResponse> insertarGrupoTutorAsync(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse insertarGrupoPsicologo(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse> insertarGrupoPsicologoAsync(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.modificarGrupoResponse> modificarGrupoAsync(InterfazDATMA.GrupoWS.modificarGrupoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoTutorResponse")]
@@ -76,14 +56,14 @@ namespace InterfazDATMA.GrupoWS {
         System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.eliminarGrupoTutorResponse> eliminarGrupoTutorAsync(InterfazDATMA.GrupoWS.eliminarGrupoTutorRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse listarPsicologosPorIdGrupo(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request);
+        InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse insertarGrupoPsicologo(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse> listarPsicologosPorIdGrupoAsync(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse> insertarGrupoPsicologoAsync(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoPsicologoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoPsicologoResponse")]
@@ -96,6 +76,16 @@ namespace InterfazDATMA.GrupoWS {
         System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.eliminarGrupoPsicologoResponse> eliminarGrupoPsicologoAsync(InterfazDATMA.GrupoWS.eliminarGrupoPsicologoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse listarPsicologosPorIdGrupo(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse> listarPsicologosPorIdGrupoAsync(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -104,6 +94,16 @@ namespace InterfazDATMA.GrupoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.modificarGrupoTutorResponse> modificarGrupoTutorAsync(InterfazDATMA.GrupoWS.modificarGrupoTutorRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.GrupoWS.insertarGrupoTutorResponse insertarGrupoTutor(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoTutorResponse> insertarGrupoTutorAsync(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/listarTutoresPorIdGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/listarTutoresPorIdGrupoResponse")]
@@ -1281,17 +1281,22 @@ namespace InterfazDATMA.GrupoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarGrupo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class modificarGrupoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class insertarGrupoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCurso;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public InterfazDATMA.GrupoWS.grupo grupo;
         
-        public modificarGrupoRequest() {
+        public insertarGrupoRequest() {
         }
         
-        public modificarGrupoRequest(InterfazDATMA.GrupoWS.grupo grupo) {
+        public insertarGrupoRequest(int idCurso, InterfazDATMA.GrupoWS.grupo grupo) {
+            this.idCurso = idCurso;
             this.grupo = grupo;
         }
     }
@@ -1299,17 +1304,17 @@ namespace InterfazDATMA.GrupoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarGrupoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class modificarGrupoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class insertarGrupoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarGrupoResponse() {
+        public insertarGrupoResponse() {
         }
         
-        public modificarGrupoResponse(int @return) {
+        public insertarGrupoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1353,22 +1358,17 @@ namespace InterfazDATMA.GrupoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class insertarGrupoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarGrupo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarGrupoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCurso;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public InterfazDATMA.GrupoWS.grupo grupo;
         
-        public insertarGrupoRequest() {
+        public modificarGrupoRequest() {
         }
         
-        public insertarGrupoRequest(int idCurso, InterfazDATMA.GrupoWS.grupo grupo) {
-            this.idCurso = idCurso;
+        public modificarGrupoRequest(InterfazDATMA.GrupoWS.grupo grupo) {
             this.grupo = grupo;
         }
     }
@@ -1376,104 +1376,17 @@ namespace InterfazDATMA.GrupoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class insertarGrupoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarGrupoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarGrupoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarGrupoResponse() {
+        public modificarGrupoResponse() {
         }
         
-        public insertarGrupoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoTutor", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class insertarGrupoTutorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idTutor;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idGrupo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int numInfantes;
-        
-        public insertarGrupoTutorRequest() {
-        }
-        
-        public insertarGrupoTutorRequest(int idTutor, int idGrupo, int numInfantes) {
-            this.idTutor = idTutor;
-            this.idGrupo = idGrupo;
-            this.numInfantes = numInfantes;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoTutorResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class insertarGrupoTutorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarGrupoTutorResponse() {
-        }
-        
-        public insertarGrupoTutorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoPsicologo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class insertarGrupoPsicologoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPsicologo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idGrupo;
-        
-        public insertarGrupoPsicologoRequest() {
-        }
-        
-        public insertarGrupoPsicologoRequest(int idPsicologo, int idGrupo) {
-            this.idPsicologo = idPsicologo;
-            this.idGrupo = idGrupo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoPsicologoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class insertarGrupoPsicologoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarGrupoPsicologoResponse() {
-        }
-        
-        public insertarGrupoPsicologoResponse(int @return) {
+        public modificarGrupoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1522,17 +1435,22 @@ namespace InterfazDATMA.GrupoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologosPorIdGrupo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class listarPsicologosPorIdGrupoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoPsicologo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class insertarGrupoPsicologoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPsicologo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idGrupo;
         
-        public listarPsicologosPorIdGrupoRequest() {
+        public insertarGrupoPsicologoRequest() {
         }
         
-        public listarPsicologosPorIdGrupoRequest(int idGrupo) {
+        public insertarGrupoPsicologoRequest(int idPsicologo, int idGrupo) {
+            this.idPsicologo = idPsicologo;
             this.idGrupo = idGrupo;
         }
     }
@@ -1540,17 +1458,17 @@ namespace InterfazDATMA.GrupoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologosPorIdGrupoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class listarPsicologosPorIdGrupoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoPsicologoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class insertarGrupoPsicologoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public InterfazDATMA.GrupoWS.psicologo[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarPsicologosPorIdGrupoResponse() {
+        public insertarGrupoPsicologoResponse() {
         }
         
-        public listarPsicologosPorIdGrupoResponse(InterfazDATMA.GrupoWS.psicologo[] @return) {
+        public insertarGrupoPsicologoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1599,6 +1517,42 @@ namespace InterfazDATMA.GrupoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologosPorIdGrupo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarPsicologosPorIdGrupoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idGrupo;
+        
+        public listarPsicologosPorIdGrupoRequest() {
+        }
+        
+        public listarPsicologosPorIdGrupoRequest(int idGrupo) {
+            this.idGrupo = idGrupo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologosPorIdGrupoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarPsicologosPorIdGrupoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.GrupoWS.psicologo[] @return;
+        
+        public listarPsicologosPorIdGrupoResponse() {
+        }
+        
+        public listarPsicologosPorIdGrupoResponse(InterfazDATMA.GrupoWS.psicologo[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarGrupoTutor", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
     public partial class modificarGrupoTutorRequest {
         
@@ -1638,6 +1592,52 @@ namespace InterfazDATMA.GrupoWS {
         }
         
         public modificarGrupoTutorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoTutor", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class insertarGrupoTutorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTutor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idGrupo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int numInfantes;
+        
+        public insertarGrupoTutorRequest() {
+        }
+        
+        public insertarGrupoTutorRequest(int idTutor, int idGrupo, int numInfantes) {
+            this.idTutor = idTutor;
+            this.idGrupo = idGrupo;
+            this.numInfantes = numInfantes;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGrupoTutorResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class insertarGrupoTutorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarGrupoTutorResponse() {
+        }
+        
+        public insertarGrupoTutorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1742,26 +1742,28 @@ namespace InterfazDATMA.GrupoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.GrupoWS.modificarGrupoResponse InterfazDATMA.GrupoWS.GrupoWS.modificarGrupo(InterfazDATMA.GrupoWS.modificarGrupoRequest request) {
-            return base.Channel.modificarGrupo(request);
+        InterfazDATMA.GrupoWS.insertarGrupoResponse InterfazDATMA.GrupoWS.GrupoWS.insertarGrupo(InterfazDATMA.GrupoWS.insertarGrupoRequest request) {
+            return base.Channel.insertarGrupo(request);
         }
         
-        public int modificarGrupo(InterfazDATMA.GrupoWS.grupo grupo) {
-            InterfazDATMA.GrupoWS.modificarGrupoRequest inValue = new InterfazDATMA.GrupoWS.modificarGrupoRequest();
+        public int insertarGrupo(int idCurso, InterfazDATMA.GrupoWS.grupo grupo) {
+            InterfazDATMA.GrupoWS.insertarGrupoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoRequest();
+            inValue.idCurso = idCurso;
             inValue.grupo = grupo;
-            InterfazDATMA.GrupoWS.modificarGrupoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).modificarGrupo(inValue);
+            InterfazDATMA.GrupoWS.insertarGrupoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.modificarGrupoResponse> InterfazDATMA.GrupoWS.GrupoWS.modificarGrupoAsync(InterfazDATMA.GrupoWS.modificarGrupoRequest request) {
-            return base.Channel.modificarGrupoAsync(request);
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoResponse> InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoAsync(InterfazDATMA.GrupoWS.insertarGrupoRequest request) {
+            return base.Channel.insertarGrupoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.modificarGrupoResponse> modificarGrupoAsync(InterfazDATMA.GrupoWS.grupo grupo) {
-            InterfazDATMA.GrupoWS.modificarGrupoRequest inValue = new InterfazDATMA.GrupoWS.modificarGrupoRequest();
+        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoResponse> insertarGrupoAsync(int idCurso, InterfazDATMA.GrupoWS.grupo grupo) {
+            InterfazDATMA.GrupoWS.insertarGrupoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoRequest();
+            inValue.idCurso = idCurso;
             inValue.grupo = grupo;
-            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).modificarGrupoAsync(inValue);
+            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1788,80 +1790,26 @@ namespace InterfazDATMA.GrupoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.GrupoWS.insertarGrupoResponse InterfazDATMA.GrupoWS.GrupoWS.insertarGrupo(InterfazDATMA.GrupoWS.insertarGrupoRequest request) {
-            return base.Channel.insertarGrupo(request);
+        InterfazDATMA.GrupoWS.modificarGrupoResponse InterfazDATMA.GrupoWS.GrupoWS.modificarGrupo(InterfazDATMA.GrupoWS.modificarGrupoRequest request) {
+            return base.Channel.modificarGrupo(request);
         }
         
-        public int insertarGrupo(int idCurso, InterfazDATMA.GrupoWS.grupo grupo) {
-            InterfazDATMA.GrupoWS.insertarGrupoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoRequest();
-            inValue.idCurso = idCurso;
+        public int modificarGrupo(InterfazDATMA.GrupoWS.grupo grupo) {
+            InterfazDATMA.GrupoWS.modificarGrupoRequest inValue = new InterfazDATMA.GrupoWS.modificarGrupoRequest();
             inValue.grupo = grupo;
-            InterfazDATMA.GrupoWS.insertarGrupoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupo(inValue);
+            InterfazDATMA.GrupoWS.modificarGrupoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).modificarGrupo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoResponse> InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoAsync(InterfazDATMA.GrupoWS.insertarGrupoRequest request) {
-            return base.Channel.insertarGrupoAsync(request);
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.modificarGrupoResponse> InterfazDATMA.GrupoWS.GrupoWS.modificarGrupoAsync(InterfazDATMA.GrupoWS.modificarGrupoRequest request) {
+            return base.Channel.modificarGrupoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoResponse> insertarGrupoAsync(int idCurso, InterfazDATMA.GrupoWS.grupo grupo) {
-            InterfazDATMA.GrupoWS.insertarGrupoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoRequest();
-            inValue.idCurso = idCurso;
+        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.modificarGrupoResponse> modificarGrupoAsync(InterfazDATMA.GrupoWS.grupo grupo) {
+            InterfazDATMA.GrupoWS.modificarGrupoRequest inValue = new InterfazDATMA.GrupoWS.modificarGrupoRequest();
             inValue.grupo = grupo;
-            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.GrupoWS.insertarGrupoTutorResponse InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoTutor(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request) {
-            return base.Channel.insertarGrupoTutor(request);
-        }
-        
-        public int insertarGrupoTutor(int idTutor, int idGrupo, int numInfantes) {
-            InterfazDATMA.GrupoWS.insertarGrupoTutorRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoTutorRequest();
-            inValue.idTutor = idTutor;
-            inValue.idGrupo = idGrupo;
-            inValue.numInfantes = numInfantes;
-            InterfazDATMA.GrupoWS.insertarGrupoTutorResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoTutor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoTutorResponse> InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoTutorAsync(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request) {
-            return base.Channel.insertarGrupoTutorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoTutorResponse> insertarGrupoTutorAsync(int idTutor, int idGrupo, int numInfantes) {
-            InterfazDATMA.GrupoWS.insertarGrupoTutorRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoTutorRequest();
-            inValue.idTutor = idTutor;
-            inValue.idGrupo = idGrupo;
-            inValue.numInfantes = numInfantes;
-            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoTutorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoPsicologo(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request) {
-            return base.Channel.insertarGrupoPsicologo(request);
-        }
-        
-        public int insertarGrupoPsicologo(int idPsicologo, int idGrupo) {
-            InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest();
-            inValue.idPsicologo = idPsicologo;
-            inValue.idGrupo = idGrupo;
-            InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoPsicologo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse> InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoPsicologoAsync(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request) {
-            return base.Channel.insertarGrupoPsicologoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse> insertarGrupoPsicologoAsync(int idPsicologo, int idGrupo) {
-            InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest();
-            inValue.idPsicologo = idPsicologo;
-            inValue.idGrupo = idGrupo;
-            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoPsicologoAsync(inValue);
+            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).modificarGrupoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1890,26 +1838,28 @@ namespace InterfazDATMA.GrupoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse InterfazDATMA.GrupoWS.GrupoWS.listarPsicologosPorIdGrupo(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request) {
-            return base.Channel.listarPsicologosPorIdGrupo(request);
+        InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoPsicologo(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request) {
+            return base.Channel.insertarGrupoPsicologo(request);
         }
         
-        public InterfazDATMA.GrupoWS.psicologo[] listarPsicologosPorIdGrupo(int idGrupo) {
-            InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest inValue = new InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest();
+        public int insertarGrupoPsicologo(int idPsicologo, int idGrupo) {
+            InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest();
+            inValue.idPsicologo = idPsicologo;
             inValue.idGrupo = idGrupo;
-            InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).listarPsicologosPorIdGrupo(inValue);
+            InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoPsicologo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse> InterfazDATMA.GrupoWS.GrupoWS.listarPsicologosPorIdGrupoAsync(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request) {
-            return base.Channel.listarPsicologosPorIdGrupoAsync(request);
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse> InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoPsicologoAsync(InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest request) {
+            return base.Channel.insertarGrupoPsicologoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse> listarPsicologosPorIdGrupoAsync(int idGrupo) {
-            InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest inValue = new InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest();
+        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse> insertarGrupoPsicologoAsync(int idPsicologo, int idGrupo) {
+            InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoPsicologoRequest();
+            inValue.idPsicologo = idPsicologo;
             inValue.idGrupo = idGrupo;
-            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).listarPsicologosPorIdGrupoAsync(inValue);
+            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoPsicologoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1938,6 +1888,29 @@ namespace InterfazDATMA.GrupoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse InterfazDATMA.GrupoWS.GrupoWS.listarPsicologosPorIdGrupo(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request) {
+            return base.Channel.listarPsicologosPorIdGrupo(request);
+        }
+        
+        public InterfazDATMA.GrupoWS.psicologo[] listarPsicologosPorIdGrupo(int idGrupo) {
+            InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest inValue = new InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest();
+            inValue.idGrupo = idGrupo;
+            InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).listarPsicologosPorIdGrupo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse> InterfazDATMA.GrupoWS.GrupoWS.listarPsicologosPorIdGrupoAsync(InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest request) {
+            return base.Channel.listarPsicologosPorIdGrupoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse> listarPsicologosPorIdGrupoAsync(int idGrupo) {
+            InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest inValue = new InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoRequest();
+            inValue.idGrupo = idGrupo;
+            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).listarPsicologosPorIdGrupoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         InterfazDATMA.GrupoWS.modificarGrupoTutorResponse InterfazDATMA.GrupoWS.GrupoWS.modificarGrupoTutor(InterfazDATMA.GrupoWS.modificarGrupoTutorRequest request) {
             return base.Channel.modificarGrupoTutor(request);
         }
@@ -1962,6 +1935,33 @@ namespace InterfazDATMA.GrupoWS {
             inValue.idGrupo = idGrupo;
             inValue.numInfantes = numInfantes;
             return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).modificarGrupoTutorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.GrupoWS.insertarGrupoTutorResponse InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoTutor(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request) {
+            return base.Channel.insertarGrupoTutor(request);
+        }
+        
+        public int insertarGrupoTutor(int idTutor, int idGrupo, int numInfantes) {
+            InterfazDATMA.GrupoWS.insertarGrupoTutorRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoTutorRequest();
+            inValue.idTutor = idTutor;
+            inValue.idGrupo = idGrupo;
+            inValue.numInfantes = numInfantes;
+            InterfazDATMA.GrupoWS.insertarGrupoTutorResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoTutor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoTutorResponse> InterfazDATMA.GrupoWS.GrupoWS.insertarGrupoTutorAsync(InterfazDATMA.GrupoWS.insertarGrupoTutorRequest request) {
+            return base.Channel.insertarGrupoTutorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.insertarGrupoTutorResponse> insertarGrupoTutorAsync(int idTutor, int idGrupo, int numInfantes) {
+            InterfazDATMA.GrupoWS.insertarGrupoTutorRequest inValue = new InterfazDATMA.GrupoWS.insertarGrupoTutorRequest();
+            inValue.idTutor = idTutor;
+            inValue.idGrupo = idGrupo;
+            inValue.numInfantes = numInfantes;
+            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).insertarGrupoTutorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

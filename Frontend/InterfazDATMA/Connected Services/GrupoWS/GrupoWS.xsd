@@ -34,6 +34,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarGrupo">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarGrupo">
     <xs:sequence>
       <xs:element minOccurs="0" name="grupo" type="tns:grupo" />
@@ -156,16 +166,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="modificarGrupoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarGrupo">
-    <xs:sequence>
-      <xs:element name="idGrupo" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarGrupoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
