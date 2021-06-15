@@ -78,7 +78,7 @@ namespace InterfazDATMA
             this.dgvModulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvModulos.RowHeadersWidth = 62;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
@@ -86,6 +86,7 @@ namespace InterfazDATMA
             this.dgvModulos.RowTemplate.Height = 28;
             this.dgvModulos.Size = new System.Drawing.Size(955, 534);
             this.dgvModulos.TabIndex = 9;
+            this.dgvModulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModulos_CellContentClick);
             // 
             // Nombre
             // 
@@ -127,20 +128,21 @@ namespace InterfazDATMA
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(125, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(518, 42);
+            this.label2.Size = new System.Drawing.Size(396, 39);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Lista de Cuidadores Inscritos:";
+            this.label2.Text = "Lista de Tutores Inscritos";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnRegresarCurso
             // 
             this.btnRegresarCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnRegresarCurso.FlatAppearance.BorderSize = 0;
             this.btnRegresarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresarCurso.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresarCurso.ForeColor = System.Drawing.Color.White;
             this.btnRegresarCurso.Location = new System.Drawing.Point(881, 731);
             this.btnRegresarCurso.Name = "btnRegresarCurso";

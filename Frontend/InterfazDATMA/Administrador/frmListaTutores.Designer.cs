@@ -55,9 +55,9 @@ namespace InterfazDATMA.Administrador
             this.Header.Location = new System.Drawing.Point(117, 19);
             this.Header.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(311, 61);
+            this.Header.Size = new System.Drawing.Size(355, 61);
             this.Header.TabIndex = 2;
-            this.Header.Text = "Lista Tutores";
+            this.Header.Text = "Lista Tutores :)";
             this.Header.Click += new System.EventHandler(this.Header_Click);
             // 
             // dgvTutor
@@ -178,12 +178,13 @@ namespace InterfazDATMA.Administrador
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(1014, 174);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(130, 37);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -199,7 +200,7 @@ namespace InterfazDATMA.Administrador
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(1095, 714);
+            this.ClientSize = new System.Drawing.Size(1450, 714);
             this.Controls.Add(this.dgvTutor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using InterfaceDATMA;
 using InterfazDATMA.Administrador;
 using InterfazDATMA.cuidador;
 using InterfazDATMA.psicologo;
@@ -19,10 +18,13 @@ namespace InterfazDATMA.plantilla
         private Form formularioActivo = null;
         private Form formInicial;
         private Form formPerfil;
+        public static UsuarioWS.usuario user;
 
-        public frmPlantillaGestion(int tipoUser)
+        public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
+            frmPlantillaGestion.user = user;
+            int tipoUser = user.tipo;
             //Psicologo
             if(tipoUser == 1)
             {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace InterfaceDATMA
+namespace InterfazDATMA
 {
     public partial class frmAgregarMaterialPsicologo : Form
     {
