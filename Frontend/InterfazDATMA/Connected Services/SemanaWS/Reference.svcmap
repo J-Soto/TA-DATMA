@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/SemanaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9999/DatmaSoftWebServices/SemanaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SemanaWS.wsdl" MetadataType="Wsdl" ID="ddce1ddc-a96e-4059-b8f0-64a3d73e80c1" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/SemanaWS?WSDL" />
-    <MetadataFile FileName="SemanaWS.xsd" MetadataType="Schema" ID="60609905-af20-4bd7-a95e-56a6e65e8bae" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/SemanaWS?xsd=1" />
+    <MetadataFile FileName="SemanaWS1.xsd" MetadataType="Schema" ID="9d4ab6f6-7995-4e6f-bcf8-048971f0e337" SourceId="1" SourceUrl="http://localhost:9999/DatmaSoftWebServices/SemanaWS?xsd=1" />
+    <MetadataFile FileName="SemanaWS1.wsdl" MetadataType="Wsdl" ID="957eb9a5-da35-4204-8f0b-b4eb71407fd3" SourceId="1" SourceUrl="http://localhost:9999/DatmaSoftWebServices/SemanaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.datmasoft.datma.pe/" targetNamespace="http://services.datmasoft.datma.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="eliminarGrupo" type="tns:eliminarGrupo" />
+  <xs:element name="eliminarGrupoPsicologo" type="tns:eliminarGrupoPsicologo" />
+  <xs:element name="eliminarGrupoPsicologoResponse" type="tns:eliminarGrupoPsicologoResponse" />
   <xs:element name="eliminarGrupoResponse" type="tns:eliminarGrupoResponse" />
+  <xs:element name="eliminarGrupoTutor" type="tns:eliminarGrupoTutor" />
+  <xs:element name="eliminarGrupoTutorResponse" type="tns:eliminarGrupoTutorResponse" />
   <xs:element name="insertarGrupo" type="tns:insertarGrupo" />
+  <xs:element name="insertarGrupoPsicologo" type="tns:insertarGrupoPsicologo" />
+  <xs:element name="insertarGrupoPsicologoResponse" type="tns:insertarGrupoPsicologoResponse" />
   <xs:element name="insertarGrupoResponse" type="tns:insertarGrupoResponse" />
+  <xs:element name="insertarGrupoTutor" type="tns:insertarGrupoTutor" />
+  <xs:element name="insertarGrupoTutorResponse" type="tns:insertarGrupoTutorResponse" />
   <xs:element name="listarGrupoPorIdCurso" type="tns:listarGrupoPorIdCurso" />
   <xs:element name="listarGrupoPorIdCursoResponse" type="tns:listarGrupoPorIdCursoResponse" />
-  <xs:complexType name="eliminarGrupo">
+  <xs:element name="listarPsicologosPorIdGrupo" type="tns:listarPsicologosPorIdGrupo" />
+  <xs:element name="listarPsicologosPorIdGrupoResponse" type="tns:listarPsicologosPorIdGrupoResponse" />
+  <xs:element name="listarTutoresPorIdGrupo" type="tns:listarTutoresPorIdGrupo" />
+  <xs:element name="listarTutoresPorIdGrupoResponse" type="tns:listarTutoresPorIdGrupoResponse" />
+  <xs:element name="modificarGrupo" type="tns:modificarGrupo" />
+  <xs:element name="modificarGrupoResponse" type="tns:modificarGrupoResponse" />
+  <xs:element name="modificarGrupoTutor" type="tns:modificarGrupoTutor" />
+  <xs:element name="modificarGrupoTutorResponse" type="tns:modificarGrupoTutorResponse" />
+  <xs:complexType name="insertarGrupoTutor">
     <xs:sequence>
+      <xs:element name="idTutor" type="xs:int" />
       <xs:element name="idGrupo" type="xs:int" />
+      <xs:element name="numInfantes" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarGrupoResponse">
+  <xs:complexType name="insertarGrupoTutorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarGrupo">
+  <xs:complexType name="modificarGrupo">
     <xs:sequence>
-      <xs:element name="idCurso" type="xs:int" />
       <xs:element minOccurs="0" name="grupo" type="tns:grupo" />
     </xs:sequence>
   </xs:complexType>
@@ -123,6 +140,7 @@
       <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
       <xs:element name="id" type="xs:int" />
+      <xs:element name="id_curso_tema" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -137,19 +155,105 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="modificarGrupoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupo">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarGrupo">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="grupo" type="tns:grupo" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarGrupoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupoTutor">
+    <xs:sequence>
+      <xs:element name="idTutor" type="xs:int" />
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupoTutorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarGrupoPorIdCurso">
     <xs:sequence>
-      <xs:element name="idCurso" type="xs:int" />
+      <xs:element name="idGrupo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarGrupoPorIdCursoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:grupo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTutoresPorIdGrupo">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTutoresPorIdGrupoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tutor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarGrupoPsicologo">
+    <xs:sequence>
+      <xs:element name="idPsicologo" type="xs:int" />
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarGrupoPsicologoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPsicologosPorIdGrupo">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPsicologosPorIdGrupoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:psicologo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarGrupoTutor">
+    <xs:sequence>
+      <xs:element name="idTutor" type="xs:int" />
+      <xs:element name="idGrupo" type="xs:int" />
+      <xs:element name="numInfantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarGrupoTutorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupoPsicologo">
+    <xs:sequence>
+      <xs:element name="idPsicologo" type="xs:int" />
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupoPsicologoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

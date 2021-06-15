@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/GrupoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9999/DatmaSoftWebServices/GrupoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GrupoWS.wsdl" MetadataType="Wsdl" ID="f8e6df9e-5cdf-4abf-9dab-7069765573ce" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/GrupoWS?WSDL" />
-    <MetadataFile FileName="GrupoWS.xsd" MetadataType="Schema" ID="d920718d-2424-407c-b076-97ae004a7721" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/GrupoWS?xsd=1" />
+    <MetadataFile FileName="GrupoWS1.xsd" MetadataType="Schema" ID="e7fcb00d-8773-4154-8b27-8d1084d1ea72" SourceId="1" SourceUrl="http://localhost:9999/DatmaSoftWebServices/GrupoWS?xsd=1" />
+    <MetadataFile FileName="GrupoWS1.wsdl" MetadataType="Wsdl" ID="755e748b-4ef8-49ce-a6c8-e9042456abdf" SourceId="1" SourceUrl="http://localhost:9999/DatmaSoftWebServices/GrupoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

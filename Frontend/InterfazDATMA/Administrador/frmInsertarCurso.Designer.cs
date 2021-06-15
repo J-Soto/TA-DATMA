@@ -30,6 +30,8 @@ namespace InterfazDATMA.Administrador
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTutoresUser = new System.Windows.Forms.Label();
@@ -44,14 +46,15 @@ namespace InterfazDATMA.Administrador
             this.txtCantSemana = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvReq = new System.Windows.Forms.DataGridView();
-            this.IdCursoRequerido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarReq = new System.Windows.Forms.Button();
             this.btnEliminarReq = new System.Windows.Forms.Button();
             this.btnSelaccionarTemas = new System.Windows.Forms.Button();
             this.btnVerGrupos = new System.Windows.Forms.Button();
             this.btnGuardarCurso = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,47 +187,32 @@ namespace InterfazDATMA.Administrador
             this.dgvReq.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReq.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdCursoRequerido,
-            this.Descripcion});
+            this.Nombre,
+            this.FechaInicio,
+            this.FechaFinal});
             this.dgvReq.EnableHeadersVisualStyles = false;
             this.dgvReq.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvReq.Location = new System.Drawing.Point(81, 418);
             this.dgvReq.Name = "dgvReq";
             this.dgvReq.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReq.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReq.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvReq.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvReq.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvReq.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvReq.RowTemplate.Height = 28;
             this.dgvReq.Size = new System.Drawing.Size(756, 357);
             this.dgvReq.TabIndex = 28;
-            // 
-            // IdCursoRequerido
-            // 
-            this.IdCursoRequerido.HeaderText = "Id Curso Requerido";
-            this.IdCursoRequerido.MinimumWidth = 8;
-            this.IdCursoRequerido.Name = "IdCursoRequerido";
-            this.IdCursoRequerido.ReadOnly = true;
-            this.IdCursoRequerido.Width = 200;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 8;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 150;
             // 
             // btnAgregarReq
             // 
@@ -239,6 +227,7 @@ namespace InterfazDATMA.Administrador
             this.btnAgregarReq.TabIndex = 29;
             this.btnAgregarReq.Text = "+";
             this.btnAgregarReq.UseVisualStyleBackColor = false;
+            this.btnAgregarReq.Click += new System.EventHandler(this.btnAgregarReq_Click);
             // 
             // btnEliminarReq
             // 
@@ -314,6 +303,36 @@ namespace InterfazDATMA.Administrador
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 8;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 150;
+            // 
+            // FechaInicio
+            // 
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle2.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FechaInicio.HeaderText = "Fecha Inicio";
+            this.FechaInicio.MinimumWidth = 8;
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Width = 150;
+            // 
+            // FechaFinal
+            // 
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle3.NullValue = null;
+            this.FechaFinal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FechaFinal.HeaderText = "Fecha Fin";
+            this.FechaFinal.MinimumWidth = 8;
+            this.FechaFinal.Name = "FechaFinal";
+            this.FechaFinal.ReadOnly = true;
+            this.FechaFinal.Width = 150;
+            // 
             // frmInsertarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -360,13 +379,14 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.TextBox txtCantSemana;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvReq;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdCursoRequerido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.Button btnAgregarReq;
         private System.Windows.Forms.Button btnEliminarReq;
         private System.Windows.Forms.Button btnSelaccionarTemas;
         private System.Windows.Forms.Button btnVerGrupos;
         private System.Windows.Forms.Button btnGuardarCurso;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaFinal;
     }
 }

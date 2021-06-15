@@ -101,80 +101,95 @@ namespace InterfazDATMA.Administrador
         private void btnAgregarTema_Click(object sender, EventArgs e)
         {
 
-           
-            int currentSemana = (int)cbNumSemana.SelectedItem, auxSemana;
-            DateTime currentFechaIni = dtpFechaInicial.Value;
-            int flag = 1;
+            if(cbNumSemana.SelectedItem != null) {
 
-            foreach(TemaWS.tema recTema in temasCurso)
-            {
-                //Bucle para saber el numero de la semana a la que pertenece la fechaInicial de un Tema
-                for (int i = 0; i < numSemanas; i++)
+                int currentSemana = (int)cbNumSemana.SelectedItem, auxSemana;
+                DateTime currentFechaIni = dtpFechaInicial.Value;
+                int flag = 1;
+
+                foreach (TemaWS.tema recTema in temasCurso)
                 {
-                    auxSemana = i + 1;
-                    if(recTema.fechaInicio == fechaInicialCurso.AddDays(7 * (auxSemana - 1)))
+                    //Bucle para saber el numero de la semana a la que pertenece la fechaInicial de un Tema
+                    for (int i = 0; i < numSemanas; i++)
                     {
-                        if (auxSemana == currentSemana) flag = 0;
+                        auxSemana = i + 1;
+                        if (recTema.fechaInicio == fechaInicialCurso.AddDays(7 * (auxSemana - 1)))
+                        {
+                            if (auxSemana == currentSemana) flag = 0;
+                        }
                     }
+
                 }
 
+
+                if (flag == 1)
+                {
+                    TemaWS.tema auxTema = new TemaWS.tema(), temaSelected;
+                    temaSelected = cbTema.SelectedItem as TemaWS.tema;
+                    auxTema.id = temaSelected.id;
+                    auxTema.nombre = temaSelected.nombre;
+                    auxTema.descripcion = temaSelected.descripcion;
+                    auxTema.fechaInicio = dtpFechaInicial.Value;
+                    auxTema.fechaInicioSpecified = true;
+                    auxTema.fechaFin = dtpFechaFin.Value;
+                    auxTema.fechaFinSpecified = true;
+                    temasCurso.Add(auxTema);
+                    dgvTemas.DataSource = temasCurso;
+                }
+                else
+                {
+                    MessageBox.Show("Ya se introducio el tema de la semana: " + currentSemana, "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
 
-            
-            if(flag == 1)
-            {
-                TemaWS.tema auxTema = new TemaWS.tema(), temaSelected;
-                temaSelected = cbTema.SelectedItem as TemaWS.tema;
-                auxTema.id = temaSelected.id;
-                auxTema.nombre = temaSelected.nombre;
-                auxTema.descripcion = temaSelected.descripcion;
-                auxTema.fechaInicio = dtpFechaInicial.Value;
-                auxTema.fechaInicioSpecified = true;
-                auxTema.fechaFin = dtpFechaFin.Value;
-                auxTema.fechaFinSpecified = true;
-                temasCurso.Add(auxTema);
-                dgvTemas.DataSource = temasCurso;
-            }
-            else {
-                MessageBox.Show("Ya se introducio el tema de la semana: "+currentSemana,"Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
-           
-           
+
         }
 
         private void dgvTemas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            TemaWS.tema auxTema = dgvTemas.Rows[e.RowIndex].DataBoundItem as TemaWS.tema;
-            int auxSemana = 0;
-            for (int i = 0; i < numSemanas; i++)
+            try
             {
-                auxSemana = i + 1;
-                if (auxTema.fechaInicio == fechaInicialCurso.AddDays(7 * (auxSemana - 1))) break;
-            }
+                TemaWS.tema auxTema = dgvTemas.Rows[e.RowIndex].DataBoundItem as TemaWS.tema;
+                int auxSemana = 0;
+                for (int i = 0; i < numSemanas; i++)
+                {
+                    auxSemana = i + 1;
+                    if (auxTema.fechaInicio == fechaInicialCurso.AddDays(7 * (auxSemana - 1))) break;
+                }
 
-            dgvTemas.Rows[e.RowIndex].Cells["Semana"].Value = auxSemana.ToString();
-            dgvTemas.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxTema.nombre;
-            dgvTemas.Rows[e.RowIndex].Cells["FechaInicio"].Value = auxTema.fechaInicio;
-            dgvTemas.Rows[e.RowIndex].Cells["FechaFin"].Value = auxTema.fechaFin;
+                dgvTemas.Rows[e.RowIndex].Cells["Semana"].Value = auxSemana.ToString();
+                dgvTemas.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxTema.nombre;
+                dgvTemas.Rows[e.RowIndex].Cells["FechaInicio"].Value = auxTema.fechaInicio;
+                dgvTemas.Rows[e.RowIndex].Cells["FechaFin"].Value = auxTema.fechaFin;
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
 
         private void btnQuitarTema_Click(object sender, EventArgs e)
         {
-            TemaWS.tema auxTema = dgvTemas.CurrentRow.DataBoundItem as TemaWS.tema;
-            DateTime fechaIni;
-            
-            for(int i=0;  i < dgvTemas.RowCount; i++){
-                string auxFecha = dgvTemas.Rows[i].Cells["FechaInicio"].Value.ToString();
-                fechaIni = Convert.ToDateTime(auxFecha);
-                if(auxTema.fechaInicio.Date == fechaIni.Date)
-                {
-                    dgvTemas.Rows.Remove(dgvTemas.Rows[i]);
-                }
-            }
-            temasCurso.Remove(auxTema);
+            if(dgvTemas.RowCount != 0)
+            {
+                TemaWS.tema auxTema = dgvTemas.CurrentRow.DataBoundItem as TemaWS.tema;
+                DateTime fechaIni;
 
-            //Update:
-            dgvTemas.DataSource = temasCurso;
+                for (int i = 0; i < dgvTemas.RowCount; i++)
+                {
+                    string auxFecha = dgvTemas.Rows[i].Cells["FechaInicio"].Value.ToString();
+                    fechaIni = Convert.ToDateTime(auxFecha);
+                    if (auxTema.fechaInicio.Date == fechaIni.Date)
+                    {
+                        dgvTemas.Rows.Remove(dgvTemas.Rows[i]);
+                        break;
+                    }
+                }
+                temasCurso.Remove(auxTema);
+
+                //Update:
+                dgvTemas.DataSource = temasCurso;
+            }
         }
     }
 }
