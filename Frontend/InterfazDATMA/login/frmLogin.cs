@@ -80,8 +80,7 @@ namespace InterfazDATMA
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
-            UsuarioWS.usuario user=new UsuarioWS.usuario();
-            /*
+            
             UsuarioWS.usuario user = daoUsuario.verificarUsuario(txtUsuario.Text, txtContraseña.Text);
             
             if (user is null)
@@ -89,7 +88,7 @@ namespace InterfazDATMA
                 MessageBox.Show("Datos incorrectos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            */
+            
             abrirFormulario(new frmPlantillaGestion(user));
             //abrirFormulario(new frmWalkthrough());
             //0->cuidador
