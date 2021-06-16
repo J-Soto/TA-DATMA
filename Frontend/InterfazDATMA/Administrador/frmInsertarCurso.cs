@@ -31,7 +31,8 @@ namespace InterfazDATMA.Administrador
         //semanas:
         private SemanaWS.SemanaWSClient daoSemana;
 
-
+        //requerimientos
+        private BindingList<CursoWS.curso> cursosReq;
 
         public frmInsertarCurso(frmOperacionesCursos formOperacionesCursos, frmPlantillaGestion formPlantillaGest)
         {
@@ -66,8 +67,15 @@ namespace InterfazDATMA.Administrador
             dtpFechaInscrip.Enabled = false;
             txtCantSemana.Text = "0";
 
+            //Inicializar BindingList Temas:
             temasCurso = new BindingList<TemaWS.tema>();
+            //Inicializar BindingList Grupos:
             gruposCurso = new BindingList<Grupo_Curso>();
+            //Inicializar BindingList CursosRequesito:
+            cursosReq = new BindingList<CursoWS.curso>();
+            dgvReq.DataSource = cursosReq;
+
+            //Curso
             curso = new CursoWS.curso();
         }
 
@@ -127,6 +135,7 @@ namespace InterfazDATMA.Administrador
                     daoSemana.insertarSemana(semana, idCursoTema);
                 }
                 
+
                 //Insertar grupos
                 foreach(Grupo_Curso recGruposCurso in gruposCurso)
                 {
@@ -156,6 +165,12 @@ namespace InterfazDATMA.Administrador
                 //    daoSemana.insertarSemana()
                 //}
 
+                //Insertar Requisitos:
+                foreach(CursoWS.curso recCursoReq in cursosReq)
+                {
+                    daoCurso.insertarRequerimiento(idCurso, recCursoReq.idCurso, "Curso Requisito");
+                }
+
                 MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 inicializarPantalla();
             }
@@ -182,17 +197,66 @@ namespace InterfazDATMA.Administrador
             
         }
 
+
+
+
         private void btnAgregarReq_Click(object sender, EventArgs e)
         {
+            DateTime auxFechaIniCur = dtpFechaInicial.Value;
 
-            frmBuscarCursosRequerimiento formBuscarCursoReq = new frmBuscarCursosRequerimiento();
+            frmBuscarCursosRequerimiento formBuscarCursoReq = new frmBuscarCursosRequerimiento(auxFechaIniCur);
 
             if(formBuscarCursoReq.ShowDialog() == DialogResult.OK)
             {
+                int flag = 1;
+                foreach (CursoWS.curso recCursosReq in cursosReq)
+                {
+                    if(formBuscarCursoReq.Curso_Req.idCurso == recCursosReq.idCurso)
+                    {
+                        flag = 0;
+                        break;
+                    }
+                }
 
+                if(flag == 1)
+                {
+                    cursosReq.Add(formBuscarCursoReq.Curso_Req);
+                    dgvReq.DataSource = cursosReq;
+                }
+                else
+                {
+                    MessageBox.Show("Ya se registro el curso como requisito","Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
 
             }
 
+        }
+
+        private void dgvReq_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                CursoWS.curso auxCurso = dgvReq.Rows[e.RowIndex].DataBoundItem as CursoWS.curso;
+
+                dgvReq.Rows[e.RowIndex].Cells["NombreCurso"].Value = auxCurso.descripcion;
+                dgvReq.Rows[e.RowIndex].Cells["FechaInicial"].Value = auxCurso.fechaInicio;
+                dgvReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            
+        }
+
+        private void btnEliminarReq_Click(object sender, EventArgs e)
+        {
+            if(dgvReq.RowCount != 0)
+            {
+                CursoWS.curso auxCurso = dgvReq.CurrentRow.DataBoundItem as CursoWS.curso;
+                cursosReq.Remove(auxCurso);
+                dgvReq.Refresh();
+            }
         }
     }
 }
