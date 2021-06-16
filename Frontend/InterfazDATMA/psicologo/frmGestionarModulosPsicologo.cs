@@ -39,7 +39,13 @@ namespace InterfazDATMA
             }
             // obtener cursos del psicologo
             dgvModulos.AutoGenerateColumns = false;
-            cursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosPsicologo(frmPlantillaGestion.psico.idPersona));
+            try
+            {
+                cursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosPsicologo(frmPlantillaGestion.psico.idPersona));
+            } catch (ArgumentNullException)
+            {
+                cursos = new BindingList<CursoWS.curso>();
+            }
             dgvModulos.DataSource = cursos;
             // obtener semanas
             var semanas = new List<CursoWS.semana>();
