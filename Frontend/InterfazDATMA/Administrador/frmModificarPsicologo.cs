@@ -106,7 +106,7 @@ namespace InterfazDATMA.Administrador
             psicologo.correo = txtCorreo.Text;
 
             psicologo.DNI = txtDni.Text;
-            MessageBox.Show(psicologo.distrito.idDistrito.ToString());
+            //MessageBox.Show(psicologo.distrito.idDistrito.ToString());
             
 
             psicologo.telefono = txtTelf.Text;
@@ -236,7 +236,7 @@ namespace InterfazDATMA.Administrador
                 if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
                 {
                     rutaFoto = ofdSubirFoto.FileName;
-                    MessageBox.Show(rutaFoto);
+                    //MessageBox.Show(rutaFoto);
                     pbFoto.Image = Image.FromFile(rutaFoto);
                 }
 
