@@ -16,22 +16,13 @@ namespace InterfazDATMA.ActividadWS {
     public interface ActividadWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.ActividadWS.modificarActividadResponse modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request);
+        InterfazDATMA.ActividadWS.listarActividadResponse listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.ActividadWS.insertarActividadResponse insertarActividad(InterfazDATMA.ActividadWS.insertarActividadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.insertarActividadResponse> insertarActividadAsync(InterfazDATMA.ActividadWS.insertarActividadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadResponse")]
@@ -43,13 +34,22 @@ namespace InterfazDATMA.ActividadWS {
         System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.eliminarActividadResponse> eliminarActividadAsync(InterfazDATMA.ActividadWS.eliminarActividadRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.ActividadWS.listarActividadResponse listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request);
+        InterfazDATMA.ActividadWS.insertarActividadResponse insertarActividad(InterfazDATMA.ActividadWS.insertarActividadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.insertarActividadResponse> insertarActividadAsync(InterfazDATMA.ActividadWS.insertarActividadRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.ActividadWS.modificarActividadResponse modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request);
     }
     
     /// <remarks/>
@@ -68,9 +68,15 @@ namespace InterfazDATMA.ActividadWS {
         
         private localTime horaFinField;
         
+        private string horaFinStrField;
+        
         private localTime horaInicioField;
         
+        private string horaInicioStrField;
+        
         private int idActividadField;
+        
+        private int idSemanaField;
         
         private string linkZoomField;
         
@@ -128,6 +134,18 @@ namespace InterfazDATMA.ActividadWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string horaFinStr {
+            get {
+                return this.horaFinStrField;
+            }
+            set {
+                this.horaFinStrField = value;
+                this.RaisePropertyChanged("horaFinStr");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public localTime horaInicio {
             get {
                 return this.horaInicioField;
@@ -139,7 +157,19 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string horaInicioStr {
+            get {
+                return this.horaInicioStrField;
+            }
+            set {
+                this.horaInicioStrField = value;
+                this.RaisePropertyChanged("horaInicioStr");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idActividad {
             get {
                 return this.idActividadField;
@@ -151,7 +181,19 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int idSemana {
+            get {
+                return this.idSemanaField;
+            }
+            set {
+                this.idSemanaField = value;
+                this.RaisePropertyChanged("idSemana");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string linkZoom {
             get {
                 return this.linkZoomField;
@@ -163,7 +205,7 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("materiales", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("materiales", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
         public material[] materiales {
             get {
                 return this.materialesField;
@@ -175,7 +217,7 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -319,35 +361,63 @@ namespace InterfazDATMA.ActividadWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class modificarActividadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarActividadRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public InterfazDATMA.ActividadWS.actividad actividad;
-        
-        public modificarActividadRequest() {
-        }
-        
-        public modificarActividadRequest(InterfazDATMA.ActividadWS.actividad actividad) {
-            this.actividad = actividad;
+        public listarActividadRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class modificarActividadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarActividadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.ActividadWS.actividad[] @return;
+        
+        public listarActividadResponse() {
+        }
+        
+        public listarActividadResponse(InterfazDATMA.ActividadWS.actividad[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarActividadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idActividad;
+        
+        public eliminarActividadRequest() {
+        }
+        
+        public eliminarActividadRequest(int idActividad) {
+            this.idActividad = idActividad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarActividadResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarActividadResponse() {
+        public eliminarActividadResponse() {
         }
         
-        public modificarActividadResponse(int @return) {
+        public eliminarActividadResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -396,63 +466,35 @@ namespace InterfazDATMA.ActividadWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class eliminarActividadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarActividadRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idActividad;
+        public InterfazDATMA.ActividadWS.actividad actividad;
         
-        public eliminarActividadRequest() {
+        public modificarActividadRequest() {
         }
         
-        public eliminarActividadRequest(int idActividad) {
-            this.idActividad = idActividad;
+        public modificarActividadRequest(InterfazDATMA.ActividadWS.actividad actividad) {
+            this.actividad = actividad;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class eliminarActividadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarActividadResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarActividadResponse() {
+        public modificarActividadResponse() {
         }
         
-        public eliminarActividadResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class listarActividadRequest {
-        
-        public listarActividadRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class listarActividadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public InterfazDATMA.ActividadWS.actividad[] @return;
-        
-        public listarActividadResponse() {
-        }
-        
-        public listarActividadResponse(InterfazDATMA.ActividadWS.actividad[] @return) {
+        public modificarActividadResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -485,26 +527,47 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.ActividadWS.modificarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
-            return base.Channel.modificarActividad(request);
+        InterfazDATMA.ActividadWS.listarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request) {
+            return base.Channel.listarActividad(request);
         }
         
-        public int modificarActividad(InterfazDATMA.ActividadWS.actividad actividad) {
-            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
-            inValue.actividad = actividad;
-            InterfazDATMA.ActividadWS.modificarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividad(inValue);
+        public InterfazDATMA.ActividadWS.actividad[] listarActividad() {
+            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
+            InterfazDATMA.ActividadWS.listarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividad(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
-            return base.Channel.modificarActividadAsync(request);
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request) {
+            return base.Channel.listarActividadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.actividad actividad) {
-            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
-            inValue.actividad = actividad;
-            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividadAsync(inValue);
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync() {
+            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.ActividadWS.eliminarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.eliminarActividad(InterfazDATMA.ActividadWS.eliminarActividadRequest request) {
+            return base.Channel.eliminarActividad(request);
+        }
+        
+        public int eliminarActividad(int idActividad) {
+            InterfazDATMA.ActividadWS.eliminarActividadRequest inValue = new InterfazDATMA.ActividadWS.eliminarActividadRequest();
+            inValue.idActividad = idActividad;
+            InterfazDATMA.ActividadWS.eliminarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).eliminarActividad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.eliminarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.eliminarActividadAsync(InterfazDATMA.ActividadWS.eliminarActividadRequest request) {
+            return base.Channel.eliminarActividadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.eliminarActividadResponse> eliminarActividadAsync(int idActividad) {
+            InterfazDATMA.ActividadWS.eliminarActividadRequest inValue = new InterfazDATMA.ActividadWS.eliminarActividadRequest();
+            inValue.idActividad = idActividad;
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).eliminarActividadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -533,47 +596,26 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.ActividadWS.eliminarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.eliminarActividad(InterfazDATMA.ActividadWS.eliminarActividadRequest request) {
-            return base.Channel.eliminarActividad(request);
+        InterfazDATMA.ActividadWS.modificarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
+            return base.Channel.modificarActividad(request);
         }
         
-        public int eliminarActividad(int idActividad) {
-            InterfazDATMA.ActividadWS.eliminarActividadRequest inValue = new InterfazDATMA.ActividadWS.eliminarActividadRequest();
-            inValue.idActividad = idActividad;
-            InterfazDATMA.ActividadWS.eliminarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).eliminarActividad(inValue);
+        public int modificarActividad(InterfazDATMA.ActividadWS.actividad actividad) {
+            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
+            inValue.actividad = actividad;
+            InterfazDATMA.ActividadWS.modificarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividad(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.eliminarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.eliminarActividadAsync(InterfazDATMA.ActividadWS.eliminarActividadRequest request) {
-            return base.Channel.eliminarActividadAsync(request);
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
+            return base.Channel.modificarActividadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.eliminarActividadResponse> eliminarActividadAsync(int idActividad) {
-            InterfazDATMA.ActividadWS.eliminarActividadRequest inValue = new InterfazDATMA.ActividadWS.eliminarActividadRequest();
-            inValue.idActividad = idActividad;
-            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).eliminarActividadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.ActividadWS.listarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request) {
-            return base.Channel.listarActividad(request);
-        }
-        
-        public InterfazDATMA.ActividadWS.actividad[] listarActividad() {
-            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
-            InterfazDATMA.ActividadWS.listarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividad(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request) {
-            return base.Channel.listarActividadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync() {
-            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
-            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividadAsync(inValue);
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.actividad actividad) {
+            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
+            inValue.actividad = actividad;
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividadAsync(inValue);
         }
     }
 }

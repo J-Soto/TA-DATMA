@@ -189,7 +189,27 @@ namespace InterfazDATMA.Administrador
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
         {
-            
+            if (dgvPsicologos.SelectedRows.Count > 0)
+            {
+                var resultado = MessageBox.Show("Se eliminará esta persona del sistema. Quiere Continuar", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
+                {
+                    PsicologoWS.psicologo psicologo = new PsicologoWS.psicologo();
+                    psicologo = (PsicologoWS.psicologo)dgvPsicologos.SelectedRows[0].DataBoundItem;
+                    daoPsicologo.eliminarPsicologo(psicologo.idPersona, psicologo.idUsuario);
+                }
+                
+            }
+            else if(dgvTutores.SelectedRows.Count > 0)
+            {
+                var resultado = MessageBox.Show("Se eliminará esta persona del sistema. Quiere Continuar", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
+                {
+                    TutorWS.tutor tutor = new TutorWS.tutor();
+                    tutor = (TutorWS.tutor)dgvTutores.SelectedRows[0].DataBoundItem;
+                    daoTutor.eliminarTutor(tutor.idPersona, tutor.idUsuario);
+                }
+            }
         }
 
         private void dgvTutores_SelectionChanged(object sender, EventArgs e)

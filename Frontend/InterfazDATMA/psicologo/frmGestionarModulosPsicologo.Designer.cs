@@ -49,7 +49,6 @@ namespace InterfazDATMA
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAccederModulo = new System.Windows.Forms.Button();
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +73,10 @@ namespace InterfazDATMA
             // 
             // dgvModulos
             // 
+            this.dgvModulos.AllowUserToAddRows = false;
+            this.dgvModulos.AllowUserToDeleteRows = false;
+            this.dgvModulos.AllowUserToResizeColumns = false;
+            this.dgvModulos.AllowUserToResizeRows = false;
             this.dgvModulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvModulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvModulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -94,7 +97,9 @@ namespace InterfazDATMA
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvModulos.Location = new System.Drawing.Point(63, 83);
             this.dgvModulos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvModulos.MultiSelect = false;
             this.dgvModulos.Name = "dgvModulos";
+            this.dgvModulos.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,7 +116,8 @@ namespace InterfazDATMA
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             this.dgvModulos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvModulos.RowTemplate.Height = 28;
-            this.dgvModulos.Size = new System.Drawing.Size(622, 177);
+            this.dgvModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvModulos.Size = new System.Drawing.Size(654, 177);
             this.dgvModulos.TabIndex = 2;
             // 
             // label3
@@ -128,6 +134,10 @@ namespace InterfazDATMA
             // 
             // dgvCalendario
             // 
+            this.dgvCalendario.AllowUserToAddRows = false;
+            this.dgvCalendario.AllowUserToDeleteRows = false;
+            this.dgvCalendario.AllowUserToResizeColumns = false;
+            this.dgvCalendario.AllowUserToResizeRows = false;
             this.dgvCalendario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvCalendario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -143,13 +153,14 @@ namespace InterfazDATMA
             this.Actividad,
             this.Fecha,
             this.HoraInicio,
-            this.HoraFin,
-            this.Eje});
+            this.HoraFin});
             this.dgvCalendario.EnableHeadersVisualStyles = false;
             this.dgvCalendario.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvCalendario.Location = new System.Drawing.Point(63, 374);
             this.dgvCalendario.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCalendario.MultiSelect = false;
             this.dgvCalendario.Name = "dgvCalendario";
+            this.dgvCalendario.ReadOnly = true;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,52 +177,54 @@ namespace InterfazDATMA
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCalendario.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCalendario.RowTemplate.Height = 28;
-            this.dgvCalendario.Size = new System.Drawing.Size(722, 177);
+            this.dgvCalendario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCalendario.Size = new System.Drawing.Size(654, 177);
             this.dgvCalendario.TabIndex = 4;
             // 
             // Actividad
             // 
+            this.Actividad.DataPropertyName = "nombre";
             this.Actividad.HeaderText = "Actividad";
             this.Actividad.MinimumWidth = 8;
             this.Actividad.Name = "Actividad";
+            this.Actividad.ReadOnly = true;
             this.Actividad.Width = 200;
             // 
             // Fecha
             // 
+            this.Fecha.DataPropertyName = "fecha";
             dataGridViewCellStyle8.Format = "d";
             dataGridViewCellStyle8.NullValue = null;
             this.Fecha.DefaultCellStyle = dataGridViewCellStyle8;
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.MinimumWidth = 8;
             this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             this.Fecha.Width = 150;
             // 
             // HoraInicio
             // 
+            this.HoraInicio.DataPropertyName = "horaInicioStr";
             dataGridViewCellStyle9.Format = "t";
             dataGridViewCellStyle9.NullValue = null;
             this.HoraInicio.DefaultCellStyle = dataGridViewCellStyle9;
             this.HoraInicio.HeaderText = "Hora de Inicio";
             this.HoraInicio.MinimumWidth = 8;
             this.HoraInicio.Name = "HoraInicio";
+            this.HoraInicio.ReadOnly = true;
             this.HoraInicio.Width = 120;
             // 
             // HoraFin
             // 
+            this.HoraFin.DataPropertyName = "horaFinStr";
             dataGridViewCellStyle10.Format = "t";
             dataGridViewCellStyle10.NullValue = null;
             this.HoraFin.DefaultCellStyle = dataGridViewCellStyle10;
             this.HoraFin.HeaderText = "Hora de Fin";
             this.HoraFin.MinimumWidth = 8;
             this.HoraFin.Name = "HoraFin";
+            this.HoraFin.ReadOnly = true;
             this.HoraFin.Width = 120;
-            // 
-            // Eje
-            // 
-            this.Eje.HeaderText = "Eje";
-            this.Eje.MinimumWidth = 8;
-            this.Eje.Name = "Eje";
-            this.Eje.Width = 150;
             // 
             // btnAccederModulo
             // 
@@ -246,32 +259,38 @@ namespace InterfazDATMA
             // 
             // Curso
             // 
+            this.Curso.DataPropertyName = "descripcion";
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Curso.DefaultCellStyle = dataGridViewCellStyle2;
             this.Curso.HeaderText = "Curso";
             this.Curso.MinimumWidth = 8;
             this.Curso.Name = "Curso";
+            this.Curso.ReadOnly = true;
             this.Curso.Width = 200;
             // 
             // FechaInicio
             // 
+            this.FechaInicio.DataPropertyName = "fechaInicio";
             dataGridViewCellStyle3.Format = "d";
             dataGridViewCellStyle3.NullValue = null;
             this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle3;
             this.FechaInicio.HeaderText = "Fecha Inicio";
             this.FechaInicio.MinimumWidth = 8;
             this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
             this.FechaInicio.Width = 180;
             // 
             // FechaFin
             // 
+            this.FechaFin.DataPropertyName = "fechaFin";
             dataGridViewCellStyle4.Format = "d";
             dataGridViewCellStyle4.NullValue = null;
             this.FechaFin.DefaultCellStyle = dataGridViewCellStyle4;
             this.FechaFin.HeaderText = "Fecha Fin";
             this.FechaFin.MinimumWidth = 8;
             this.FechaFin.Name = "FechaFin";
-            this.FechaFin.Width = 180;
+            this.FechaFin.ReadOnly = true;
+            this.FechaFin.Width = 190;
             // 
             // frmGestionarModulosPsicologo
             // 
@@ -301,7 +320,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Eje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Curso;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
