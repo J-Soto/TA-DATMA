@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\frmBuscarCursosRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarCursosRequerimiento.Designer.cs">
+      <DependentUpon>frmBuscarCursosRequerimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmBuscarPsicologoGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -367,6 +373,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="util\Grupo_Curso.cs" />
     <Compile Include="validacion\Validar.cs" />
+    <EmbeddedResource Include="Administrador\frmBuscarCursosRequerimiento.resx">
+      <DependentUpon>frmBuscarCursosRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmBuscarPsicologoGrupo.resx">
       <DependentUpon>frmBuscarPsicologoGrupo.cs</DependentUpon>
     </EmbeddedResource>
@@ -631,16 +640,46 @@
     <None Include="Connected Services\GrupoWS\GrupoWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.eliminarGrupoPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.eliminarGrupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.eliminarGrupoTutorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.grupo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.insertarGrupoPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.insertarGrupoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.insertarGrupoTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.listarGrupoPorIdCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.listarPsicologosPorIdGrupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.listarTutoresPorIdGrupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.modificarGrupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.modificarGrupoTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.psicologo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.tutor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MaterialWS\InterfazDATMA.MaterialWS.documento.datasource">

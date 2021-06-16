@@ -26,6 +26,12 @@ namespace InterfazDATMA.Administrador
         //grupo_curso:
         private BindingList<Grupo_Curso> gruposCurso;
         private frmVerGruposCurso formVerGruposCurso;
+        private GrupoWS.GrupoWSClient daoGrupo;
+
+        //semanas:
+        private SemanaWS.SemanaWSClient daoSemana;
+
+
 
         public frmInsertarCurso(frmOperacionesCursos formOperacionesCursos, frmPlantillaGestion formPlantillaGest)
         {
@@ -33,6 +39,8 @@ namespace InterfazDATMA.Administrador
             this.formOperacionesCursos = formOperacionesCursos;
 
             daoCurso = new CursoWS.CursoWSClient();
+            daoGrupo = new GrupoWS.GrupoWSClient();
+            daoSemana = new SemanaWS.SemanaWSClient();
 
             InitializeComponent();
             dgvReq.AutoGenerateColumns = false;
@@ -95,17 +103,60 @@ namespace InterfazDATMA.Administrador
             curso.fechaInscripcion = dtpFechaInscrip.Value;
             curso.fechaInscripcionSpecified = true;
             curso.cantSemanas = Int32.Parse(txtCantSemana.Text);
+            
             int idCurso = daoCurso.insertarCurso(curso);
-            if(idCurso != 0)
+            if (idCurso != 0)
             {
+                int contSemanas = 0;
+                //Insertar temas
                 foreach (TemaWS.tema recTema in temasCurso)
                 {
                     recTema.fechaInicioSpecified = true;
                     recTema.fechaFinSpecified = true;
-                    daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
-                }
-                MessageBox.Show("Se ha registrado el curso con exito","Mensaje de Confirmacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    int idCursoTema = daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
 
+                    //Insertar semanas:
+                    SemanaWS.semana semana = new SemanaWS.semana();
+                    contSemanas++;
+                    semana.nombre = "Editar nombre Semana: " + contSemanas;
+                    semana.descripcion = "Editar";
+                    semana.fechaInicio = recTema.fechaInicio;
+                    semana.fechaInicioSpecified = true;
+                    semana.curso = new SemanaWS.curso();
+                    semana.curso.idCurso = idCurso;
+                    daoSemana.insertarSemana(semana, idCursoTema);
+                }
+                
+                //Insertar grupos
+                foreach(Grupo_Curso recGruposCurso in gruposCurso)
+                {
+                    int idGrupo = daoGrupo.insertarGrupo(idCurso, recGruposCurso.Grupo);
+                    if(idGrupo != 0)
+                    {
+                        //Insertar psicologos
+                        foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                        {
+                            daoGrupo.insertarGrupoPsicologo(recPsicologo.idPersona, idGrupo);
+                        }
+                    }
+                }
+
+                //Insertar semanas:
+                //for(int i = 0; i < curso.cantSemanas; i++)
+                //{
+                //    SemanaWS.semana semana = new SemanaWS.semana();
+                //    int auxSemana = i + 1;
+                //    semana.nombre = "Editar nombre Semana: " + auxSemana;
+                //    semana.descripcion = "Editar";
+                //    semana.fechaInicio = DateTime.Now; //Editar
+                //    semana.fechaInicioSpecified = true;
+                //    semana.curso = new SemanaWS.curso();
+                //    MessageBox.Show(idCurso.ToString());
+                //    semana.curso.idCurso = idCurso;
+                //    daoSemana.insertarSemana()
+                //}
+
+                MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 inicializarPantalla();
             }
         }
@@ -131,5 +182,17 @@ namespace InterfazDATMA.Administrador
             
         }
 
+        private void btnAgregarReq_Click(object sender, EventArgs e)
+        {
+
+            frmBuscarCursosRequerimiento formBuscarCursoReq = new frmBuscarCursosRequerimiento();
+
+            if(formBuscarCursoReq.ShowDialog() == DialogResult.OK)
+            {
+
+
+            }
+
+        }
     }
 }

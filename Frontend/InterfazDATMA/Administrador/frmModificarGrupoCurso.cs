@@ -99,27 +99,26 @@ namespace InterfazDATMA.Administrador
 
         private void btnEliminarPsico_Click(object sender, EventArgs e)
         {
-            //if(dgvPsicologos.RowCount != 0)
-            //{
-            //    PsicologoWS.psicologo auxPsico = dgvPsicologos.CurrentRow.DataBoundItem as PsicologoWS.psicologo;
+            if (dgvPsicologos.RowCount != 0)
+            {
+                PsicologoWS.psicologo auxPsico = dgvPsicologos.CurrentRow.DataBoundItem as PsicologoWS.psicologo;
 
-            //    for (int i = 0; i < dgvPsicologos.RowCount; i++)
-            //    {
-            //        PsicologoWS.psicologo auxDGVPsico = dgvPsicologos.Rows[i].DataBoundItem as PsicologoWS.psicologo;
+                for (int i = 0; i < dgvPsicologos.RowCount; i++)
+                {
+                    PsicologoWS.psicologo auxDGVPsico = dgvPsicologos.Rows[i].DataBoundItem as PsicologoWS.psicologo;
 
-            //        if (auxDGVPsico.idPersona == auxPsico.idPersona)
-            //        {
-            //            MessageBox.Show(i.ToString());
-            //            dgvPsicologos.Rows.Remove(dgvPsicologos.Rows[i]);
+                    if (auxDGVPsico.idPersona == auxPsico.idPersona)
+                    {
+                        
+                        dgvPsicologos.Rows.Remove(dgvPsicologos.Rows[i]);
 
-            //            break;
-            //        }
-            //    }
+                        break;
+                    }
+                }
 
-            //    MessageBox.Show("Hola4");
-            //    psicologosGrupo.Remove(auxPsico);
-            //    dgvPsicologos.DataSource = psicologosGrupo;
-            //}
+                psicologosGrupo.Remove(auxPsico);
+                dgvPsicologos.DataSource = psicologosGrupo;
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -134,6 +133,8 @@ namespace InterfazDATMA.Administrador
 
         private void dgvPsicologos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            try
+            {
                 PsicologoWS.psicologo auxPsicologo = dgvPsicologos.Rows[e.RowIndex].DataBoundItem as PsicologoWS.psicologo;
 
                 dgvPsicologos.Rows[e.RowIndex].Cells["Nombre"].Value = auxPsicologo.nombre;
@@ -142,8 +143,12 @@ namespace InterfazDATMA.Administrador
                 dgvPsicologos.Rows[e.RowIndex].Cells["Correo"].Value = auxPsicologo.correo;
                 dgvPsicologos.Rows[e.RowIndex].Cells["User"].Value = auxPsicologo.user;
                 dgvPsicologos.Rows[e.RowIndex].Cells["Celular"].Value = auxPsicologo.celular;
+            }catch(Exception ex)
+            {
+                
+            }
+                
         }
-
 
     }
 }

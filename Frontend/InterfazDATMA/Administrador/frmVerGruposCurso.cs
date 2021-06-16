@@ -30,6 +30,7 @@ namespace InterfazDATMA.Administrador
         //psicologos
         private BindingList<PsicologoWS.psicologo> psicologosGrupo;
 
+        
 
         public frmVerGruposCurso(frmInsertarCurso formInsertarCurso, frmPlantillaGestion formPlantillaGest, BindingList<Grupo_Curso> grupos)
         {
