@@ -584,6 +584,9 @@
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
