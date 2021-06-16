@@ -38,9 +38,9 @@ namespace InterfazDATMA
             this.btnListaCuidadores = new System.Windows.Forms.Button();
             this.btnListaCursos = new System.Windows.Forms.Button();
             this.dgvPrograma = new System.Windows.Forms.DataGridView();
-            this.btnInsertarSemana = new System.Windows.Forms.Button();
             this.Semana = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnInsertarSemana = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrograma)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,21 +162,6 @@ namespace InterfazDATMA
             this.dgvPrograma.Size = new System.Drawing.Size(534, 315);
             this.dgvPrograma.TabIndex = 9;
             // 
-            // btnInsertarSemana
-            // 
-            this.btnInsertarSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnInsertarSemana.FlatAppearance.BorderSize = 0;
-            this.btnInsertarSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertarSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnInsertarSemana.ForeColor = System.Drawing.Color.White;
-            this.btnInsertarSemana.Location = new System.Drawing.Point(206, 460);
-            this.btnInsertarSemana.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInsertarSemana.Name = "btnInsertarSemana";
-            this.btnInsertarSemana.Size = new System.Drawing.Size(209, 29);
-            this.btnInsertarSemana.TabIndex = 10;
-            this.btnInsertarSemana.Text = "Insertar Semana";
-            this.btnInsertarSemana.UseVisualStyleBackColor = false;
-            // 
             // Semana
             // 
             this.Semana.DataPropertyName = "NombreSemana";
@@ -194,6 +179,22 @@ namespace InterfazDATMA
             this.Tema.Name = "Tema";
             this.Tema.ReadOnly = true;
             this.Tema.Width = 290;
+            // 
+            // btnInsertarSemana
+            // 
+            this.btnInsertarSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.btnInsertarSemana.FlatAppearance.BorderSize = 0;
+            this.btnInsertarSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertarSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnInsertarSemana.ForeColor = System.Drawing.Color.White;
+            this.btnInsertarSemana.Location = new System.Drawing.Point(206, 460);
+            this.btnInsertarSemana.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInsertarSemana.Name = "btnInsertarSemana";
+            this.btnInsertarSemana.Size = new System.Drawing.Size(209, 29);
+            this.btnInsertarSemana.TabIndex = 10;
+            this.btnInsertarSemana.Text = "Insertar Semana";
+            this.btnInsertarSemana.UseVisualStyleBackColor = false;
+            this.btnInsertarSemana.Click += new System.EventHandler(this.btnInsertarSemana_Click);
             // 
             // frmConfigurarModuloPsicologo
             // 

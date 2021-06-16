@@ -303,6 +303,12 @@
     <Compile Include="cuidador\frmInscripcionHecha.Designer.cs">
       <DependentUpon>frmInscripcionHecha.cs</DependentUpon>
     </Compile>
+    <Compile Include="psicologo\frmInsertarSemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psicologo\frmInsertarSemana.Designer.cs">
+      <DependentUpon>frmInsertarSemana.cs</DependentUpon>
+    </Compile>
     <Compile Include="psicologo\frmListaCuidadoresDePsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\frmInscripcionHecha.resx">
       <DependentUpon>frmInscripcionHecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="psicologo\frmInsertarSemana.resx">
+      <DependentUpon>frmInsertarSemana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmListaCuidadoresDePsicologo.resx">
       <DependentUpon>frmListaCuidadoresDePsicologo.cs</DependentUpon>

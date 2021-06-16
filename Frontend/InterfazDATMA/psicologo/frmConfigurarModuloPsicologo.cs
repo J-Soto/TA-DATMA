@@ -63,6 +63,18 @@ namespace InterfazDATMA
         {
             formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla));
         }
+
+        private void btnInsertarSemana_Click(object sender, EventArgs e)
+        {
+            var insertarSemana = new frmInsertarSemana
+            {
+                IdCurso = curso.idCurso
+            };
+            if (insertarSemana.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
     }
 
     public class SemanaTema: INotifyPropertyChanged
