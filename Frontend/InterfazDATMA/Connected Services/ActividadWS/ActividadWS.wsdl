@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://54.157.215.104:8080/DatmaSoftWebServices/ActividadWS?xsd=1" namespace="http://services.datmasoft.datma.pe/" />
     </xsd:schema>
   </types>
-  <message name="modificarActividad">
-    <part name="parameters" element="tns:modificarActividad" />
+  <message name="listarActividad">
+    <part name="parameters" element="tns:listarActividad" />
   </message>
-  <message name="modificarActividadResponse">
-    <part name="parameters" element="tns:modificarActividadResponse" />
-  </message>
-  <message name="insertarActividad">
-    <part name="parameters" element="tns:insertarActividad" />
-  </message>
-  <message name="insertarActividadResponse">
-    <part name="parameters" element="tns:insertarActividadResponse" />
+  <message name="listarActividadResponse">
+    <part name="parameters" element="tns:listarActividadResponse" />
   </message>
   <message name="eliminarActividad">
     <part name="parameters" element="tns:eliminarActividad" />
@@ -23,42 +17,39 @@
   <message name="eliminarActividadResponse">
     <part name="parameters" element="tns:eliminarActividadResponse" />
   </message>
-  <message name="listarActividad">
-    <part name="parameters" element="tns:listarActividad" />
+  <message name="insertarActividad">
+    <part name="parameters" element="tns:insertarActividad" />
   </message>
-  <message name="listarActividadResponse">
-    <part name="parameters" element="tns:listarActividadResponse" />
+  <message name="insertarActividadResponse">
+    <part name="parameters" element="tns:insertarActividadResponse" />
+  </message>
+  <message name="modificarActividad">
+    <part name="parameters" element="tns:modificarActividad" />
+  </message>
+  <message name="modificarActividadResponse">
+    <part name="parameters" element="tns:modificarActividadResponse" />
   </message>
   <portType name="ActividadWS">
-    <operation name="modificarActividad">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest" message="tns:modificarActividad" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse" message="tns:modificarActividadResponse" />
-    </operation>
-    <operation name="insertarActividad">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest" message="tns:insertarActividad" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse" message="tns:insertarActividadResponse" />
+    <operation name="listarActividad">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
     </operation>
     <operation name="eliminarActividad">
       <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadRequest" message="tns:eliminarActividad" />
       <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadResponse" message="tns:eliminarActividadResponse" />
     </operation>
-    <operation name="listarActividad">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
+    <operation name="insertarActividad">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest" message="tns:insertarActividad" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse" message="tns:insertarActividadResponse" />
+    </operation>
+    <operation name="modificarActividad">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest" message="tns:modificarActividad" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse" message="tns:modificarActividadResponse" />
     </operation>
   </portType>
   <binding name="ActividadWSPortBinding" type="tns:ActividadWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarActividad">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarActividad">
+    <operation name="listarActividad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +67,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarActividad">
+    <operation name="insertarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarActividad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

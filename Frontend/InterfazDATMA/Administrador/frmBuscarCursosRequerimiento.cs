@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterfazDATMA.CursoWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,65 @@ namespace InterfazDATMA.Administrador
 {
     public partial class frmBuscarCursosRequerimiento : Form
     {
-        public frmBuscarCursosRequerimiento()
+
+        private CursoWS.CursoWSClient daoCurso;
+        private CursoWS.curso curso_Req;
+
+        private DateTime cursoInicio;
+
+        public curso Curso_Req { get => curso_Req; set => curso_Req = value; }
+
+        public frmBuscarCursosRequerimiento(DateTime cursoInicio)
         {
+            this.cursoInicio = cursoInicio;
             InitializeComponent();
+            dgvCursosReq.AutoGenerateColumns = false;
+            dgvCursosReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            inicializarPantalla();
         }
 
-        private void txtNombreCurso_TextChanged(object sender, EventArgs e)
+        void inicializarPantalla()
         {
+            daoCurso = new CursoWS.CursoWSClient();
+            curso_Req = new CursoWS.curso();
 
+            BindingList<CursoWS.curso> cursos = new BindingList<CursoWS.curso>(daoCurso.listarCursos().ToList());
+            BindingList<CursoWS.curso> cursosReq = new BindingList<CursoWS.curso>();
+
+            foreach(CursoWS.curso recCursos in cursos)
+            {
+                if(recCursos.fechaFin.Date < cursoInicio.Date)
+                {
+                    cursosReq.Add(recCursos);
+                }
+            }
+
+            dgvCursosReq.DataSource = cursosReq;
+        }
+
+
+        private void dgvCursosReq_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            CursoWS.curso auxCurso = dgvCursosReq.Rows[e.RowIndex].DataBoundItem as CursoWS.curso;
+            
+            dgvCursosReq.Rows[e.RowIndex].Cells["NombreCurso"].Value = auxCurso.descripcion;
+            dgvCursosReq.Rows[e.RowIndex].Cells["FechaInicial"].Value = auxCurso.fechaInicio;
+            dgvCursosReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
+        }
+
+        private void btnSeleccionarCur_Click(object sender, EventArgs e)
+        {
+            if(dgvCursosReq.RowCount != 0)
+            {
+                curso_Req = dgvCursosReq.CurrentRow.DataBoundItem as CursoWS.curso;
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
