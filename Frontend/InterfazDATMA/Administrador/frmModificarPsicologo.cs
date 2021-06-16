@@ -87,6 +87,7 @@ namespace InterfazDATMA.Administrador
                 pbFoto.Image = new Bitmap(ms);
             }
 
+            if(psicologo.distrito != null)
             txtDistrito.Text = psicologo.distrito.nombre;
         }
 
@@ -100,12 +101,12 @@ namespace InterfazDATMA.Administrador
             psicologo.apellidoMaterno = txtApellidoMat.Text;
             psicologo.fechaNacimiento = dtpFechaNacimiento.Value;
             psicologo.fechaNacimientoSpecified = true;
-            psicologo.distrito = new PsicologoWS.distrito();
-            psicologo.distrito = distrito;
+            //psicologo.distrito = new PsicologoWS.distrito();
+            //psicologo.distrito = distrito;
             psicologo.correo = txtCorreo.Text;
 
             psicologo.DNI = txtDni.Text;
-
+            MessageBox.Show(psicologo.distrito.idDistrito.ToString());
             
 
             psicologo.telefono = txtTelf.Text;
@@ -235,6 +236,7 @@ namespace InterfazDATMA.Administrador
                 if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
                 {
                     rutaFoto = ofdSubirFoto.FileName;
+                    MessageBox.Show(rutaFoto);
                     pbFoto.Image = Image.FromFile(rutaFoto);
                 }
 
@@ -256,6 +258,7 @@ namespace InterfazDATMA.Administrador
                     distrito.idDistrito = formDistrito.distrito.idDistrito;
                     distrito.nombre = formDistrito.distrito.nombre;
                     txtDistrito.Text = distrito.nombre;
+                    psicologo.distrito = distrito;
                 }
             }
         }
