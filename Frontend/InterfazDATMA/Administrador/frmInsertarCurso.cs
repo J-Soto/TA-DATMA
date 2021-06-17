@@ -124,15 +124,15 @@ namespace InterfazDATMA.Administrador
                     int idCursoTema = daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
 
                     //Insertar semanas:
-                    SemanaWS.semana semana = new SemanaWS.semana();
-                    contSemanas++;
-                    semana.nombre = "Editar nombre Semana: " + contSemanas;
-                    semana.descripcion = "Editar";
-                    semana.fechaInicio = recTema.fechaInicio;
-                    semana.fechaInicioSpecified = true;
-                    semana.curso = new SemanaWS.curso();
-                    semana.curso.idCurso = idCurso;
-                    daoSemana.insertarSemana(semana, idCursoTema);
+                    //SemanaWS.semana semana = new SemanaWS.semana();
+                    //contSemanas++;
+                    //semana.nombre = "Editar nombre Semana: " + contSemanas;
+                    //semana.descripcion = "Editar";
+                    //semana.fechaInicio = recTema.fechaInicio;
+                    //semana.fechaInicioSpecified = true;
+                    //semana.curso = new SemanaWS.curso();
+                    //semana.curso.idCurso = idCurso;
+                    //daoSemana.insertarSemana(semana, idCursoTema);
                 }
                 
 
@@ -150,20 +150,7 @@ namespace InterfazDATMA.Administrador
                     }
                 }
 
-                //Insertar semanas:
-                //for(int i = 0; i < curso.cantSemanas; i++)
-                //{
-                //    SemanaWS.semana semana = new SemanaWS.semana();
-                //    int auxSemana = i + 1;
-                //    semana.nombre = "Editar nombre Semana: " + auxSemana;
-                //    semana.descripcion = "Editar";
-                //    semana.fechaInicio = DateTime.Now; //Editar
-                //    semana.fechaInicioSpecified = true;
-                //    semana.curso = new SemanaWS.curso();
-                //    MessageBox.Show(idCurso.ToString());
-                //    semana.curso.idCurso = idCurso;
-                //    daoSemana.insertarSemana()
-                //}
+                
 
                 //Insertar Requisitos:
                 foreach(CursoWS.curso recCursoReq in cursosReq)
@@ -208,26 +195,28 @@ namespace InterfazDATMA.Administrador
 
             if(formBuscarCursoReq.ShowDialog() == DialogResult.OK)
             {
-                int flag = 1;
-                foreach (CursoWS.curso recCursosReq in cursosReq)
+                if(formBuscarCursoReq.Curso_Req.idCurso != 0)
                 {
-                    if(formBuscarCursoReq.Curso_Req.idCurso == recCursosReq.idCurso)
+                    int flag = 1;
+                    foreach (CursoWS.curso recCursosReq in cursosReq)
                     {
-                        flag = 0;
-                        break;
+                        if (formBuscarCursoReq.Curso_Req.idCurso == recCursosReq.idCurso)
+                        {
+                            flag = 0;
+                            break;
+                        }
+                    }
+
+                    if (flag == 1)
+                    {
+                        cursosReq.Add(formBuscarCursoReq.Curso_Req);
+                        dgvReq.DataSource = cursosReq;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya se registro el curso como requisito", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-
-                if(flag == 1)
-                {
-                    cursosReq.Add(formBuscarCursoReq.Curso_Req);
-                    dgvReq.DataSource = cursosReq;
-                }
-                else
-                {
-                    MessageBox.Show("Ya se registro el curso como requisito","Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                }
-
             }
 
         }
