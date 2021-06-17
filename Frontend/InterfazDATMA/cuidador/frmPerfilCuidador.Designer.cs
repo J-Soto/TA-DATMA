@@ -39,7 +39,6 @@ namespace InterfazDATMA.cuidador
             this.Gestante = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Usuario = new System.Windows.Forms.Label();
-            this.Grupos = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.Cursos = new System.Windows.Forms.Button();
             this.Contrasena = new System.Windows.Forms.Label();
@@ -112,7 +111,6 @@ namespace InterfazDATMA.cuidador
             this.panel2.Controls.Add(this.Gestante);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Usuario);
-            this.panel2.Controls.Add(this.Grupos);
             this.panel2.Controls.Add(this.txtUser);
             this.panel2.Controls.Add(this.Cursos);
             this.panel2.Controls.Add(this.Contrasena);
@@ -181,20 +179,6 @@ namespace InterfazDATMA.cuidador
             this.Usuario.Size = new System.Drawing.Size(163, 49);
             this.Usuario.TabIndex = 24;
             this.Usuario.Text = "Usuario";
-            // 
-            // Grupos
-            // 
-            this.Grupos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.Grupos.FlatAppearance.BorderSize = 0;
-            this.Grupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Grupos.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.Grupos.ForeColor = System.Drawing.Color.Transparent;
-            this.Grupos.Location = new System.Drawing.Point(110, 824);
-            this.Grupos.Name = "Grupos";
-            this.Grupos.Size = new System.Drawing.Size(319, 60);
-            this.Grupos.TabIndex = 51;
-            this.Grupos.Text = "Guardar";
-            this.Grupos.UseVisualStyleBackColor = false;
             // 
             // txtUser
             // 
@@ -461,7 +445,6 @@ namespace InterfazDATMA.cuidador
         private System.Windows.Forms.Label Gestante;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Usuario;
-        private System.Windows.Forms.Button Grupos;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button Cursos;
         private System.Windows.Forms.Label Contrasena;

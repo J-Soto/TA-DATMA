@@ -33,20 +33,14 @@ namespace InterfazDATMA.psicologo
             this.txtPermiso = new System.Windows.Forms.Label();
             this.Periodo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Grupos = new System.Windows.Forms.Button();
-            this.Cursos = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Celular = new System.Windows.Forms.Label();
-            this.Correo = new System.Windows.Forms.Label();
-            this.Telefono = new System.Windows.Forms.Label();
-            this.dni = new System.Windows.Forms.Label();
-            this.Edad = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.Label();
-            this.Genero = new System.Windows.Forms.Label();
-            this.Permisos = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.Label();
             this.Contrasena = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Cursos = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.FechaNacimiento = new System.Windows.Forms.Label();
             this.txtTelef = new System.Windows.Forms.TextBox();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -55,12 +49,17 @@ namespace InterfazDATMA.psicologo
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtGen = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.FechaNacimiento = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
+            this.Celular = new System.Windows.Forms.Label();
+            this.Correo = new System.Windows.Forms.Label();
+            this.Telefono = new System.Windows.Forms.Label();
+            this.dni = new System.Windows.Forms.Label();
+            this.Edad = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.Label();
+            this.Genero = new System.Windows.Forms.Label();
+            this.Permisos = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPeriodo
@@ -107,26 +106,57 @@ namespace InterfazDATMA.psicologo
             this.panel2.Controls.Add(this.Usuario);
             this.panel2.Controls.Add(this.Contrasena);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.Grupos);
             this.panel2.Controls.Add(this.Cursos);
             this.panel2.Location = new System.Drawing.Point(41, 121);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(588, 1026);
             this.panel2.TabIndex = 72;
             // 
-            // Grupos
+            // txtUser
             // 
-            this.Grupos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.Grupos.FlatAppearance.BorderSize = 0;
-            this.Grupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Grupos.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.Grupos.ForeColor = System.Drawing.Color.Transparent;
-            this.Grupos.Location = new System.Drawing.Point(113, 763);
-            this.Grupos.Name = "Grupos";
-            this.Grupos.Size = new System.Drawing.Size(319, 60);
-            this.Grupos.TabIndex = 51;
-            this.Grupos.Text = "Guardar";
-            this.Grupos.UseVisualStyleBackColor = false;
+            this.txtUser.Location = new System.Drawing.Point(350, 449);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(188, 31);
+            this.txtUser.TabIndex = 55;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(350, 564);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(188, 31);
+            this.txtPass.TabIndex = 56;
+            // 
+            // Usuario
+            // 
+            this.Usuario.AutoSize = true;
+            this.Usuario.BackColor = System.Drawing.Color.Transparent;
+            this.Usuario.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.Usuario.ForeColor = System.Drawing.Color.Transparent;
+            this.Usuario.Location = new System.Drawing.Point(47, 431);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(163, 49);
+            this.Usuario.TabIndex = 52;
+            this.Usuario.Text = "Usuario";
+            // 
+            // Contrasena
+            // 
+            this.Contrasena.AutoSize = true;
+            this.Contrasena.BackColor = System.Drawing.Color.Transparent;
+            this.Contrasena.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.Contrasena.ForeColor = System.Drawing.Color.Transparent;
+            this.Contrasena.Location = new System.Drawing.Point(47, 546);
+            this.Contrasena.Name = "Contrasena";
+            this.Contrasena.Size = new System.Drawing.Size(251, 49);
+            this.Contrasena.TabIndex = 54;
+            this.Contrasena.Text = "Contrasena";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(84, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(430, 314);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // Cursos
             // 
@@ -166,6 +196,74 @@ namespace InterfazDATMA.psicologo
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1018, 1026);
             this.panel1.TabIndex = 71;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.AutoSize = true;
+            this.FechaNacimiento.BackColor = System.Drawing.Color.Transparent;
+            this.FechaNacimiento.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.FechaNacimiento.ForeColor = System.Drawing.Color.Transparent;
+            this.FechaNacimiento.Location = new System.Drawing.Point(61, 835);
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.Size = new System.Drawing.Size(379, 49);
+            this.FechaNacimiento.TabIndex = 54;
+            this.FechaNacimiento.Text = "Fecha nacimiento";
+            // 
+            // txtTelef
+            // 
+            this.txtTelef.Location = new System.Drawing.Point(507, 615);
+            this.txtTelef.Name = "txtTelef";
+            this.txtTelef.Size = new System.Drawing.Size(413, 31);
+            this.txtTelef.TabIndex = 53;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(507, 853);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(413, 31);
+            this.txtFecha.TabIndex = 49;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(507, 505);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(413, 31);
+            this.txtCorreo.TabIndex = 52;
+            // 
+            // txtCel
+            // 
+            this.txtCel.Location = new System.Drawing.Point(507, 723);
+            this.txtCel.Name = "txtCel";
+            this.txtCel.Size = new System.Drawing.Size(413, 31);
+            this.txtCel.TabIndex = 46;
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Location = new System.Drawing.Point(507, 277);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(413, 31);
+            this.txtEdad.TabIndex = 51;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.Location = new System.Drawing.Point(507, 163);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(413, 31);
+            this.txtDNI.TabIndex = 47;
+            // 
+            // txtGen
+            // 
+            this.txtGen.Location = new System.Drawing.Point(507, 390);
+            this.txtGen.Name = "txtGen";
+            this.txtGen.Size = new System.Drawing.Size(413, 31);
+            this.txtGen.TabIndex = 50;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(507, 55);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(413, 31);
+            this.txtNombre.TabIndex = 48;
             // 
             // Celular
             // 
@@ -263,120 +361,6 @@ namespace InterfazDATMA.psicologo
             this.Permisos.TabIndex = 70;
             this.Permisos.Text = "Permisos";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(84, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(430, 314);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Usuario
-            // 
-            this.Usuario.AutoSize = true;
-            this.Usuario.BackColor = System.Drawing.Color.Transparent;
-            this.Usuario.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.Usuario.ForeColor = System.Drawing.Color.Transparent;
-            this.Usuario.Location = new System.Drawing.Point(47, 431);
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(163, 49);
-            this.Usuario.TabIndex = 52;
-            this.Usuario.Text = "Usuario";
-            // 
-            // Contrasena
-            // 
-            this.Contrasena.AutoSize = true;
-            this.Contrasena.BackColor = System.Drawing.Color.Transparent;
-            this.Contrasena.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.Contrasena.ForeColor = System.Drawing.Color.Transparent;
-            this.Contrasena.Location = new System.Drawing.Point(47, 546);
-            this.Contrasena.Name = "Contrasena";
-            this.Contrasena.Size = new System.Drawing.Size(251, 49);
-            this.Contrasena.TabIndex = 54;
-            this.Contrasena.Text = "Contrasena";
-            // 
-            // txtTelef
-            // 
-            this.txtTelef.Location = new System.Drawing.Point(507, 615);
-            this.txtTelef.Name = "txtTelef";
-            this.txtTelef.Size = new System.Drawing.Size(413, 31);
-            this.txtTelef.TabIndex = 53;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(507, 853);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(413, 31);
-            this.txtFecha.TabIndex = 49;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(507, 505);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(413, 31);
-            this.txtCorreo.TabIndex = 52;
-            // 
-            // txtCel
-            // 
-            this.txtCel.Location = new System.Drawing.Point(507, 723);
-            this.txtCel.Name = "txtCel";
-            this.txtCel.Size = new System.Drawing.Size(413, 31);
-            this.txtCel.TabIndex = 46;
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Location = new System.Drawing.Point(507, 277);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(413, 31);
-            this.txtEdad.TabIndex = 51;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.Location = new System.Drawing.Point(507, 163);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(413, 31);
-            this.txtDNI.TabIndex = 47;
-            // 
-            // txtGen
-            // 
-            this.txtGen.Location = new System.Drawing.Point(507, 390);
-            this.txtGen.Name = "txtGen";
-            this.txtGen.Size = new System.Drawing.Size(413, 31);
-            this.txtGen.TabIndex = 50;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(507, 55);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(413, 31);
-            this.txtNombre.TabIndex = 48;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.AutoSize = true;
-            this.FechaNacimiento.BackColor = System.Drawing.Color.Transparent;
-            this.FechaNacimiento.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.FechaNacimiento.ForeColor = System.Drawing.Color.Transparent;
-            this.FechaNacimiento.Location = new System.Drawing.Point(61, 835);
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.Size = new System.Drawing.Size(379, 49);
-            this.FechaNacimiento.TabIndex = 54;
-            this.FechaNacimiento.Text = "Fecha nacimiento";
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(350, 449);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(188, 31);
-            this.txtUser.TabIndex = 55;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(350, 564);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(188, 31);
-            this.txtPass.TabIndex = 56;
-            // 
             // frmPerfilPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -394,9 +378,9 @@ namespace InterfazDATMA.psicologo
             this.Text = "frmPerfilPsicologo";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,7 +393,6 @@ namespace InterfazDATMA.psicologo
         private System.Windows.Forms.Label Periodo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Grupos;
         private System.Windows.Forms.Button Cursos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Celular;
