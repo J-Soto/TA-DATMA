@@ -33,7 +33,7 @@ namespace InterfazDATMA.plantilla
             {
                 formInicial = new frmGestionarModulosPsicologo(this);
                 abrirFormulario(formInicial);
-                formPerfil = new frmPerfilPsicologo();
+                formPerfil = new frmPerfilPsicologo(this);
             }
             //Administrador
             else if (tipoUser == 2)
@@ -47,7 +47,7 @@ namespace InterfazDATMA.plantilla
             {
                 formInicial = new frmWalkthrough(this);
                 abrirFormulario(formInicial);
-                formPerfil = new frmPerfilCuidador();
+                formPerfil = new frmPerfilCuidador(this);
             }
         }
 

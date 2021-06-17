@@ -19,7 +19,7 @@ namespace InterfazDATMA.login
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Restart();
         }
     }
 }
