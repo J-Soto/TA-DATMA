@@ -98,12 +98,12 @@ namespace InterfazDATMA.Administrador
             if (dgvPsicologos.RowCount != 0)
             {
                 PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.CurrentRow.DataBoundItem;
-                frmModificarPsicologo formModificarPsicologo = new frmModificarPsicologo(this, formPlantilla,psicologo);
-            
+                frmModificarPsicologo formModificarPsicologo = new frmModificarPsicologo(this, formPlantilla, psicologo);
+
                 formPlantilla.abrirFormulario(formModificarPsicologo);
             }
 
-            
+
         }
 
         private void btnModificarTutor_Click(object sender, EventArgs e)
@@ -118,12 +118,12 @@ namespace InterfazDATMA.Administrador
             }
 
 
-            
+
         }
 
         private void txtBusqTutor_MouseClick(object sender, MouseEventArgs e)
         {
-            if(txtBusqTutor.Text=="Nombres y Apellidos")
+            if (txtBusqTutor.Text == "Nombres y Apellidos")
                 txtBusqTutor.Text = "";
         }
 
@@ -164,9 +164,10 @@ namespace InterfazDATMA.Administrador
         private void dgvPsicologos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[e.RowIndex].DataBoundItem;
-            dgvPsicologos.Rows[e.RowIndex].Cells["NombreCompleto"].Value = psicologo.nombre + " " + psicologo.apellidoPaterno + " "+ psicologo.apellidoMaterno;
-
+            dgvPsicologos.Rows[e.RowIndex].Cells["NombreCompleto"].Value = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
+            dgvPsicologos.Rows[e.RowIndex].Cells[1].Value = psicologo.fotoPerfil;
             dgvPsicologos.Rows[e.RowIndex].Cells["Activo"].Value = 1;
+            dgvPsicologos.RowTemplate.Height = 100;
         }
 
 
@@ -184,7 +185,9 @@ namespace InterfazDATMA.Administrador
         {
             TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
             dgvTutores.Rows[e.RowIndex].Cells["NombreCompletoTutor"].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
+            dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
             dgvTutores.Rows[e.RowIndex].Cells["ActivoTutor"].Value = 1;
+            dgvTutores.RowTemplate.Height = 100;
         }
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
@@ -197,12 +200,10 @@ namespace InterfazDATMA.Administrador
                     PsicologoWS.psicologo psicologo = new PsicologoWS.psicologo();
                     psicologo = (PsicologoWS.psicologo)dgvPsicologos.SelectedRows[0].DataBoundItem;
                     daoPsicologo.eliminarPsicologo(psicologo.idPersona, psicologo.idUsuario);
-                    dgvPsicologos.DataSource = new BindingList<PsicologoWS.psicologo>(
-                        daoPsicologo.listarTodosPsicologos().ToList());
                 }
-                
+
             }
-            else if(dgvTutores.SelectedRows.Count > 0)
+            else if (dgvTutores.SelectedRows.Count > 0)
             {
                 var resultado = MessageBox.Show("Se eliminará esta persona del sistema. Quiere Continuar", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (resultado == DialogResult.Yes)
@@ -210,8 +211,6 @@ namespace InterfazDATMA.Administrador
                     TutorWS.tutor tutor = new TutorWS.tutor();
                     tutor = (TutorWS.tutor)dgvTutores.SelectedRows[0].DataBoundItem;
                     daoTutor.eliminarTutor(tutor.idPersona, tutor.idUsuario);
-                    dgvTutores.DataSource = new BindingList<TutorWS.tutor>(
-                        daoTutor.listarTodosTutores().ToList());
                 }
             }
         }
