@@ -66,7 +66,8 @@ namespace InterfazDATMA
             this.Telefono});
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvModulos.Location = new System.Drawing.Point(132, 142);
+            this.dgvModulos.Location = new System.Drawing.Point(176, 178);
+            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvModulos.Name = "dgvModulos";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -84,7 +85,7 @@ namespace InterfazDATMA
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvModulos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvModulos.RowTemplate.Height = 28;
-            this.dgvModulos.Size = new System.Drawing.Size(955, 534);
+            this.dgvModulos.Size = new System.Drawing.Size(1273, 668);
             this.dgvModulos.TabIndex = 9;
             this.dgvModulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModulos_CellContentClick);
             // 
@@ -130,9 +131,10 @@ namespace InterfazDATMA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(125, 60);
+            this.label2.Location = new System.Drawing.Point(167, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(396, 39);
+            this.label2.Size = new System.Drawing.Size(538, 53);
             this.label2.TabIndex = 10;
             this.label2.Text = "Lista de Tutores Inscritos";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -144,9 +146,10 @@ namespace InterfazDATMA
             this.btnRegresarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnRegresarCurso.Location = new System.Drawing.Point(881, 731);
+            this.btnRegresarCurso.Location = new System.Drawing.Point(1175, 914);
+            this.btnRegresarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegresarCurso.Name = "btnRegresarCurso";
-            this.btnRegresarCurso.Size = new System.Drawing.Size(206, 40);
+            this.btnRegresarCurso.Size = new System.Drawing.Size(275, 50);
             this.btnRegresarCurso.TabIndex = 11;
             this.btnRegresarCurso.Text = "Regresar";
             this.btnRegresarCurso.UseVisualStyleBackColor = false;
@@ -154,13 +157,14 @@ namespace InterfazDATMA
             // 
             // frmListaCuidadoresDePsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1235, 857);
+            this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.Controls.Add(this.btnRegresarCurso);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvModulos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmListaCuidadoresDePsicologo";
             this.Text = "frmListaCuidadoresDePsicologo";
             this.Load += new System.EventHandler(this.frmListaCuidadoresDePsicologo_Load);

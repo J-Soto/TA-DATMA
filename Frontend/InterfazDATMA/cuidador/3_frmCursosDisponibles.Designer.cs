@@ -79,7 +79,7 @@ namespace InterfazDATMA
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvCursos.Location = new System.Drawing.Point(112, 179);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -141,7 +141,7 @@ namespace InterfazDATMA
             this.btnInscribirse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnInscribirse.ForeColor = System.Drawing.Color.White;
             this.btnInscribirse.Location = new System.Drawing.Point(1254, 262);
-            this.btnInscribirse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInscribirse.Margin = new System.Windows.Forms.Padding(4);
             this.btnInscribirse.Name = "btnInscribirse";
             this.btnInscribirse.Size = new System.Drawing.Size(330, 46);
             this.btnInscribirse.TabIndex = 23;
@@ -157,7 +157,7 @@ namespace InterfazDATMA
             this.btnMasInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnMasInfo.ForeColor = System.Drawing.Color.White;
             this.btnMasInfo.Location = new System.Drawing.Point(1254, 431);
-            this.btnMasInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMasInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnMasInfo.Name = "btnMasInfo";
             this.btnMasInfo.Size = new System.Drawing.Size(330, 46);
             this.btnMasInfo.TabIndex = 24;
@@ -170,12 +170,12 @@ namespace InterfazDATMA
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1734, 694);
+            this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.Controls.Add(this.btnMasInfo);
             this.Controls.Add(this.btnInscribirse);
             this.Controls.Add(this.dgvCursos);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmCursosDisponibles";
             this.Text = "Cursos Disponibles";
             this.Load += new System.EventHandler(this.frmCursosDisponibles_Load);

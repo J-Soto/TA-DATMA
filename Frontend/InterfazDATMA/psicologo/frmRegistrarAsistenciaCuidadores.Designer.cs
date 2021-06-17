@@ -33,13 +33,13 @@ namespace InterfazDATMA
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnGuardarAsistencia = new System.Windows.Forms.Button();
             this.brnRegresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +63,8 @@ namespace InterfazDATMA
             this.Asistencia});
             this.dgvReuniones.EnableHeadersVisualStyles = false;
             this.dgvReuniones.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvReuniones.Location = new System.Drawing.Point(95, 176);
+            this.dgvReuniones.Location = new System.Drawing.Point(127, 220);
+            this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvReuniones.Name = "dgvReuniones";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -75,68 +76,14 @@ namespace InterfazDATMA
             this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReuniones.RowHeadersWidth = 62;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvReuniones.RowTemplate.Height = 28;
-            this.dgvReuniones.Size = new System.Drawing.Size(958, 597);
+            this.dgvReuniones.Size = new System.Drawing.Size(1277, 746);
             this.dgvReuniones.TabIndex = 22;
-            // 
-            // btnGuardarAsistencia
-            // 
-            this.btnGuardarAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnGuardarAsistencia.FlatAppearance.BorderSize = 0;
-            this.btnGuardarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarAsistencia.Font = new System.Drawing.Font("Montserrat", 10F);
-            this.btnGuardarAsistencia.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarAsistencia.Location = new System.Drawing.Point(366, 797);
-            this.btnGuardarAsistencia.Name = "btnGuardarAsistencia";
-            this.btnGuardarAsistencia.Size = new System.Drawing.Size(345, 45);
-            this.btnGuardarAsistencia.TabIndex = 23;
-            this.btnGuardarAsistencia.Text = "Guardar Asistencia";
-            this.btnGuardarAsistencia.UseVisualStyleBackColor = false;
-            // 
-            // brnRegresar
-            // 
-            this.brnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.brnRegresar.FlatAppearance.BorderSize = 0;
-            this.brnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnRegresar.Font = new System.Drawing.Font("Montserrat", 10F);
-            this.brnRegresar.ForeColor = System.Drawing.Color.White;
-            this.brnRegresar.Location = new System.Drawing.Point(836, 847);
-            this.brnRegresar.Name = "brnRegresar";
-            this.brnRegresar.Size = new System.Drawing.Size(217, 40);
-            this.brnRegresar.TabIndex = 24;
-            this.brnRegresar.Text = "Regresar";
-            this.brnRegresar.UseVisualStyleBackColor = false;
-            this.brnRegresar.Click += new System.EventHandler(this.brnRegresar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 20F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(135, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(532, 49);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Asistencia de Cuidadores";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Montserrat", 10F);
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(793, 116);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(260, 40);
-            this.btnLimpiar.TabIndex = 26;
-            this.btnLimpiar.Text = "Densmarcar Todo";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // Nombre
             // 
@@ -159,17 +106,76 @@ namespace InterfazDATMA
             this.Asistencia.Name = "Asistencia";
             this.Asistencia.Width = 90;
             // 
+            // btnGuardarAsistencia
+            // 
+            this.btnGuardarAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.btnGuardarAsistencia.FlatAppearance.BorderSize = 0;
+            this.btnGuardarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnGuardarAsistencia.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarAsistencia.Location = new System.Drawing.Point(488, 996);
+            this.btnGuardarAsistencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarAsistencia.Name = "btnGuardarAsistencia";
+            this.btnGuardarAsistencia.Size = new System.Drawing.Size(460, 56);
+            this.btnGuardarAsistencia.TabIndex = 23;
+            this.btnGuardarAsistencia.Text = "Guardar Asistencia";
+            this.btnGuardarAsistencia.UseVisualStyleBackColor = false;
+            // 
+            // brnRegresar
+            // 
+            this.brnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.brnRegresar.FlatAppearance.BorderSize = 0;
+            this.brnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.brnRegresar.ForeColor = System.Drawing.Color.White;
+            this.brnRegresar.Location = new System.Drawing.Point(1115, 1059);
+            this.brnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brnRegresar.Name = "brnRegresar";
+            this.brnRegresar.Size = new System.Drawing.Size(289, 50);
+            this.brnRegresar.TabIndex = 24;
+            this.brnRegresar.Text = "Regresar";
+            this.brnRegresar.UseVisualStyleBackColor = false;
+            this.brnRegresar.Click += new System.EventHandler(this.brnRegresar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(180, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(640, 63);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Asistencia de Cuidadores";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(1057, 145);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(347, 50);
+            this.btnLimpiar.TabIndex = 26;
+            this.btnLimpiar.Text = "Densmarcar Todo";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            // 
             // frmRegistrarAsistenciaCuidadores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1128, 936);
+            this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.brnRegresar);
             this.Controls.Add(this.btnGuardarAsistencia);
             this.Controls.Add(this.dgvReuniones);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegistrarAsistenciaCuidadores";
             this.Text = "frmRegistrarAsistenciaCuidadores";
             this.Load += new System.EventHandler(this.frmRegistrarAsistenciaCuidadores_Load);

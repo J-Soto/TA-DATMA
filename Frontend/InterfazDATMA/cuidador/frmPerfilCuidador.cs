@@ -41,8 +41,10 @@ namespace InterfazDATMA.cuidador
             txtGen.Text = Convert.ToChar(frmPlantillaGestion.tutor.genero).ToString();
             txtNombre.Text = frmPlantillaGestion.tutor.nombre;
             txtTelef.Text = frmPlantillaGestion.tutor.telefono;
-            txtBajoRec.Text = frmPlantillaGestion.tutor.bajoRecursos.ToString();
-            txtGestante.Text = frmPlantillaGestion.tutor.gestante.ToString();
+            if (frmPlantillaGestion.tutor.bajoRecursos==1) txtBajoRec.Text = "No";
+            else txtBajoRec.Text = "Si";
+            if (frmPlantillaGestion.tutor.gestante == 1) txtGestante.Text = "No";
+            else txtGestante.Text = "Si";
         }
 
         private void Cursos_Click(object sender, EventArgs e)

@@ -47,9 +47,10 @@ namespace InterfazDATMA
             // pictureboxWalk
             // 
             this.pictureboxWalk.Image = global::InterfazDATMA.Properties.Resources.canon1;
-            this.pictureboxWalk.Location = new System.Drawing.Point(159, 35);
+            this.pictureboxWalk.Location = new System.Drawing.Point(318, 67);
+            this.pictureboxWalk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureboxWalk.Name = "pictureboxWalk";
-            this.pictureboxWalk.Size = new System.Drawing.Size(445, 265);
+            this.pictureboxWalk.Size = new System.Drawing.Size(890, 510);
             this.pictureboxWalk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureboxWalk.TabIndex = 2;
             this.pictureboxWalk.TabStop = false;
@@ -61,10 +62,10 @@ namespace InterfazDATMA
             this.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAnt.ForeColor = System.Drawing.Color.White;
-            this.btnAnt.Location = new System.Drawing.Point(248, 328);
-            this.btnAnt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnt.Location = new System.Drawing.Point(496, 631);
+            this.btnAnt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnt.Name = "btnAnt";
-            this.btnAnt.Size = new System.Drawing.Size(91, 24);
+            this.btnAnt.Size = new System.Drawing.Size(182, 46);
             this.btnAnt.TabIndex = 21;
             this.btnAnt.Text = "Anterior";
             this.btnAnt.UseVisualStyleBackColor = false;
@@ -77,10 +78,10 @@ namespace InterfazDATMA
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnFinalizar.ForeColor = System.Drawing.Color.White;
-            this.btnFinalizar.Location = new System.Drawing.Point(332, 377);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFinalizar.Location = new System.Drawing.Point(664, 725);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(91, 24);
+            this.btnFinalizar.Size = new System.Drawing.Size(182, 46);
             this.btnFinalizar.TabIndex = 22;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
@@ -93,10 +94,10 @@ namespace InterfazDATMA
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(419, 328);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Location = new System.Drawing.Point(838, 631);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(91, 24);
+            this.btnNext.Size = new System.Drawing.Size(182, 46);
             this.btnNext.TabIndex = 23;
             this.btnNext.Text = "Siguiente";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -104,14 +105,15 @@ namespace InterfazDATMA
             // 
             // frmWalkthrough
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnAnt);
             this.Controls.Add(this.pictureboxWalk);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmWalkthrough";
             this.Text = "Tutorial";
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxWalk)).EndInit();

@@ -64,9 +64,9 @@ namespace InterfazDATMA
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Size = new System.Drawing.Size(1728, 1033);
+            this.pnlContenido.Size = new System.Drawing.Size(1744, 1125);
             this.pnlContenido.TabIndex = 10;
             // 
             // btnRegresar
@@ -77,7 +77,7 @@ namespace InterfazDATMA
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
             this.btnRegresar.Location = new System.Drawing.Point(1314, 54);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(274, 50);
             this.btnRegresar.TabIndex = 9;
@@ -104,7 +104,7 @@ namespace InterfazDATMA
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(42, 137);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1546, 873);
@@ -119,9 +119,9 @@ namespace InterfazDATMA
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(8, 45);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage1.Size = new System.Drawing.Size(1530, 820);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Semana 1";
@@ -130,7 +130,7 @@ namespace InterfazDATMA
             // btnReuniones
             // 
             this.btnReuniones.Location = new System.Drawing.Point(296, 385);
-            this.btnReuniones.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReuniones.Margin = new System.Windows.Forms.Padding(6);
             this.btnReuniones.Name = "btnReuniones";
             this.btnReuniones.Size = new System.Drawing.Size(150, 44);
             this.btnReuniones.TabIndex = 5;
@@ -141,7 +141,7 @@ namespace InterfazDATMA
             // btnVideos
             // 
             this.btnVideos.Location = new System.Drawing.Point(296, 329);
-            this.btnVideos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnVideos.Margin = new System.Windows.Forms.Padding(6);
             this.btnVideos.Name = "btnVideos";
             this.btnVideos.Size = new System.Drawing.Size(150, 44);
             this.btnVideos.TabIndex = 4;
@@ -152,7 +152,7 @@ namespace InterfazDATMA
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(16, 58);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(1492, 242);
@@ -196,9 +196,9 @@ namespace InterfazDATMA
             // 
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(8, 45);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage2.Size = new System.Drawing.Size(1530, 820);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Semana 2";
@@ -219,9 +219,9 @@ namespace InterfazDATMA
             // 
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Location = new System.Drawing.Point(8, 45);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage3.Size = new System.Drawing.Size(1530, 820);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Semana 3";
@@ -242,9 +242,9 @@ namespace InterfazDATMA
             // 
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Location = new System.Drawing.Point(8, 45);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage4.Size = new System.Drawing.Size(1530, 820);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Semana 4";
@@ -266,9 +266,9 @@ namespace InterfazDATMA
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(135)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1728, 1033);
+            this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.Controls.Add(this.pnlContenido);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDetalleCursoInscrito";
             this.Text = "DATMA";
             this.pnlContenido.ResumeLayout(false);
