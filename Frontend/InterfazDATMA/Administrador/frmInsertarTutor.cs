@@ -88,13 +88,13 @@ namespace InterfazDATMA.Administrador
             int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
             if (verificado == -1)
             {
-                var resultado=MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var resultado = MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Yes)
                 {
                     formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
                 }
             }
-            else if(verificado==0)
+            else if (verificado == 0)
                 MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));

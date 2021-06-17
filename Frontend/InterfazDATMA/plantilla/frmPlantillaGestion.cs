@@ -16,6 +16,7 @@ namespace InterfazDATMA.plantilla
     public partial class frmPlantillaGestion : Form
     {
         private Form formularioActivo = null;
+        private Form formLogout;
         private Form formInicial;
         private Form formPerfil;
         public static UsuarioWS.usuario user = null;
@@ -32,7 +33,7 @@ namespace InterfazDATMA.plantilla
             {
                 formInicial = new frmGestionarModulosPsicologo(this);
                 abrirFormulario(formInicial);
-                formPerfil = new frmPerfilPsicologo();
+                formPerfil = new frmPerfilPsicologo(this);
             }
             //Administrador
             else if (tipoUser == 2)
@@ -46,7 +47,7 @@ namespace InterfazDATMA.plantilla
             {
                 formInicial = new frmWalkthrough(this);
                 abrirFormulario(formInicial);
-                formPerfil = new frmPerfilCuidador();
+                formPerfil = new frmPerfilCuidador(this);
             }
         }
 
@@ -78,7 +79,9 @@ namespace InterfazDATMA.plantilla
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            formLogout = new login.frmLogout();
+            formularioActivo.Close();
+            formLogout.Show();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)

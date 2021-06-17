@@ -44,18 +44,21 @@ namespace InterfazDATMA
             this.lblCursosDisponibles.AutoSize = true;
             this.lblCursosDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblCursosDisponibles.ForeColor = System.Drawing.Color.White;
-            this.lblCursosDisponibles.Location = new System.Drawing.Point(227, 45);
+            this.lblCursosDisponibles.Location = new System.Drawing.Point(454, 87);
+            this.lblCursosDisponibles.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCursosDisponibles.Name = "lblCursosDisponibles";
-            this.lblCursosDisponibles.Size = new System.Drawing.Size(205, 20);
+            this.lblCursosDisponibles.Size = new System.Drawing.Size(414, 37);
             this.lblCursosDisponibles.TabIndex = 0;
             this.lblCursosDisponibles.Text = "Lista de Cursos Disponibles";
             // 
             // grpBoxJustificacion
             // 
             this.grpBoxJustificacion.Controls.Add(this.lblJustificacion);
-            this.grpBoxJustificacion.Location = new System.Drawing.Point(205, 94);
+            this.grpBoxJustificacion.Location = new System.Drawing.Point(410, 181);
+            this.grpBoxJustificacion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grpBoxJustificacion.Name = "grpBoxJustificacion";
-            this.grpBoxJustificacion.Size = new System.Drawing.Size(291, 138);
+            this.grpBoxJustificacion.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grpBoxJustificacion.Size = new System.Drawing.Size(582, 265);
             this.grpBoxJustificacion.TabIndex = 1;
             this.grpBoxJustificacion.TabStop = false;
             // 
@@ -63,9 +66,10 @@ namespace InterfazDATMA
             // 
             this.lblJustificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblJustificacion.ForeColor = System.Drawing.Color.White;
-            this.lblJustificacion.Location = new System.Drawing.Point(50, 44);
+            this.lblJustificacion.Location = new System.Drawing.Point(100, 85);
+            this.lblJustificacion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblJustificacion.Name = "lblJustificacion";
-            this.lblJustificacion.Size = new System.Drawing.Size(193, 51);
+            this.lblJustificacion.Size = new System.Drawing.Size(386, 98);
             this.lblJustificacion.TabIndex = 2;
             this.lblJustificacion.Text = "Disculpe, pero actualmente no hay cursos disponibles";
             // 
@@ -73,9 +77,11 @@ namespace InterfazDATMA
             // 
             this.groupBox1.Controls.Add(this.btnNotificar);
             this.groupBox1.Controls.Add(this.lblNotificacion);
-            this.groupBox1.Location = new System.Drawing.Point(205, 259);
+            this.groupBox1.Location = new System.Drawing.Point(410, 498);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(291, 138);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(582, 265);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
@@ -86,10 +92,10 @@ namespace InterfazDATMA
             this.btnNotificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnNotificar.ForeColor = System.Drawing.Color.White;
-            this.btnNotificar.Location = new System.Drawing.Point(53, 77);
-            this.btnNotificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNotificar.Location = new System.Drawing.Point(106, 148);
+            this.btnNotificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNotificar.Name = "btnNotificar";
-            this.btnNotificar.Size = new System.Drawing.Size(178, 24);
+            this.btnNotificar.Size = new System.Drawing.Size(356, 46);
             this.btnNotificar.TabIndex = 24;
             this.btnNotificar.Text = "NOTIFICARME";
             this.btnNotificar.UseVisualStyleBackColor = false;
@@ -98,21 +104,23 @@ namespace InterfazDATMA
             // lblNotificacion
             // 
             this.lblNotificacion.ForeColor = System.Drawing.Color.White;
-            this.lblNotificacion.Location = new System.Drawing.Point(50, 24);
+            this.lblNotificacion.Location = new System.Drawing.Point(100, 46);
+            this.lblNotificacion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNotificacion.Name = "lblNotificacion";
-            this.lblNotificacion.Size = new System.Drawing.Size(193, 51);
+            this.lblNotificacion.Size = new System.Drawing.Size(386, 98);
             this.lblNotificacion.TabIndex = 2;
             this.lblNotificacion.Text = "Te notificaremos cuando haya nuevos cursos";
             // 
             // frmSinCursosDisponibles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(697, 450);
+            this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpBoxJustificacion);
             this.Controls.Add(this.lblCursosDisponibles);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmSinCursosDisponibles";
             this.Text = "Cursos Disponibles";
             this.grpBoxJustificacion.ResumeLayout(false);

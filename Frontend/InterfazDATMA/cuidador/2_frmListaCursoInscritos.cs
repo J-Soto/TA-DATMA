@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using InterfazDATMA.cuidador;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace InterfazDATMA
     public partial class frmListaCursoInscritos : Form
     {
         private frmWalkthrough formAnterior;
+        private frmPerfilCuidador formAnterior2;
         private frmPlantillaGestion plantillaGestion;
 
         public frmListaCursoInscritos(frmWalkthrough formAnterior,frmPlantillaGestion plantillaGestion)
@@ -22,7 +24,12 @@ namespace InterfazDATMA
             this.plantillaGestion = plantillaGestion;
             this.formAnterior = formAnterior;
         }
-
+        public frmListaCursoInscritos(frmPerfilCuidador formAnterior2, frmPlantillaGestion plantillaGestion)
+        {
+            InitializeComponent();
+            this.plantillaGestion = plantillaGestion;
+            this.formAnterior2 = formAnterior2;
+        }
         private void btnModulo1_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));

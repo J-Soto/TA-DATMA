@@ -59,7 +59,7 @@ namespace InterfazDATMA.Administrador
             rbtnMujer.Checked = false;
             pbFoto.Image = null;
         }
-        
+
         private void completarDatosPsicologos()
         {
             txtNombre.Text = psicologo.nombre;
@@ -81,17 +81,17 @@ namespace InterfazDATMA.Administrador
                 rbtnMujer.Checked = true;
             }
 
-            if(psicologo.fotoPerfil != null)
+            if (psicologo.fotoPerfil != null)
             {
                 MemoryStream ms = new MemoryStream(psicologo.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
 
-            if(psicologo.distrito != null)
-            txtDistrito.Text = psicologo.distrito.nombre;
+            if (psicologo.distrito != null)
+                txtDistrito.Text = psicologo.distrito.nombre;
         }
 
-      
+
 
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace InterfazDATMA.Administrador
 
             psicologo.DNI = txtDni.Text;
             //MessageBox.Show(psicologo.distrito.idDistrito.ToString());
-            
+
 
             psicologo.telefono = txtTelf.Text;
             psicologo.celular = txtCelular.Text;
@@ -133,7 +133,7 @@ namespace InterfazDATMA.Administrador
                 psicologo.fotoPerfil = null;
             }
 
-           
+
 
             //Validaciones:
             if (psicologo.DNI.Length != 8)
@@ -179,7 +179,7 @@ namespace InterfazDATMA.Administrador
                         throw new Exception();
                     }
                 }
-                
+
             }
 
 
@@ -212,7 +212,7 @@ namespace InterfazDATMA.Administrador
             }
         }
 
-     
+
 
         private void txtTelf_KeyPress_1(object sender, KeyPressEventArgs e)
         {

@@ -51,8 +51,7 @@ namespace InterfazDATMA.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 25F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(141, 107);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(106, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(536, 81);
             this.label1.TabIndex = 0;
@@ -60,10 +59,9 @@ namespace InterfazDATMA.Administrador
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(681, 347);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(511, 280);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(816, 38);
+            this.txtBuscar.Size = new System.Drawing.Size(613, 31);
             this.txtBuscar.TabIndex = 5;
             // 
             // btnBuscar
@@ -71,9 +69,10 @@ namespace InterfazDATMA.Administrador
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1667, 328);
+            this.btnBuscar.Location = new System.Drawing.Point(1250, 265);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(232, 57);
+            this.btnBuscar.Size = new System.Drawing.Size(174, 46);
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -93,12 +92,11 @@ namespace InterfazDATMA.Administrador
             this.colTelf,
             this.colCel,
             this.colEmail});
-            this.dgvPsico.Location = new System.Drawing.Point(85, 461);
-            this.dgvPsico.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPsico.Location = new System.Drawing.Point(64, 372);
             this.dgvPsico.Name = "dgvPsico";
             this.dgvPsico.RowHeadersWidth = 82;
             this.dgvPsico.RowTemplate.Height = 33;
-            this.dgvPsico.Size = new System.Drawing.Size(2088, 609);
+            this.dgvPsico.Size = new System.Drawing.Size(1566, 491);
             this.dgvPsico.TabIndex = 8;
             // 
             // colNombre
@@ -193,16 +191,15 @@ namespace InterfazDATMA.Administrador
             // 
             // Header
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(2495, 1194);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
+            this.ClientSize = new System.Drawing.Size(1871, 963);
             this.Controls.Add(this.dgvPsico);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Header";
             this.Text = "frmListaPsicologos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsico)).EndInit();

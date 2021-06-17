@@ -31,5 +31,10 @@ namespace InterfazDATMA
         {
             plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
         }
+
+        private void frmCursosDisponibles_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
