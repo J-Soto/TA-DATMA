@@ -197,6 +197,8 @@ namespace InterfazDATMA.Administrador
                     PsicologoWS.psicologo psicologo = new PsicologoWS.psicologo();
                     psicologo = (PsicologoWS.psicologo)dgvPsicologos.SelectedRows[0].DataBoundItem;
                     daoPsicologo.eliminarPsicologo(psicologo.idPersona, psicologo.idUsuario);
+                    dgvPsicologos.DataSource = new BindingList<PsicologoWS.psicologo>(
+                        daoPsicologo.listarTodosPsicologos().ToList());
                 }
                 
             }
@@ -208,6 +210,8 @@ namespace InterfazDATMA.Administrador
                     TutorWS.tutor tutor = new TutorWS.tutor();
                     tutor = (TutorWS.tutor)dgvTutores.SelectedRows[0].DataBoundItem;
                     daoTutor.eliminarTutor(tutor.idPersona, tutor.idUsuario);
+                    dgvTutores.DataSource = new BindingList<TutorWS.tutor>(
+                        daoTutor.listarTodosTutores().ToList());
                 }
             }
         }
