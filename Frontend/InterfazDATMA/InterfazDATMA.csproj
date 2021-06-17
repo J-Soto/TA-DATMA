@@ -230,7 +230,6 @@
     <Compile Include="cuidador\frmPerfilCuidador.Designer.cs">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>
     </Compile>
-    <Compile Include="prueba.cs" />
     <Compile Include="psicologo\frmAgregarVideoPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
