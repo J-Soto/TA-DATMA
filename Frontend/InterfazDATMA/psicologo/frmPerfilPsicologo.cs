@@ -1,4 +1,6 @@
-﻿using System;
+﻿using InterfazDATMA.plantilla;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,16 @@ namespace InterfazDATMA.psicologo
 {
     public partial class frmPerfilPsicologo : Form
     {
+        private PsicologoWS.PsicologoWSClient daoPsicologo;
+        private frmPlantillaGestion plantillaGestion;
         public frmPerfilPsicologo()
         {
             InitializeComponent();
+        }
+
+        private void Cursos_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmGestionarModulosPsicologo(plantillaGestion));
         }
     }
 }

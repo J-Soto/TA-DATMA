@@ -1,4 +1,6 @@
-﻿using System;
+﻿using InterfazDATMA.plantilla;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,18 @@ namespace InterfazDATMA.cuidador
 {
     public partial class frmPerfilCuidador : Form
     {
+        private UsuarioWS.UsuarioWSClient daoUsuario;
+        private TutorWS.TutorWSClient daoTutor;
+        private frmPlantillaGestion plantillaGestion;
         public frmPerfilCuidador()
         {
             InitializeComponent();
+            daoTutor.modificarTutor(new TutorWS.tutor());
+        }
+
+        private void Cursos_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this,plantillaGestion));
         }
     }
 }
