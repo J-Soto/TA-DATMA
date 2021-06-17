@@ -37,7 +37,7 @@ namespace InterfazDATMA.cuidador
             this.txtGestante = new System.Windows.Forms.TextBox();
             this.BajosRecursos = new System.Windows.Forms.Label();
             this.Gestante = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picPerfil = new System.Windows.Forms.PictureBox();
             this.Usuario = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.Cursos = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@ namespace InterfazDATMA.cuidador
             this.FechaNacimiento = new System.Windows.Forms.Label();
             this.Permisos = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +109,7 @@ namespace InterfazDATMA.cuidador
             this.panel2.Controls.Add(this.txtGestante);
             this.panel2.Controls.Add(this.BajosRecursos);
             this.panel2.Controls.Add(this.Gestante);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.picPerfil);
             this.panel2.Controls.Add(this.Usuario);
             this.panel2.Controls.Add(this.txtUser);
             this.panel2.Controls.Add(this.Cursos);
@@ -160,13 +160,13 @@ namespace InterfazDATMA.cuidador
             this.Gestante.TabIndex = 53;
             this.Gestante.Text = "Gestante";
             // 
-            // pictureBox1
+            // picPerfil
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(68, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(430, 314);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.picPerfil.Location = new System.Drawing.Point(68, 37);
+            this.picPerfil.Name = "picPerfil";
+            this.picPerfil.Size = new System.Drawing.Size(430, 314);
+            this.picPerfil.TabIndex = 23;
+            this.picPerfil.TabStop = false;
             // 
             // Usuario
             // 
@@ -427,7 +427,7 @@ namespace InterfazDATMA.cuidador
             this.Text = "frmPerfilCuidador";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -443,7 +443,7 @@ namespace InterfazDATMA.cuidador
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label BajosRecursos;
         private System.Windows.Forms.Label Gestante;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picPerfil;
         private System.Windows.Forms.Label Usuario;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button Cursos;

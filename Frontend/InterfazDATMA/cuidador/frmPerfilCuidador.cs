@@ -39,12 +39,13 @@ namespace InterfazDATMA.cuidador
             txtEdad.Text = frmPlantillaGestion.tutor.edad.ToString();
             txtFecha.Text = frmPlantillaGestion.tutor.fechaNacimiento.ToString();
             txtGen.Text = Convert.ToChar(frmPlantillaGestion.tutor.genero).ToString();
-            txtNombre.Text = frmPlantillaGestion.tutor.nombre;
+            txtNombre.Text = frmPlantillaGestion.tutor.nombre + " " + frmPlantillaGestion.tutor.apellidoPaterno + " " + frmPlantillaGestion.tutor.apellidoMaterno;
             txtTelef.Text = frmPlantillaGestion.tutor.telefono;
             if (frmPlantillaGestion.tutor.bajoRecursos==1) txtBajoRec.Text = "No";
             else txtBajoRec.Text = "Si";
             if (frmPlantillaGestion.tutor.gestante == 1) txtGestante.Text = "No";
             else txtGestante.Text = "Si";
+            picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
         }
 
         private void Cursos_Click(object sender, EventArgs e)

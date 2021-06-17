@@ -38,8 +38,9 @@ namespace InterfazDATMA.psicologo
             txtEdad.Text = frmPlantillaGestion.psico.edad.ToString();
             txtFecha.Text = frmPlantillaGestion.psico.fechaNacimiento.ToString();
             txtGen.Text = Convert.ToChar(frmPlantillaGestion.psico.genero).ToString();
-            txtNombre.Text = frmPlantillaGestion.psico.nombre;
+            txtNombre.Text = frmPlantillaGestion.psico.nombre + " " + frmPlantillaGestion.psico.apellidoPaterno + " " + frmPlantillaGestion.psico.apellidoMaterno;
             txtTelef.Text = frmPlantillaGestion.psico.telefono;
+            picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.psico.fotoPerfil));
         }
 
         private void Cursos_Click(object sender, EventArgs e)

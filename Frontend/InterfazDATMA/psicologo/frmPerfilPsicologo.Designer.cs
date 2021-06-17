@@ -37,7 +37,7 @@ namespace InterfazDATMA.psicologo
             this.txtPass = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.Label();
             this.Contrasena = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picPerfil = new System.Windows.Forms.PictureBox();
             this.Cursos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.FechaNacimiento = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace InterfazDATMA.psicologo
             this.Genero = new System.Windows.Forms.Label();
             this.Permisos = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,11 +80,11 @@ namespace InterfazDATMA.psicologo
             this.txtPermiso.BackColor = System.Drawing.Color.Transparent;
             this.txtPermiso.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.txtPermiso.ForeColor = System.Drawing.Color.Transparent;
-            this.txtPermiso.Location = new System.Drawing.Point(1628, 54);
+            this.txtPermiso.Location = new System.Drawing.Point(1556, 54);
             this.txtPermiso.Name = "txtPermiso";
-            this.txtPermiso.Size = new System.Drawing.Size(114, 49);
+            this.txtPermiso.Size = new System.Drawing.Size(211, 49);
             this.txtPermiso.TabIndex = 74;
-            this.txtPermiso.Text = "Tutor";
+            this.txtPermiso.Text = "Psicologo";
             // 
             // Periodo
             // 
@@ -105,7 +105,7 @@ namespace InterfazDATMA.psicologo
             this.panel2.Controls.Add(this.txtPass);
             this.panel2.Controls.Add(this.Usuario);
             this.panel2.Controls.Add(this.Contrasena);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.picPerfil);
             this.panel2.Controls.Add(this.Cursos);
             this.panel2.Location = new System.Drawing.Point(41, 121);
             this.panel2.Name = "panel2";
@@ -150,13 +150,13 @@ namespace InterfazDATMA.psicologo
             this.Contrasena.TabIndex = 54;
             this.Contrasena.Text = "Contrasena";
             // 
-            // pictureBox1
+            // picPerfil
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(84, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(430, 314);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.picPerfil.Location = new System.Drawing.Point(84, 37);
+            this.picPerfil.Name = "picPerfil";
+            this.picPerfil.Size = new System.Drawing.Size(430, 314);
+            this.picPerfil.TabIndex = 23;
+            this.picPerfil.TabStop = false;
             // 
             // Cursos
             // 
@@ -355,7 +355,7 @@ namespace InterfazDATMA.psicologo
             this.Permisos.BackColor = System.Drawing.Color.Transparent;
             this.Permisos.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.Permisos.ForeColor = System.Drawing.Color.Transparent;
-            this.Permisos.Location = new System.Drawing.Point(1371, 54);
+            this.Permisos.Location = new System.Drawing.Point(1328, 54);
             this.Permisos.Name = "Permisos";
             this.Permisos.Size = new System.Drawing.Size(190, 49);
             this.Permisos.TabIndex = 70;
@@ -378,7 +378,7 @@ namespace InterfazDATMA.psicologo
             this.Text = "frmPerfilPsicologo";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -392,7 +392,7 @@ namespace InterfazDATMA.psicologo
         private System.Windows.Forms.Label txtPermiso;
         private System.Windows.Forms.Label Periodo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picPerfil;
         private System.Windows.Forms.Button Cursos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Celular;
