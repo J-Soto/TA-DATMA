@@ -31,7 +31,7 @@ namespace InterfazDATMA.Administrador
 
             txtDistrito.ReadOnly = true;
             inicializarComponentes();
-            
+
         }
 
         private void inicializarComponentes()
@@ -76,7 +76,7 @@ namespace InterfazDATMA.Administrador
 
             //Por defecto
             psicologo.tipo = 0;
-            
+
 
             psicologo.telefono = txtTelf.Text;
             psicologo.celular = txtCelular.Text;
@@ -113,7 +113,8 @@ namespace InterfazDATMA.Administrador
             else if (psicologo.password != txtConfirmarPass.Text)
             {
                 MessageBox.Show("Las contraseñas deben coincidir", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }else if (psicologo.correo.Contains("@") != true)
+            }
+            else if (psicologo.correo.Contains("@") != true)
             {
                 MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -162,7 +163,7 @@ namespace InterfazDATMA.Administrador
                         throw new Exception();
                     }
                 }
-                
+
             }
         }
 
@@ -191,14 +192,14 @@ namespace InterfazDATMA.Administrador
         {
             try
             {
-                if(ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
                 {
                     rutaFoto = ofdSubirFoto.FileName;
                     pbFoto.Image = Image.FromFile(rutaFoto);
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
