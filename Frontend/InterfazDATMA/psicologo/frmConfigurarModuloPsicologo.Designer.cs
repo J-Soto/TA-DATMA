@@ -82,6 +82,7 @@ namespace InterfazDATMA
             this.btnModificarSemana.TabIndex = 3;
             this.btnModificarSemana.Text = "Modificar Semana";
             this.btnModificarSemana.UseVisualStyleBackColor = false;
+            this.btnModificarSemana.Click += new System.EventHandler(this.btnModificarSemana_Click);
             // 
             // btnListaCuidadores
             // 

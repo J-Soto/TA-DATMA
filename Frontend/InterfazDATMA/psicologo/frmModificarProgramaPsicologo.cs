@@ -18,13 +18,21 @@ namespace InterfazDATMA
         private frmPlantillaGestion formPlantillaGestion;
 
         private SemanaWS.SemanaWSClient daoSemana;
-        public frmModificarPrograma(frmConfigurarModuloPsicologo formConfigurarModuloPsicologo, frmPlantillaGestion formPlantillaGestion)
+        private CursoWS.CursoWSClient daoCurso;
+        //private SemanaWS.semana semana;
+        BindingList<CursoWS.semana> semanas;
+        public frmModificarPrograma(frmConfigurarModuloPsicologo formConfigurarModuloPsicologo, frmPlantillaGestion formPlantillaGestion,int idCurso)
         {
             InitializeComponent();
             this.formConfigurarModuloPsicologo = formConfigurarModuloPsicologo;
             this.formPlantillaGestion = formPlantillaGestion;
 
             daoSemana = new SemanaWS.SemanaWSClient();
+            daoCurso = new CursoWS.CursoWSClient();
+            BindingList<CursoWS.semana> semanas = new BindingList<CursoWS.semana>(
+                daoCurso.listarSemanasPorIdCurso(idCurso).ToList());
+            rtxtDescripcion.Text = semanas[0].descripcion;
+            rtxtTema.Text = semanas[0].nombre;
             rtxtDescripcion.ReadOnly = true;
             rtxtTema.ReadOnly = true;
         }

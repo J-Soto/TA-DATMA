@@ -75,6 +75,11 @@ namespace InterfazDATMA
 
             }
         }
+
+        private void btnModificarSemana_Click(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(new frmModificarPrograma(this, formPlantilla, curso.idCurso));
+        }
     }
 
     public class SemanaTema: INotifyPropertyChanged
