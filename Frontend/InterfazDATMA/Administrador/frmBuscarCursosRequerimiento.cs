@@ -72,6 +72,7 @@ namespace InterfazDATMA.Administrador
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            curso_Req.idCurso = 0;
         }
     }
 }
