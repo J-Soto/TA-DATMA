@@ -230,12 +230,6 @@
     <Compile Include="cuidador\frmPerfilCuidador.Designer.cs">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>
     </Compile>
-    <Compile Include="plantilla\frmPlantillaV2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="plantilla\frmPlantillaV2.Designer.cs">
-      <DependentUpon>frmPlantillaV2.cs</DependentUpon>
-    </Compile>
     <Compile Include="prueba.cs" />
     <Compile Include="psicologo\frmAgregarVideoPsicologo.cs">
       <SubType>Form</SubType>
@@ -441,9 +435,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\frmPerfilCuidador.resx">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="plantilla\frmPlantillaV2.resx">
-      <DependentUpon>frmPlantillaV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmAgregarVideoPsicologo.resx">
       <DependentUpon>frmAgregarVideoPsicologo.cs</DependentUpon>
