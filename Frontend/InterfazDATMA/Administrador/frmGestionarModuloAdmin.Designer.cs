@@ -42,7 +42,9 @@ namespace InterfazDATMA.Administrador
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.dgvTutores = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
             this.SuspendLayout();
@@ -116,7 +118,8 @@ namespace InterfazDATMA.Administrador
             this.dgvPsicologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPsicologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPsicologos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
+            this.dataGridViewTextBoxColumn1,
+            this.foto2});
             this.dgvPsicologos.EnableHeadersVisualStyles = false;
             this.dgvPsicologos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvPsicologos.Location = new System.Drawing.Point(606, 148);
@@ -161,7 +164,8 @@ namespace InterfazDATMA.Administrador
             this.dgvTutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTutores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreCompleto});
+            this.NombreCompleto,
+            this.foto});
             this.dgvTutores.EnableHeadersVisualStyles = false;
             this.dgvTutores.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvTutores.Location = new System.Drawing.Point(16, 148);
@@ -195,7 +199,17 @@ namespace InterfazDATMA.Administrador
             this.NombreCompleto.MinimumWidth = 8;
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 200;
+            this.NombreCompleto.Width = 240;
+            // 
+            // foto
+            // 
+            this.foto.HeaderText = "Foto";
+            this.foto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.foto.MinimumWidth = 8;
+            this.foto.Name = "foto";
+            this.foto.ReadOnly = true;
+            this.foto.Width = 70;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -203,7 +217,17 @@ namespace InterfazDATMA.Administrador
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 200;
+            this.dataGridViewTextBoxColumn1.Width = 240;
+            // 
+            // foto2
+            // 
+            this.foto2.HeaderText = "Foto";
+            this.foto2.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.foto2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.foto2.MinimumWidth = 8;
+            this.foto2.Name = "foto2";
+            this.foto2.ReadOnly = true;
+            this.foto2.Width = 70;
             // 
             // frmGestionarModuloAdmin
             // 
@@ -236,6 +260,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblPsicologosUser;
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
+        private System.Windows.Forms.DataGridViewImageColumn foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn foto2;
     }
 }

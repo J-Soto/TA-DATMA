@@ -84,7 +84,17 @@ namespace InterfazDATMA.Administrador
         {
             TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
             dgvTutores.Rows[e.RowIndex].Cells[0].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-            dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
+            try
+            {
+                if (tutor.fotoPerfil != null)
+                {
+                    dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
+                }
+
+            }
+            catch (Exception ex){
+                System.Console.WriteLine(ex.Message);
+            }
             dgvTutores.RowTemplate.Height = 100;
         }
 
@@ -92,17 +102,17 @@ namespace InterfazDATMA.Administrador
         {
             PsicologoWS.psicologo psi = (PsicologoWS.psicologo)dgvPsicologos.Rows[e.RowIndex].DataBoundItem;
             dgvPsicologos.Rows[e.RowIndex].Cells[0].Value = psi.nombre + " " + psi.apellidoPaterno + " " + psi.apellidoMaterno;
-            /*try
+            try
             {
                 if (psi.fotoPerfil != null)
                 {
-                    dgvPsicologos.Rows[e.RowIndex].Cells[1].Value = ResizeImage(psi.fotoPerfil, 70);
+                    dgvPsicologos.Rows[e.RowIndex].Cells[1].Value = psi.fotoPerfil;
                 }
 
             }
             catch (Exception ex){
                 System.Console.WriteLine(ex.Message);
-            }*/
+            }
             dgvPsicologos.RowTemplate.Height = 100;
         }
 
