@@ -55,9 +55,8 @@ namespace InterfazDATMA.Administrador
             {
                 dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
             }
-            catch
-            {
-                Console.Write("Ha habido un error con la imagen");
+            catch (Exception ex){
+                System.Console.WriteLine(ex.Message);
             }
             
             
