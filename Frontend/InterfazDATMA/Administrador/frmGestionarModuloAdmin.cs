@@ -26,10 +26,12 @@ namespace InterfazDATMA.Administrador
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             daoTutor = new TutorWS.TutorWSClient();
 
+            // Tutores
             dgvTutores.AutoGenerateColumns = false;
             dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTutores.DataSource = daoTutor.listarTodosTutores();
 
+            // Psicologos
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPsicologos.DataSource = daoPsicologo.listarTodosPsicologos();
@@ -49,7 +51,16 @@ namespace InterfazDATMA.Administrador
         {
             TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
             dgvTutores.Rows[e.RowIndex].Cells[0].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-            dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
+            try
+            {
+                dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
+            }
+            catch
+            {
+                Console.Write("Ha habido un error con la imagen");
+            }
+            
+            
             dgvTutores.RowTemplate.Height = 100;
         }
 
