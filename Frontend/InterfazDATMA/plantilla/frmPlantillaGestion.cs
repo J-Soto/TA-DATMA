@@ -74,7 +74,26 @@ namespace InterfazDATMA.plantilla
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            abrirFormulario(formInicial);
+            int tipoUser = user.tipo;
+            //Psicologo
+            if (tipoUser == 1)
+            {
+                formInicial = new frmGestionarModulosPsicologo(this);
+                abrirFormulario(formInicial);
+            }
+            //Administrador
+            else if (tipoUser == 2)
+            {
+                formInicial = new frmGestionarModuloAdmin(this);
+                abrirFormulario(formInicial);
+            }
+            //Tutor
+            else if (tipoUser == 0)
+            {
+                formInicial = new frmWalkthrough(this);
+                abrirFormulario(formInicial);
+            }
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
