@@ -33,6 +33,17 @@ namespace InterfazDATMA.Administrador
             
         }
 
+        
+
+        private void dgvDistrito_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvDistrito.Columns[e.ColumnIndex].Name == "NombreDistrito")
+            {
+                DistritoWS.distrito distrito = (DistritoWS.distrito)dgvDistrito.Rows[dgvDistrito.SelectedCells[0].RowIndex].DataBoundItem;
+                daoDistrito.modificarDistrito(distrito);
+            }
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {/*
             BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(
@@ -49,6 +60,7 @@ namespace InterfazDATMA.Administrador
                 }
             }
             dgvDistrito.DataSource = distritos;
+
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -56,21 +68,12 @@ namespace InterfazDATMA.Administrador
             distrito = new DistritoWS.distrito();
             distrito = (DistritoWS.distrito)dgvDistrito.SelectedRows[0].DataBoundItem;
             this.DialogResult = DialogResult.OK;
+
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-        }
 
-        private void dgvDistrito_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvDistrito.Columns[e.ColumnIndex].Name == "NombreDistrito")
-            {
-                DistritoWS.distrito distrito = (DistritoWS.distrito)dgvDistrito.Rows[dgvDistrito.SelectedCells[0].RowIndex].DataBoundItem;
-                daoDistrito.modificarDistrito(distrito);
-            }
         }
-
     }
 }

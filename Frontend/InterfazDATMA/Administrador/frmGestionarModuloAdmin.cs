@@ -76,15 +76,6 @@ namespace InterfazDATMA.Administrador
             }
         }
 
-        private void btnOpPersona_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmOperacionesPersona(this, plantillaGestion));
-        }
-
-        private void btnOpCurso_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmOperacionesCursos(this, plantillaGestion));
-        }
 
         private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -149,6 +140,19 @@ namespace InterfazDATMA.Administrador
 
         private void lblPsicologosUser_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnOpPersona_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmOperacionesPersona(this, plantillaGestion));
+
+
+        }
+
+        private void btnOpCurso_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmOperacionesCursos(this, plantillaGestion));
 
         }
     }

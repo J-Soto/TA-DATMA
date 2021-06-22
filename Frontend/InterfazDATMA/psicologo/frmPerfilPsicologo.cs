@@ -39,6 +39,7 @@ namespace InterfazDATMA.psicologo
             //    }
             //}
 
+            /*
             psico = daoPsicologo.buscarPsicologoPorIdUsuario(frmPlantillaGestion.user.idUsuario);
             frmPlantillaGestion.psico = psico;
 
@@ -53,6 +54,7 @@ namespace InterfazDATMA.psicologo
             txtNombre.Text = frmPlantillaGestion.psico.nombre + " " + frmPlantillaGestion.psico.apellidoPaterno + " " + frmPlantillaGestion.psico.apellidoMaterno;
             txtTelef.Text = frmPlantillaGestion.psico.telefono;
             //picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.psico.fotoPerfil));
+            */
         }
 
         private void Cursos_Click(object sender, EventArgs e)

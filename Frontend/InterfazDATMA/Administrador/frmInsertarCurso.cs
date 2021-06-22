@@ -93,97 +93,6 @@ namespace InterfazDATMA.Administrador
         }
 
 
-        private void btnSelaccionarTemas_Click(object sender, EventArgs e)
-        {
-            int cantSemanas = Int32.Parse(txtCantSemana.Text);
-            DateTime fechaInicialCur = dtpFechaInicial.Value;
-            DateTime fechaFinalCur = dtpFechaFin.Value;
-
-            frmSeleccionarTemasDeCurso formSeleccionarTemaCurso = new frmSeleccionarTemasDeCurso(this, formPlantillaGest, cantSemanas, fechaInicialCur, fechaFinalCur, temasCurso);
-            formPlantillaGest.abrirFormulario(formSeleccionarTemaCurso);
-        }
-
-        private void btnVerGrupos_Click(object sender, EventArgs e)
-        {
-            formVerGruposCurso = new frmVerGruposCurso(this, formPlantillaGest, gruposCurso);
-            formPlantillaGest.abrirFormulario(formVerGruposCurso);
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            formPlantillaGest.abrirFormulario(formOperacionesCursos);
-        }
-
-        private void btnGuardarCurso_Click(object sender, EventArgs e)
-        {
-            curso.descripcion = txtNombreCurso.Text;
-            curso.fechaInicio = dtpFechaInicial.Value;
-            curso.fechaInicioSpecified = true;
-            curso.fechaFin = dtpFechaFin.Value;
-            curso.fechaFinSpecified = true;
-            curso.fechaInscripcion = dtpFechaInscrip.Value;
-            curso.fechaInscripcionSpecified = true;
-            curso.cantSemanas = Int32.Parse(txtCantSemana.Text);
-            
-            int idCurso = daoCurso.insertarCurso(curso);
-            if (idCurso != 0)
-            {
-                int contSemanas = 0;
-                //Insertar temas
-                foreach (TemaWS.tema recTema in temasCurso)
-                {
-                    recTema.fechaInicioSpecified = true;
-                    recTema.fechaFinSpecified = true;
-                    int idCursoTema = daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
-
-                    //Insertar semanas:
-                    SemanaWS.semana semana = new SemanaWS.semana();
-                    contSemanas++;
-                    semana.nombre = "Editar nombre Semana: " + contSemanas;
-                    semana.descripcion = "Editar";
-                    semana.fechaInicio = recTema.fechaInicio;
-                    semana.fechaInicioSpecified = true;
-                    semana.curso = new SemanaWS.curso();
-                    semana.curso.idCurso = idCurso;
-                    daoSemana.insertarSemana(semana, idCursoTema);
-                }
-                
-
-                //Insertar grupos
-                foreach(Grupo_Curso recGruposCurso in gruposCurso)
-                {
-                    int idGrupo = daoGrupo.insertarGrupo(idCurso, recGruposCurso.Grupo);
-                    if(idGrupo != 0)
-                    {
-                        //Insertar psicologos
-                        foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
-                        {
-                            daoGrupo.insertarGrupoPsicologo(recPsicologo.idPersona, idGrupo);
-                        }
-                    }
-                }
-
-                
-
-                //Insertar Requisitos:
-                foreach(CursoWS.curso recCursoReq in cursosReq)
-                {
-                    daoCurso.insertarRequerimiento(idCurso, recCursoReq.idCurso, "Curso Requisito");
-                }
-
-                //Insertar Psicologos_Cursos:
-                foreach (Grupo_Curso recGruposCurso in gruposCurso)
-                {
-                    foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
-                    {
-                        daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, idCurso);
-                    }
-                }
-
-                MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                inicializarPantalla();
-            }
-        }
 
         private void textCantSemana_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -254,15 +163,74 @@ namespace InterfazDATMA.Administrador
 
 
 
+
+        private void dgvReq_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                CursoWS.curso auxCurso = dgvReq.Rows[e.RowIndex].DataBoundItem as CursoWS.curso;
+
+                dgvReq.Rows[e.RowIndex].Cells["NombreCurso"].Value = auxCurso.descripcion;
+                dgvReq.Rows[e.RowIndex].Cells["FechaInicial"].Value = auxCurso.fechaInicio;
+                dgvReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            
+        }
+
+
+        private void dtpFechaInicial_ValueChanged(object sender, EventArgs e)
+        {
+            if (temasCurso != null) temasCurso.Clear();
+            if (cursosReq != null) cursosReq.Clear();
+
+            //Update dgvRequerimientos:
+            dgvReq.Refresh();
+
+            DateTime auxDate = dtpFechaInicial.Value;
+            if (txtCantSemana.Text != "")
+            {
+                int cantSemanas = Int32.Parse(txtCantSemana.Text);
+                auxDate = auxDate.AddDays(cantSemanas * 7);
+                dtpFechaFin.Value = auxDate;
+            }
+            else
+            {
+                dtpFechaFin.Value = auxDate;
+            }
+        }
+
+        private void btnSelaccionarTemas_Click(object sender, EventArgs e)
+        {
+            int cantSemanas = Int32.Parse(txtCantSemana.Text);
+            DateTime fechaInicialCur = dtpFechaInicial.Value;
+            DateTime fechaFinalCur = dtpFechaFin.Value;
+
+            frmSeleccionarTemasDeCurso formSeleccionarTemaCurso = new frmSeleccionarTemasDeCurso(this, formPlantillaGest, cantSemanas, fechaInicialCur, fechaFinalCur, temasCurso);
+            formPlantillaGest.abrirFormulario(formSeleccionarTemaCurso);
+
+
+        }
+
+        private void btnVerGrupos_Click(object sender, EventArgs e)
+        {
+            formVerGruposCurso = new frmVerGruposCurso(this, formPlantillaGest, gruposCurso);
+            formPlantillaGest.abrirFormulario(formVerGruposCurso);
+
+        }
+
         private void btnAgregarReq_Click(object sender, EventArgs e)
         {
             DateTime auxFechaIniCur = dtpFechaInicial.Value;
 
             frmBuscarCursosRequerimiento formBuscarCursoReq = new frmBuscarCursosRequerimiento(auxFechaIniCur);
 
-            if(formBuscarCursoReq.ShowDialog() == DialogResult.OK)
+            if (formBuscarCursoReq.ShowDialog() == DialogResult.OK)
             {
-                if(formBuscarCursoReq.Curso_Req.idCurso != 0)
+                if (formBuscarCursoReq.Curso_Req.idCurso != 0)
                 {
                     int flag = 1;
                     foreach (CursoWS.curso recCursosReq in cursosReq)
@@ -286,54 +254,96 @@ namespace InterfazDATMA.Administrador
                 }
             }
 
-        }
 
-        private void dgvReq_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            try
-            {
-                CursoWS.curso auxCurso = dgvReq.Rows[e.RowIndex].DataBoundItem as CursoWS.curso;
-
-                dgvReq.Rows[e.RowIndex].Cells["NombreCurso"].Value = auxCurso.descripcion;
-                dgvReq.Rows[e.RowIndex].Cells["FechaInicial"].Value = auxCurso.fechaInicio;
-                dgvReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
-            }
-            catch (Exception ex)
-            {
-                
-            }
-            
         }
 
         private void btnEliminarReq_Click(object sender, EventArgs e)
         {
-            if(dgvReq.RowCount != 0)
+            if (dgvReq.RowCount != 0)
             {
                 CursoWS.curso auxCurso = dgvReq.CurrentRow.DataBoundItem as CursoWS.curso;
                 cursosReq.Remove(auxCurso);
                 dgvReq.Refresh();
             }
+
         }
 
-        private void dtpFechaInicial_ValueChanged(object sender, EventArgs e)
+        private void btnGuardarCurso_Click(object sender, EventArgs e)
         {
-            if (temasCurso != null) temasCurso.Clear();
-            if (cursosReq != null) cursosReq.Clear();
+            curso.descripcion = txtNombreCurso.Text;
+            curso.fechaInicio = dtpFechaInicial.Value;
+            curso.fechaInicioSpecified = true;
+            curso.fechaFin = dtpFechaFin.Value;
+            curso.fechaFinSpecified = true;
+            curso.fechaInscripcion = dtpFechaInscrip.Value;
+            curso.fechaInscripcionSpecified = true;
+            curso.cantSemanas = Int32.Parse(txtCantSemana.Text);
 
-            //Update dgvRequerimientos:
-            dgvReq.Refresh();
+            int idCurso = daoCurso.insertarCurso(curso);
+            if (idCurso != 0)
+            {
+                int contSemanas = 0;
+                //Insertar temas
+                foreach (TemaWS.tema recTema in temasCurso)
+                {
+                    recTema.fechaInicioSpecified = true;
+                    recTema.fechaFinSpecified = true;
+                    int idCursoTema = daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
 
-            DateTime auxDate = dtpFechaInicial.Value;
-            if (txtCantSemana.Text != "")
-            {
-                int cantSemanas = Int32.Parse(txtCantSemana.Text);
-                auxDate = auxDate.AddDays(cantSemanas * 7);
-                dtpFechaFin.Value = auxDate;
+                    //Insertar semanas:
+                    SemanaWS.semana semana = new SemanaWS.semana();
+                    contSemanas++;
+                    semana.nombre = "Editar nombre Semana: " + contSemanas;
+                    semana.descripcion = "Editar";
+                    semana.fechaInicio = recTema.fechaInicio;
+                    semana.fechaInicioSpecified = true;
+                    semana.curso = new SemanaWS.curso();
+                    semana.curso.idCurso = idCurso;
+                    daoSemana.insertarSemana(semana, idCursoTema);
+                }
+
+
+                //Insertar grupos
+                foreach (Grupo_Curso recGruposCurso in gruposCurso)
+                {
+                    int idGrupo = daoGrupo.insertarGrupo(idCurso, recGruposCurso.Grupo);
+                    if (idGrupo != 0)
+                    {
+                        //Insertar psicologos
+                        foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                        {
+                            daoGrupo.insertarGrupoPsicologo(recPsicologo.idPersona, idGrupo);
+                        }
+                    }
+                }
+
+
+
+                //Insertar Requisitos:
+                foreach (CursoWS.curso recCursoReq in cursosReq)
+                {
+                    daoCurso.insertarRequerimiento(idCurso, recCursoReq.idCurso, "Curso Requisito");
+                }
+
+                //Insertar Psicologos_Cursos:
+                foreach (Grupo_Curso recGruposCurso in gruposCurso)
+                {
+                    foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                    {
+                        //daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, idCurso);
+                    }
+                }
+
+                MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                inicializarPantalla();
             }
-            else
-            {
-                dtpFechaFin.Value = auxDate;
-            }
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formPlantillaGest.abrirFormulario(formOperacionesCursos);
+
         }
     }
 }

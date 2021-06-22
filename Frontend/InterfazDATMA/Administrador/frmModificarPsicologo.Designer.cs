@@ -37,8 +37,6 @@ namespace InterfazDATMA.Administrador
             this.lblConfirmarPass = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.lblGenero = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtTelf = new System.Windows.Forms.TextBox();
@@ -61,15 +59,17 @@ namespace InterfazDATMA.Administrador
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
-            this.nuevoDistrito = new System.Windows.Forms.Button();
             this.txtDistrito = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.nuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubirFoto
             // 
             this.btnSubirFoto.Location = new System.Drawing.Point(1448, 342);
-            this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(6);
             this.btnSubirFoto.Name = "btnSubirFoto";
             this.btnSubirFoto.Size = new System.Drawing.Size(60, 44);
             this.btnSubirFoto.TabIndex = 104;
@@ -92,7 +92,7 @@ namespace InterfazDATMA.Administrador
             // txtConfirmarPass
             // 
             this.txtConfirmarPass.Location = new System.Drawing.Point(386, 610);
-            this.txtConfirmarPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtConfirmarPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtConfirmarPass.Name = "txtConfirmarPass";
             this.txtConfirmarPass.Size = new System.Drawing.Size(330, 31);
             this.txtConfirmarPass.TabIndex = 101;
@@ -100,7 +100,7 @@ namespace InterfazDATMA.Administrador
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(386, 542);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(330, 31);
             this.txtPass.TabIndex = 100;
@@ -108,7 +108,7 @@ namespace InterfazDATMA.Administrador
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(386, 479);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(6);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(554, 31);
             this.txtUser.TabIndex = 99;
@@ -149,38 +149,6 @@ namespace InterfazDATMA.Administrador
             this.lblUser.TabIndex = 96;
             this.lblUser.Text = "Usuario";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(58, 731);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(358, 56);
-            this.btnCancelar.TabIndex = 95;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(1190, 731);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(358, 56);
-            this.btnGuardar.TabIndex = 94;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // lblGenero
             // 
             this.lblGenero.AutoSize = true;
@@ -196,7 +164,7 @@ namespace InterfazDATMA.Administrador
             // txtCelular
             // 
             this.txtCelular.Location = new System.Drawing.Point(1214, 210);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(6);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(330, 31);
             this.txtCelular.TabIndex = 91;
@@ -205,7 +173,7 @@ namespace InterfazDATMA.Administrador
             // txtTelf
             // 
             this.txtTelf.Location = new System.Drawing.Point(1214, 142);
-            this.txtTelf.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTelf.Margin = new System.Windows.Forms.Padding(6);
             this.txtTelf.Name = "txtTelf";
             this.txtTelf.Size = new System.Drawing.Size(330, 31);
             this.txtTelf.TabIndex = 90;
@@ -214,7 +182,7 @@ namespace InterfazDATMA.Administrador
             // txtDni
             // 
             this.txtDni.Location = new System.Drawing.Point(1214, 83);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(6);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(330, 31);
             this.txtDni.TabIndex = 89;
@@ -223,7 +191,7 @@ namespace InterfazDATMA.Administrador
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(386, 412);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(6);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(554, 31);
             this.txtCorreo.TabIndex = 88;
@@ -231,7 +199,7 @@ namespace InterfazDATMA.Administrador
             // txtApellidoMat
             // 
             this.txtApellidoMat.Location = new System.Drawing.Point(386, 212);
-            this.txtApellidoMat.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtApellidoMat.Margin = new System.Windows.Forms.Padding(6);
             this.txtApellidoMat.Name = "txtApellidoMat";
             this.txtApellidoMat.Size = new System.Drawing.Size(330, 31);
             this.txtApellidoMat.TabIndex = 86;
@@ -239,7 +207,7 @@ namespace InterfazDATMA.Administrador
             // txtApellidoPat
             // 
             this.txtApellidoPat.Location = new System.Drawing.Point(386, 144);
-            this.txtApellidoPat.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtApellidoPat.Margin = new System.Windows.Forms.Padding(6);
             this.txtApellidoPat.Name = "txtApellidoPat";
             this.txtApellidoPat.Size = new System.Drawing.Size(330, 31);
             this.txtApellidoPat.TabIndex = 85;
@@ -248,7 +216,7 @@ namespace InterfazDATMA.Administrador
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(386, 277);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(6);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(554, 32);
             this.dtpFechaNacimiento.TabIndex = 84;
@@ -258,7 +226,7 @@ namespace InterfazDATMA.Administrador
             this.rbtnHombre.AutoSize = true;
             this.rbtnHombre.ForeColor = System.Drawing.Color.White;
             this.rbtnHombre.Location = new System.Drawing.Point(1214, 277);
-            this.rbtnHombre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rbtnHombre.Margin = new System.Windows.Forms.Padding(6);
             this.rbtnHombre.Name = "rbtnHombre";
             this.rbtnHombre.Size = new System.Drawing.Size(141, 29);
             this.rbtnHombre.TabIndex = 83;
@@ -272,7 +240,7 @@ namespace InterfazDATMA.Administrador
             this.rbtnMujer.AutoSize = true;
             this.rbtnMujer.ForeColor = System.Drawing.Color.White;
             this.rbtnMujer.Location = new System.Drawing.Point(1406, 277);
-            this.rbtnMujer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rbtnMujer.Margin = new System.Windows.Forms.Padding(6);
             this.rbtnMujer.Name = "rbtnMujer";
             this.rbtnMujer.Size = new System.Drawing.Size(138, 29);
             this.rbtnMujer.TabIndex = 82;
@@ -284,7 +252,7 @@ namespace InterfazDATMA.Administrador
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(386, 81);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(554, 31);
             this.txtNombre.TabIndex = 81;
@@ -402,7 +370,7 @@ namespace InterfazDATMA.Administrador
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
             this.pbFoto.Location = new System.Drawing.Point(1214, 342);
-            this.pbFoto.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pbFoto.Margin = new System.Windows.Forms.Padding(6);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(220, 240);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -410,29 +378,64 @@ namespace InterfazDATMA.Administrador
             this.pbFoto.TabStop = false;
             this.pbFoto.WaitOnLoad = true;
             // 
-            // nuevoDistrito
-            // 
-            this.nuevoDistrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.nuevoDistrito.FlatAppearance.BorderSize = 0;
-            this.nuevoDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nuevoDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.nuevoDistrito.ForeColor = System.Drawing.Color.White;
-            this.nuevoDistrito.Location = new System.Drawing.Point(730, 337);
-            this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nuevoDistrito.Name = "nuevoDistrito";
-            this.nuevoDistrito.Size = new System.Drawing.Size(214, 42);
-            this.nuevoDistrito.TabIndex = 105;
-            this.nuevoDistrito.Text = "Agregar Distrito";
-            this.nuevoDistrito.UseVisualStyleBackColor = false;
-            this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
-            // 
             // txtDistrito
             // 
             this.txtDistrito.Location = new System.Drawing.Point(386, 340);
-            this.txtDistrito.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDistrito.Margin = new System.Windows.Forms.Padding(6);
             this.txtDistrito.Name = "txtDistrito";
             this.txtDistrito.Size = new System.Drawing.Size(330, 31);
             this.txtDistrito.TabIndex = 106;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.AutoSize = true;
+            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardar.Depth = 0;
+            this.btnGuardar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnGuardar.Location = new System.Drawing.Point(1250, 774);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Primary = false;
+            this.btnGuardar.Size = new System.Drawing.Size(142, 36);
+            this.btnGuardar.TabIndex = 145;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // nuevoDistrito
+            // 
+            this.nuevoDistrito.AutoSize = true;
+            this.nuevoDistrito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.nuevoDistrito.Depth = 0;
+            this.nuevoDistrito.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.nuevoDistrito.Location = new System.Drawing.Point(736, 337);
+            this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
+            this.nuevoDistrito.Name = "nuevoDistrito";
+            this.nuevoDistrito.Primary = false;
+            this.nuevoDistrito.Size = new System.Drawing.Size(266, 36);
+            this.nuevoDistrito.TabIndex = 144;
+            this.nuevoDistrito.Text = "Agregar Distrito";
+            this.nuevoDistrito.UseVisualStyleBackColor = true;
+            this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click_1);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancelar.Location = new System.Drawing.Point(58, 774);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(156, 36);
+            this.btnCancelar.TabIndex = 143;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // frmModificarPsicologo
             // 
@@ -441,8 +444,10 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1600, 865);
             this.ControlBox = false;
-            this.Controls.Add(this.txtDistrito);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.nuevoDistrito);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.label1);
@@ -452,8 +457,6 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblConfirmarPass);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtTelf);
@@ -474,7 +477,7 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmModificarPsicologo";
             this.Sizable = false;
             this.Text = "frmModificarPsicologo";
@@ -496,8 +499,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblConfirmarPass;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtTelf;
@@ -519,7 +520,9 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
-        private System.Windows.Forms.Button nuevoDistrito;
         private System.Windows.Forms.TextBox txtDistrito;
+        private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
+        private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
     }
 }

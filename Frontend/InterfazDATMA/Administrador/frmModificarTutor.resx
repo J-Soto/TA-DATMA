@@ -126,10 +126,14 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 274</value>
+    <value>1048, 342</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 25</value>
+    <value>69, 31</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>135</value>
@@ -147,17 +151,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="txtConfirmarPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 488</value>
+    <value>387, 610</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtConfirmarPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtConfirmarPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtConfirmarPass.TabIndex" type="System.Int32, mscorlib">
     <value>134</value>
@@ -172,16 +175,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtConfirmarPass.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="txtPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 434</value>
+    <value>387, 542</value>
   </data>
   <data name="txtPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtPass.TabIndex" type="System.Int32, mscorlib">
     <value>133</value>
@@ -196,16 +199,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPass.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="txtUser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 383</value>
+    <value>387, 479</value>
   </data>
   <data name="txtUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 26</value>
+    <value>553, 31</value>
   </data>
   <data name="txtUser.TabIndex" type="System.Int32, mscorlib">
     <value>132</value>
@@ -220,7 +223,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtUser.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="lblConfirmarPass.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -229,10 +232,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblConfirmarPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 488</value>
+    <value>52, 610</value>
+  </data>
+  <data name="lblConfirmarPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblConfirmarPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 25</value>
+    <value>281, 31</value>
   </data>
   <data name="lblConfirmarPass.TabIndex" type="System.Int32, mscorlib">
     <value>131</value>
@@ -250,7 +256,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblConfirmarPass.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="lblPassword.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -259,10 +265,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 434</value>
+    <value>52, 542</value>
+  </data>
+  <data name="lblPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 25</value>
+    <value>155, 31</value>
   </data>
   <data name="lblPassword.TabIndex" type="System.Int32, mscorlib">
     <value>130</value>
@@ -280,7 +289,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPassword.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="lblUser.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -289,10 +298,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblUser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 383</value>
+    <value>52, 479</value>
+  </data>
+  <data name="lblUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 25</value>
+    <value>108, 31</value>
   </data>
   <data name="lblUser.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
@@ -310,96 +322,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUser.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btnCancelar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnCancelar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="btnCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 585</value>
-  </data>
-  <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 45</value>
-  </data>
-  <data name="btnCancelar.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
-  </data>
-  <data name="btnCancelar.Text" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.Name" xml:space="preserve">
-    <value>btnCancelar</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="btnSiguiente.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnSiguiente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="btnSiguiente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>892, 585</value>
-  </data>
-  <data name="btnSiguiente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 45</value>
-  </data>
-  <data name="btnSiguiente.TabIndex" type="System.Int32, mscorlib">
-    <value>127</value>
-  </data>
-  <data name="btnSiguiente.Text" xml:space="preserve">
-    <value>Siguiente</value>
-  </data>
-  <data name="&gt;&gt;btnSiguiente.Name" xml:space="preserve">
-    <value>btnSiguiente</value>
-  </data>
-  <data name="&gt;&gt;btnSiguiente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSiguiente.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnSiguiente.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="btnNuevoDistrito.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnNuevoDistrito.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="btnNuevoDistrito.Location" type="System.Drawing.Point, System.Drawing">
-    <value>548, 274</value>
-  </data>
-  <data name="btnNuevoDistrito.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 32</value>
-  </data>
-  <data name="btnNuevoDistrito.TabIndex" type="System.Int32, mscorlib">
-    <value>126</value>
-  </data>
-  <data name="btnNuevoDistrito.Text" xml:space="preserve">
-    <value>Agregar Distrito</value>
-  </data>
-  <data name="&gt;&gt;btnNuevoDistrito.Name" xml:space="preserve">
-    <value>btnNuevoDistrito</value>
-  </data>
-  <data name="&gt;&gt;btnNuevoDistrito.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNuevoDistrito.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnNuevoDistrito.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="lblGenero.AutoSize" type="System.Boolean, mscorlib">
@@ -409,10 +331,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblGenero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 222</value>
+    <value>1048, 278</value>
+  </data>
+  <data name="lblGenero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblGenero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 25</value>
+    <value>104, 31</value>
   </data>
   <data name="lblGenero.TabIndex" type="System.Int32, mscorlib">
     <value>125</value>
@@ -433,13 +358,13 @@
     <value>13</value>
   </data>
   <data name="txtCel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>910, 168</value>
+    <value>1213, 210</value>
   </data>
   <data name="txtCel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtCel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtCel.TabIndex" type="System.Int32, mscorlib">
     <value>124</value>
@@ -457,13 +382,13 @@
     <value>14</value>
   </data>
   <data name="txtTelf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>910, 114</value>
+    <value>1213, 142</value>
   </data>
   <data name="txtTelf.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtTelf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtTelf.TabIndex" type="System.Int32, mscorlib">
     <value>123</value>
@@ -481,13 +406,13 @@
     <value>15</value>
   </data>
   <data name="txtDni.Location" type="System.Drawing.Point, System.Drawing">
-    <value>910, 66</value>
+    <value>1213, 82</value>
   </data>
   <data name="txtDni.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtDni.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtDni.TabIndex" type="System.Int32, mscorlib">
     <value>122</value>
@@ -505,13 +430,13 @@
     <value>16</value>
   </data>
   <data name="txtCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 330</value>
+    <value>387, 412</value>
   </data>
   <data name="txtCorreo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtCorreo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 26</value>
+    <value>553, 31</value>
   </data>
   <data name="txtCorreo.TabIndex" type="System.Int32, mscorlib">
     <value>121</value>
@@ -529,13 +454,13 @@
     <value>17</value>
   </data>
   <data name="txtApMat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 170</value>
+    <value>387, 212</value>
   </data>
   <data name="txtApMat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtApMat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtApMat.TabIndex" type="System.Int32, mscorlib">
     <value>119</value>
@@ -553,13 +478,13 @@
     <value>18</value>
   </data>
   <data name="txtApPat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 115</value>
+    <value>387, 144</value>
   </data>
   <data name="txtApPat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtApPat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtApPat.TabIndex" type="System.Int32, mscorlib">
     <value>118</value>
@@ -583,13 +508,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="dtpFechaNacimiento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 222</value>
+    <value>387, 278</value>
   </data>
   <data name="dtpFechaNacimiento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="dtpFechaNacimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 26</value>
+    <value>553, 32</value>
   </data>
   <data name="dtpFechaNacimiento.TabIndex" type="System.Int32, mscorlib">
     <value>117</value>
@@ -610,13 +535,13 @@
     <value>True</value>
   </data>
   <data name="rbtnHombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>910, 222</value>
+    <value>1213, 278</value>
   </data>
   <data name="rbtnHombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="rbtnHombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 24</value>
+    <value>141, 29</value>
   </data>
   <data name="rbtnHombre.TabIndex" type="System.Int32, mscorlib">
     <value>116</value>
@@ -640,13 +565,13 @@
     <value>True</value>
   </data>
   <data name="rbtnMujer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1054, 222</value>
+    <value>1405, 278</value>
   </data>
   <data name="rbtnMujer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="rbtnMujer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 24</value>
+    <value>138, 29</value>
   </data>
   <data name="rbtnMujer.TabIndex" type="System.Int32, mscorlib">
     <value>115</value>
@@ -667,13 +592,13 @@
     <value>22</value>
   </data>
   <data name="txtNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 65</value>
+    <value>387, 81</value>
   </data>
   <data name="txtNombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 26</value>
+    <value>553, 31</value>
   </data>
   <data name="txtNombre.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
@@ -697,10 +622,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblApMat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 170</value>
+    <value>52, 212</value>
+  </data>
+  <data name="lblApMat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblApMat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 25</value>
+    <value>216, 31</value>
   </data>
   <data name="lblApMat.TabIndex" type="System.Int32, mscorlib">
     <value>113</value>
@@ -727,10 +655,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 330</value>
+    <value>52, 412</value>
+  </data>
+  <data name="lblCorreo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblCorreo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 25</value>
+    <value>97, 31</value>
   </data>
   <data name="lblCorreo.TabIndex" type="System.Int32, mscorlib">
     <value>112</value>
@@ -757,10 +688,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblDni.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 68</value>
+    <value>1048, 85</value>
+  </data>
+  <data name="lblDni.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblDni.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 25</value>
+    <value>55, 31</value>
   </data>
   <data name="lblDni.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
@@ -787,10 +721,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblDistrito.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 274</value>
+    <value>52, 342</value>
+  </data>
+  <data name="lblDistrito.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblDistrito.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 25</value>
+    <value>100, 31</value>
   </data>
   <data name="lblDistrito.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
@@ -817,10 +754,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblCelular.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 170</value>
+    <value>1048, 212</value>
+  </data>
+  <data name="lblCelular.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblCelular.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 25</value>
+    <value>100, 31</value>
   </data>
   <data name="lblCelular.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
@@ -847,10 +787,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblApPat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 115</value>
+    <value>52, 144</value>
+  </data>
+  <data name="lblApPat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblApPat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 25</value>
+    <value>212, 31</value>
   </data>
   <data name="lblApPat.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
@@ -877,10 +820,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblFechaNacimiento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 222</value>
+    <value>52, 278</value>
+  </data>
+  <data name="lblFechaNacimiento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblFechaNacimiento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
+    <value>270, 31</value>
   </data>
   <data name="lblFechaNacimiento.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
@@ -907,10 +853,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 115</value>
+    <value>1048, 144</value>
+  </data>
+  <data name="lblTelefono.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblTelefono.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 25</value>
+    <value>120, 31</value>
   </data>
   <data name="lblTelefono.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
@@ -937,10 +886,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lblNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 65</value>
+    <value>52, 81</value>
+  </data>
+  <data name="lblNombre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 25</value>
+    <value>124, 31</value>
   </data>
   <data name="lblNombre.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
@@ -964,13 +916,13 @@
     <value>17, 17</value>
   </metadata>
   <data name="pbFoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>910, 274</value>
+    <value>1213, 342</value>
   </data>
   <data name="pbFoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="pbFoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 192</value>
+    <value>221, 240</value>
   </data>
   <data name="pbFoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -988,16 +940,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbFoto.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="txtDistrito.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 274</value>
+    <value>387, 342</value>
   </data>
   <data name="txtDistrito.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="txtDistrito.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 26</value>
+    <value>329, 31</value>
   </data>
   <data name="txtDistrito.TabIndex" type="System.Int32, mscorlib">
     <value>138</value>
@@ -1012,16 +964,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDistrito.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="btnSubirFoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1113, 271</value>
+    <value>1484, 339</value>
   </data>
   <data name="btnSubirFoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="btnSubirFoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 35</value>
+    <value>60, 44</value>
   </data>
   <data name="btnSubirFoto.TabIndex" type="System.Int32, mscorlib">
     <value>139</value>
@@ -1039,19 +991,124 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSubirFoto.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCancelar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnCancelar.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="btnCancelar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 756</value>
+  </data>
+  <data name="btnCancelar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 36</value>
+  </data>
+  <data name="btnCancelar.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="btnCancelar.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="&gt;&gt;btnCancelar.Name" xml:space="preserve">
+    <value>btnCancelar</value>
+  </data>
+  <data name="&gt;&gt;btnCancelar.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCancelar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCancelar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnNuevoDistrito.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnNuevoDistrito.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="btnNuevoDistrito.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNuevoDistrito.Location" type="System.Drawing.Point, System.Drawing">
+    <value>739, 343</value>
+  </data>
+  <data name="btnNuevoDistrito.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="btnNuevoDistrito.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 36</value>
+  </data>
+  <data name="btnNuevoDistrito.TabIndex" type="System.Int32, mscorlib">
+    <value>141</value>
+  </data>
+  <data name="btnNuevoDistrito.Text" xml:space="preserve">
+    <value>Agregar Distrito</value>
+  </data>
+  <data name="&gt;&gt;btnNuevoDistrito.Name" xml:space="preserve">
+    <value>btnNuevoDistrito</value>
+  </data>
+  <data name="&gt;&gt;btnNuevoDistrito.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnNuevoDistrito.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnNuevoDistrito.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnSiguiente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnSiguiente.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="btnSiguiente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSiguiente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1206, 756</value>
+  </data>
+  <data name="btnSiguiente.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="btnSiguiente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 36</value>
+  </data>
+  <data name="btnSiguiente.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="btnSiguiente.Text" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="&gt;&gt;btnSiguiente.Name" xml:space="preserve">
+    <value>btnSiguiente</value>
+  </data>
+  <data name="&gt;&gt;btnSiguiente.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnSiguiente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSiguiente.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>12, 25</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 692</value>
+    <value>1600, 865</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmModificarTutor</value>

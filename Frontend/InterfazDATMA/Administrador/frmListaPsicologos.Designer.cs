@@ -32,7 +32,6 @@ namespace InterfazDATMA.Administrador
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Header));
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvPsico = new System.Windows.Forms.DataGridView();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApPat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@ namespace InterfazDATMA.Administrador
             this.colTelf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +57,6 @@ namespace InterfazDATMA.Administrador
             // 
             resources.ApplyResources(this.txtBuscar, "txtBuscar");
             this.txtBuscar.Name = "txtBuscar";
-            // 
-            // btnBuscar
-            // 
-            resources.ApplyResources(this.btnBuscar, "btnBuscar");
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvPsico
             // 
@@ -154,14 +146,24 @@ namespace InterfazDATMA.Administrador
             this.colEmail.Name = "colEmail";
             this.colEmail.ReadOnly = true;
             // 
+            // btnBuscar
+            // 
+            resources.ApplyResources(this.btnBuscar, "btnBuscar");
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Primary = false;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
             // Header
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
-            this.Controls.Add(this.dgvPsico);
             this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.dgvPsico);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Name = "Header";
@@ -176,7 +178,6 @@ namespace InterfazDATMA.Administrador
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvPsico;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApPat;
@@ -188,5 +189,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn colTelf;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
     }
 }

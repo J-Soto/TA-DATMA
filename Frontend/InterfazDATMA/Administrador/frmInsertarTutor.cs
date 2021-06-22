@@ -63,6 +63,21 @@ namespace InterfazDATMA.Administrador
             rbtnHombre.Checked = true;
         }
 
+        private void nuevoDistrito_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                if (frmDistrito.distrito != null)
+                {
+                    distrito = new TutorWS.distrito();
+                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = distrito.nombre;
+                }
+            }
+
+        }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
@@ -104,26 +119,13 @@ namespace InterfazDATMA.Administrador
                 MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(formOperacionPersona);
-        }
 
-        private void nuevoDistrito_Click(object sender, EventArgs e)
-        {
-            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
-            if (frmDistrito.ShowDialog() == DialogResult.OK)
-            {
-                if (frmDistrito.distrito != null)
-                {
-                    distrito = new TutorWS.distrito();
-                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
-                    distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = distrito.nombre;
-                }
-            }
         }
     }
 }

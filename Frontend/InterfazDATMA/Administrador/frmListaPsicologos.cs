@@ -29,8 +29,9 @@ namespace InterfazDATMA.Administrador
             dgvPsico.DataSource = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-{
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
             BindingList<PsicologoWS.psicologo> psicos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
             for (int i = 0; i < psicos.Count; i++)
             {
@@ -41,9 +42,8 @@ namespace InterfazDATMA.Administrador
                 }
             }
             dgvPsico.DataSource = psicos;
-        }
 
-       
+        }
     }
 
 }

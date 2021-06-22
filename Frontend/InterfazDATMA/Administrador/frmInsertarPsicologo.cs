@@ -58,11 +58,103 @@ namespace InterfazDATMA.Administrador
         }
 
 
+
+        private void rbtnHombre_Click(object sender, EventArgs e)
+        {
+            rbtnMujer.Checked = false;
+            rbtnHombre.Checked = true;
+        }
+
+        private void rbtnMujer_Click(object sender, EventArgs e)
+        {
+            rbtnHombre.Checked = false;
+            rbtnMujer.Checked = true;
+        }
+
+        private void btnSubirFoto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                {
+                    rutaFoto = ofdSubirFoto.FileName;
+                    pbFoto.Image = Image.FromFile(rutaFoto);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void txtTelf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                if (frmDistrito.distrito != null)
+                {
+                    distrito = new PsicologoWS.distrito();
+                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = distrito.nombre;
+                }
+            }
+        }
+
+        private void nuevoDistrito_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             inicializarComponentes();
             formOperacionPersona.inicializarTablas();
             formPlantilla.abrirFormulario(formOperacionPersona);
+
+        }
+
+        private void frmInsertarPsicologo_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -171,90 +263,7 @@ namespace InterfazDATMA.Administrador
                 }
 
             }
-        }
 
-        private void rbtnHombre_Click(object sender, EventArgs e)
-        {
-            rbtnMujer.Checked = false;
-            rbtnHombre.Checked = true;
-        }
-
-        private void rbtnMujer_Click(object sender, EventArgs e)
-        {
-            rbtnHombre.Checked = false;
-            rbtnMujer.Checked = true;
-        }
-
-        private void btnNuevoDistrito_Click(object sender, EventArgs e)
-        {
-            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
-            if (frmDistrito.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-        }
-
-        private void btnSubirFoto_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
-                {
-                    rutaFoto = ofdSubirFoto.FileName;
-                    pbFoto.Image = Image.FromFile(rutaFoto);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-        }
-
-        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-
-        private void txtTelf_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-
-        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-
-        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
-            if (frmDistrito.ShowDialog() == DialogResult.OK)
-            {
-                if (frmDistrito.distrito != null)
-                {
-                    distrito = new PsicologoWS.distrito();
-                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
-                    distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = distrito.nombre;
-                }
-            }
         }
     }
 }

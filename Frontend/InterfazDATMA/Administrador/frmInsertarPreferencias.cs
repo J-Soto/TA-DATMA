@@ -38,6 +38,22 @@ namespace InterfazDATMA.Administrador
             tutorAux = tutor;
         }
 
+        private void frmInsertarPreferencias_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chblDispositivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(formAnterior);
+
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // Insertar Dispositivos Electronicos
@@ -92,20 +108,6 @@ namespace InterfazDATMA.Administrador
                     throw new Exception();
                 }
             }
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(formAnterior);
-        }
-
-        private void frmInsertarPreferencias_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chblDispositivos_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }

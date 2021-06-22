@@ -37,9 +37,6 @@ namespace InterfazDATMA.Administrador
             this.lblConfirmarPass = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSiguiente = new System.Windows.Forms.Button();
-            this.btnNuevoDistrito = new System.Windows.Forms.Button();
             this.lblGenero = new System.Windows.Forms.Label();
             this.txtCel = new System.Windows.Forms.TextBox();
             this.txtTelf = new System.Windows.Forms.TextBox();
@@ -64,6 +61,9 @@ namespace InterfazDATMA.Administrador
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.txtDistrito = new System.Windows.Forms.TextBox();
             this.btnSubirFoto = new System.Windows.Forms.Button();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnNuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnSiguiente = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,36 +105,6 @@ namespace InterfazDATMA.Administrador
             resources.ApplyResources(this.lblUser, "lblUser");
             this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Name = "lblUser";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnCancelar, "btnCancelar");
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnSiguiente.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnSiguiente, "btnSiguiente");
-            this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.UseVisualStyleBackColor = false;
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
-            // 
-            // btnNuevoDistrito
-            // 
-            this.btnNuevoDistrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnNuevoDistrito.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnNuevoDistrito, "btnNuevoDistrito");
-            this.btnNuevoDistrito.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoDistrito.Name = "btnNuevoDistrito";
-            this.btnNuevoDistrito.UseVisualStyleBackColor = false;
-            this.btnNuevoDistrito.Click += new System.EventHandler(this.btnNuevoDistrito_Click);
             // 
             // lblGenero
             // 
@@ -273,12 +243,45 @@ namespace InterfazDATMA.Administrador
             this.btnSubirFoto.UseVisualStyleBackColor = true;
             this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
             // 
+            // btnCancelar
+            // 
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
+            // btnNuevoDistrito
+            // 
+            resources.ApplyResources(this.btnNuevoDistrito, "btnNuevoDistrito");
+            this.btnNuevoDistrito.Depth = 0;
+            this.btnNuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevoDistrito.Name = "btnNuevoDistrito";
+            this.btnNuevoDistrito.Primary = false;
+            this.btnNuevoDistrito.UseVisualStyleBackColor = true;
+            this.btnNuevoDistrito.Click += new System.EventHandler(this.btnNuevoDistrito_Click_1);
+            // 
+            // btnSiguiente
+            // 
+            resources.ApplyResources(this.btnSiguiente, "btnSiguiente");
+            this.btnSiguiente.Depth = 0;
+            this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Primary = false;
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
+            // 
             // frmModificarTutor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
+            this.Controls.Add(this.btnSiguiente);
+            this.Controls.Add(this.btnNuevoDistrito);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.pbFoto);
@@ -289,9 +292,6 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblConfirmarPass);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.btnNuevoDistrito);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.txtCel);
             this.Controls.Add(this.txtTelf);
@@ -330,9 +330,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblConfirmarPass;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.Button btnNuevoDistrito;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.TextBox txtCel;
         private System.Windows.Forms.TextBox txtTelf;
@@ -356,5 +353,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.TextBox txtDistrito;
         private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
         private System.Windows.Forms.Button btnSubirFoto;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnNuevoDistrito;
+        private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
     }
 }

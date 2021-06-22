@@ -87,12 +87,72 @@ namespace InterfazDATMA.Administrador
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnSubirFoto_Click(object sender, EventArgs e)
         {
-            formPlantilla.abrirFormulario(formOperacionPersona);
+            try
+            {
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                {
+                    rutaFoto = ofdSubirFoto.FileName;
+                    //MessageBox.Show(rutaFoto);
+                    pbFoto.Image = Image.FromFile(rutaFoto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void btnSiguiente_Click(object sender, EventArgs e)
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmModificarTutor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubirFoto_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                {
+                    rutaFoto = ofdSubirFoto.FileName;
+                    //MessageBox.Show(rutaFoto);
+                    pbFoto.Image = Image.FromFile(rutaFoto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnNuevoDistrito_Click_1(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                if (frmDistrito.distrito != null)
+                {
+                    tutor.distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    tutor.distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = tutor.distrito.nombre;
+                }
+            }
+
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(formOperacionPersona);
+
+        }
+
+        private void btnSiguiente_Click_1(object sender, EventArgs e)
         {
             tutor.nombre = txtNombre.Text;
             tutor.apellidoPaterno = txtApPat.Text;
@@ -141,64 +201,7 @@ namespace InterfazDATMA.Administrador
             else
                 formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
 
-        }
 
-        private void btnSubirFoto_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
-                {
-                    rutaFoto = ofdSubirFoto.FileName;
-                    //MessageBox.Show(rutaFoto);
-                    pbFoto.Image = Image.FromFile(rutaFoto);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void btnNuevoDistrito_Click(object sender, EventArgs e)
-        {
-            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
-            if (frmDistrito.ShowDialog() == DialogResult.OK)
-            {
-                if (frmDistrito.distrito != null)
-                {
-                    tutor.distrito.idDistrito = frmDistrito.distrito.idDistrito;
-                    tutor.distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = tutor.distrito.nombre;
-                }
-            }
-        }
-
-        private void pbFoto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmModificarTutor_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSubirFoto_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
-                {
-                    rutaFoto = ofdSubirFoto.FileName;
-                    //MessageBox.Show(rutaFoto);
-                    pbFoto.Image = Image.FromFile(rutaFoto);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
     }
 }

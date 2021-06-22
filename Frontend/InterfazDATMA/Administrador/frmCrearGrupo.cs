@@ -56,43 +56,6 @@ namespace InterfazDATMA.Administrador
             grupo.Grupo = new GrupoWS.grupo();
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e) //GUARDAR
-        {
-            grupo.Grupo.maxCantCuidadores = Int32.Parse(txtMaxTutores.Text);
-            grupo.Grupo.nombrePromocion = txtNombreGrupo.Text;
-            grupo.Psicologos = psicologosGrupo;
-
-            formVerGruposCurso.actualizarDGV(grupo);
-            formPlantillaGest.abrirFormulario(formVerGruposCurso);
-        }
-
-        private void btnAgregarPsico_Click(object sender, EventArgs e)
-        {
-            formBuscarPsicologoGrupo = new frmBuscarPsicologoGrupo();
-            int flag = 1;
-            if (formBuscarPsicologoGrupo.ShowDialog() == DialogResult.OK)
-            {
-                foreach(PsicologoWS.psicologo recPsicologo in psicologosGrupo)
-                {
-                    if(recPsicologo.idPersona == formBuscarPsicologoGrupo.PsicologoSelected.idPersona)
-                    {
-                        flag = 0;
-                        break;
-                    }
-                }
-
-                if(flag == 1)
-                {
-                    psicologosGrupo.Add(formBuscarPsicologoGrupo.PsicologoSelected);
-                    dgvPsicologos.DataSource = psicologosGrupo;
-                }
-                else
-                {
-                    MessageBox.Show("El psicologo ya esta registrado","Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }
-            }
-        }
-
         private void dgvPsicologos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if(dgvPsicologos.Rows[e.RowIndex] != null)
@@ -121,21 +84,40 @@ namespace InterfazDATMA.Administrador
             Validar.SoloNumeros(e);
         }
 
-        private void btnReg_Click(object sender, EventArgs e) //BACK
+        private void btnAgregarPsico_Click(object sender, EventArgs e)
         {
-            //grupo.maxCantCuidadores = 0;
-            grupo.Grupo.maxCantCuidadores = 0;
-            formPlantillaGest.abrirFormulario(formVerGruposCurso);
-        }
+            formBuscarPsicologoGrupo = new frmBuscarPsicologoGrupo();
+            int flag = 1;
+            if (formBuscarPsicologoGrupo.ShowDialog() == DialogResult.OK)
+            {
+                foreach (PsicologoWS.psicologo recPsicologo in psicologosGrupo)
+                {
+                    if (recPsicologo.idPersona == formBuscarPsicologoGrupo.PsicologoSelected.idPersona)
+                    {
+                        flag = 0;
+                        break;
+                    }
+                }
 
-       
+                if (flag == 1)
+                {
+                    psicologosGrupo.Add(formBuscarPsicologoGrupo.PsicologoSelected);
+                    dgvPsicologos.DataSource = psicologosGrupo;
+                }
+                else
+                {
+                    MessageBox.Show("El psicologo ya esta registrado", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+
             if (dgvPsicologos.RowCount != 0)
             {
-                PsicologoWS.psicologo auxPsico = dgvPsicologos.CurrentRow.DataBoundItem as PsicologoWS.psicologo;    
+                PsicologoWS.psicologo auxPsico = dgvPsicologos.CurrentRow.DataBoundItem as PsicologoWS.psicologo;
 
                 for (int i = 0; i < dgvPsicologos.RowCount; i++)
                 {
@@ -159,8 +141,26 @@ namespace InterfazDATMA.Administrador
                 //dgvPsicologos.Refresh();
 
             }
+
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            grupo.Grupo.maxCantCuidadores = Int32.Parse(txtMaxTutores.Text);
+            grupo.Grupo.nombrePromocion = txtNombreGrupo.Text;
+            grupo.Psicologos = psicologosGrupo;
 
+            formVerGruposCurso.actualizarDGV(grupo);
+            formPlantillaGest.abrirFormulario(formVerGruposCurso);
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            //grupo.maxCantCuidadores = 0;
+            grupo.Grupo.maxCantCuidadores = 0;
+            formPlantillaGest.abrirFormulario(formVerGruposCurso);
+
+        }
     }
 }

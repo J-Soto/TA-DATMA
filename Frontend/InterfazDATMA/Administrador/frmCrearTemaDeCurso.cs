@@ -35,11 +35,6 @@ namespace InterfazDATMA.Administrador
             txtDescripcionTema.Text = "";
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-        
         private void btnGuardarTema_Click(object sender, EventArgs e)
         {
             TemaWS.tema tema = new TemaWS.tema();
@@ -48,10 +43,16 @@ namespace InterfazDATMA.Administrador
             int resultado = daoTema.insertarTema(tema);
             if (resultado != 0)
             {
-                MessageBox.Show("Se ha registrado el tema correctamente","Mensaje de Confirmacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Se ha registrado el tema correctamente", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 inicializarPantalla();
             }
+
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+
+        }
     }
 }
