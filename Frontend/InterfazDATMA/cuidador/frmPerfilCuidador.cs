@@ -31,7 +31,7 @@ namespace InterfazDATMA.cuidador
             var tutores = daoTutor.listarTodosTutores();
             foreach (var tutor in tutores)
             {
-                if (tutor.idUsuario== frmPlantillaGestion.user.idUsuario)
+                if (tutor.idUsuario == frmPlantillaGestion.user.idUsuario)
                 {
                     frmPlantillaGestion.tutor = tutor;
                     break;

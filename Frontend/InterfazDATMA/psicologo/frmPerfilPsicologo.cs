@@ -16,6 +16,8 @@ namespace InterfazDATMA.psicologo
     {
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private frmPlantillaGestion plantillaGestion;
+        private PsicologoWS.psicologo psico;
+
         public frmPerfilPsicologo(frmPlantillaGestion Plantilla)
         { 
             InitializeComponent();
@@ -27,15 +29,19 @@ namespace InterfazDATMA.psicologo
             plantillaGestion = Plantilla;
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             // obtener psicolog a partir del usuario
-            var psicologos = daoPsicologo.listarTodosPsicologos();
-            foreach (var psico in psicologos)
-            {
-                if (psico.idUsuario == frmPlantillaGestion.user.idUsuario)
-                {
-                    frmPlantillaGestion.psico = psico;
-                    break;
-                }
-            }
+            //var psicologos = daoPsicologo.listarTodosPsicologos();
+            //foreach (var psico in psicologos)
+            //{
+            //    if (psico.idUsuario == frmPlantillaGestion.user.idUsuario)
+            //    {
+            //        frmPlantillaGestion.psico = psico;
+            //        break;
+            //    }
+            //}
+
+            psico = daoPsicologo.buscarPsicologoPorIdUsuario(frmPlantillaGestion.user.idUsuario);
+            frmPlantillaGestion.psico = psico;
+
             txtUser.Text = frmPlantillaGestion.psico.user;
             txtPass.Text = frmPlantillaGestion.psico.password;
             txtCel.Text = frmPlantillaGestion.psico.celular;
