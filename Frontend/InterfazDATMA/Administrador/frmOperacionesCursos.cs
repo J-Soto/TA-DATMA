@@ -56,21 +56,24 @@ namespace InterfazDATMA.Administrador
             }
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
+       
+        private void frmOperacionesCursos_VisibleChanged(object sender, EventArgs e)
         {
-            formPlantillaGest.abrirFormulario(formGestionarModuloAdmin);
+            FetchCursos();
+            UpdateCursosTable();
+        }
+
+        private void frmOperacionesCursos_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnInsertarCurso_Click(object sender, EventArgs e)
         {
             frmInsertarCurso formInsertarCurso = new frmInsertarCurso(this, formPlantillaGest);
             formPlantillaGest.abrirFormulario(formInsertarCurso);
-        }
 
-        private void frmOperacionesCursos_VisibleChanged(object sender, EventArgs e)
-        {
-            FetchCursos();
-            UpdateCursosTable();
+
         }
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
@@ -79,6 +82,14 @@ namespace InterfazDATMA.Administrador
             daoCurso.eliminarCurso(cursos[index].idCurso);
             cursos.RemoveAt(index);
             UpdateCursosTable();
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formPlantillaGest.abrirFormulario(formGestionarModuloAdmin);
+
+
         }
     }
 }

@@ -29,7 +29,6 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGuardarReunion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,22 +37,8 @@ namespace InterfazDATMA
             this.txtLink = new System.Windows.Forms.RichTextBox();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
+            this.btnGuardarReunion = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
-            // 
-            // btnGuardarReunion
-            // 
-            this.btnGuardarReunion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnGuardarReunion.FlatAppearance.BorderSize = 0;
-            this.btnGuardarReunion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGuardarReunion.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarReunion.Location = new System.Drawing.Point(301, 409);
-            this.btnGuardarReunion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnGuardarReunion.Name = "btnGuardarReunion";
-            this.btnGuardarReunion.Size = new System.Drawing.Size(357, 55);
-            this.btnGuardarReunion.TabIndex = 6;
-            this.btnGuardarReunion.Text = "GUARDAR";
-            this.btnGuardarReunion.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -98,7 +83,7 @@ namespace InterfazDATMA
             this.dtpFechaReunion.CustomFormat = "\"dd/MM/yyyy\"";
             this.dtpFechaReunion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaReunion.Location = new System.Drawing.Point(387, 91);
-            this.dtpFechaReunion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaReunion.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaReunion.Name = "dtpFechaReunion";
             this.dtpFechaReunion.Size = new System.Drawing.Size(271, 31);
             this.dtpFechaReunion.TabIndex = 10;
@@ -123,7 +108,7 @@ namespace InterfazDATMA
             this.txtLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtLink.ForeColor = System.Drawing.Color.White;
             this.txtLink.Location = new System.Drawing.Point(387, 304);
-            this.txtLink.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLink.Margin = new System.Windows.Forms.Padding(4);
             this.txtLink.Name = "txtLink";
             this.txtLink.Size = new System.Drawing.Size(452, 36);
             this.txtLink.TabIndex = 14;
@@ -133,7 +118,7 @@ namespace InterfazDATMA
             // dtpInicio
             // 
             this.dtpInicio.Location = new System.Drawing.Point(387, 164);
-            this.dtpInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(215, 31);
             this.dtpInicio.TabIndex = 15;
@@ -141,10 +126,26 @@ namespace InterfazDATMA
             // dtpFin
             // 
             this.dtpFin.Location = new System.Drawing.Point(387, 238);
-            this.dtpFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFin.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(215, 31);
             this.dtpFin.TabIndex = 16;
+            // 
+            // btnGuardarReunion
+            // 
+            this.btnGuardarReunion.AutoSize = true;
+            this.btnGuardarReunion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardarReunion.Depth = 0;
+            this.btnGuardarReunion.Location = new System.Drawing.Point(316, 447);
+            this.btnGuardarReunion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnGuardarReunion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardarReunion.Name = "btnGuardarReunion";
+            this.btnGuardarReunion.Primary = false;
+            this.btnGuardarReunion.Size = new System.Drawing.Size(142, 36);
+            this.btnGuardarReunion.TabIndex = 17;
+            this.btnGuardarReunion.Text = "GUARDAR";
+            this.btnGuardarReunion.UseVisualStyleBackColor = true;
+            this.btnGuardarReunion.Click += new System.EventHandler(this.btnGuardarReunion_Click);
             // 
             // frmAgregarReunionPsicologo
             // 
@@ -153,6 +154,7 @@ namespace InterfazDATMA
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(960, 541);
             this.ControlBox = false;
+            this.Controls.Add(this.btnGuardarReunion);
             this.Controls.Add(this.dtpFin);
             this.Controls.Add(this.dtpInicio);
             this.Controls.Add(this.txtLink);
@@ -161,8 +163,7 @@ namespace InterfazDATMA
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnGuardarReunion);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAgregarReunionPsicologo";
             this.Sizable = false;
             this.Text = "frmAgregarReunionPsicologo";
@@ -172,8 +173,6 @@ namespace InterfazDATMA
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnGuardarReunion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -182,5 +181,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.RichTextBox txtLink;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.DateTimePicker dtpFin;
+        private MaterialSkin.Controls.MaterialFlatButton btnGuardarReunion;
     }
 }

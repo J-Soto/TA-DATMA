@@ -34,25 +34,7 @@ namespace InterfazDATMA
 
         public int IdCurso { get => idCurso; set => idCurso = value; }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            var idCursoTema = daoCurso.insertarCursoTema(idCurso, temasList[dgvTemas.CurrentCell.RowIndex].id,
-                dateCursoFechaInicio.Value, dateCursoFechaFin.Value);
-            var curso = new SemanaWS.curso
-            {
-                idCurso = idCurso
-            };
-            var semana = new SemanaWS.semana()
-            { 
-                nombre = txtSemanaNombre.Text,
-                descripcion = txtSemanaDescrip.Text,
-                fechaInicio = dateSemanaFechaInicio.Value,
-                fechaInicioSpecified = true,
-                curso = curso
-            };
-            daoSemana.insertarSemana(semana, idCursoTema);
-            DialogResult = DialogResult.OK;
-        }
+  
 
         private void frmInsertarSemana_VisibleChanged(object sender, EventArgs e)
         {
@@ -65,9 +47,30 @@ namespace InterfazDATMA
             }
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            var idCursoTema = daoCurso.insertarCursoTema(idCurso, temasList[dgvTemas.CurrentCell.RowIndex].id,
+                dateCursoFechaInicio.Value, dateCursoFechaFin.Value);
+            var curso = new SemanaWS.curso
+            {
+                idCurso = idCurso
+            };
+            var semana = new SemanaWS.semana()
+            {
+                nombre = txtSemanaNombre.Text,
+                descripcion = txtSemanaDescrip.Text,
+                fechaInicio = dateSemanaFechaInicio.Value,
+                fechaInicioSpecified = true,
+                curso = curso
+            };
+            daoSemana.insertarSemana(semana, idCursoTema);
+            DialogResult = DialogResult.OK;
+
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

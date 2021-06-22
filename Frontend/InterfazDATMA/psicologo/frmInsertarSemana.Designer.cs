@@ -45,14 +45,14 @@ namespace InterfazDATMA
             this.dateCursoFechaFin = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTemas)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSemanaNombre
             // 
-            this.txtSemanaNombre.Location = new System.Drawing.Point(180, 108);
+            this.txtSemanaNombre.Location = new System.Drawing.Point(194, 202);
             this.txtSemanaNombre.Margin = new System.Windows.Forms.Padding(6);
             this.txtSemanaNombre.Name = "txtSemanaNombre";
             this.txtSemanaNombre.Size = new System.Drawing.Size(396, 31);
@@ -60,7 +60,7 @@ namespace InterfazDATMA
             // 
             // txtSemanaDescrip
             // 
-            this.txtSemanaDescrip.Location = new System.Drawing.Point(180, 177);
+            this.txtSemanaDescrip.Location = new System.Drawing.Point(194, 271);
             this.txtSemanaDescrip.Margin = new System.Windows.Forms.Padding(6);
             this.txtSemanaDescrip.Name = "txtSemanaDescrip";
             this.txtSemanaDescrip.Size = new System.Drawing.Size(552, 31);
@@ -68,7 +68,7 @@ namespace InterfazDATMA
             // 
             // dateSemanaFechaInicio
             // 
-            this.dateSemanaFechaInicio.Location = new System.Drawing.Point(180, 244);
+            this.dateSemanaFechaInicio.Location = new System.Drawing.Point(194, 338);
             this.dateSemanaFechaInicio.Margin = new System.Windows.Forms.Padding(6);
             this.dateSemanaFechaInicio.Name = "dateSemanaFechaInicio";
             this.dateSemanaFechaInicio.Size = new System.Drawing.Size(396, 31);
@@ -78,7 +78,7 @@ namespace InterfazDATMA
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 25);
+            this.label1.Location = new System.Drawing.Point(40, 119);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 37);
@@ -88,7 +88,7 @@ namespace InterfazDATMA
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 113);
+            this.label2.Location = new System.Drawing.Point(42, 207);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
@@ -98,7 +98,7 @@ namespace InterfazDATMA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 183);
+            this.label3.Location = new System.Drawing.Point(42, 277);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 25);
@@ -108,7 +108,7 @@ namespace InterfazDATMA
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 256);
+            this.label4.Location = new System.Drawing.Point(42, 350);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 25);
@@ -125,7 +125,7 @@ namespace InterfazDATMA
             this.dgvTemas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
             this.Descripcion});
-            this.dgvTemas.Location = new System.Drawing.Point(832, 108);
+            this.dgvTemas.Location = new System.Drawing.Point(846, 202);
             this.dgvTemas.Margin = new System.Windows.Forms.Padding(6);
             this.dgvTemas.Name = "dgvTemas";
             this.dgvTemas.ReadOnly = true;
@@ -156,7 +156,7 @@ namespace InterfazDATMA
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(824, 25);
+            this.label5.Location = new System.Drawing.Point(838, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 37);
@@ -167,7 +167,7 @@ namespace InterfazDATMA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 346);
+            this.label6.Location = new System.Drawing.Point(40, 440);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 37);
@@ -176,7 +176,7 @@ namespace InterfazDATMA
             // 
             // dateCursoFechaInicio
             // 
-            this.dateCursoFechaInicio.Location = new System.Drawing.Point(180, 427);
+            this.dateCursoFechaInicio.Location = new System.Drawing.Point(194, 521);
             this.dateCursoFechaInicio.Margin = new System.Windows.Forms.Padding(6);
             this.dateCursoFechaInicio.Name = "dateCursoFechaInicio";
             this.dateCursoFechaInicio.Size = new System.Drawing.Size(396, 31);
@@ -184,7 +184,7 @@ namespace InterfazDATMA
             // 
             // dateCursoFechaFin
             // 
-            this.dateCursoFechaFin.Location = new System.Drawing.Point(180, 502);
+            this.dateCursoFechaFin.Location = new System.Drawing.Point(194, 596);
             this.dateCursoFechaFin.Margin = new System.Windows.Forms.Padding(6);
             this.dateCursoFechaFin.Name = "dateCursoFechaFin";
             this.dateCursoFechaFin.Size = new System.Drawing.Size(396, 31);
@@ -193,7 +193,7 @@ namespace InterfazDATMA
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 438);
+            this.label7.Location = new System.Drawing.Point(48, 532);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 25);
@@ -203,7 +203,7 @@ namespace InterfazDATMA
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(34, 513);
+            this.label8.Location = new System.Drawing.Point(48, 607);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 25);
@@ -212,22 +212,32 @@ namespace InterfazDATMA
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(40, 592);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnGuardar.AutoSize = true;
+            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardar.Depth = 0;
+            this.btnGuardar.Location = new System.Drawing.Point(47, 697);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(150, 44);
-            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Primary = false;
+            this.btnGuardar.Size = new System.Drawing.Size(142, 36);
+            this.btnGuardar.TabIndex = 16;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(276, 592);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Location = new System.Drawing.Point(441, 697);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 44);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(156, 36);
+            this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -236,7 +246,7 @@ namespace InterfazDATMA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 669);
+            this.ClientSize = new System.Drawing.Size(1837, 882);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -281,9 +291,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.DateTimePicker dateCursoFechaFin;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.Button btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
     }
 }

@@ -35,7 +35,7 @@ namespace InterfazDATMA
             this.label2 = new System.Windows.Forms.Label();
             this.txtlinkArchivo = new System.Windows.Forms.TextBox();
             this.btnLinkArchivo = new System.Windows.Forms.Button();
-            this.btnGuardarArchivo = new System.Windows.Forms.Button();
+            this.btnGuardarArchivo = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // label1
@@ -72,12 +72,13 @@ namespace InterfazDATMA
             // 
             // btnGuardarArchivo
             // 
-            this.btnGuardarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnGuardarArchivo.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnGuardarArchivo, "btnGuardarArchivo");
-            this.btnGuardarArchivo.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarArchivo.Depth = 0;
+            this.btnGuardarArchivo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardarArchivo.Name = "btnGuardarArchivo";
-            this.btnGuardarArchivo.UseVisualStyleBackColor = false;
+            this.btnGuardarArchivo.Primary = false;
+            this.btnGuardarArchivo.UseVisualStyleBackColor = true;
+            this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
             // 
             // frmAgregarMaterialPsicologo
             // 
@@ -105,7 +106,7 @@ namespace InterfazDATMA
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtlinkArchivo;
-        private System.Windows.Forms.Button btnGuardarArchivo;
         internal System.Windows.Forms.Button btnLinkArchivo;
+        private MaterialSkin.Controls.MaterialFlatButton btnGuardarArchivo;
     }
 }

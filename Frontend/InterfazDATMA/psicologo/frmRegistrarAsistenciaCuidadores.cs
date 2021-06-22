@@ -34,9 +34,14 @@ namespace InterfazDATMA
 
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void btnGuardarAsistencia_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void brnRegresar_Click(object sender, EventArgs e)

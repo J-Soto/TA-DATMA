@@ -40,7 +40,7 @@ namespace InterfazDATMA
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRegresarCurso = new System.Windows.Forms.Button();
+            this.btnRegresarCurso = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,19 +141,19 @@ namespace InterfazDATMA
             // 
             // btnRegresarCurso
             // 
-            this.btnRegresarCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnRegresarCurso.FlatAppearance.BorderSize = 0;
-            this.btnRegresarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnRegresarCurso.Location = new System.Drawing.Point(1175, 914);
-            this.btnRegresarCurso.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegresarCurso.AutoSize = true;
+            this.btnRegresarCurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegresarCurso.Depth = 0;
+            this.btnRegresarCurso.Location = new System.Drawing.Point(1156, 945);
+            this.btnRegresarCurso.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegresarCurso.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegresarCurso.Name = "btnRegresarCurso";
-            this.btnRegresarCurso.Size = new System.Drawing.Size(275, 50);
-            this.btnRegresarCurso.TabIndex = 11;
+            this.btnRegresarCurso.Primary = false;
+            this.btnRegresarCurso.Size = new System.Drawing.Size(152, 36);
+            this.btnRegresarCurso.TabIndex = 12;
             this.btnRegresarCurso.Text = "Regresar";
-            this.btnRegresarCurso.UseVisualStyleBackColor = false;
-            this.btnRegresarCurso.Click += new System.EventHandler(this.btnRegresarCurso_Click);
+            this.btnRegresarCurso.UseVisualStyleBackColor = true;
+            this.btnRegresarCurso.Click += new System.EventHandler(this.btnRegresarCurso_Click_1);
             // 
             // frmListaCuidadoresDePsicologo
             // 
@@ -184,6 +184,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnRegresarCurso;
+        private MaterialSkin.Controls.MaterialFlatButton btnRegresarCurso;
     }
 }

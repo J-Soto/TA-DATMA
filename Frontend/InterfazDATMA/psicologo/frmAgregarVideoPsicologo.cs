@@ -27,5 +27,10 @@ namespace InterfazDATMA
         {
 
         }
+
+        private void btnGuardarArchivo_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

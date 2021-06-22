@@ -29,17 +29,17 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnGuardarAsistencia = new System.Windows.Forms.Button();
-            this.brnRegresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnGuardarAsistencia = new MaterialSkin.Controls.MaterialFlatButton();
+            this.brnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +48,14 @@ namespace InterfazDATMA
             this.dgvReuniones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvReuniones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReuniones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReuniones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReuniones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReuniones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -63,24 +63,24 @@ namespace InterfazDATMA
             this.Asistencia});
             this.dgvReuniones.EnableHeadersVisualStyles = false;
             this.dgvReuniones.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvReuniones.Location = new System.Drawing.Point(127, 220);
+            this.dgvReuniones.Location = new System.Drawing.Point(154, 251);
             this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReuniones.Name = "dgvReuniones";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvReuniones.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvReuniones.RowTemplate.Height = 28;
             this.dgvReuniones.Size = new System.Drawing.Size(1277, 746);
             this.dgvReuniones.TabIndex = 22;
@@ -106,43 +106,12 @@ namespace InterfazDATMA
             this.Asistencia.Name = "Asistencia";
             this.Asistencia.Width = 90;
             // 
-            // btnGuardarAsistencia
-            // 
-            this.btnGuardarAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnGuardarAsistencia.FlatAppearance.BorderSize = 0;
-            this.btnGuardarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGuardarAsistencia.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarAsistencia.Location = new System.Drawing.Point(488, 996);
-            this.btnGuardarAsistencia.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardarAsistencia.Name = "btnGuardarAsistencia";
-            this.btnGuardarAsistencia.Size = new System.Drawing.Size(460, 56);
-            this.btnGuardarAsistencia.TabIndex = 23;
-            this.btnGuardarAsistencia.Text = "Guardar Asistencia";
-            this.btnGuardarAsistencia.UseVisualStyleBackColor = false;
-            // 
-            // brnRegresar
-            // 
-            this.brnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.brnRegresar.FlatAppearance.BorderSize = 0;
-            this.brnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.brnRegresar.ForeColor = System.Drawing.Color.White;
-            this.brnRegresar.Location = new System.Drawing.Point(1115, 1059);
-            this.brnRegresar.Margin = new System.Windows.Forms.Padding(4);
-            this.brnRegresar.Name = "brnRegresar";
-            this.brnRegresar.Size = new System.Drawing.Size(289, 50);
-            this.brnRegresar.TabIndex = 24;
-            this.brnRegresar.Text = "Regresar";
-            this.brnRegresar.UseVisualStyleBackColor = false;
-            this.brnRegresar.Click += new System.EventHandler(this.brnRegresar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(180, 48);
+            this.label1.Location = new System.Drawing.Point(207, 79);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(640, 63);
@@ -151,18 +120,51 @@ namespace InterfazDATMA
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(1057, 145);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.AutoSize = true;
+            this.btnLimpiar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLimpiar.Depth = 0;
+            this.btnLimpiar.Location = new System.Drawing.Point(1095, 164);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLimpiar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(347, 50);
-            this.btnLimpiar.TabIndex = 26;
+            this.btnLimpiar.Primary = false;
+            this.btnLimpiar.Size = new System.Drawing.Size(278, 36);
+            this.btnLimpiar.TabIndex = 27;
             this.btnLimpiar.Text = "Densmarcar Todo";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnGuardarAsistencia
+            // 
+            this.btnGuardarAsistencia.AutoSize = true;
+            this.btnGuardarAsistencia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardarAsistencia.Depth = 0;
+            this.btnGuardarAsistencia.Location = new System.Drawing.Point(522, 1052);
+            this.btnGuardarAsistencia.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnGuardarAsistencia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardarAsistencia.Name = "btnGuardarAsistencia";
+            this.btnGuardarAsistencia.Primary = false;
+            this.btnGuardarAsistencia.Size = new System.Drawing.Size(303, 36);
+            this.btnGuardarAsistencia.TabIndex = 28;
+            this.btnGuardarAsistencia.Text = "Guardar Asistencia";
+            this.btnGuardarAsistencia.UseVisualStyleBackColor = true;
+            this.btnGuardarAsistencia.Click += new System.EventHandler(this.btnGuardarAsistencia_Click);
+            // 
+            // brnRegresar
+            // 
+            this.brnRegresar.AutoSize = true;
+            this.brnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.brnRegresar.Depth = 0;
+            this.brnRegresar.Location = new System.Drawing.Point(1095, 1052);
+            this.brnRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.brnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.brnRegresar.Name = "brnRegresar";
+            this.brnRegresar.Primary = false;
+            this.brnRegresar.Size = new System.Drawing.Size(152, 36);
+            this.brnRegresar.TabIndex = 29;
+            this.brnRegresar.Text = "Regresar";
+            this.brnRegresar.UseVisualStyleBackColor = true;
+            this.brnRegresar.Click += new System.EventHandler(this.brnRegresar_Click);
             // 
             // frmRegistrarAsistenciaCuidadores
             // 
@@ -171,10 +173,10 @@ namespace InterfazDATMA
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.ControlBox = false;
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.brnRegresar);
             this.Controls.Add(this.btnGuardarAsistencia);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvReuniones);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarAsistenciaCuidadores";
@@ -189,12 +191,12 @@ namespace InterfazDATMA
 
         #endregion
         private System.Windows.Forms.DataGridView dgvReuniones;
-        private System.Windows.Forms.Button btnGuardarAsistencia;
-        private System.Windows.Forms.Button brnRegresar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Asistencia;
+        private MaterialSkin.Controls.MaterialFlatButton btnLimpiar;
+        private MaterialSkin.Controls.MaterialFlatButton btnGuardarAsistencia;
+        private MaterialSkin.Controls.MaterialFlatButton brnRegresar;
     }
 }

@@ -59,38 +59,21 @@ namespace InterfazDATMA
             
         }
 
-        private void btnAgregarMaterial_Click(object sender, EventArgs e)
+        private void dgvReuniones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmAgregarMaterialPsicologo formAgregarMaterialPsicologo = new frmAgregarMaterialPsicologo();
-            formAgregarMaterialPsicologo.ShowDialog();
-        }
 
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            formPlantillaGestion.abrirFormulario(formConfigurarModuloPsicologo);
-        }
-
-        private void btnAgregarReunion_Click(object sender, EventArgs e)
-        {
-            frmAgregarReunionPsicologo formAgregarReunionPsicologo = new frmAgregarReunionPsicologo();
-            formAgregarReunionPsicologo.ShowDialog();
-
-        }
-
-        private void btnAsitencia_Click(object sender, EventArgs e)
-        {
-            formPlantillaGestion.abrirFormulario(new frmRegistrarAsistenciaCuidadores(this, formPlantillaGestion));
         }
 
         private void btnEditarDescrip_Click(object sender, EventArgs e)
         {
             rtxtTema.ReadOnly = false;
             rtxtDescripcion.ReadOnly = false;
+
+        }
+
+        private void frmModificarPrograma_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -104,11 +87,37 @@ namespace InterfazDATMA
             rtxtTema.ReadOnly = true;
 
             formConfigurarModuloPsicologo.refrescarDataGridView(currentSemana);
+
         }
 
-        private void dgvReuniones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAsitencia_Click(object sender, EventArgs e)
+        {
+            formPlantillaGestion.abrirFormulario(new frmRegistrarAsistenciaCuidadores(this, formPlantillaGestion));
+
+
+        }
+
+        private void btnAgregarReunion_Click(object sender, EventArgs e)
+        {
+            frmAgregarReunionPsicologo formAgregarReunionPsicologo = new frmAgregarReunionPsicologo();
+            formAgregarReunionPsicologo.ShowDialog();
+
+        }
+
+        private void btnEliminarReunion_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bntConfigurarTiempo_Click(object sender, EventArgs e)
+        {
+            rtxtDescripcion.Enabled = true;
+            rtxtTema.Enabled = true;
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formPlantillaGestion.abrirFormulario(formConfigurarModuloPsicologo);
         }
     }
 }

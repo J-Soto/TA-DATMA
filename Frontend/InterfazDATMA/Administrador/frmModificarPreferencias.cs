@@ -65,11 +65,11 @@ namespace InterfazDATMA.Administrador
                 {
                     if (chblDispositivos.GetItemChecked(x))
                     {
-                        tutor.dispositivos = tutor.dispositivos + 1*(int)Math.Pow(10, x);
+                        tutor.dispositivos = tutor.dispositivos + 1 * (int)Math.Pow(10, x);
                     }
                     else
                     {
-                        tutor.dispositivos = tutor.dispositivos + 2*(int)Math.Pow(10, x);
+                        tutor.dispositivos = tutor.dispositivos + 2 * (int)Math.Pow(10, x);
                     }
                 }
             }
@@ -92,6 +92,7 @@ namespace InterfazDATMA.Administrador
                 var mensaje = "Error message: " + ex.Message;
                 MessageBox.Show("No se pudo modificar el Tutor", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
         }
     }
 }

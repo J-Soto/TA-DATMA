@@ -51,17 +51,22 @@ namespace InterfazDATMA
 
         private void btnRegresarCurso_Click(object sender, EventArgs e)
         {
-            formPlantillaGestion.abrirFormulario(formConfigurarModulo);
+           
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void dgvModulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnRegresarCurso_Click_1(object sender, EventArgs e)
+        {
+            formPlantillaGestion.abrirFormulario(formConfigurarModulo);
         }
     }
 }

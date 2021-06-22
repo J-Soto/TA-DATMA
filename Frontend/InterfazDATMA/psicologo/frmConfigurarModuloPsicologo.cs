@@ -80,9 +80,21 @@ namespace InterfazDATMA
             return arr;
         }
 
-        private void btnListaCursos_Click(object sender, EventArgs e)
+        
+
+        public void refrescarDataGridView(SemanaWS.semana auxSemana)
         {
-            formPlantilla.abrirFormulario(formGestionarModulos);
+
+            foreach (var recSemana in pares)
+            {
+                if (recSemana.Semana.id == auxSemana.id)
+                {
+                    recSemana.Semana.nombre = auxSemana.nombre;
+                    recSemana.Semana.descripcion = auxSemana.descripcion;
+                }
+            }
+
+            dgvPrograma.Refresh();
         }
 
         private void btnListaCuidadores_Click(object sender, EventArgs e)
@@ -114,20 +126,9 @@ namespace InterfazDATMA
             formPlantilla.abrirFormulario(new frmModificarPrograma(this, formPlantilla, grupo, auxSemana, curso, auxSemTema.Tema.nombre));
         }
 
-
-        public void refrescarDataGridView(SemanaWS.semana auxSemana)
+        private void btnListaCursos_Click(object sender, EventArgs e)
         {
-
-            foreach (var recSemana in pares)
-            {
-                if (recSemana.Semana.id == auxSemana.id)
-                {
-                    recSemana.Semana.nombre = auxSemana.nombre;
-                    recSemana.Semana.descripcion = auxSemana.descripcion;
-                }
-            }
-
-            dgvPrograma.Refresh();
+            formPlantilla.abrirFormulario(formGestionarModulos);
         }
     }
 

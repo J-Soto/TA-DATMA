@@ -70,22 +70,6 @@ namespace InterfazDATMA.Administrador
             dgvGrupos.DataSource = auxGrupos;
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            formPlantillaGest.abrirFormulario(formInsertarCurso);
-        }
-
-        private void btnAgregarGrupo_Click(object sender, EventArgs e)
-        {
-            //Inicializar un CONTENEDOR
-            Grupo_Curso grupo = new Grupo_Curso();
-            //grupo.idGrupo = contGruposNew++;
-            //grupo.maxCantCuidadores = 0;
-
-            frmCrearGrupo formCrearGrupo = new frmCrearGrupo(this, formPlantillaGest, grupo);
-            formPlantillaGest.abrirFormulario(formCrearGrupo);
-        }
-
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             GrupoWS.grupo auxGrupo = dgvGrupos.Rows[e.RowIndex].DataBoundItem as GrupoWS.grupo;
@@ -93,10 +77,24 @@ namespace InterfazDATMA.Administrador
             dgvGrupos.Rows[e.RowIndex].Cells["MaxTutores"].Value = auxGrupo.maxCantCuidadores;
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+
+        public void actualizarDGV(Grupo_Curso grupo)
         {
-            
-            if(dgvGrupos.RowCount != 0)
+            if (grupo.Grupo.maxCantCuidadores != 0)
+            {
+                grupo.Grupo.idGrupo = contGrupos++;
+
+                gruposCurso.Add(grupo);
+                //Muestro los grupos en el DGV:
+                auxGrupos.Add(grupo.Grupo);
+                dgvGrupos.DataSource = auxGrupos;
+            }
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+
+            if (dgvGrupos.RowCount != 0)
             {
                 GrupoWS.grupo auxGrupo = dgvGrupos.CurrentRow.DataBoundItem as GrupoWS.grupo;
                 Grupo_Curso contenedorGrupo = new Grupo_Curso();
@@ -112,21 +110,30 @@ namespace InterfazDATMA.Administrador
                 frmModificarGrupoCurso formModificarGrupo = new frmModificarGrupoCurso(this, formPlantillaGest, contenedorGrupo);
                 formPlantillaGest.abrirFormulario(formModificarGrupo);
             }
-        }
-        
 
-        public void actualizarDGV(Grupo_Curso grupo)
+        }
+
+        private void btnAgregarGrupo_Click_1(object sender, EventArgs e)
         {
-            if (grupo.Grupo.maxCantCuidadores != 0)
-            {
-                grupo.Grupo.idGrupo = contGrupos++;
+            //Inicializar un CONTENEDOR
+            Grupo_Curso grupo = new Grupo_Curso();
+            //grupo.idGrupo = contGruposNew++;
+            //grupo.maxCantCuidadores = 0;
 
-                gruposCurso.Add(grupo);
-                //Muestro los grupos en el DGV:
-                auxGrupos.Add(grupo.Grupo);
-                dgvGrupos.DataSource = auxGrupos;
-            }
+            frmCrearGrupo formCrearGrupo = new frmCrearGrupo(this, formPlantillaGest, grupo);
+            formPlantillaGest.abrirFormulario(formCrearGrupo);
+
         }
 
+        private void btnQuitarGrupo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+            formPlantillaGest.abrirFormulario(formInsertarCurso);
+
+        }
     }
 }
