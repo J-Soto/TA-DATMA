@@ -141,5 +141,15 @@ namespace InterfazDATMA.Administrador
         {
 
         }
+
+        private void frmGestionarModuloAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPsicologosUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
