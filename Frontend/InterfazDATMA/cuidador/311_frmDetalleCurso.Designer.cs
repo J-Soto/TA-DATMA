@@ -130,7 +130,7 @@ namespace InterfazDATMA
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(636, 275);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(182, 46);
             this.btnNext.TabIndex = 24;
@@ -145,7 +145,7 @@ namespace InterfazDATMA
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
             this.btnRegresar.Location = new System.Drawing.Point(262, 56);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(150, 46);
             this.btnRegresar.TabIndex = 25;
@@ -161,7 +161,7 @@ namespace InterfazDATMA
             this.btnAnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAnt.ForeColor = System.Drawing.Color.White;
             this.btnAnt.Location = new System.Drawing.Point(230, 275);
-            this.btnAnt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnt.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnt.Name = "btnAnt";
             this.btnAnt.Size = new System.Drawing.Size(182, 46);
             this.btnAnt.TabIndex = 26;
@@ -173,9 +173,9 @@ namespace InterfazDATMA
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblInfoSemana);
             this.groupBox1.Location = new System.Drawing.Point(90, 415);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(808, 392);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
@@ -186,6 +186,7 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAnt);
             this.Controls.Add(this.btnRegresar);
@@ -195,7 +196,7 @@ namespace InterfazDATMA
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNombreModulo);
             this.Controls.Add(this.lblNumeroModulo);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDetalleCurso";
             this.Text = "Detalle del Curso";
             this.groupBox1.ResumeLayout(false);

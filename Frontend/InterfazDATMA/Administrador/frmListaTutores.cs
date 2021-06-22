@@ -11,12 +11,17 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmListaTutores : MaterialForm
+    public partial class frmListaTutores : MaterialSkin.Controls.MaterialForm 
     {
         private TutorWS.TutorWSClient daoTutor;
         public frmListaTutores()
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             daoTutor = new TutorWS.TutorWSClient();
             dgvTutor.AutoGenerateColumns = false;
 

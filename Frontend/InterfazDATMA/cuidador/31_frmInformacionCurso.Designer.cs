@@ -108,7 +108,7 @@ namespace InterfazDATMA
             this.dgvInfCurso.EnableHeadersVisualStyles = false;
             this.dgvInfCurso.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvInfCurso.Location = new System.Drawing.Point(240, 556);
-            this.dgvInfCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvInfCurso.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInfCurso.Name = "dgvInfCurso";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -175,7 +175,7 @@ namespace InterfazDATMA
             // txtBoxFechaIni
             // 
             this.txtBoxFechaIni.Location = new System.Drawing.Point(432, 258);
-            this.txtBoxFechaIni.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBoxFechaIni.Margin = new System.Windows.Forms.Padding(6);
             this.txtBoxFechaIni.Name = "txtBoxFechaIni";
             this.txtBoxFechaIni.Size = new System.Drawing.Size(196, 31);
             this.txtBoxFechaIni.TabIndex = 6;
@@ -183,7 +183,7 @@ namespace InterfazDATMA
             // txtBoxFechaFin
             // 
             this.txtBoxFechaFin.Location = new System.Drawing.Point(432, 323);
-            this.txtBoxFechaFin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBoxFechaFin.Margin = new System.Windows.Forms.Padding(6);
             this.txtBoxFechaFin.Name = "txtBoxFechaFin";
             this.txtBoxFechaFin.Size = new System.Drawing.Size(196, 31);
             this.txtBoxFechaFin.TabIndex = 7;
@@ -269,7 +269,7 @@ namespace InterfazDATMA
             // 
             this.pictBoxEncargada.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
             this.pictBoxEncargada.Location = new System.Drawing.Point(888, 273);
-            this.pictBoxEncargada.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictBoxEncargada.Margin = new System.Windows.Forms.Padding(6);
             this.pictBoxEncargada.Name = "pictBoxEncargada";
             this.pictBoxEncargada.Size = new System.Drawing.Size(156, 115);
             this.pictBoxEncargada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,7 +284,7 @@ namespace InterfazDATMA
             this.btnVerMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnVerMas.ForeColor = System.Drawing.Color.White;
             this.btnVerMas.Location = new System.Drawing.Point(330, 69);
-            this.btnVerMas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerMas.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerMas.Name = "btnVerMas";
             this.btnVerMas.Size = new System.Drawing.Size(182, 46);
             this.btnVerMas.TabIndex = 20;
@@ -300,7 +300,7 @@ namespace InterfazDATMA
             this.btnAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAnterior.ForeColor = System.Drawing.Color.White;
             this.btnAnterior.Location = new System.Drawing.Point(240, 473);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(182, 46);
             this.btnAnterior.TabIndex = 21;
@@ -315,7 +315,7 @@ namespace InterfazDATMA
             this.btnSig.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnSig.ForeColor = System.Drawing.Color.White;
             this.btnSig.Location = new System.Drawing.Point(624, 471);
-            this.btnSig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSig.Margin = new System.Windows.Forms.Padding(4);
             this.btnSig.Name = "btnSig";
             this.btnSig.Size = new System.Drawing.Size(182, 46);
             this.btnSig.TabIndex = 22;
@@ -328,6 +328,7 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSig);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnVerMas);
@@ -346,7 +347,7 @@ namespace InterfazDATMA
             this.Controls.Add(this.lblNumeroModulo);
             this.Controls.Add(this.lblTituloGeneral);
             this.Controls.Add(this.lblNombreModulo);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmInformacionCurso";
             this.Text = "Informacion del Curso";
             this.Load += new System.EventHandler(this.frmInformacionCurso_Load);

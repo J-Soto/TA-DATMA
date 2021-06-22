@@ -14,12 +14,12 @@ using InterfazDATMA.psicologo;
 
 namespace InterfazDATMA.plantilla
 {
-    public partial class frmPlantillaGestion : MaterialForm
+    public partial class frmPlantillaGestion : MaterialSkin.Controls.MaterialForm 
     {
-        private Form formularioActivo = null;
-        private Form formLogout;
-        private Form formInicial;
-        private Form formPerfil;
+        private MaterialForm  formularioActivo = null;
+        private MaterialForm  formLogout;
+        private MaterialForm  formInicial;
+        private MaterialForm  formPerfil;
         public static UsuarioWS.usuario user = null;
         public static PsicologoWS.psicologo psico = null;
         public static TutorWS.tutor tutor = null;
@@ -27,6 +27,11 @@ namespace InterfazDATMA.plantilla
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             frmPlantillaGestion.user = user;
             int tipoUser = user.tipo;
             //Psicologo
@@ -52,7 +57,7 @@ namespace InterfazDATMA.plantilla
             }
         }
 
-        public void abrirFormulario(Form formularioAbrir)
+        public void abrirFormulario(MaterialForm  formularioAbrir)
         {
             if (formularioActivo != null) formularioActivo.Hide();
             formularioActivo = formularioAbrir;

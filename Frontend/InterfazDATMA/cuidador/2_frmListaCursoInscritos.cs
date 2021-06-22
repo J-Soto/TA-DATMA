@@ -9,10 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MaterialSkin.Controls;
 namespace InterfazDATMA
 {
-    public partial class frmListaCursoInscritos : Form
+    public partial class frmListaCursoInscritos : MaterialSkin.Controls.MaterialForm
     {
         private frmWalkthrough formAnterior;
         private frmPerfilCuidador formAnterior2;
@@ -21,6 +21,11 @@ namespace InterfazDATMA
         public frmListaCursoInscritos(frmWalkthrough formAnterior,frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             this.plantillaGestion = plantillaGestion;
             this.formAnterior = formAnterior;
         }

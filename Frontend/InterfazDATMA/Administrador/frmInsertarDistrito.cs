@@ -12,13 +12,18 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmInsertarDistrito : MaterialForm
+    public partial class frmInsertarDistrito : MaterialSkin.Controls.MaterialForm 
     {
         private DistritoWS.DistritoWSClient daoDistrito;
         public DistritoWS.distrito distrito;
         public frmInsertarDistrito()
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             daoDistrito = new DistritoWS.DistritoWSClient();
 
             dgvDistrito.AutoGenerateColumns = false;

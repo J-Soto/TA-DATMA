@@ -61,7 +61,7 @@ namespace InterfazDATMA
             this.pnlContenido.Controls.Add(this.label1);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1744, 1125);
             this.pnlContenido.TabIndex = 10;
@@ -74,7 +74,7 @@ namespace InterfazDATMA
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
             this.btnRegresar.Location = new System.Drawing.Point(1316, 927);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(274, 50);
             this.btnRegresar.TabIndex = 33;
@@ -120,7 +120,7 @@ namespace InterfazDATMA
             this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.richTextBox2.ForeColor = System.Drawing.Color.White;
             this.richTextBox2.Location = new System.Drawing.Point(48, 446);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(1540, 181);
@@ -178,7 +178,7 @@ namespace InterfazDATMA
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(46, 108);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(1540, 181);
@@ -203,8 +203,9 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(135)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlContenido);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDetalleCursoInscritoMaterial";
             this.Text = "DATMA";
             this.pnlContenido.ResumeLayout(false);

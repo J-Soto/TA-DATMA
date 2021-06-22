@@ -12,13 +12,18 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmDetalleCursoInscritoMaterial : MaterialForm
+    public partial class frmDetalleCursoInscritoMaterial : MaterialSkin.Controls.MaterialForm 
     {
         public frmDetalleCursoInscrito formAnterior;
         private frmPlantillaGestion plantillaGestion;
         public frmDetalleCursoInscritoMaterial(frmDetalleCursoInscrito formAnterior,frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
         }

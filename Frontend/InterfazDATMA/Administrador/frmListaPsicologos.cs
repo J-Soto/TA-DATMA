@@ -12,13 +12,18 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class Header : MaterialForm
+    public partial class Header : MaterialSkin.Controls.MaterialForm 
     {
         private PsicologoWS.PsicologoWSClient daoPsicologo;
 
         public Header() 
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             dgvPsico.AutoGenerateColumns = false;
             dgvPsico.DataSource = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());

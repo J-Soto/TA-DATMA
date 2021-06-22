@@ -12,13 +12,18 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.psicologo
 {
-    public partial class frmPerfilPsicologo : MaterialForm
+    public partial class frmPerfilPsicologo : MaterialSkin.Controls.MaterialForm 
     {
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private frmPlantillaGestion plantillaGestion;
         public frmPerfilPsicologo(frmPlantillaGestion Plantilla)
         { 
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             plantillaGestion = Plantilla;
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             // obtener psicolog a partir del usuario

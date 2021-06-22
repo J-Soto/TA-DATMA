@@ -171,6 +171,7 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.btnMasInfo);
             this.Controls.Add(this.btnInscribirse);
             this.Controls.Add(this.dgvCursos);

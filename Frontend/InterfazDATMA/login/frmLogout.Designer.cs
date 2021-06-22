@@ -79,11 +79,17 @@ namespace InterfazDATMA.login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(572, 435);
+            this.ControlBox = false;
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblAgradecimiento);
             this.Controls.Add(this.lblNotificacionActiva);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogout";
+            this.Sizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogout";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

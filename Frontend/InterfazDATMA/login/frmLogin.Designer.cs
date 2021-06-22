@@ -28,101 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.btnOlvido = new System.Windows.Forms.Button();
-            this.checkBoxRecordarme = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.checkBoxRecordarme = new MaterialSkin.Controls.MaterialCheckBox();
+            this.btnIngresar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Location = new System.Drawing.Point(99, 169);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(150, 13);
-            this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Text = "Usuario";
-            this.txtUsuario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clickUsuario);
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Location = new System.Drawing.Point(99, 203);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(150, 13);
-            this.txtContraseña.TabIndex = 1;
-            this.txtContraseña.Text = "Contraseña";
-            this.txtContraseña.UseSystemPasswordChar = true;
-            this.txtContraseña.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClickContraseña);
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnIngresar.FlatAppearance.BorderSize = 0;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(132, 272);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(91, 24);
-            this.btnIngresar.TabIndex = 21;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click_1);
-            // 
-            // btnOlvido
-            // 
-            this.btnOlvido.BackColor = System.Drawing.Color.Transparent;
-            this.btnOlvido.FlatAppearance.BorderSize = 0;
-            this.btnOlvido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOlvido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline);
-            this.btnOlvido.ForeColor = System.Drawing.Color.Blue;
-            this.btnOlvido.Location = new System.Drawing.Point(92, 300);
-            this.btnOlvido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnOlvido.Name = "btnOlvido";
-            this.btnOlvido.Size = new System.Drawing.Size(159, 24);
-            this.btnOlvido.TabIndex = 22;
-            this.btnOlvido.Text = "Olvidó su contraseña?";
-            this.btnOlvido.UseVisualStyleBackColor = false;
-            // 
-            // checkBoxRecordarme
-            // 
-            this.checkBoxRecordarme.AutoSize = true;
-            this.checkBoxRecordarme.ForeColor = System.Drawing.Color.White;
-            this.checkBoxRecordarme.Location = new System.Drawing.Point(99, 239);
-            this.checkBoxRecordarme.Name = "checkBoxRecordarme";
-            this.checkBoxRecordarme.Size = new System.Drawing.Size(84, 17);
-            this.checkBoxRecordarme.TabIndex = 23;
-            this.checkBoxRecordarme.Text = "Recordarme";
-            this.checkBoxRecordarme.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::InterfazDATMA.Properties.Resources.DATMA_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(559, 129);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(289, 356);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtUsuario.Depth = 0;
+            this.txtUsuario.Hint = "";
+            this.txtUsuario.Location = new System.Drawing.Point(526, 553);
+            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.SelectionLength = 0;
+            this.txtUsuario.SelectionStart = 0;
+            this.txtUsuario.Size = new System.Drawing.Size(358, 41);
+            this.txtUsuario.TabIndex = 24;
+            this.txtUsuario.TabStop = false;
+            this.txtUsuario.Text = "Usuario";
+            this.txtUsuario.UseSystemPasswordChar = false;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtContraseña.Depth = 0;
+            this.txtContraseña.Hint = "";
+            this.txtContraseña.Location = new System.Drawing.Point(526, 635);
+            this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '\0';
+            this.txtContraseña.SelectedText = "";
+            this.txtContraseña.SelectionLength = 0;
+            this.txtContraseña.SelectionStart = 0;
+            this.txtContraseña.Size = new System.Drawing.Size(358, 41);
+            this.txtContraseña.TabIndex = 25;
+            this.txtContraseña.TabStop = false;
+            this.txtContraseña.Text = "Password";
+            this.txtContraseña.UseSystemPasswordChar = true;
+            // 
+            // checkBoxRecordarme
+            // 
+            this.checkBoxRecordarme.AutoSize = true;
+            this.checkBoxRecordarme.Depth = 0;
+            this.checkBoxRecordarme.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkBoxRecordarme.Location = new System.Drawing.Point(526, 721);
+            this.checkBoxRecordarme.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxRecordarme.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkBoxRecordarme.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkBoxRecordarme.Name = "checkBoxRecordarme";
+            this.checkBoxRecordarme.Ripple = true;
+            this.checkBoxRecordarme.Size = new System.Drawing.Size(185, 30);
+            this.checkBoxRecordarme.TabIndex = 26;
+            this.checkBoxRecordarme.Text = "Recordarme";
+            this.checkBoxRecordarme.UseVisualStyleBackColor = true;
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.AutoSize = true;
+            this.btnIngresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnIngresar.Depth = 0;
+            this.btnIngresar.Location = new System.Drawing.Point(539, 817);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnIngresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Primary = false;
+            this.btnIngresar.Size = new System.Drawing.Size(147, 36);
+            this.btnIngresar.TabIndex = 27;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // materialFlatButton2
+            // 
+            this.materialFlatButton2.AutoSize = true;
+            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton2.BackColor = System.Drawing.Color.Transparent;
+            this.materialFlatButton2.Depth = 0;
+            this.materialFlatButton2.ForeColor = System.Drawing.Color.Blue;
+            this.materialFlatButton2.Location = new System.Drawing.Point(539, 911);
+            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton2.Name = "materialFlatButton2";
+            this.materialFlatButton2.Primary = false;
+            this.materialFlatButton2.Size = new System.Drawing.Size(353, 36);
+            this.materialFlatButton2.TabIndex = 28;
+            this.materialFlatButton2.Text = "Olivdo su contrasena?";
+            this.materialFlatButton2.UseVisualStyleBackColor = false;
+            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AllowDrop = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(353, 332);
-            this.Controls.Add(this.checkBoxRecordarme);
-            this.Controls.Add(this.btnOlvido);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1400, 1050);
+            this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.checkBoxRecordarme);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmLogin";
+            this.Padding = new System.Windows.Forms.Padding(6, 123, 6, 6);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -131,12 +158,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.Button btnOlvido;
-        private System.Windows.Forms.CheckBox checkBoxRecordarme;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
+        private MaterialSkin.Controls.MaterialCheckBox checkBoxRecordarme;
+        private MaterialSkin.Controls.MaterialFlatButton btnIngresar;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
     }
 }

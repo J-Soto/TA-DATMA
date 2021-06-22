@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmDetalleCursoInscrito : MaterialForm
+    public partial class frmDetalleCursoInscrito : MaterialSkin.Controls.MaterialForm 
     {
         public frmListaCursoInscritos formAnterior;
         private frmPlantillaGestion plantillaGestion;

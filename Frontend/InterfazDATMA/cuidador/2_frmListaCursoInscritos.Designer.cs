@@ -67,7 +67,7 @@ namespace InterfazDATMA
             this.pnlContenido.Controls.Add(this.label1);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1744, 1125);
             this.pnlContenido.TabIndex = 10;
@@ -80,7 +80,7 @@ namespace InterfazDATMA
             this.btnCursosDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnCursosDisponibles.ForeColor = System.Drawing.Color.White;
             this.btnCursosDisponibles.Location = new System.Drawing.Point(1384, 927);
-            this.btnCursosDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCursosDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.btnCursosDisponibles.Name = "btnCursosDisponibles";
             this.btnCursosDisponibles.Size = new System.Drawing.Size(234, 77);
             this.btnCursosDisponibles.TabIndex = 36;
@@ -97,7 +97,7 @@ namespace InterfazDATMA
             this.Tipo,
             this.Fecha});
             this.dataGridView1.Location = new System.Drawing.Point(700, 56);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
@@ -130,7 +130,7 @@ namespace InterfazDATMA
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(376, 327);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(194, 63);
             this.button3.TabIndex = 33;
@@ -141,7 +141,7 @@ namespace InterfazDATMA
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(376, 227);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(194, 63);
             this.button2.TabIndex = 32;
@@ -152,7 +152,7 @@ namespace InterfazDATMA
             // btnModulo1
             // 
             this.btnModulo1.Location = new System.Drawing.Point(376, 129);
-            this.btnModulo1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnModulo1.Margin = new System.Windows.Forms.Padding(6);
             this.btnModulo1.Name = "btnModulo1";
             this.btnModulo1.Size = new System.Drawing.Size(194, 63);
             this.btnModulo1.TabIndex = 31;
@@ -247,8 +247,9 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(135)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlContenido);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmListaCursoInscritos";
             this.Text = "DATMA";
             this.Load += new System.EventHandler(this.frmListaCursoInscritos_Load);

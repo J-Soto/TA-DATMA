@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmModificarPsicologo : MaterialForm
+    public partial class frmModificarPsicologo : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
         public frmOperacionesPersona formOperacionPersona;

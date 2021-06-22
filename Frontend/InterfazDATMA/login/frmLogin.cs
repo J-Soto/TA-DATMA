@@ -26,13 +26,15 @@ namespace InterfazDATMA
         public frmLogin()
         {
             InitializeComponent();
-            
-
-           daoUsuario = new UsuarioWS.UsuarioWSClient();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500,MaterialSkin.Primary.BlueGrey700,MaterialSkin.Primary.BlueGrey100,MaterialSkin.Accent.Teal700,MaterialSkin.TextShade.WHITE);
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
         }
 
         private void clickUsuario(object sender, MouseEventArgs e)
-        {
+        {            
             if(txtUsuario.Text=="Usuario")
                 txtUsuario.Text = "";
         }
@@ -79,22 +81,24 @@ namespace InterfazDATMA
             return 2;
         }
 
-        private void btnIngresar_Click_1(object sender, EventArgs e)
+       
+
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
             UsuarioWS.usuario user = daoUsuario.verificarUsuario(txtUsuario.Text, txtContraseña.Text);
-            
+
             if (user is null)
             {
                 MessageBox.Show("Datos incorrectos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             abrirFormulario(new frmPlantillaGestion(user));
             //abrirFormulario(new frmWalkthrough());
             //0->cuidador
             //1->psicologo
             //2->admin
+
         }
     }
 }

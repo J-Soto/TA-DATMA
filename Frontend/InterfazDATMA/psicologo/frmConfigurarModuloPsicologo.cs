@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmConfigurarModuloPsicologo : MaterialForm
+    public partial class frmConfigurarModuloPsicologo : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
         public frmGestionarModulosPsicologo formGestionarModulos;
@@ -23,6 +23,11 @@ namespace InterfazDATMA
         public frmConfigurarModuloPsicologo(frmGestionarModulosPsicologo formGestionarModulos, frmPlantillaGestion formPlantilla, CursoWS.curso curso)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             this.formPlantilla = formPlantilla;
             this.formGestionarModulos = formGestionarModulos;
             this.curso = curso;

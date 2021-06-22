@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmInsertarCurso : MaterialForm
+    public partial class frmInsertarCurso : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantillaGest;
         private frmOperacionesCursos formOperacionesCursos;
@@ -44,6 +44,11 @@ namespace InterfazDATMA.Administrador
             daoSemana = new SemanaWS.SemanaWSClient();
 
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             dgvReq.AutoGenerateColumns = false;
             dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             inicializarPantalla();

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmRegistrarAsistenciaCuidadores : MaterialForm
+    public partial class frmRegistrarAsistenciaCuidadores : MaterialSkin.Controls.MaterialForm 
     {
         private frmModificarPrograma formModificarPrograma;
         private frmPlantillaGestion formPlantillaGestion;
@@ -20,6 +20,11 @@ namespace InterfazDATMA
         public frmRegistrarAsistenciaCuidadores(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             this.formModificarPrograma = formModificarPrograma;
             this.formPlantillaGestion = formPlantillaGestion;
         }
