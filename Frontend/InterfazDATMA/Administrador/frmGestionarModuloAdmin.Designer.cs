@@ -56,7 +56,7 @@ namespace InterfazDATMA.Administrador
             this.btnOpPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnOpPersona.ForeColor = System.Drawing.Color.White;
-            this.btnOpPersona.Location = new System.Drawing.Point(462, 71);
+            this.btnOpPersona.Location = new System.Drawing.Point(462, 89);
             this.btnOpPersona.Name = "btnOpPersona";
             this.btnOpPersona.Size = new System.Drawing.Size(268, 45);
             this.btnOpPersona.TabIndex = 7;

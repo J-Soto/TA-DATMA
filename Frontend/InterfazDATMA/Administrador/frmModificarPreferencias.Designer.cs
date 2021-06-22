@@ -181,7 +181,7 @@ namespace InterfazDATMA.Administrador
             this.chblDispositivos.Location = new System.Drawing.Point(48, 154);
             this.chblDispositivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chblDispositivos.Name = "chblDispositivos";
-            this.chblDispositivos.Size = new System.Drawing.Size(342, 119);
+            this.chblDispositivos.Size = new System.Drawing.Size(342, 96);
             this.chblDispositivos.TabIndex = 45;
             // 
             // lblRedes
