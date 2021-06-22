@@ -72,8 +72,7 @@ namespace InterfazDATMA.Administrador
             this.CantSemanas});
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursos.Location = new System.Drawing.Point(94, 123);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCursos.Location = new System.Drawing.Point(70, 175);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -92,7 +91,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCursos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCursos.RowTemplate.Height = 28;
-            this.dgvCursos.Size = new System.Drawing.Size(1128, 583);
+            this.dgvCursos.Size = new System.Drawing.Size(846, 466);
             this.dgvCursos.TabIndex = 19;
             // 
             // Nombre
@@ -149,10 +148,9 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(86, 52);
-            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTutoresUser.Location = new System.Drawing.Point(64, 115);
             this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(376, 46);
+            this.lblTutoresUser.Size = new System.Drawing.Size(282, 36);
             this.lblTutoresUser.TabIndex = 20;
             this.lblTutoresUser.Text = "Cursos Disponibles:";
             // 
@@ -163,10 +161,9 @@ namespace InterfazDATMA.Administrador
             this.btnInsertarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnInsertarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnInsertarCurso.Location = new System.Drawing.Point(1248, 123);
-            this.btnInsertarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsertarCurso.Location = new System.Drawing.Point(936, 171);
             this.btnInsertarCurso.Name = "btnInsertarCurso";
-            this.btnInsertarCurso.Size = new System.Drawing.Size(224, 56);
+            this.btnInsertarCurso.Size = new System.Drawing.Size(168, 45);
             this.btnInsertarCurso.TabIndex = 21;
             this.btnInsertarCurso.Text = "Insertar Curso";
             this.btnInsertarCurso.UseVisualStyleBackColor = false;
@@ -179,10 +176,9 @@ namespace InterfazDATMA.Administrador
             this.btnEliminarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCurso.Location = new System.Drawing.Point(1248, 208);
-            this.btnEliminarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCurso.Location = new System.Drawing.Point(936, 232);
             this.btnEliminarCurso.Name = "btnEliminarCurso";
-            this.btnEliminarCurso.Size = new System.Drawing.Size(224, 56);
+            this.btnEliminarCurso.Size = new System.Drawing.Size(168, 45);
             this.btnEliminarCurso.TabIndex = 22;
             this.btnEliminarCurso.Text = "Eliminar Curso";
             this.btnEliminarCurso.UseVisualStyleBackColor = false;
@@ -195,10 +191,9 @@ namespace InterfazDATMA.Administrador
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(1258, 754);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresar.Location = new System.Drawing.Point(944, 632);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(214, 48);
+            this.btnRegresar.Size = new System.Drawing.Size(160, 38);
             this.btnRegresar.TabIndex = 24;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -206,20 +201,19 @@ namespace InterfazDATMA.Administrador
             // 
             // frmOperacionesCursos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1554, 865);
+            this.ClientSize = new System.Drawing.Size(1166, 692);
             this.ControlBox = false;
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnEliminarCurso);
             this.Controls.Add(this.btnInsertarCurso);
             this.Controls.Add(this.lblTutoresUser);
             this.Controls.Add(this.dgvCursos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmOperacionesCursos";
             this.Sizable = false;
-            this.Text = "frmOperacionesCursos";
+            this.Text = "Operaciones Cursos";
             this.VisibleChanged += new System.EventHandler(this.frmOperacionesCursos_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.ResumeLayout(false);
