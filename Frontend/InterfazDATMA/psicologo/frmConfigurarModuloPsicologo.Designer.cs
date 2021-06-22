@@ -30,8 +30,9 @@ namespace InterfazDATMA
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombreModulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnModificarSemana = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@ namespace InterfazDATMA
             this.dgvPrograma = new System.Windows.Forms.DataGridView();
             this.Semana = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInsertarSemana = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrograma)).BeginInit();
             this.SuspendLayout();
@@ -49,10 +51,9 @@ namespace InterfazDATMA
             this.lblNombreModulo.AutoSize = true;
             this.lblNombreModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblNombreModulo.ForeColor = System.Drawing.Color.White;
-            this.lblNombreModulo.Location = new System.Drawing.Point(178, 31);
-            this.lblNombreModulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreModulo.Location = new System.Drawing.Point(63, 104);
             this.lblNombreModulo.Name = "lblNombreModulo";
-            this.lblNombreModulo.Size = new System.Drawing.Size(249, 63);
+            this.lblNombreModulo.Size = new System.Drawing.Size(185, 46);
             this.lblNombreModulo.TabIndex = 0;
             this.lblNombreModulo.Text = "Modulo 1";
             // 
@@ -61,10 +62,9 @@ namespace InterfazDATMA
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(294, 169);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(136, 171);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 53);
+            this.label1.Size = new System.Drawing.Size(175, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "Programa:";
             // 
@@ -75,10 +75,9 @@ namespace InterfazDATMA
             this.btnModificarSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnModificarSemana.ForeColor = System.Drawing.Color.White;
-            this.btnModificarSemana.Location = new System.Drawing.Point(878, 885);
-            this.btnModificarSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarSemana.Location = new System.Drawing.Point(494, 722);
             this.btnModificarSemana.Name = "btnModificarSemana";
-            this.btnModificarSemana.Size = new System.Drawing.Size(418, 56);
+            this.btnModificarSemana.Size = new System.Drawing.Size(314, 45);
             this.btnModificarSemana.TabIndex = 3;
             this.btnModificarSemana.Text = "Modificar Semana";
             this.btnModificarSemana.UseVisualStyleBackColor = false;
@@ -91,10 +90,9 @@ namespace InterfazDATMA
             this.btnListaCuidadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListaCuidadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnListaCuidadores.ForeColor = System.Drawing.Color.White;
-            this.btnListaCuidadores.Location = new System.Drawing.Point(954, 175);
-            this.btnListaCuidadores.Margin = new System.Windows.Forms.Padding(4);
+            this.btnListaCuidadores.Location = new System.Drawing.Point(875, 165);
             this.btnListaCuidadores.Name = "btnListaCuidadores";
-            this.btnListaCuidadores.Size = new System.Drawing.Size(418, 56);
+            this.btnListaCuidadores.Size = new System.Drawing.Size(314, 45);
             this.btnListaCuidadores.TabIndex = 4;
             this.btnListaCuidadores.Text = "Lista de Cuidadores";
             this.btnListaCuidadores.UseVisualStyleBackColor = false;
@@ -107,10 +105,9 @@ namespace InterfazDATMA
             this.btnListaCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListaCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnListaCursos.ForeColor = System.Drawing.Color.White;
-            this.btnListaCursos.Location = new System.Drawing.Point(1074, 1037);
-            this.btnListaCursos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnListaCursos.Location = new System.Drawing.Point(879, 762);
             this.btnListaCursos.Name = "btnListaCursos";
-            this.btnListaCursos.Size = new System.Drawing.Size(494, 56);
+            this.btnListaCursos.Size = new System.Drawing.Size(370, 45);
             this.btnListaCursos.TabIndex = 5;
             this.btnListaCursos.Text = "Volver a la lista de cursos";
             this.btnListaCursos.UseVisualStyleBackColor = false;
@@ -136,31 +133,31 @@ namespace InterfazDATMA
             this.dgvPrograma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrograma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Semana,
-            this.Tema});
+            this.Tema,
+            this.FechaInicio});
             this.dgvPrograma.EnableHeadersVisualStyles = false;
             this.dgvPrograma.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPrograma.Location = new System.Drawing.Point(302, 252);
-            this.dgvPrograma.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPrograma.Location = new System.Drawing.Point(143, 231);
             this.dgvPrograma.Name = "dgvPrograma";
             this.dgvPrograma.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrograma.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrograma.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrograma.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvPrograma.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvPrograma.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPrograma.RowTemplate.Height = 28;
             this.dgvPrograma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrograma.Size = new System.Drawing.Size(1068, 606);
+            this.dgvPrograma.Size = new System.Drawing.Size(1046, 485);
             this.dgvPrograma.TabIndex = 9;
             // 
             // Semana
@@ -170,7 +167,7 @@ namespace InterfazDATMA
             this.Semana.MinimumWidth = 8;
             this.Semana.Name = "Semana";
             this.Semana.ReadOnly = true;
-            this.Semana.Width = 150;
+            this.Semana.Width = 193;
             // 
             // Tema
             // 
@@ -181,6 +178,19 @@ namespace InterfazDATMA
             this.Tema.ReadOnly = true;
             this.Tema.Width = 290;
             // 
+            // FechaInicio
+            // 
+            this.FechaInicio.DataPropertyName = "FechaInicio";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle2.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FechaInicio.HeaderText = "Fecha Inicio";
+            this.FechaInicio.MinimumWidth = 8;
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Width = 150;
+            // 
             // btnInsertarSemana
             // 
             this.btnInsertarSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
@@ -188,10 +198,9 @@ namespace InterfazDATMA
             this.btnInsertarSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertarSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnInsertarSemana.ForeColor = System.Drawing.Color.White;
-            this.btnInsertarSemana.Location = new System.Drawing.Point(412, 885);
-            this.btnInsertarSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertarSemana.Location = new System.Drawing.Point(143, 722);
             this.btnInsertarSemana.Name = "btnInsertarSemana";
-            this.btnInsertarSemana.Size = new System.Drawing.Size(418, 56);
+            this.btnInsertarSemana.Size = new System.Drawing.Size(314, 45);
             this.btnInsertarSemana.TabIndex = 10;
             this.btnInsertarSemana.Text = "Insertar Semana";
             this.btnInsertarSemana.UseVisualStyleBackColor = false;
@@ -199,10 +208,10 @@ namespace InterfazDATMA
             // 
             // frmConfigurarModuloPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ClientSize = new System.Drawing.Size(1308, 900);
             this.ControlBox = false;
             this.Controls.Add(this.btnInsertarSemana);
             this.Controls.Add(this.dgvPrograma);
@@ -211,7 +220,6 @@ namespace InterfazDATMA
             this.Controls.Add(this.btnModificarSemana);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNombreModulo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConfigurarModuloPsicologo";
             this.Sizable = false;
             this.Text = "frmConfigurarModuloPsicologo";
@@ -232,5 +240,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.Button btnInsertarSemana;
         private System.Windows.Forms.DataGridViewTextBoxColumn Semana;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
     }
 }

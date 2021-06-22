@@ -34,6 +34,10 @@ namespace InterfazDATMA.Administrador
         //requerimientos
         private BindingList<CursoWS.curso> cursosReq;
 
+        //Current Cantidad de semanas:
+        private int auxCantSem;
+        private int flagChangeCantSem;
+
         public frmInsertarCurso(frmOperacionesCursos formOperacionesCursos, frmPlantillaGestion formPlantillaGest)
         {
             this.formPlantillaGest = formPlantillaGest;
@@ -82,6 +86,10 @@ namespace InterfazDATMA.Administrador
 
             //Curso
             curso = new CursoWS.curso();
+
+            //auxCantSem:
+            auxCantSem = 0;
+            flagChangeCantSem = 1;
         }
 
 
@@ -129,15 +137,15 @@ namespace InterfazDATMA.Administrador
                     int idCursoTema = daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
 
                     //Insertar semanas:
-                    //SemanaWS.semana semana = new SemanaWS.semana();
-                    //contSemanas++;
-                    //semana.nombre = "Editar nombre Semana: " + contSemanas;
-                    //semana.descripcion = "Editar";
-                    //semana.fechaInicio = recTema.fechaInicio;
-                    //semana.fechaInicioSpecified = true;
-                    //semana.curso = new SemanaWS.curso();
-                    //semana.curso.idCurso = idCurso;
-                    //daoSemana.insertarSemana(semana, idCursoTema);
+                    SemanaWS.semana semana = new SemanaWS.semana();
+                    contSemanas++;
+                    semana.nombre = "Editar nombre Semana: " + contSemanas;
+                    semana.descripcion = "Editar";
+                    semana.fechaInicio = recTema.fechaInicio;
+                    semana.fechaInicioSpecified = true;
+                    semana.curso = new SemanaWS.curso();
+                    semana.curso.idCurso = idCurso;
+                    daoSemana.insertarSemana(semana, idCursoTema);
                 }
                 
 
@@ -163,6 +171,15 @@ namespace InterfazDATMA.Administrador
                     daoCurso.insertarRequerimiento(idCurso, recCursoReq.idCurso, "Curso Requisito");
                 }
 
+                //Insertar Psicologos_Cursos:
+                foreach (Grupo_Curso recGruposCurso in gruposCurso)
+                {
+                    foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                    {
+                        daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, idCurso);
+                    }
+                }
+
                 MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 inicializarPantalla();
             }
@@ -176,17 +193,62 @@ namespace InterfazDATMA.Administrador
         private void textCantSemana_TextChanged(object sender, EventArgs e)
         {
             DateTime auxDate = dtpFechaInicial.Value;
-            if(txtCantSemana.Text != "")
+
+            if (txtCantSemana.Text != "" && temasCurso != null)
             {
-                int cantSemanas = Int32.Parse(txtCantSemana.Text);
-                auxDate = auxDate.AddDays(cantSemanas * 7);
-                dtpFechaFin.Value = auxDate;
+                if (temasCurso.Count == 0)
+                {
+                    int cantSemanas = Int32.Parse(txtCantSemana.Text);
+                    auxCantSem = cantSemanas;
+                    if (cantSemanas <= 100)
+                    {
+                        auxDate = auxDate.AddDays(cantSemanas * 7);
+                        dtpFechaFin.Value = auxDate;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Numero fuera de rango.", "Mensaje de Adevertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+
+                    if (flagChangeCantSem == 1)
+                    {
+                        var resultado = MessageBox.Show("¿Desea cambiar el numero de semanas?. Se perderan los cambios realizados en los temas", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            int cantSemanas = Int32.Parse(txtCantSemana.Text);
+                            auxCantSem = cantSemanas;
+                            if (cantSemanas <= 100)
+                            {
+                                auxDate = auxDate.AddDays(cantSemanas * 7);
+                                dtpFechaFin.Value = auxDate;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Numero fuera de rango.", "Mensaje de Adevertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+
+                            //Al cambiar el numero de semanas se debera volver a elegir los temas de las semanas
+                            if (temasCurso != null)
+                                temasCurso.Clear();
+                            flagChangeCantSem = 1;
+                        }
+                        else
+                        {
+                            flagChangeCantSem = 0;
+                            txtCantSemana.Text = auxCantSem.ToString();
+                        }
+
+                    }
+                    else
+                    {
+                        flagChangeCantSem = 1;
+                    }
+                }
             }
-            else
-            {
-                dtpFechaFin.Value = auxDate;
-            }
-            
+
         }
 
 
@@ -250,6 +312,27 @@ namespace InterfazDATMA.Administrador
                 CursoWS.curso auxCurso = dgvReq.CurrentRow.DataBoundItem as CursoWS.curso;
                 cursosReq.Remove(auxCurso);
                 dgvReq.Refresh();
+            }
+        }
+
+        private void dtpFechaInicial_ValueChanged(object sender, EventArgs e)
+        {
+            if (temasCurso != null) temasCurso.Clear();
+            if (cursosReq != null) cursosReq.Clear();
+
+            //Update dgvRequerimientos:
+            dgvReq.Refresh();
+
+            DateTime auxDate = dtpFechaInicial.Value;
+            if (txtCantSemana.Text != "")
+            {
+                int cantSemanas = Int32.Parse(txtCantSemana.Text);
+                auxDate = auxDate.AddDays(cantSemanas * 7);
+                dtpFechaFin.Value = auxDate;
+            }
+            else
+            {
+                dtpFechaFin.Value = auxDate;
             }
         }
     }

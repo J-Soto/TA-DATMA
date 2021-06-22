@@ -30,7 +30,6 @@ namespace InterfazDATMA.Administrador
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarTutor));
-            this.btnSubirFoto = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtConfirmarPass = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -61,16 +60,12 @@ namespace InterfazDATMA.Administrador
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.txtDistrito = new System.Windows.Forms.TextBox();
+            this.btnSubirFoto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSubirFoto
-            // 
-            resources.ApplyResources(this.btnSubirFoto, "btnSubirFoto");
-            this.btnSubirFoto.Name = "btnSubirFoto";
-            this.btnSubirFoto.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -264,11 +259,19 @@ namespace InterfazDATMA.Administrador
             resources.ApplyResources(this.pbFoto, "pbFoto");
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.TabStop = false;
+            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
             // 
             // txtDistrito
             // 
             resources.ApplyResources(this.txtDistrito, "txtDistrito");
             this.txtDistrito.Name = "txtDistrito";
+            // 
+            // btnSubirFoto
+            // 
+            resources.ApplyResources(this.btnSubirFoto, "btnSubirFoto");
+            this.btnSubirFoto.Name = "btnSubirFoto";
+            this.btnSubirFoto.UseVisualStyleBackColor = true;
+            this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
             // 
             // frmModificarTutor
             // 
@@ -276,8 +279,8 @@ namespace InterfazDATMA.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
-            this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.btnSubirFoto);
+            this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtConfirmarPass);
@@ -311,6 +314,7 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblNombre);
             this.Name = "frmModificarTutor";
             this.Sizable = false;
+            this.Load += new System.EventHandler(this.frmModificarTutor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -318,8 +322,6 @@ namespace InterfazDATMA.Administrador
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSubirFoto;
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtConfirmarPass;
@@ -352,5 +354,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtDistrito;
+        private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
+        private System.Windows.Forms.Button btnSubirFoto;
     }
 }

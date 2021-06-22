@@ -21,8 +21,11 @@ namespace InterfazDATMA
         private SemanaWS.SemanaWSClient daoSemana;
         private CursoWS.CursoWSClient daoCurso;
         private int idCurso;
-        BindingList<CursoWS.semana> semanas;
-        public frmModificarPrograma(frmConfigurarModuloPsicologo formConfigurarModuloPsicologo, frmPlantillaGestion formPlantillaGestion,int idCurso)
+
+        //Semana:
+        private SemanaWS.semana currentSemana;
+
+        public frmModificarPrograma(frmConfigurarModuloPsicologo formConfigurarModuloPsicologo, frmPlantillaGestion formPlantillaGestion, GrupoWS.grupo auxGrupo, SemanaWS.semana auxSemana, CursoWS.curso auxCurso, string nombreTema)
         {
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
@@ -32,16 +35,28 @@ namespace InterfazDATMA
 
             this.formConfigurarModuloPsicologo = formConfigurarModuloPsicologo;
             this.formPlantillaGestion = formPlantillaGestion;
-            this.idCurso = idCurso;
+            //this.idCurso = idCurso;
+
+            currentSemana = auxSemana;
 
             daoSemana = new SemanaWS.SemanaWSClient();
             daoCurso = new CursoWS.CursoWSClient();
-            this.semanas = new BindingList<CursoWS.semana>(
-                daoCurso.listarSemanasPorIdCurso(idCurso).ToList());
-            rtxtDescripcion.Text = semanas[0].descripcion;
-            rtxtTema.Text = semanas[0].nombre;
-            rtxtDescripcion.Enabled = false;
-            rtxtTema.Enabled = false;
+
+            //this.semanas = new BindingList<CursoWS.semana>(
+            //    daoCurso.listarSemanasPorIdCurso(idCurso).ToList());
+
+            //Inicializar Pantalla
+            rtxtDescripcion.Text = currentSemana.descripcion;
+            rtxtTema.Text = currentSemana.nombre;
+            lblTema.Text = "Tema: " + nombreTema;
+
+            //Limitar edicion:
+            rtxtTema.ReadOnly = true;
+            rtxtDescripcion.ReadOnly = true;
+            //rtxtDescripcion.Enabled = false;
+            //rtxtTema.Enabled = false;
+
+            
         }
 
         private void btnAgregarMaterial_Click(object sender, EventArgs e)
@@ -74,21 +89,26 @@ namespace InterfazDATMA
 
         private void btnEditarDescrip_Click(object sender, EventArgs e)
         {
-            rtxtDescripcion.Enabled = true;
-            rtxtTema.Enabled = true;
+            rtxtTema.ReadOnly = false;
+            rtxtDescripcion.ReadOnly = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            SemanaWS.semana semana = new SemanaWS.semana();
-            semana.id = semanas[0].id;
-            semana.nombre = rtxtTema.Text;
-            semana.descripcion = rtxtDescripcion.Text;
-            semana.curso = new SemanaWS.curso();
-            int resultado = daoSemana.modificarSemana(semana);
+            currentSemana.nombre = rtxtTema.Text;
+            currentSemana.descripcion = rtxtDescripcion.Text;
+            currentSemana.curso = new SemanaWS.curso();
+            int resultado = daoSemana.modificarSemana(currentSemana);
 
-            rtxtDescripcion.Enabled = false;
-            rtxtTema.Enabled = false;
+            rtxtDescripcion.ReadOnly = true;
+            rtxtTema.ReadOnly = true;
+
+            formConfigurarModuloPsicologo.refrescarDataGridView(currentSemana);
+        }
+
+        private void dgvReuniones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

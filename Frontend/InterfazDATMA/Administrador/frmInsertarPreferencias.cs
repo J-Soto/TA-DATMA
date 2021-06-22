@@ -40,7 +40,23 @@ namespace InterfazDATMA.Administrador
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            tutorAux.dispositivos = 1;
+            // Insertar Dispositivos Electronicos
+            tutorAux.dispositivos = 0;
+            if (chblDispositivos.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 dispositivo
+            {
+                for (int x = 0; x < chblDispositivos.CheckedItems.Count; x++)
+                {
+                    if (chblDispositivos.GetItemChecked(x))
+                    {
+                        tutorAux.dispositivos = tutorAux.dispositivos + (int)Math.Pow(10, x);
+                    }
+                }
+            }
+            else
+            {
+                tutorAux.dispositivos = 0;
+            }
+
             tutorAux.tiposConexion = 1;
             tutorAux.gestante = 1;
             tutorAux.turno = 1;
