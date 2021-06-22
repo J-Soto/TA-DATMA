@@ -28,9 +28,10 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
+        private void btnRegresar_Click_1(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(formAnterior);
+
         }
     }
 }

@@ -79,21 +79,6 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            formPlantillaGest.abrirFormulario(formInsertarCurso);
-        }
-
-        private void btnCrearTema_Click(object sender, EventArgs e)
-        {
-            frmCrearTemaDeCurso formCrearTemaCurso = new frmCrearTemaDeCurso();
-            if(formCrearTemaCurso.ShowDialog() == DialogResult.OK)
-            {
-                BindingList<TemaWS.tema> temas = new BindingList<TemaWS.tema>(daoTema.listarTemas().ToList());
-                cbTema.DataSource = temas;
-                cbTema.DisplayMember = "nombre";
-            }
-        }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -104,10 +89,48 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void btnAgregarTema_Click(object sender, EventArgs e)
+
+        private void dgvTemas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                TemaWS.tema auxTema = dgvTemas.Rows[e.RowIndex].DataBoundItem as TemaWS.tema;
+                int auxSemana = 0;
+                for (int i = 0; i < numSemanas; i++)
+                {
+                    auxSemana = i + 1;
+                    if (auxTema.fechaInicio == fechaInicialCurso.AddDays(7 * (auxSemana - 1))) break;
+                }
+
+                dgvTemas.Rows[e.RowIndex].Cells["Semana"].Value = auxSemana.ToString();
+                dgvTemas.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxTema.nombre;
+                dgvTemas.Rows[e.RowIndex].Cells["FechaInicio"].Value = auxTema.fechaInicio;
+                dgvTemas.Rows[e.RowIndex].Cells["FechaFin"].Value = auxTema.fechaFin;
+            }
+            catch (Exception ex)
+            {
+                
+            }
+        }
+
+
+        private void btnCrearTema_Click_1(object sender, EventArgs e)
+        {
+            frmCrearTemaDeCurso formCrearTemaCurso = new frmCrearTemaDeCurso();
+            if (formCrearTemaCurso.ShowDialog() == DialogResult.OK)
+            {
+                BindingList<TemaWS.tema> temas = new BindingList<TemaWS.tema>(daoTema.listarTemas().ToList());
+                cbTema.DataSource = temas;
+                cbTema.DisplayMember = "nombre";
+            }
+
+        }
+
+        private void btnAgregarTema_Click_1(object sender, EventArgs e)
         {
 
-            if(cbNumSemana.SelectedItem != null) {
+            if (cbNumSemana.SelectedItem != null)
+            {
 
                 int currentSemana = (int)cbNumSemana.SelectedItem, auxSemana;
                 DateTime currentFechaIni = dtpFechaInicial.Value;
@@ -151,32 +174,9 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void dgvTemas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void btnQuitarTema_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                TemaWS.tema auxTema = dgvTemas.Rows[e.RowIndex].DataBoundItem as TemaWS.tema;
-                int auxSemana = 0;
-                for (int i = 0; i < numSemanas; i++)
-                {
-                    auxSemana = i + 1;
-                    if (auxTema.fechaInicio == fechaInicialCurso.AddDays(7 * (auxSemana - 1))) break;
-                }
-
-                dgvTemas.Rows[e.RowIndex].Cells["Semana"].Value = auxSemana.ToString();
-                dgvTemas.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxTema.nombre;
-                dgvTemas.Rows[e.RowIndex].Cells["FechaInicio"].Value = auxTema.fechaInicio;
-                dgvTemas.Rows[e.RowIndex].Cells["FechaFin"].Value = auxTema.fechaFin;
-            }
-            catch (Exception ex)
-            {
-                
-            }
-        }
-
-        private void btnQuitarTema_Click(object sender, EventArgs e)
-        {
-            if(dgvTemas.RowCount != 0)
+            if (dgvTemas.RowCount != 0)
             {
                 TemaWS.tema auxTema = dgvTemas.CurrentRow.DataBoundItem as TemaWS.tema;
                 DateTime fechaIni;
@@ -196,6 +196,12 @@ namespace InterfazDATMA.Administrador
                 //Update:
                 dgvTemas.DataSource = temasCurso;
             }
+
+        }
+
+        private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+            formPlantillaGest.abrirFormulario(formInsertarCurso);
         }
     }
 }

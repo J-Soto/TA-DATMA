@@ -29,9 +29,9 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,9 +51,9 @@ namespace InterfazDATMA
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.lblHorario = new System.Windows.Forms.Label();
             this.pictBoxEncargada = new System.Windows.Forms.PictureBox();
-            this.btnVerMas = new System.Windows.Forms.Button();
-            this.btnAnterior = new System.Windows.Forms.Button();
-            this.btnSig = new System.Windows.Forms.Button();
+            this.btnAnterior = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnSig = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnVerMas = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxEncargada)).BeginInit();
             this.SuspendLayout();
@@ -91,14 +91,14 @@ namespace InterfazDATMA
             this.dgvInfCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvInfCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfCurso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvInfCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoActividad,
@@ -110,21 +110,21 @@ namespace InterfazDATMA
             this.dgvInfCurso.Location = new System.Drawing.Point(240, 556);
             this.dgvInfCurso.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInfCurso.Name = "dgvInfCurso";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvInfCurso.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInfCurso.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInfCurso.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvInfCurso.RowTemplate.Height = 28;
             this.dgvInfCurso.Size = new System.Drawing.Size(1244, 310);
             this.dgvInfCurso.TabIndex = 18;
@@ -276,51 +276,52 @@ namespace InterfazDATMA
             this.pictBoxEncargada.TabIndex = 12;
             this.pictBoxEncargada.TabStop = false;
             // 
-            // btnVerMas
-            // 
-            this.btnVerMas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnVerMas.FlatAppearance.BorderSize = 0;
-            this.btnVerMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnVerMas.ForeColor = System.Drawing.Color.White;
-            this.btnVerMas.Location = new System.Drawing.Point(330, 69);
-            this.btnVerMas.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVerMas.Name = "btnVerMas";
-            this.btnVerMas.Size = new System.Drawing.Size(182, 46);
-            this.btnVerMas.TabIndex = 20;
-            this.btnVerMas.Text = "VER MÁS";
-            this.btnVerMas.UseVisualStyleBackColor = false;
-            this.btnVerMas.Click += new System.EventHandler(this.btnVerMas_Click_1);
-            // 
             // btnAnterior
             // 
-            this.btnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnAnterior.FlatAppearance.BorderSize = 0;
-            this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnAnterior.ForeColor = System.Drawing.Color.White;
-            this.btnAnterior.Location = new System.Drawing.Point(240, 473);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAnterior.AutoSize = true;
+            this.btnAnterior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAnterior.Depth = 0;
+            this.btnAnterior.Location = new System.Drawing.Point(240, 483);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAnterior.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(182, 46);
-            this.btnAnterior.TabIndex = 21;
+            this.btnAnterior.Primary = false;
+            this.btnAnterior.Size = new System.Drawing.Size(147, 36);
+            this.btnAnterior.TabIndex = 23;
             this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.UseVisualStyleBackColor = false;
+            this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnSig
             // 
-            this.btnSig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnSig.FlatAppearance.BorderSize = 0;
-            this.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSig.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnSig.ForeColor = System.Drawing.Color.White;
-            this.btnSig.Location = new System.Drawing.Point(624, 471);
-            this.btnSig.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSig.AutoSize = true;
+            this.btnSig.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSig.Depth = 0;
+            this.btnSig.Location = new System.Drawing.Point(700, 477);
+            this.btnSig.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSig.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSig.Name = "btnSig";
-            this.btnSig.Size = new System.Drawing.Size(182, 46);
-            this.btnSig.TabIndex = 22;
+            this.btnSig.Primary = false;
+            this.btnSig.Size = new System.Drawing.Size(152, 36);
+            this.btnSig.TabIndex = 24;
             this.btnSig.Text = "Siguiente";
-            this.btnSig.UseVisualStyleBackColor = false;
+            this.btnSig.UseVisualStyleBackColor = true;
+            // 
+            // btnVerMas
+            // 
+            this.btnVerMas.AutoSize = true;
+            this.btnVerMas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnVerMas.Depth = 0;
+            this.btnVerMas.Location = new System.Drawing.Point(268, 75);
+            this.btnVerMas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnVerMas.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnVerMas.Name = "btnVerMas";
+            this.btnVerMas.Primary = false;
+            this.btnVerMas.Size = new System.Drawing.Size(133, 36);
+            this.btnVerMas.TabIndex = 25;
+            this.btnVerMas.Text = "Ver Mas";
+            this.btnVerMas.UseVisualStyleBackColor = true;
+            this.btnVerMas.Click += new System.EventHandler(this.btnVerMas_Click);
             // 
             // frmInformacionCurso
             // 
@@ -329,9 +330,9 @@ namespace InterfazDATMA
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.ControlBox = false;
+            this.Controls.Add(this.btnVerMas);
             this.Controls.Add(this.btnSig);
             this.Controls.Add(this.btnAnterior);
-            this.Controls.Add(this.btnVerMas);
             this.Controls.Add(this.dgvInfCurso);
             this.Controls.Add(this.lblMes);
             this.Controls.Add(this.lblHorario);
@@ -379,8 +380,8 @@ namespace InterfazDATMA
         private System.Windows.Forms.Label lblFechaIni;
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Label lblHorario;
-        private System.Windows.Forms.Button btnVerMas;
-        private System.Windows.Forms.Button btnAnterior;
-        private System.Windows.Forms.Button btnSig;
+        private MaterialSkin.Controls.MaterialFlatButton btnAnterior;
+        private MaterialSkin.Controls.MaterialFlatButton btnSig;
+        private MaterialSkin.Controls.MaterialFlatButton btnVerMas;
     }
 }

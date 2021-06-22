@@ -30,8 +30,8 @@ namespace InterfazDATMA
         private void InitializeComponent()
         {
             this.lblFelicitacion = new System.Windows.Forms.Label();
-            this.btnIrCurso = new System.Windows.Forms.Button();
-            this.btnIrLista = new System.Windows.Forms.Button();
+            this.btnIrCurso = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnIrLista = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // lblFelicitacion
@@ -49,35 +49,35 @@ namespace InterfazDATMA
             // 
             // btnIrCurso
             // 
-            this.btnIrCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnIrCurso.FlatAppearance.BorderSize = 0;
-            this.btnIrCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIrCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnIrCurso.ForeColor = System.Drawing.Color.White;
-            this.btnIrCurso.Location = new System.Drawing.Point(316, 310);
-            this.btnIrCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIrCurso.AutoSize = true;
+            this.btnIrCurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnIrCurso.Depth = 0;
+            this.btnIrCurso.Location = new System.Drawing.Point(390, 366);
+            this.btnIrCurso.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnIrCurso.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnIrCurso.Name = "btnIrCurso";
-            this.btnIrCurso.Size = new System.Drawing.Size(322, 46);
-            this.btnIrCurso.TabIndex = 23;
-            this.btnIrCurso.Text = "IR AL CURSO";
-            this.btnIrCurso.UseVisualStyleBackColor = false;
-            this.btnIrCurso.Click += new System.EventHandler(this.btnIrCurso_Click);
+            this.btnIrCurso.Primary = false;
+            this.btnIrCurso.Size = new System.Drawing.Size(177, 36);
+            this.btnIrCurso.TabIndex = 58;
+            this.btnIrCurso.Text = "Ir al Curso";
+            this.btnIrCurso.UseVisualStyleBackColor = true;
+            this.btnIrCurso.Click += new System.EventHandler(this.btnIrCurso_Click_1);
             // 
             // btnIrLista
             // 
-            this.btnIrLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnIrLista.FlatAppearance.BorderSize = 0;
-            this.btnIrLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIrLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnIrLista.ForeColor = System.Drawing.Color.White;
-            this.btnIrLista.Location = new System.Drawing.Point(316, 469);
-            this.btnIrLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIrLista.AutoSize = true;
+            this.btnIrLista.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnIrLista.Depth = 0;
+            this.btnIrLista.Location = new System.Drawing.Point(390, 515);
+            this.btnIrLista.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnIrLista.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnIrLista.Name = "btnIrLista";
-            this.btnIrLista.Size = new System.Drawing.Size(322, 46);
-            this.btnIrLista.TabIndex = 24;
-            this.btnIrLista.Text = "ACEPTAR";
-            this.btnIrLista.UseVisualStyleBackColor = false;
-            this.btnIrLista.Click += new System.EventHandler(this.btnIrLista_Click);
+            this.btnIrLista.Primary = false;
+            this.btnIrLista.Size = new System.Drawing.Size(138, 36);
+            this.btnIrLista.TabIndex = 59;
+            this.btnIrLista.Text = "Aceptar";
+            this.btnIrLista.UseVisualStyleBackColor = true;
+            this.btnIrLista.Click += new System.EventHandler(this.btnIrLista_Click_1);
             // 
             // frmInscripcionHecha
             // 
@@ -89,7 +89,7 @@ namespace InterfazDATMA
             this.Controls.Add(this.btnIrLista);
             this.Controls.Add(this.btnIrCurso);
             this.Controls.Add(this.lblFelicitacion);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmInscripcionHecha";
             this.Text = "frmInscripcionHecha";
             this.ResumeLayout(false);
@@ -100,7 +100,7 @@ namespace InterfazDATMA
         #endregion
 
         private System.Windows.Forms.Label lblFelicitacion;
-        private System.Windows.Forms.Button btnIrCurso;
-        private System.Windows.Forms.Button btnIrLista;
+        private MaterialSkin.Controls.MaterialFlatButton btnIrCurso;
+        private MaterialSkin.Controls.MaterialFlatButton btnIrLista;
     }
 }

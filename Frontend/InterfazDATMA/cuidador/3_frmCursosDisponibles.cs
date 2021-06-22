@@ -28,19 +28,20 @@ namespace InterfazDATMA
             this.plantilla = plantilla;
         }
 
-        private void btnInscribirse_Click(object sender, EventArgs e)
-        {
-            plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
-        }
-
-        private void btnMasInfo_Click(object sender, EventArgs e)
-        {
-            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
-        }
-
         private void frmCursosDisponibles_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInscribirse_Click_1(object sender, EventArgs e)
+        {
+            plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
+
+        }
+
+        private void btnMasInfo_Click_1(object sender, EventArgs e)
+        {
+            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
         }
     }
 }

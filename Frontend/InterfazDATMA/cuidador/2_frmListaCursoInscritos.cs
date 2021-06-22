@@ -35,21 +35,10 @@ namespace InterfazDATMA
             this.plantillaGestion = plantillaGestion;
             this.formAnterior2 = formAnterior2;
         }
-        private void btnModulo1_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
-        }
 
         private void frmListaCursoInscritos_Load(object sender, EventArgs e)
         {
             
-        }
-
-        private void btnCursosDisponibles_Click(object sender, EventArgs e)
-        {
-            bool hayCursos = verificarCursosDisponibles();
-            if (hayCursos) plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion));
-            else plantillaGestion.abrirFormulario(new frmSinCursosDisponibles(this, plantillaGestion));
         }
 
         private bool verificarCursosDisponibles()
@@ -59,14 +48,26 @@ namespace InterfazDATMA
             else return false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnModulo1_Click_1(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnModulo2_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+        }
+
+        private void btnModulo3_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+        }
+
+        private void btnCursosDisponibles_Click_1(object sender, EventArgs e)
+        {
+            bool hayCursos = verificarCursosDisponibles();
+            if (hayCursos) plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion));
+            else plantillaGestion.abrirFormulario(new frmSinCursosDisponibles(this, plantillaGestion));
         }
     }
 }

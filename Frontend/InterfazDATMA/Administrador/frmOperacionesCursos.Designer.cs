@@ -72,8 +72,8 @@ namespace InterfazDATMA.Administrador
             this.CantSemanas});
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursos.Location = new System.Drawing.Point(94, 123);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCursos.Location = new System.Drawing.Point(98, 157);
+            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -149,7 +149,7 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(86, 52);
+            this.lblTutoresUser.Location = new System.Drawing.Point(90, 86);
             this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTutoresUser.Name = "lblTutoresUser";
             this.lblTutoresUser.Size = new System.Drawing.Size(376, 46);
@@ -163,8 +163,8 @@ namespace InterfazDATMA.Administrador
             this.btnInsertarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnInsertarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnInsertarCurso.Location = new System.Drawing.Point(1248, 123);
-            this.btnInsertarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsertarCurso.Location = new System.Drawing.Point(1252, 157);
+            this.btnInsertarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsertarCurso.Name = "btnInsertarCurso";
             this.btnInsertarCurso.Size = new System.Drawing.Size(224, 56);
             this.btnInsertarCurso.TabIndex = 21;
@@ -179,8 +179,8 @@ namespace InterfazDATMA.Administrador
             this.btnEliminarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCurso.Location = new System.Drawing.Point(1248, 208);
-            this.btnEliminarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCurso.Location = new System.Drawing.Point(1252, 242);
+            this.btnEliminarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCurso.Name = "btnEliminarCurso";
             this.btnEliminarCurso.Size = new System.Drawing.Size(224, 56);
             this.btnEliminarCurso.TabIndex = 22;
@@ -195,8 +195,8 @@ namespace InterfazDATMA.Administrador
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(1258, 754);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresar.Location = new System.Drawing.Point(1262, 788);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(214, 48);
             this.btnRegresar.TabIndex = 24;
@@ -216,7 +216,7 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.btnInsertarCurso);
             this.Controls.Add(this.lblTutoresUser);
             this.Controls.Add(this.dgvCursos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmOperacionesCursos";
             this.Sizable = false;
             this.Text = "frmOperacionesCursos";

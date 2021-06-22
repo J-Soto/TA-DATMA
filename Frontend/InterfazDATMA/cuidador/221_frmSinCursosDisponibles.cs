@@ -28,14 +28,15 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
         }
 
-        private void btnNotificar_Click(object sender, EventArgs e)
+
+        private void btnNotificar_Click_1(object sender, EventArgs e)
         {
             frmNotificacionActiva formNotificacion = new frmNotificacionActiva();
             if (formNotificacion.ShowDialog() == DialogResult.OK)
             {
                 plantillaGestion.abrirFormulario(formAnterior);
             }
-        }
 
+        }
     }
 }

@@ -29,13 +29,18 @@ namespace InterfazDATMA
         }
 
 
-
-        private void btnVerMas_Click_1(object sender, EventArgs e)
+        private void frmInformacionCurso_Load(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCurso(this, plantillaGestion));
+
         }
 
-        private void frmInformacionCurso_Load(object sender, EventArgs e)
+        private void btnVerMas_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmDetalleCurso(this, plantillaGestion));
+
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
         {
 
         }

@@ -31,7 +31,7 @@ namespace InterfazDATMA
         {
             this.lblNotificacionActiva = new System.Windows.Forms.Label();
             this.lblAgradecimiento = new System.Windows.Forms.Label();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnAceptar = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // lblNotificacionActiva
@@ -59,19 +59,19 @@ namespace InterfazDATMA
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(142, 290);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.AutoSize = true;
+            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAceptar.Depth = 0;
+            this.btnAceptar.Location = new System.Drawing.Point(140, 361);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(296, 46);
-            this.btnAceptar.TabIndex = 22;
-            this.btnAceptar.Text = "ACEPTAR";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Primary = false;
+            this.btnAceptar.Size = new System.Drawing.Size(138, 36);
+            this.btnAceptar.TabIndex = 23;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // frmNotificacionActiva
             // 
@@ -80,10 +80,10 @@ namespace InterfazDATMA
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(572, 435);
             this.ControlBox = false;
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblAgradecimiento);
             this.Controls.Add(this.lblNotificacionActiva);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Controls.Add(this.btnAceptar);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmNotificacionActiva";
             this.Text = "Notificacion";
             this.ResumeLayout(false);
@@ -95,6 +95,6 @@ namespace InterfazDATMA
 
         private System.Windows.Forms.Label lblNotificacionActiva;
         private System.Windows.Forms.Label lblAgradecimiento;
-        private System.Windows.Forms.Button btnAceptar;
+        private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
     }
 }

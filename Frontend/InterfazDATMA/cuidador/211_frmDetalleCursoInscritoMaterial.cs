@@ -34,10 +34,6 @@ namespace InterfazDATMA
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=QHRuTYtSbJQ");
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(formAnterior);
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -49,6 +45,12 @@ namespace InterfazDATMA
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
+        }
+
+        private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(formAnterior);
+
         }
     }
 }

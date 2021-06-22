@@ -29,13 +29,21 @@ namespace InterfazDATMA
             this.plantillaGestion = plantillaGestion;
         }
 
-
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {   if(formAnterior1!=null)
+        private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+            if (formAnterior1 != null)
                 plantillaGestion.abrirFormulario(formAnterior1.formAnterior);
             else plantillaGestion.abrirFormulario(formAnterior2.formAnterior);
         }
 
+        private void btnAnt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

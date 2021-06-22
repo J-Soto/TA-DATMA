@@ -65,19 +65,22 @@ namespace InterfazDATMA.Administrador
             dgvCursosReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
         }
 
-        private void btnSeleccionarCur_Click(object sender, EventArgs e)
+
+        private void btnSeleccionarCur_Click_1(object sender, EventArgs e)
         {
-            if(dgvCursosReq.RowCount != 0)
+            if (dgvCursosReq.RowCount != 0)
             {
                 curso_Req = dgvCursosReq.CurrentRow.DataBoundItem as CursoWS.curso;
                 this.DialogResult = DialogResult.OK;
             }
+
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             curso_Req.idCurso = 0;
+
         }
     }
 }

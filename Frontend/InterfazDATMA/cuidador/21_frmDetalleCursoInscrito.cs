@@ -24,19 +24,23 @@ namespace InterfazDATMA
             this.plantillaGestion = plantillaGestion;
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(formAnterior);
-        }
 
-        private void btnVideos_Click(object sender, EventArgs e)
+        private void btnVideos_Click_1(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscritoMaterial(this, plantillaGestion));
+
         }
 
-        private void btnReuniones_Click(object sender, EventArgs e)
+        private void btnReuniones_Click_1(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscritoReunion(this, plantillaGestion));
+
+        }
+
+        private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(formAnterior);
+
         }
     }
 }

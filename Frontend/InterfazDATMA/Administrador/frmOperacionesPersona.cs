@@ -88,45 +88,6 @@ namespace InterfazDATMA.Administrador
             dgvTutores.DataSource = tutores;
         }
 
-        private void btnInsertarTutor_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(new frmInsertarTutor(this, formPlantilla));
-        }
-
-        private void btnInsertarPsi_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(new frmInsertarPsicologo(this, formPlantilla));
-        }
-
-        private void btnModificarPsi_Click(object sender, EventArgs e)
-        {
-
-            if (dgvPsicologos.RowCount != 0)
-            {
-                PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.CurrentRow.DataBoundItem;
-                frmModificarPsicologo formModificarPsicologo = new frmModificarPsicologo(this, formPlantilla, psicologo);
-
-                formPlantilla.abrirFormulario(formModificarPsicologo);
-            }
-
-
-        }
-
-        private void btnModificarTutor_Click(object sender, EventArgs e)
-        {
-
-            if (dgvTutores.RowCount != 0)
-            {
-                TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.CurrentRow.DataBoundItem;
-                frmModificarTutor formModificarTutor = new frmModificarTutor(this, formPlantilla, tutor);
-
-                formPlantilla.abrirFormulario(new frmModificarTutor(this, formPlantilla, tutor));
-            }
-
-
-
-        }
-
         private void txtBusqTutor_MouseClick(object sender, MouseEventArgs e)
         {
             if (txtBusqTutor.Text == "Nombres y Apellidos")
@@ -139,33 +100,6 @@ namespace InterfazDATMA.Administrador
                 txtBusqPsi.Text = "";
         }
 
-        private void btnBuscarTutor_Click(object sender, EventArgs e)
-        {
-            BindingList<TutorWS.tutor> tutores;
-            try
-            {
-                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre(txtBusqTutor.Text).ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                tutores = new BindingList<TutorWS.tutor>();
-            }
-            dgvTutores.DataSource = tutores;
-        }
-
-        private void btnBuscarPsi_Click(object sender, EventArgs e)
-        {
-            BindingList<PsicologoWS.psicologo> psicologos;
-            try
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre(txtBusqPsi.Text).ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>();
-            }
-            dgvPsicologos.DataSource = psicologos;
-        }
 
         private void dgvPsicologos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -177,15 +111,6 @@ namespace InterfazDATMA.Administrador
         }
 
 
-        private void btnListarPsi_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(new Header());
-        }
-
-        private void btnListarTut_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(new frmListaTutores());
-        }
 
         private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -196,7 +121,96 @@ namespace InterfazDATMA.Administrador
             dgvTutores.RowTemplate.Height = 100;
         }
 
-        private void btnDeshabilitar_Click(object sender, EventArgs e)
+
+        private void dgvTutores_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvPsicologos.ClearSelection();
+        }
+
+        private void dgvPsicologos_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvTutores.ClearSelection();
+        }
+
+        private void btnBuscarTutor_Click_1(object sender, EventArgs e)
+        {
+            BindingList<TutorWS.tutor> tutores;
+            try
+            {
+                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre(txtBusqTutor.Text).ToList());
+            }
+            catch (ArgumentNullException ex)
+            {
+                tutores = new BindingList<TutorWS.tutor>();
+            }
+            dgvTutores.DataSource = tutores;
+
+        }
+
+        private void btnInsertarTutor_Click_1(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(new frmInsertarTutor(this, formPlantilla));
+
+        }
+
+        private void btnModificarTutor_Click_1(object sender, EventArgs e)
+        {
+
+            if (dgvTutores.RowCount != 0)
+            {
+                TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.CurrentRow.DataBoundItem;
+                frmModificarTutor formModificarTutor = new frmModificarTutor(this, formPlantilla, tutor);
+
+                formPlantilla.abrirFormulario(new frmModificarTutor(this, formPlantilla, tutor));
+            }
+
+        }
+
+        private void btnBuscarPsi_Click_1(object sender, EventArgs e)
+        {
+            BindingList<PsicologoWS.psicologo> psicologos;
+            try
+            {
+                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre(txtBusqPsi.Text).ToList());
+            }
+            catch (ArgumentNullException ex)
+            {
+                psicologos = new BindingList<PsicologoWS.psicologo>();
+            }
+            dgvPsicologos.DataSource = psicologos;
+
+        }
+
+        private void btnInsertarPsi_Click_1(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(new frmInsertarPsicologo(this, formPlantilla));
+
+        }
+
+        private void btnModificarPsi_Click_1(object sender, EventArgs e)
+        {
+
+            if (dgvPsicologos.RowCount != 0)
+            {
+                PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.CurrentRow.DataBoundItem;
+                frmModificarPsicologo formModificarPsicologo = new frmModificarPsicologo(this, formPlantilla, psicologo);
+
+                formPlantilla.abrirFormulario(formModificarPsicologo);
+            }
+
+        }
+
+        private void btnListarTut_Click_1(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(new frmListaTutores());
+        }
+
+        private void btnListarPsi_Click_1(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(new Header());
+        }
+
+        private void btnDeshabilitar_Click_1(object sender, EventArgs e)
         {
             if (dgvPsicologos.SelectedRows.Count > 0)
             {
@@ -219,17 +233,7 @@ namespace InterfazDATMA.Administrador
                     daoTutor.eliminarTutor(tutor.idPersona, tutor.idUsuario);
                 }
             }
-        }
 
-        private void dgvTutores_SelectionChanged(object sender, EventArgs e)
-        {
-            dgvPsicologos.ClearSelection();
         }
-
-        private void dgvPsicologos_SelectionChanged(object sender, EventArgs e)
-        {
-            dgvTutores.ClearSelection();
-        }
-
     }
 }

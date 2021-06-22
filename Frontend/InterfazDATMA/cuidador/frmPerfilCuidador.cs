@@ -54,9 +54,10 @@ namespace InterfazDATMA.cuidador
             picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
         }
 
-        private void Cursos_Click(object sender, EventArgs e)
+
+        private void Cursos_Click_1(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this,plantillaGestion));
+            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this, plantillaGestion));
         }
     }
 }
