@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +20,7 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion plantillaGestion;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private TutorWS.TutorWSClient daoTutor;
+
         public frmGestionarModuloAdmin(frmPlantillaGestion plantilla)
         {
             InitializeComponent();
@@ -26,13 +30,44 @@ namespace InterfazDATMA.Administrador
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             daoTutor = new TutorWS.TutorWSClient();
 
+            // Tutores
+            typeof(DataGridView).InvokeMember(
+            "DoubleBuffered",
+            BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+            null,
+            dgvTutores,
+            new object[] { true });
             dgvTutores.AutoGenerateColumns = false;
             dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTutores.DataSource = daoTutor.listarTodosTutores();
 
+            // Psicologos
+            typeof(DataGridView).InvokeMember(
+            "DoubleBuffered",
+            BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+            null,
+            dgvPsicologos,
+            new object[] { true });
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPsicologos.DataSource = daoPsicologo.listarTodosPsicologos();
+        }
+
+        public byte[] ResizeImage(byte[] data, int width)
+        {
+            using (var stream = new MemoryStream(data))
+            {
+                var image = Image.FromStream(stream);
+
+                var height = (width * image.Height) / image.Width;
+                var thumbnail = image.GetThumbnailImage(width, height, null, IntPtr.Zero);
+
+                using (var thumbnailStream = new MemoryStream())
+                {
+                    thumbnail.Save(thumbnailStream, ImageFormat.Jpeg);
+                    return thumbnailStream.ToArray();
+                }
+            }
         }
 
         private void btnOpPersona_Click(object sender, EventArgs e)
@@ -49,7 +84,17 @@ namespace InterfazDATMA.Administrador
         {
             TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
             dgvTutores.Rows[e.RowIndex].Cells[0].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-            dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
+            try
+            {
+                if (tutor.fotoPerfil != null)
+                {
+                    dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
+                }
+
+            }
+            catch (Exception ex){
+                System.Console.WriteLine(ex.Message);
+            }
             dgvTutores.RowTemplate.Height = 100;
         }
 
@@ -57,7 +102,17 @@ namespace InterfazDATMA.Administrador
         {
             PsicologoWS.psicologo psi = (PsicologoWS.psicologo)dgvPsicologos.Rows[e.RowIndex].DataBoundItem;
             dgvPsicologos.Rows[e.RowIndex].Cells[0].Value = psi.nombre + " " + psi.apellidoPaterno + " " + psi.apellidoMaterno;
-            dgvPsicologos.Rows[e.RowIndex].Cells[1].Value = psi.fotoPerfil;
+            try
+            {
+                if (psi.fotoPerfil != null)
+                {
+                    dgvPsicologos.Rows[e.RowIndex].Cells[1].Value = psi.fotoPerfil;
+                }
+
+            }
+            catch (Exception ex){
+                System.Console.WriteLine(ex.Message);
+            }
             dgvPsicologos.RowTemplate.Height = 100;
         }
 
@@ -69,6 +124,16 @@ namespace InterfazDATMA.Administrador
         private void dgvPsicologos_SelectionChanged(object sender, EventArgs e)
         {
             dgvPsicologos.ClearSelection();
+        }
+
+        private void dgvTutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPsicologos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

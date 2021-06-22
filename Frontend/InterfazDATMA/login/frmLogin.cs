@@ -94,7 +94,6 @@ namespace InterfazDATMA
             //0->cuidador
             //1->psicologo
             //2->admin
-
         }
     }
 }
