@@ -65,7 +65,8 @@ namespace InterfazDATMA.Administrador
             this.FechaFinal});
             this.dgvCursosReq.EnableHeadersVisualStyles = false;
             this.dgvCursosReq.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursosReq.Location = new System.Drawing.Point(103, 49);
+            this.dgvCursosReq.Location = new System.Drawing.Point(137, 61);
+            this.dgvCursosReq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCursosReq.Name = "dgvCursosReq";
             this.dgvCursosReq.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -84,7 +85,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCursosReq.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCursosReq.RowTemplate.Height = 28;
-            this.dgvCursosReq.Size = new System.Drawing.Size(898, 361);
+            this.dgvCursosReq.Size = new System.Drawing.Size(1197, 451);
             this.dgvCursosReq.TabIndex = 29;
             this.dgvCursosReq.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCursosReq_CellFormatting);
             // 
@@ -125,9 +126,10 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(602, 446);
+            this.btnCancelar.Location = new System.Drawing.Point(803, 558);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(161, 43);
+            this.btnCancelar.Size = new System.Drawing.Size(215, 54);
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -140,9 +142,10 @@ namespace InterfazDATMA.Administrador
             this.btnSeleccionarCur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarCur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSeleccionarCur.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionarCur.Location = new System.Drawing.Point(271, 446);
+            this.btnSeleccionarCur.Location = new System.Drawing.Point(361, 558);
+            this.btnSeleccionarCur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeleccionarCur.Name = "btnSeleccionarCur";
-            this.btnSeleccionarCur.Size = new System.Drawing.Size(161, 43);
+            this.btnSeleccionarCur.Size = new System.Drawing.Size(215, 54);
             this.btnSeleccionarCur.TabIndex = 30;
             this.btnSeleccionarCur.Text = "Seleccionar";
             this.btnSeleccionarCur.UseVisualStyleBackColor = false;
@@ -150,14 +153,17 @@ namespace InterfazDATMA.Administrador
             // 
             // frmBuscarCursosRequerimiento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1108, 539);
+            this.ClientSize = new System.Drawing.Size(1477, 674);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSeleccionarCur);
             this.Controls.Add(this.dgvCursosReq);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBuscarCursosRequerimiento";
+            this.Sizable = false;
             this.Text = "frmBuscarCursosRequerimiento";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursosReq)).EndInit();
             this.ResumeLayout(false);

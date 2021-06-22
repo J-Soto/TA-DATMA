@@ -29,6 +29,7 @@ namespace InterfazDATMA.Administrador
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Header));
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -48,33 +49,20 @@ namespace InterfazDATMA.Administrador
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 25F);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(106, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(536, 81);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lista Psicologos";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(511, 280);
+            resources.ApplyResources(this.txtBuscar, "txtBuscar");
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(613, 31);
-            this.txtBuscar.TabIndex = 5;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10F);
+            resources.ApplyResources(this.btnBuscar, "btnBuscar");
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1250, 265);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(174, 46);
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -92,116 +80,92 @@ namespace InterfazDATMA.Administrador
             this.colTelf,
             this.colCel,
             this.colEmail});
-            this.dgvPsico.Location = new System.Drawing.Point(64, 372);
+            resources.ApplyResources(this.dgvPsico, "dgvPsico");
             this.dgvPsico.Name = "dgvPsico";
-            this.dgvPsico.RowHeadersWidth = 82;
             this.dgvPsico.RowTemplate.Height = 33;
-            this.dgvPsico.Size = new System.Drawing.Size(1566, 491);
-            this.dgvPsico.TabIndex = 8;
             // 
             // colNombre
             // 
             this.colNombre.DataPropertyName = "nombre";
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.MinimumWidth = 10;
+            resources.ApplyResources(this.colNombre, "colNombre");
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 200;
             // 
             // colApPat
             // 
             this.colApPat.DataPropertyName = "apellidoPaterno";
-            this.colApPat.HeaderText = "Apellido Paterno";
-            this.colApPat.MinimumWidth = 10;
+            resources.ApplyResources(this.colApPat, "colApPat");
             this.colApPat.Name = "colApPat";
             this.colApPat.ReadOnly = true;
-            this.colApPat.Width = 200;
             // 
             // colApMat
             // 
             this.colApMat.DataPropertyName = "apellidoMaterno";
-            this.colApMat.HeaderText = "Apellido Materno";
-            this.colApMat.MinimumWidth = 10;
+            resources.ApplyResources(this.colApMat, "colApMat");
             this.colApMat.Name = "colApMat";
             this.colApMat.ReadOnly = true;
-            this.colApMat.Width = 200;
             // 
             // colDNI
             // 
             this.colDNI.DataPropertyName = "DNI";
-            this.colDNI.HeaderText = "DNI";
-            this.colDNI.MinimumWidth = 10;
+            resources.ApplyResources(this.colDNI, "colDNI");
             this.colDNI.Name = "colDNI";
             this.colDNI.ReadOnly = true;
-            this.colDNI.Width = 200;
             // 
             // colFechaNac
             // 
             this.colFechaNac.DataPropertyName = "fechaNacimiento";
-            this.colFechaNac.HeaderText = "Fecha de Nacimiento";
-            this.colFechaNac.MinimumWidth = 10;
+            resources.ApplyResources(this.colFechaNac, "colFechaNac");
             this.colFechaNac.Name = "colFechaNac";
             this.colFechaNac.ReadOnly = true;
-            this.colFechaNac.Width = 200;
             // 
             // colGen
             // 
             this.colGen.DataPropertyName = "genero";
-            this.colGen.HeaderText = "Genero";
-            this.colGen.MinimumWidth = 10;
+            resources.ApplyResources(this.colGen, "colGen");
             this.colGen.Name = "colGen";
             this.colGen.ReadOnly = true;
-            this.colGen.Width = 200;
             // 
             // colEdad
             // 
             this.colEdad.DataPropertyName = "edad";
-            this.colEdad.HeaderText = "Edad";
-            this.colEdad.MinimumWidth = 10;
+            resources.ApplyResources(this.colEdad, "colEdad");
             this.colEdad.Name = "colEdad";
             this.colEdad.ReadOnly = true;
-            this.colEdad.Width = 200;
             // 
             // colTelf
             // 
             this.colTelf.DataPropertyName = "telefono";
-            this.colTelf.HeaderText = "Telefono";
-            this.colTelf.MinimumWidth = 10;
+            resources.ApplyResources(this.colTelf, "colTelf");
             this.colTelf.Name = "colTelf";
             this.colTelf.ReadOnly = true;
-            this.colTelf.Width = 200;
             // 
             // colCel
             // 
             this.colCel.DataPropertyName = "celular";
-            this.colCel.HeaderText = "Celular";
-            this.colCel.MinimumWidth = 10;
+            resources.ApplyResources(this.colCel, "colCel");
             this.colCel.Name = "colCel";
             this.colCel.ReadOnly = true;
-            this.colCel.Width = 200;
             // 
             // colEmail
             // 
             this.colEmail.DataPropertyName = "correo";
-            this.colEmail.HeaderText = "Correo";
-            this.colEmail.MinimumWidth = 10;
+            resources.ApplyResources(this.colEmail, "colEmail");
             this.colEmail.Name = "colEmail";
             this.colEmail.ReadOnly = true;
-            this.colEmail.Width = 200;
             // 
             // Header
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1871, 963);
+            this.ControlBox = false;
             this.Controls.Add(this.dgvPsico);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Header";
-            this.Text = "frmListaPsicologos";
+            this.Sizable = false;
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

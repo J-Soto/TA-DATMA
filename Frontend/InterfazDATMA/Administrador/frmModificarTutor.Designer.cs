@@ -29,6 +29,7 @@ namespace InterfazDATMA.Administrador
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarTutor));
             this.btnSubirFoto = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtConfirmarPass = new System.Windows.Forms.TextBox();
@@ -67,95 +68,56 @@ namespace InterfazDATMA.Administrador
             // 
             // btnSubirFoto
             // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(724, 178);
+            resources.ApplyResources(this.btnSubirFoto, "btnSubirFoto");
             this.btnSubirFoto.Name = "btnSubirFoto";
-            this.btnSubirFoto.Size = new System.Drawing.Size(30, 23);
-            this.btnSubirFoto.TabIndex = 137;
-            this.btnSubirFoto.Text = "...";
             this.btnSubirFoto.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(524, 178);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 17);
-            this.label1.TabIndex = 135;
-            this.label1.Text = "Foto";
             // 
             // txtConfirmarPass
             // 
-            this.txtConfirmarPass.Location = new System.Drawing.Point(193, 317);
+            resources.ApplyResources(this.txtConfirmarPass, "txtConfirmarPass");
             this.txtConfirmarPass.Name = "txtConfirmarPass";
-            this.txtConfirmarPass.Size = new System.Drawing.Size(167, 20);
-            this.txtConfirmarPass.TabIndex = 134;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(193, 282);
+            resources.ApplyResources(this.txtPass, "txtPass");
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(167, 20);
-            this.txtPass.TabIndex = 133;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(193, 249);
+            resources.ApplyResources(this.txtUser, "txtUser");
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(279, 20);
-            this.txtUser.TabIndex = 132;
             // 
             // lblConfirmarPass
             // 
-            this.lblConfirmarPass.AutoSize = true;
-            this.lblConfirmarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblConfirmarPass, "lblConfirmarPass");
             this.lblConfirmarPass.ForeColor = System.Drawing.Color.White;
-            this.lblConfirmarPass.Location = new System.Drawing.Point(26, 317);
-            this.lblConfirmarPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmarPass.Name = "lblConfirmarPass";
-            this.lblConfirmarPass.Size = new System.Drawing.Size(146, 17);
-            this.lblConfirmarPass.TabIndex = 131;
-            this.lblConfirmarPass.Text = "Confirmar Contraseña";
             // 
             // lblPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(26, 282);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(81, 17);
-            this.lblPassword.TabIndex = 130;
-            this.lblPassword.Text = "Contraseña";
             // 
             // lblUser
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblUser, "lblUser");
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(26, 249);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(57, 17);
-            this.lblUser.TabIndex = 129;
-            this.lblUser.Text = "Usuario";
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(29, 380);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(179, 29);
-            this.btnCancelar.TabIndex = 128;
-            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -163,15 +125,9 @@ namespace InterfazDATMA.Administrador
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnSiguiente.FlatAppearance.BorderSize = 0;
-            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.btnSiguiente, "btnSiguiente");
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(595, 380);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(179, 29);
-            this.btnSiguiente.TabIndex = 127;
-            this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
@@ -179,244 +135,147 @@ namespace InterfazDATMA.Administrador
             // 
             this.btnNuevoDistrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
             this.btnNuevoDistrito.FlatAppearance.BorderSize = 0;
-            this.btnNuevoDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            resources.ApplyResources(this.btnNuevoDistrito, "btnNuevoDistrito");
             this.btnNuevoDistrito.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoDistrito.Location = new System.Drawing.Point(365, 178);
-            this.btnNuevoDistrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNuevoDistrito.Name = "btnNuevoDistrito";
-            this.btnNuevoDistrito.Size = new System.Drawing.Size(107, 21);
-            this.btnNuevoDistrito.TabIndex = 126;
-            this.btnNuevoDistrito.Text = "Agregar Distrito";
             this.btnNuevoDistrito.UseVisualStyleBackColor = false;
             this.btnNuevoDistrito.Click += new System.EventHandler(this.btnNuevoDistrito_Click);
             // 
             // lblGenero
             // 
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblGenero, "lblGenero");
             this.lblGenero.ForeColor = System.Drawing.Color.White;
-            this.lblGenero.Location = new System.Drawing.Point(524, 144);
-            this.lblGenero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(56, 17);
-            this.lblGenero.TabIndex = 125;
-            this.lblGenero.Text = "Genero";
             // 
             // txtCel
             // 
-            this.txtCel.Location = new System.Drawing.Point(607, 109);
+            resources.ApplyResources(this.txtCel, "txtCel");
             this.txtCel.Name = "txtCel";
-            this.txtCel.Size = new System.Drawing.Size(167, 20);
-            this.txtCel.TabIndex = 124;
             // 
             // txtTelf
             // 
-            this.txtTelf.Location = new System.Drawing.Point(607, 74);
+            resources.ApplyResources(this.txtTelf, "txtTelf");
             this.txtTelf.Name = "txtTelf";
-            this.txtTelf.Size = new System.Drawing.Size(167, 20);
-            this.txtTelf.TabIndex = 123;
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(607, 43);
+            resources.ApplyResources(this.txtDni, "txtDni");
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(167, 20);
-            this.txtDni.TabIndex = 122;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(193, 214);
+            resources.ApplyResources(this.txtCorreo, "txtCorreo");
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(279, 20);
-            this.txtCorreo.TabIndex = 121;
             // 
             // txtApMat
             // 
-            this.txtApMat.Location = new System.Drawing.Point(193, 110);
+            resources.ApplyResources(this.txtApMat, "txtApMat");
             this.txtApMat.Name = "txtApMat";
-            this.txtApMat.Size = new System.Drawing.Size(167, 20);
-            this.txtApMat.TabIndex = 119;
             // 
             // txtApPat
             // 
-            this.txtApPat.Location = new System.Drawing.Point(193, 75);
+            resources.ApplyResources(this.txtApPat, "txtApPat");
             this.txtApPat.Name = "txtApPat";
-            this.txtApPat.Size = new System.Drawing.Size(167, 20);
-            this.txtApPat.TabIndex = 118;
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Enabled = false;
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(193, 144);
+            resources.ApplyResources(this.dtpFechaNacimiento, "dtpFechaNacimiento");
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(279, 20);
-            this.dtpFechaNacimiento.TabIndex = 117;
             // 
             // rbtnHombre
             // 
-            this.rbtnHombre.AutoSize = true;
+            resources.ApplyResources(this.rbtnHombre, "rbtnHombre");
             this.rbtnHombre.ForeColor = System.Drawing.Color.White;
-            this.rbtnHombre.Location = new System.Drawing.Point(607, 144);
             this.rbtnHombre.Name = "rbtnHombre";
-            this.rbtnHombre.Size = new System.Drawing.Size(73, 17);
-            this.rbtnHombre.TabIndex = 116;
             this.rbtnHombre.TabStop = true;
-            this.rbtnHombre.Text = "Masculino";
             this.rbtnHombre.UseVisualStyleBackColor = true;
             // 
             // rbtnMujer
             // 
-            this.rbtnMujer.AutoSize = true;
+            resources.ApplyResources(this.rbtnMujer, "rbtnMujer");
             this.rbtnMujer.ForeColor = System.Drawing.Color.White;
-            this.rbtnMujer.Location = new System.Drawing.Point(703, 144);
             this.rbtnMujer.Name = "rbtnMujer";
-            this.rbtnMujer.Size = new System.Drawing.Size(71, 17);
-            this.rbtnMujer.TabIndex = 115;
             this.rbtnMujer.TabStop = true;
-            this.rbtnMujer.Text = "Femenino";
             this.rbtnMujer.UseVisualStyleBackColor = true;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(193, 42);
+            resources.ApplyResources(this.txtNombre, "txtNombre");
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(279, 20);
-            this.txtNombre.TabIndex = 114;
             // 
             // lblApMat
             // 
-            this.lblApMat.AutoSize = true;
-            this.lblApMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblApMat, "lblApMat");
             this.lblApMat.ForeColor = System.Drawing.Color.White;
-            this.lblApMat.Location = new System.Drawing.Point(26, 110);
-            this.lblApMat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApMat.Name = "lblApMat";
-            this.lblApMat.Size = new System.Drawing.Size(114, 17);
-            this.lblApMat.TabIndex = 113;
-            this.lblApMat.Text = "Apellido Materno";
             // 
             // lblCorreo
             // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblCorreo, "lblCorreo");
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(26, 214);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(51, 17);
-            this.lblCorreo.TabIndex = 112;
-            this.lblCorreo.Text = "Correo";
             // 
             // lblDni
             // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblDni, "lblDni");
             this.lblDni.ForeColor = System.Drawing.Color.White;
-            this.lblDni.Location = new System.Drawing.Point(524, 44);
-            this.lblDni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(29, 17);
-            this.lblDni.TabIndex = 111;
-            this.lblDni.Text = "Dni";
             // 
             // lblDistrito
             // 
-            this.lblDistrito.AutoSize = true;
-            this.lblDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblDistrito, "lblDistrito");
             this.lblDistrito.ForeColor = System.Drawing.Color.White;
-            this.lblDistrito.Location = new System.Drawing.Point(26, 178);
-            this.lblDistrito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDistrito.Name = "lblDistrito";
-            this.lblDistrito.Size = new System.Drawing.Size(52, 17);
-            this.lblDistrito.TabIndex = 110;
-            this.lblDistrito.Text = "Distrito";
             // 
             // lblCelular
             // 
-            this.lblCelular.AutoSize = true;
-            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblCelular, "lblCelular");
             this.lblCelular.ForeColor = System.Drawing.Color.White;
-            this.lblCelular.Location = new System.Drawing.Point(524, 110);
-            this.lblCelular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(52, 17);
-            this.lblCelular.TabIndex = 109;
-            this.lblCelular.Text = "Celular";
             // 
             // lblApPat
             // 
-            this.lblApPat.AutoSize = true;
-            this.lblApPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblApPat, "lblApPat");
             this.lblApPat.ForeColor = System.Drawing.Color.White;
-            this.lblApPat.Location = new System.Drawing.Point(26, 75);
-            this.lblApPat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApPat.Name = "lblApPat";
-            this.lblApPat.Size = new System.Drawing.Size(112, 17);
-            this.lblApPat.TabIndex = 108;
-            this.lblApPat.Text = "Apellido Paterno";
             // 
             // lblFechaNacimiento
             // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblFechaNacimiento, "lblFechaNacimiento");
             this.lblFechaNacimiento.ForeColor = System.Drawing.Color.White;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(26, 144);
-            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(141, 17);
-            this.lblFechaNacimiento.TabIndex = 107;
-            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
             // lblTelefono
             // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblTelefono, "lblTelefono");
             this.lblTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblTelefono.Location = new System.Drawing.Point(524, 75);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(64, 17);
-            this.lblTelefono.TabIndex = 106;
-            this.lblTelefono.Text = "Teléfono";
             // 
             // lblNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.lblNombre, "lblNombre");
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(26, 42);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 17);
-            this.lblNombre.TabIndex = 105;
-            this.lblNombre.Text = "Nombres";
             // 
             // pbFoto
             // 
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.pbFoto.Location = new System.Drawing.Point(607, 178);
+            resources.ApplyResources(this.pbFoto, "pbFoto");
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(111, 126);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFoto.TabIndex = 136;
             this.pbFoto.TabStop = false;
             // 
             // txtDistrito
             // 
-            this.txtDistrito.Location = new System.Drawing.Point(193, 178);
+            resources.ApplyResources(this.txtDistrito, "txtDistrito");
             this.txtDistrito.Name = "txtDistrito";
-            this.txtDistrito.Size = new System.Drawing.Size(167, 20);
-            this.txtDistrito.TabIndex = 138;
             // 
             // frmModificarTutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.pbFoto);
@@ -451,7 +310,7 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmModificarTutor";
-            this.Text = "frmModificarTutor";
+            this.Sizable = false;
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

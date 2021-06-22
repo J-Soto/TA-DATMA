@@ -36,14 +36,14 @@ namespace InterfazDATMA.Administrador
             this.txtNombrePsico = new System.Windows.Forms.TextBox();
             this.btnBuscarPsico = new System.Windows.Forms.Button();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
-            this.btnAgregarPsico = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregarPsico = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,17 +52,19 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(68, 46);
+            this.lblTutoresUser.Location = new System.Drawing.Point(91, 58);
+            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(221, 29);
+            this.lblTutoresUser.Size = new System.Drawing.Size(289, 37);
             this.lblTutoresUser.TabIndex = 16;
             this.lblTutoresUser.Text = "Nombre Psicologo:";
             // 
             // txtNombrePsico
             // 
-            this.txtNombrePsico.Location = new System.Drawing.Point(295, 50);
+            this.txtNombrePsico.Location = new System.Drawing.Point(393, 62);
+            this.txtNombrePsico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombrePsico.Name = "txtNombrePsico";
-            this.txtNombrePsico.Size = new System.Drawing.Size(453, 26);
+            this.txtNombrePsico.Size = new System.Drawing.Size(603, 31);
             this.txtNombrePsico.TabIndex = 17;
             // 
             // btnBuscarPsico
@@ -72,9 +74,10 @@ namespace InterfazDATMA.Administrador
             this.btnBuscarPsico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPsico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnBuscarPsico.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPsico.Location = new System.Drawing.Point(778, 46);
+            this.btnBuscarPsico.Location = new System.Drawing.Point(1037, 58);
+            this.btnBuscarPsico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarPsico.Name = "btnBuscarPsico";
-            this.btnBuscarPsico.Size = new System.Drawing.Size(115, 38);
+            this.btnBuscarPsico.Size = new System.Drawing.Size(153, 48);
             this.btnBuscarPsico.TabIndex = 25;
             this.btnBuscarPsico.Text = "Buscar";
             this.btnBuscarPsico.UseVisualStyleBackColor = false;
@@ -105,7 +108,8 @@ namespace InterfazDATMA.Administrador
             this.Celular});
             this.dgvPsicologos.EnableHeadersVisualStyles = false;
             this.dgvPsicologos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPsicologos.Location = new System.Drawing.Point(73, 121);
+            this.dgvPsicologos.Location = new System.Drawing.Point(97, 151);
+            this.dgvPsicologos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPsicologos.Name = "dgvPsicologos";
             this.dgvPsicologos.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -124,39 +128,9 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvPsicologos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPsicologos.RowTemplate.Height = 28;
-            this.dgvPsicologos.Size = new System.Drawing.Size(898, 361);
+            this.dgvPsicologos.Size = new System.Drawing.Size(1197, 451);
             this.dgvPsicologos.TabIndex = 26;
             this.dgvPsicologos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPsicologos_CellFormatting);
-            // 
-            // btnAgregarPsico
-            // 
-            this.btnAgregarPsico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnAgregarPsico.FlatAppearance.BorderSize = 0;
-            this.btnAgregarPsico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPsico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAgregarPsico.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPsico.Location = new System.Drawing.Point(279, 529);
-            this.btnAgregarPsico.Name = "btnAgregarPsico";
-            this.btnAgregarPsico.Size = new System.Drawing.Size(161, 43);
-            this.btnAgregarPsico.TabIndex = 27;
-            this.btnAgregarPsico.Text = "Seleccionar";
-            this.btnAgregarPsico.UseVisualStyleBackColor = false;
-            this.btnAgregarPsico.Click += new System.EventHandler(this.btnAgregarPsico_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(600, 529);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(161, 43);
-            this.btnCancelar.TabIndex = 28;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Nombre
             // 
@@ -206,19 +180,54 @@ namespace InterfazDATMA.Administrador
             this.Celular.ReadOnly = true;
             this.Celular.Width = 150;
             // 
+            // btnAgregarPsico
+            // 
+            this.btnAgregarPsico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.btnAgregarPsico.FlatAppearance.BorderSize = 0;
+            this.btnAgregarPsico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarPsico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAgregarPsico.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarPsico.Location = new System.Drawing.Point(372, 661);
+            this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarPsico.Name = "btnAgregarPsico";
+            this.btnAgregarPsico.Size = new System.Drawing.Size(215, 54);
+            this.btnAgregarPsico.TabIndex = 27;
+            this.btnAgregarPsico.Text = "Seleccionar";
+            this.btnAgregarPsico.UseVisualStyleBackColor = false;
+            this.btnAgregarPsico.Click += new System.EventHandler(this.btnAgregarPsico_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(800, 661);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(215, 54);
+            this.btnCancelar.TabIndex = 28;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmBuscarPsicologoGrupo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1103, 606);
+            this.ClientSize = new System.Drawing.Size(1471, 758);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregarPsico);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.btnBuscarPsico);
             this.Controls.Add(this.txtNombrePsico);
             this.Controls.Add(this.lblTutoresUser);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBuscarPsicologoGrupo";
+            this.Sizable = false;
             this.Text = "frmBuscarPsicologoGrupo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).EndInit();
             this.ResumeLayout(false);

@@ -67,7 +67,7 @@ namespace InterfazDATMA
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvModulos.Location = new System.Drawing.Point(176, 178);
-            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvModulos.Name = "dgvModulos";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -147,7 +147,7 @@ namespace InterfazDATMA
             this.btnRegresarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresarCurso.ForeColor = System.Drawing.Color.White;
             this.btnRegresarCurso.Location = new System.Drawing.Point(1175, 914);
-            this.btnRegresarCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresarCurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresarCurso.Name = "btnRegresarCurso";
             this.btnRegresarCurso.Size = new System.Drawing.Size(275, 50);
             this.btnRegresarCurso.TabIndex = 11;
@@ -161,11 +161,13 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.btnRegresarCurso);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvModulos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListaCuidadoresDePsicologo";
+            this.Sizable = false;
             this.Text = "frmListaCuidadoresDePsicologo";
             this.Load += new System.EventHandler(this.frmListaCuidadoresDePsicologo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).EndInit();

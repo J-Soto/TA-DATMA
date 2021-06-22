@@ -35,6 +35,7 @@ namespace InterfazDATMA
             this.btnAnt = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.pnlContenido = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxWalk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +104,16 @@ namespace InterfazDATMA
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click_1);
             // 
+            // pnlContenido
+            // 
+            this.pnlContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
+            this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenido.Location = new System.Drawing.Point(0, 0);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlContenido.Name = "pnlContenido";
+            this.pnlContenido.Size = new System.Drawing.Size(1744, 1125);
+            this.pnlContenido.TabIndex = 24;
+            // 
             // frmWalkthrough
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -114,12 +125,12 @@ namespace InterfazDATMA
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnAnt);
             this.Controls.Add(this.pictureboxWalk);
+            this.Controls.Add(this.pnlContenido);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmWalkthrough";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Tutorial";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxWalk)).EndInit();
             this.ResumeLayout(false);
@@ -133,5 +144,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.Button btnAnt;
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Panel pnlContenido;
     }
 }

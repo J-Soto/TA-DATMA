@@ -52,7 +52,7 @@ namespace InterfazDATMA.Administrador
             this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Header.Font = new System.Drawing.Font("Century Gothic", 25F);
             this.Header.ForeColor = System.Drawing.Color.White;
-            this.Header.Location = new System.Drawing.Point(156, 24);
+            this.Header.Location = new System.Drawing.Point(151, 64);
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(439, 81);
             this.Header.TabIndex = 2;
@@ -200,13 +200,14 @@ namespace InterfazDATMA.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1933, 892);
+            this.ControlBox = false;
             this.Controls.Add(this.dgvTutor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.Header);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmListaTutores";
+            this.Sizable = false;
             this.Text = "frmListaTutores";
             this.Load += new System.EventHandler(this.frmListaTutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).EndInit();
