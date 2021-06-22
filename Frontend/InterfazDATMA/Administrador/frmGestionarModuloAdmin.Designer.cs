@@ -84,7 +84,7 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(12, 137);
+            this.lblTutoresUser.Location = new System.Drawing.Point(29, 137);
             this.lblTutoresUser.Name = "lblTutoresUser";
             this.lblTutoresUser.Size = new System.Drawing.Size(198, 29);
             this.lblTutoresUser.TabIndex = 12;
@@ -187,7 +187,7 @@ namespace InterfazDATMA.Administrador
             this.foto});
             this.dgvTutores.EnableHeadersVisualStyles = false;
             this.dgvTutores.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvTutores.Location = new System.Drawing.Point(12, 182);
+            this.dgvTutores.Location = new System.Drawing.Point(34, 182);
             this.dgvTutores.Name = "dgvTutores";
             this.dgvTutores.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

@@ -1,5 +1,6 @@
 ﻿using MaterialSkin.Controls;
 using InterfazDATMA.plantilla;
+using InterfazDATMA.validacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,8 @@ namespace InterfazDATMA.Administrador
         private TutorWS.TutorWSClient daoTutor;
 
         private TutorWS.tutor tutor;
+        private string rutaFoto = "";
+
         public frmModificarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
             InitializeComponent();
@@ -110,6 +113,19 @@ namespace InterfazDATMA.Administrador
                 tutor.genero = 'F';
             }
 
+
+            //Foto es opcional:
+            if (rutaFoto.Equals("") != true)
+            {
+                FileStream fs = new FileStream(rutaFoto, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                tutor.fotoPerfil = br.ReadBytes((int)fs.Length);
+            }
+            else
+            {
+                tutor.fotoPerfil = null;
+            }
+
             // Se inserta también el tutor para la siguiente pantalla
             int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
             if (verificado == -1)
@@ -127,6 +143,23 @@ namespace InterfazDATMA.Administrador
 
         }
 
+        private void btnSubirFoto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                {
+                    rutaFoto = ofdSubirFoto.FileName;
+                    //MessageBox.Show(rutaFoto);
+                    pbFoto.Image = Image.FromFile(rutaFoto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnNuevoDistrito_Click(object sender, EventArgs e)
         {
             frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
@@ -141,5 +174,31 @@ namespace InterfazDATMA.Administrador
             }
         }
 
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmModificarTutor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubirFoto_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                {
+                    rutaFoto = ofdSubirFoto.FileName;
+                    //MessageBox.Show(rutaFoto);
+                    pbFoto.Image = Image.FromFile(rutaFoto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
