@@ -1,5 +1,5 @@
 ﻿using InterfazDATMA.plantilla;
-
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmMenuUsuario : Form
+    public partial class frmMenuUsuario : MaterialForm
     {
         private ImageList walkthrough = new ImageList();
         private frmPlantillaGestion plantillaGestion;

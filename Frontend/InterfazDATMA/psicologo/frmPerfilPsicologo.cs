@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.psicologo
 {
-    public partial class frmPerfilPsicologo : Form
+    public partial class frmPerfilPsicologo : MaterialForm
     {
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private frmPlantillaGestion plantillaGestion;

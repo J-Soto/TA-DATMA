@@ -1,8 +1,10 @@
-﻿using System.Windows.Forms;
+﻿using MaterialSkin.Controls;
+
+using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmAgregarMaterialPsicologo : Form
+    public partial class frmAgregarMaterialPsicologo : MaterialForm
     {
         public frmAgregarMaterialPsicologo()
         {

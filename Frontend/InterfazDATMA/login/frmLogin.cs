@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ using System.ServiceModel;
 
 namespace InterfazDATMA
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : MaterialForm
     {
         private string _user = null;
         private string _password = null;

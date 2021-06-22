@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmSeleccionarTemasDeCurso : Form
+    public partial class frmSeleccionarTemasDeCurso : MaterialForm
     {
         //forms:
         private frmInsertarCurso formInsertarCurso;

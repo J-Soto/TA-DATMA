@@ -10,10 +10,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MaterialSkin.Controls;
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmInsertarCurso : Form
+    public partial class frmInsertarCurso : MaterialForm
     {
         private frmPlantillaGestion formPlantillaGest;
         private frmOperacionesCursos formOperacionesCursos;

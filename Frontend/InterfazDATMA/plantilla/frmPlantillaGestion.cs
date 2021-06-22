@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ using InterfazDATMA.psicologo;
 
 namespace InterfazDATMA.plantilla
 {
-    public partial class frmPlantillaGestion : Form
+    public partial class frmPlantillaGestion : MaterialForm
     {
         private Form formularioActivo = null;
         private Form formLogout;

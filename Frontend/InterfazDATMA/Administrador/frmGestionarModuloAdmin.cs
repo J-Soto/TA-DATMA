@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmGestionarModuloAdmin : Form
+    public partial class frmGestionarModuloAdmin : MaterialForm
     {
         private frmPlantillaGestion plantillaGestion;
         private PsicologoWS.PsicologoWSClient daoPsicologo;

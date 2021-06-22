@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace InterfazDATMA
 {
-    public partial class frmWalkthrough : Form
+    public partial class frmWalkthrough : MaterialForm
     {
         private int estado = 1;
         private frmPlantillaGestion plantillaGestion;

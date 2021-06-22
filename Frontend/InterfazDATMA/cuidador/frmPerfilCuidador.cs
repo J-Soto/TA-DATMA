@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.cuidador
 {
-    public partial class frmPerfilCuidador : Form
+    public partial class frmPerfilCuidador : MaterialForm
     {
         private TutorWS.TutorWSClient daoTutor;
         private frmPlantillaGestion plantillaGestion;

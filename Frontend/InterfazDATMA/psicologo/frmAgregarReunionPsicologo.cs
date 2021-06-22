@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmAgregarReunionPsicologo : Form
+    public partial class frmAgregarReunionPsicologo : MaterialForm
     {
         public frmAgregarReunionPsicologo()
         {

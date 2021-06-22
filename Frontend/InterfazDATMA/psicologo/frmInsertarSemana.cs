@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmInsertarSemana : Form
+    public partial class frmInsertarSemana : MaterialForm
     {
         private TemaWS.TemaWSClient daoTema = new TemaWS.TemaWSClient();
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();

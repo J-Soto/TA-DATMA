@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.CursoWS;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.CursoWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmBuscarCursosRequerimiento : Form
+    public partial class frmBuscarCursosRequerimiento : MaterialForm
     {
 
         private CursoWS.CursoWSClient daoCurso;

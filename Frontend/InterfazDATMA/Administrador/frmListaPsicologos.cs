@@ -1,5 +1,5 @@
-﻿using InterfazDATMA.PsicologoWS;
-
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.PsicologoWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class Header : Form
+    public partial class Header : MaterialForm
     {
         private PsicologoWS.PsicologoWSClient daoPsicologo;
 

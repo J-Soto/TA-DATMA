@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using InterfazDATMA.util;
 using InterfazDATMA.validacion;
 using System;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmCrearGrupo : Form
+    public partial class frmCrearGrupo : MaterialForm
     {
         private frmVerGruposCurso formVerGruposCurso;
         private frmPlantillaGestion formPlantillaGest;

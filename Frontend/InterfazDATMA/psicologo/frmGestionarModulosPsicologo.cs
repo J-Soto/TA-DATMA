@@ -10,9 +10,12 @@ using System.Windows.Forms;
 using InterfazDATMA;
 using InterfazDATMA.plantilla;
 
+using MaterialSkin.Controls;
+
+
 namespace InterfazDATMA
 {
-    public partial class frmGestionarModulosPsicologo : Form
+    public partial class frmGestionarModulosPsicologo : MaterialForm
     {
         private frmPlantillaGestion plantillaGestion;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
