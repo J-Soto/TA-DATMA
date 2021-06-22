@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmInsertarPreferencias : Form
+    public partial class frmInsertarPreferencias : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
         private frmInsertarTutor formAnterior;
@@ -20,6 +21,11 @@ namespace InterfazDATMA.Administrador
         public frmInsertarPreferencias(frmInsertarTutor formAnterior, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             this.formPlantilla = formPlantilla;
             this.formAnterior = formAnterior;
             daoTutor = new TutorWS.TutorWSClient();
@@ -32,9 +38,41 @@ namespace InterfazDATMA.Administrador
             tutorAux = tutor;
         }
 
+        private void frmInsertarPreferencias_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chblDispositivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(formAnterior);
+
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            tutorAux.dispositivos = 1;
+            // Insertar Dispositivos Electronicos
+            tutorAux.dispositivos = 0;
+            if (chblDispositivos.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 dispositivo
+            {
+                for (int x = 0; x < chblDispositivos.CheckedItems.Count; x++)
+                {
+                    if (chblDispositivos.GetItemChecked(x))
+                    {
+                        tutorAux.dispositivos = tutorAux.dispositivos + (int)Math.Pow(10, x);
+                    }
+                }
+            }
+            else
+            {
+                tutorAux.dispositivos = 0;
+            }
+
             tutorAux.tiposConexion = 1;
             tutorAux.gestante = 1;
             tutorAux.turno = 1;
@@ -70,20 +108,6 @@ namespace InterfazDATMA.Administrador
                     throw new Exception();
                 }
             }
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(formAnterior);
-        }
-
-        private void frmInsertarPreferencias_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chblDispositivos_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }

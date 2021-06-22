@@ -31,7 +31,7 @@ namespace InterfazDATMA
         {
             this.lblNotificacionActiva = new System.Windows.Forms.Label();
             this.lblAgradecimiento = new System.Windows.Forms.Label();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnAceptar = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // lblNotificacionActiva
@@ -39,9 +39,10 @@ namespace InterfazDATMA
             this.lblNotificacionActiva.AutoSize = true;
             this.lblNotificacionActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotificacionActiva.ForeColor = System.Drawing.Color.White;
-            this.lblNotificacionActiva.Location = new System.Drawing.Point(74, 50);
+            this.lblNotificacionActiva.Location = new System.Drawing.Point(148, 96);
+            this.lblNotificacionActiva.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNotificacionActiva.Name = "lblNotificacionActiva";
-            this.lblNotificacionActiva.Size = new System.Drawing.Size(138, 20);
+            this.lblNotificacionActiva.Size = new System.Drawing.Size(280, 37);
             this.lblNotificacionActiva.TabIndex = 0;
             this.lblNotificacionActiva.Text = "Notificacion Activa";
             // 
@@ -49,37 +50,40 @@ namespace InterfazDATMA
             // 
             this.lblAgradecimiento.AutoSize = true;
             this.lblAgradecimiento.ForeColor = System.Drawing.Color.White;
-            this.lblAgradecimiento.Location = new System.Drawing.Point(75, 103);
+            this.lblAgradecimiento.Location = new System.Drawing.Point(150, 198);
+            this.lblAgradecimiento.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblAgradecimiento.Name = "lblAgradecimiento";
-            this.lblAgradecimiento.Size = new System.Drawing.Size(144, 13);
+            this.lblAgradecimiento.Size = new System.Drawing.Size(286, 25);
             this.lblAgradecimiento.TabIndex = 1;
             this.lblAgradecimiento.Text = "Tu notificacion esta activada";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(71, 151);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptar.AutoSize = true;
+            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAceptar.Depth = 0;
+            this.btnAceptar.Location = new System.Drawing.Point(140, 361);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(148, 24);
-            this.btnAceptar.TabIndex = 22;
-            this.btnAceptar.Text = "ACEPTAR";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Primary = false;
+            this.btnAceptar.Size = new System.Drawing.Size(138, 36);
+            this.btnAceptar.TabIndex = 23;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // frmNotificacionActiva
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(286, 226);
-            this.Controls.Add(this.btnAceptar);
+            this.ClientSize = new System.Drawing.Size(572, 435);
+            this.ControlBox = false;
             this.Controls.Add(this.lblAgradecimiento);
             this.Controls.Add(this.lblNotificacionActiva);
+            this.Controls.Add(this.btnAceptar);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmNotificacionActiva";
             this.Text = "Notificacion";
             this.ResumeLayout(false);
@@ -91,6 +95,6 @@ namespace InterfazDATMA
 
         private System.Windows.Forms.Label lblNotificacionActiva;
         private System.Windows.Forms.Label lblAgradecimiento;
-        private System.Windows.Forms.Button btnAceptar;
+        private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
     }
 }

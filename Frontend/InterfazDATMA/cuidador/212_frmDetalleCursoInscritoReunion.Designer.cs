@@ -33,7 +33,7 @@ namespace InterfazDATMA
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlContenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -41,13 +41,13 @@ namespace InterfazDATMA
             // pnlContenido
             // 
             this.pnlContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
+            this.pnlContenido.Controls.Add(this.btnRegresar);
             this.pnlContenido.Controls.Add(this.linkLabel1);
             this.pnlContenido.Controls.Add(this.label1);
             this.pnlContenido.Controls.Add(this.pictureBox2);
-            this.pnlContenido.Controls.Add(this.btnRegresar);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1744, 1125);
             this.pnlContenido.TabIndex = 12;
@@ -80,7 +80,7 @@ namespace InterfazDATMA
             // 
             this.pictureBox2.Image = global::InterfazDATMA.Properties.Resources.zoom;
             this.pictureBox2.Location = new System.Drawing.Point(98, 100);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(602, 579);
             this.pictureBox2.TabIndex = 34;
@@ -88,19 +88,19 @@ namespace InterfazDATMA
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnRegresar.FlatAppearance.BorderSize = 0;
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(918, 887);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresar.AutoSize = true;
+            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegresar.Depth = 0;
+            this.btnRegresar.Location = new System.Drawing.Point(887, 966);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(274, 50);
-            this.btnRegresar.TabIndex = 33;
+            this.btnRegresar.Primary = false;
+            this.btnRegresar.Size = new System.Drawing.Size(152, 36);
+            this.btnRegresar.TabIndex = 37;
             this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
             // 
             // frmDetalleCursoInscritoReunion
             // 
@@ -108,8 +108,9 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(135)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlContenido);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDetalleCursoInscritoReunion";
             this.Text = "DATMA";
             this.pnlContenido.ResumeLayout(false);
@@ -122,9 +123,9 @@ namespace InterfazDATMA
         #endregion
 
         private System.Windows.Forms.Panel pnlContenido;
-        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
     }
 }

@@ -31,7 +31,6 @@ namespace InterfazDATMA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetalleCursoInscritoMaterial));
             this.pnlContenido = new System.Windows.Forms.Panel();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace InterfazDATMA
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlContenido.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,26 +61,10 @@ namespace InterfazDATMA
             this.pnlContenido.Controls.Add(this.label1);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1744, 1125);
             this.pnlContenido.TabIndex = 10;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnRegresar.FlatAppearance.BorderSize = 0;
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(1316, 927);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(274, 50);
-            this.btnRegresar.TabIndex = 33;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // linkLabel2
             // 
@@ -120,7 +104,7 @@ namespace InterfazDATMA
             this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.richTextBox2.ForeColor = System.Drawing.Color.White;
             this.richTextBox2.Location = new System.Drawing.Point(48, 446);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(1540, 181);
@@ -178,7 +162,7 @@ namespace InterfazDATMA
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(46, 108);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(1540, 181);
@@ -197,14 +181,31 @@ namespace InterfazDATMA
             this.label1.TabIndex = 22;
             this.label1.Text = "Video A";
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.AutoSize = true;
+            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegresar.Depth = 0;
+            this.btnRegresar.Location = new System.Drawing.Point(1434, 1020);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Primary = false;
+            this.btnRegresar.Size = new System.Drawing.Size(152, 36);
+            this.btnRegresar.TabIndex = 34;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
+            // 
             // frmDetalleCursoInscritoMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(135)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlContenido);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDetalleCursoInscritoMaterial";
             this.Text = "DATMA";
             this.pnlContenido.ResumeLayout(false);
@@ -226,6 +227,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRegresar;
+        private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
     }
 }

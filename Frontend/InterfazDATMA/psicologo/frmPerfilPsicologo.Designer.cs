@@ -367,14 +367,15 @@ namespace InterfazDATMA.psicologo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1770, 1196);
+            this.ControlBox = false;
             this.Controls.Add(this.txtPeriodo);
             this.Controls.Add(this.txtPermiso);
             this.Controls.Add(this.Periodo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Permisos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfilPsicologo";
+            this.Sizable = false;
             this.Text = "frmPerfilPsicologo";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

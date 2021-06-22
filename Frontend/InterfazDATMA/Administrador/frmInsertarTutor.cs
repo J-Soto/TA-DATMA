@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using InterfazDATMA.validacion;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmInsertarTutor : Form
+    public partial class frmInsertarTutor : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
         public frmOperacionesPersona formOperacionPersona;
@@ -24,6 +25,11 @@ namespace InterfazDATMA.Administrador
         public frmInsertarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
 
@@ -57,6 +63,21 @@ namespace InterfazDATMA.Administrador
             rbtnHombre.Checked = true;
         }
 
+        private void nuevoDistrito_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                if (frmDistrito.distrito != null)
+                {
+                    distrito = new TutorWS.distrito();
+                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = distrito.nombre;
+                }
+            }
+
+        }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
@@ -98,26 +119,13 @@ namespace InterfazDATMA.Administrador
                 MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(formOperacionPersona);
-        }
 
-        private void nuevoDistrito_Click(object sender, EventArgs e)
-        {
-            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
-            if (frmDistrito.ShowDialog() == DialogResult.OK)
-            {
-                if (frmDistrito.distrito != null)
-                {
-                    distrito = new TutorWS.distrito();
-                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
-                    distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = distrito.nombre;
-                }
-            }
         }
     }
 }

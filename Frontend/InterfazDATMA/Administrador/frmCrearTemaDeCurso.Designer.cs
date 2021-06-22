@@ -33,8 +33,8 @@ namespace InterfazDATMA.Administrador
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreTema = new System.Windows.Forms.TextBox();
             this.txtDescripcionTema = new System.Windows.Forms.RichTextBox();
-            this.btnGuardarTema = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardarTema = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // lblTutoresUser
@@ -42,9 +42,10 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(52, 70);
+            this.lblTutoresUser.Location = new System.Drawing.Point(69, 88);
+            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(216, 29);
+            this.lblTutoresUser.Size = new System.Drawing.Size(283, 37);
             this.lblTutoresUser.TabIndex = 14;
             this.lblTutoresUser.Text = "Nombre del Tema:";
             // 
@@ -53,70 +54,78 @@ namespace InterfazDATMA.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(134, 128);
+            this.label1.Location = new System.Drawing.Point(179, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 29);
+            this.label1.Size = new System.Drawing.Size(193, 37);
             this.label1.TabIndex = 15;
             this.label1.Text = "Descripcion:";
             // 
             // txtNombreTema
             // 
-            this.txtNombreTema.Location = new System.Drawing.Point(287, 74);
+            this.txtNombreTema.Location = new System.Drawing.Point(383, 92);
+            this.txtNombreTema.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreTema.Name = "txtNombreTema";
-            this.txtNombreTema.Size = new System.Drawing.Size(363, 26);
+            this.txtNombreTema.Size = new System.Drawing.Size(483, 31);
             this.txtNombreTema.TabIndex = 16;
             // 
             // txtDescripcionTema
             // 
-            this.txtDescripcionTema.Location = new System.Drawing.Point(289, 135);
+            this.txtDescripcionTema.Location = new System.Drawing.Point(385, 169);
+            this.txtDescripcionTema.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionTema.Name = "txtDescripcionTema";
-            this.txtDescripcionTema.Size = new System.Drawing.Size(360, 123);
+            this.txtDescripcionTema.Size = new System.Drawing.Size(479, 153);
             this.txtDescripcionTema.TabIndex = 17;
             this.txtDescripcionTema.Text = "";
             // 
             // btnGuardarTema
             // 
-            this.btnGuardarTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnGuardarTema.FlatAppearance.BorderSize = 0;
-            this.btnGuardarTema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGuardarTema.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarTema.Location = new System.Drawing.Point(238, 317);
+            this.btnGuardarTema.AutoSize = true;
+            this.btnGuardarTema.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardarTema.Depth = 0;
+            this.btnGuardarTema.Location = new System.Drawing.Point(319, 406);
+            this.btnGuardarTema.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnGuardarTema.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardarTema.Name = "btnGuardarTema";
-            this.btnGuardarTema.Size = new System.Drawing.Size(161, 46);
-            this.btnGuardarTema.TabIndex = 22;
+            this.btnGuardarTema.Primary = false;
+            this.btnGuardarTema.Size = new System.Drawing.Size(142, 36);
+            this.btnGuardarTema.TabIndex = 24;
             this.btnGuardarTema.Text = "Guardar";
-            this.btnGuardarTema.UseVisualStyleBackColor = false;
+            this.btnGuardarTema.UseVisualStyleBackColor = true;
             this.btnGuardarTema.Click += new System.EventHandler(this.btnGuardarTema_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(466, 317);
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Location = new System.Drawing.Point(723, 406);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(161, 46);
-            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(156, 36);
+            this.btnCancelar.TabIndex = 25;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmCrearTemaDeCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(856, 422);
+            this.ClientSize = new System.Drawing.Size(1141, 528);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardarTema);
             this.Controls.Add(this.txtDescripcionTema);
             this.Controls.Add(this.txtNombreTema);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTutoresUser);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCrearTemaDeCurso";
+            this.Sizable = false;
             this.Text = "frmCrearTemaDeCurso";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,7 +138,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombreTema;
         private System.Windows.Forms.RichTextBox txtDescripcionTema;
-        private System.Windows.Forms.Button btnGuardarTema;
-        private System.Windows.Forms.Button btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnGuardarTema;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
     }
 }

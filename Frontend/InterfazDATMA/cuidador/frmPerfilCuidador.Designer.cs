@@ -40,7 +40,6 @@ namespace InterfazDATMA.cuidador
             this.picPerfil = new System.Windows.Forms.PictureBox();
             this.Usuario = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.Cursos = new System.Windows.Forms.Button();
             this.Contrasena = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,6 +60,7 @@ namespace InterfazDATMA.cuidador
             this.Genero = new System.Windows.Forms.Label();
             this.FechaNacimiento = new System.Windows.Forms.Label();
             this.Permisos = new System.Windows.Forms.Label();
+            this.Cursos = new MaterialSkin.Controls.MaterialFlatButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             this.panel1.SuspendLayout();
@@ -105,6 +105,7 @@ namespace InterfazDATMA.cuidador
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel2.Controls.Add(this.Cursos);
             this.panel2.Controls.Add(this.txtBajoRec);
             this.panel2.Controls.Add(this.txtGestante);
             this.panel2.Controls.Add(this.BajosRecursos);
@@ -112,7 +113,6 @@ namespace InterfazDATMA.cuidador
             this.panel2.Controls.Add(this.picPerfil);
             this.panel2.Controls.Add(this.Usuario);
             this.panel2.Controls.Add(this.txtUser);
-            this.panel2.Controls.Add(this.Cursos);
             this.panel2.Controls.Add(this.Contrasena);
             this.panel2.Controls.Add(this.txtPass);
             this.panel2.Location = new System.Drawing.Point(35, 119);
@@ -186,21 +186,6 @@ namespace InterfazDATMA.cuidador
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(188, 31);
             this.txtUser.TabIndex = 25;
-            // 
-            // Cursos
-            // 
-            this.Cursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.Cursos.FlatAppearance.BorderSize = 0;
-            this.Cursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cursos.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.Cursos.ForeColor = System.Drawing.Color.Transparent;
-            this.Cursos.Location = new System.Drawing.Point(110, 944);
-            this.Cursos.Name = "Cursos";
-            this.Cursos.Size = new System.Drawing.Size(319, 60);
-            this.Cursos.TabIndex = 50;
-            this.Cursos.Text = "Ver Cursos";
-            this.Cursos.UseVisualStyleBackColor = false;
-            this.Cursos.Click += new System.EventHandler(this.Cursos_Click);
             // 
             // Contrasena
             // 
@@ -409,21 +394,38 @@ namespace InterfazDATMA.cuidador
             this.Permisos.TabIndex = 76;
             this.Permisos.Text = "Permisos";
             // 
+            // Cursos
+            // 
+            this.Cursos.AutoSize = true;
+            this.Cursos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Cursos.Depth = 0;
+            this.Cursos.Location = new System.Drawing.Point(98, 913);
+            this.Cursos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Cursos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Cursos.Name = "Cursos";
+            this.Cursos.Primary = false;
+            this.Cursos.Size = new System.Drawing.Size(179, 36);
+            this.Cursos.TabIndex = 57;
+            this.Cursos.Text = "Ver Cursos";
+            this.Cursos.UseVisualStyleBackColor = true;
+            this.Cursos.Click += new System.EventHandler(this.Cursos_Click_1);
+            // 
             // frmPerfilCuidador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1770, 1196);
+            this.ControlBox = false;
             this.Controls.Add(this.txtPeriodo);
             this.Controls.Add(this.txtPermiso);
             this.Controls.Add(this.Periodo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Permisos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPerfilCuidador";
+            this.Sizable = false;
             this.Text = "frmPerfilCuidador";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -446,7 +448,6 @@ namespace InterfazDATMA.cuidador
         private System.Windows.Forms.PictureBox picPerfil;
         private System.Windows.Forms.Label Usuario;
         private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.Button Cursos;
         private System.Windows.Forms.Label Contrasena;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Panel panel1;
@@ -469,5 +470,6 @@ namespace InterfazDATMA.cuidador
         private System.Windows.Forms.Label Permisos;
         private System.Windows.Forms.TextBox txtBajoRec;
         private System.Windows.Forms.TextBox txtGestante;
+        private MaterialSkin.Controls.MaterialFlatButton Cursos;
     }
 }

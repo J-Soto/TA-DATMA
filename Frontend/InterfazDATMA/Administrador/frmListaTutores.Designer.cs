@@ -41,8 +41,8 @@ namespace InterfazDATMA.Administrador
             this.colTelf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@ namespace InterfazDATMA.Administrador
             this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Header.Font = new System.Drawing.Font("Century Gothic", 25F);
             this.Header.ForeColor = System.Drawing.Color.White;
-            this.Header.Location = new System.Drawing.Point(156, 24);
+            this.Header.Location = new System.Drawing.Point(151, 64);
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(439, 81);
             this.Header.TabIndex = 2;
@@ -171,20 +171,6 @@ namespace InterfazDATMA.Administrador
             this.colEmail.ReadOnly = true;
             this.colEmail.Width = 200;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1352, 218);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(173, 46);
-            this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(612, 232);
@@ -194,19 +180,36 @@ namespace InterfazDATMA.Administrador
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AutoSize = true;
+            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.Location = new System.Drawing.Point(1348, 227);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Primary = false;
+            this.btnBuscar.Size = new System.Drawing.Size(122, 36);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
             // frmListaTutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1933, 892);
-            this.Controls.Add(this.dgvTutor);
+            this.ControlBox = false;
             this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.dgvTutor);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.Header);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmListaTutores";
+            this.Sizable = false;
             this.Text = "frmListaTutores";
             this.Load += new System.EventHandler(this.frmListaTutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).EndInit();
@@ -228,7 +231,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn colTelf;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
+        private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
     }
 }

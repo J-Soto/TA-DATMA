@@ -1,4 +1,6 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
+using InterfazDATMA.validacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +14,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmModificarTutor : Form
+    public partial class frmModificarTutor : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
         public frmOperacionesPersona formOperacionPersona;
@@ -20,10 +22,17 @@ namespace InterfazDATMA.Administrador
         private TutorWS.TutorWSClient daoTutor;
 
         private TutorWS.tutor tutor;
+        private string rutaFoto = "";
+
         public frmModificarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
             InitializeComponent();
             this.tutor = tutor;
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500,MaterialSkin.Primary.BlueGrey700,MaterialSkin.Primary.BlueGrey100,MaterialSkin.Accent.Teal700,MaterialSkin.TextShade.WHITE);
+            
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
 
@@ -78,12 +87,72 @@ namespace InterfazDATMA.Administrador
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnSubirFoto_Click(object sender, EventArgs e)
         {
-            formPlantilla.abrirFormulario(formOperacionPersona);
+            try
+            {
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                {
+                    rutaFoto = ofdSubirFoto.FileName;
+                    //MessageBox.Show(rutaFoto);
+                    pbFoto.Image = Image.FromFile(rutaFoto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void btnSiguiente_Click(object sender, EventArgs e)
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmModificarTutor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubirFoto_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
+                {
+                    rutaFoto = ofdSubirFoto.FileName;
+                    //MessageBox.Show(rutaFoto);
+                    pbFoto.Image = Image.FromFile(rutaFoto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnNuevoDistrito_Click_1(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                if (frmDistrito.distrito != null)
+                {
+                    tutor.distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    tutor.distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = tutor.distrito.nombre;
+                }
+            }
+
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(formOperacionPersona);
+
+        }
+
+        private void btnSiguiente_Click_1(object sender, EventArgs e)
         {
             tutor.nombre = txtNombre.Text;
             tutor.apellidoPaterno = txtApPat.Text;
@@ -104,6 +173,19 @@ namespace InterfazDATMA.Administrador
                 tutor.genero = 'F';
             }
 
+
+            //Foto es opcional:
+            if (rutaFoto.Equals("") != true)
+            {
+                FileStream fs = new FileStream(rutaFoto, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                tutor.fotoPerfil = br.ReadBytes((int)fs.Length);
+            }
+            else
+            {
+                tutor.fotoPerfil = null;
+            }
+
             // Se inserta también el tutor para la siguiente pantalla
             int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
             if (verificado == -1)
@@ -119,21 +201,7 @@ namespace InterfazDATMA.Administrador
             else
                 formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
 
-        }
 
-        private void btnNuevoDistrito_Click(object sender, EventArgs e)
-        {
-            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
-            if (frmDistrito.ShowDialog() == DialogResult.OK)
-            {
-                if (frmDistrito.distrito != null)
-                {
-                    tutor.distrito.idDistrito = frmDistrito.distrito.idDistrito;
-                    tutor.distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = tutor.distrito.nombre;
-                }
-            }
         }
-
     }
 }

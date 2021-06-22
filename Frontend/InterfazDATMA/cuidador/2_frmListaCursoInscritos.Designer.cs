@@ -30,14 +30,14 @@ namespace InterfazDATMA
         private void InitializeComponent()
         {
             this.pnlContenido = new System.Windows.Forms.Panel();
-            this.btnCursosDisponibles = new System.Windows.Forms.Button();
+            this.btnCursosDisponibles = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnModulo2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnModulo3 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnModulo1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnModulo1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@ namespace InterfazDATMA
             // 
             this.pnlContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.pnlContenido.Controls.Add(this.btnCursosDisponibles);
+            this.pnlContenido.Controls.Add(this.btnModulo2);
+            this.pnlContenido.Controls.Add(this.btnModulo3);
+            this.pnlContenido.Controls.Add(this.btnModulo1);
             this.pnlContenido.Controls.Add(this.dataGridView1);
             this.pnlContenido.Controls.Add(this.monthCalendar1);
-            this.pnlContenido.Controls.Add(this.button3);
-            this.pnlContenido.Controls.Add(this.button2);
-            this.pnlContenido.Controls.Add(this.btnModulo1);
             this.pnlContenido.Controls.Add(this.label6);
             this.pnlContenido.Controls.Add(this.label7);
             this.pnlContenido.Controls.Add(this.label4);
@@ -67,26 +67,74 @@ namespace InterfazDATMA
             this.pnlContenido.Controls.Add(this.label1);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1744, 1125);
             this.pnlContenido.TabIndex = 10;
             // 
             // btnCursosDisponibles
             // 
-            this.btnCursosDisponibles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnCursosDisponibles.FlatAppearance.BorderSize = 0;
-            this.btnCursosDisponibles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCursosDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnCursosDisponibles.ForeColor = System.Drawing.Color.White;
-            this.btnCursosDisponibles.Location = new System.Drawing.Point(1384, 927);
-            this.btnCursosDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCursosDisponibles.AutoSize = true;
+            this.btnCursosDisponibles.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCursosDisponibles.Depth = 0;
+            this.btnCursosDisponibles.Location = new System.Drawing.Point(1226, 998);
+            this.btnCursosDisponibles.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCursosDisponibles.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCursosDisponibles.Name = "btnCursosDisponibles";
-            this.btnCursosDisponibles.Size = new System.Drawing.Size(234, 77);
-            this.btnCursosDisponibles.TabIndex = 36;
-            this.btnCursosDisponibles.Text = "VER CURSOS DISPONIBLES";
-            this.btnCursosDisponibles.UseVisualStyleBackColor = false;
-            this.btnCursosDisponibles.Click += new System.EventHandler(this.btnCursosDisponibles_Click);
+            this.btnCursosDisponibles.Primary = false;
+            this.btnCursosDisponibles.Size = new System.Drawing.Size(451, 36);
+            this.btnCursosDisponibles.TabIndex = 40;
+            this.btnCursosDisponibles.Text = "Acceder a Cursos Disponibles";
+            this.btnCursosDisponibles.UseVisualStyleBackColor = true;
+            this.btnCursosDisponibles.Click += new System.EventHandler(this.btnCursosDisponibles_Click_1);
+            // 
+            // btnModulo2
+            // 
+            this.btnModulo2.AutoSize = true;
+            this.btnModulo2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModulo2.Depth = 0;
+            this.btnModulo2.Location = new System.Drawing.Point(376, 230);
+            this.btnModulo2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModulo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModulo2.Name = "btnModulo2";
+            this.btnModulo2.Primary = false;
+            this.btnModulo2.Size = new System.Drawing.Size(121, 36);
+            this.btnModulo2.TabIndex = 39;
+            this.btnModulo2.Text = "Entrar";
+            this.btnModulo2.UseVisualStyleBackColor = true;
+            this.btnModulo2.Click += new System.EventHandler(this.btnModulo2_Click);
+            // 
+            // btnModulo3
+            // 
+            this.btnModulo3.AutoSize = true;
+            this.btnModulo3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModulo3.Depth = 0;
+            this.btnModulo3.Location = new System.Drawing.Point(376, 330);
+            this.btnModulo3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModulo3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModulo3.Name = "btnModulo3";
+            this.btnModulo3.Primary = false;
+            this.btnModulo3.Size = new System.Drawing.Size(121, 36);
+            this.btnModulo3.TabIndex = 38;
+            this.btnModulo3.Text = "Entrar";
+            this.btnModulo3.UseVisualStyleBackColor = true;
+            this.btnModulo3.Click += new System.EventHandler(this.btnModulo3_Click);
+            // 
+            // btnModulo1
+            // 
+            this.btnModulo1.AutoSize = true;
+            this.btnModulo1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModulo1.Depth = 0;
+            this.btnModulo1.Location = new System.Drawing.Point(376, 132);
+            this.btnModulo1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModulo1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModulo1.Name = "btnModulo1";
+            this.btnModulo1.Primary = false;
+            this.btnModulo1.Size = new System.Drawing.Size(121, 36);
+            this.btnModulo1.TabIndex = 37;
+            this.btnModulo1.Text = "Entrar";
+            this.btnModulo1.UseVisualStyleBackColor = true;
+            this.btnModulo1.Click += new System.EventHandler(this.btnModulo1_Click_1);
             // 
             // dataGridView1
             // 
@@ -96,8 +144,8 @@ namespace InterfazDATMA
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tipo,
             this.Fecha});
-            this.dataGridView1.Location = new System.Drawing.Point(700, 56);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(791, 56);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
@@ -126,39 +174,6 @@ namespace InterfazDATMA
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 34;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(376, 327);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 63);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Entrar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(376, 227);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 63);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Entrar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnModulo1
-            // 
-            this.btnModulo1.Location = new System.Drawing.Point(376, 129);
-            this.btnModulo1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnModulo1.Name = "btnModulo1";
-            this.btnModulo1.Size = new System.Drawing.Size(194, 63);
-            this.btnModulo1.TabIndex = 31;
-            this.btnModulo1.Text = "Entrar";
-            this.btnModulo1.UseVisualStyleBackColor = true;
-            this.btnModulo1.Click += new System.EventHandler(this.btnModulo1_Click);
             // 
             // label6
             // 
@@ -247,8 +262,9 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(135)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlContenido);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmListaCursoInscritos";
             this.Text = "DATMA";
             this.Load += new System.EventHandler(this.frmListaCursoInscritos_Load);
@@ -266,9 +282,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnModulo1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
@@ -276,6 +289,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCursosDisponibles;
+        private MaterialSkin.Controls.MaterialFlatButton btnModulo2;
+        private MaterialSkin.Controls.MaterialFlatButton btnModulo3;
+        private MaterialSkin.Controls.MaterialFlatButton btnModulo1;
+        private MaterialSkin.Controls.MaterialFlatButton btnCursosDisponibles;
     }
 }

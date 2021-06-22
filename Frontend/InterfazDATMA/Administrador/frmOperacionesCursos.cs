@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmOperacionesCursos : Form
+    public partial class frmOperacionesCursos : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantillaGest;
         private frmGestionarModuloAdmin formGestionarModuloAdmin;
@@ -25,6 +26,11 @@ namespace InterfazDATMA.Administrador
             this.daoCurso = new CursoWS.CursoWSClient();
 
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FetchCursos();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ using System.ServiceModel;
 
 namespace InterfazDATMA
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : MaterialForm
     {
         private string _user = null;
         private string _password = null;
@@ -25,13 +26,15 @@ namespace InterfazDATMA
         public frmLogin()
         {
             InitializeComponent();
-            
-
-           daoUsuario = new UsuarioWS.UsuarioWSClient();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500,MaterialSkin.Primary.BlueGrey700,MaterialSkin.Primary.BlueGrey100,MaterialSkin.Accent.Teal700,MaterialSkin.TextShade.WHITE);
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
         }
 
         private void clickUsuario(object sender, MouseEventArgs e)
-        {
+        {            
             if(txtUsuario.Text=="Usuario")
                 txtUsuario.Text = "";
         }
@@ -60,35 +63,16 @@ namespace InterfazDATMA
             }
         }
 
-        private int verificarLogin(string user,string password)
-        {/*
-            BindingList<UsuarioWS.usuario> usuarios = new BindingList<UsuarioWS.usuario>(
-                    daoUsuario.listarUsuarios().ToList());
-            foreach (UsuarioWS.usuario item in usuarios)
-            {
-                if (user.Equals(item.user) && password.Equals(item.password))
-                    return item.tipo;
-            }
-            return -1;
-            */
-
-            //int resultado = daoUsuario.verificarUsuario(user, password);
-
-
-            return 2;
-        }
-
-        private void btnIngresar_Click_1(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
             UsuarioWS.usuario user = daoUsuario.verificarUsuario(txtUsuario.Text, txtContraseña.Text);
-            
+
             if (user is null)
             {
                 MessageBox.Show("Datos incorrectos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             abrirFormulario(new frmPlantillaGestion(user));
             //abrirFormulario(new frmWalkthrough());
             //0->cuidador

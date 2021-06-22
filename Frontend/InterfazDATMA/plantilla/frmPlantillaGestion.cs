@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,12 @@ using InterfazDATMA.psicologo;
 
 namespace InterfazDATMA.plantilla
 {
-    public partial class frmPlantillaGestion : Form
+    public partial class frmPlantillaGestion : MaterialSkin.Controls.MaterialForm 
     {
-        private Form formularioActivo = null;
-        private Form formLogout;
-        private Form formInicial;
-        private Form formPerfil;
+        private MaterialForm  formularioActivo = null;
+        private MaterialForm  formLogout;
+        private MaterialForm  formInicial;
+        private MaterialForm  formPerfil;
         public static UsuarioWS.usuario user = null;
         public static PsicologoWS.psicologo psico = null;
         public static TutorWS.tutor tutor = null;
@@ -26,6 +27,11 @@ namespace InterfazDATMA.plantilla
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             frmPlantillaGestion.user = user;
             int tipoUser = user.tipo;
             //Psicologo
@@ -51,7 +57,31 @@ namespace InterfazDATMA.plantilla
             }
         }
 
-        public void abrirFormulario(Form formularioAbrir)
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            int tipoUser = user.tipo;
+            //Psicologo
+            if (tipoUser == 1)
+            {
+                formInicial = new frmGestionarModulosPsicologo(this);
+                abrirFormulario(formInicial);
+            }
+            //Administrador
+            else if (tipoUser == 2)
+            {
+                formInicial = new frmGestionarModuloAdmin(this);
+                abrirFormulario(formInicial);
+            }
+            //Tutor
+            else if (tipoUser == 0)
+            {
+                formInicial = new frmWalkthrough(this);
+                abrirFormulario(formInicial);
+            }
+
+        }
+
+        public void abrirFormulario(MaterialForm formularioAbrir)
         {
             if (formularioActivo != null) formularioActivo.Hide();
             formularioActivo = formularioAbrir;
@@ -66,17 +96,11 @@ namespace InterfazDATMA.plantilla
             {
                 formularioAbrir.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(formInicial);
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             formLogout = new login.frmLogout();

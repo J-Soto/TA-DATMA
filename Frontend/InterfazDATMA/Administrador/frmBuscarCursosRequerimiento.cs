@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.CursoWS;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.CursoWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmBuscarCursosRequerimiento : Form
+    public partial class frmBuscarCursosRequerimiento : MaterialSkin.Controls.MaterialForm 
     {
 
         private CursoWS.CursoWSClient daoCurso;
@@ -25,6 +26,10 @@ namespace InterfazDATMA.Administrador
         {
             this.cursoInicio = cursoInicio;
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
             dgvCursosReq.AutoGenerateColumns = false;
             dgvCursosReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
@@ -60,19 +65,22 @@ namespace InterfazDATMA.Administrador
             dgvCursosReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
         }
 
-        private void btnSeleccionarCur_Click(object sender, EventArgs e)
+
+        private void btnSeleccionarCur_Click_1(object sender, EventArgs e)
         {
-            if(dgvCursosReq.RowCount != 0)
+            if (dgvCursosReq.RowCount != 0)
             {
                 curso_Req = dgvCursosReq.CurrentRow.DataBoundItem as CursoWS.curso;
                 this.DialogResult = DialogResult.OK;
             }
+
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             curso_Req.idCurso = 0;
+
         }
     }
 }

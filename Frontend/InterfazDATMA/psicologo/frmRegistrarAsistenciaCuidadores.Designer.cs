@@ -64,7 +64,7 @@ namespace InterfazDATMA
             this.dgvReuniones.EnableHeadersVisualStyles = false;
             this.dgvReuniones.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvReuniones.Location = new System.Drawing.Point(127, 220);
-            this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReuniones.Name = "dgvReuniones";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -114,7 +114,7 @@ namespace InterfazDATMA
             this.btnGuardarAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardarAsistencia.ForeColor = System.Drawing.Color.White;
             this.btnGuardarAsistencia.Location = new System.Drawing.Point(488, 996);
-            this.btnGuardarAsistencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarAsistencia.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarAsistencia.Name = "btnGuardarAsistencia";
             this.btnGuardarAsistencia.Size = new System.Drawing.Size(460, 56);
             this.btnGuardarAsistencia.TabIndex = 23;
@@ -129,7 +129,7 @@ namespace InterfazDATMA
             this.brnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.brnRegresar.ForeColor = System.Drawing.Color.White;
             this.brnRegresar.Location = new System.Drawing.Point(1115, 1059);
-            this.brnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.brnRegresar.Name = "brnRegresar";
             this.brnRegresar.Size = new System.Drawing.Size(289, 50);
             this.brnRegresar.TabIndex = 24;
@@ -157,7 +157,7 @@ namespace InterfazDATMA
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(1057, 145);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(347, 50);
             this.btnLimpiar.TabIndex = 26;
@@ -170,13 +170,15 @@ namespace InterfazDATMA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ControlBox = false;
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.brnRegresar);
             this.Controls.Add(this.btnGuardarAsistencia);
             this.Controls.Add(this.dgvReuniones);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarAsistenciaCuidadores";
+            this.Sizable = false;
             this.Text = "frmRegistrarAsistenciaCuidadores";
             this.Load += new System.EventHandler(this.frmRegistrarAsistenciaCuidadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).EndInit();

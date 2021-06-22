@@ -1,4 +1,5 @@
-﻿using InterfazDATMA.plantilla;
+﻿using MaterialSkin.Controls;
+using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,13 +12,18 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA
 {
-    public partial class frmDetalleCursoInscritoMaterial : Form
+    public partial class frmDetalleCursoInscritoMaterial : MaterialSkin.Controls.MaterialForm 
     {
         public frmDetalleCursoInscrito formAnterior;
         private frmPlantillaGestion plantillaGestion;
         public frmDetalleCursoInscritoMaterial(frmDetalleCursoInscrito formAnterior,frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
         }
@@ -28,10 +34,6 @@ namespace InterfazDATMA
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=QHRuTYtSbJQ");
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(formAnterior);
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -43,6 +45,12 @@ namespace InterfazDATMA
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
+        }
+
+        private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(formAnterior);
+
         }
     }
 }
