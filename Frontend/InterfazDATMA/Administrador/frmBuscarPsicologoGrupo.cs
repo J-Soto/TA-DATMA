@@ -62,7 +62,7 @@ namespace InterfazDATMA.Administrador
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK
+            this.DialogResult = DialogResult.OK;
         }
 
         private void btnAgregarPsico_Click(object sender, EventArgs e)

@@ -860,9 +860,6 @@
     <None Include="Imagenes\avatarPsicologa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\DATMA logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Imagenes\empleados.png" />
   </ItemGroup>
   <ItemGroup>
