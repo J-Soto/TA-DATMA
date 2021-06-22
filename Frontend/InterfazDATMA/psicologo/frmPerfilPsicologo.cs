@@ -35,7 +35,7 @@ namespace InterfazDATMA.psicologo
             txtCel.Text = frmPlantillaGestion.psico.celular;
             txtCorreo.Text = frmPlantillaGestion.psico.correo;
             txtDNI.Text = frmPlantillaGestion.psico.DNI;
-            txtEdad.Text = frmPlantillaGestion.psico.edad.ToString();
+            txtEdad.Text = frmPlantillaGestion.psico.edad.ToString(); 
             txtFecha.Text = frmPlantillaGestion.psico.fechaNacimiento.ToString();
             txtGen.Text = Convert.ToChar(frmPlantillaGestion.psico.genero).ToString();
             txtNombre.Text = frmPlantillaGestion.psico.nombre + " " + frmPlantillaGestion.psico.apellidoPaterno + " " + frmPlantillaGestion.psico.apellidoMaterno;
