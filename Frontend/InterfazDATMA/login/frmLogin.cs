@@ -63,26 +63,6 @@ namespace InterfazDATMA
             }
         }
 
-        private int verificarLogin(string user,string password)
-        {/*
-            BindingList<UsuarioWS.usuario> usuarios = new BindingList<UsuarioWS.usuario>(
-                    daoUsuario.listarUsuarios().ToList());
-            foreach (UsuarioWS.usuario item in usuarios)
-            {
-                if (user.Equals(item.user) && password.Equals(item.password))
-                    return item.tipo;
-            }
-            return -1;
-            */
-
-            //int resultado = daoUsuario.verificarUsuario(user, password);
-
-
-            return 2;
-        }
-
-       
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             UsuarioWS.usuario user = daoUsuario.verificarUsuario(txtUsuario.Text, txtContraseña.Text);
