@@ -101,6 +101,18 @@
   <message name="listarCursosResponse">
     <part name="parameters" element="tns:listarCursosResponse" />
   </message>
+  <message name="insertarPsicologoCurso">
+    <part name="parameters" element="tns:insertarPsicologoCurso" />
+  </message>
+  <message name="insertarPsicologoCursoResponse">
+    <part name="parameters" element="tns:insertarPsicologoCursoResponse" />
+  </message>
+  <message name="listarCursosGrupoPsicologo">
+    <part name="parameters" element="tns:listarCursosGrupoPsicologo" />
+  </message>
+  <message name="listarCursosGrupoPsicologoResponse">
+    <part name="parameters" element="tns:listarCursosGrupoPsicologoResponse" />
+  </message>
   <portType name="CursoWS">
     <operation name="modificarRequerimiento">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarRequerimientoRequest" message="tns:modificarRequerimiento" />
@@ -165,6 +177,14 @@
     <operation name="listarCursos">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosRequest" message="tns:listarCursos" />
       <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosResponse" message="tns:listarCursosResponse" />
+    </operation>
+    <operation name="insertarPsicologoCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarPsicologoCursoRequest" message="tns:insertarPsicologoCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarPsicologoCursoResponse" message="tns:insertarPsicologoCursoResponse" />
+    </operation>
+    <operation name="listarCursosGrupoPsicologo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosGrupoPsicologoRequest" message="tns:listarCursosGrupoPsicologo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosGrupoPsicologoResponse" message="tns:listarCursosGrupoPsicologoResponse" />
     </operation>
   </portType>
   <binding name="CursoWSPortBinding" type="tns:CursoWS">
@@ -305,6 +325,24 @@
       </output>
     </operation>
     <operation name="listarCursos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPsicologoCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosGrupoPsicologo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
