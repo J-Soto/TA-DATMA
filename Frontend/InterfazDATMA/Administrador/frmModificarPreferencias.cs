@@ -79,14 +79,23 @@ namespace InterfazDATMA.Administrador
                 }
             }
             // Leer tutor.bajoRecursos
-            if (chbRecursos.Checked)
+            if (tutor.bajoRecursos == 1)
             {
-                tutor.bajoRecursos = 1;
+                chbRecursos.Checked = true;
+            }
+            else
+            {
+                chbRecursos.Checked = false;
             }
             // Leer tutor.gestante
-            if (chbGestante.Checked)
+            if (tutor.genero == 'M')
             {
-                tutor.gestante = 1;
+                chbGestante.Enabled = false;
+                chbGestante.Visible = false;
+            }
+            else if (tutor.gestante == 1)
+            {
+                chbGestante.Checked = true;
             }
         }
 
@@ -97,9 +106,9 @@ namespace InterfazDATMA.Administrador
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Guardar Dispositivos Electronicos
+          // Guardar tutor.dispositivos
             tutor.dispositivos = 0;
-            if (chblDispositivos.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 dispositivo
+            if (chblDispositivos.CheckedItems.Count != 0)
             {
                 for (int x = 0; x < chblDispositivos.Items.Count; x++)
                 {
@@ -116,20 +125,102 @@ namespace InterfazDATMA.Administrador
             else
             {
                 tutor.dispositivos = 2222;  // Ninguno escogido
+            } 
+            // Guardar tutor.tiposConexion
+            tutor.tiposConexion = 0;
+            if (chblInternet.CheckedItems.Count != 0)
+            {
+                for (int x = 0; x < chblInternet.Items.Count; x++)
+                {
+                    if (chblInternet.GetItemChecked(x))
+                    {
+                        tutor.tiposConexion = tutor.tiposConexion + 1 * (int)Math.Pow(10, x);
+                    }
+                    else
+                    {
+                        tutor.tiposConexion = tutor.tiposConexion + 2 * (int)Math.Pow(10, x);
+                    }
+                }
             }
-
-
-
+            else
+            {
+                tutor.tiposConexion = 2222;  // Ninguno escogido
+            }
+            // Guardar tutor.turno
+            tutor.turno = 0;
+            if (chblTurno.CheckedItems.Count != 0)
+            {
+                for (int x = 0; x < chblTurno.Items.Count; x++)
+                {
+                    if (chblTurno.GetItemChecked(x))
+                    {
+                        tutor.turno = tutor.turno + 1 * (int)Math.Pow(10, x);
+                    }
+                    else
+                    {
+                        tutor.turno = tutor.turno + 2 * (int)Math.Pow(10, x);
+                    }
+                }
+            }
+            else
+            {
+                tutor.turno = 222;  // Ninguno escogido
+            }
+            // Guardar tutor.dia
+            tutor.dia = 0;
+            if (chblDias.CheckedItems.Count != 0)
+            {
+                for (int x = 0; x < chblDias.Items.Count; x++)
+                {
+                    if (chblDias.GetItemChecked(x))
+                    {
+                        tutor.dia = tutor.dia + 1 * (int)Math.Pow(10, x);
+                    }
+                    else
+                    {
+                        tutor.dia = tutor.dia + 2 * (int)Math.Pow(10, x);
+                    }
+                }
+            }
+            else
+            {
+                tutor.dia = 2222222;  // Ninguno escogido
+            }
+            // Guardar tutor.redesSociales
+            tutor.redesSociales = 0;
+            if (chblRedes.CheckedItems.Count != 0)
+            {
+                for (int x = 0; x < chblRedes.Items.Count; x++)
+                {
+                    if (chblRedes.GetItemChecked(x))
+                    {
+                        tutor.redesSociales = tutor.redesSociales + 1 * (int)Math.Pow(10, x);
+                    }
+                    else
+                    {
+                        tutor.redesSociales = tutor.redesSociales + 2 * (int)Math.Pow(10, x);
+                    }
+                }
+            }
+            else
+            {
+                tutor.redesSociales = 22222;  // Ninguno escogido
+            }
             // Leer tutor.bajoRecursos
             if (chbRecursos.Checked)
             {
                 tutor.bajoRecursos = 1;
+            }
+            else
+            {
+                tutor.bajoRecursos = 0;
             }
             // Leer tutor.gestante
             if (chbGestante.Checked)
             {
                 tutor.gestante = 1;
             }
+
             // Insercion de la Modificacion
             try
             {

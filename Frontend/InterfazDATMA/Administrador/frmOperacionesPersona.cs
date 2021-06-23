@@ -19,6 +19,7 @@ namespace InterfazDATMA.Administrador
 
         private TutorWS.TutorWSClient daoTutor;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
+        private CursoWS.CursoWSClient daoCurso;
 
         public frmOperacionesPersona(frmGestionarModuloAdmin formGestionarModulos, frmPlantillaGestion formPlantilla)
         {
@@ -31,6 +32,8 @@ namespace InterfazDATMA.Administrador
 
             daoTutor = new TutorWS.TutorWSClient();
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            daoCurso = new CursoWS.CursoWSClient();
+
             this.formPlantilla = formPlantilla;
             this.formGestionarModulos = formGestionarModulos;
 
@@ -51,6 +54,8 @@ namespace InterfazDATMA.Administrador
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             BindingList<PsicologoWS.psicologo> psicologos;
+            BindingList<CursoWS.curso> cursos;
+
             try
             {
                 psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre("").ToList());
@@ -105,9 +110,21 @@ namespace InterfazDATMA.Administrador
         private void dgvPsicologos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[e.RowIndex].DataBoundItem;
+            
             dgvPsicologos.Rows[e.RowIndex].Cells["NombreCompleto"].Value = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
-            dgvPsicologos.Rows[e.RowIndex].Cells[1].Value = psicologo.fotoPerfil;
-            dgvPsicologos.Rows[e.RowIndex].Cells["Activo"].Value = 1;
+            dgvPsicologos.Rows[e.RowIndex].Cells["celular"].Value = psicologo.celular;
+            /*Cursos Dictando*/
+            try
+            {
+                dgvPsicologos.Rows[e.RowIndex].Cells["cantCursos"].Value = daoCurso.listarCursosPsicologo(psicologo.idUsuario).Length;
+            }
+            catch (Exception ex)
+            {
+                dgvPsicologos.Rows[e.RowIndex].Cells["cantCursos"].Value = 0;
+            }
+            /*---------------*/
+            dgvPsicologos.Rows[e.RowIndex].Cells["foto"].Value = psicologo.fotoPerfil;
+            // Las filas deben tener un alto de 100 pixeles
             dgvPsicologos.RowTemplate.Height = 100;
         }
 
@@ -116,9 +133,22 @@ namespace InterfazDATMA.Administrador
         private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
+
             dgvTutores.Rows[e.RowIndex].Cells["NombreCompletoTutor"].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-            dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
-            dgvTutores.Rows[e.RowIndex].Cells["ActivoTutor"].Value = 1;
+            dgvTutores.Rows[e.RowIndex].Cells["celularTutor"].Value = tutor.celular;
+            /*Bajos Recursos Económicos*/
+            if (tutor.bajoRecursos == 1)
+            {
+                dgvTutores.Rows[e.RowIndex].Cells["bajoRE"].Value = "Sí";
+            }
+            else
+            {
+                dgvTutores.Rows[e.RowIndex].Cells["bajoRE"].Value = "No";
+            }
+            
+            /*---------------*/
+            dgvTutores.Rows[e.RowIndex].Cells["FotoTutor"].Value = tutor.fotoPerfil;
+            // Las filas deben tener un alto de 100 pixeles
             dgvTutores.RowTemplate.Height = 100;
         }
 
@@ -234,6 +264,16 @@ namespace InterfazDATMA.Administrador
                     daoTutor.eliminarTutor(tutor.idPersona, tutor.idUsuario);
                 }
             }
+
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.dgvTutores.Columns["FotoTutor"].Visible = false;
+        }
+
+        private void frmOperacionesPersona_Load(object sender, EventArgs e)
+        {
 
         }
     }

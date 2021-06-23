@@ -74,7 +74,6 @@ namespace InterfazDATMA.Administrador
             txtDni.Text = tutor.DNI;
             txtTelf.Text = tutor.telefono;
             txtCel.Text = tutor.celular;
-            txtDistrito.Text = tutor.distrito.nombre;
             if (tutor.genero == 'M')
             {
                 rbtnHombre.Checked = true;
@@ -83,12 +82,42 @@ namespace InterfazDATMA.Administrador
             {
                 rbtnMujer.Checked = true;
             }
-
+            // Si se tiene la foto de perfil guardada en BD, esta se carga en PictureBox
             if (tutor.fotoPerfil != null)
             {
                 MemoryStream ms = new MemoryStream(tutor.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
+            // Distrito
+            if (tutor.distrito != null)
+                txtDistrito.Text = tutor.distrito.nombre;
+        }
+
+        private void rbtnMujer_Click(object sender, EventArgs e)
+        {
+            rbtnHombre.Checked = false;
+            rbtnMujer.Checked = true;
+        }
+
+        private void rbtnHombre_Click(object sender, EventArgs e)
+        {
+            rbtnMujer.Checked = false;
+            rbtnHombre.Checked = true;
+        }
+
+        private void txtTelf_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
         }
 
         private void btnSubirFoto_Click_1(object sender, EventArgs e)
@@ -97,8 +126,10 @@ namespace InterfazDATMA.Administrador
             {
                 if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
                 {
+                    // Se obtiene la ruta de la foto
                     rutaFoto = ofdSubirFoto.FileName;
                     //MessageBox.Show(rutaFoto);
+                    // Se guarda en el PictureBox
                     pbFoto.Image = Image.FromFile(rutaFoto);
                 }
             }
@@ -152,40 +183,52 @@ namespace InterfazDATMA.Administrador
             {
                 tutor.genero = 'F';
             }
-            //Foto es opcional:
+            //Foto es opcional
             if (rutaFoto.Equals("") != true)
             {
                 FileStream fs = new FileStream(rutaFoto, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 tutor.fotoPerfil = br.ReadBytes((int)fs.Length);
             }
-            else
-            {
-                tutor.fotoPerfil = null;
-            }
 
             //Validaciones:
-            if (tutor.DNI.Length != 8)  // FALTA No debe iniciar con 0
+            if (tutor.DNI.Length != 8)  // Si el DNI es una cadena diferente de longitud 8
             {
-                MessageBox.Show("El DNI debe tener 8 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El DNI debe tener 8 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (tutor.celular.Length != 9) // FALTA Debe iniciar con 9
+            else if (tutor.DNI[0] == '0')    // Si el DNI inicia con cero 
             {
-                MessageBox.Show("El celular debe tener 9 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El DNI no puede empezar con cero.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (tutor.user.Length < 4)
+            else if (tutor.celular.Length != 9) // Si el celular es una cadena diferente de longitud 9
+            {
+                MessageBox.Show("El número de celular debe tener 9 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.celular[0] != '9')   // Si el numero de celular no empieza con 9
+            {
+                MessageBox.Show("El número de celular debe empezar con nueve.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.user.Length < 4)     // Si el usuario tiene menos de 4 caracteres
             {
                 MessageBox.Show("El usuario debe tener al menos 4 caracteres", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (tutor.telefono.Length != 7)    // FALTA No puede iniciar con 0
+            else if (tutor.telefono.Length != 7)    // Si el número de telefono inicia con 7
             {
                 MessageBox.Show("El telefono debe tener 7 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (tutor.password != txtConfirmarPass.Text)   // FALTA Minimo 6 caracteres - al menos 1 numero - 1 mayuscula
+            else if(tutor.telefono[0] == '0')       // Si el numero de telefono inicia con cero
+            {
+                MessageBox.Show("El número de teléfono no puede empezar con cero", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.password != txtConfirmarPass.Text)   // Si las contraseñas no coinciden
             {
                 MessageBox.Show("Las contraseñas deben coincidir", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (tutor.correo.Contains("@") != true)       // FALTA Restringir a .com, .pe, etc
+            else if (tutor.password.Length == 5) // Si la contraseña tiene 5 caracteres
+            {
+                MessageBox.Show("La contraseña debe tener al menos 5 caracteres", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (!Char.IsLetter(tutor.correo[0]) || tutor.correo.Contains("@") != true || (tutor.correo.Contains(".com") || tutor.correo.Contains(".pe")) != true)       // El correo debe tener el @, iniciar con .com o .pe y además debe comenzar con una letra
             {
                 MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

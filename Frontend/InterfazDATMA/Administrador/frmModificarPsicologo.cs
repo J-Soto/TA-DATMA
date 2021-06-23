@@ -69,8 +69,10 @@ namespace InterfazDATMA.Administrador
             txtApellidoMat.Text = psicologo.apellidoMaterno;
             txtCorreo.Text = psicologo.correo;
             txtUser.Text = psicologo.user;
-            txtPass.Text = psicologo.password;
-            txtConfirmarPass.Text = psicologo.password;
+            /* La contraseña no se muestra*/
+            //txtPass.Text = psicologo.password;
+            //txtConfirmarPass.Text = psicologo.password;
+            /*----------------------------*/
             txtDni.Text = psicologo.DNI;
             txtTelf.Text = psicologo.telefono;
             txtCelular.Text = psicologo.celular;
@@ -82,13 +84,13 @@ namespace InterfazDATMA.Administrador
             {
                 rbtnMujer.Checked = true;
             }
-
+            // Si se tiene la foto de perfil guardada en BD, esta se carga en PictureBox
             if (psicologo.fotoPerfil != null)
             {
                 MemoryStream ms = new MemoryStream(psicologo.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
-
+            // Distrito
             if (psicologo.distrito != null)
                 txtDistrito.Text = psicologo.distrito.nombre;
         }
@@ -104,8 +106,6 @@ namespace InterfazDATMA.Administrador
             rbtnMujer.Checked = false;
             rbtnHombre.Checked = true;
         }
-
-
 
         private void txtTelf_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -203,10 +203,6 @@ namespace InterfazDATMA.Administrador
                 FileStream fs = new FileStream(rutaFoto, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 psicologo.fotoPerfil = br.ReadBytes((int)fs.Length);
-            }
-            else
-            {
-                psicologo.fotoPerfil = null;
             }
 
 
