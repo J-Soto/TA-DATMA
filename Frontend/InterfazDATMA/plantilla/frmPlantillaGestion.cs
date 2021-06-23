@@ -57,7 +57,33 @@ namespace InterfazDATMA.plantilla
             }
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        public void abrirFormulario(MaterialForm formularioAbrir)
+        {
+            if (formularioActivo != null) formularioActivo.Hide();
+            formularioActivo = formularioAbrir;
+
+            pnlContenedor.Controls.Clear();
+            formularioAbrir.TopLevel = false;
+            formularioAbrir.FormBorderStyle = FormBorderStyle.None;
+            formularioAbrir.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(formularioAbrir);
+
+            try
+            {
+                formularioAbrir.Show();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        private void frmPlantillaGestion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnInicio_Click_1(object sender, EventArgs e)
         {
             int tipoUser = user.tipo;
             //Psicologo
@@ -81,41 +107,18 @@ namespace InterfazDATMA.plantilla
 
         }
 
-        public void abrirFormulario(MaterialForm formularioAbrir)
+        private void btnPerfil_Click_1(object sender, EventArgs e)
         {
-            if (formularioActivo != null) formularioActivo.Hide();
-            formularioActivo = formularioAbrir;
 
-            pnlContenedor.Controls.Clear();
-            formularioAbrir.TopLevel = false;
-            formularioAbrir.FormBorderStyle = FormBorderStyle.None;
-            formularioAbrir.Dock = DockStyle.Fill;
-            pnlContenedor.Controls.Add(formularioAbrir);
-
-            try
-            {
-                formularioAbrir.Show();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            formLogout = new login.frmLogout();
-            formularioActivo.Close();
-            formLogout.Show();
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
             abrirFormulario(formPerfil);
         }
 
-        private void frmPlantillaGestion_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            formLogout = new login.frmLogout();
+            formularioActivo.Close();
+            formLogout.Show();
         }
     }
 }
