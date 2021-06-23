@@ -18,6 +18,7 @@ namespace InterfazDATMA.Administrador
         public DistritoWS.distrito distrito;
         public frmInsertarDistrito()
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

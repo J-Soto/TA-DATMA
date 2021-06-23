@@ -37,7 +37,7 @@ namespace InterfazDATMA.Administrador
             this.fechaInicialCurso = fechaInicial;
             this.fechaFinCurso = fechaFinal;
             this.temasCurso = temas;
-
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

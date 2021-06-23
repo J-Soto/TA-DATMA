@@ -16,8 +16,9 @@ namespace InterfazDATMA.Administrador
     {
         private PsicologoWS.PsicologoWSClient daoPsicologo;
 
-        public Header() 
+        public Header()
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

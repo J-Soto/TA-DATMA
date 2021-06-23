@@ -31,7 +31,7 @@ namespace InterfazDATMA.Administrador
             this.formVerGruposCurso = formVerGruposCurso;
             this.formPlantillaGest = formPlantillaGest;
             this.grupo = grupo;
-
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

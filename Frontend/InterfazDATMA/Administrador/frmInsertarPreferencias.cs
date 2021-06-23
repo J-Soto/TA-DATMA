@@ -20,6 +20,7 @@ namespace InterfazDATMA.Administrador
         private TutorWS.TutorWSClient daoTutor;
         public frmInsertarPreferencias(frmInsertarTutor formAnterior, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

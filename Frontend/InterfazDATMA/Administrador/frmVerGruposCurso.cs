@@ -35,6 +35,7 @@ namespace InterfazDATMA.Administrador
 
         public frmVerGruposCurso(frmInsertarCurso formInsertarCurso, frmPlantillaGestion formPlantillaGest, BindingList<Grupo_Curso> grupos)
         {
+            this.DoubleBuffered = true;
             this.formInsertarCurso = formInsertarCurso;
             this.formPlantillaGest = formPlantillaGest;
             InitializeComponent();

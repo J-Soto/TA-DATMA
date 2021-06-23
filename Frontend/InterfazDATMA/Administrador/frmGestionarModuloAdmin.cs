@@ -24,6 +24,7 @@ namespace InterfazDATMA.Administrador
 
         public frmGestionarModuloAdmin(frmPlantillaGestion plantilla)
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

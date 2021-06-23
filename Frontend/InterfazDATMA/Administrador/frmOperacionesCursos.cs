@@ -24,7 +24,7 @@ namespace InterfazDATMA.Administrador
             this.formGestionarModuloAdmin = formGestionarModuloAdmin;
             this.formPlantillaGest = formPlantillaGest;
             this.daoCurso = new CursoWS.CursoWSClient();
-
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

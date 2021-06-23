@@ -20,6 +20,7 @@ namespace InterfazDATMA.Administrador
         private TutorWS.tutor tutor;
         public frmModificarPreferencias(frmModificarTutor formModificarTutor, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

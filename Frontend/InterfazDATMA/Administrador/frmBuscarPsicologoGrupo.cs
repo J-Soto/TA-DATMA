@@ -22,6 +22,7 @@ namespace InterfazDATMA.Administrador
 
         public frmBuscarPsicologoGrupo()
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

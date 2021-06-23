@@ -30,6 +30,7 @@ namespace InterfazDATMA.Administrador
 
         public frmCrearGrupo(frmVerGruposCurso formVerGruposCurso, frmPlantillaGestion formPlantillaGest, Grupo_Curso grupo)
         {
+            this.DoubleBuffered = true;
             this.formVerGruposCurso = formVerGruposCurso;
             this.formPlantillaGest = formPlantillaGest;
             this.grupo = grupo;

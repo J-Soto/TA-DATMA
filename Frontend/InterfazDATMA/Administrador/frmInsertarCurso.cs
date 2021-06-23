@@ -40,6 +40,7 @@ namespace InterfazDATMA.Administrador
 
         public frmInsertarCurso(frmOperacionesCursos formOperacionesCursos, frmPlantillaGestion formPlantillaGest)
         {
+            this.DoubleBuffered = true;
             this.formPlantillaGest = formPlantillaGest;
             this.formOperacionesCursos = formOperacionesCursos;
 

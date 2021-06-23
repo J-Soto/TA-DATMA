@@ -28,6 +28,7 @@ namespace InterfazDATMA.Administrador
 
         public frmModificarPsicologo(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla, PsicologoWS.psicologo psicologo)
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             this.psicologo = psicologo;
             this.formPlantilla = formPlantilla;

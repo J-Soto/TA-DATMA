@@ -26,6 +26,7 @@ namespace InterfazDATMA.Administrador
 
         public frmModificarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
             this.tutor = tutor;
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;

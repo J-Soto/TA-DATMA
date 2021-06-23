@@ -24,6 +24,7 @@ namespace InterfazDATMA.Administrador
 
         public frmBuscarCursosRequerimiento(DateTime cursoInicio)
         {
+            this.DoubleBuffered = true;
             this.cursoInicio = cursoInicio;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
