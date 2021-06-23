@@ -227,6 +227,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="cuidador\FormAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuidador\FormAuxiliar.Designer.cs">
+      <DependentUpon>FormAuxiliar.cs</DependentUpon>
+    </Compile>
     <Compile Include="cuidador\frmPerfilCuidador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -443,6 +449,9 @@
     <EmbeddedResource Include="Administrador\frmVerGruposCurso.resx">
       <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuidador\FormAuxiliar.resx">
+      <DependentUpon>FormAuxiliar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\frmPerfilCuidador.resx">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>
