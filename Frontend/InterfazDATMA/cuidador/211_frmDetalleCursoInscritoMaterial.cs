@@ -27,16 +27,18 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
         }
-
+       /*
         private void VisitLink()
         {
             linkLabel1.LinkVisited = true;
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=QHRuTYtSbJQ");
         }
+        */
 
-
+        /*
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+           
             try
             {
                 VisitLink();
@@ -46,11 +48,11 @@ namespace InterfazDATMA
                 MessageBox.Show("Unable to open link that was clicked.");
             }
         }
+        */
 
-        private void btnRegresar_Click_1(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(formAnterior);
-
         }
     }
 }
