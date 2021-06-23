@@ -163,5 +163,11 @@ namespace InterfazDATMA.Administrador
             formPlantillaGest.abrirFormulario(formVerGruposCurso);
 
         }
+
+        private void btnReportePsi_Click(object sender, EventArgs e)
+        {
+            frmReportePsicologos reporte = new frmReportePsicologos();
+            reporte.Show();
+        }
     }
 }
