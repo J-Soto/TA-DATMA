@@ -41,6 +41,12 @@ namespace InterfazDATMA
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.URL = new System.Windows.Forms.DataGridViewLinkColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegresar
@@ -172,6 +178,59 @@ namespace InterfazDATMA
             this.label1.TabIndex = 35;
             this.label1.Text = "Video A";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Desc,
+            this.Duracion,
+            this.URL});
+            this.dataGridView1.Location = new System.Drawing.Point(345, 800);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1027, 264);
+            this.dataGridView1.TabIndex = 46;
+            // 
+            // Nombre
+            // 
+            this.Nombre.Frozen = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 10;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 200;
+            // 
+            // Desc
+            // 
+            this.Desc.Frozen = true;
+            this.Desc.HeaderText = "Descripcion";
+            this.Desc.MinimumWidth = 10;
+            this.Desc.Name = "Desc";
+            this.Desc.ReadOnly = true;
+            this.Desc.Width = 200;
+            // 
+            // Duracion
+            // 
+            this.Duracion.Frozen = true;
+            this.Duracion.HeaderText = "Duracion";
+            this.Duracion.MinimumWidth = 10;
+            this.Duracion.Name = "Duracion";
+            this.Duracion.ReadOnly = true;
+            this.Duracion.Width = 200;
+            // 
+            // URL
+            // 
+            this.URL.Frozen = true;
+            this.URL.HeaderText = "URL";
+            this.URL.MinimumWidth = 10;
+            this.URL.Name = "URL";
+            this.URL.ReadOnly = true;
+            this.URL.Width = 200;
+            // 
             // frmDetalleCursoInscritoMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -179,6 +238,7 @@ namespace InterfazDATMA
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(135)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1744, 1125);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label4);
@@ -193,6 +253,7 @@ namespace InterfazDATMA
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDetalleCursoInscritoMaterial";
             this.Text = "DATMA";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +272,10 @@ namespace InterfazDATMA
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duracion;
+        private System.Windows.Forms.DataGridViewLinkColumn URL;
     }
 }

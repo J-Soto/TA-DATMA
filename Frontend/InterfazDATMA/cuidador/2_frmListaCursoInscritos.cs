@@ -47,27 +47,39 @@ namespace InterfazDATMA
             if (rd.Next(2) == 1) return true;
             else return false;
         }
-
-        private void btnModulo1_Click_1(object sender, EventArgs e)
+        private void btnCursosDisponibles_Click(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
-        }
 
-        private void btnModulo2_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
-        }
-
-        private void btnModulo3_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
-        }
-
-        private void btnCursosDisponibles_Click_1(object sender, EventArgs e)
-        {
             bool hayCursos = verificarCursosDisponibles();
             if (hayCursos) plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion));
             else plantillaGestion.abrirFormulario(new frmSinCursosDisponibles(this, plantillaGestion));
+
+        }
+
+        private void btnModulo1_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+
+
+        }
+
+        private void btnModulo2_Click_1(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+
+
+        }
+
+        private void btnModulo3_Click_1(object sender, EventArgs e)
+        {
+
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -39,32 +39,32 @@ namespace InterfazDATMA.Administrador
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnOpCurso = new MaterialSkin.Controls.MaterialFlatButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnOpPersona = new MaterialSkin.Controls.MaterialFlatButton();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTutoresUser = new System.Windows.Forms.Label();
             this.dgvTutores = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lblTutoresUser = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foto2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.lblPsicologosUser = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOpCurso
@@ -106,6 +106,16 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 108);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.btnOpCurso);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(771, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(378, 58);
+            this.panel2.TabIndex = 16;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -125,6 +135,16 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1920, 108);
             this.tableLayoutPanel3.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.btnOpPersona);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(771, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(378, 58);
+            this.panel1.TabIndex = 15;
             // 
             // btnOpPersona
             // 
@@ -183,6 +203,21 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel2.Size = new System.Drawing.Size(810, 771);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // lblTutoresUser
+            // 
+            this.lblTutoresUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            this.lblTutoresUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblTutoresUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(189)))), ((int)(((byte)(209)))));
+            this.lblTutoresUser.Location = new System.Drawing.Point(4, 0);
+            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTutoresUser.Name = "lblTutoresUser";
+            this.lblTutoresUser.Size = new System.Drawing.Size(802, 77);
+            this.lblTutoresUser.TabIndex = 12;
+            this.lblTutoresUser.Text = "Usuarios/Tutores";
+            this.lblTutoresUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTutoresUser.UseCompatibleTextRendering = true;
+            // 
             // dgvTutores
             // 
             this.dgvTutores.AllowUserToAddRows = false;
@@ -205,7 +240,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(151)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -254,21 +289,6 @@ namespace InterfazDATMA.Administrador
             this.foto.Name = "foto";
             this.foto.ReadOnly = true;
             // 
-            // lblTutoresUser
-            // 
-            this.lblTutoresUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.lblTutoresUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblTutoresUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(189)))), ((int)(((byte)(209)))));
-            this.lblTutoresUser.Location = new System.Drawing.Point(4, 0);
-            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(802, 77);
-            this.lblTutoresUser.TabIndex = 12;
-            this.lblTutoresUser.Text = "Usuarios/Tutores";
-            this.lblTutoresUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTutoresUser.UseCompatibleTextRendering = true;
-            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
@@ -306,7 +326,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(151)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -388,26 +408,6 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1920, 1080);
             this.tableLayoutPanel6.TabIndex = 24;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.btnOpPersona);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(771, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(378, 58);
-            this.panel1.TabIndex = 15;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel2.Controls.Add(this.btnOpCurso);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(771, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(378, 58);
-            this.panel2.TabIndex = 16;
-            // 
             // frmGestionarModuloAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -426,17 +426,17 @@ namespace InterfazDATMA.Administrador
             this.Sizable = false;
             this.Load += new System.EventHandler(this.frmGestionarModuloAdmin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
