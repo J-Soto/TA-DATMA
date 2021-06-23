@@ -28,6 +28,7 @@ namespace InterfazDATMA.Administrador
         {
             this.DoubleBuffered = true;
             InitializeComponent();
+
             this.tutor = tutor;
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -66,8 +67,10 @@ namespace InterfazDATMA.Administrador
             txtApMat.Text = tutor.apellidoMaterno;
             txtCorreo.Text = tutor.correo;
             txtUser.Text = tutor.user;
-            txtPass.Text = tutor.password;
-            txtConfirmarPass.Text = tutor.password;
+            /* La contraseña no se muestra*/
+            //txtPass.Text = tutor.password;
+            //txtConfirmarPass.Text = tutor.password;
+            /*----------------------------*/
             txtDni.Text = tutor.DNI;
             txtTelf.Text = tutor.telefono;
             txtCel.Text = tutor.celular;
@@ -88,33 +91,6 @@ namespace InterfazDATMA.Administrador
             }
         }
 
-        private void btnSubirFoto_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ofdSubirFoto.ShowDialog() == DialogResult.OK)
-                {
-                    rutaFoto = ofdSubirFoto.FileName;
-                    //MessageBox.Show(rutaFoto);
-                    pbFoto.Image = Image.FromFile(rutaFoto);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void pbFoto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmModificarTutor_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSubirFoto_Click_1(object sender, EventArgs e)
         {
             try
@@ -128,7 +104,7 @@ namespace InterfazDATMA.Administrador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleccionar una imagen valida. Error: " + ex, "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -155,6 +131,7 @@ namespace InterfazDATMA.Administrador
 
         private void btnSiguiente_Click_1(object sender, EventArgs e)
         {
+            // TextBox
             tutor.nombre = txtNombre.Text;
             tutor.apellidoPaterno = txtApPat.Text;
             tutor.apellidoMaterno = txtApMat.Text;
@@ -164,7 +141,9 @@ namespace InterfazDATMA.Administrador
             tutor.celular = txtCel.Text;
             tutor.fechaNacimiento = dtpFechaNacimiento.Value;
             tutor.fechaNacimientoSpecified = true;
-
+            tutor.user = txtUser.Text;
+            tutor.password = txtPass.Text;
+            // RadioButton
             if (rbtnHombre.Checked == true)
             {
                 tutor.genero = 'M';
@@ -173,8 +152,6 @@ namespace InterfazDATMA.Administrador
             {
                 tutor.genero = 'F';
             }
-
-
             //Foto es opcional:
             if (rutaFoto.Equals("") != true)
             {
@@ -187,22 +164,48 @@ namespace InterfazDATMA.Administrador
                 tutor.fotoPerfil = null;
             }
 
-            // Se inserta también el tutor para la siguiente pantalla
-            int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
-            if (verificado == -1)
+            //Validaciones:
+            if (tutor.DNI.Length != 8)  // FALTA No debe iniciar con 0
             {
-                var resultado = MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resultado == DialogResult.Yes)
-                {
-                    formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
-                }
+                MessageBox.Show("El DNI debe tener 8 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (verificado == 0)
-                MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (tutor.celular.Length != 9) // FALTA Debe iniciar con 9
+            {
+                MessageBox.Show("El celular debe tener 9 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.user.Length < 4)
+            {
+                MessageBox.Show("El usuario debe tener al menos 4 caracteres", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.telefono.Length != 7)    // FALTA No puede iniciar con 0
+            {
+                MessageBox.Show("El telefono debe tener 7 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.password != txtConfirmarPass.Text)   // FALTA Minimo 6 caracteres - al menos 1 numero - 1 mayuscula
+            {
+                MessageBox.Show("Las contraseñas deben coincidir", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.correo.Contains("@") != true)       // FALTA Restringir a .com, .pe, etc
+            {
+                MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else
-                formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
-
-
+            {
+                int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
+                if (verificado == -1)
+                {
+                    var resultado = MessageBox.Show("No se ha podido verificar el DNI. ¿Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.Yes)
+                    {
+                    formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
+                    }
+                }
+                else if (verificado == 0)
+                    MessageBox.Show("El DNI no concuerda con los nombres.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    // AVANZA
+                    formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
+            }
         }
     }
 }

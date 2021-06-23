@@ -229,7 +229,6 @@ namespace InterfazDATMA.Administrador
             resources.ApplyResources(this.pbFoto, "pbFoto");
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.TabStop = false;
-            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
             // 
             // txtDistrito
             // 
@@ -314,7 +313,6 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblNombre);
             this.Name = "frmModificarTutor";
             this.Sizable = false;
-            this.Load += new System.EventHandler(this.frmModificarTutor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

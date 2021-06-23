@@ -38,7 +38,7 @@ namespace InterfazDATMA.Administrador
             chblTurno.CheckOnClick = true;
             chblRedes.CheckOnClick = true;
 
-            // Leer Dispositivos Electronicos
+            // Leer tutor.dispositivos
             for (int x = 0; x < (int)Math.Floor(Math.Log10(tutor.dispositivos) + 1); x++)
             {
                 if (tutor.dispositivos.ToString()[(int)Math.Floor(Math.Log10(tutor.dispositivos)) - x] == '1')
@@ -46,9 +46,48 @@ namespace InterfazDATMA.Administrador
                     chblDispositivos.SetItemChecked(x, true);       // Si es 2, es false
                 }
             }
-
-
-
+            // Leer tutor.tiposConexion
+            for (int x = 0; x < (int)Math.Floor(Math.Log10(tutor.tiposConexion) + 1); x++)
+            {
+                if (tutor.tiposConexion.ToString()[(int)Math.Floor(Math.Log10(tutor.tiposConexion)) - x] == '1')
+                {
+                    chblInternet.SetItemChecked(x, true);       // Si es 2, es false
+                }
+            }
+            // Leer tutor.turno
+            for (int x = 0; x < (int)Math.Floor(Math.Log10(tutor.turno) + 1); x++)
+            {
+                if (tutor.turno.ToString()[(int)Math.Floor(Math.Log10(tutor.turno)) - x] == '1')
+                {
+                    chblTurno.SetItemChecked(x, true);       // Si es 2, es false
+                }
+            }
+            // Leer tutor.dia
+            for (int x = 0; x < (int)Math.Floor(Math.Log10(tutor.dia) + 1); x++)
+            {
+                if (tutor.dia.ToString()[(int)Math.Floor(Math.Log10(tutor.dia)) - x] == '1')
+                {
+                    chblDias.SetItemChecked(x, true);       // Si es 2, es false
+                }
+            }
+            // Leer tutor.redesSociales
+            for (int x = 0; x < (int)Math.Floor(Math.Log10(tutor.redesSociales) + 1); x++)
+            {
+                if (tutor.redesSociales.ToString()[(int)Math.Floor(Math.Log10(tutor.redesSociales)) - x] == '1')
+                {
+                    chblRedes.SetItemChecked(x, true);       // Si es 2, es false
+                }
+            }
+            // Leer tutor.bajoRecursos
+            if (chbRecursos.Checked)
+            {
+                tutor.bajoRecursos = 1;
+            }
+            // Leer tutor.gestante
+            if (chbGestante.Checked)
+            {
+                tutor.gestante = 1;
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -79,13 +118,26 @@ namespace InterfazDATMA.Administrador
                 tutor.dispositivos = 2222;  // Ninguno escogido
             }
 
+
+
+            // Leer tutor.bajoRecursos
+            if (chbRecursos.Checked)
+            {
+                tutor.bajoRecursos = 1;
+            }
+            // Leer tutor.gestante
+            if (chbGestante.Checked)
+            {
+                tutor.gestante = 1;
+            }
+            // Insercion de la Modificacion
             try
             {
                 // Se modifica el Tutor
                 daoTutor.modificarTutor(tutor);
                 // Mensaje
-                MessageBox.Show("Se ha modificado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Siguiente ventana
+                MessageBox.Show("Se ha modificado con exito el Tutor.", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Ventana de Operaciones Persona
                 formPlantilla.abrirFormulario(formAnterior.formOperacionPersona);
             }
             catch (Exception ex)
