@@ -32,5 +32,15 @@ namespace InterfazDATMA
         {
 
         }
+
+        private void frmAgregarMaterialPsicologo_Load_1(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
