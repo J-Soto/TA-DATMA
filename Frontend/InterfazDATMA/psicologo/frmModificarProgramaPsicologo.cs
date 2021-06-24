@@ -51,7 +51,6 @@ namespace InterfazDATMA
             lblTema.Text = "Tema: " + nombreTema;
 
             //Limitar edicion:
-            rtxtTema.ReadOnly = true;
             rtxtDescripcion.ReadOnly = true;
             //rtxtDescripcion.Enabled = false;
             //rtxtTema.Enabled = false;
@@ -66,7 +65,6 @@ namespace InterfazDATMA
 
         private void btnEditarDescrip_Click(object sender, EventArgs e)
         {
-            rtxtTema.ReadOnly = false;
             rtxtDescripcion.ReadOnly = false;
 
         }
@@ -82,10 +80,6 @@ namespace InterfazDATMA
             currentSemana.descripcion = rtxtDescripcion.Text;
             currentSemana.curso = new SemanaWS.curso();
             int resultado = daoSemana.modificarSemana(currentSemana);
-
-            rtxtDescripcion.ReadOnly = true;
-            rtxtTema.ReadOnly = true;
-
             formConfigurarModuloPsicologo.refrescarDataGridView(currentSemana);
 
         }

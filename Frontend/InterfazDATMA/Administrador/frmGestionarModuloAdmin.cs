@@ -1,5 +1,4 @@
-﻿using MaterialSkin.Controls;
-using InterfazDATMA.plantilla;
+﻿using InterfazDATMA.plantilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +15,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmGestionarModuloAdmin : MaterialSkin.Controls.MaterialForm 
+    public partial class frmGestionarModuloAdmin : Form
     {
         private frmPlantillaGestion plantillaGestion;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
@@ -24,12 +23,7 @@ namespace InterfazDATMA.Administrador
 
         public frmGestionarModuloAdmin(frmPlantillaGestion plantilla)
         {
-            this.DoubleBuffered = true;
             InitializeComponent();
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.Teal200, MaterialSkin.TextShade.WHITE);
 
             plantillaGestion = plantilla;
 
@@ -45,18 +39,7 @@ namespace InterfazDATMA.Administrador
             new object[] { true });
             dgvTutores.AutoGenerateColumns = false;
             dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BindingList<TutorWS.tutor> tutores;
-            try
-            {
-                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre("").ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                tutores = new BindingList<TutorWS.tutor>();
-            }
-            dgvTutores.DataSource = tutores;
-
-
+            dgvTutores.DataSource = daoTutor.listarTodosTutores();
 
             // Psicologos
             typeof(DataGridView).InvokeMember(
@@ -87,6 +70,15 @@ namespace InterfazDATMA.Administrador
             }
         }
 
+        private void btnOpPersona_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmOperacionesPersona(this, plantillaGestion));
+        }
+
+        private void btnOpCurso_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmOperacionesCursos(this, plantillaGestion));
+        }
 
         private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -140,49 +132,6 @@ namespace InterfazDATMA.Administrador
         }
 
         private void dgvPsicologos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmGestionarModuloAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPsicologosUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnOpPersona_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmOperacionesPersona(this, plantillaGestion));
-
-
-        }
-
-        private void btnOpCurso_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmOperacionesCursos(this, plantillaGestion));
-
-        }
-
-        private void dgvTutores_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvPsicologos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvPsicologos_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
 
         }

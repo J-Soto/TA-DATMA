@@ -87,5 +87,15 @@ namespace InterfazDATMA
         {
 
         }
+
+        private void dateCursoFechaInicio_SelectedDateChanged(Nevron.Nov.Dom.NValueChangeEventArgs arg)
+        {
+
+        }
+
+        private void frmInsertarSemana_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

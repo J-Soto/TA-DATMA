@@ -87,9 +87,7 @@ namespace InterfazDATMA.Administrador
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            formPlantillaGest.abrirFormulario(formGestionarModuloAdmin);
-
-
+            formPlantillaGest.abrirFormulario2(formGestionarModuloAdmin);
         }
     }
 }
