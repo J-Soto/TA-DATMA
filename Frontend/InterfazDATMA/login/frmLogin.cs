@@ -57,7 +57,7 @@ namespace InterfazDATMA
             formularioMostrar.Show();
             this.Hide();
             if (checkBoxRecordarme.Checked)
-            {
+            { 
                 _user = txtUsuario.Text;
                 _password = txtContraseña.Text;
             }
