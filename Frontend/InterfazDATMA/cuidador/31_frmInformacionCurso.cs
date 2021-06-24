@@ -62,6 +62,16 @@ namespace InterfazDATMA
                     lPsi = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorIdCurso(this.idCurso).ToList());
                     PsicologoWS.psicologo psicologo = lPsi[0];
                     lblInformacionEncargada.Text = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
+
+                    try
+                    {
+
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
                 }
                 catch (Exception)
                 {
