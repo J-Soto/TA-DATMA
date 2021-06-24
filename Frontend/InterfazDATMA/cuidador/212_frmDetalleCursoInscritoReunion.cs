@@ -39,5 +39,10 @@ namespace InterfazDATMA
 
 
         }
+
+        private void tableLayoutPanel17_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

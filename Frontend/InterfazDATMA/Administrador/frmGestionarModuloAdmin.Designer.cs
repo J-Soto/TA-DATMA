@@ -48,15 +48,15 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser = new System.Windows.Forms.Label();
             this.dgvTutores = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.lblPsicologosUser = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.foto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.foto2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -283,6 +283,16 @@ namespace InterfazDATMA.Administrador
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
             // 
+            // foto
+            // 
+            this.foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.foto.HeaderText = "Foto";
+            this.foto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.foto.MinimumWidth = 8;
+            this.foto.Name = "foto";
+            this.foto.ReadOnly = true;
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
@@ -361,6 +371,16 @@ namespace InterfazDATMA.Administrador
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // foto2
+            // 
+            this.foto2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.foto2.HeaderText = "Foto";
+            this.foto2.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.foto2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.foto2.MinimumWidth = 8;
+            this.foto2.Name = "foto2";
+            this.foto2.ReadOnly = true;
+            // 
             // lblPsicologosUser
             // 
             this.lblPsicologosUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
@@ -411,26 +431,6 @@ namespace InterfazDATMA.Administrador
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn2.MinimumWidth = 8;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            // 
-            // foto
-            // 
-            this.foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.foto.HeaderText = "Foto";
-            this.foto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.foto.MinimumWidth = 8;
-            this.foto.Name = "foto";
-            this.foto.ReadOnly = true;
-            // 
-            // foto2
-            // 
-            this.foto2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.foto2.HeaderText = "Foto";
-            this.foto2.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.foto2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.foto2.MinimumWidth = 8;
-            this.foto2.Name = "foto2";
-            this.foto2.ReadOnly = true;
             // 
             // frmGestionarModuloAdmin
             // 
