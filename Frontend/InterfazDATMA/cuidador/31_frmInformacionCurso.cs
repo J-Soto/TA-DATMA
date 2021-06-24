@@ -56,8 +56,6 @@ namespace InterfazDATMA
                     }
                 }
                 lblNombreModulo.Text = this.curso.descripcion;
-                txtBoxFechaIni.Text = this.curso.fechaInicio.ToString("dd/MM/yyyy");
-                txtBoxFechaFin.Text = this.curso.fechaFin.ToString("dd/MM/yyyy");
                 BindingList<PsicologoWS.psicologo> lPsi = null;
                 try
                 {

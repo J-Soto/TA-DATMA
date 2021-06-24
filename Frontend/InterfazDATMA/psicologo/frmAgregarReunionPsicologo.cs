@@ -22,16 +22,12 @@ namespace InterfazDATMA
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
 
-            dtpInicio.CustomFormat = "hh:mm tt";
-            dtpInicio.Format = DateTimePickerFormat.Custom;
-            dtpInicio.ShowUpDown = true;
+            dtpInicio.Format= "hh:mm tt";
 
-            dtpFin.CustomFormat = "hh:mm tt";
-            dtpFin.Format = DateTimePickerFormat.Custom;
-            dtpFin.ShowUpDown = true;
+            dtpFin.Format = "hh:mm tt";
 
-            dtpFechaReunion.CustomFormat = "dd/MM/yyyy";
-            dtpFechaReunion.Format = DateTimePickerFormat.Custom;
+            dtpFechaReunion.Format = "hh:mm tt";
+
         }
 
         private void label2_Click(object sender, EventArgs e)

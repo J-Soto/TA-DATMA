@@ -204,7 +204,7 @@ namespace InterfazDATMA.cuidador
             this.txtPermiso.Size = new System.Drawing.Size(149, 120);
             this.txtPermiso.TabIndex = 80;
             this.txtPermiso.Text = "Tutor";
-            this.txtPermiso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtPermiso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Periodo
             // 
@@ -1085,6 +1085,7 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel36.Controls.Add(this.tableLayoutPanel37, 2, 0);
             this.tableLayoutPanel36.Controls.Add(this.panel13, 0, 0);
+            this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel36.Location = new System.Drawing.Point(51, 15);
             this.tableLayoutPanel36.Name = "tableLayoutPanel36";
             this.tableLayoutPanel36.RowCount = 1;
