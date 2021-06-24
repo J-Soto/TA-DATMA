@@ -140,7 +140,13 @@ namespace InterfazDATMA.Administrador
             frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
             if (frmDistrito.ShowDialog() == DialogResult.OK)
             {
-
+                if (frmDistrito.distrito != null)
+                {
+                    distrito = new PsicologoWS.distrito();
+                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = distrito.nombre;
+                }
             }
 
         }

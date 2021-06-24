@@ -17,6 +17,12 @@
   <message name="listarTutoresPorNombreResponse">
     <part name="parameters" element="tns:listarTutoresPorNombreResponse" />
   </message>
+  <message name="verificarDNI">
+    <part name="parameters" element="tns:verificarDNI" />
+  </message>
+  <message name="verificarDNIResponse">
+    <part name="parameters" element="tns:verificarDNIResponse" />
+  </message>
   <message name="modificarTutor">
     <part name="parameters" element="tns:modificarTutor" />
   </message>
@@ -35,12 +41,6 @@
   <message name="eliminarTutorResponse">
     <part name="parameters" element="tns:eliminarTutorResponse" />
   </message>
-  <message name="verificarDNI">
-    <part name="parameters" element="tns:verificarDNI" />
-  </message>
-  <message name="verificarDNIResponse">
-    <part name="parameters" element="tns:verificarDNIResponse" />
-  </message>
   <portType name="TutorWS">
     <operation name="listarTodosTutores">
       <input wsam:Action="http://services.datmasoft.datma.pe/TutorWS/listarTodosTutoresRequest" message="tns:listarTodosTutores" />
@@ -49,6 +49,10 @@
     <operation name="listarTutoresPorNombre">
       <input wsam:Action="http://services.datmasoft.datma.pe/TutorWS/listarTutoresPorNombreRequest" message="tns:listarTutoresPorNombre" />
       <output wsam:Action="http://services.datmasoft.datma.pe/TutorWS/listarTutoresPorNombreResponse" message="tns:listarTutoresPorNombreResponse" />
+    </operation>
+    <operation name="verificarDNI">
+      <input wsam:Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIRequest" message="tns:verificarDNI" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIResponse" message="tns:verificarDNIResponse" />
     </operation>
     <operation name="modificarTutor">
       <input wsam:Action="http://services.datmasoft.datma.pe/TutorWS/modificarTutorRequest" message="tns:modificarTutor" />
@@ -61,10 +65,6 @@
     <operation name="eliminarTutor">
       <input wsam:Action="http://services.datmasoft.datma.pe/TutorWS/eliminarTutorRequest" message="tns:eliminarTutor" />
       <output wsam:Action="http://services.datmasoft.datma.pe/TutorWS/eliminarTutorResponse" message="tns:eliminarTutorResponse" />
-    </operation>
-    <operation name="verificarDNI">
-      <input wsam:Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIRequest" message="tns:verificarDNI" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIResponse" message="tns:verificarDNIResponse" />
     </operation>
   </portType>
   <binding name="TutorWSPortBinding" type="tns:TutorWS">
@@ -87,6 +87,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="verificarDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="modificarTutor">
       <soap:operation soapAction="" />
       <input>
@@ -106,15 +115,6 @@
       </output>
     </operation>
     <operation name="eliminarTutor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="verificarDNI">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

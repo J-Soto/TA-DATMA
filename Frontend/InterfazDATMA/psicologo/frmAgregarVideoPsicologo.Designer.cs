@@ -34,35 +34,35 @@ namespace InterfazDATMA
             this.label2 = new System.Windows.Forms.Label();
             this.btnLinkArchivo = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblFelicitacion = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel40.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.tableLayoutPanel40.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -96,6 +96,49 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
+            // tableLayoutPanel5
+            // 
+            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
+            this.tableLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel40, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.btnLinkArchivo, 3, 1);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            // 
+            // tableLayoutPanel40
+            // 
+            this.tableLayoutPanel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            resources.ApplyResources(this.tableLayoutPanel40, "tableLayoutPanel40");
+            this.tableLayoutPanel40.Controls.Add(this.txtNombre, 1, 1);
+            this.tableLayoutPanel40.Name = "tableLayoutPanel40";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Depth = 0;
+            resources.ApplyResources(this.txtNombre, "txtNombre");
+            this.txtNombre.Hint = "";
+            this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PasswordChar = '\0';
+            this.txtNombre.SelectedText = "";
+            this.txtNombre.SelectionLength = 0;
+            this.txtNombre.SelectionStart = 0;
+            this.txtNombre.UseSystemPasswordChar = false;
+            // 
+            // tableLayoutPanel11
+            // 
+            resources.ApplyResources(this.tableLayoutPanel11, "tableLayoutPanel11");
+            this.tableLayoutPanel11.Controls.Add(this.panel4, 1, 0);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            this.panel4.Controls.Add(this.label2);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
             // tableLayoutPanel2
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
@@ -123,49 +166,6 @@ namespace InterfazDATMA
             this.lblFelicitacion.ForeColor = System.Drawing.Color.White;
             this.lblFelicitacion.Name = "lblFelicitacion";
             // 
-            // tableLayoutPanel5
-            // 
-            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel40, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.btnLinkArchivo, 3, 1);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            // 
-            // tableLayoutPanel11
-            // 
-            resources.ApplyResources(this.tableLayoutPanel11, "tableLayoutPanel11");
-            this.tableLayoutPanel11.Controls.Add(this.panel4, 1, 0);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel4.Controls.Add(this.label2);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            // 
-            // tableLayoutPanel40
-            // 
-            this.tableLayoutPanel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            resources.ApplyResources(this.tableLayoutPanel40, "tableLayoutPanel40");
-            this.tableLayoutPanel40.Controls.Add(this.txtNombre, 1, 1);
-            this.tableLayoutPanel40.Name = "tableLayoutPanel40";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Depth = 0;
-            resources.ApplyResources(this.txtNombre, "txtNombre");
-            this.txtNombre.Hint = "";
-            this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.SelectionLength = 0;
-            this.txtNombre.SelectionStart = 0;
-            this.txtNombre.UseSystemPasswordChar = false;
-            // 
             // tableLayoutPanel3
             // 
             resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
@@ -181,24 +181,6 @@ namespace InterfazDATMA
             this.panel1.Controls.Add(this.tableLayoutPanel7);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // tableLayoutPanel4
-            // 
-            resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
-            this.tableLayoutPanel4.Controls.Add(this.panel3, 1, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel3.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // txtDescripcion
-            // 
-            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
-            this.txtDescripcion.Name = "txtDescripcion";
             // 
             // tableLayoutPanel7
             // 
@@ -221,6 +203,24 @@ namespace InterfazDATMA
             this.materialSingleLineTextField1.SelectionStart = 0;
             this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
+            // txtDescripcion
+            // 
+            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
+            this.txtDescripcion.Name = "txtDescripcion";
+            // 
+            // tableLayoutPanel4
+            // 
+            resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
+            this.tableLayoutPanel4.Controls.Add(this.panel3, 1, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
+            this.panel3.Controls.Add(this.label1);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
             // frmAgregarMaterialPsicologo
             // 
             resources.ApplyResources(this, "$this");
@@ -232,18 +232,18 @@ namespace InterfazDATMA
             this.Sizable = false;
             this.Load += new System.EventHandler(this.frmAgregarMaterialPsicologo_Load_1);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel40.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.tableLayoutPanel40.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

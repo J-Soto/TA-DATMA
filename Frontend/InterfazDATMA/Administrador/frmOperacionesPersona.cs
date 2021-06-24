@@ -32,39 +32,15 @@ namespace InterfazDATMA.Administrador
 
             daoTutor = new TutorWS.TutorWSClient();
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
-            daoCurso = new CursoWS.CursoWSClient();
 
             this.formPlantilla = formPlantilla;
             this.formGestionarModulos = formGestionarModulos;
-
+            // dgvTutores
             dgvTutores.AutoGenerateColumns = false;
             dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BindingList<TutorWS.tutor> tutores;
-            try
-            {
-                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre("").ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                tutores = new BindingList<TutorWS.tutor>();
-            }
-            dgvTutores.DataSource = tutores;
-
-
+            // dgvPsicologos
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BindingList<PsicologoWS.psicologo> psicologos;
-            BindingList<CursoWS.curso> cursos;
-
-            try
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre("").ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>();
-            }
-            dgvPsicologos.DataSource = psicologos;
 
             inicializarTablas();
         }
@@ -113,19 +89,11 @@ namespace InterfazDATMA.Administrador
             
             dgvPsicologos.Rows[e.RowIndex].Cells["NombreCompleto"].Value = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
             dgvPsicologos.Rows[e.RowIndex].Cells["celular"].Value = psicologo.celular;
-            /*Cursos Dictando*/
-            try
-            {
-                dgvPsicologos.Rows[e.RowIndex].Cells["cantCursos"].Value = daoPsicologo.cursosDictandoPorPsicologo(psicologo.idPersona);
-            }
-            catch (Exception ex)
-            {
-                dgvPsicologos.Rows[e.RowIndex].Cells["cantCursos"].Value = 0;
-            }
-            /*---------------*//*
+            dgvPsicologos.Rows[e.RowIndex].Cells["correoElectronico"].Value = psicologo.correo;
+
             dgvPsicologos.Rows[e.RowIndex].Cells["foto"].Value = psicologo.fotoPerfil;
             // Las filas deben tener un alto de 100 pixeles
-            dgvPsicologos.RowTemplate.Height = 100;*/
+            dgvPsicologos.RowTemplate.Height = 100;
         }
 
 
@@ -145,11 +113,9 @@ namespace InterfazDATMA.Administrador
             {
                 dgvTutores.Rows[e.RowIndex].Cells["bajoRE"].Value = "No";
             }
-            
-            /*---------------*//*
             dgvTutores.Rows[e.RowIndex].Cells["FotoTutor"].Value = tutor.fotoPerfil;
             // Las filas deben tener un alto de 100 pixeles
-            dgvTutores.RowTemplate.Height = 100;*/
+            dgvTutores.RowTemplate.Height = 100;
         }
 
 
