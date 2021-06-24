@@ -52,10 +52,10 @@ namespace InterfazDATMA
             this.lblNombreModulo.AutoSize = true;
             this.lblNombreModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblNombreModulo.ForeColor = System.Drawing.Color.White;
-            this.lblNombreModulo.Location = new System.Drawing.Point(13, 66);
-            this.lblNombreModulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreModulo.Location = new System.Drawing.Point(6, 34);
+            this.lblNombreModulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreModulo.Name = "lblNombreModulo";
-            this.lblNombreModulo.Size = new System.Drawing.Size(249, 63);
+            this.lblNombreModulo.Size = new System.Drawing.Size(124, 31);
             this.lblNombreModulo.TabIndex = 0;
             this.lblNombreModulo.Text = "Modulo 1";
             // 
@@ -64,10 +64,10 @@ namespace InterfazDATMA
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(110, 150);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(55, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 53);
+            this.label1.Size = new System.Drawing.Size(125, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Programa:";
             // 
@@ -95,8 +95,8 @@ namespace InterfazDATMA
             this.FechaInicio});
             this.dgvPrograma.EnableHeadersVisualStyles = false;
             this.dgvPrograma.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPrograma.Location = new System.Drawing.Point(120, 225);
-            this.dgvPrograma.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPrograma.Location = new System.Drawing.Point(60, 117);
+            this.dgvPrograma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPrograma.Name = "dgvPrograma";
             this.dgvPrograma.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -116,7 +116,7 @@ namespace InterfazDATMA
             this.dgvPrograma.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPrograma.RowTemplate.Height = 28;
             this.dgvPrograma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrograma.Size = new System.Drawing.Size(1395, 606);
+            this.dgvPrograma.Size = new System.Drawing.Size(698, 315);
             this.dgvPrograma.TabIndex = 9;
             // 
             // Semana
@@ -155,12 +155,12 @@ namespace InterfazDATMA
             this.btnListaCuidadores.AutoSize = true;
             this.btnListaCuidadores.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListaCuidadores.Depth = 0;
-            this.btnListaCuidadores.Location = new System.Drawing.Point(1179, 166);
-            this.btnListaCuidadores.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnListaCuidadores.Location = new System.Drawing.Point(590, 86);
+            this.btnListaCuidadores.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnListaCuidadores.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListaCuidadores.Name = "btnListaCuidadores";
             this.btnListaCuidadores.Primary = false;
-            this.btnListaCuidadores.Size = new System.Drawing.Size(304, 36);
+            this.btnListaCuidadores.Size = new System.Drawing.Size(156, 36);
             this.btnListaCuidadores.TabIndex = 11;
             this.btnListaCuidadores.Text = "Lista de Cuidadores";
             this.btnListaCuidadores.UseVisualStyleBackColor = true;
@@ -171,12 +171,12 @@ namespace InterfazDATMA
             this.btnInsertarSemana.AutoSize = true;
             this.btnInsertarSemana.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnInsertarSemana.Depth = 0;
-            this.btnInsertarSemana.Location = new System.Drawing.Point(120, 907);
-            this.btnInsertarSemana.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnInsertarSemana.Location = new System.Drawing.Point(60, 472);
+            this.btnInsertarSemana.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnInsertarSemana.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInsertarSemana.Name = "btnInsertarSemana";
             this.btnInsertarSemana.Primary = false;
-            this.btnInsertarSemana.Size = new System.Drawing.Size(264, 36);
+            this.btnInsertarSemana.Size = new System.Drawing.Size(136, 36);
             this.btnInsertarSemana.TabIndex = 12;
             this.btnInsertarSemana.Text = "Insertar Semana";
             this.btnInsertarSemana.UseVisualStyleBackColor = true;
@@ -187,12 +187,12 @@ namespace InterfazDATMA
             this.btnModificarSemana.AutoSize = true;
             this.btnModificarSemana.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnModificarSemana.Depth = 0;
-            this.btnModificarSemana.Location = new System.Drawing.Point(609, 907);
-            this.btnModificarSemana.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModificarSemana.Location = new System.Drawing.Point(304, 472);
+            this.btnModificarSemana.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnModificarSemana.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificarSemana.Name = "btnModificarSemana";
             this.btnModificarSemana.Primary = false;
-            this.btnModificarSemana.Size = new System.Drawing.Size(280, 36);
+            this.btnModificarSemana.Size = new System.Drawing.Size(144, 36);
             this.btnModificarSemana.TabIndex = 13;
             this.btnModificarSemana.Text = "Modificar Semana";
             this.btnModificarSemana.UseVisualStyleBackColor = true;
@@ -203,12 +203,12 @@ namespace InterfazDATMA
             this.btnListaCursos.AutoSize = true;
             this.btnListaCursos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListaCursos.Depth = 0;
-            this.btnListaCursos.Location = new System.Drawing.Point(1179, 987);
-            this.btnListaCursos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnListaCursos.Location = new System.Drawing.Point(590, 513);
+            this.btnListaCursos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnListaCursos.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListaCursos.Name = "btnListaCursos";
             this.btnListaCursos.Primary = false;
-            this.btnListaCursos.Size = new System.Drawing.Size(417, 36);
+            this.btnListaCursos.Size = new System.Drawing.Size(212, 36);
             this.btnListaCursos.TabIndex = 14;
             this.btnListaCursos.Text = "Volver a la lista de cursos";
             this.btnListaCursos.UseVisualStyleBackColor = true;
@@ -218,20 +218,21 @@ namespace InterfazDATMA
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1605, 124);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(802, 64);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(992, 785);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(496, 408);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // frmConfigurarModuloPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(2667, 1682);
+            this.ClientSize = new System.Drawing.Size(1106, 581);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnListaCursos);
@@ -241,7 +242,7 @@ namespace InterfazDATMA
             this.Controls.Add(this.dgvPrograma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNombreModulo);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmConfigurarModuloPsicologo";
             this.Sizable = false;
             this.Text = "frmConfigurarModuloPsicologo";

@@ -36,6 +36,16 @@ namespace InterfazDATMA.TutorWS {
         System.Threading.Tasks.Task<InterfazDATMA.TutorWS.listarTutoresPorNombreResponse> listarTutoresPorNombreAsync(InterfazDATMA.TutorWS.listarTutoresPorNombreRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIRequest", ReplyAction="http://services.datmasoft.datma.pe/TutorWS/verificarDNIResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.TutorWS.verificarDNIResponse verificarDNI(InterfazDATMA.TutorWS.verificarDNIRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIRequest", ReplyAction="http://services.datmasoft.datma.pe/TutorWS/verificarDNIResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.TutorWS.verificarDNIResponse> verificarDNIAsync(InterfazDATMA.TutorWS.verificarDNIRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/TutorWS/modificarTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/TutorWS/modificarTutorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -64,16 +74,6 @@ namespace InterfazDATMA.TutorWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/TutorWS/eliminarTutorRequest", ReplyAction="http://services.datmasoft.datma.pe/TutorWS/eliminarTutorResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.TutorWS.eliminarTutorResponse> eliminarTutorAsync(InterfazDATMA.TutorWS.eliminarTutorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIRequest", ReplyAction="http://services.datmasoft.datma.pe/TutorWS/verificarDNIResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.TutorWS.verificarDNIResponse verificarDNI(InterfazDATMA.TutorWS.verificarDNIRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/TutorWS/verificarDNIRequest", ReplyAction="http://services.datmasoft.datma.pe/TutorWS/verificarDNIResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.TutorWS.verificarDNIResponse> verificarDNIAsync(InterfazDATMA.TutorWS.verificarDNIRequest request);
     }
     
     /// <remarks/>
@@ -621,6 +621,8 @@ namespace InterfazDATMA.TutorWS {
         
         private int idField;
         
+        private int id_curso_temaField;
+        
         private string nombreField;
         
         /// <remarks/>
@@ -697,6 +699,18 @@ namespace InterfazDATMA.TutorWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_curso_tema {
+            get {
+                return this.id_curso_temaField;
+            }
+            set {
+                this.id_curso_temaField = value;
+                this.RaisePropertyChanged("id_curso_tema");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -1281,6 +1295,57 @@ namespace InterfazDATMA.TutorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarDNI", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class verificarDNIRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dni;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nom;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apPat;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apMat;
+        
+        public verificarDNIRequest() {
+        }
+        
+        public verificarDNIRequest(string dni, string nom, string apPat, string apMat) {
+            this.dni = dni;
+            this.nom = nom;
+            this.apPat = apPat;
+            this.apMat = apMat;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarDNIResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class verificarDNIResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public verificarDNIResponse() {
+        }
+        
+        public verificarDNIResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarTutor", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
     public partial class modificarTutorRequest {
         
@@ -1391,57 +1456,6 @@ namespace InterfazDATMA.TutorWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarDNI", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class verificarDNIRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dni;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nom;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apPat;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apMat;
-        
-        public verificarDNIRequest() {
-        }
-        
-        public verificarDNIRequest(string dni, string nom, string apPat, string apMat) {
-            this.dni = dni;
-            this.nom = nom;
-            this.apPat = apPat;
-            this.apMat = apMat;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarDNIResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class verificarDNIResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public verificarDNIResponse() {
-        }
-        
-        public verificarDNIResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface TutorWSChannel : InterfazDATMA.TutorWS.TutorWS, System.ServiceModel.IClientChannel {
     }
@@ -1514,6 +1528,35 @@ namespace InterfazDATMA.TutorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.TutorWS.verificarDNIResponse InterfazDATMA.TutorWS.TutorWS.verificarDNI(InterfazDATMA.TutorWS.verificarDNIRequest request) {
+            return base.Channel.verificarDNI(request);
+        }
+        
+        public int verificarDNI(string dni, string nom, string apPat, string apMat) {
+            InterfazDATMA.TutorWS.verificarDNIRequest inValue = new InterfazDATMA.TutorWS.verificarDNIRequest();
+            inValue.dni = dni;
+            inValue.nom = nom;
+            inValue.apPat = apPat;
+            inValue.apMat = apMat;
+            InterfazDATMA.TutorWS.verificarDNIResponse retVal = ((InterfazDATMA.TutorWS.TutorWS)(this)).verificarDNI(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.TutorWS.verificarDNIResponse> InterfazDATMA.TutorWS.TutorWS.verificarDNIAsync(InterfazDATMA.TutorWS.verificarDNIRequest request) {
+            return base.Channel.verificarDNIAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.TutorWS.verificarDNIResponse> verificarDNIAsync(string dni, string nom, string apPat, string apMat) {
+            InterfazDATMA.TutorWS.verificarDNIRequest inValue = new InterfazDATMA.TutorWS.verificarDNIRequest();
+            inValue.dni = dni;
+            inValue.nom = nom;
+            inValue.apPat = apPat;
+            inValue.apMat = apMat;
+            return ((InterfazDATMA.TutorWS.TutorWS)(this)).verificarDNIAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         InterfazDATMA.TutorWS.modificarTutorResponse InterfazDATMA.TutorWS.TutorWS.modificarTutor(InterfazDATMA.TutorWS.modificarTutorRequest request) {
             return base.Channel.modificarTutor(request);
         }
@@ -1582,35 +1625,6 @@ namespace InterfazDATMA.TutorWS {
             inValue.idTutor = idTutor;
             inValue.idUsuario = idUsuario;
             return ((InterfazDATMA.TutorWS.TutorWS)(this)).eliminarTutorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.TutorWS.verificarDNIResponse InterfazDATMA.TutorWS.TutorWS.verificarDNI(InterfazDATMA.TutorWS.verificarDNIRequest request) {
-            return base.Channel.verificarDNI(request);
-        }
-        
-        public int verificarDNI(string dni, string nom, string apPat, string apMat) {
-            InterfazDATMA.TutorWS.verificarDNIRequest inValue = new InterfazDATMA.TutorWS.verificarDNIRequest();
-            inValue.dni = dni;
-            inValue.nom = nom;
-            inValue.apPat = apPat;
-            inValue.apMat = apMat;
-            InterfazDATMA.TutorWS.verificarDNIResponse retVal = ((InterfazDATMA.TutorWS.TutorWS)(this)).verificarDNI(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.TutorWS.verificarDNIResponse> InterfazDATMA.TutorWS.TutorWS.verificarDNIAsync(InterfazDATMA.TutorWS.verificarDNIRequest request) {
-            return base.Channel.verificarDNIAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<InterfazDATMA.TutorWS.verificarDNIResponse> verificarDNIAsync(string dni, string nom, string apPat, string apMat) {
-            InterfazDATMA.TutorWS.verificarDNIRequest inValue = new InterfazDATMA.TutorWS.verificarDNIRequest();
-            inValue.dni = dni;
-            inValue.nom = nom;
-            inValue.apPat = apPat;
-            inValue.apMat = apMat;
-            return ((InterfazDATMA.TutorWS.TutorWS)(this)).verificarDNIAsync(inValue);
         }
     }
 }
