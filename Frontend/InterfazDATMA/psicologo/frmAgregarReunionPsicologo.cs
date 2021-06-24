@@ -53,5 +53,15 @@ namespace InterfazDATMA
         {
 
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmAgregarReunionPsicologo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
