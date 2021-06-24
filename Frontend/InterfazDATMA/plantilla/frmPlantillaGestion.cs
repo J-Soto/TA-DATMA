@@ -138,7 +138,6 @@ namespace InterfazDATMA.plantilla
 
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
-
             formLogout = new login.frmLogout();
             formularioActivo2.Close();
             formLogout.Show();
