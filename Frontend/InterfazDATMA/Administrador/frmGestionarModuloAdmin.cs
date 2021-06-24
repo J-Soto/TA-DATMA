@@ -45,7 +45,18 @@ namespace InterfazDATMA.Administrador
             new object[] { true });
             dgvTutores.AutoGenerateColumns = false;
             dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTutores.DataSource = daoTutor.listarTodosTutores();
+            BindingList<TutorWS.tutor> tutores;
+            try
+            {
+                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre("").ToList());
+            }
+            catch (ArgumentNullException ex)
+            {
+                tutores = new BindingList<TutorWS.tutor>();
+            }
+            dgvTutores.DataSource = tutores;
+
+
 
             // Psicologos
             typeof(DataGridView).InvokeMember(
