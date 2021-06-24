@@ -223,7 +223,6 @@ namespace InterfazDATMA.Administrador
             // dgvTutores
             // 
             this.dgvTutores.AccessibleName = "";
-            this.dgvTutores.AllowUserToAddRows = false;
             this.dgvTutores.AllowUserToDeleteRows = false;
             this.dgvTutores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.dgvTutores.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -310,7 +309,6 @@ namespace InterfazDATMA.Administrador
             // 
             // dgvPsicologos
             // 
-            this.dgvPsicologos.AllowUserToAddRows = false;
             this.dgvPsicologos.AllowUserToDeleteRows = false;
             this.dgvPsicologos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.dgvPsicologos.BorderStyle = System.Windows.Forms.BorderStyle.None;
