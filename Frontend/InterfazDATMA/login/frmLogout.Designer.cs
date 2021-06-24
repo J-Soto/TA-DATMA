@@ -29,60 +29,69 @@ namespace InterfazDATMA.login
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.lblAgradecimiento = new System.Windows.Forms.Label();
-            this.lblNotificacionActiva = new System.Windows.Forms.Label();
+            this.btnAceptar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.lblNotificacionActiva = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.lblAgradecimiento = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(154)))), ((int)(((byte)(100)))));
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(121, 289);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAceptar.AutoSize = true;
+            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAceptar.Depth = 0;
+            this.btnAceptar.Location = new System.Drawing.Point(233, 442);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(296, 46);
-            this.btnAceptar.TabIndex = 25;
-            this.btnAceptar.Text = "ACEPTAR";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // lblAgradecimiento
-            // 
-            this.lblAgradecimiento.AutoSize = true;
-            this.lblAgradecimiento.ForeColor = System.Drawing.Color.White;
-            this.lblAgradecimiento.Location = new System.Drawing.Point(84, 203);
-            this.lblAgradecimiento.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblAgradecimiento.Name = "lblAgradecimiento";
-            this.lblAgradecimiento.Size = new System.Drawing.Size(373, 25);
-            this.lblAgradecimiento.TabIndex = 24;
-            this.lblAgradecimiento.Text = "Gracias por utilizar nuestra aplicacion";
+            this.btnAceptar.Primary = false;
+            this.btnAceptar.Size = new System.Drawing.Size(138, 36);
+            this.btnAceptar.TabIndex = 33;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // lblNotificacionActiva
             // 
-            this.lblNotificacionActiva.AutoSize = true;
-            this.lblNotificacionActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotificacionActiva.ForeColor = System.Drawing.Color.White;
-            this.lblNotificacionActiva.Location = new System.Drawing.Point(89, 98);
-            this.lblNotificacionActiva.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNotificacionActiva.Depth = 0;
+            this.lblNotificacionActiva.Hint = "";
+            this.lblNotificacionActiva.Location = new System.Drawing.Point(130, 188);
+            this.lblNotificacionActiva.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNotificacionActiva.Name = "lblNotificacionActiva";
-            this.lblNotificacionActiva.Size = new System.Drawing.Size(368, 37);
-            this.lblNotificacionActiva.TabIndex = 23;
+            this.lblNotificacionActiva.PasswordChar = '\0';
+            this.lblNotificacionActiva.SelectedText = "";
+            this.lblNotificacionActiva.SelectionLength = 0;
+            this.lblNotificacionActiva.SelectionStart = 0;
+            this.lblNotificacionActiva.Size = new System.Drawing.Size(399, 41);
+            this.lblNotificacionActiva.TabIndex = 34;
             this.lblNotificacionActiva.Text = "Sesion cerrada con exito";
+            this.lblNotificacionActiva.UseSystemPasswordChar = false;
+            // 
+            // lblAgradecimiento
+            // 
+            this.lblAgradecimiento.Depth = 0;
+            this.lblAgradecimiento.Hint = "";
+            this.lblAgradecimiento.Location = new System.Drawing.Point(69, 306);
+            this.lblAgradecimiento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAgradecimiento.Name = "lblAgradecimiento";
+            this.lblAgradecimiento.PasswordChar = '\0';
+            this.lblAgradecimiento.SelectedText = "";
+            this.lblAgradecimiento.SelectionLength = 0;
+            this.lblAgradecimiento.SelectionStart = 0;
+            this.lblAgradecimiento.Size = new System.Drawing.Size(505, 41);
+            this.lblAgradecimiento.TabIndex = 35;
+            this.lblAgradecimiento.Text = "Gracias por utilizar nuestra aplicacion";
+            this.lblAgradecimiento.UseSystemPasswordChar = false;
             // 
             // frmLogout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(572, 435);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(648, 546);
             this.ControlBox = false;
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblAgradecimiento);
             this.Controls.Add(this.lblNotificacionActiva);
+            this.Controls.Add(this.btnAceptar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogout";
@@ -90,15 +99,15 @@ namespace InterfazDATMA.login
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogout";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmLogout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Label lblAgradecimiento;
-        private System.Windows.Forms.Label lblNotificacionActiva;
+        private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField lblNotificacionActiva;
+        private MaterialSkin.Controls.MaterialSingleLineTextField lblAgradecimiento;
     }
 }
