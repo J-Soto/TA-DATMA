@@ -46,11 +46,11 @@ namespace InterfazDATMA
                 dgvTemas.DataSource = temasList;
             }
         }
-
+        
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
+        {/*
             var idCursoTema = daoCurso.insertarCursoTema(idCurso, temasList[dgvTemas.CurrentCell.RowIndex].id,
-                dateCursoFechaInicio.Value, dateCursoFechaFin.Value);
+                (DateTime)dateCursoFechaInicio.GetValue, dateCursoFechaFin.GetValue);
             var curso = new SemanaWS.curso
             {
                 idCurso = idCurso
@@ -65,12 +65,27 @@ namespace InterfazDATMA
             };
             daoSemana.insertarSemana(semana, idCursoTema);
             DialogResult = DialogResult.OK;
-
+            */
         }
-
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dateSemanaFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

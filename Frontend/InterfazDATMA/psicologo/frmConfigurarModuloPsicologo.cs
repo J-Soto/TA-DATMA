@@ -44,7 +44,7 @@ namespace InterfazDATMA
 
 
             daoCurso = new CursoWS.CursoWSClient();
-            lblNombreModulo.Text = "Curso: " + curso.descripcion;
+            label1.Text = "Curso: " + curso.descripcion;
             dgvPrograma.AutoGenerateColumns = false;
             pares = new BindingList<SemanaTema>(Fetch());
             dgvPrograma.DataSource = pares;
@@ -129,6 +129,16 @@ namespace InterfazDATMA
         private void btnListaCursos_Click(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(formGestionarModulos);
+        }
+
+        private void tableLayoutPanel22_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmConfigurarModuloPsicologo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

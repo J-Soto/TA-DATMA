@@ -51,7 +51,14 @@ namespace InterfazDATMA.cuidador
             else txtBajoRec.Text = "Si";
             if (frmPlantillaGestion.tutor.gestante == 1) txtGestante.Text = "No";
             else txtGestante.Text = "Si";
-            picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
+            try
+            {
+                picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
+            }
+            catch (Exception ex)
+            {
+             
+            }        
         }
 
 
