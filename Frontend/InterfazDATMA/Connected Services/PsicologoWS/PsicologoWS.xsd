@@ -2,10 +2,14 @@
 <xs:schema xmlns:tns="http://services.datmasoft.datma.pe/" targetNamespace="http://services.datmasoft.datma.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="buscarPsicologoPorIdUsuario" type="tns:buscarPsicologoPorIdUsuario" />
   <xs:element name="buscarPsicologoPorIdUsuarioResponse" type="tns:buscarPsicologoPorIdUsuarioResponse" />
+  <xs:element name="cursosDictandoPorPsicologo" type="tns:cursosDictandoPorPsicologo" />
+  <xs:element name="cursosDictandoPorPsicologoResponse" type="tns:cursosDictandoPorPsicologoResponse" />
   <xs:element name="eliminarPsicologo" type="tns:eliminarPsicologo" />
   <xs:element name="eliminarPsicologoResponse" type="tns:eliminarPsicologoResponse" />
   <xs:element name="insertarPsicologo" type="tns:insertarPsicologo" />
   <xs:element name="insertarPsicologoResponse" type="tns:insertarPsicologoResponse" />
+  <xs:element name="listarPsicologosPorIdCurso" type="tns:listarPsicologosPorIdCurso" />
+  <xs:element name="listarPsicologosPorIdCursoResponse" type="tns:listarPsicologosPorIdCursoResponse" />
   <xs:element name="listarPsicologosPorNombre" type="tns:listarPsicologosPorNombre" />
   <xs:element name="listarPsicologosPorNombreResponse" type="tns:listarPsicologosPorNombreResponse" />
   <xs:element name="listarTodosPsicologos" type="tns:listarTodosPsicologos" />
@@ -140,6 +144,16 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarPsicologosPorIdCurso">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPsicologosPorIdCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:psicologo" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarPsicologo">
     <xs:sequence>
       <xs:element minOccurs="0" name="psicologo" type="tns:psicologo" />
@@ -180,6 +194,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarPsicologoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cursosDictandoPorPsicologo">
+    <xs:sequence>
+      <xs:element name="idPsicologo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cursosDictandoPorPsicologoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

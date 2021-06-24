@@ -781,10 +781,16 @@
     <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.cursosDictandoPorPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.eliminarPsicologoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.insertarPsicologoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.listarPsicologosPorIdCursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.listarPsicologosPorNombreResponse.datasource">

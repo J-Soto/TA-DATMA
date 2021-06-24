@@ -116,16 +116,16 @@ namespace InterfazDATMA.Administrador
             /*Cursos Dictando*/
             try
             {
-                dgvPsicologos.Rows[e.RowIndex].Cells["cantCursos"].Value = daoCurso.listarCursosPsicologo(psicologo.idUsuario).Length;
+                dgvPsicologos.Rows[e.RowIndex].Cells["cantCursos"].Value = daoPsicologo.cursosDictandoPorPsicologo(psicologo.idPersona);
             }
             catch (Exception ex)
             {
                 dgvPsicologos.Rows[e.RowIndex].Cells["cantCursos"].Value = 0;
             }
-            /*---------------*/
+            /*---------------*//*
             dgvPsicologos.Rows[e.RowIndex].Cells["foto"].Value = psicologo.fotoPerfil;
             // Las filas deben tener un alto de 100 pixeles
-            dgvPsicologos.RowTemplate.Height = 100;
+            dgvPsicologos.RowTemplate.Height = 100;*/
         }
 
 
@@ -146,10 +146,10 @@ namespace InterfazDATMA.Administrador
                 dgvTutores.Rows[e.RowIndex].Cells["bajoRE"].Value = "No";
             }
             
-            /*---------------*/
+            /*---------------*//*
             dgvTutores.Rows[e.RowIndex].Cells["FotoTutor"].Value = tutor.fotoPerfil;
             // Las filas deben tener un alto de 100 pixeles
-            dgvTutores.RowTemplate.Height = 100;
+            dgvTutores.RowTemplate.Height = 100;*/
         }
 
 

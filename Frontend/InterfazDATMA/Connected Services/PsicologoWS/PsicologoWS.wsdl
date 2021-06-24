@@ -41,6 +41,18 @@
   <message name="verificarDNIResponse">
     <part name="parameters" element="tns:verificarDNIResponse" />
   </message>
+  <message name="cursosDictandoPorPsicologo">
+    <part name="parameters" element="tns:cursosDictandoPorPsicologo" />
+  </message>
+  <message name="cursosDictandoPorPsicologoResponse">
+    <part name="parameters" element="tns:cursosDictandoPorPsicologoResponse" />
+  </message>
+  <message name="listarPsicologosPorIdCurso">
+    <part name="parameters" element="tns:listarPsicologosPorIdCurso" />
+  </message>
+  <message name="listarPsicologosPorIdCursoResponse">
+    <part name="parameters" element="tns:listarPsicologosPorIdCursoResponse" />
+  </message>
   <message name="buscarPsicologoPorIdUsuario">
     <part name="parameters" element="tns:buscarPsicologoPorIdUsuario" />
   </message>
@@ -71,6 +83,14 @@
     <operation name="verificarDNI">
       <input wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/verificarDNIRequest" message="tns:verificarDNI" />
       <output wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/verificarDNIResponse" message="tns:verificarDNIResponse" />
+    </operation>
+    <operation name="cursosDictandoPorPsicologo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/cursosDictandoPorPsicologoRequest" message="tns:cursosDictandoPorPsicologo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/cursosDictandoPorPsicologoResponse" message="tns:cursosDictandoPorPsicologoResponse" />
+    </operation>
+    <operation name="listarPsicologosPorIdCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/listarPsicologosPorIdCursoRequest" message="tns:listarPsicologosPorIdCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/listarPsicologosPorIdCursoResponse" message="tns:listarPsicologosPorIdCursoResponse" />
     </operation>
     <operation name="buscarPsicologoPorIdUsuario">
       <input wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/buscarPsicologoPorIdUsuarioRequest" message="tns:buscarPsicologoPorIdUsuario" />
@@ -125,6 +145,24 @@
       </output>
     </operation>
     <operation name="verificarDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cursosDictandoPorPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPsicologosPorIdCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

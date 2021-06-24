@@ -94,7 +94,6 @@ namespace InterfazDATMA.Administrador
             tutor.fechaNacimiento = dtpFechaNacimiento.Value;
             tutor.fechaNacimientoSpecified = true;
             tutor.distrito = new TutorWS.distrito();
-            tutor.distrito = new TutorWS.distrito();
             tutor.distrito = distrito;
 
             if (rbtnHombre.Checked == true)
