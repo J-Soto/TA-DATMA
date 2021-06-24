@@ -41,6 +41,12 @@
   <message name="verificarDNIResponse">
     <part name="parameters" element="tns:verificarDNIResponse" />
   </message>
+  <message name="buscarPsicologoPorIdUsuario">
+    <part name="parameters" element="tns:buscarPsicologoPorIdUsuario" />
+  </message>
+  <message name="buscarPsicologoPorIdUsuarioResponse">
+    <part name="parameters" element="tns:buscarPsicologoPorIdUsuarioResponse" />
+  </message>
   <portType name="PsicologoWS">
     <operation name="listarTodosPsicologos">
       <input wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/listarTodosPsicologosRequest" message="tns:listarTodosPsicologos" />
@@ -65,6 +71,10 @@
     <operation name="verificarDNI">
       <input wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/verificarDNIRequest" message="tns:verificarDNI" />
       <output wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/verificarDNIResponse" message="tns:verificarDNIResponse" />
+    </operation>
+    <operation name="buscarPsicologoPorIdUsuario">
+      <input wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/buscarPsicologoPorIdUsuarioRequest" message="tns:buscarPsicologoPorIdUsuario" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/PsicologoWS/buscarPsicologoPorIdUsuarioResponse" message="tns:buscarPsicologoPorIdUsuarioResponse" />
     </operation>
   </portType>
   <binding name="PsicologoWSPortBinding" type="tns:PsicologoWS">
@@ -115,6 +125,15 @@
       </output>
     </operation>
     <operation name="verificarDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarPsicologoPorIdUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

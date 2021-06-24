@@ -63,15 +63,16 @@ namespace InterfazDATMA
             this.btnAccederModulo.AutoSize = true;
             this.btnAccederModulo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAccederModulo.Depth = 0;
-            this.btnAccederModulo.Location = new System.Drawing.Point(1253, 611);
-            this.btnAccederModulo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAccederModulo.Location = new System.Drawing.Point(940, 489);
+            this.btnAccederModulo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAccederModulo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAccederModulo.Name = "btnAccederModulo";
             this.btnAccederModulo.Primary = false;
-            this.btnAccederModulo.Size = new System.Drawing.Size(232, 36);
+            this.btnAccederModulo.Size = new System.Drawing.Size(176, 36);
             this.btnAccederModulo.TabIndex = 11;
             this.btnAccederModulo.Text = "Acceder Curso";
             this.btnAccederModulo.UseVisualStyleBackColor = true;
+            this.btnAccederModulo.Click += new System.EventHandler(this.btnAccederModulo_Click_1);
             // 
             // dgvCalendario
             // 
@@ -97,8 +98,7 @@ namespace InterfazDATMA
             this.HoraFin});
             this.dgvCalendario.EnableHeadersVisualStyles = false;
             this.dgvCalendario.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCalendario.Location = new System.Drawing.Point(177, 760);
-            this.dgvCalendario.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCalendario.Location = new System.Drawing.Point(133, 608);
             this.dgvCalendario.MultiSelect = false;
             this.dgvCalendario.Name = "dgvCalendario";
             this.dgvCalendario.ReadOnly = true;
@@ -119,7 +119,7 @@ namespace InterfazDATMA
             this.dgvCalendario.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCalendario.RowTemplate.Height = 28;
             this.dgvCalendario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCalendario.Size = new System.Drawing.Size(1308, 340);
+            this.dgvCalendario.Size = new System.Drawing.Size(981, 272);
             this.dgvCalendario.TabIndex = 10;
             // 
             // Actividad
@@ -172,10 +172,9 @@ namespace InterfazDATMA
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(184, 676);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(138, 541);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 53);
+            this.label3.Size = new System.Drawing.Size(183, 39);
             this.label3.TabIndex = 9;
             this.label3.Text = "Calendario";
             // 
@@ -204,8 +203,7 @@ namespace InterfazDATMA
             this.FechaFin});
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvModulos.Location = new System.Drawing.Point(177, 201);
-            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvModulos.Location = new System.Drawing.Point(133, 161);
             this.dgvModulos.MultiSelect = false;
             this.dgvModulos.Name = "dgvModulos";
             this.dgvModulos.ReadOnly = true;
@@ -226,8 +224,9 @@ namespace InterfazDATMA
             this.dgvModulos.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvModulos.RowTemplate.Height = 28;
             this.dgvModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvModulos.Size = new System.Drawing.Size(1308, 340);
+            this.dgvModulos.Size = new System.Drawing.Size(981, 272);
             this.dgvModulos.TabIndex = 8;
+            this.dgvModulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvModulos_CellFormatting);
             // 
             // Curso
             // 
@@ -277,25 +276,23 @@ namespace InterfazDATMA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(169, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(127, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(538, 53);
+            this.label2.Size = new System.Drawing.Size(397, 39);
             this.label2.TabIndex = 7;
             this.label2.Text = "Lista de Cursos Dictando";
             // 
             // frmGestionarModulosPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1744, 1125);
+            this.ClientSize = new System.Drawing.Size(1308, 900);
             this.ControlBox = false;
             this.Controls.Add(this.btnAccederModulo);
             this.Controls.Add(this.dgvCalendario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvModulos);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionarModulosPsicologo";
             this.Sizable = false;
             this.Text = "Gestionar Cursos";

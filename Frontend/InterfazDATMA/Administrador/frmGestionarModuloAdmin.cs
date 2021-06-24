@@ -170,5 +170,10 @@ namespace InterfazDATMA.Administrador
         {
 
         }
+
+        private void dgvPsicologos_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

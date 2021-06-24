@@ -74,6 +74,20 @@ namespace InterfazDATMA.PsicologoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/PsicologoWS/verificarDNIRequest", ReplyAction="http://services.datmasoft.datma.pe/PsicologoWS/verificarDNIResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.PsicologoWS.verificarDNIResponse> verificarDNIAsync(InterfazDATMA.PsicologoWS.verificarDNIRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/PsicologoWS/buscarPsicologoPorIdUsuarioRequest" +
+            "", ReplyAction="http://services.datmasoft.datma.pe/PsicologoWS/buscarPsicologoPorIdUsuarioRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse buscarPsicologoPorIdUsuario(InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/PsicologoWS/buscarPsicologoPorIdUsuarioRequest" +
+            "", ReplyAction="http://services.datmasoft.datma.pe/PsicologoWS/buscarPsicologoPorIdUsuarioRespons" +
+            "e")]
+        System.Threading.Tasks.Task<InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse> buscarPsicologoPorIdUsuarioAsync(InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest request);
     }
     
     /// <remarks/>
@@ -1456,6 +1470,42 @@ namespace InterfazDATMA.PsicologoWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPsicologoPorIdUsuario", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class buscarPsicologoPorIdUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public buscarPsicologoPorIdUsuarioRequest() {
+        }
+        
+        public buscarPsicologoPorIdUsuarioRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPsicologoPorIdUsuarioResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class buscarPsicologoPorIdUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.PsicologoWS.psicologo @return;
+        
+        public buscarPsicologoPorIdUsuarioResponse() {
+        }
+        
+        public buscarPsicologoPorIdUsuarioResponse(InterfazDATMA.PsicologoWS.psicologo @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PsicologoWSChannel : InterfazDATMA.PsicologoWS.PsicologoWS, System.ServiceModel.IClientChannel {
     }
@@ -1625,6 +1675,29 @@ namespace InterfazDATMA.PsicologoWS {
             inValue.apPat = apPat;
             inValue.apMat = apMat;
             return ((InterfazDATMA.PsicologoWS.PsicologoWS)(this)).verificarDNIAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse InterfazDATMA.PsicologoWS.PsicologoWS.buscarPsicologoPorIdUsuario(InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest request) {
+            return base.Channel.buscarPsicologoPorIdUsuario(request);
+        }
+        
+        public InterfazDATMA.PsicologoWS.psicologo buscarPsicologoPorIdUsuario(int idUsuario) {
+            InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest inValue = new InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse retVal = ((InterfazDATMA.PsicologoWS.PsicologoWS)(this)).buscarPsicologoPorIdUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse> InterfazDATMA.PsicologoWS.PsicologoWS.buscarPsicologoPorIdUsuarioAsync(InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest request) {
+            return base.Channel.buscarPsicologoPorIdUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse> buscarPsicologoPorIdUsuarioAsync(int idUsuario) {
+            InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest inValue = new InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            return ((InterfazDATMA.PsicologoWS.PsicologoWS)(this)).buscarPsicologoPorIdUsuarioAsync(inValue);
         }
     }
 }

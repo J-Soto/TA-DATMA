@@ -560,6 +560,12 @@
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.actividad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.asistencia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.documento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.eliminarActividadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -569,7 +575,19 @@
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.listarActividadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.listarVideosPorIdActividadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.modificarActividadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.video.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AsistenciaWS\AsistenciaWS.wsdl" />
@@ -616,7 +634,13 @@
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.insertarCursoTemaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.insertarPsicologoCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.insertarRequerimientoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosGrupoPsicologoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosPorNombreResponse.datasource">
@@ -754,6 +778,9 @@
     <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.eliminarPsicologoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -786,7 +813,13 @@
     <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.actividad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.insertarSemanaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.listarActividadesPorIdSemanaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.listarSemanasResponse.datasource">

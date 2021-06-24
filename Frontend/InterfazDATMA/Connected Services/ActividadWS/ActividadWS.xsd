@@ -6,6 +6,12 @@
   <xs:element name="insertarActividadResponse" type="tns:insertarActividadResponse" />
   <xs:element name="listarActividad" type="tns:listarActividad" />
   <xs:element name="listarActividadResponse" type="tns:listarActividadResponse" />
+  <xs:element name="listarAsistenciasPorIdActividadYGrupo" type="tns:listarAsistenciasPorIdActividadYGrupo" />
+  <xs:element name="listarAsistenciasPorIdActividadYGrupoResponse" type="tns:listarAsistenciasPorIdActividadYGrupoResponse" />
+  <xs:element name="listarDocumentosPorIdActividad" type="tns:listarDocumentosPorIdActividad" />
+  <xs:element name="listarDocumentosPorIdActividadResponse" type="tns:listarDocumentosPorIdActividadResponse" />
+  <xs:element name="listarVideosPorIdActividad" type="tns:listarVideosPorIdActividad" />
+  <xs:element name="listarVideosPorIdActividadResponse" type="tns:listarVideosPorIdActividadResponse" />
   <xs:element name="modificarActividad" type="tns:modificarActividad" />
   <xs:element name="modificarActividadResponse" type="tns:modificarActividadResponse" />
   <xs:complexType name="modificarActividad">
@@ -46,6 +52,25 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarDocumentosPorIdActividad">
+    <xs:sequence>
+      <xs:element name="idActividad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarDocumentosPorIdActividadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documento">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:material">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="docPDF" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="listarActividad">
     <xs:sequence />
   </xs:complexType>
@@ -53,6 +78,26 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:actividad" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarVideosPorIdActividad">
+    <xs:sequence>
+      <xs:element name="idActividad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarVideosPorIdActividadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:video" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="video">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:material">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="duracion" type="xs:string" />
+          <xs:element minOccurs="0" name="linkVideo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="eliminarActividad">
     <xs:sequence>
@@ -73,6 +118,62 @@
   <xs:complexType name="insertarActividadResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAsistenciasPorIdActividadYGrupo">
+    <xs:sequence>
+      <xs:element name="idActividad" type="xs:int" />
+      <xs:element name="idGrupo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAsistenciasPorIdActividadYGrupoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:asistencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asistencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actividad" type="tns:actividad" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="tipo" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:int" />
+          <xs:element minOccurs="0" name="fotoPerfil" type="xs:base64Binary" />
+          <xs:element name="idUsuario" type="xs:int" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element name="tipo" type="xs:int" />
+          <xs:element minOccurs="0" name="user" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="celular" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="tns:distrito" />
+      <xs:element name="edad" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element name="genero" type="xs:unsignedShort" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="distrito">
+    <xs:sequence>
+      <xs:element name="idDistrito" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

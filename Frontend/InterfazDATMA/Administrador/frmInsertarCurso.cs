@@ -331,7 +331,7 @@ namespace InterfazDATMA.Administrador
                 {
                     foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
                     {
-                        //daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, idCurso);
+                        daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, idCurso);
                     }
                 }
 

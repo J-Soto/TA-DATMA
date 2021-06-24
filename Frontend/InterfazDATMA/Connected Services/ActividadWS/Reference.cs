@@ -16,15 +16,6 @@ namespace InterfazDATMA.ActividadWS {
     public interface ActividadWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.ActividadWS.listarActividadResponse listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -34,8 +25,19 @@ namespace InterfazDATMA.ActividadWS {
         System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.eliminarActividadResponse> eliminarActividadAsync(InterfazDATMA.ActividadWS.eliminarActividadRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.ActividadWS.modificarActividadResponse modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         InterfazDATMA.ActividadWS.insertarActividadResponse insertarActividad(InterfazDATMA.ActividadWS.insertarActividadRequest request);
         
@@ -43,13 +45,90 @@ namespace InterfazDATMA.ActividadWS {
         System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.insertarActividadResponse> insertarActividadAsync(InterfazDATMA.ActividadWS.insertarActividadRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        InterfazDATMA.ActividadWS.modificarActividadResponse modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request);
+        InterfazDATMA.ActividadWS.listarActividadResponse listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse")]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.ActividadWS.listarVideosPorIdActividadResponse listarVideosPorIdActividad(InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadResponse" +
+            "")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarVideosPorIdActividadResponse> listarVideosPorIdActividadAsync(InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarDocumentosPorIdActividadRequ" +
+            "est", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarDocumentosPorIdActividadResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadResponse listarDocumentosPorIdActividad(InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarDocumentosPorIdActividadRequ" +
+            "est", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarDocumentosPorIdActividadResp" +
+            "onse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadResponse> listarDocumentosPorIdActividadAsync(InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGr" +
+            "upoRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGr" +
+            "upoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoResponse listarAsistenciasPorIdActividadYGrupo(InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGr" +
+            "upoRequest", ReplyAction="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGr" +
+            "upoResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoResponse> listarAsistenciasPorIdActividadYGrupoAsync(InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarActividadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idActividad;
+        
+        public eliminarActividadRequest() {
+        }
+        
+        public eliminarActividadRequest(int idActividad) {
+            this.idActividad = idActividad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarActividadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarActividadResponse() {
+        }
+        
+        public eliminarActividadResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -262,6 +341,436 @@ namespace InterfazDATMA.ActividadWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.datmasoft.datma.pe/")]
+    public partial class distrito : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idDistritoField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idDistrito {
+            get {
+                return this.idDistritoField;
+            }
+            set {
+                this.idDistritoField = value;
+                this.RaisePropertyChanged("idDistrito");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(usuario))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.datmasoft.datma.pe/")]
+    public partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string apellidoMaternoField;
+        
+        private string apellidoPaternoField;
+        
+        private string celularField;
+        
+        private string correoField;
+        
+        private string dNIField;
+        
+        private distrito distritoField;
+        
+        private int edadField;
+        
+        private System.DateTime fechaNacimientoField;
+        
+        private bool fechaNacimientoFieldSpecified;
+        
+        private ushort generoField;
+        
+        private int idPersonaField;
+        
+        private string nombreField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string apellidoMaterno {
+            get {
+                return this.apellidoMaternoField;
+            }
+            set {
+                this.apellidoMaternoField = value;
+                this.RaisePropertyChanged("apellidoMaterno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string apellidoPaterno {
+            get {
+                return this.apellidoPaternoField;
+            }
+            set {
+                this.apellidoPaternoField = value;
+                this.RaisePropertyChanged("apellidoPaterno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string celular {
+            get {
+                return this.celularField;
+            }
+            set {
+                this.celularField = value;
+                this.RaisePropertyChanged("celular");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string DNI {
+            get {
+                return this.dNIField;
+            }
+            set {
+                this.dNIField = value;
+                this.RaisePropertyChanged("DNI");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public distrito distrito {
+            get {
+                return this.distritoField;
+            }
+            set {
+                this.distritoField = value;
+                this.RaisePropertyChanged("distrito");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int edad {
+            get {
+                return this.edadField;
+            }
+            set {
+                this.edadField = value;
+                this.RaisePropertyChanged("edad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public System.DateTime fechaNacimiento {
+            get {
+                return this.fechaNacimientoField;
+            }
+            set {
+                this.fechaNacimientoField = value;
+                this.RaisePropertyChanged("fechaNacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaNacimientoSpecified {
+            get {
+                return this.fechaNacimientoFieldSpecified;
+            }
+            set {
+                this.fechaNacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaNacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public ushort genero {
+            get {
+                return this.generoField;
+            }
+            set {
+                this.generoField = value;
+                this.RaisePropertyChanged("genero");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int idPersona {
+            get {
+                return this.idPersonaField;
+            }
+            set {
+                this.idPersonaField = value;
+                this.RaisePropertyChanged("idPersona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.datmasoft.datma.pe/")]
+    public partial class usuario : persona {
+        
+        private int activoField;
+        
+        private byte[] fotoPerfilField;
+        
+        private int idUsuarioField;
+        
+        private string passwordField;
+        
+        private int tipoField;
+        
+        private string userField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
+        public byte[] fotoPerfil {
+            get {
+                return this.fotoPerfilField;
+            }
+            set {
+                this.fotoPerfilField = value;
+                this.RaisePropertyChanged("fotoPerfil");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("idUsuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string user {
+            get {
+                return this.userField;
+            }
+            set {
+                this.userField = value;
+                this.RaisePropertyChanged("user");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.datmasoft.datma.pe/")]
+    public partial class asistencia : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private actividad actividadField;
+        
+        private string descripcionField;
+        
+        private int idField;
+        
+        private int tipoField;
+        
+        private usuario usuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public actividad actividad {
+            get {
+                return this.actividadField;
+            }
+            set {
+                this.actividadField = value;
+                this.RaisePropertyChanged("actividad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public usuario usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(video))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(documento))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.datmasoft.datma.pe/")]
     public partial class material : object, System.ComponentModel.INotifyPropertyChanged {
         
         private actividad actividadField;
@@ -358,66 +867,98 @@ namespace InterfazDATMA.ActividadWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class listarActividadRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.datmasoft.datma.pe/")]
+    public partial class video : material {
         
-        public listarActividadRequest() {
+        private string duracionField;
+        
+        private string linkVideoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string duracion {
+            get {
+                return this.duracionField;
+            }
+            set {
+                this.duracionField = value;
+                this.RaisePropertyChanged("duracion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string linkVideo {
+            get {
+                return this.linkVideoField;
+            }
+            set {
+                this.linkVideoField = value;
+                this.RaisePropertyChanged("linkVideo");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.datmasoft.datma.pe/")]
+    public partial class documento : material {
+        
+        private byte[] docPDFField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] docPDF {
+            get {
+                return this.docPDFField;
+            }
+            set {
+                this.docPDFField = value;
+                this.RaisePropertyChanged("docPDF");
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class listarActividadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public InterfazDATMA.ActividadWS.actividad[] @return;
-        
-        public listarActividadResponse() {
-        }
-        
-        public listarActividadResponse(InterfazDATMA.ActividadWS.actividad[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class eliminarActividadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarActividadRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idActividad;
+        public InterfazDATMA.ActividadWS.actividad actividad;
         
-        public eliminarActividadRequest() {
+        public modificarActividadRequest() {
         }
         
-        public eliminarActividadRequest(int idActividad) {
-            this.idActividad = idActividad;
+        public modificarActividadRequest(InterfazDATMA.ActividadWS.actividad actividad) {
+            this.actividad = actividad;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class eliminarActividadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarActividadResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarActividadResponse() {
+        public modificarActividadResponse() {
         }
         
-        public eliminarActividadResponse(int @return) {
+        public modificarActividadResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -466,35 +1007,140 @@ namespace InterfazDATMA.ActividadWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class modificarActividadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarActividadRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public InterfazDATMA.ActividadWS.actividad actividad;
-        
-        public modificarActividadRequest() {
-        }
-        
-        public modificarActividadRequest(InterfazDATMA.ActividadWS.actividad actividad) {
-            this.actividad = actividad;
+        public listarActividadRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
-    public partial class modificarActividadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarActividadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.ActividadWS.actividad[] @return;
+        
+        public listarActividadResponse() {
+        }
+        
+        public listarActividadResponse(InterfazDATMA.ActividadWS.actividad[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarVideosPorIdActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarVideosPorIdActividadRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public int idActividad;
         
-        public modificarActividadResponse() {
+        public listarVideosPorIdActividadRequest() {
         }
         
-        public modificarActividadResponse(int @return) {
+        public listarVideosPorIdActividadRequest(int idActividad) {
+            this.idActividad = idActividad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarVideosPorIdActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarVideosPorIdActividadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.ActividadWS.video[] @return;
+        
+        public listarVideosPorIdActividadResponse() {
+        }
+        
+        public listarVideosPorIdActividadResponse(InterfazDATMA.ActividadWS.video[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDocumentosPorIdActividad", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarDocumentosPorIdActividadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idActividad;
+        
+        public listarDocumentosPorIdActividadRequest() {
+        }
+        
+        public listarDocumentosPorIdActividadRequest(int idActividad) {
+            this.idActividad = idActividad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDocumentosPorIdActividadResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarDocumentosPorIdActividadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.ActividadWS.documento[] @return;
+        
+        public listarDocumentosPorIdActividadResponse() {
+        }
+        
+        public listarDocumentosPorIdActividadResponse(InterfazDATMA.ActividadWS.documento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAsistenciasPorIdActividadYGrupo", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarAsistenciasPorIdActividadYGrupoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idActividad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idGrupo;
+        
+        public listarAsistenciasPorIdActividadYGrupoRequest() {
+        }
+        
+        public listarAsistenciasPorIdActividadYGrupoRequest(int idActividad, int idGrupo) {
+            this.idActividad = idActividad;
+            this.idGrupo = idGrupo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAsistenciasPorIdActividadYGrupoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class listarAsistenciasPorIdActividadYGrupoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.ActividadWS.asistencia[] @return;
+        
+        public listarAsistenciasPorIdActividadYGrupoResponse() {
+        }
+        
+        public listarAsistenciasPorIdActividadYGrupoResponse(InterfazDATMA.ActividadWS.asistencia[] @return) {
             this.@return = @return;
         }
     }
@@ -527,27 +1173,6 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.ActividadWS.listarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request) {
-            return base.Channel.listarActividad(request);
-        }
-        
-        public InterfazDATMA.ActividadWS.actividad[] listarActividad() {
-            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
-            InterfazDATMA.ActividadWS.listarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividad(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request) {
-            return base.Channel.listarActividadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync() {
-            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
-            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         InterfazDATMA.ActividadWS.eliminarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.eliminarActividad(InterfazDATMA.ActividadWS.eliminarActividadRequest request) {
             return base.Channel.eliminarActividad(request);
         }
@@ -568,6 +1193,29 @@ namespace InterfazDATMA.ActividadWS {
             InterfazDATMA.ActividadWS.eliminarActividadRequest inValue = new InterfazDATMA.ActividadWS.eliminarActividadRequest();
             inValue.idActividad = idActividad;
             return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).eliminarActividadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.ActividadWS.modificarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
+            return base.Channel.modificarActividad(request);
+        }
+        
+        public int modificarActividad(InterfazDATMA.ActividadWS.actividad actividad) {
+            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
+            inValue.actividad = actividad;
+            InterfazDATMA.ActividadWS.modificarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
+            return base.Channel.modificarActividadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.actividad actividad) {
+            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
+            inValue.actividad = actividad;
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -596,26 +1244,95 @@ namespace InterfazDATMA.ActividadWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        InterfazDATMA.ActividadWS.modificarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.modificarActividad(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
-            return base.Channel.modificarActividad(request);
+        InterfazDATMA.ActividadWS.listarActividadResponse InterfazDATMA.ActividadWS.ActividadWS.listarActividad(InterfazDATMA.ActividadWS.listarActividadRequest request) {
+            return base.Channel.listarActividad(request);
         }
         
-        public int modificarActividad(InterfazDATMA.ActividadWS.actividad actividad) {
-            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
-            inValue.actividad = actividad;
-            InterfazDATMA.ActividadWS.modificarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividad(inValue);
+        public InterfazDATMA.ActividadWS.actividad[] listarActividad() {
+            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
+            InterfazDATMA.ActividadWS.listarActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividad(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.modificarActividadAsync(InterfazDATMA.ActividadWS.modificarActividadRequest request) {
-            return base.Channel.modificarActividadAsync(request);
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.listarActividadAsync(InterfazDATMA.ActividadWS.listarActividadRequest request) {
+            return base.Channel.listarActividadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.modificarActividadResponse> modificarActividadAsync(InterfazDATMA.ActividadWS.actividad actividad) {
-            InterfazDATMA.ActividadWS.modificarActividadRequest inValue = new InterfazDATMA.ActividadWS.modificarActividadRequest();
-            inValue.actividad = actividad;
-            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).modificarActividadAsync(inValue);
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarActividadResponse> listarActividadAsync() {
+            InterfazDATMA.ActividadWS.listarActividadRequest inValue = new InterfazDATMA.ActividadWS.listarActividadRequest();
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarActividadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.ActividadWS.listarVideosPorIdActividadResponse InterfazDATMA.ActividadWS.ActividadWS.listarVideosPorIdActividad(InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest request) {
+            return base.Channel.listarVideosPorIdActividad(request);
+        }
+        
+        public InterfazDATMA.ActividadWS.video[] listarVideosPorIdActividad(int idActividad) {
+            InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest inValue = new InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest();
+            inValue.idActividad = idActividad;
+            InterfazDATMA.ActividadWS.listarVideosPorIdActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarVideosPorIdActividad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarVideosPorIdActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.listarVideosPorIdActividadAsync(InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest request) {
+            return base.Channel.listarVideosPorIdActividadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarVideosPorIdActividadResponse> listarVideosPorIdActividadAsync(int idActividad) {
+            InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest inValue = new InterfazDATMA.ActividadWS.listarVideosPorIdActividadRequest();
+            inValue.idActividad = idActividad;
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarVideosPorIdActividadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadResponse InterfazDATMA.ActividadWS.ActividadWS.listarDocumentosPorIdActividad(InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest request) {
+            return base.Channel.listarDocumentosPorIdActividad(request);
+        }
+        
+        public InterfazDATMA.ActividadWS.documento[] listarDocumentosPorIdActividad(int idActividad) {
+            InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest inValue = new InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest();
+            inValue.idActividad = idActividad;
+            InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarDocumentosPorIdActividad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadResponse> InterfazDATMA.ActividadWS.ActividadWS.listarDocumentosPorIdActividadAsync(InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest request) {
+            return base.Channel.listarDocumentosPorIdActividadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadResponse> listarDocumentosPorIdActividadAsync(int idActividad) {
+            InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest inValue = new InterfazDATMA.ActividadWS.listarDocumentosPorIdActividadRequest();
+            inValue.idActividad = idActividad;
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarDocumentosPorIdActividadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoResponse InterfazDATMA.ActividadWS.ActividadWS.listarAsistenciasPorIdActividadYGrupo(InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest request) {
+            return base.Channel.listarAsistenciasPorIdActividadYGrupo(request);
+        }
+        
+        public InterfazDATMA.ActividadWS.asistencia[] listarAsistenciasPorIdActividadYGrupo(int idActividad, int idGrupo) {
+            InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest inValue = new InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest();
+            inValue.idActividad = idActividad;
+            inValue.idGrupo = idGrupo;
+            InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoResponse retVal = ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarAsistenciasPorIdActividadYGrupo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoResponse> InterfazDATMA.ActividadWS.ActividadWS.listarAsistenciasPorIdActividadYGrupoAsync(InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest request) {
+            return base.Channel.listarAsistenciasPorIdActividadYGrupoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoResponse> listarAsistenciasPorIdActividadYGrupoAsync(int idActividad, int idGrupo) {
+            InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest inValue = new InterfazDATMA.ActividadWS.listarAsistenciasPorIdActividadYGrupoRequest();
+            inValue.idActividad = idActividad;
+            inValue.idGrupo = idGrupo;
+            return ((InterfazDATMA.ActividadWS.ActividadWS)(this)).listarAsistenciasPorIdActividadYGrupoAsync(inValue);
         }
     }
 }

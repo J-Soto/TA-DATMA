@@ -48,13 +48,15 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser = new System.Windows.Forms.Label();
             this.dgvTutores = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.lblPsicologosUser = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.foto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.foto2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -241,7 +243,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -281,16 +283,6 @@ namespace InterfazDATMA.Administrador
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
             // 
-            // foto
-            // 
-            this.foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.foto.HeaderText = "Foto";
-            this.foto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.foto.MinimumWidth = 8;
-            this.foto.Name = "foto";
-            this.foto.ReadOnly = true;
-            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
@@ -328,7 +320,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -359,6 +351,7 @@ namespace InterfazDATMA.Administrador
             this.dgvPsicologos.RowTemplate.Height = 28;
             this.dgvPsicologos.Size = new System.Drawing.Size(802, 686);
             this.dgvPsicologos.TabIndex = 11;
+            this.dgvPsicologos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPsicologos_CellContentClick_2);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -367,16 +360,6 @@ namespace InterfazDATMA.Administrador
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // foto2
-            // 
-            this.foto2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.foto2.HeaderText = "Foto";
-            this.foto2.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.foto2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.foto2.MinimumWidth = 8;
-            this.foto2.Name = "foto2";
-            this.foto2.ReadOnly = true;
             // 
             // lblPsicologosUser
             // 
@@ -410,6 +393,44 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1920, 1080);
             this.tableLayoutPanel6.TabIndex = 24;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewImageColumn1.HeaderText = "Foto";
+            this.dataGridViewImageColumn1.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn1.MinimumWidth = 8;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewImageColumn2.HeaderText = "Foto";
+            this.dataGridViewImageColumn2.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn2.MinimumWidth = 8;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
+            // foto
+            // 
+            this.foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.foto.HeaderText = "Foto";
+            this.foto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.foto.MinimumWidth = 8;
+            this.foto.Name = "foto";
+            this.foto.ReadOnly = true;
+            // 
+            // foto2
+            // 
+            this.foto2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.foto2.HeaderText = "Foto";
+            this.foto2.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.foto2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.foto2.MinimumWidth = 8;
+            this.foto2.Name = "foto2";
+            this.foto2.ReadOnly = true;
             // 
             // frmGestionarModuloAdmin
             // 
@@ -463,5 +484,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

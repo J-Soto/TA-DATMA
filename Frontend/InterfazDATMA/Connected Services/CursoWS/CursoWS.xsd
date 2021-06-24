@@ -10,9 +10,13 @@
   <xs:element name="insertarCursoResponse" type="tns:insertarCursoResponse" />
   <xs:element name="insertarCursoTema" type="tns:insertarCursoTema" />
   <xs:element name="insertarCursoTemaResponse" type="tns:insertarCursoTemaResponse" />
+  <xs:element name="insertarPsicologoCurso" type="tns:insertarPsicologoCurso" />
+  <xs:element name="insertarPsicologoCursoResponse" type="tns:insertarPsicologoCursoResponse" />
   <xs:element name="insertarRequerimiento" type="tns:insertarRequerimiento" />
   <xs:element name="insertarRequerimientoResponse" type="tns:insertarRequerimientoResponse" />
   <xs:element name="listarCursos" type="tns:listarCursos" />
+  <xs:element name="listarCursosGrupoPsicologo" type="tns:listarCursosGrupoPsicologo" />
+  <xs:element name="listarCursosGrupoPsicologoResponse" type="tns:listarCursosGrupoPsicologoResponse" />
   <xs:element name="listarCursosPorNombre" type="tns:listarCursosPorNombre" />
   <xs:element name="listarCursosPorNombreResponse" type="tns:listarCursosPorNombreResponse" />
   <xs:element name="listarCursosPsicologo" type="tns:listarCursosPsicologo" />
@@ -158,6 +162,17 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarCursosGrupoPsicologo">
+    <xs:sequence>
+      <xs:element name="idPsicologo" type="xs:int" />
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosGrupoPsicologoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:grupo" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarCursoTema">
     <xs:sequence>
       <xs:element name="idCurso" type="xs:int" />
@@ -272,6 +287,17 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarPsicologoCurso">
+    <xs:sequence>
+      <xs:element name="idPsicologo" type="xs:int" />
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPsicologoCursoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarCursoTema">
     <xs:sequence>
       <xs:element name="idCurso" type="xs:int" />
@@ -297,9 +323,9 @@
   </xs:complexType>
   <xs:complexType name="modificarRequerimiento">
     <xs:sequence>
-      <xs:element name="arg0" type="xs:int" />
-      <xs:element name="arg1" type="xs:int" />
-      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element name="idCursoDep" type="xs:int" />
+      <xs:element name="idRequerimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarRequerimientoResponse">
