@@ -16,6 +16,10 @@ namespace InterfazDATMA
     {
         public frmListaCursoInscritos formAnterior;
         private frmPlantillaGestion plantilla;
+
+        private CursoWS.CursoWSClient daoCurso;
+        private PsicologoWS.PsicologoWSClient daoPsi;
+        private PsicologoWS.psicologo psicologo;
         public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla)
         {
             InitializeComponent();
@@ -26,6 +30,21 @@ namespace InterfazDATMA
 
             this.formAnterior = formAnterior;
             this.plantilla = plantilla;
+
+            daoCurso = new CursoWS.CursoWSClient();
+            daoPsi = new PsicologoWS.PsicologoWSClient();
+            dgvCursos.AutoGenerateColumns = false;
+            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            BindingList<CursoWS.curso> lCursos;
+            try
+            {
+                lCursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosDisponibles().ToList());
+            }
+            catch (ArgumentNullException)
+            {
+                lCursos = null;
+            }
+            dgvCursos.DataSource = lCursos;
         }
 
         private void frmCursosDisponibles_Load(object sender, EventArgs e)
@@ -42,6 +61,27 @@ namespace InterfazDATMA
         private void btnMasInfo_Click_1(object sender, EventArgs e)
         {
             plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
+        }
+
+        private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            CursoWS.curso curso = (CursoWS.curso)dgvCursos.Rows[e.RowIndex].DataBoundItem;
+            dgvCursos.Rows[e.RowIndex].Cells[0].Value = curso.descripcion;
+            dgvCursos.Rows[e.RowIndex].Cells[1].Value = curso.fechaInicio;
+            dgvCursos.Rows[e.RowIndex].Cells[2].Value = curso.fechaFin;
+            BindingList<PsicologoWS.psicologo> lPsi;
+            try
+            {
+                lPsi = new BindingList<PsicologoWS.psicologo>(daoPsi.listarPsicologosPorIdCurso(curso.idCurso).ToList());
+                if (lPsi.Count != 0)
+                    dgvCursos.Rows[e.RowIndex].Cells[3].Value = lPsi[0].nombre + " " + lPsi[0].apellidoPaterno + " " + lPsi[0].apellidoMaterno;
+            }
+            catch (Exception)
+            {
+
+                lPsi = null;
+            }
+            
         }
     }
 }
