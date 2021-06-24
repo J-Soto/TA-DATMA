@@ -17,11 +17,9 @@ namespace InterfazDATMA.plantilla
     public partial class frmPlantillaGestion : MaterialSkin.Controls.MaterialForm 
     {
         private MaterialForm  formularioActivo = null;
-        private Form formularioActivo2 = null;
         private MaterialForm  formLogout;
         private MaterialForm  formInicial;
         private MaterialForm  formPerfil;
-        private Form formInicial2;
         public static UsuarioWS.usuario user = null;
         public static PsicologoWS.psicologo psico = null;
         public static TutorWS.tutor tutor = null;
@@ -46,8 +44,8 @@ namespace InterfazDATMA.plantilla
             //Administrador
             else if (tipoUser == 2)
             {
-                formInicial2 = new frmGestionarModuloAdmin(this);
-                abrirFormulario2(formInicial2);
+                formInicial = new frmGestionarModuloAdmin(this);
+                abrirFormulario(formInicial);
                 btnPerfil.Enabled = false;
             }
             //Tutor
@@ -80,27 +78,6 @@ namespace InterfazDATMA.plantilla
             }
         }
 
-        public void abrirFormulario2(Form formularioAbrir2)
-        {
-            if (formularioActivo != null) formularioActivo.Hide();
-            formularioActivo2 = formularioAbrir2;
-
-            pnlContenedor.Controls.Clear();
-            formularioAbrir2.TopLevel = false;
-            formularioAbrir2.FormBorderStyle = FormBorderStyle.None;
-            formularioAbrir2.Dock = DockStyle.Fill;
-            pnlContenedor.Controls.Add(formularioAbrir2);
-
-            try
-            {
-                formularioAbrir2.Show();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
         private void frmPlantillaGestion_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -118,8 +95,8 @@ namespace InterfazDATMA.plantilla
             //Administrador
             else if (tipoUser == 2)
             {
-                formInicial2 = new frmGestionarModuloAdmin(this);
-                abrirFormulario2(formInicial2);
+                formInicial = new frmGestionarModuloAdmin(this);
+                abrirFormulario(formInicial);
             }
             //Tutor
             else if (tipoUser == 0)
@@ -139,7 +116,7 @@ namespace InterfazDATMA.plantilla
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
             formLogout = new login.frmLogout();
-            formularioActivo2.Close();
+            formularioActivo.Close();
             formLogout.Show();
         }
     }
