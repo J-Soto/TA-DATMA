@@ -45,5 +45,10 @@ namespace InterfazDATMA
         {
 
         }
+
+        private void lblInfoSemana_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

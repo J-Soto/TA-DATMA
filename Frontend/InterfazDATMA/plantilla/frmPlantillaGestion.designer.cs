@@ -40,7 +40,6 @@ namespace InterfazDATMA.plantilla
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlMenuVertical.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,7 +63,6 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 97F));
-            this.tableLayoutPanel1.Controls.Add(this.materialFlatButton1, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnSalir, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 3);
@@ -75,13 +73,14 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 381);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(508, 721);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -94,10 +93,10 @@ namespace InterfazDATMA.plantilla
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(127)))));
-            this.btnSalir.Location = new System.Drawing.Point(19, 652);
+            this.btnSalir.Location = new System.Drawing.Point(19, 616);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(485, 65);
+            this.btnSalir.Size = new System.Drawing.Size(485, 64);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -127,10 +126,10 @@ namespace InterfazDATMA.plantilla
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(4, 652);
+            this.panel4.Location = new System.Drawing.Point(4, 616);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(7, 65);
+            this.panel4.Size = new System.Drawing.Size(7, 64);
             this.panel4.TabIndex = 8;
             // 
             // btnPerfil
@@ -204,23 +203,6 @@ namespace InterfazDATMA.plantilla
             this.pnlContenedor.Size = new System.Drawing.Size(1630, 1102);
             this.pnlContenedor.TabIndex = 11;
             // 
-            // materialFlatButton1
-            // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.materialFlatButton1.Location = new System.Drawing.Point(19, 222);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(336, 36);
-            this.materialFlatButton1.TabIndex = 0;
-            this.materialFlatButton1.Text = "materialFlatButton1";
-            this.materialFlatButton1.UseVisualStyleBackColor = false;
-            // 
             // frmPlantillaGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -237,7 +219,6 @@ namespace InterfazDATMA.plantilla
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPlantillaGestion_FormClosed);
             this.pnlMenuVertical.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -257,6 +238,5 @@ namespace InterfazDATMA.plantilla
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel3;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
     }
 }

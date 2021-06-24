@@ -59,5 +59,25 @@ namespace InterfazDATMA.cuidador
         {
             plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this, plantillaGestion));
         }
+
+        private void frmPerfilCuidador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel20_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel21_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Correo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

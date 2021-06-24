@@ -92,5 +92,20 @@ namespace InterfazDATMA
         {
 
         }
+
+        private void txtBoxFechaFin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxFechaIni_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSig_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
