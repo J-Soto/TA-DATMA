@@ -56,16 +56,16 @@ namespace InterfazDATMA
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
             this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(0, 0);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(218, 37);
+            this.linkLabel1.Size = new System.Drawing.Size(430, 94);
             this.linkLabel1.TabIndex = 40;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "pucp.zoom.us";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -265,7 +265,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
