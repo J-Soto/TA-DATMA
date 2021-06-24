@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.157.215.104:8080/DatmaSoftWebServices/SemanaWS?xsd=1" namespace="http://services.datmasoft.datma.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarSemanas">
-    <part name="parameters" element="tns:listarSemanas" />
+  <message name="insertarSemana">
+    <part name="parameters" element="tns:insertarSemana" />
   </message>
-  <message name="listarSemanasResponse">
-    <part name="parameters" element="tns:listarSemanasResponse" />
+  <message name="insertarSemanaResponse">
+    <part name="parameters" element="tns:insertarSemanaResponse" />
   </message>
   <message name="modificarSemana">
     <part name="parameters" element="tns:modificarSemana" />
@@ -17,29 +17,39 @@
   <message name="modificarSemanaResponse">
     <part name="parameters" element="tns:modificarSemanaResponse" />
   </message>
-  <message name="insertarSemana">
-    <part name="parameters" element="tns:insertarSemana" />
+  <message name="listarSemanas">
+    <part name="parameters" element="tns:listarSemanas" />
   </message>
-  <message name="insertarSemanaResponse">
-    <part name="parameters" element="tns:insertarSemanaResponse" />
+  <message name="listarSemanasResponse">
+    <part name="parameters" element="tns:listarSemanasResponse" />
+  </message>
+  <message name="listarActividadesPorIdSemana">
+    <part name="parameters" element="tns:listarActividadesPorIdSemana" />
+  </message>
+  <message name="listarActividadesPorIdSemanaResponse">
+    <part name="parameters" element="tns:listarActividadesPorIdSemanaResponse" />
   </message>
   <portType name="SemanaWS">
-    <operation name="listarSemanas">
-      <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarSemanasRequest" message="tns:listarSemanas" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarSemanasResponse" message="tns:listarSemanasResponse" />
+    <operation name="insertarSemana">
+      <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/insertarSemanaRequest" message="tns:insertarSemana" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/insertarSemanaResponse" message="tns:insertarSemanaResponse" />
     </operation>
     <operation name="modificarSemana">
       <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/modificarSemanaRequest" message="tns:modificarSemana" />
       <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/modificarSemanaResponse" message="tns:modificarSemanaResponse" />
     </operation>
-    <operation name="insertarSemana">
-      <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/insertarSemanaRequest" message="tns:insertarSemana" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/insertarSemanaResponse" message="tns:insertarSemanaResponse" />
+    <operation name="listarSemanas">
+      <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarSemanasRequest" message="tns:listarSemanas" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarSemanasResponse" message="tns:listarSemanasResponse" />
+    </operation>
+    <operation name="listarActividadesPorIdSemana">
+      <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarActividadesPorIdSemanaRequest" message="tns:listarActividadesPorIdSemana" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarActividadesPorIdSemanaResponse" message="tns:listarActividadesPorIdSemanaResponse" />
     </operation>
   </portType>
   <binding name="SemanaWSPortBinding" type="tns:SemanaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarSemanas">
+    <operation name="insertarSemana">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -57,7 +67,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarSemana">
+    <operation name="listarSemanas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarActividadesPorIdSemana">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

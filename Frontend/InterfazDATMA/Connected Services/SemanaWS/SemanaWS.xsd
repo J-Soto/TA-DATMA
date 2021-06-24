@@ -2,16 +2,16 @@
 <xs:schema xmlns:tns="http://services.datmasoft.datma.pe/" targetNamespace="http://services.datmasoft.datma.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="insertarSemana" type="tns:insertarSemana" />
   <xs:element name="insertarSemanaResponse" type="tns:insertarSemanaResponse" />
+  <xs:element name="listarActividadesPorIdSemana" type="tns:listarActividadesPorIdSemana" />
+  <xs:element name="listarActividadesPorIdSemanaResponse" type="tns:listarActividadesPorIdSemanaResponse" />
   <xs:element name="listarSemanas" type="tns:listarSemanas" />
   <xs:element name="listarSemanasResponse" type="tns:listarSemanasResponse" />
   <xs:element name="modificarSemana" type="tns:modificarSemana" />
   <xs:element name="modificarSemanaResponse" type="tns:modificarSemanaResponse" />
-  <xs:complexType name="listarSemanas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarSemanasResponse">
+  <xs:complexType name="insertarSemana">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:semana" />
+      <xs:element minOccurs="0" name="semana" type="tns:semana" />
+      <xs:element name="fidCursoTema" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="semana">
@@ -130,15 +130,55 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarSemana">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="semana" type="tns:semana" />
-      <xs:element name="fidCursoTema" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarSemanaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSemanas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarSemanasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:semana" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarActividadesPorIdSemana">
+    <xs:sequence>
+      <xs:element name="idSemana" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarActividadesPorIdSemanaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:actividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:localTime" />
+      <xs:element minOccurs="0" name="horaFinStr" type="xs:string" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:localTime" />
+      <xs:element minOccurs="0" name="horaInicioStr" type="xs:string" />
+      <xs:element name="idActividad" type="xs:int" />
+      <xs:element name="idSemana" type="xs:int" />
+      <xs:element minOccurs="0" name="linkZoom" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="materiales" nillable="true" type="tns:material" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localTime" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="material">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actividad" type="tns:actividad" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="tipoMaterial" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarSemana">
