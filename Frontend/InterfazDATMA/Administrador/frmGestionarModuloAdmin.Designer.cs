@@ -56,7 +56,7 @@ namespace InterfazDATMA.Administrador
             this.btnOpPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnOpPersona.ForeColor = System.Drawing.Color.White;
-            this.btnOpPersona.Location = new System.Drawing.Point(462, 35);
+            this.btnOpPersona.Location = new System.Drawing.Point(509, 28);
             this.btnOpPersona.Name = "btnOpPersona";
             this.btnOpPersona.Size = new System.Drawing.Size(268, 45);
             this.btnOpPersona.TabIndex = 7;
@@ -71,7 +71,7 @@ namespace InterfazDATMA.Administrador
             this.btnOpCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnOpCurso.ForeColor = System.Drawing.Color.White;
-            this.btnOpCurso.Location = new System.Drawing.Point(462, 611);
+            this.btnOpCurso.Location = new System.Drawing.Point(509, 938);
             this.btnOpCurso.Name = "btnOpCurso";
             this.btnOpCurso.Size = new System.Drawing.Size(268, 45);
             this.btnOpCurso.TabIndex = 8;
@@ -84,7 +84,7 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(16, 100);
+            this.lblTutoresUser.Location = new System.Drawing.Point(42, 100);
             this.lblTutoresUser.Name = "lblTutoresUser";
             this.lblTutoresUser.Size = new System.Drawing.Size(198, 29);
             this.lblTutoresUser.TabIndex = 12;
@@ -95,7 +95,7 @@ namespace InterfazDATMA.Administrador
             this.lblPsicologosUser.AutoSize = true;
             this.lblPsicologosUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblPsicologosUser.ForeColor = System.Drawing.Color.White;
-            this.lblPsicologosUser.Location = new System.Drawing.Point(600, 100);
+            this.lblPsicologosUser.Location = new System.Drawing.Point(650, 100);
             this.lblPsicologosUser.Name = "lblPsicologosUser";
             this.lblPsicologosUser.Size = new System.Drawing.Size(235, 29);
             this.lblPsicologosUser.TabIndex = 13;
@@ -122,7 +122,7 @@ namespace InterfazDATMA.Administrador
             this.foto2});
             this.dgvPsicologos.EnableHeadersVisualStyles = false;
             this.dgvPsicologos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPsicologos.Location = new System.Drawing.Point(606, 148);
+            this.dgvPsicologos.Location = new System.Drawing.Point(655, 148);
             this.dgvPsicologos.Name = "dgvPsicologos";
             this.dgvPsicologos.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -133,6 +133,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPsicologos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPsicologos.RowHeadersVisible = false;
             this.dgvPsicologos.RowHeadersWidth = 62;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,7 +142,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvPsicologos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPsicologos.RowTemplate.Height = 28;
-            this.dgvPsicologos.Size = new System.Drawing.Size(584, 428);
+            this.dgvPsicologos.Size = new System.Drawing.Size(584, 747);
             this.dgvPsicologos.TabIndex = 11;
             this.dgvPsicologos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPsicologos_CellContentClick);
             this.dgvPsicologos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPsicologos_CellFormatting);
@@ -168,7 +169,7 @@ namespace InterfazDATMA.Administrador
             this.foto});
             this.dgvTutores.EnableHeadersVisualStyles = false;
             this.dgvTutores.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvTutores.Location = new System.Drawing.Point(16, 148);
+            this.dgvTutores.Location = new System.Drawing.Point(38, 148);
             this.dgvTutores.Name = "dgvTutores";
             this.dgvTutores.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -179,6 +180,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTutores.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvTutores.RowHeadersVisible = false;
             this.dgvTutores.RowHeadersWidth = 62;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,7 +189,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             this.dgvTutores.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTutores.RowTemplate.Height = 28;
-            this.dgvTutores.Size = new System.Drawing.Size(584, 428);
+            this.dgvTutores.Size = new System.Drawing.Size(584, 747);
             this.dgvTutores.TabIndex = 11;
             this.dgvTutores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutores_CellContentClick);
             this.dgvTutores.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTutores_CellFormatting);
@@ -195,11 +197,11 @@ namespace InterfazDATMA.Administrador
             // 
             // NombreCompleto
             // 
+            this.NombreCompleto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NombreCompleto.HeaderText = "Nombre Completo";
             this.NombreCompleto.MinimumWidth = 8;
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 240;
             // 
             // foto
             // 
@@ -213,11 +215,11 @@ namespace InterfazDATMA.Administrador
             // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.HeaderText = "Nombre Completo";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 240;
             // 
             // foto2
             // 
@@ -233,8 +235,8 @@ namespace InterfazDATMA.Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(1281, 1037);
             this.Controls.Add(this.lblPsicologosUser);
             this.Controls.Add(this.lblTutoresUser);
             this.Controls.Add(this.dgvPsicologos);
@@ -259,9 +261,9 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblTutoresUser;
         private System.Windows.Forms.Label lblPsicologosUser;
         private System.Windows.Forms.DataGridView dgvPsicologos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewImageColumn foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewImageColumn foto2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
+        private System.Windows.Forms.DataGridViewImageColumn foto;
     }
 }

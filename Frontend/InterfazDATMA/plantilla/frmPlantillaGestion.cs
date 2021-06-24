@@ -140,7 +140,7 @@ namespace InterfazDATMA.plantilla
         {
 
             formLogout = new login.frmLogout();
-            formularioActivo.Close();
+            formularioActivo2.Close();
             formLogout.Show();
         }
     }
