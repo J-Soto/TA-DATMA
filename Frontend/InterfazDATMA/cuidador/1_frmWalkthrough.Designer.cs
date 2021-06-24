@@ -192,7 +192,6 @@ namespace InterfazDATMA
             this.Name = "frmWalkthrough";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "Tutorial";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxWalk)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

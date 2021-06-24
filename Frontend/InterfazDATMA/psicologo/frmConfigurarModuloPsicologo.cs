@@ -50,7 +50,6 @@ namespace InterfazDATMA
             dgvPrograma.DataSource = pares;
 
 
-            btnInsertarSemana.Visible = false;
         }
 
         private List<SemanaTema> Fetch()
@@ -104,14 +103,6 @@ namespace InterfazDATMA
 
         private void btnInsertarSemana_Click(object sender, EventArgs e)
         {
-            var insertarSemana = new frmInsertarSemana
-            {
-                IdCurso = curso.idCurso
-            };
-            if (insertarSemana.ShowDialog() == DialogResult.OK)
-            {
-
-            }
         }
 
         private void btnModificarSemana_Click(object sender, EventArgs e)
@@ -139,6 +130,18 @@ namespace InterfazDATMA
         private void frmConfigurarModuloPsicologo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            var insertarSemana = new frmInsertarSemana
+            {
+                IdCurso = curso.idCurso
+            };
+            if (insertarSemana.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 
