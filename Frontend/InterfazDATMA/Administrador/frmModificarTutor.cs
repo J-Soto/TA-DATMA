@@ -24,6 +24,8 @@ namespace InterfazDATMA.Administrador
         private TutorWS.tutor tutor;
         private string rutaFoto = "";
 
+        public bool usuarioAsignado = false;
+
         public frmModificarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
             this.DoubleBuffered = true;
@@ -56,6 +58,7 @@ namespace InterfazDATMA.Administrador
             txtCel.Text = "";
             rbtnHombre.Checked = false;
             rbtnMujer.Checked = false;
+            if (tutor.user != null) btnAsignarUsuario.Enabled = false;
         }
 
         private void completarDatosTutores()
@@ -241,6 +244,20 @@ namespace InterfazDATMA.Administrador
                     // AVANZA
                     formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
             }
+        }
+        
+        private (string, string) generarUsuario()
+        {
+            string user = Guid.NewGuid().ToString("N");
+            string password = Guid.NewGuid().ToString("N");
+            return (user, password);
+        }
+        private void btnAsignarUsuario_Click(object sender, EventArgs e)
+        {
+            var credenciales = generarUsuario();
+            tutor.user = credenciales.Item1;
+            tutor.password = credenciales.Item2;
+            usuarioAsignado = true;
         }
     }
 }

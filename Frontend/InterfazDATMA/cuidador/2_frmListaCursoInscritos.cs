@@ -49,10 +49,11 @@ namespace InterfazDATMA
         }
         private void btnCursosDisponibles_Click(object sender, EventArgs e)
         {
-
+            /*
             bool hayCursos = verificarCursosDisponibles();
             if (hayCursos) plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion));
-            else plantillaGestion.abrirFormulario(new frmSinCursosDisponibles(this, plantillaGestion));
+            else plantillaGestion.abrirFormulario(new frmSinCursosDisponibles(this, plantillaGestion));*/
+            plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion));
 
         }
 

@@ -58,6 +58,8 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnNuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnSiguiente = new MaterialSkin.Controls.MaterialFlatButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAsignarUsuario = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,12 +235,30 @@ namespace InterfazDATMA.Administrador
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
+            // 
+            // btnAsignarUsuario
+            // 
+            resources.ApplyResources(this.btnAsignarUsuario, "btnAsignarUsuario");
+            this.btnAsignarUsuario.Depth = 0;
+            this.btnAsignarUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAsignarUsuario.Name = "btnAsignarUsuario";
+            this.btnAsignarUsuario.Primary = false;
+            this.btnAsignarUsuario.UseVisualStyleBackColor = true;
+            this.btnAsignarUsuario.Click += new System.EventHandler(this.btnAsignarUsuario_Click);
+            // 
             // frmModificarTutor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
+            this.Controls.Add(this.btnAsignarUsuario);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnNuevoDistrito);
             this.Controls.Add(this.btnCancelar);
@@ -303,5 +323,7 @@ namespace InterfazDATMA.Administrador
         private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
         private MaterialSkin.Controls.MaterialFlatButton btnNuevoDistrito;
         private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
+        private System.Windows.Forms.Label label2;
+        private MaterialSkin.Controls.MaterialFlatButton btnAsignarUsuario;
     }
 }

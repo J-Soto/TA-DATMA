@@ -17,6 +17,7 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantilla;
         public frmModificarTutor formAnterior;
         private TutorWS.TutorWSClient daoTutor;
+        private UsuarioWS.UsuarioWSClient daoUsuario;
         private TutorWS.tutor tutor;
         public frmModificarPreferencias(frmModificarTutor formModificarTutor, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
@@ -29,6 +30,7 @@ namespace InterfazDATMA.Administrador
             
             this.tutor = tutor;
             daoTutor = new TutorWS.TutorWSClient();
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
             this.formPlantilla = formPlantilla;
             this.formAnterior = formModificarTutor;
 
@@ -227,7 +229,14 @@ namespace InterfazDATMA.Administrador
                 // Se modifica el Tutor
                 daoTutor.modificarTutor(tutor);
                 // Mensaje
-                MessageBox.Show("Se ha modificado con exito el Tutor.", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string msgEnvioDatos = "";
+                //Se verifica la signaci{on de un usuario
+                if (this.formAnterior.usuarioAsignado)
+                {
+                    if (daoUsuario.enviarDatosUsuario(tutor.correo, tutor.user, tutor.password) == 1)
+                        msgEnvioDatos = " Credenciales Enviadas con exito.";
+                }
+                MessageBox.Show("Se ha modificado con exito el Tutor."+msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Ventana de Operaciones Persona
                 formPlantilla.abrirFormulario(formAnterior.formOperacionPersona);
             }

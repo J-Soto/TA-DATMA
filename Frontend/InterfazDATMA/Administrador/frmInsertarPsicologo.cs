@@ -21,6 +21,7 @@ namespace InterfazDATMA.Administrador
 
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private PsicologoWS.distrito distrito;
+        private UsuarioWS.UsuarioWSClient daoUsuario;
         private string rutaFoto = "";
 
         public frmInsertarPsicologo(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
@@ -35,6 +36,7 @@ namespace InterfazDATMA.Administrador
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
 
             txtDistrito.ReadOnly = true;
             inicializarComponentes();
@@ -84,11 +86,6 @@ namespace InterfazDATMA.Administrador
             {
                 MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-        }
-
-        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -156,9 +153,12 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void frmInsertarPsicologo_Load(object sender, EventArgs e)
-        {
 
+        private (string,string) generarUsuario()
+        {
+            string user = Guid.NewGuid().ToString("N");
+            string password = Guid.NewGuid().ToString("N");
+            return (user,password);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -227,7 +227,11 @@ namespace InterfazDATMA.Administrador
                             int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
                             if (idPsicologo != 0)
                             {
-                                MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                var credenciales = generarUsuario();
+                                string msgEnvioDatos = "";
+                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, credenciales.Item1, credenciales.Item2) == 1)
+                                    msgEnvioDatos = ". Credenciales enviadas con exito.";
+                                MessageBox.Show("Se ha registrado con exito"+ msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 psicologo.idPersona = idPsicologo;
                                 formPlantilla.abrirFormulario(formOperacionPersona);
                             }
