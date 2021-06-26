@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/TutorWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/TutorWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TutorWS.xsd" MetadataType="Schema" ID="5c4b2059-3fcc-4d87-aa1a-3cc57e1e9f10" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/TutorWS?xsd=1" />
-    <MetadataFile FileName="TutorWS.wsdl" MetadataType="Wsdl" ID="9160f810-15f2-40f5-91f0-3ceb4cfbfba6" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/TutorWS?WSDL" />
+    <MetadataFile FileName="TutorWS1.xsd" MetadataType="Schema" ID="6e548cb1-532e-4d4d-b7cd-4ac50c35dfe6" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/TutorWS?xsd=1" />
+    <MetadataFile FileName="TutorWS1.wsdl" MetadataType="Wsdl" ID="e5a76cb4-99ed-4f3a-9eb8-304d35544fee" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/TutorWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

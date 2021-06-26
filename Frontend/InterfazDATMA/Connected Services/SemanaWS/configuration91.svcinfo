@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="QkUIVblzxEVUJKPgwSxsBJdF03wqDf1nnkVlXi7msiA=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="oBDgJ1amFj4fqTCiWMgTZ26pmcNuD4MuQ+rtX/33dJA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="SemanaWSPortBinding">
       <properties>
@@ -94,7 +94,7 @@
           <serializedValue>TransportSelected</serializedValue>
         </property>
         <property path="/security/transport/extendedProtectionPolicy/customServiceNames" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>(Collection)</serializedValue>
+          <serializedValue>(Colección)</serializedValue>
         </property>
         <property path="/security/transport/realm" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="SemanaWSPort" contract="SemanaWS.SemanaWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/DatmaSoftWebServices/SemanaWS" bindingConfiguration="SemanaWSPortBinding">
+    <endpoint name="SemanaWSPort" contract="SemanaWS.SemanaWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/EnvioEmail/SemanaWS" bindingConfiguration="SemanaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.215.104:8080/DatmaSoftWebServices/SemanaWS</serializedValue>
+          <serializedValue>http://54.157.215.104:8080/EnvioEmail/SemanaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

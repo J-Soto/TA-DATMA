@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="yIM7ORDBP7aCv4mfmnkm8Ijk/AgLkpyzjGmECBQgLf0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="txClij3ftM1OLLOD11MmBy1NR4f4gtE/q/2zWkC6oJA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="TutorWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="TutorWSPort" contract="TutorWS.TutorWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/DatmaSoftWebServices/TutorWS" bindingConfiguration="TutorWSPortBinding">
+    <endpoint name="TutorWSPort" contract="TutorWS.TutorWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/EnvioEmail/TutorWS" bindingConfiguration="TutorWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.215.104:8080/DatmaSoftWebServices/TutorWS</serializedValue>
+          <serializedValue>http://54.157.215.104:8080/EnvioEmail/TutorWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

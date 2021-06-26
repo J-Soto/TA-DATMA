@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/CursoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/CursoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursoWS.xsd" MetadataType="Schema" ID="36b8eea4-8143-4d4d-917a-7d1f61dc80cc" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/CursoWS?xsd=1" />
-    <MetadataFile FileName="CursoWS.wsdl" MetadataType="Wsdl" ID="8fe6a84f-bc59-4ecc-aad8-63dbd07e299d" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/CursoWS?WSDL" />
+    <MetadataFile FileName="CursoWS1.wsdl" MetadataType="Wsdl" ID="6b7b1e1b-fd48-4be7-934d-cf07b9fd0109" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/CursoWS?WSDL" />
+    <MetadataFile FileName="CursoWS1.xsd" MetadataType="Schema" ID="b8a6adf2-25ba-4a35-b886-751b051cd80e" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/CursoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -44,8 +44,11 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
       <xs:element minOccurs="0" name="horaFin" type="tns:localTime" />
+      <xs:element minOccurs="0" name="horaFinStr" type="xs:string" />
       <xs:element minOccurs="0" name="horaInicio" type="tns:localTime" />
+      <xs:element minOccurs="0" name="horaInicioStr" type="xs:string" />
       <xs:element name="idActividad" type="xs:int" />
+      <xs:element name="idSemana" type="xs:int" />
       <xs:element minOccurs="0" name="linkZoom" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="materiales" nillable="true" type="tns:material" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />

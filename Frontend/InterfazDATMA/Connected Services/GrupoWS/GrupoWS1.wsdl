@@ -2,9 +2,63 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.datmasoft.datma.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="GrupoWS" targetNamespace="http://services.datmasoft.datma.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://54.157.215.104:8080/DatmaSoftWebServices/GrupoWS?xsd=1" namespace="http://services.datmasoft.datma.pe/" />
+      <xsd:import schemaLocation="http://54.157.215.104:8080/EnvioEmail/GrupoWS?xsd=1" namespace="http://services.datmasoft.datma.pe/" />
     </xsd:schema>
   </types>
+  <message name="eliminarGrupoTutor">
+    <part name="parameters" element="tns:eliminarGrupoTutor" />
+  </message>
+  <message name="eliminarGrupoTutorResponse">
+    <part name="parameters" element="tns:eliminarGrupoTutorResponse" />
+  </message>
+  <message name="listarTutoresPorIdGrupo">
+    <part name="parameters" element="tns:listarTutoresPorIdGrupo" />
+  </message>
+  <message name="listarTutoresPorIdGrupoResponse">
+    <part name="parameters" element="tns:listarTutoresPorIdGrupoResponse" />
+  </message>
+  <message name="listarPsicologosPorIdGrupo">
+    <part name="parameters" element="tns:listarPsicologosPorIdGrupo" />
+  </message>
+  <message name="listarPsicologosPorIdGrupoResponse">
+    <part name="parameters" element="tns:listarPsicologosPorIdGrupoResponse" />
+  </message>
+  <message name="eliminarGrupoPsicologo">
+    <part name="parameters" element="tns:eliminarGrupoPsicologo" />
+  </message>
+  <message name="eliminarGrupoPsicologoResponse">
+    <part name="parameters" element="tns:eliminarGrupoPsicologoResponse" />
+  </message>
+  <message name="insertarGrupoPsicologo">
+    <part name="parameters" element="tns:insertarGrupoPsicologo" />
+  </message>
+  <message name="insertarGrupoPsicologoResponse">
+    <part name="parameters" element="tns:insertarGrupoPsicologoResponse" />
+  </message>
+  <message name="insertarGrupoTutor">
+    <part name="parameters" element="tns:insertarGrupoTutor" />
+  </message>
+  <message name="insertarGrupoTutorResponse">
+    <part name="parameters" element="tns:insertarGrupoTutorResponse" />
+  </message>
+  <message name="listarGrupoPorIdCurso">
+    <part name="parameters" element="tns:listarGrupoPorIdCurso" />
+  </message>
+  <message name="listarGrupoPorIdCursoResponse">
+    <part name="parameters" element="tns:listarGrupoPorIdCursoResponse" />
+  </message>
+  <message name="modificarGrupoTutor">
+    <part name="parameters" element="tns:modificarGrupoTutor" />
+  </message>
+  <message name="modificarGrupoTutorResponse">
+    <part name="parameters" element="tns:modificarGrupoTutorResponse" />
+  </message>
+  <message name="modificarGrupo">
+    <part name="parameters" element="tns:modificarGrupo" />
+  </message>
+  <message name="modificarGrupoResponse">
+    <part name="parameters" element="tns:modificarGrupoResponse" />
+  </message>
   <message name="insertarGrupo">
     <part name="parameters" element="tns:insertarGrupo" />
   </message>
@@ -17,61 +71,43 @@
   <message name="eliminarGrupoResponse">
     <part name="parameters" element="tns:eliminarGrupoResponse" />
   </message>
-  <message name="modificarGrupo">
-    <part name="parameters" element="tns:modificarGrupo" />
-  </message>
-  <message name="modificarGrupoResponse">
-    <part name="parameters" element="tns:modificarGrupoResponse" />
-  </message>
-  <message name="eliminarGrupoTutor">
-    <part name="parameters" element="tns:eliminarGrupoTutor" />
-  </message>
-  <message name="eliminarGrupoTutorResponse">
-    <part name="parameters" element="tns:eliminarGrupoTutorResponse" />
-  </message>
-  <message name="insertarGrupoPsicologo">
-    <part name="parameters" element="tns:insertarGrupoPsicologo" />
-  </message>
-  <message name="insertarGrupoPsicologoResponse">
-    <part name="parameters" element="tns:insertarGrupoPsicologoResponse" />
-  </message>
-  <message name="eliminarGrupoPsicologo">
-    <part name="parameters" element="tns:eliminarGrupoPsicologo" />
-  </message>
-  <message name="eliminarGrupoPsicologoResponse">
-    <part name="parameters" element="tns:eliminarGrupoPsicologoResponse" />
-  </message>
-  <message name="listarPsicologosPorIdGrupo">
-    <part name="parameters" element="tns:listarPsicologosPorIdGrupo" />
-  </message>
-  <message name="listarPsicologosPorIdGrupoResponse">
-    <part name="parameters" element="tns:listarPsicologosPorIdGrupoResponse" />
-  </message>
-  <message name="modificarGrupoTutor">
-    <part name="parameters" element="tns:modificarGrupoTutor" />
-  </message>
-  <message name="modificarGrupoTutorResponse">
-    <part name="parameters" element="tns:modificarGrupoTutorResponse" />
-  </message>
-  <message name="insertarGrupoTutor">
-    <part name="parameters" element="tns:insertarGrupoTutor" />
-  </message>
-  <message name="insertarGrupoTutorResponse">
-    <part name="parameters" element="tns:insertarGrupoTutorResponse" />
-  </message>
-  <message name="listarTutoresPorIdGrupo">
-    <part name="parameters" element="tns:listarTutoresPorIdGrupo" />
-  </message>
-  <message name="listarTutoresPorIdGrupoResponse">
-    <part name="parameters" element="tns:listarTutoresPorIdGrupoResponse" />
-  </message>
-  <message name="listarGrupoPorIdCurso">
-    <part name="parameters" element="tns:listarGrupoPorIdCurso" />
-  </message>
-  <message name="listarGrupoPorIdCursoResponse">
-    <part name="parameters" element="tns:listarGrupoPorIdCursoResponse" />
-  </message>
   <portType name="GrupoWS">
+    <operation name="eliminarGrupoTutor">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoTutorRequest" message="tns:eliminarGrupoTutor" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoTutorResponse" message="tns:eliminarGrupoTutorResponse" />
+    </operation>
+    <operation name="listarTutoresPorIdGrupo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarTutoresPorIdGrupoRequest" message="tns:listarTutoresPorIdGrupo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarTutoresPorIdGrupoResponse" message="tns:listarTutoresPorIdGrupoResponse" />
+    </operation>
+    <operation name="listarPsicologosPorIdGrupo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoRequest" message="tns:listarPsicologosPorIdGrupo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoResponse" message="tns:listarPsicologosPorIdGrupoResponse" />
+    </operation>
+    <operation name="eliminarGrupoPsicologo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoPsicologoRequest" message="tns:eliminarGrupoPsicologo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoPsicologoResponse" message="tns:eliminarGrupoPsicologoResponse" />
+    </operation>
+    <operation name="insertarGrupoPsicologo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoRequest" message="tns:insertarGrupoPsicologo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoResponse" message="tns:insertarGrupoPsicologoResponse" />
+    </operation>
+    <operation name="insertarGrupoTutor">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorRequest" message="tns:insertarGrupoTutor" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorResponse" message="tns:insertarGrupoTutorResponse" />
+    </operation>
+    <operation name="listarGrupoPorIdCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarGrupoPorIdCursoRequest" message="tns:listarGrupoPorIdCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarGrupoPorIdCursoResponse" message="tns:listarGrupoPorIdCursoResponse" />
+    </operation>
+    <operation name="modificarGrupoTutor">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorRequest" message="tns:modificarGrupoTutor" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorResponse" message="tns:modificarGrupoTutorResponse" />
+    </operation>
+    <operation name="modificarGrupo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoRequest" message="tns:modificarGrupo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoResponse" message="tns:modificarGrupoResponse" />
+    </operation>
     <operation name="insertarGrupo">
       <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoRequest" message="tns:insertarGrupo" />
       <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoResponse" message="tns:insertarGrupoResponse" />
@@ -80,45 +116,90 @@
       <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoRequest" message="tns:eliminarGrupo" />
       <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoResponse" message="tns:eliminarGrupoResponse" />
     </operation>
-    <operation name="modificarGrupo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoRequest" message="tns:modificarGrupo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoResponse" message="tns:modificarGrupoResponse" />
-    </operation>
-    <operation name="eliminarGrupoTutor">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoTutorRequest" message="tns:eliminarGrupoTutor" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoTutorResponse" message="tns:eliminarGrupoTutorResponse" />
-    </operation>
-    <operation name="insertarGrupoPsicologo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoRequest" message="tns:insertarGrupoPsicologo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoPsicologoResponse" message="tns:insertarGrupoPsicologoResponse" />
-    </operation>
-    <operation name="eliminarGrupoPsicologo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoPsicologoRequest" message="tns:eliminarGrupoPsicologo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoPsicologoResponse" message="tns:eliminarGrupoPsicologoResponse" />
-    </operation>
-    <operation name="listarPsicologosPorIdGrupo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoRequest" message="tns:listarPsicologosPorIdGrupo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarPsicologosPorIdGrupoResponse" message="tns:listarPsicologosPorIdGrupoResponse" />
-    </operation>
-    <operation name="modificarGrupoTutor">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorRequest" message="tns:modificarGrupoTutor" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/modificarGrupoTutorResponse" message="tns:modificarGrupoTutorResponse" />
-    </operation>
-    <operation name="insertarGrupoTutor">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorRequest" message="tns:insertarGrupoTutor" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/insertarGrupoTutorResponse" message="tns:insertarGrupoTutorResponse" />
-    </operation>
-    <operation name="listarTutoresPorIdGrupo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarTutoresPorIdGrupoRequest" message="tns:listarTutoresPorIdGrupo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarTutoresPorIdGrupoResponse" message="tns:listarTutoresPorIdGrupoResponse" />
-    </operation>
-    <operation name="listarGrupoPorIdCurso">
-      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarGrupoPorIdCursoRequest" message="tns:listarGrupoPorIdCurso" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/listarGrupoPorIdCursoResponse" message="tns:listarGrupoPorIdCursoResponse" />
-    </operation>
   </portType>
   <binding name="GrupoWSPortBinding" type="tns:GrupoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarGrupoTutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTutoresPorIdGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPsicologosPorIdGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarGrupoPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarGrupoPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarGrupoTutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarGrupoPorIdCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarGrupoTutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarGrupo">
       <soap:operation soapAction="" />
       <input>
@@ -129,87 +210,6 @@
       </output>
     </operation>
     <operation name="eliminarGrupo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarGrupo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarGrupoTutor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarGrupoPsicologo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarGrupoPsicologo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPsicologosPorIdGrupo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarGrupoTutor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarGrupoTutor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTutoresPorIdGrupo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarGrupoPorIdCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -221,7 +221,7 @@
   </binding>
   <service name="GrupoWS">
     <port name="GrupoWSPort" binding="tns:GrupoWSPortBinding">
-      <soap:address location="http://54.157.215.104:8080/DatmaSoftWebServices/GrupoWS" />
+      <soap:address location="http://54.157.215.104:8080/EnvioEmail/GrupoWS" />
     </port>
   </service>
 </definitions>
