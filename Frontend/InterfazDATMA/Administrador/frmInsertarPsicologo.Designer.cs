@@ -57,12 +57,12 @@ namespace InterfazDATMA.Administrador
             this.lblUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubirFoto = new System.Windows.Forms.Button();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
             this.txtDistrito = new System.Windows.Forms.TextBox();
             this.nuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@ namespace InterfazDATMA.Administrador
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblGenero.ForeColor = System.Drawing.Color.White;
-            this.lblGenero.Location = new System.Drawing.Point(788, 315);
+            this.lblGenero.Location = new System.Drawing.Point(829, 312);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(77, 25);
             this.lblGenero.TabIndex = 59;
@@ -142,7 +142,7 @@ namespace InterfazDATMA.Administrador
             // 
             this.rbtnHombre.AutoSize = true;
             this.rbtnHombre.ForeColor = System.Drawing.Color.White;
-            this.rbtnHombre.Location = new System.Drawing.Point(906, 317);
+            this.rbtnHombre.Location = new System.Drawing.Point(925, 311);
             this.rbtnHombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbtnHombre.Name = "rbtnHombre";
             this.rbtnHombre.Size = new System.Drawing.Size(105, 24);
@@ -156,7 +156,7 @@ namespace InterfazDATMA.Administrador
             // 
             this.rbtnMujer.AutoSize = true;
             this.rbtnMujer.ForeColor = System.Drawing.Color.White;
-            this.rbtnMujer.Location = new System.Drawing.Point(1046, 317);
+            this.rbtnMujer.Location = new System.Drawing.Point(1068, 311);
             this.rbtnMujer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbtnMujer.Name = "rbtnMujer";
             this.rbtnMujer.Size = new System.Drawing.Size(105, 24);
@@ -336,7 +336,7 @@ namespace InterfazDATMA.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(788, 466);
+            this.label1.Location = new System.Drawing.Point(829, 471);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 25);
             this.label1.TabIndex = 69;
@@ -344,7 +344,7 @@ namespace InterfazDATMA.Administrador
             // 
             // btnSubirFoto
             // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(1086, 463);
+            this.btnSubirFoto.Location = new System.Drawing.Point(1128, 471);
             this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubirFoto.Name = "btnSubirFoto";
             this.btnSubirFoto.Size = new System.Drawing.Size(45, 35);
@@ -352,18 +352,6 @@ namespace InterfazDATMA.Administrador
             this.btnSubirFoto.Text = "...";
             this.btnSubirFoto.UseVisualStyleBackColor = true;
             this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click);
-            // 
-            // pbFoto
-            // 
-            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.pbFoto.Location = new System.Drawing.Point(903, 466);
-            this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(166, 192);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFoto.TabIndex = 70;
-            this.pbFoto.TabStop = false;
             // 
             // txtDistrito
             // 
@@ -378,7 +366,7 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.AutoSize = true;
             this.nuevoDistrito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.nuevoDistrito.Depth = 0;
-            this.nuevoDistrito.Location = new System.Drawing.Point(727, 361);
+            this.nuevoDistrito.Location = new System.Drawing.Point(828, 361);
             this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
             this.nuevoDistrito.Name = "nuevoDistrito";
@@ -420,6 +408,18 @@ namespace InterfazDATMA.Administrador
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.pbFoto.Location = new System.Drawing.Point(925, 472);
+            this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(166, 192);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto.TabIndex = 70;
+            this.pbFoto.TabStop = false;
             // 
             // frmInsertarPsicologo
             // 
