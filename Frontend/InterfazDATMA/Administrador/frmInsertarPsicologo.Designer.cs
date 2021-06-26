@@ -79,7 +79,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(925, 256);
+            this.txtCelular.Location = new System.Drawing.Point(930, 256);
             this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(248, 26);
@@ -88,7 +88,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtTelf
             // 
-            this.txtTelf.Location = new System.Drawing.Point(925, 203);
+            this.txtTelf.Location = new System.Drawing.Point(930, 203);
             this.txtTelf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelf.Name = "txtTelf";
             this.txtTelf.Size = new System.Drawing.Size(248, 26);
@@ -97,7 +97,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(925, 148);
+            this.txtDni.Location = new System.Drawing.Point(930, 148);
             this.txtDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(248, 26);
@@ -106,7 +106,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(308, 420);
+            this.txtCorreo.Location = new System.Drawing.Point(318, 420);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(416, 26);
@@ -114,7 +114,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtApellidoMat
             // 
-            this.txtApellidoMat.Location = new System.Drawing.Point(308, 258);
+            this.txtApellidoMat.Location = new System.Drawing.Point(318, 258);
             this.txtApellidoMat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellidoMat.Name = "txtApellidoMat";
             this.txtApellidoMat.Size = new System.Drawing.Size(416, 26);
@@ -122,7 +122,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtApellidoPat
             // 
-            this.txtApellidoPat.Location = new System.Drawing.Point(308, 203);
+            this.txtApellidoPat.Location = new System.Drawing.Point(318, 203);
             this.txtApellidoPat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellidoPat.Name = "txtApellidoPat";
             this.txtApellidoPat.Size = new System.Drawing.Size(416, 26);
@@ -131,7 +131,7 @@ namespace InterfazDATMA.Administrador
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(308, 311);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(318, 311);
             this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(416, 26);
@@ -142,7 +142,7 @@ namespace InterfazDATMA.Administrador
             // 
             this.rbtnHombre.AutoSize = true;
             this.rbtnHombre.ForeColor = System.Drawing.Color.White;
-            this.rbtnHombre.Location = new System.Drawing.Point(925, 311);
+            this.rbtnHombre.Location = new System.Drawing.Point(930, 311);
             this.rbtnHombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbtnHombre.Name = "rbtnHombre";
             this.rbtnHombre.Size = new System.Drawing.Size(105, 24);
@@ -168,7 +168,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(308, 148);
+            this.txtNombre.Location = new System.Drawing.Point(318, 148);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(416, 26);
@@ -276,7 +276,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtConfirmarPass
             // 
-            this.txtConfirmarPass.Location = new System.Drawing.Point(308, 592);
+            this.txtConfirmarPass.Location = new System.Drawing.Point(318, 592);
             this.txtConfirmarPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtConfirmarPass.Name = "txtConfirmarPass";
             this.txtConfirmarPass.Size = new System.Drawing.Size(248, 26);
@@ -284,7 +284,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(308, 531);
+            this.txtPass.Location = new System.Drawing.Point(318, 531);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(248, 26);
@@ -292,7 +292,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(308, 472);
+            this.txtUser.Location = new System.Drawing.Point(318, 472);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(416, 26);
@@ -344,7 +344,7 @@ namespace InterfazDATMA.Administrador
             // 
             // btnSubirFoto
             // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(1128, 471);
+            this.btnSubirFoto.Location = new System.Drawing.Point(1133, 471);
             this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubirFoto.Name = "btnSubirFoto";
             this.btnSubirFoto.Size = new System.Drawing.Size(45, 35);
@@ -355,7 +355,7 @@ namespace InterfazDATMA.Administrador
             // 
             // txtDistrito
             // 
-            this.txtDistrito.Location = new System.Drawing.Point(308, 366);
+            this.txtDistrito.Location = new System.Drawing.Point(318, 366);
             this.txtDistrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDistrito.Name = "txtDistrito";
             this.txtDistrito.Size = new System.Drawing.Size(416, 26);
@@ -366,6 +366,8 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.AutoSize = true;
             this.nuevoDistrito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.nuevoDistrito.Depth = 0;
+            this.nuevoDistrito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.nuevoDistrito.FlatAppearance.BorderSize = 2;
             this.nuevoDistrito.Location = new System.Drawing.Point(828, 361);
             this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
@@ -413,7 +415,7 @@ namespace InterfazDATMA.Administrador
             // 
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.pbFoto.Location = new System.Drawing.Point(925, 472);
+            this.pbFoto.Location = new System.Drawing.Point(930, 472);
             this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(166, 192);
