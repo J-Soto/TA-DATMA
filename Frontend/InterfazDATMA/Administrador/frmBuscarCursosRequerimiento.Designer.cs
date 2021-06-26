@@ -29,11 +29,11 @@ namespace InterfazDATMA.Administrador
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCursosReq = new System.Windows.Forms.DataGridView();
             this.NombreCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,14 +50,14 @@ namespace InterfazDATMA.Administrador
             this.dgvCursosReq.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvCursosReq.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCursosReq.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCursosReq.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursosReq.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCursosReq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursosReq.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreCurso,
@@ -65,27 +65,26 @@ namespace InterfazDATMA.Administrador
             this.FechaFinal});
             this.dgvCursosReq.EnableHeadersVisualStyles = false;
             this.dgvCursosReq.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursosReq.Location = new System.Drawing.Point(137, 61);
-            this.dgvCursosReq.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCursosReq.Location = new System.Drawing.Point(68, 105);
             this.dgvCursosReq.Name = "dgvCursosReq";
             this.dgvCursosReq.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCursosReq.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursosReq.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCursosReq.RowHeadersWidth = 62;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCursosReq.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCursosReq.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvCursosReq.RowTemplate.Height = 28;
-            this.dgvCursosReq.Size = new System.Drawing.Size(1197, 451);
+            this.dgvCursosReq.Size = new System.Drawing.Size(898, 361);
             this.dgvCursosReq.TabIndex = 29;
             this.dgvCursosReq.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCursosReq_CellFormatting);
             // 
@@ -99,9 +98,9 @@ namespace InterfazDATMA.Administrador
             // 
             // FechaInicial
             // 
-            dataGridViewCellStyle12.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle12.NullValue = null;
-            this.FechaInicial.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle7.NullValue = null;
+            this.FechaInicial.DefaultCellStyle = dataGridViewCellStyle7;
             this.FechaInicial.HeaderText = "Fecha Inicio";
             this.FechaInicial.MinimumWidth = 8;
             this.FechaInicial.Name = "FechaInicial";
@@ -110,9 +109,9 @@ namespace InterfazDATMA.Administrador
             // 
             // FechaFinal
             // 
-            dataGridViewCellStyle13.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle13.NullValue = null;
-            this.FechaFinal.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle8.NullValue = null;
+            this.FechaFinal.DefaultCellStyle = dataGridViewCellStyle8;
             this.FechaFinal.HeaderText = "Fecha Fin";
             this.FechaFinal.MinimumWidth = 8;
             this.FechaFinal.Name = "FechaFinal";
@@ -124,12 +123,12 @@ namespace InterfazDATMA.Administrador
             this.btnSeleccionarCur.AutoSize = true;
             this.btnSeleccionarCur.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSeleccionarCur.Depth = 0;
-            this.btnSeleccionarCur.Location = new System.Drawing.Point(301, 570);
-            this.btnSeleccionarCur.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSeleccionarCur.Location = new System.Drawing.Point(288, 474);
+            this.btnSeleccionarCur.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSeleccionarCur.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSeleccionarCur.Name = "btnSeleccionarCur";
             this.btnSeleccionarCur.Primary = false;
-            this.btnSeleccionarCur.Size = new System.Drawing.Size(196, 36);
+            this.btnSeleccionarCur.Size = new System.Drawing.Size(149, 36);
             this.btnSeleccionarCur.TabIndex = 32;
             this.btnSeleccionarCur.Text = "Seleccionar";
             this.btnSeleccionarCur.UseVisualStyleBackColor = true;
@@ -140,12 +139,12 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.AutoSize = true;
             this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancelar.Depth = 0;
-            this.btnCancelar.Location = new System.Drawing.Point(874, 570);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(620, 474);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = false;
-            this.btnCancelar.Size = new System.Drawing.Size(156, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(119, 36);
             this.btnCancelar.TabIndex = 33;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -153,18 +152,17 @@ namespace InterfazDATMA.Administrador
             // 
             // frmBuscarCursosRequerimiento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1477, 674);
+            this.ClientSize = new System.Drawing.Size(1108, 539);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSeleccionarCur);
             this.Controls.Add(this.dgvCursosReq);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBuscarCursosRequerimiento";
             this.Sizable = false;
-            this.Text = "frmBuscarCursosRequerimiento";
+            this.Text = "Buscar Curso Requisito";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursosReq)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

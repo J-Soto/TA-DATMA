@@ -16,7 +16,7 @@ namespace InterfazDATMA.Administrador
 
         private BindingList<PsicologoWS.psicologo> psicologos;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
-        private PsicologoWS.psicologo psicologoSelected;
+        private PsicologoWS.psicologo psicologoSelected = null;
         
         public PsicologoWS.psicologo PsicologoSelected { get => psicologoSelected; set => psicologoSelected = value; }
 
