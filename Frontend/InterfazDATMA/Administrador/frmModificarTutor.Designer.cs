@@ -31,12 +31,6 @@ namespace InterfazDATMA.Administrador
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarTutor));
             this.label1 = new System.Windows.Forms.Label();
-            this.txtConfirmarPass = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.lblConfirmarPass = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
             this.lblGenero = new System.Windows.Forms.Label();
             this.txtCel = new System.Windows.Forms.TextBox();
             this.txtTelf = new System.Windows.Forms.TextBox();
@@ -72,39 +66,6 @@ namespace InterfazDATMA.Administrador
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
-            // 
-            // txtConfirmarPass
-            // 
-            resources.ApplyResources(this.txtConfirmarPass, "txtConfirmarPass");
-            this.txtConfirmarPass.Name = "txtConfirmarPass";
-            // 
-            // txtPass
-            // 
-            resources.ApplyResources(this.txtPass, "txtPass");
-            this.txtPass.Name = "txtPass";
-            // 
-            // txtUser
-            // 
-            resources.ApplyResources(this.txtUser, "txtUser");
-            this.txtUser.Name = "txtUser";
-            // 
-            // lblConfirmarPass
-            // 
-            resources.ApplyResources(this.lblConfirmarPass, "lblConfirmarPass");
-            this.lblConfirmarPass.ForeColor = System.Drawing.Color.White;
-            this.lblConfirmarPass.Name = "lblConfirmarPass";
-            // 
-            // lblPassword
-            // 
-            resources.ApplyResources(this.lblPassword, "lblPassword");
-            this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Name = "lblPassword";
-            // 
-            // lblUser
-            // 
-            resources.ApplyResources(this.lblUser, "lblUser");
-            this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Name = "lblUser";
             // 
             // lblGenero
             // 
@@ -285,12 +246,6 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtConfirmarPass);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.lblConfirmarPass);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.txtCel);
             this.Controls.Add(this.txtTelf);
@@ -322,12 +277,6 @@ namespace InterfazDATMA.Administrador
         #endregion
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtConfirmarPass;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.Label lblConfirmarPass;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.TextBox txtCel;
         private System.Windows.Forms.TextBox txtTelf;
