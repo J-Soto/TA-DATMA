@@ -14,7 +14,7 @@ namespace InterfazDATMA
 {
     public partial class frmMenuUsuario : MaterialSkin.Controls.MaterialForm 
     {
-        private ImageList walkthrough = new ImageList();
+        private ImageList walkthrough = new ImageList(); 
         private frmPlantillaGestion plantillaGestion;
         private frmWalkthrough formAnterior;
         public frmMenuUsuario(frmWalkthrough formAnt,frmPlantillaGestion plantilla)
