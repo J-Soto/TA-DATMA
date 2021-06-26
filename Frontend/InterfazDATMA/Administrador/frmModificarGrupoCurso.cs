@@ -42,9 +42,6 @@ namespace InterfazDATMA.Administrador
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            dgvTutores.AutoGenerateColumns = false;
-            dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
 
             inicializarPantalla();
         }
@@ -91,7 +88,7 @@ namespace InterfazDATMA.Administrador
         {
             formBuscarPsicologoGrupo = new frmBuscarPsicologoGrupo();
             int flag = 1;
-            if (formBuscarPsicologoGrupo.ShowDialog() == DialogResult.OK)
+            if (formBuscarPsicologoGrupo.ShowDialog() == DialogResult.OK && formBuscarPsicologoGrupo.PsicologoSelected != null)
             {
                 foreach (PsicologoWS.psicologo recPsicologo in psicologosGrupo)
                 {
