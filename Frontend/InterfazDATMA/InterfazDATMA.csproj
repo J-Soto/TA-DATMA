@@ -313,12 +313,6 @@
     <Compile Include="login\frmLogout.Designer.cs">
       <DependentUpon>frmLogout.cs</DependentUpon>
     </Compile>
-    <Compile Include="plantilla\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="plantilla\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="psicologo\frmAgregarVideoPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -547,9 +541,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login\frmLogout.resx">
       <DependentUpon>frmLogout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="plantilla\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmAgregarVideoPsicologo.resx">
       <DependentUpon>frmAgregarVideoPsicologo.cs</DependentUpon>

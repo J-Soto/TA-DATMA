@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace InterfazDATMA
 {
     static class Program
@@ -17,7 +16,6 @@ namespace InterfazDATMA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-            Application.Run(new Form );
         }
     }
 }

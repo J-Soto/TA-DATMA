@@ -47,9 +47,6 @@ namespace InterfazDATMA.Administrador
             txtApellidoPat.Text = "";
             txtApellidoMat.Text = "";
             txtCorreo.Text = "";
-            txtUser.Text = "";
-            txtPass.Text = "";
-            txtConfirmarPass.Text = "";
             txtDni.Text = "";
             txtTelf.Text = "";
             txtCelular.Text = "";
@@ -207,17 +204,11 @@ namespace InterfazDATMA.Administrador
                 psicologo.fotoPerfil = null;
             }
 
-            psicologo.user = txtUser.Text;
-            psicologo.password = txtPass.Text;
 
             //Validaciones:
             if (psicologo.DNI.Length != 8)
             {
                 MessageBox.Show("El DNI debe tener 8 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (psicologo.password != txtConfirmarPass.Text)
-            {
-                MessageBox.Show("Las contraseñas deben coincidir", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (psicologo.correo.Contains("@") != true)
             {
