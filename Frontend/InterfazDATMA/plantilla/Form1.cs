@@ -16,6 +16,11 @@ namespace InterfazDATMA.plantilla
         public Form1()
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Red600, MaterialSkin.Primary.Green600, MaterialSkin.Primary.Yellow600, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
         }
     }
 }
