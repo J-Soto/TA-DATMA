@@ -39,10 +39,10 @@ namespace InterfazDATMA.Administrador
             inicializarComponentes();
             completarDatosPsicologos();
 
-            txtUser.Enabled = false;
-            txtPass.Enabled = false;
-            txtConfirmarPass.Text = "";
-            txtConfirmarPass.Enabled = false;
+            //txtUser.Enabled = false;
+            //txtPass.Enabled = false;
+            //txtConfirmarPass.Text = "";
+            //txtConfirmarPass.Enabled = false;
         }
 
         private void inicializarComponentes()
@@ -51,9 +51,9 @@ namespace InterfazDATMA.Administrador
             txtApellidoPat.Text = "";
             txtApellidoMat.Text = "";
             txtCorreo.Text = "";
-            txtUser.Text = "";
-            txtPass.Text = "";
-            txtConfirmarPass.Text = "";
+            //txtUser.Text = "";
+            //txtPass.Text = "";
+            //txtConfirmarPass.Text = "";
             txtDni.Text = "";
             txtTelf.Text = "";
             txtCelular.Text = "";
@@ -68,7 +68,7 @@ namespace InterfazDATMA.Administrador
             txtApellidoPat.Text = psicologo.apellidoPaterno;
             txtApellidoMat.Text = psicologo.apellidoMaterno;
             txtCorreo.Text = psicologo.correo;
-            txtUser.Text = psicologo.user;
+            //txtUser.Text = psicologo.user;
             /* La contraseña no se muestra*/
             //txtPass.Text = psicologo.password;
             //txtConfirmarPass.Text = psicologo.password;

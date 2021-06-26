@@ -364,6 +364,12 @@
     <Compile Include="cuidador\4_frmInscripcionHecha.Designer.cs">
       <DependentUpon>4_frmInscripcionHecha.cs</DependentUpon>
     </Compile>
+    <Compile Include="psicologo\frmInsertarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psicologo\frmInsertarActividad.designer.cs">
+      <DependentUpon>frmInsertarActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="psicologo\frmInsertarSemana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +399,12 @@
     </Compile>
     <Compile Include="cuidador\%28%29frmMenuUsuario.Designer.cs">
       <DependentUpon>%28%29frmMenuUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="psicologo\frmModificarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psicologo\frmModificarActividad.designer.cs">
+      <DependentUpon>frmModificarActividad.cs</DependentUpon>
     </Compile>
     <Compile Include="psicologo\frmModificarProgramaPsicologo.cs">
       <SubType>Form</SubType>
@@ -549,6 +561,9 @@
     <EmbeddedResource Include="cuidador\4_frmInscripcionHecha.resx">
       <DependentUpon>4_frmInscripcionHecha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="psicologo\frmInsertarActividad.resx">
+      <DependentUpon>frmInsertarActividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmInsertarSemana.resx">
       <DependentUpon>frmInsertarSemana.cs</DependentUpon>
     </EmbeddedResource>
@@ -563,6 +578,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\%28%29frmMenuUsuario.resx">
       <DependentUpon>%28%29frmMenuUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="psicologo\frmModificarActividad.resx">
+      <DependentUpon>frmModificarActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmModificarProgramaPsicologo.resx">
       <DependentUpon>frmModificarProgramaPsicologo.cs</DependentUpon>
