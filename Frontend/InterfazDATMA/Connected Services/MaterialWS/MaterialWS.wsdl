@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.157.215.104:8080/DatmaSoftWebServices/MaterialWS?xsd=1" namespace="http://services.datmasoft.datma.pe/" />
     </xsd:schema>
   </types>
-  <message name="modificarMaterialDocumento">
-    <part name="parameters" element="tns:modificarMaterialDocumento" />
+  <message name="modificarMaterialVideo">
+    <part name="parameters" element="tns:modificarMaterialVideo" />
   </message>
-  <message name="modificarMaterialDocumentoResponse">
-    <part name="parameters" element="tns:modificarMaterialDocumentoResponse" />
+  <message name="modificarMaterialVideoResponse">
+    <part name="parameters" element="tns:modificarMaterialVideoResponse" />
   </message>
   <message name="insertarMaterialDocumento">
     <part name="parameters" element="tns:insertarMaterialDocumento" />
@@ -17,17 +17,23 @@
   <message name="insertarMaterialDocumentoResponse">
     <part name="parameters" element="tns:insertarMaterialDocumentoResponse" />
   </message>
+  <message name="modificarMaterialDocumento">
+    <part name="parameters" element="tns:modificarMaterialDocumento" />
+  </message>
+  <message name="modificarMaterialDocumentoResponse">
+    <part name="parameters" element="tns:modificarMaterialDocumentoResponse" />
+  </message>
   <message name="insertarMaterialVideo">
     <part name="parameters" element="tns:insertarMaterialVideo" />
   </message>
   <message name="insertarMaterialVideoResponse">
     <part name="parameters" element="tns:insertarMaterialVideoResponse" />
   </message>
-  <message name="modificarMaterialVideo">
-    <part name="parameters" element="tns:modificarMaterialVideo" />
+  <message name="listarVideos">
+    <part name="parameters" element="tns:listarVideos" />
   </message>
-  <message name="modificarMaterialVideoResponse">
-    <part name="parameters" element="tns:modificarMaterialVideoResponse" />
+  <message name="listarVideosResponse">
+    <part name="parameters" element="tns:listarVideosResponse" />
   </message>
   <message name="listarDocumentos">
     <part name="parameters" element="tns:listarDocumentos" />
@@ -41,28 +47,26 @@
   <message name="eliminarMaterialResponse">
     <part name="parameters" element="tns:eliminarMaterialResponse" />
   </message>
-  <message name="listarVideos">
-    <part name="parameters" element="tns:listarVideos" />
-  </message>
-  <message name="listarVideosResponse">
-    <part name="parameters" element="tns:listarVideosResponse" />
-  </message>
   <portType name="MaterialWS">
-    <operation name="modificarMaterialDocumento">
-      <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialDocumentoRequest" message="tns:modificarMaterialDocumento" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialDocumentoResponse" message="tns:modificarMaterialDocumentoResponse" />
+    <operation name="modificarMaterialVideo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialVideoRequest" message="tns:modificarMaterialVideo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialVideoResponse" message="tns:modificarMaterialVideoResponse" />
     </operation>
     <operation name="insertarMaterialDocumento">
       <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/insertarMaterialDocumentoRequest" message="tns:insertarMaterialDocumento" />
       <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/insertarMaterialDocumentoResponse" message="tns:insertarMaterialDocumentoResponse" />
     </operation>
+    <operation name="modificarMaterialDocumento">
+      <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialDocumentoRequest" message="tns:modificarMaterialDocumento" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialDocumentoResponse" message="tns:modificarMaterialDocumentoResponse" />
+    </operation>
     <operation name="insertarMaterialVideo">
       <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/insertarMaterialVideoRequest" message="tns:insertarMaterialVideo" />
       <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/insertarMaterialVideoResponse" message="tns:insertarMaterialVideoResponse" />
     </operation>
-    <operation name="modificarMaterialVideo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialVideoRequest" message="tns:modificarMaterialVideo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/modificarMaterialVideoResponse" message="tns:modificarMaterialVideoResponse" />
+    <operation name="listarVideos">
+      <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/listarVideosRequest" message="tns:listarVideos" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/listarVideosResponse" message="tns:listarVideosResponse" />
     </operation>
     <operation name="listarDocumentos">
       <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/listarDocumentosRequest" message="tns:listarDocumentos" />
@@ -72,14 +76,10 @@
       <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
       <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
     </operation>
-    <operation name="listarVideos">
-      <input wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/listarVideosRequest" message="tns:listarVideos" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/MaterialWS/listarVideosResponse" message="tns:listarVideosResponse" />
-    </operation>
   </portType>
   <binding name="MaterialWSPortBinding" type="tns:MaterialWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarMaterialDocumento">
+    <operation name="modificarMaterialVideo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -97,6 +97,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="modificarMaterialDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarMaterialVideo">
       <soap:operation soapAction="" />
       <input>
@@ -106,7 +115,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarMaterialVideo">
+    <operation name="listarVideos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -125,15 +134,6 @@
       </output>
     </operation>
     <operation name="eliminarMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarVideos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

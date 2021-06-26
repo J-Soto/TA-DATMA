@@ -61,7 +61,10 @@ namespace InterfazDATMA.psicologo
             actividad.nombre = txtNombreAct.Text;
             actividad.fecha = dtpFechaReunion.Value;
             actividad.fechaSpecified = true;
+
+
             
+
             //CAMBIAR A STRING
             //
             //actividad.horaInicio = new ActividadWS.localTime();
