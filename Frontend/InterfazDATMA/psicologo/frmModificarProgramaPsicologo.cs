@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InterfazDATMA.psicologo;
 
 namespace InterfazDATMA
 {
@@ -91,22 +92,21 @@ namespace InterfazDATMA
 
         }
 
-        private void btnAgregarReunion_Click(object sender, EventArgs e)
+        private void btnAgregarReunion_Click(object sender, EventArgs e) //INSERTAR ACTIVIDAD
         {
-            frmAgregarReunionPsicologo formAgregarReunionPsicologo = new frmAgregarReunionPsicologo();
-            formAgregarReunionPsicologo.ShowDialog();
-
+            frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id);
+            formPlantillaGestion.abrirFormulario(formInsertarActividad);
         }
 
-        private void btnEliminarReunion_Click(object sender, EventArgs e)
+        private void btnEliminarReunion_Click(object sender, EventArgs e) //Eliminar Actividad
         {
 
         }
 
         private void bntConfigurarTiempo_Click(object sender, EventArgs e)
         {
-            rtxtDescripcion.Enabled = true;
-            rtxtTema.Enabled = true;
+            frmModificarActividad formModificarActividad = new frmModificarActividad(this, formPlantillaGestion);
+            formPlantillaGestion.abrirFormulario(formModificarActividad);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
