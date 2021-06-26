@@ -54,8 +54,6 @@ namespace InterfazDATMA.Administrador
             txtDni.Text = "";
             txtTelf.Text = "";
             txtCel.Text = "";
-            //txtUser.Text = "";
-            //txtPass.Text = "";
             rbtnHombre.Checked = false;
             rbtnMujer.Checked = false;
         }
@@ -66,7 +64,6 @@ namespace InterfazDATMA.Administrador
             txtApPat.Text = tutor.apellidoPaterno;
             txtApMat.Text = tutor.apellidoMaterno;
             txtCorreo.Text = tutor.correo;
-            //txtUser.Text = tutor.user;
             /* La contraseña no se muestra*/
             //txtPass.Text = tutor.password;
             //txtConfirmarPass.Text = tutor.password;
@@ -173,8 +170,6 @@ namespace InterfazDATMA.Administrador
             tutor.celular = txtCel.Text;
             tutor.fechaNacimiento = dtpFechaNacimiento.Value;
             tutor.fechaNacimientoSpecified = true;
-            //tutor.user = txtUser.Text;
-            //tutor.password = txtPass.Text;
             // RadioButton
             if (rbtnHombre.Checked == true)
             {
@@ -221,10 +216,6 @@ namespace InterfazDATMA.Administrador
             {
                 MessageBox.Show("El número de teléfono no puede empezar con cero", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            //else if (tutor.password != txtConfirmarPass.Text)   // Si las contraseñas no coinciden
-            //{
-            //    MessageBox.Show("Las contraseñas deben coincidir", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
             else if (tutor.password.Length == 5) // Si la contraseña tiene 5 caracteres
             {
                 MessageBox.Show("La contraseña debe tener al menos 5 caracteres", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
