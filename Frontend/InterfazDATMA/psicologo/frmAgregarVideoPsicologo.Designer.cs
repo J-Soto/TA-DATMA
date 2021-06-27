@@ -32,11 +32,10 @@ namespace InterfazDATMA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarMaterialPsicologo));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLinkArchivo = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtLinkVideo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -50,6 +49,8 @@ namespace InterfazDATMA
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel40.SuspendLayout();
@@ -78,15 +79,6 @@ namespace InterfazDATMA
             this.label2.Name = "label2";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // btnLinkArchivo
-            // 
-            this.btnLinkArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            resources.ApplyResources(this.btnLinkArchivo, "btnLinkArchivo");
-            this.btnLinkArchivo.FlatAppearance.BorderSize = 0;
-            this.btnLinkArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnLinkArchivo.Name = "btnLinkArchivo";
-            this.btnLinkArchivo.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -102,29 +94,28 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel40, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.btnLinkArchivo, 3, 1);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             // 
             // tableLayoutPanel40
             // 
             this.tableLayoutPanel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             resources.ApplyResources(this.tableLayoutPanel40, "tableLayoutPanel40");
-            this.tableLayoutPanel40.Controls.Add(this.txtNombre, 1, 1);
+            this.tableLayoutPanel40.Controls.Add(this.txtLinkVideo, 1, 1);
             this.tableLayoutPanel40.Name = "tableLayoutPanel40";
             // 
-            // txtNombre
+            // txtLinkVideo
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.Depth = 0;
-            resources.ApplyResources(this.txtNombre, "txtNombre");
-            this.txtNombre.Hint = "";
-            this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.SelectionLength = 0;
-            this.txtNombre.SelectionStart = 0;
-            this.txtNombre.UseSystemPasswordChar = false;
+            this.txtLinkVideo.BackColor = System.Drawing.Color.White;
+            this.txtLinkVideo.Depth = 0;
+            resources.ApplyResources(this.txtLinkVideo, "txtLinkVideo");
+            this.txtLinkVideo.Hint = "";
+            this.txtLinkVideo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtLinkVideo.Name = "txtLinkVideo";
+            this.txtLinkVideo.PasswordChar = '\0';
+            this.txtLinkVideo.SelectedText = "";
+            this.txtLinkVideo.SelectionLength = 0;
+            this.txtLinkVideo.SelectionStart = 0;
+            this.txtLinkVideo.UseSystemPasswordChar = false;
             // 
             // tableLayoutPanel11
             // 
@@ -172,6 +163,8 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.tableLayoutPanel3.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnGuardar, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.btnCancelar, 1, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
@@ -221,6 +214,20 @@ namespace InterfazDATMA
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
+            // btnGuardar
+            // 
+            resources.ApplyResources(this.btnGuardar, "btnGuardar");
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmAgregarMaterialPsicologo
             // 
             resources.ApplyResources(this, "$this");
@@ -252,7 +259,6 @@ namespace InterfazDATMA
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        internal System.Windows.Forms.Button btnLinkArchivo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -261,8 +267,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel40;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -270,5 +274,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel40;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtLinkVideo;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
