@@ -95,6 +95,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -1042,8 +1043,8 @@
     <None Include="Connected Services\UsuarioWS\UsuarioWS11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="MaterialResources\Resources\Roboto-Medium.ttf" />
-    <None Include="MaterialResources\Resources\Roboto-Regular.ttf" />
+    <EmbeddedResource Include="MaterialResources\Resources\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="MaterialResources\Resources\Roboto-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
