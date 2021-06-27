@@ -516,6 +516,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\Design.cs" />
     <Compile Include="util\Grupo_Curso.cs" />
     <Compile Include="util\Psicologo_Curso.cs" />
     <Compile Include="validacion\Validar.cs" />

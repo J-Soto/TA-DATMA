@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InterfazDATMA.util;
 
 namespace InterfazDATMA.Administrador
 {
@@ -30,6 +31,8 @@ namespace InterfazDATMA.Administrador
         {
             this.DoubleBuffered = true;
             InitializeComponent();
+
+            Design.Ini(this);
             this.psicologo = psicologo;
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;

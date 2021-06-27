@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using InterfazDATMA.util;
 namespace InterfazDATMA
 {
     public partial class frmListaCursoInscritos : MaterialSkin.Controls.MaterialForm
@@ -23,11 +24,7 @@ namespace InterfazDATMA
         public frmListaCursoInscritos(frmWalkthrough formAnterior,frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
-
+            Design.Ini(this);
             var temp = daoCuros.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
             if (temp is object)
             {
@@ -40,6 +37,7 @@ namespace InterfazDATMA
         public frmListaCursoInscritos(frmPerfilCuidador formAnterior2, frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
+            Design.Ini(this);
             this.plantillaGestion = plantillaGestion;
             this.formAnterior2 = formAnterior2;
         }

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using InterfazDATMA.Administrador;
 using InterfazDATMA.cuidador;
 using InterfazDATMA.psicologo;
+using InterfazDATMA.util;
 
 namespace InterfazDATMA.plantilla
 {
@@ -25,14 +26,11 @@ namespace InterfazDATMA.plantilla
         public static PsicologoWS.psicologo psico = null;
         public static TutorWS.tutor tutor = null;
 
+        
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
-
+            Design.Ini(this);
             frmPlantillaGestion.user = user;
             int tipoUser = user.tipo;
             //Psicologo

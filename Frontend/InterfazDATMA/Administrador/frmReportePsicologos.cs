@@ -1,4 +1,6 @@
-﻿using System;
+﻿using InterfazDATMA.util;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +13,14 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmReportePsicologos : Form
+    public partial class frmReportePsicologos : MaterialSkin.Controls.MaterialForm
     {
         private ReporteWS.ReporteWSClient daoReporte;
         private byte[] archivo;
         public frmReportePsicologos()
         {
             InitializeComponent();
+            Design.Ini(this);
             daoReporte = new ReporteWS.ReporteWSClient();
             this.archivo = daoReporte.reportePsicologos();
             var path = Path.GetTempFileName();

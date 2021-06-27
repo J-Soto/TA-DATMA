@@ -13,6 +13,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InterfazDATMA.util;
 
 namespace InterfazDATMA.Administrador
 {
@@ -26,11 +27,8 @@ namespace InterfazDATMA.Administrador
         {
             this.DoubleBuffered = true;
             InitializeComponent();
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.Teal200, MaterialSkin.TextShade.WHITE);
 
+            Design.Ini(this);
             plantillaGestion = plantilla;
         }
 

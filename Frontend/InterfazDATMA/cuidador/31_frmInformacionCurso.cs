@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using InterfazDATMA.util;
 namespace InterfazDATMA
 {
     public partial class frmInformacionCurso : MaterialSkin.Controls.MaterialForm 
@@ -20,15 +21,11 @@ namespace InterfazDATMA
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private CursoWS.CursoWSClient daoCurso;
         private CursoWS.curso curso;
-        private int idCurso;
+      
         public frmInformacionCurso(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
-
+            Design.Ini(this);
             dgvInfCurso.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInfCurso.AutoGenerateColumns = false;
 
@@ -49,7 +46,7 @@ namespace InterfazDATMA
                 //hACER lISTAR CURSOS POR ID
                 for (int i = 0; i < lCursos.Count; i++)
                 {
-                    if (lCursos[i].idCurso == this.idCurso)
+                    if (lCursos[i].idCurso == this.curso.idCurso)
                     {
                         this.curso = lCursos[i];
                         break;
@@ -59,7 +56,7 @@ namespace InterfazDATMA
                 BindingList<PsicologoWS.psicologo> lPsi = null;
                 try
                 {
-                    lPsi = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorIdCurso(this.idCurso).ToList());
+                    lPsi = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorIdCurso(this.curso.idCurso).ToList());
                     PsicologoWS.psicologo psicologo = lPsi[0];
                     lblInformacionEncargada.Text = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
 

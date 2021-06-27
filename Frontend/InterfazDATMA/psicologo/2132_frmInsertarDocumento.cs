@@ -9,10 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.psicologo
 {
-    public partial class frmInsertarDocumento : Form
+    public partial class frmInsertarDocumento : MaterialSkin.Controls.MaterialForm
     {
         private MaterialWS.documento documento = null;
         private byte[] auxBytes = null;
@@ -22,8 +24,7 @@ namespace InterfazDATMA.psicologo
         public frmInsertarDocumento()
         {
             InitializeComponent();
-
-            
+            Design.Ini(this);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

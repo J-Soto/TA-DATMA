@@ -51,11 +51,8 @@ namespace InterfazDATMA.Administrador
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
 
             InitializeComponent();
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
 
+            Design.Ini(this);
             dgvReq.AutoGenerateColumns = false;
             dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             btnModificar.Enabled = false;

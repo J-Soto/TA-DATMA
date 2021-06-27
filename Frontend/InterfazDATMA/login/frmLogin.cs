@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using InterfazDATMA.plantilla;
 using InterfazDATMA;
 using System.ServiceModel;
-
+using InterfazDATMA.util;
 
 namespace InterfazDATMA
 {
@@ -23,13 +23,12 @@ namespace InterfazDATMA
 
         //private UsuarioWSClient daoUsuario;
         private UsuarioWS.UsuarioWSClient daoUsuario;
+       
         public frmLogin()
         {
             InitializeComponent();
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500,MaterialSkin.Primary.BlueGrey700,MaterialSkin.Primary.BlueGrey100,MaterialSkin.Accent.Teal700,MaterialSkin.TextShade.WHITE);
+
+            Design.Ini(this);
             daoUsuario = new UsuarioWS.UsuarioWSClient();
         }
 

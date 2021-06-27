@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using InterfazDATMA.util;
 namespace InterfazDATMA
 {
     public partial class frmDetalleCursoInscrito : MaterialSkin.Controls.MaterialForm 
@@ -20,6 +21,7 @@ namespace InterfazDATMA
         public frmDetalleCursoInscrito(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
+            Design.Ini(this);
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
         }

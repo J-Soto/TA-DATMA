@@ -10,23 +10,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 
+using InterfazDATMA.util;
 namespace InterfazDATMA
 {
     public partial class frmWalkthrough : MaterialSkin.Controls.MaterialForm 
     {
         private int estado = 1;
-        public frmPlantillaGestion plantillaGestion;
+        public frmPlantillaGestion plantillaGestion; 
         public frmWalkthrough(frmPlantillaGestion plantillaGestion)
         {
             this.plantillaGestion = plantillaGestion;
             InitializeComponent();
+            Design.Ini(this);
             cambiarEstado(estado);
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);            
         }
-        
+
         private void cambiarEstado(int estado)
         {
             if (estado == 1)
