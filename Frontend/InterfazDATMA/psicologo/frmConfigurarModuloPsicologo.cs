@@ -55,8 +55,10 @@ namespace InterfazDATMA
         private List<SemanaTema> Fetch()
         {
             var arr = new List<SemanaTema>();
+            
             var semanas = daoCurso.listarSemanasPorIdCurso(curso.idCurso);
             var temas = daoCurso.listarTemasPorIdCurso(curso.idCurso);
+
             if (semanas is object && temas is object)
             {
                 foreach (var semana in semanas)
