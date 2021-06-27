@@ -313,6 +313,44 @@
     <Compile Include="login\frmLogout.Designer.cs">
       <DependentUpon>frmLogout.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopFileInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopFolderInPut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopSmallCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\Controls\LollipopToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialResources\UIManagers\DrawHelper.cs" />
+    <Compile Include="MaterialResources\UIManagers\FontManager.cs" />
     <Compile Include="psicologo\frmInsertarDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1004,6 +1042,8 @@
     <None Include="Connected Services\UsuarioWS\UsuarioWS11.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="MaterialResources\Resources\Roboto-Medium.ttf" />
+    <None Include="MaterialResources\Resources\Roboto-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -1236,6 +1276,23 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DATMA logo.png" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Barcode.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Chart.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Diagram.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.GraphicsGL.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Grid.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Host.WinBase.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Host.WinForm.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Host.Wpf.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.OpenTK.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Presentation.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Schedule.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.Text.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.WinFormControls.dll" />
+    <Content Include="ReferenciasNevron\Nevron.Nov.WpfControls.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
