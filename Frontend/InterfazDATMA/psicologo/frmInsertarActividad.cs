@@ -177,5 +177,10 @@ namespace InterfazDATMA.psicologo
                 }
             }
         }
+
+        private void btnAgregarVid_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

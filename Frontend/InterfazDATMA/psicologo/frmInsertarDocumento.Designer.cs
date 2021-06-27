@@ -30,8 +30,12 @@ namespace InterfazDATMA.psicologo
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtRutaArchivo = new System.Windows.Forms.TextBox();
+            this.btnSubirArchivo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -45,21 +49,58 @@ namespace InterfazDATMA.psicologo
             this.label2.TabIndex = 10;
             this.label2.Text = "Archivo:";
             // 
-            // textBox1
+            // txtRutaArchivo
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(492, 26);
-            this.textBox1.TabIndex = 11;
+            this.txtRutaArchivo.Location = new System.Drawing.Point(205, 88);
+            this.txtRutaArchivo.Name = "txtRutaArchivo";
+            this.txtRutaArchivo.Size = new System.Drawing.Size(492, 26);
+            this.txtRutaArchivo.TabIndex = 11;
             // 
-            // button1
+            // btnSubirArchivo
             // 
-            this.button1.Location = new System.Drawing.Point(720, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 27);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSubirArchivo.Location = new System.Drawing.Point(736, 89);
+            this.btnSubirArchivo.Name = "btnSubirArchivo";
+            this.btnSubirArchivo.Size = new System.Drawing.Size(98, 27);
+            this.btnSubirArchivo.TabIndex = 12;
+            this.btnSubirArchivo.Text = "...";
+            this.btnSubirArchivo.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 29);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Descripcion:";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(208, 160);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(488, 158);
+            this.txtDescripcion.TabIndex = 14;
+            this.txtDescripcion.Text = "";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(318, 414);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(147, 40);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(534, 417);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(147, 35);
+            this.btnGuardar.TabIndex = 16;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // frmInsertarDocumento
             // 
@@ -67,8 +108,12 @@ namespace InterfazDATMA.psicologo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(992, 508);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSubirArchivo);
+            this.Controls.Add(this.txtRutaArchivo);
             this.Controls.Add(this.label2);
             this.Name = "frmInsertarDocumento";
             this.Text = "Insertar Documento";
@@ -80,7 +125,11 @@ namespace InterfazDATMA.psicologo
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtRutaArchivo;
+        private System.Windows.Forms.Button btnSubirArchivo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
