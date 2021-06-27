@@ -59,6 +59,7 @@ namespace InterfazDATMA.Administrador
             dgvReq.AutoGenerateColumns = false;
             dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             btnModificar.Enabled = false;
+            curso = new CursoWS.curso();
             inicializarPantalla();
         }
 
@@ -89,7 +90,7 @@ namespace InterfazDATMA.Administrador
             dgvReq.DataSource = cursosReq;
 
             //Curso
-            curso = new CursoWS.curso();
+            //curso = new CursoWS.curso();
 
             //auxCantSem:
             auxCantSem = 0;
@@ -205,6 +206,7 @@ namespace InterfazDATMA.Administrador
             {
                 dtpFechaFin.Value = auxDate;
             }
+            dtpFechaInscrip.Value = auxDate.AddDays(-(2 * 7));
         }
 
         private void btnSelaccionarTemas_Click(object sender, EventArgs e)
@@ -343,7 +345,6 @@ namespace InterfazDATMA.Administrador
 
                 btnGuardarCurso.Enabled = false;
                 btnModificar.Enabled = true;
-                inicializarPantalla();
             }
 
         }
@@ -363,12 +364,21 @@ namespace InterfazDATMA.Administrador
             }
             else
             {
+                curso.descripcion = txtNombreCurso.Text;
+                curso.fechaInicio = dtpFechaInicial.Value;
+                curso.fechaInicioSpecified = true;
+                curso.fechaFin = dtpFechaFin.Value;
+                curso.fechaFinSpecified = true;
+                curso.fechaInscripcion = dtpFechaInscrip.Value;
+                curso.fechaInscripcionSpecified = true;
+                curso.cantSemanas = Int32.Parse(txtCantSemana.Text);
+
                 int resultado = daoCurso.modificarCurso(curso);
                 if (resultado != 0)
                 {
                     int contSemanas = 0;
-                    BindingList<CursoWS.tema> temasExistentes;
                     //LLena la lista de temas ya existentes en el curso
+                    BindingList<CursoWS.tema> temasExistentes;
                     try
                     {
                         temasExistentes = new BindingList<CursoWS.tema>(daoCurso.listarTemasPorIdCurso(curso.idCurso).ToList());
@@ -505,7 +515,7 @@ namespace InterfazDATMA.Administrador
                         }
                     }
 
-                    MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha modificado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     btnGuardarCurso.Enabled = false;
                     btnModificar.Enabled = true;
@@ -516,6 +526,7 @@ namespace InterfazDATMA.Administrador
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            curso = new CursoWS.curso();
             inicializarPantalla();
             btnGuardarCurso.Enabled = true;
         }
