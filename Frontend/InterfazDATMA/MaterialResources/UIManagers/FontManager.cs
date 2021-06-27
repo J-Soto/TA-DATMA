@@ -20,7 +20,7 @@ public class FontManager
     public Font Roboto_Regular9;
 
     
-    public FontManager()
+    public FontManager() 
     {
         Roboto_Medium15 = new Font(LoadFont(Resources.Roboto_Medium), 15f);
         Roboto_Medium10 = new Font(LoadFont(Resources.Roboto_Medium), 10f);
