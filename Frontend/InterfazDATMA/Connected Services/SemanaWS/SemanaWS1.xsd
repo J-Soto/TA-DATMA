@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.datmasoft.datma.pe/" targetNamespace="http://services.datmasoft.datma.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarSemana" type="tns:eliminarSemana" />
+  <xs:element name="eliminarSemanaResponse" type="tns:eliminarSemanaResponse" />
   <xs:element name="insertarSemana" type="tns:insertarSemana" />
   <xs:element name="insertarSemanaResponse" type="tns:insertarSemanaResponse" />
   <xs:element name="listarActividadesPorIdSemana" type="tns:listarActividadesPorIdSemana" />
@@ -187,6 +189,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarSemanaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSemana">
+    <xs:sequence>
+      <xs:element name="idSemana" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSemanaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

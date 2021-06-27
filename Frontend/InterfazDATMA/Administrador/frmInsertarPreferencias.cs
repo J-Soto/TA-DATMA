@@ -36,6 +36,7 @@ namespace InterfazDATMA.Administrador
             chblInternet.CheckOnClick = true;
             chblTurno.CheckOnClick = true;
             chblRedes.CheckOnClick = true;
+            if (tutor.genero == 'M') chbGestante.Enabled = false;
             tutorAux = tutor;
         }
 
