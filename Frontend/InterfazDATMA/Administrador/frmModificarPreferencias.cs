@@ -230,7 +230,7 @@ namespace InterfazDATMA.Administrador
                 daoTutor.modificarTutor(tutor);
                 // Mensaje
                 string msgEnvioDatos = "";
-                //Se verifica la signaci{on de un usuario
+                //Se verifica la signacion de un usuario
                 if (this.formAnterior.usuarioAsignado)
                 {
                     if (daoUsuario.enviarDatosUsuario(tutor.correo, tutor.user, tutor.password) == 1)

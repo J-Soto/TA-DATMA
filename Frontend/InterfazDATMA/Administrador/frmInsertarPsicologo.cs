@@ -156,8 +156,8 @@ namespace InterfazDATMA.Administrador
 
         private (string,string) generarUsuario()
         {
-            string user = Guid.NewGuid().ToString("N");
-            string password = Guid.NewGuid().ToString("N");
+            string user = Guid.NewGuid().ToString("N").Substring(0,75);
+            string password = Guid.NewGuid().ToString("N").Substring(0,15);
             return (user,password);
         }
 
