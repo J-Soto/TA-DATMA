@@ -27,6 +27,7 @@ namespace InterfazDATMA.Administrador
         private BindingList<Grupo_Curso> gruposCurso;
         private frmVerGruposCurso formVerGruposCurso;
         private GrupoWS.GrupoWSClient daoGrupo;
+        private PsicologoWS.PsicologoWSClient daoPsicologo;
 
         //semanas:
         private SemanaWS.SemanaWSClient daoSemana;
@@ -47,6 +48,7 @@ namespace InterfazDATMA.Administrador
             daoCurso = new CursoWS.CursoWSClient();
             daoGrupo = new GrupoWS.GrupoWSClient();
             daoSemana = new SemanaWS.SemanaWSClient();
+            daoPsicologo = new PsicologoWS.PsicologoWSClient();
 
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
@@ -56,6 +58,7 @@ namespace InterfazDATMA.Administrador
 
             dgvReq.AutoGenerateColumns = false;
             dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            btnModificar.Enabled = false;
             inicializarPantalla();
         }
 
@@ -281,6 +284,7 @@ namespace InterfazDATMA.Administrador
             curso.cantSemanas = Int32.Parse(txtCantSemana.Text);
 
             int idCurso = daoCurso.insertarCurso(curso);
+            curso.idCurso = idCurso;
             if (idCurso != 0)
             {
                 int contSemanas = 0;
@@ -336,6 +340,9 @@ namespace InterfazDATMA.Administrador
                 }
 
                 MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                btnGuardarCurso.Enabled = false;
+                btnModificar.Enabled = true;
                 inicializarPantalla();
             }
 
@@ -345,6 +352,172 @@ namespace InterfazDATMA.Administrador
         {
             formPlantillaGest.abrirFormulario(formOperacionesCursos);
 
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (false)//verificar si algun psicologo ha hecho algun cambio
+            {
+                MessageBox.Show("No se puede modificar el curso, ya que las actividades de esta han sido modificadas por los psicologos",
+                    "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                int resultado = daoCurso.modificarCurso(curso);
+                if (resultado != 0)
+                {
+                    int contSemanas = 0;
+                    BindingList<CursoWS.tema> temasExistentes;
+                    //LLena la lista de temas ya existentes en el curso
+                    try
+                    {
+                        temasExistentes = new BindingList<CursoWS.tema>(daoCurso.listarTemasPorIdCurso(curso.idCurso).ToList());
+                    }
+                    catch (Exception)
+                    {
+                        temasExistentes = new BindingList<CursoWS.tema>();
+                    }
+                    //Elimina la lista de temas ya existentes en el curso
+                    foreach (CursoWS.tema item in temasExistentes)
+                    {
+                        daoCurso.eliminarCursoTema(item.id_curso_tema);
+                    }
+                    //Insertar-modificar temas_curso
+                    foreach (TemaWS.tema recTema in temasCurso)
+                    {
+                        recTema.fechaInicioSpecified = true;
+                        recTema.fechaFinSpecified = true;
+                        int idCursoTema = daoCurso.insertarCursoTema(curso.idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
+
+                        //LLena la lista de semanas ya existentes en el curso
+                        BindingList<CursoWS.semana> semanasExistentes;
+                        try
+                        {
+                            semanasExistentes = new BindingList<CursoWS.semana>(daoCurso.listarSemanasPorIdCurso(curso.idCurso).ToList());
+                        }
+                        catch (Exception)
+                        {
+                            semanasExistentes = new BindingList<CursoWS.semana>();
+                        }
+                        //Elimina las semanas ya existentes
+                        foreach (CursoWS.semana item in semanasExistentes)
+                        {
+                            daoSemana.eliminarSemana(item.id);
+                        }
+                        //Insertar-modificar semanas:
+                        SemanaWS.semana semana = new SemanaWS.semana();
+                        contSemanas++;
+                        semana.nombre = "Editar nombre Semana: " + contSemanas;
+                        semana.descripcion = "Editar";
+                        semana.fechaInicio = recTema.fechaInicio;
+                        semana.fechaInicioSpecified = true;
+                        semana.curso = new SemanaWS.curso();
+                        semana.curso.idCurso = curso.idCurso;
+                        daoSemana.insertarSemana(semana, idCursoTema);
+                    }
+
+                    //LLena la lista de grupos ya existentes en el curso
+                    BindingList<CursoWS.grupo> gruposExistentes;
+                    try
+                    {
+                        gruposExistentes = new BindingList<CursoWS.grupo>(daoCurso.listarGruposPorIdCurso(curso.idCurso).ToList());
+                    }
+                    catch (Exception)
+                    {
+                        gruposExistentes = new BindingList<CursoWS.grupo>();
+                    }
+                    //Elimina los grupos existentes
+                    foreach (CursoWS.grupo item in gruposExistentes)
+                    {
+                        daoGrupo.eliminarGrupo(item.idGrupo);
+                    }
+                    //Insertar grupos
+                    foreach (Grupo_Curso recGruposCurso in gruposCurso)
+                    {
+                        int idGrupo = daoGrupo.insertarGrupo(curso.idCurso, recGruposCurso.Grupo);
+                        if (idGrupo != 0)
+                        {
+                            //LLena la lista de psicologos ya existentes en el grupo
+                            BindingList<GrupoWS.psicologo> psicologosExistentes;
+                            try
+                            {
+                                psicologosExistentes = new BindingList<GrupoWS.psicologo>(daoGrupo.listarPsicologosPorIdGrupo(idGrupo).ToList());
+                            }
+                            catch (Exception)
+                            {
+                                psicologosExistentes = new BindingList<GrupoWS.psicologo>();
+                            }
+                            //Elimina la lista de psicologos ya existentes en el grupo
+                            foreach (GrupoWS.psicologo item in psicologosExistentes)
+                            {
+                                daoGrupo.eliminarGrupoPsicologo(item.idPersona, idGrupo);
+                            }
+                            //Insertar psicologos
+                            foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                            {
+                                daoGrupo.insertarGrupoPsicologo(recPsicologo.idPersona, idGrupo);
+                            }
+                        }
+                    }
+
+                    //LLena la lista de requerimientos ya existentes en el curso
+                    BindingList<CursoWS.requerimiento> reqExistentes;
+                    try
+                    {
+                        reqExistentes = new BindingList<CursoWS.requerimiento>(daoCurso.listarRequerimientoPorIdCurso(this.curso.idCurso).ToList());
+                    }
+                    catch (Exception)
+                    {
+                        reqExistentes = new BindingList<CursoWS.requerimiento>();
+                    }
+                    //Eliminar la lista de requerimientos ya existentes en el curso
+                    foreach (CursoWS.requerimiento item in reqExistentes)
+                    {
+                        daoCurso.eliminarRequerimiento(this.curso.idCurso, item.idRequerimiento);
+                    }
+                    //Insertar Requisitos:
+                    foreach (CursoWS.curso recCursoReq in cursosReq)
+                    {
+                        daoCurso.insertarRequerimiento(this.curso.idCurso, recCursoReq.idCurso, "Curso Requisito");
+                    }
+
+                    //LLena la lista de psicologos ya existentes en el curso
+                    BindingList<PsicologoWS.psicologo> psiExistentes;
+                    try
+                    {
+                        psiExistentes = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorIdCurso(this.curso.idCurso).ToList());
+                    }
+                    catch (Exception)
+                    {
+                        psiExistentes = new BindingList<PsicologoWS.psicologo>();
+                    }
+                    //Eliminar lista de psicologos ya existentes
+                    foreach (PsicologoWS.psicologo item in psiExistentes)
+                    {
+                        daoCurso.eliminarPsicologoCurso(item.idPersona, this.curso.idCurso);
+                    }
+                    //Insertar Psicologos_Cursos:
+                    foreach (Grupo_Curso recGruposCurso in gruposCurso)
+                    {
+                        foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                        {
+                            daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, this.curso.idCurso);
+                        }
+                    }
+
+                    MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    btnGuardarCurso.Enabled = false;
+                    btnModificar.Enabled = true;
+                    inicializarPantalla();
+                }
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            inicializarPantalla();
+            btnGuardarCurso.Enabled = true;
         }
     }
 }

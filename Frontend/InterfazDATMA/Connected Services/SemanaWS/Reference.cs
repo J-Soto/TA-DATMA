@@ -54,6 +54,16 @@ namespace InterfazDATMA.SemanaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/SemanaWS/listarActividadesPorIdSemanaRequest", ReplyAction="http://services.datmasoft.datma.pe/SemanaWS/listarActividadesPorIdSemanaResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.SemanaWS.listarActividadesPorIdSemanaResponse> listarActividadesPorIdSemanaAsync(InterfazDATMA.SemanaWS.listarActividadesPorIdSemanaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/SemanaWS/eliminarSemanaRequest", ReplyAction="http://services.datmasoft.datma.pe/SemanaWS/eliminarSemanaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.SemanaWS.eliminarSemanaResponse eliminarSemana(InterfazDATMA.SemanaWS.eliminarSemanaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/SemanaWS/eliminarSemanaRequest", ReplyAction="http://services.datmasoft.datma.pe/SemanaWS/eliminarSemanaResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.SemanaWS.eliminarSemanaResponse> eliminarSemanaAsync(InterfazDATMA.SemanaWS.eliminarSemanaRequest request);
     }
     
     /// <remarks/>
@@ -1655,6 +1665,42 @@ namespace InterfazDATMA.SemanaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSemana", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarSemanaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSemana;
+        
+        public eliminarSemanaRequest() {
+        }
+        
+        public eliminarSemanaRequest(int idSemana) {
+            this.idSemana = idSemana;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSemanaResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarSemanaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarSemanaResponse() {
+        }
+        
+        public eliminarSemanaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SemanaWSChannel : InterfazDATMA.SemanaWS.SemanaWS, System.ServiceModel.IClientChannel {
     }
@@ -1772,6 +1818,29 @@ namespace InterfazDATMA.SemanaWS {
             InterfazDATMA.SemanaWS.listarActividadesPorIdSemanaRequest inValue = new InterfazDATMA.SemanaWS.listarActividadesPorIdSemanaRequest();
             inValue.idSemana = idSemana;
             return ((InterfazDATMA.SemanaWS.SemanaWS)(this)).listarActividadesPorIdSemanaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.SemanaWS.eliminarSemanaResponse InterfazDATMA.SemanaWS.SemanaWS.eliminarSemana(InterfazDATMA.SemanaWS.eliminarSemanaRequest request) {
+            return base.Channel.eliminarSemana(request);
+        }
+        
+        public int eliminarSemana(int idSemana) {
+            InterfazDATMA.SemanaWS.eliminarSemanaRequest inValue = new InterfazDATMA.SemanaWS.eliminarSemanaRequest();
+            inValue.idSemana = idSemana;
+            InterfazDATMA.SemanaWS.eliminarSemanaResponse retVal = ((InterfazDATMA.SemanaWS.SemanaWS)(this)).eliminarSemana(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.SemanaWS.eliminarSemanaResponse> InterfazDATMA.SemanaWS.SemanaWS.eliminarSemanaAsync(InterfazDATMA.SemanaWS.eliminarSemanaRequest request) {
+            return base.Channel.eliminarSemanaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.SemanaWS.eliminarSemanaResponse> eliminarSemanaAsync(int idSemana) {
+            InterfazDATMA.SemanaWS.eliminarSemanaRequest inValue = new InterfazDATMA.SemanaWS.eliminarSemanaRequest();
+            inValue.idSemana = idSemana;
+            return ((InterfazDATMA.SemanaWS.SemanaWS)(this)).eliminarSemanaAsync(inValue);
         }
     }
 }

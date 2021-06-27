@@ -67,6 +67,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -76,7 +77,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTemas)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
@@ -115,10 +115,9 @@ namespace InterfazDATMA
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(16, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 97);
+            this.label1.Size = new System.Drawing.Size(99, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "Semana";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,9 +127,8 @@ namespace InterfazDATMA
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(368, 143);
+            this.label2.Size = new System.Drawing.Size(111, 36);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombre";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,9 +138,8 @@ namespace InterfazDATMA
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(369, 143);
+            this.label3.Size = new System.Drawing.Size(111, 36);
             this.label3.TabIndex = 5;
             this.label3.Text = "Descripcion";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,9 +149,8 @@ namespace InterfazDATMA
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(366, 143);
+            this.label4.Size = new System.Drawing.Size(110, 36);
             this.label4.TabIndex = 6;
             this.label4.Text = "Fecha Inicio";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,13 +166,12 @@ namespace InterfazDATMA
             this.nombre,
             this.Descripcion});
             this.dgvTemas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTemas.Location = new System.Drawing.Point(82, 101);
-            this.dgvTemas.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvTemas.Location = new System.Drawing.Point(26, 31);
             this.dgvTemas.Name = "dgvTemas";
             this.dgvTemas.ReadOnly = true;
             this.dgvTemas.RowHeadersWidth = 82;
             this.dgvTemas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTemas.Size = new System.Drawing.Size(1363, 1217);
+            this.dgvTemas.Size = new System.Drawing.Size(424, 355);
             this.dgvTemas.TabIndex = 7;
             // 
             // nombre
@@ -203,9 +198,8 @@ namespace InterfazDATMA
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(602, 94);
+            this.label5.Size = new System.Drawing.Size(187, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Tema";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,10 +210,9 @@ namespace InterfazDATMA
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(55, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(18, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(367, 145);
+            this.label6.Size = new System.Drawing.Size(111, 40);
             this.label6.TabIndex = 9;
             this.label6.Text = "Curso";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,9 +222,8 @@ namespace InterfazDATMA
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(366, 146);
+            this.label7.Size = new System.Drawing.Size(110, 37);
             this.label7.TabIndex = 12;
             this.label7.Text = "Fecha Inicio";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,9 +234,8 @@ namespace InterfazDATMA
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(366, 146);
+            this.label8.Size = new System.Drawing.Size(110, 37);
             this.label8.TabIndex = 13;
             this.label8.Text = "Fecha Fin";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,11 +247,11 @@ namespace InterfazDATMA
             this.btnGuardar.Depth = 0;
             this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGuardar.Location = new System.Drawing.Point(0, 0);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Primary = false;
-            this.btnGuardar.Size = new System.Drawing.Size(260, 191);
+            this.btnGuardar.Size = new System.Drawing.Size(78, 53);
             this.btnGuardar.TabIndex = 16;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -273,11 +264,11 @@ namespace InterfazDATMA
             this.btnCancelar.Depth = 0;
             this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancelar.Location = new System.Drawing.Point(0, 0);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = false;
-            this.btnCancelar.Size = new System.Drawing.Size(243, 191);
+            this.btnCancelar.Size = new System.Drawing.Size(73, 53);
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -293,14 +284,15 @@ namespace InterfazDATMA
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel11, 1, 2);
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel3, 1, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 1003);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 297);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 4;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1016, 395);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(316, 114);
             this.tableLayoutPanel9.TabIndex = 28;
             // 
             // tableLayoutPanel11
@@ -312,11 +304,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel11.Controls.Add(this.dateCursoFechaFin, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(58, 200);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(19, 58);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(896, 152);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(276, 41);
             this.tableLayoutPanel11.TabIndex = 15;
             // 
             // dateCursoFechaFin
@@ -324,9 +317,9 @@ namespace InterfazDATMA
             this.dateCursoFechaFin.AutoSize = false;
             this.dateCursoFechaFin.DesignTimeState = resources.GetString("dateCursoFechaFin.DesignTimeState");
             this.dateCursoFechaFin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateCursoFechaFin.Location = new System.Drawing.Point(426, 3);
+            this.dateCursoFechaFin.Location = new System.Drawing.Point(131, 2);
             this.dateCursoFechaFin.Name = "dateCursoFechaFin";
-            this.dateCursoFechaFin.Size = new System.Drawing.Size(467, 146);
+            this.dateCursoFechaFin.Size = new System.Drawing.Size(143, 37);
             this.dateCursoFechaFin.TabIndex = 0;
             // 
             // panel7
@@ -334,9 +327,10 @@ namespace InterfazDATMA
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel7.Controls.Add(this.label8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Location = new System.Drawing.Point(2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(366, 146);
+            this.panel7.Size = new System.Drawing.Size(110, 37);
             this.panel7.TabIndex = 13;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
@@ -349,11 +343,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateCursoFechaInicio, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(58, 42);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(19, 13);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(896, 152);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(276, 41);
             this.tableLayoutPanel3.TabIndex = 14;
             // 
             // panel6
@@ -361,9 +356,10 @@ namespace InterfazDATMA
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel6.Controls.Add(this.label7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Location = new System.Drawing.Point(2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(366, 146);
+            this.panel6.Size = new System.Drawing.Size(110, 37);
             this.panel6.TabIndex = 14;
             // 
             // dateCursoFechaInicio
@@ -371,9 +367,9 @@ namespace InterfazDATMA
             this.dateCursoFechaInicio.AutoSize = false;
             this.dateCursoFechaInicio.DesignTimeState = resources.GetString("dateCursoFechaInicio.DesignTimeState");
             this.dateCursoFechaInicio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateCursoFechaInicio.Location = new System.Drawing.Point(434, 3);
+            this.dateCursoFechaInicio.Location = new System.Drawing.Point(134, 2);
             this.dateCursoFechaInicio.Name = "dateCursoFechaInicio";
-            this.dateCursoFechaInicio.Size = new System.Drawing.Size(459, 146);
+            this.dateCursoFechaInicio.Size = new System.Drawing.Size(140, 37);
             this.dateCursoFechaInicio.TabIndex = 15;
             this.dateCursoFechaInicio.SelectedDateChanged += new Nevron.Nov.Function<Nevron.Nov.Dom.NValueChangeEventArgs>(this.dateCursoFechaInicio_SelectedDateChanged);
             // 
@@ -389,11 +385,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel13.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel13.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 1404);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(2, 415);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(1016, 197);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(316, 57);
             this.tableLayoutPanel13.TabIndex = 32;
             // 
             // panel10
@@ -401,9 +398,10 @@ namespace InterfazDATMA
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel10.Controls.Add(this.btnCancelar);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(587, 3);
+            this.panel10.Location = new System.Drawing.Point(182, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(243, 191);
+            this.panel10.Size = new System.Drawing.Size(73, 53);
             this.panel10.TabIndex = 35;
             // 
             // panel5
@@ -411,9 +409,10 @@ namespace InterfazDATMA
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(92, 3);
+            this.panel5.Location = new System.Drawing.Point(29, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(260, 191);
+            this.panel5.Size = new System.Drawing.Size(78, 53);
             this.panel5.TabIndex = 32;
             // 
             // tableLayoutPanel1
@@ -424,12 +423,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.5F));
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 23);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 7);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 145);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(185, 40);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -440,14 +439,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 804);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 238);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1014, 192);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(316, 55);
             this.tableLayoutPanel5.TabIndex = 49;
             // 
             // tableLayoutPanel4
@@ -457,13 +456,13 @@ namespace InterfazDATMA
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel18, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1032, 4);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(326, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.04744F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.95256F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1534, 1602);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(482, 474);
             this.tableLayoutPanel4.TabIndex = 56;
             // 
             // tableLayoutPanel18
@@ -474,13 +473,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.980025F));
             this.tableLayoutPanel18.Controls.Add(this.dgvTemas, 1, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 195);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(2, 59);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 3;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.825153F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.65337F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.598159F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1528, 1404);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(478, 413);
             this.tableLayoutPanel18.TabIndex = 58;
             // 
             // tableLayoutPanel6
@@ -491,14 +491,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel6.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.1087F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.97826F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.91304F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1526, 184);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(478, 53);
             this.tableLayoutPanel6.TabIndex = 50;
             // 
             // panel1
@@ -506,10 +506,10 @@ namespace InterfazDATMA
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(461, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(145, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(602, 94);
+            this.panel1.Size = new System.Drawing.Size(187, 25);
             this.panel1.TabIndex = 54;
             // 
             // tableLayoutPanel38
@@ -521,13 +521,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.26378F));
             this.tableLayoutPanel38.Controls.Add(this.tableLayoutPanel39, 1, 1);
             this.tableLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel38.Location = new System.Drawing.Point(3, 203);
+            this.tableLayoutPanel38.Location = new System.Drawing.Point(2, 61);
+            this.tableLayoutPanel38.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel38.Name = "tableLayoutPanel38";
             this.tableLayoutPanel38.RowCount = 3;
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel38.Size = new System.Drawing.Size(1016, 194);
+            this.tableLayoutPanel38.Size = new System.Drawing.Size(316, 55);
             this.tableLayoutPanel38.TabIndex = 90;
             // 
             // tableLayoutPanel39
@@ -539,11 +540,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel39.Controls.Add(this.tableLayoutPanel40, 2, 0);
             this.tableLayoutPanel39.Controls.Add(this.panel14, 0, 0);
             this.tableLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel39.Location = new System.Drawing.Point(53, 22);
+            this.tableLayoutPanel39.Location = new System.Drawing.Point(17, 7);
+            this.tableLayoutPanel39.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel39.Name = "tableLayoutPanel39";
             this.tableLayoutPanel39.RowCount = 1;
             this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel39.Size = new System.Drawing.Size(936, 149);
+            this.tableLayoutPanel39.Size = new System.Drawing.Size(289, 40);
             this.tableLayoutPanel39.TabIndex = 79;
             // 
             // tableLayoutPanel40
@@ -554,13 +556,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel40.Controls.Add(this.txtSemanaNombre, 1, 1);
             this.tableLayoutPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel40.Location = new System.Drawing.Point(420, 3);
+            this.tableLayoutPanel40.Location = new System.Drawing.Point(130, 2);
+            this.tableLayoutPanel40.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel40.Name = "tableLayoutPanel40";
             this.tableLayoutPanel40.RowCount = 3;
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel40.Size = new System.Drawing.Size(513, 143);
+            this.tableLayoutPanel40.Size = new System.Drawing.Size(157, 36);
             this.tableLayoutPanel40.TabIndex = 58;
             // 
             // txtSemanaNombre
@@ -569,14 +572,15 @@ namespace InterfazDATMA
             this.txtSemanaNombre.Depth = 0;
             this.txtSemanaNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSemanaNombre.Hint = "";
-            this.txtSemanaNombre.Location = new System.Drawing.Point(28, 60);
+            this.txtSemanaNombre.Location = new System.Drawing.Point(9, 16);
+            this.txtSemanaNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSemanaNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSemanaNombre.Name = "txtSemanaNombre";
             this.txtSemanaNombre.PasswordChar = '\0';
             this.txtSemanaNombre.SelectedText = "";
             this.txtSemanaNombre.SelectionLength = 0;
             this.txtSemanaNombre.SelectionStart = 0;
-            this.txtSemanaNombre.Size = new System.Drawing.Size(455, 41);
+            this.txtSemanaNombre.Size = new System.Drawing.Size(137, 23);
             this.txtSemanaNombre.TabIndex = 15;
             this.txtSemanaNombre.UseSystemPasswordChar = false;
             // 
@@ -585,9 +589,10 @@ namespace InterfazDATMA
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel14.Controls.Add(this.label2);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 3);
+            this.panel14.Location = new System.Drawing.Point(2, 2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(368, 143);
+            this.panel14.Size = new System.Drawing.Size(111, 36);
             this.panel14.TabIndex = 14;
             // 
             // tableLayoutPanel7
@@ -599,13 +604,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.968504F));
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 403);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 120);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1016, 194);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(316, 55);
             this.tableLayoutPanel7.TabIndex = 91;
             // 
             // tableLayoutPanel8
@@ -617,11 +623,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel10, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(53, 22);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(17, 7);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(939, 149);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(289, 40);
             this.tableLayoutPanel8.TabIndex = 79;
             // 
             // tableLayoutPanel10
@@ -632,23 +639,35 @@ namespace InterfazDATMA
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel10.Controls.Add(this.textBox1, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(423, 3);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(131, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(513, 143);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(156, 36);
             this.tableLayoutPanel10.TabIndex = 58;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(9, 16);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(136, 3);
+            this.textBox1.TabIndex = 95;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(369, 143);
+            this.panel2.Size = new System.Drawing.Size(111, 36);
             this.panel2.TabIndex = 14;
             // 
             // tableLayoutPanel15
@@ -660,11 +679,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel15.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.nDateTimeBoxControl2, 2, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(58, 22);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(19, 7);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(901, 149);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(278, 40);
             this.tableLayoutPanel15.TabIndex = 93;
             // 
             // panel4
@@ -672,9 +692,10 @@ namespace InterfazDATMA
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Location = new System.Drawing.Point(2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(366, 143);
+            this.panel4.Size = new System.Drawing.Size(110, 36);
             this.panel4.TabIndex = 14;
             // 
             // nDateTimeBoxControl2
@@ -682,9 +703,9 @@ namespace InterfazDATMA
             this.nDateTimeBoxControl2.AutoSize = false;
             this.nDateTimeBoxControl2.DesignTimeState = resources.GetString("nDateTimeBoxControl2.DesignTimeState");
             this.nDateTimeBoxControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nDateTimeBoxControl2.Location = new System.Drawing.Point(430, 3);
+            this.nDateTimeBoxControl2.Location = new System.Drawing.Point(133, 2);
             this.nDateTimeBoxControl2.Name = "nDateTimeBoxControl2";
-            this.nDateTimeBoxControl2.Size = new System.Drawing.Size(468, 143);
+            this.nDateTimeBoxControl2.Size = new System.Drawing.Size(143, 36);
             this.nDateTimeBoxControl2.TabIndex = 15;
             // 
             // tableLayoutPanel12
@@ -696,14 +717,15 @@ namespace InterfazDATMA
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.181347F));
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 1, 1);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 603);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(2, 179);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 3;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(1016, 194);
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(316, 55);
             this.tableLayoutPanel12.TabIndex = 94;
             // 
             // tableLayoutPanel14
@@ -714,14 +736,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel16, 0, 1);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 3;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.3125F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.6875F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.47917F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(1014, 192);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(316, 55);
             this.tableLayoutPanel14.TabIndex = 95;
             // 
             // tableLayoutPanel16
@@ -732,12 +754,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.66667F));
             this.tableLayoutPanel16.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(4, 43);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 13);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(600, 97);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(185, 26);
             this.tableLayoutPanel16.TabIndex = 1;
             // 
             // tableLayoutPanel17
@@ -752,7 +774,8 @@ namespace InterfazDATMA
             this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel38, 0, 1);
             this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 7;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -762,7 +785,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(1022, 1604);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(320, 474);
             this.tableLayoutPanel17.TabIndex = 96;
             // 
             // tableLayoutPanel2
@@ -775,29 +798,20 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel17, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(2570, 1610);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(810, 478);
             this.tableLayoutPanel2.TabIndex = 97;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(28, 60);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(455, 22);
-            this.textBox1.TabIndex = 95;
             // 
             // frmInsertarSemana
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2570, 1610);
+            this.ClientSize = new System.Drawing.Size(810, 478);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmInsertarSemana";
             this.Sizable = false;
             this.Text = "frmInsertarSemana";

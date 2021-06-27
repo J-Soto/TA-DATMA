@@ -29,6 +29,12 @@
   <message name="listarActividadesPorIdSemanaResponse">
     <part name="parameters" element="tns:listarActividadesPorIdSemanaResponse" />
   </message>
+  <message name="eliminarSemana">
+    <part name="parameters" element="tns:eliminarSemana" />
+  </message>
+  <message name="eliminarSemanaResponse">
+    <part name="parameters" element="tns:eliminarSemanaResponse" />
+  </message>
   <portType name="SemanaWS">
     <operation name="insertarSemana">
       <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/insertarSemanaRequest" message="tns:insertarSemana" />
@@ -45,6 +51,10 @@
     <operation name="listarActividadesPorIdSemana">
       <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarActividadesPorIdSemanaRequest" message="tns:listarActividadesPorIdSemana" />
       <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/listarActividadesPorIdSemanaResponse" message="tns:listarActividadesPorIdSemanaResponse" />
+    </operation>
+    <operation name="eliminarSemana">
+      <input wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/eliminarSemanaRequest" message="tns:eliminarSemana" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/SemanaWS/eliminarSemanaResponse" message="tns:eliminarSemanaResponse" />
     </operation>
   </portType>
   <binding name="SemanaWSPortBinding" type="tns:SemanaWS">
@@ -77,6 +87,15 @@
       </output>
     </operation>
     <operation name="listarActividadesPorIdSemana">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSemana">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

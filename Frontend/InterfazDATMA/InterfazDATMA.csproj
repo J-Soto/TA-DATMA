@@ -313,6 +313,12 @@
     <Compile Include="login\frmLogout.Designer.cs">
       <DependentUpon>frmLogout.cs</DependentUpon>
     </Compile>
+    <Compile Include="psicologo\frmInsertarDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psicologo\frmInsertarDocumento.Designer.cs">
+      <DependentUpon>frmInsertarDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="psicologo\frmAgregarVideoPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,6 +548,9 @@
     <EmbeddedResource Include="login\frmLogout.resx">
       <DependentUpon>frmLogout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="psicologo\frmInsertarDocumento.resx">
+      <DependentUpon>frmInsertarDocumento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmAgregarVideoPsicologo.resx">
       <DependentUpon>frmAgregarVideoPsicologo.cs</DependentUpon>
     </EmbeddedResource>
@@ -695,6 +704,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.eliminarCursoTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.eliminarRequerimientoResponse.datasource">
@@ -898,6 +910,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.actividad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.eliminarSemanaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.insertarSemanaResponse.datasource">
