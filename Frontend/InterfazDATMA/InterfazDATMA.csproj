@@ -296,6 +296,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="cuidador\%28copia%29 2_frmListaCursoInscritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuidador\%28copia%29 2_frmListaCursoInscritos.Designer.cs">
+      <DependentUpon>%28copia%29 2_frmListaCursoInscritos.cs</DependentUpon>
+    </Compile>
     <Compile Include="cuidador\FormAuxiliar-211.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,17 +358,17 @@
     </Compile>
     <Compile Include="MaterialResources\UIManagers\DrawHelper.cs" />
     <Compile Include="MaterialResources\UIManagers\FontManager.cs" />
-    <Compile Include="psicologo\frmInsertarDocumento.cs">
+    <Compile Include="psicologo\2132_frmInsertarDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmInsertarDocumento.Designer.cs">
-      <DependentUpon>frmInsertarDocumento.cs</DependentUpon>
+    <Compile Include="psicologo\2132_frmInsertarDocumento.Designer.cs">
+      <DependentUpon>2132_frmInsertarDocumento.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmAgregarVideoPsicologo.cs">
+    <Compile Include="psicologo\2131_frmAgregarVideoPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmAgregarVideoPsicologo.Designer.cs">
-      <DependentUpon>frmAgregarVideoPsicologo.cs</DependentUpon>
+    <Compile Include="psicologo\2131_frmAgregarVideoPsicologo.Designer.cs">
+      <DependentUpon>2131_frmAgregarVideoPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="psicologo\frmAgregarReunionPsicologo.cs">
       <SubType>Form</SubType>
@@ -370,11 +376,11 @@
     <Compile Include="psicologo\frmAgregarReunionPsicologo.Designer.cs">
       <DependentUpon>frmAgregarReunionPsicologo.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmConfigurarModuloPsicologo.cs">
+    <Compile Include="psicologo\2_frmConfigurarModuloPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmConfigurarModuloPsicologo.Designer.cs">
-      <DependentUpon>frmConfigurarModuloPsicologo.cs</DependentUpon>
+    <Compile Include="psicologo\2_frmConfigurarModuloPsicologo.Designer.cs">
+      <DependentUpon>2_frmConfigurarModuloPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="cuidador\3_frmCursosDisponibles.cs">
       <SubType>Form</SubType>
@@ -406,11 +412,11 @@
     <Compile Include="cuidador\212_frmDetalleCursoInscritoReunion.Designer.cs">
       <DependentUpon>212_frmDetalleCursoInscritoReunion.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmGestionarModulosPsicologo.cs">
+    <Compile Include="psicologo\1_frmGestionarModulosPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmGestionarModulosPsicologo.Designer.cs">
-      <DependentUpon>frmGestionarModulosPsicologo.cs</DependentUpon>
+    <Compile Include="psicologo\1_frmGestionarModulosPsicologo.Designer.cs">
+      <DependentUpon>1_frmGestionarModulosPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="cuidador\31_frmInformacionCurso.cs">
       <SubType>Form</SubType>
@@ -424,11 +430,11 @@
     <Compile Include="cuidador\4_frmInscripcionHecha.Designer.cs">
       <DependentUpon>4_frmInscripcionHecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmInsertarActividad.cs">
+    <Compile Include="psicologo\213_frmInsertarActividad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmInsertarActividad.designer.cs">
-      <DependentUpon>frmInsertarActividad.cs</DependentUpon>
+    <Compile Include="psicologo\213_frmInsertarActividad.designer.cs">
+      <DependentUpon>213_frmInsertarActividad.cs</DependentUpon>
     </Compile>
     <Compile Include="psicologo\frmInsertarSemana.cs">
       <SubType>Form</SubType>
@@ -436,11 +442,11 @@
     <Compile Include="psicologo\frmInsertarSemana.Designer.cs">
       <DependentUpon>frmInsertarSemana.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmListaCuidadoresDePsicologo.cs">
+    <Compile Include="psicologo\22_frmListaCuidadoresDePsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmListaCuidadoresDePsicologo.designer.cs">
-      <DependentUpon>frmListaCuidadoresDePsicologo.cs</DependentUpon>
+    <Compile Include="psicologo\22_frmListaCuidadoresDePsicologo.designer.cs">
+      <DependentUpon>22_frmListaCuidadoresDePsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="cuidador\2_frmListaCursoInscritos.cs">
       <SubType>Form</SubType>
@@ -460,17 +466,17 @@
     <Compile Include="cuidador\%28%29frmMenuUsuario.Designer.cs">
       <DependentUpon>%28%29frmMenuUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmModificarActividad.cs">
+    <Compile Include="psicologo\212_frmModificarActividad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmModificarActividad.designer.cs">
-      <DependentUpon>frmModificarActividad.cs</DependentUpon>
+    <Compile Include="psicologo\212_frmModificarActividad.designer.cs">
+      <DependentUpon>212_frmModificarActividad.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmModificarProgramaPsicologo.cs">
+    <Compile Include="psicologo\21_frmModificarProgramaPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmModificarProgramaPsicologo.Designer.cs">
-      <DependentUpon>frmModificarProgramaPsicologo.cs</DependentUpon>
+    <Compile Include="psicologo\21_frmModificarProgramaPsicologo.Designer.cs">
+      <DependentUpon>21_frmModificarProgramaPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="cuidador\22_frmNotificacionActiva.cs">
       <SubType>Form</SubType>
@@ -490,11 +496,11 @@
     <Compile Include="psicologo\frmPerfilPsicologo.Designer.cs">
       <DependentUpon>frmPerfilPsicologo.cs</DependentUpon>
     </Compile>
-    <Compile Include="psicologo\frmRegistrarAsistenciaCuidadores.cs">
+    <Compile Include="psicologo\211_frmRegistrarAsistenciaCuidadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="psicologo\frmRegistrarAsistenciaCuidadores.designer.cs">
-      <DependentUpon>frmRegistrarAsistenciaCuidadores.cs</DependentUpon>
+    <Compile Include="psicologo\211_frmRegistrarAsistenciaCuidadores.designer.cs">
+      <DependentUpon>211_frmRegistrarAsistenciaCuidadores.cs</DependentUpon>
     </Compile>
     <Compile Include="cuidador\221_frmSinCursosDisponibles.cs">
       <SubType>Form</SubType>
@@ -578,6 +584,9 @@
       <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="cuidador\%28copia%29 2_frmListaCursoInscritos.resx">
+      <DependentUpon>%28copia%29 2_frmListaCursoInscritos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cuidador\FormAuxiliar-211.resx">
       <DependentUpon>FormAuxiliar-211.cs</DependentUpon>
     </EmbeddedResource>
@@ -587,18 +596,18 @@
     <EmbeddedResource Include="login\frmLogout.resx">
       <DependentUpon>frmLogout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmInsertarDocumento.resx">
-      <DependentUpon>frmInsertarDocumento.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\2132_frmInsertarDocumento.resx">
+      <DependentUpon>2132_frmInsertarDocumento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmAgregarVideoPsicologo.resx">
-      <DependentUpon>frmAgregarVideoPsicologo.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\2131_frmAgregarVideoPsicologo.resx">
+      <DependentUpon>2131_frmAgregarVideoPsicologo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmAgregarReunionPsicologo.resx">
       <DependentUpon>frmAgregarReunionPsicologo.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmConfigurarModuloPsicologo.resx">
-      <DependentUpon>frmConfigurarModuloPsicologo.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\2_frmConfigurarModuloPsicologo.resx">
+      <DependentUpon>2_frmConfigurarModuloPsicologo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\3_frmCursosDisponibles.resx">
       <DependentUpon>3_frmCursosDisponibles.cs</DependentUpon>
@@ -615,8 +624,8 @@
     <EmbeddedResource Include="cuidador\212_frmDetalleCursoInscritoReunion.resx">
       <DependentUpon>212_frmDetalleCursoInscritoReunion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmGestionarModulosPsicologo.resx">
-      <DependentUpon>frmGestionarModulosPsicologo.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\1_frmGestionarModulosPsicologo.resx">
+      <DependentUpon>1_frmGestionarModulosPsicologo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\31_frmInformacionCurso.resx">
       <DependentUpon>31_frmInformacionCurso.cs</DependentUpon>
@@ -624,14 +633,14 @@
     <EmbeddedResource Include="cuidador\4_frmInscripcionHecha.resx">
       <DependentUpon>4_frmInscripcionHecha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmInsertarActividad.resx">
-      <DependentUpon>frmInsertarActividad.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\213_frmInsertarActividad.resx">
+      <DependentUpon>213_frmInsertarActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\frmInsertarSemana.resx">
       <DependentUpon>frmInsertarSemana.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmListaCuidadoresDePsicologo.resx">
-      <DependentUpon>frmListaCuidadoresDePsicologo.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\22_frmListaCuidadoresDePsicologo.resx">
+      <DependentUpon>22_frmListaCuidadoresDePsicologo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\2_frmListaCursoInscritos.resx">
       <DependentUpon>2_frmListaCursoInscritos.cs</DependentUpon>
@@ -642,11 +651,11 @@
     <EmbeddedResource Include="cuidador\%28%29frmMenuUsuario.resx">
       <DependentUpon>%28%29frmMenuUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmModificarActividad.resx">
-      <DependentUpon>frmModificarActividad.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\212_frmModificarActividad.resx">
+      <DependentUpon>212_frmModificarActividad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmModificarProgramaPsicologo.resx">
-      <DependentUpon>frmModificarProgramaPsicologo.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\21_frmModificarProgramaPsicologo.resx">
+      <DependentUpon>21_frmModificarProgramaPsicologo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\22_frmNotificacionActiva.resx">
       <DependentUpon>22_frmNotificacionActiva.cs</DependentUpon>
@@ -657,8 +666,8 @@
     <EmbeddedResource Include="psicologo\frmPerfilPsicologo.resx">
       <DependentUpon>frmPerfilPsicologo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="psicologo\frmRegistrarAsistenciaCuidadores.resx">
-      <DependentUpon>frmRegistrarAsistenciaCuidadores.cs</DependentUpon>
+    <EmbeddedResource Include="psicologo\211_frmRegistrarAsistenciaCuidadores.resx">
+      <DependentUpon>211_frmRegistrarAsistenciaCuidadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cuidador\221_frmSinCursosDisponibles.resx">
       <DependentUpon>221_frmSinCursosDisponibles.cs</DependentUpon>
