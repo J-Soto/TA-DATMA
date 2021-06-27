@@ -70,24 +70,27 @@ namespace InterfazDATMA.psicologo
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(54, 98);
+            this.label6.Location = new System.Drawing.Point(36, 64);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(381, 36);
+            this.label6.Size = new System.Drawing.Size(251, 25);
             this.label6.TabIndex = 22;
             this.label6.Text = "Informacion de la Actividad:";
             // 
             // txtLinkZomm
             // 
-            this.txtLinkZomm.Location = new System.Drawing.Point(252, 332);
+            this.txtLinkZomm.Location = new System.Drawing.Point(168, 216);
+            this.txtLinkZomm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLinkZomm.Name = "txtLinkZomm";
-            this.txtLinkZomm.Size = new System.Drawing.Size(452, 26);
+            this.txtLinkZomm.Size = new System.Drawing.Size(303, 20);
             this.txtLinkZomm.TabIndex = 32;
             // 
             // dtpHFin
             // 
-            this.dtpHFin.Location = new System.Drawing.Point(252, 290);
+            this.dtpHFin.Location = new System.Drawing.Point(168, 188);
+            this.dtpHFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpHFin.Name = "dtpHFin";
-            this.dtpHFin.Size = new System.Drawing.Size(162, 26);
+            this.dtpHFin.Size = new System.Drawing.Size(109, 20);
             this.dtpHFin.TabIndex = 31;
             // 
             // label5
@@ -95,9 +98,10 @@ namespace InterfazDATMA.psicologo
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(167, 328);
+            this.label5.Location = new System.Drawing.Point(111, 213);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 29);
+            this.label5.Size = new System.Drawing.Size(42, 20);
             this.label5.TabIndex = 30;
             this.label5.Text = "Link:";
             // 
@@ -106,17 +110,19 @@ namespace InterfazDATMA.psicologo
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(85, 287);
+            this.label4.Location = new System.Drawing.Point(57, 187);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 29);
+            this.label4.Size = new System.Drawing.Size(96, 20);
             this.label4.TabIndex = 29;
             this.label4.Text = "Hora de Fin:";
             // 
             // dtpHInicio
             // 
-            this.dtpHInicio.Location = new System.Drawing.Point(252, 245);
+            this.dtpHInicio.Location = new System.Drawing.Point(168, 159);
+            this.dtpHInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpHInicio.Name = "dtpHInicio";
-            this.dtpHInicio.Size = new System.Drawing.Size(162, 26);
+            this.dtpHInicio.Size = new System.Drawing.Size(109, 20);
             this.dtpHInicio.TabIndex = 28;
             // 
             // label3
@@ -124,9 +130,10 @@ namespace InterfazDATMA.psicologo
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(62, 242);
+            this.label3.Location = new System.Drawing.Point(41, 157);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 29);
+            this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 27;
             this.label3.Text = "Hora de Inicio:";
             // 
@@ -135,9 +142,10 @@ namespace InterfazDATMA.psicologo
             this.dtpFechaReunion.CalendarMonthBackground = System.Drawing.SystemColors.MenuHighlight;
             this.dtpFechaReunion.CustomFormat = "\"dd/MM/yyyy\"";
             this.dtpFechaReunion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaReunion.Location = new System.Drawing.Point(252, 203);
+            this.dtpFechaReunion.Location = new System.Drawing.Point(168, 132);
+            this.dtpFechaReunion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaReunion.Name = "dtpFechaReunion";
-            this.dtpFechaReunion.Size = new System.Drawing.Size(209, 26);
+            this.dtpFechaReunion.Size = new System.Drawing.Size(141, 20);
             this.dtpFechaReunion.TabIndex = 26;
             // 
             // label2
@@ -145,9 +153,10 @@ namespace InterfazDATMA.psicologo
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(123, 156);
+            this.label2.Location = new System.Drawing.Point(82, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 29);
+            this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nombre:";
             // 
@@ -156,17 +165,19 @@ namespace InterfazDATMA.psicologo
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(144, 200);
+            this.label1.Location = new System.Drawing.Point(96, 130);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 29);
+            this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 24;
             this.label1.Text = "Fecha:";
             // 
             // txtNombreAct
             // 
-            this.txtNombreAct.Location = new System.Drawing.Point(252, 160);
+            this.txtNombreAct.Location = new System.Drawing.Point(168, 104);
+            this.txtNombreAct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreAct.Name = "txtNombreAct";
-            this.txtNombreAct.Size = new System.Drawing.Size(452, 26);
+            this.txtNombreAct.Size = new System.Drawing.Size(303, 20);
             this.txtNombreAct.TabIndex = 23;
             // 
             // dgvVideos
@@ -188,7 +199,8 @@ namespace InterfazDATMA.psicologo
             this.Link});
             this.dgvVideos.EnableHeadersVisualStyles = false;
             this.dgvVideos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvVideos.Location = new System.Drawing.Point(679, 528);
+            this.dgvVideos.Location = new System.Drawing.Point(453, 343);
+            this.dgvVideos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvVideos.Name = "dgvVideos";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -206,7 +218,7 @@ namespace InterfazDATMA.psicologo
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvVideos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVideos.RowTemplate.Height = 28;
-            this.dgvVideos.Size = new System.Drawing.Size(470, 270);
+            this.dgvVideos.Size = new System.Drawing.Size(313, 175);
             this.dgvVideos.TabIndex = 37;
             // 
             // dataGridViewTextBoxColumn2
@@ -244,7 +256,8 @@ namespace InterfazDATMA.psicologo
             this.dataGridViewButtonColumn1});
             this.dgvDocumentos.EnableHeadersVisualStyles = false;
             this.dgvDocumentos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvDocumentos.Location = new System.Drawing.Point(105, 528);
+            this.dgvDocumentos.Location = new System.Drawing.Point(70, 343);
+            this.dgvDocumentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDocumentos.Name = "dgvDocumentos";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -262,7 +275,7 @@ namespace InterfazDATMA.psicologo
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             this.dgvDocumentos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDocumentos.RowTemplate.Height = 28;
-            this.dgvDocumentos.Size = new System.Drawing.Size(467, 270);
+            this.dgvDocumentos.Size = new System.Drawing.Size(311, 175);
             this.dgvDocumentos.TabIndex = 36;
             // 
             // dataGridViewTextBoxColumn1
@@ -286,9 +299,10 @@ namespace InterfazDATMA.psicologo
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(674, 481);
+            this.label9.Location = new System.Drawing.Point(449, 313);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 29);
+            this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 35;
             this.label9.Text = "Videos:";
             // 
@@ -297,9 +311,10 @@ namespace InterfazDATMA.psicologo
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(100, 481);
+            this.label8.Location = new System.Drawing.Point(67, 313);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 29);
+            this.label8.Size = new System.Drawing.Size(104, 20);
             this.label8.TabIndex = 34;
             this.label8.Text = "Documentos:";
             // 
@@ -308,9 +323,10 @@ namespace InterfazDATMA.psicologo
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(71, 415);
+            this.label7.Location = new System.Drawing.Point(47, 270);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 36);
+            this.label7.Size = new System.Drawing.Size(108, 25);
             this.label7.TabIndex = 33;
             this.label7.Text = "Materiales:";
             // 
@@ -319,12 +335,12 @@ namespace InterfazDATMA.psicologo
             this.btnEliminarVid.AutoSize = true;
             this.btnEliminarVid.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminarVid.Depth = 0;
-            this.btnEliminarVid.Location = new System.Drawing.Point(1168, 584);
-            this.btnEliminarVid.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnEliminarVid.Location = new System.Drawing.Point(779, 380);
+            this.btnEliminarVid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEliminarVid.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminarVid.Name = "btnEliminarVid";
             this.btnEliminarVid.Primary = false;
-            this.btnEliminarVid.Size = new System.Drawing.Size(21, 36);
+            this.btnEliminarVid.Size = new System.Drawing.Size(16, 36);
             this.btnEliminarVid.TabIndex = 41;
             this.btnEliminarVid.Text = "-";
             this.btnEliminarVid.UseVisualStyleBackColor = true;
@@ -334,12 +350,12 @@ namespace InterfazDATMA.psicologo
             this.btnAgregarVid.AutoSize = true;
             this.btnAgregarVid.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregarVid.Depth = 0;
-            this.btnAgregarVid.Location = new System.Drawing.Point(1168, 528);
-            this.btnAgregarVid.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnAgregarVid.Location = new System.Drawing.Point(779, 343);
+            this.btnAgregarVid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAgregarVid.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregarVid.Name = "btnAgregarVid";
             this.btnAgregarVid.Primary = false;
-            this.btnAgregarVid.Size = new System.Drawing.Size(26, 36);
+            this.btnAgregarVid.Size = new System.Drawing.Size(20, 36);
             this.btnAgregarVid.TabIndex = 40;
             this.btnAgregarVid.Text = "+";
             this.btnAgregarVid.UseVisualStyleBackColor = true;
@@ -349,12 +365,12 @@ namespace InterfazDATMA.psicologo
             this.btnEliminarDoc.AutoSize = true;
             this.btnEliminarDoc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminarDoc.Depth = 0;
-            this.btnEliminarDoc.Location = new System.Drawing.Point(600, 574);
-            this.btnEliminarDoc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnEliminarDoc.Location = new System.Drawing.Point(400, 373);
+            this.btnEliminarDoc.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEliminarDoc.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminarDoc.Name = "btnEliminarDoc";
             this.btnEliminarDoc.Primary = false;
-            this.btnEliminarDoc.Size = new System.Drawing.Size(21, 36);
+            this.btnEliminarDoc.Size = new System.Drawing.Size(16, 36);
             this.btnEliminarDoc.TabIndex = 39;
             this.btnEliminarDoc.Text = "-";
             this.btnEliminarDoc.UseVisualStyleBackColor = true;
@@ -364,12 +380,12 @@ namespace InterfazDATMA.psicologo
             this.btnAgregarDoc.AutoSize = true;
             this.btnAgregarDoc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregarDoc.Depth = 0;
-            this.btnAgregarDoc.Location = new System.Drawing.Point(600, 528);
-            this.btnAgregarDoc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnAgregarDoc.Location = new System.Drawing.Point(400, 343);
+            this.btnAgregarDoc.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAgregarDoc.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregarDoc.Name = "btnAgregarDoc";
             this.btnAgregarDoc.Primary = false;
-            this.btnAgregarDoc.Size = new System.Drawing.Size(26, 36);
+            this.btnAgregarDoc.Size = new System.Drawing.Size(20, 36);
             this.btnAgregarDoc.TabIndex = 38;
             this.btnAgregarDoc.Text = "+";
             this.btnAgregarDoc.UseVisualStyleBackColor = true;
@@ -379,12 +395,12 @@ namespace InterfazDATMA.psicologo
             this.btnGuardar.AutoSize = true;
             this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGuardar.Depth = 0;
-            this.btnGuardar.Location = new System.Drawing.Point(1196, 776);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(797, 504);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Primary = false;
-            this.btnGuardar.Size = new System.Drawing.Size(108, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 36);
             this.btnGuardar.TabIndex = 42;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -394,12 +410,12 @@ namespace InterfazDATMA.psicologo
             this.btnRegresar.AutoSize = true;
             this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRegresar.Depth = 0;
-            this.btnRegresar.Location = new System.Drawing.Point(1196, 831);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnRegresar.Location = new System.Drawing.Point(797, 540);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Primary = false;
-            this.btnRegresar.Size = new System.Drawing.Size(116, 36);
+            this.btnRegresar.Size = new System.Drawing.Size(80, 36);
             this.btnRegresar.TabIndex = 43;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
@@ -407,10 +423,10 @@ namespace InterfazDATMA.psicologo
             // 
             // frmModificarActividad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1386, 879);
+            this.ClientSize = new System.Drawing.Size(1008, 619);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminarVid);
@@ -433,6 +449,7 @@ namespace InterfazDATMA.psicologo
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombreAct);
             this.Controls.Add(this.label6);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmModificarActividad";
             this.Text = "ModificarActividad";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideos)).EndInit();

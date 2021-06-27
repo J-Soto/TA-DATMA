@@ -175,6 +175,16 @@ namespace InterfazDATMA.CursoWS {
         System.Threading.Tasks.Task<InterfazDATMA.CursoWS.listarCursosResponse> listarCursosAsync(InterfazDATMA.CursoWS.listarCursosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoRequest", ReplyAction="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse eliminarPsicologoCurso(InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoRequest", ReplyAction="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse> eliminarPsicologoCursoAsync(InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosDisponiblesRequest", ReplyAction="http://services.datmasoft.datma.pe/CursoWS/listarCursosDisponiblesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -1852,13 +1862,13 @@ namespace InterfazDATMA.CursoWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public InterfazDATMA.CursoWS.curso arg0;
+        public InterfazDATMA.CursoWS.curso curso;
         
         public insertarCursoRequest() {
         }
         
-        public insertarCursoRequest(InterfazDATMA.CursoWS.curso arg0) {
-            this.arg0 = arg0;
+        public insertarCursoRequest(InterfazDATMA.CursoWS.curso curso) {
+            this.curso = curso;
         }
     }
     
@@ -1924,13 +1934,13 @@ namespace InterfazDATMA.CursoWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public InterfazDATMA.CursoWS.curso arg0;
+        public InterfazDATMA.CursoWS.curso curso;
         
         public modificarCursoRequest() {
         }
         
-        public modificarCursoRequest(InterfazDATMA.CursoWS.curso arg0) {
-            this.arg0 = arg0;
+        public modificarCursoRequest(InterfazDATMA.CursoWS.curso curso) {
+            this.curso = curso;
         }
     }
     
@@ -1976,6 +1986,47 @@ namespace InterfazDATMA.CursoWS {
         }
         
         public listarCursosResponse(InterfazDATMA.CursoWS.curso[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPsicologoCurso", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarPsicologoCursoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPsi;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCurso;
+        
+        public eliminarPsicologoCursoRequest() {
+        }
+        
+        public eliminarPsicologoCursoRequest(int idPsi, int idCurso) {
+            this.idPsi = idPsi;
+            this.idCurso = idCurso;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPsicologoCursoResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class eliminarPsicologoCursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPsicologoCursoResponse() {
+        }
+        
+        public eliminarPsicologoCursoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2420,9 +2471,9 @@ namespace InterfazDATMA.CursoWS {
             return base.Channel.insertarCurso(request);
         }
         
-        public int insertarCurso(InterfazDATMA.CursoWS.curso arg0) {
+        public int insertarCurso(InterfazDATMA.CursoWS.curso curso) {
             InterfazDATMA.CursoWS.insertarCursoRequest inValue = new InterfazDATMA.CursoWS.insertarCursoRequest();
-            inValue.arg0 = arg0;
+            inValue.curso = curso;
             InterfazDATMA.CursoWS.insertarCursoResponse retVal = ((InterfazDATMA.CursoWS.CursoWS)(this)).insertarCurso(inValue);
             return retVal.@return;
         }
@@ -2432,9 +2483,9 @@ namespace InterfazDATMA.CursoWS {
             return base.Channel.insertarCursoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.CursoWS.insertarCursoResponse> insertarCursoAsync(InterfazDATMA.CursoWS.curso arg0) {
+        public System.Threading.Tasks.Task<InterfazDATMA.CursoWS.insertarCursoResponse> insertarCursoAsync(InterfazDATMA.CursoWS.curso curso) {
             InterfazDATMA.CursoWS.insertarCursoRequest inValue = new InterfazDATMA.CursoWS.insertarCursoRequest();
-            inValue.arg0 = arg0;
+            inValue.curso = curso;
             return ((InterfazDATMA.CursoWS.CursoWS)(this)).insertarCursoAsync(inValue);
         }
         
@@ -2466,9 +2517,9 @@ namespace InterfazDATMA.CursoWS {
             return base.Channel.modificarCurso(request);
         }
         
-        public int modificarCurso(InterfazDATMA.CursoWS.curso arg0) {
+        public int modificarCurso(InterfazDATMA.CursoWS.curso curso) {
             InterfazDATMA.CursoWS.modificarCursoRequest inValue = new InterfazDATMA.CursoWS.modificarCursoRequest();
-            inValue.arg0 = arg0;
+            inValue.curso = curso;
             InterfazDATMA.CursoWS.modificarCursoResponse retVal = ((InterfazDATMA.CursoWS.CursoWS)(this)).modificarCurso(inValue);
             return retVal.@return;
         }
@@ -2478,9 +2529,9 @@ namespace InterfazDATMA.CursoWS {
             return base.Channel.modificarCursoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.CursoWS.modificarCursoResponse> modificarCursoAsync(InterfazDATMA.CursoWS.curso arg0) {
+        public System.Threading.Tasks.Task<InterfazDATMA.CursoWS.modificarCursoResponse> modificarCursoAsync(InterfazDATMA.CursoWS.curso curso) {
             InterfazDATMA.CursoWS.modificarCursoRequest inValue = new InterfazDATMA.CursoWS.modificarCursoRequest();
-            inValue.arg0 = arg0;
+            inValue.curso = curso;
             return ((InterfazDATMA.CursoWS.CursoWS)(this)).modificarCursoAsync(inValue);
         }
         
@@ -2503,6 +2554,31 @@ namespace InterfazDATMA.CursoWS {
         public System.Threading.Tasks.Task<InterfazDATMA.CursoWS.listarCursosResponse> listarCursosAsync() {
             InterfazDATMA.CursoWS.listarCursosRequest inValue = new InterfazDATMA.CursoWS.listarCursosRequest();
             return ((InterfazDATMA.CursoWS.CursoWS)(this)).listarCursosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse InterfazDATMA.CursoWS.CursoWS.eliminarPsicologoCurso(InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest request) {
+            return base.Channel.eliminarPsicologoCurso(request);
+        }
+        
+        public int eliminarPsicologoCurso(int idPsi, int idCurso) {
+            InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest inValue = new InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest();
+            inValue.idPsi = idPsi;
+            inValue.idCurso = idCurso;
+            InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse retVal = ((InterfazDATMA.CursoWS.CursoWS)(this)).eliminarPsicologoCurso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse> InterfazDATMA.CursoWS.CursoWS.eliminarPsicologoCursoAsync(InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest request) {
+            return base.Channel.eliminarPsicologoCursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse> eliminarPsicologoCursoAsync(int idPsi, int idCurso) {
+            InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest inValue = new InterfazDATMA.CursoWS.eliminarPsicologoCursoRequest();
+            inValue.idPsi = idPsi;
+            inValue.idCurso = idCurso;
+            return ((InterfazDATMA.CursoWS.CursoWS)(this)).eliminarPsicologoCursoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

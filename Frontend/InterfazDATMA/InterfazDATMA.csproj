@@ -697,6 +697,9 @@
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.eliminarCursoTemaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.eliminarPsicologoCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.eliminarRequerimientoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -898,6 +901,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.actividad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.eliminarSemanaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.insertarSemanaResponse.datasource">
