@@ -224,7 +224,7 @@ namespace InterfazDATMA.psicologo
             this.picPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picPerfil.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
             this.picPerfil.Location = new System.Drawing.Point(39, 39);
-            this.picPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.picPerfil.Name = "picPerfil";
             this.picPerfil.Size = new System.Drawing.Size(633, 276);
             this.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -353,7 +353,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel42.Controls.Add(this.tableLayoutPanel16, 1, 0);
             this.tableLayoutPanel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel42.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel42.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel42.Name = "tableLayoutPanel42";
             this.tableLayoutPanel42.RowCount = 1;
             this.tableLayoutPanel42.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -378,7 +378,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel14, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -399,7 +399,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel15.Controls.Add(this.panel3, 1, 1);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(4, 732);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 3;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
@@ -414,7 +414,7 @@ namespace InterfazDATMA.psicologo
             this.panel3.Controls.Add(this.Cursos);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(189, 53);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(280, 70);
             this.panel3.TabIndex = 0;
@@ -428,7 +428,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 641);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -446,7 +446,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(4, 550);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 3;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -465,7 +465,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 459);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -484,7 +484,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel5.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(39, 12);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -500,7 +500,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel6.Controls.Add(this.txtPass, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(320, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -516,7 +516,7 @@ namespace InterfazDATMA.psicologo
             this.txtPass.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPass.Hint = "";
             this.txtPass.Location = new System.Drawing.Point(19, 24);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '\0';
@@ -533,7 +533,7 @@ namespace InterfazDATMA.psicologo
             this.panel6.Controls.Add(this.Contrasena);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(4, 4);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(245, 50);
             this.panel6.TabIndex = 14;
@@ -548,7 +548,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel3, 1, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(4, 368);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 3;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -567,7 +567,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(39, 12);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -583,7 +583,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel1.Controls.Add(this.txtUser, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(320, 4);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -599,7 +599,7 @@ namespace InterfazDATMA.psicologo
             this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUser.Hint = "";
             this.txtUser.Location = new System.Drawing.Point(19, 24);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
@@ -616,7 +616,7 @@ namespace InterfazDATMA.psicologo
             this.panel7.Controls.Add(this.Usuario);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(4, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(245, 50);
             this.panel7.TabIndex = 14;
@@ -631,7 +631,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel14.Controls.Add(this.picPerfil, 1, 1);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel14.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 3;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -656,7 +656,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel26, 0, 5);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel16.Location = new System.Drawing.Point(733, 4);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 9;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -681,7 +681,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel18, 1, 1);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(4, 812);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 3;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -700,7 +700,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel18.Controls.Add(this.panel8, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -716,7 +716,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel19.Controls.Add(this.txtFecha, 1, 1);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 3;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -732,7 +732,7 @@ namespace InterfazDATMA.psicologo
             this.txtFecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtFecha.Hint = "";
             this.txtFecha.Location = new System.Drawing.Point(23, 28);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.PasswordChar = '\0';
@@ -749,7 +749,7 @@ namespace InterfazDATMA.psicologo
             this.panel8.Controls.Add(this.FechaNacimiento);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(4, 4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(303, 60);
             this.panel8.TabIndex = 14;
@@ -764,7 +764,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 1, 1);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel20.Location = new System.Drawing.Point(4, 711);
-            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 3;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -783,7 +783,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel21.Controls.Add(this.panel9, 0, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel21.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -799,7 +799,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel22.Controls.Add(this.txtCel, 1, 1);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel22.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 3;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -815,7 +815,7 @@ namespace InterfazDATMA.psicologo
             this.txtCel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCel.Hint = "";
             this.txtCel.Location = new System.Drawing.Point(23, 27);
-            this.txtCel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCel.Margin = new System.Windows.Forms.Padding(4);
             this.txtCel.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtCel.Name = "txtCel";
             this.txtCel.PasswordChar = '\0';
@@ -832,7 +832,7 @@ namespace InterfazDATMA.psicologo
             this.panel9.Controls.Add(this.Celular);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(4, 4);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(303, 58);
             this.panel9.TabIndex = 14;
@@ -847,7 +847,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 1, 1);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel23.Location = new System.Drawing.Point(4, 610);
-            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 3;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -866,7 +866,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel24.Controls.Add(this.panel10, 0, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -882,7 +882,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel25.Controls.Add(this.txtTelef, 1, 1);
             this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel25.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 3;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -898,7 +898,7 @@ namespace InterfazDATMA.psicologo
             this.txtTelef.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTelef.Hint = "";
             this.txtTelef.Location = new System.Drawing.Point(23, 27);
-            this.txtTelef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelef.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelef.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtTelef.Name = "txtTelef";
             this.txtTelef.PasswordChar = '\0';
@@ -915,7 +915,7 @@ namespace InterfazDATMA.psicologo
             this.panel10.Controls.Add(this.Telefono);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(4, 4);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(303, 58);
             this.panel10.TabIndex = 14;
@@ -930,7 +930,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel35.Controls.Add(this.tableLayoutPanel36, 1, 1);
             this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel35.Location = new System.Drawing.Point(4, 206);
-            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 3;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -949,7 +949,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel36.Controls.Add(this.panel13, 0, 0);
             this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel36.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel36.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel36.Name = "tableLayoutPanel36";
             this.tableLayoutPanel36.RowCount = 1;
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -965,7 +965,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel37.Controls.Add(this.txtDNI, 1, 1);
             this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel37.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel37.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel37.Name = "tableLayoutPanel37";
             this.tableLayoutPanel37.RowCount = 3;
             this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -981,7 +981,7 @@ namespace InterfazDATMA.psicologo
             this.txtDNI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDNI.Hint = "";
             this.txtDNI.Location = new System.Drawing.Point(23, 27);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.PasswordChar = '\0';
@@ -998,7 +998,7 @@ namespace InterfazDATMA.psicologo
             this.panel13.Controls.Add(this.dni);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(4, 4);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(303, 58);
             this.panel13.TabIndex = 14;
@@ -1022,7 +1022,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel41.Controls.Add(this.panel18, 1, 0);
             this.tableLayoutPanel41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel41.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel41.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel41.Name = "tableLayoutPanel41";
             this.tableLayoutPanel41.RowCount = 1;
             this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1035,7 +1035,7 @@ namespace InterfazDATMA.psicologo
             this.panel15.Controls.Add(this.txtPermiso);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(690, 4);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(133, 85);
             this.panel15.TabIndex = 34;
@@ -1046,7 +1046,7 @@ namespace InterfazDATMA.psicologo
             this.panel16.Controls.Add(this.txtPeriodo);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(273, 4);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(107, 85);
             this.panel16.TabIndex = 35;
@@ -1071,7 +1071,7 @@ namespace InterfazDATMA.psicologo
             this.panel17.Controls.Add(this.Permisos);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(470, 4);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(177, 85);
             this.panel17.TabIndex = 33;
@@ -1096,7 +1096,7 @@ namespace InterfazDATMA.psicologo
             this.panel18.Controls.Add(this.Periodo);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(45, 4);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(188, 85);
             this.panel18.TabIndex = 32;
@@ -1125,7 +1125,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel38.Controls.Add(this.tableLayoutPanel39, 1, 1);
             this.tableLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel38.Location = new System.Drawing.Point(4, 105);
-            this.tableLayoutPanel38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel38.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel38.Name = "tableLayoutPanel38";
             this.tableLayoutPanel38.RowCount = 3;
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -1144,7 +1144,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel39.Controls.Add(this.panel14, 0, 0);
             this.tableLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel39.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel39.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel39.Name = "tableLayoutPanel39";
             this.tableLayoutPanel39.RowCount = 1;
             this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1160,7 +1160,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel40.Controls.Add(this.txtNombre, 1, 1);
             this.tableLayoutPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel40.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel40.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel40.Name = "tableLayoutPanel40";
             this.tableLayoutPanel40.RowCount = 3;
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -1176,7 +1176,7 @@ namespace InterfazDATMA.psicologo
             this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombre.Hint = "";
             this.txtNombre.Location = new System.Drawing.Point(23, 27);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
@@ -1193,7 +1193,7 @@ namespace InterfazDATMA.psicologo
             this.panel14.Controls.Add(this.Nombre);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(4, 4);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(303, 58);
             this.panel14.TabIndex = 14;
@@ -1208,7 +1208,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 1, 1);
             this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel32.Location = new System.Drawing.Point(4, 307);
-            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 3;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -1227,7 +1227,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel33.Controls.Add(this.panel12, 0, 0);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel33.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel33.Name = "tableLayoutPanel33";
             this.tableLayoutPanel33.RowCount = 1;
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1243,7 +1243,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel34.Controls.Add(this.txtEdad, 1, 1);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel34.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 3;
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -1259,7 +1259,7 @@ namespace InterfazDATMA.psicologo
             this.txtEdad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEdad.Hint = "";
             this.txtEdad.Location = new System.Drawing.Point(23, 27);
-            this.txtEdad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEdad.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.PasswordChar = '\0';
@@ -1276,7 +1276,7 @@ namespace InterfazDATMA.psicologo
             this.panel12.Controls.Add(this.Edad);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(4, 4);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(303, 58);
             this.panel12.TabIndex = 14;
@@ -1291,7 +1291,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel29.Controls.Add(this.tableLayoutPanel30, 1, 1);
             this.tableLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel29.Location = new System.Drawing.Point(4, 408);
-            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel29.Name = "tableLayoutPanel29";
             this.tableLayoutPanel29.RowCount = 3;
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -1310,7 +1310,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel30.Controls.Add(this.panel11, 0, 0);
             this.tableLayoutPanel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel30.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel30.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel30.Name = "tableLayoutPanel30";
             this.tableLayoutPanel30.RowCount = 1;
             this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1326,7 +1326,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel31.Controls.Add(this.txtGen, 1, 1);
             this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel31.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 3;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -1342,7 +1342,7 @@ namespace InterfazDATMA.psicologo
             this.txtGen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtGen.Hint = "";
             this.txtGen.Location = new System.Drawing.Point(23, 27);
-            this.txtGen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGen.Margin = new System.Windows.Forms.Padding(4);
             this.txtGen.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtGen.Name = "txtGen";
             this.txtGen.PasswordChar = '\0';
@@ -1359,7 +1359,7 @@ namespace InterfazDATMA.psicologo
             this.panel11.Controls.Add(this.Genero);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(4, 4);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(303, 58);
             this.panel11.TabIndex = 14;
@@ -1374,7 +1374,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel26.Controls.Add(this.tableLayoutPanel27, 1, 1);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel26.Location = new System.Drawing.Point(4, 509);
-            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 3;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -1393,7 +1393,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel27.Controls.Add(this.panel19, 0, 0);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel27.Location = new System.Drawing.Point(47, 13);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 1;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1409,7 +1409,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel28.Controls.Add(this.txtCorreo, 1, 1);
             this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel28.Location = new System.Drawing.Point(392, 4);
-            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel28.Name = "tableLayoutPanel28";
             this.tableLayoutPanel28.RowCount = 3;
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -1425,7 +1425,7 @@ namespace InterfazDATMA.psicologo
             this.txtCorreo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCorreo.Hint = "";
             this.txtCorreo.Location = new System.Drawing.Point(23, 27);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
@@ -1442,7 +1442,7 @@ namespace InterfazDATMA.psicologo
             this.panel19.Controls.Add(this.Correo);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel19.Location = new System.Drawing.Point(4, 4);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(303, 58);
             this.panel19.TabIndex = 14;
@@ -1455,7 +1455,7 @@ namespace InterfazDATMA.psicologo
             this.ClientSize = new System.Drawing.Size(1620, 919);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel42);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPerfilPsicologo";
             this.Sizable = false;
             this.Text = "frmPerfilPsicologo";

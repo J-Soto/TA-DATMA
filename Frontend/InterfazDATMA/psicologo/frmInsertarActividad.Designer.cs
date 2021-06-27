@@ -154,7 +154,7 @@ namespace InterfazDATMA.psicologo
             // 
             this.txtNombreAct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombreAct.Location = new System.Drawing.Point(37, 65);
-            this.txtNombreAct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreAct.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreAct.Name = "txtNombreAct";
             this.txtNombreAct.Size = new System.Drawing.Size(614, 31);
             this.txtNombreAct.TabIndex = 4;
@@ -194,7 +194,7 @@ namespace InterfazDATMA.psicologo
             this.dtpFechaReunion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaReunion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaReunion.Location = new System.Drawing.Point(37, 55);
-            this.dtpFechaReunion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaReunion.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaReunion.Name = "dtpFechaReunion";
             this.dtpFechaReunion.Size = new System.Drawing.Size(613, 31);
             this.dtpFechaReunion.TabIndex = 11;
@@ -217,7 +217,7 @@ namespace InterfazDATMA.psicologo
             // 
             this.dtpHInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpHInicio.Location = new System.Drawing.Point(34, 66);
-            this.dtpHInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpHInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHInicio.Name = "dtpHInicio";
             this.dtpHInicio.Size = new System.Drawing.Size(565, 31);
             this.dtpHInicio.TabIndex = 16;
@@ -254,7 +254,7 @@ namespace InterfazDATMA.psicologo
             // 
             this.dtpHFin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpHFin.Location = new System.Drawing.Point(34, 55);
-            this.dtpHFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpHFin.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHFin.Name = "dtpHFin";
             this.dtpHFin.Size = new System.Drawing.Size(562, 31);
             this.dtpHFin.TabIndex = 19;
@@ -263,7 +263,7 @@ namespace InterfazDATMA.psicologo
             // 
             this.txtLinkZoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtLinkZoom.Location = new System.Drawing.Point(34, 34);
-            this.txtLinkZoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLinkZoom.Margin = new System.Windows.Forms.Padding(4);
             this.txtLinkZoom.Name = "txtLinkZoom";
             this.txtLinkZoom.Size = new System.Drawing.Size(563, 31);
             this.txtLinkZoom.TabIndex = 20;
@@ -346,7 +346,7 @@ namespace InterfazDATMA.psicologo
             this.dgvDocumentos.EnableHeadersVisualStyles = false;
             this.dgvDocumentos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvDocumentos.Location = new System.Drawing.Point(68, 28);
-            this.dgvDocumentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDocumentos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDocumentos.Name = "dgvDocumentos";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -407,7 +407,7 @@ namespace InterfazDATMA.psicologo
             this.dgvVideos.EnableHeadersVisualStyles = false;
             this.dgvVideos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvVideos.Location = new System.Drawing.Point(58, 28);
-            this.dgvVideos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvVideos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVideos.Name = "dgvVideos";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -952,7 +952,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1007, 28);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -970,7 +970,7 @@ namespace InterfazDATMA.psicologo
             this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(4, 262);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(163, 78);
             this.panel7.TabIndex = 13;
@@ -982,7 +982,7 @@ namespace InterfazDATMA.psicologo
             this.panel6.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(4, 90);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(163, 78);
             this.panel6.TabIndex = 14;
@@ -1015,7 +1015,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel3.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(1008, 28);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1033,7 +1033,7 @@ namespace InterfazDATMA.psicologo
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(4, 262);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 78);
             this.panel1.TabIndex = 13;
@@ -1045,7 +1045,7 @@ namespace InterfazDATMA.psicologo
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(4, 90);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(163, 78);
             this.panel2.TabIndex = 14;
@@ -1247,7 +1247,7 @@ namespace InterfazDATMA.psicologo
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(2371, 1646);
             this.Controls.Add(this.tableLayoutPanel19);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInsertarActividad";
             this.Text = "InsertarActividad";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocumentos)).EndInit();
