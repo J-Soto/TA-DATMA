@@ -36,6 +36,7 @@ namespace InterfazDATMA.psicologo
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.ofdBuscarDoc = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label2
@@ -58,12 +59,13 @@ namespace InterfazDATMA.psicologo
             // 
             // btnSubirArchivo
             // 
-            this.btnSubirArchivo.Location = new System.Drawing.Point(736, 89);
+            this.btnSubirArchivo.Location = new System.Drawing.Point(729, 88);
             this.btnSubirArchivo.Name = "btnSubirArchivo";
-            this.btnSubirArchivo.Size = new System.Drawing.Size(98, 27);
+            this.btnSubirArchivo.Size = new System.Drawing.Size(98, 35);
             this.btnSubirArchivo.TabIndex = 12;
             this.btnSubirArchivo.Text = "...";
             this.btnSubirArchivo.UseVisualStyleBackColor = true;
+            this.btnSubirArchivo.Click += new System.EventHandler(this.btnSubirArchivo_Click);
             // 
             // label1
             // 
@@ -92,6 +94,7 @@ namespace InterfazDATMA.psicologo
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -101,6 +104,11 @@ namespace InterfazDATMA.psicologo
             this.btnGuardar.TabIndex = 16;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // ofdBuscarDoc
+            // 
+            this.ofdBuscarDoc.FileName = "openFileDialog1";
             // 
             // frmInsertarDocumento
             // 
@@ -131,5 +139,6 @@ namespace InterfazDATMA.psicologo
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.OpenFileDialog ofdBuscarDoc;
     }
 }
