@@ -110,7 +110,6 @@ namespace InterfazDATMA.plantilla
 
         private void btnPerfil_Click_1(object sender, EventArgs e)
         {
-
             abrirFormulario(formPerfil);
         }
 
