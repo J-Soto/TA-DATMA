@@ -29,43 +29,42 @@ namespace InterfazDATMA.Administrador
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTutores = new System.Windows.Forms.Label();
             this.lblPsicologo = new System.Windows.Forms.Label();
             this.dgvTutores = new System.Windows.Forms.DataGridView();
             this.NombreCompletoTutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celularTutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bajoRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FotoTutor = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoElectronico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtBusqTutor = new System.Windows.Forms.TextBox();
-            this.txtBusqPsi = new System.Windows.Forms.TextBox();
             this.btnBuscarTutor = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnInsertarTutor = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnModificarTutor = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnModificarPsi = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnModificarUsuario = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnInsertarPsi = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnBuscarPsi = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnDeshabilitar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnListarPsi = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnListarTut = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnMostrarFoto = new MaterialSkin.Controls.MaterialFlatButton();
+            this.checkSoloTutores = new System.Windows.Forms.CheckBox();
+            this.checkSoloPsicologos = new System.Windows.Forms.CheckBox();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
+            this.checkSoloActivos = new System.Windows.Forms.CheckBox();
             this.nombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.celularUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoUsuario = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
@@ -76,22 +75,24 @@ namespace InterfazDATMA.Administrador
             this.lblTutores.AutoSize = true;
             this.lblTutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblTutores.ForeColor = System.Drawing.Color.White;
-            this.lblTutores.Location = new System.Drawing.Point(40, 58);
+            this.lblTutores.Location = new System.Drawing.Point(1110, 77);
             this.lblTutores.Name = "lblTutores";
             this.lblTutores.Size = new System.Drawing.Size(79, 25);
             this.lblTutores.TabIndex = 14;
             this.lblTutores.Text = "Tutores";
+            this.lblTutores.Visible = false;
             // 
             // lblPsicologo
             // 
             this.lblPsicologo.AutoSize = true;
             this.lblPsicologo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblPsicologo.ForeColor = System.Drawing.Color.White;
-            this.lblPsicologo.Location = new System.Drawing.Point(40, 177);
+            this.lblPsicologo.Location = new System.Drawing.Point(1211, 77);
             this.lblPsicologo.Name = "lblPsicologo";
             this.lblPsicologo.Size = new System.Drawing.Size(107, 25);
             this.lblPsicologo.TabIndex = 18;
             this.lblPsicologo.Text = "Psicólogos";
+            this.lblPsicologo.Visible = false;
             // 
             // dgvTutores
             // 
@@ -100,43 +101,42 @@ namespace InterfazDATMA.Administrador
             this.dgvTutores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvTutores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTutores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTutores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreCompletoTutor,
-            this.celularTutor,
-            this.bajoRE,
             this.FotoTutor});
             this.dgvTutores.EnableHeadersVisualStyles = false;
             this.dgvTutores.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvTutores.Location = new System.Drawing.Point(44, 106);
+            this.dgvTutores.Location = new System.Drawing.Point(1578, 29);
             this.dgvTutores.Name = "dgvTutores";
             this.dgvTutores.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTutores.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTutores.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTutores.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvTutores.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvTutores.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTutores.RowTemplate.Height = 28;
-            this.dgvTutores.Size = new System.Drawing.Size(934, 65);
+            this.dgvTutores.Size = new System.Drawing.Size(10, 10);
             this.dgvTutores.TabIndex = 19;
+            this.dgvTutores.Visible = false;
             this.dgvTutores.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTutores_CellFormatting);
             this.dgvTutores.SelectionChanged += new System.EventHandler(this.dgvTutores_SelectionChanged);
             // 
@@ -147,22 +147,6 @@ namespace InterfazDATMA.Administrador
             this.NombreCompletoTutor.Name = "NombreCompletoTutor";
             this.NombreCompletoTutor.ReadOnly = true;
             this.NombreCompletoTutor.Width = 150;
-            // 
-            // celularTutor
-            // 
-            this.celularTutor.HeaderText = "Celular";
-            this.celularTutor.MinimumWidth = 8;
-            this.celularTutor.Name = "celularTutor";
-            this.celularTutor.ReadOnly = true;
-            this.celularTutor.Width = 150;
-            // 
-            // bajoRE
-            // 
-            this.bajoRE.HeaderText = "Bajo Recursos Económicos";
-            this.bajoRE.MinimumWidth = 8;
-            this.bajoRE.Name = "bajoRE";
-            this.bajoRE.ReadOnly = true;
-            this.bajoRE.Width = 150;
             // 
             // FotoTutor
             // 
@@ -178,46 +162,45 @@ namespace InterfazDATMA.Administrador
             // 
             this.dgvPsicologos.AllowUserToAddRows = false;
             this.dgvPsicologos.AllowUserToDeleteRows = false;
-            this.dgvPsicologos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dgvPsicologos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvPsicologos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPsicologos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPsicologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPsicologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPsicologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPsicologos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreCompleto,
-            this.celular,
-            this.correoElectronico,
             this.foto});
             this.dgvPsicologos.EnableHeadersVisualStyles = false;
             this.dgvPsicologos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPsicologos.Location = new System.Drawing.Point(33, 177);
+            this.dgvPsicologos.Location = new System.Drawing.Point(1578, 45);
             this.dgvPsicologos.Name = "dgvPsicologos";
             this.dgvPsicologos.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPsicologos.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPsicologos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPsicologos.RowHeadersWidth = 62;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvPsicologos.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvPsicologos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPsicologos.RowTemplate.Height = 28;
-            this.dgvPsicologos.Size = new System.Drawing.Size(934, 57);
+            this.dgvPsicologos.Size = new System.Drawing.Size(10, 10);
             this.dgvPsicologos.TabIndex = 20;
+            this.dgvPsicologos.Visible = false;
             this.dgvPsicologos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPsicologos_CellFormatting);
             this.dgvPsicologos.SelectionChanged += new System.EventHandler(this.dgvPsicologos_SelectionChanged);
             // 
@@ -228,22 +211,6 @@ namespace InterfazDATMA.Administrador
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
             this.NombreCompleto.Width = 150;
-            // 
-            // celular
-            // 
-            this.celular.HeaderText = "Celular";
-            this.celular.MinimumWidth = 8;
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            this.celular.Width = 150;
-            // 
-            // correoElectronico
-            // 
-            this.correoElectronico.HeaderText = "Correo Electrónico";
-            this.correoElectronico.MinimumWidth = 8;
-            this.correoElectronico.Name = "correoElectronico";
-            this.correoElectronico.ReadOnly = true;
-            this.correoElectronico.Width = 150;
             // 
             // foto
             // 
@@ -257,30 +224,21 @@ namespace InterfazDATMA.Administrador
             // 
             // txtBusqTutor
             // 
-            this.txtBusqTutor.Location = new System.Drawing.Point(544, 56);
+            this.txtBusqTutor.Location = new System.Drawing.Point(824, 147);
             this.txtBusqTutor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBusqTutor.Name = "txtBusqTutor";
             this.txtBusqTutor.Size = new System.Drawing.Size(432, 26);
             this.txtBusqTutor.TabIndex = 21;
             this.txtBusqTutor.Text = "Nombres y Apellidos";
             this.txtBusqTutor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBusqTutor_MouseClick);
-            // 
-            // txtBusqPsi
-            // 
-            this.txtBusqPsi.Location = new System.Drawing.Point(823, 328);
-            this.txtBusqPsi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBusqPsi.Name = "txtBusqPsi";
-            this.txtBusqPsi.Size = new System.Drawing.Size(432, 26);
-            this.txtBusqPsi.TabIndex = 22;
-            this.txtBusqPsi.Text = "Nombres y Apellidos";
-            this.txtBusqPsi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBusqPsi_MouseClick);
+            this.txtBusqTutor.TextChanged += new System.EventHandler(this.txtBusqTutor_TextChanged);
             // 
             // btnBuscarTutor
             // 
             this.btnBuscarTutor.AutoSize = true;
             this.btnBuscarTutor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnBuscarTutor.Depth = 0;
-            this.btnBuscarTutor.Location = new System.Drawing.Point(996, 106);
+            this.btnBuscarTutor.Location = new System.Drawing.Point(1277, 147);
             this.btnBuscarTutor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnBuscarTutor.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscarTutor.Name = "btnBuscarTutor";
@@ -296,55 +254,39 @@ namespace InterfazDATMA.Administrador
             this.btnInsertarTutor.AutoSize = true;
             this.btnInsertarTutor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnInsertarTutor.Depth = 0;
-            this.btnInsertarTutor.Location = new System.Drawing.Point(996, 166);
+            this.btnInsertarTutor.Location = new System.Drawing.Point(1277, 355);
             this.btnInsertarTutor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnInsertarTutor.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInsertarTutor.Name = "btnInsertarTutor";
             this.btnInsertarTutor.Primary = false;
-            this.btnInsertarTutor.Size = new System.Drawing.Size(176, 36);
+            this.btnInsertarTutor.Size = new System.Drawing.Size(181, 36);
             this.btnInsertarTutor.TabIndex = 28;
-            this.btnInsertarTutor.Text = "InsertarTutor";
+            this.btnInsertarTutor.Text = "Insertar Tutor";
             this.btnInsertarTutor.UseVisualStyleBackColor = true;
             this.btnInsertarTutor.Click += new System.EventHandler(this.btnInsertarTutor_Click_1);
             // 
-            // btnModificarTutor
+            // btnModificarUsuario
             // 
-            this.btnModificarTutor.AutoSize = true;
-            this.btnModificarTutor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnModificarTutor.Depth = 0;
-            this.btnModificarTutor.Location = new System.Drawing.Point(996, 222);
-            this.btnModificarTutor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnModificarTutor.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnModificarTutor.Name = "btnModificarTutor";
-            this.btnModificarTutor.Primary = false;
-            this.btnModificarTutor.Size = new System.Drawing.Size(188, 36);
-            this.btnModificarTutor.TabIndex = 29;
-            this.btnModificarTutor.Text = "ModificarTutor";
-            this.btnModificarTutor.UseVisualStyleBackColor = true;
-            this.btnModificarTutor.Click += new System.EventHandler(this.btnModificarTutor_Click_1);
-            // 
-            // btnModificarPsi
-            // 
-            this.btnModificarPsi.AutoSize = true;
-            this.btnModificarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnModificarPsi.Depth = 0;
-            this.btnModificarPsi.Location = new System.Drawing.Point(1014, 526);
-            this.btnModificarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnModificarPsi.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnModificarPsi.Name = "btnModificarPsi";
-            this.btnModificarPsi.Primary = false;
-            this.btnModificarPsi.Size = new System.Drawing.Size(241, 36);
-            this.btnModificarPsi.TabIndex = 32;
-            this.btnModificarPsi.Text = "Modificar Psicólogo";
-            this.btnModificarPsi.UseVisualStyleBackColor = true;
-            this.btnModificarPsi.Click += new System.EventHandler(this.btnModificarPsi_Click_1);
+            this.btnModificarUsuario.AutoSize = true;
+            this.btnModificarUsuario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModificarUsuario.Depth = 0;
+            this.btnModificarUsuario.Location = new System.Drawing.Point(1277, 441);
+            this.btnModificarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnModificarUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModificarUsuario.Name = "btnModificarUsuario";
+            this.btnModificarUsuario.Primary = false;
+            this.btnModificarUsuario.Size = new System.Drawing.Size(214, 36);
+            this.btnModificarUsuario.TabIndex = 32;
+            this.btnModificarUsuario.Text = "Modificar Usuario";
+            this.btnModificarUsuario.UseVisualStyleBackColor = true;
+            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarPsi_Click_1);
             // 
             // btnInsertarPsi
             // 
             this.btnInsertarPsi.AutoSize = true;
             this.btnInsertarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnInsertarPsi.Depth = 0;
-            this.btnInsertarPsi.Location = new System.Drawing.Point(1027, 467);
+            this.btnInsertarPsi.Location = new System.Drawing.Point(1277, 264);
             this.btnInsertarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnInsertarPsi.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInsertarPsi.Name = "btnInsertarPsi";
@@ -355,35 +297,19 @@ namespace InterfazDATMA.Administrador
             this.btnInsertarPsi.UseVisualStyleBackColor = true;
             this.btnInsertarPsi.Click += new System.EventHandler(this.btnInsertarPsi_Click_1);
             // 
-            // btnBuscarPsi
-            // 
-            this.btnBuscarPsi.AutoSize = true;
-            this.btnBuscarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBuscarPsi.Depth = 0;
-            this.btnBuscarPsi.Location = new System.Drawing.Point(1162, 400);
-            this.btnBuscarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnBuscarPsi.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBuscarPsi.Name = "btnBuscarPsi";
-            this.btnBuscarPsi.Primary = false;
-            this.btnBuscarPsi.Size = new System.Drawing.Size(93, 36);
-            this.btnBuscarPsi.TabIndex = 30;
-            this.btnBuscarPsi.Text = "Buscar";
-            this.btnBuscarPsi.UseVisualStyleBackColor = true;
-            this.btnBuscarPsi.Click += new System.EventHandler(this.btnBuscarPsi_Click_1);
-            // 
             // btnDeshabilitar
             // 
             this.btnDeshabilitar.AutoSize = true;
             this.btnDeshabilitar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDeshabilitar.Depth = 0;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(996, 636);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(1025, 1000);
             this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDeshabilitar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Primary = false;
-            this.btnDeshabilitar.Size = new System.Drawing.Size(253, 36);
+            this.btnDeshabilitar.Size = new System.Drawing.Size(246, 36);
             this.btnDeshabilitar.TabIndex = 35;
-            this.btnDeshabilitar.Text = "Deshabilitar Persona";
+            this.btnDeshabilitar.Text = "Deshabilitar Usuario";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
             this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click_1);
             // 
@@ -392,7 +318,7 @@ namespace InterfazDATMA.Administrador
             this.btnListarPsi.AutoSize = true;
             this.btnListarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListarPsi.Depth = 0;
-            this.btnListarPsi.Location = new System.Drawing.Point(730, 636);
+            this.btnListarPsi.Location = new System.Drawing.Point(554, 1000);
             this.btnListarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnListarPsi.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListarPsi.Name = "btnListarPsi";
@@ -408,7 +334,7 @@ namespace InterfazDATMA.Administrador
             this.btnListarTut.AutoSize = true;
             this.btnListarTut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListarTut.Depth = 0;
-            this.btnListarTut.Location = new System.Drawing.Point(533, 636);
+            this.btnListarTut.Location = new System.Drawing.Point(41, 1000);
             this.btnListarTut.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnListarTut.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListarTut.Name = "btnListarTut";
@@ -424,7 +350,7 @@ namespace InterfazDATMA.Administrador
             this.btnMostrarFoto.AutoSize = true;
             this.btnMostrarFoto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMostrarFoto.Depth = 0;
-            this.btnMostrarFoto.Location = new System.Drawing.Point(996, 282);
+            this.btnMostrarFoto.Location = new System.Drawing.Point(642, 142);
             this.btnMostrarFoto.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnMostrarFoto.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMostrarFoto.Name = "btnMostrarFoto";
@@ -435,6 +361,33 @@ namespace InterfazDATMA.Administrador
             this.btnMostrarFoto.UseVisualStyleBackColor = true;
             this.btnMostrarFoto.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
+            // checkSoloTutores
+            // 
+            this.checkSoloTutores.AutoSize = true;
+            this.checkSoloTutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.checkSoloTutores.ForeColor = System.Drawing.Color.White;
+            this.checkSoloTutores.Location = new System.Drawing.Point(41, 145);
+            this.checkSoloTutores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkSoloTutores.Name = "checkSoloTutores";
+            this.checkSoloTutores.Size = new System.Drawing.Size(150, 29);
+            this.checkSoloTutores.TabIndex = 47;
+            this.checkSoloTutores.Text = "Solo Tutores";
+            this.checkSoloTutores.UseVisualStyleBackColor = true;
+            // 
+            // checkSoloPsicologos
+            // 
+            this.checkSoloPsicologos.AutoSize = true;
+            this.checkSoloPsicologos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.checkSoloPsicologos.ForeColor = System.Drawing.Color.White;
+            this.checkSoloPsicologos.Location = new System.Drawing.Point(245, 147);
+            this.checkSoloPsicologos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkSoloPsicologos.Name = "checkSoloPsicologos";
+            this.checkSoloPsicologos.Size = new System.Drawing.Size(178, 29);
+            this.checkSoloPsicologos.TabIndex = 48;
+            this.checkSoloPsicologos.Text = "Solo Psicólogos";
+            this.checkSoloPsicologos.UseVisualStyleBackColor = true;
+            this.checkSoloPsicologos.CheckedChanged += new System.EventHandler(this.checkSoloPsicologos_CheckedChanged);
+            // 
             // dgvUsuario
             // 
             this.dgvUsuario.AllowUserToAddRows = false;
@@ -442,95 +395,128 @@ namespace InterfazDATMA.Administrador
             this.dgvUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreUsuario,
-            this.dataGridViewImageColumn1});
+            this.celularUsuario,
+            this.correoUsuario,
+            this.tipoUsuario,
+            this.activoUsuario,
+            this.fotoUsuario});
             this.dgvUsuario.EnableHeadersVisualStyles = false;
             this.dgvUsuario.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvUsuario.Location = new System.Drawing.Point(33, 258);
+            this.dgvUsuario.Location = new System.Drawing.Point(41, 201);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvUsuario.RowHeadersVisible = false;
             this.dgvUsuario.RowHeadersWidth = 62;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvUsuario.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvUsuario.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvUsuario.RowTemplate.Height = 28;
-            this.dgvUsuario.Size = new System.Drawing.Size(934, 356);
-            this.dgvUsuario.TabIndex = 37;
+            this.dgvUsuario.Size = new System.Drawing.Size(1230, 778);
+            this.dgvUsuario.TabIndex = 49;
+            // 
+            // checkSoloActivos
+            // 
+            this.checkSoloActivos.AutoSize = true;
+            this.checkSoloActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.checkSoloActivos.ForeColor = System.Drawing.Color.White;
+            this.checkSoloActivos.Location = new System.Drawing.Point(467, 142);
+            this.checkSoloActivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkSoloActivos.Name = "checkSoloActivos";
+            this.checkSoloActivos.Size = new System.Drawing.Size(147, 29);
+            this.checkSoloActivos.TabIndex = 50;
+            this.checkSoloActivos.Text = "Solo Activos";
+            this.checkSoloActivos.UseVisualStyleBackColor = true;
             // 
             // nombreUsuario
             // 
+            this.nombreUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombreUsuario.HeaderText = "Nombre Completo";
             this.nombreUsuario.MinimumWidth = 8;
             this.nombreUsuario.Name = "nombreUsuario";
             this.nombreUsuario.ReadOnly = true;
-            this.nombreUsuario.Width = 150;
             // 
-            // dataGridViewImageColumn1
+            // celularUsuario
             // 
-            this.dataGridViewImageColumn1.HeaderText = "Foto";
-            this.dataGridViewImageColumn1.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.MinimumWidth = 8;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 70;
+            this.celularUsuario.HeaderText = "Celular";
+            this.celularUsuario.MinimumWidth = 8;
+            this.celularUsuario.Name = "celularUsuario";
+            this.celularUsuario.ReadOnly = true;
+            this.celularUsuario.Width = 90;
             // 
-            // materialFlatButton1
+            // correoUsuario
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(144, 636);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(193, 36);
-            this.materialFlatButton1.TabIndex = 38;
-            this.materialFlatButton1.Text = "PROHIBIDO TOCAR";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.correoUsuario.HeaderText = "Correo Electrónico";
+            this.correoUsuario.MinimumWidth = 8;
+            this.correoUsuario.Name = "correoUsuario";
+            this.correoUsuario.ReadOnly = true;
+            this.correoUsuario.Width = 170;
+            // 
+            // tipoUsuario
+            // 
+            this.tipoUsuario.HeaderText = "Usuario";
+            this.tipoUsuario.MinimumWidth = 8;
+            this.tipoUsuario.Name = "tipoUsuario";
+            this.tipoUsuario.ReadOnly = true;
+            // 
+            // activoUsuario
+            // 
+            this.activoUsuario.HeaderText = "Activo";
+            this.activoUsuario.MinimumWidth = 8;
+            this.activoUsuario.Name = "activoUsuario";
+            this.activoUsuario.ReadOnly = true;
+            this.activoUsuario.Width = 80;
+            // 
+            // fotoUsuario
+            // 
+            this.fotoUsuario.HeaderText = "Foto";
+            this.fotoUsuario.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.fotoUsuario.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.fotoUsuario.MinimumWidth = 8;
+            this.fotoUsuario.Name = "fotoUsuario";
+            this.fotoUsuario.ReadOnly = true;
+            this.fotoUsuario.Width = 70;
             // 
             // frmOperacionesPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1258, 677);
+            this.ClientSize = new System.Drawing.Size(1600, 1050);
             this.ControlBox = false;
-            this.Controls.Add(this.materialFlatButton1);
+            this.Controls.Add(this.checkSoloActivos);
             this.Controls.Add(this.dgvUsuario);
+            this.Controls.Add(this.checkSoloPsicologos);
+            this.Controls.Add(this.checkSoloTutores);
             this.Controls.Add(this.btnMostrarFoto);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnListarPsi);
             this.Controls.Add(this.btnListarTut);
-            this.Controls.Add(this.btnModificarPsi);
+            this.Controls.Add(this.btnModificarUsuario);
             this.Controls.Add(this.btnInsertarPsi);
-            this.Controls.Add(this.btnBuscarPsi);
-            this.Controls.Add(this.btnModificarTutor);
             this.Controls.Add(this.btnInsertarTutor);
             this.Controls.Add(this.btnBuscarTutor);
-            this.Controls.Add(this.txtBusqPsi);
             this.Controls.Add(this.txtBusqTutor);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.dgvTutores);
@@ -539,8 +525,7 @@ namespace InterfazDATMA.Administrador
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmOperacionesPersona";
             this.Sizable = false;
-            this.Text = "Operaciones Persona";
-            this.Load += new System.EventHandler(this.frmOperacionesPersona_Load);
+            this.Text = "Lista de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
@@ -555,28 +540,27 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridView dgvTutores;
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.TextBox txtBusqTutor;
-        private System.Windows.Forms.TextBox txtBusqPsi;
         private MaterialSkin.Controls.MaterialFlatButton btnBuscarTutor;
         private MaterialSkin.Controls.MaterialFlatButton btnInsertarTutor;
-        private MaterialSkin.Controls.MaterialFlatButton btnModificarTutor;
-        private MaterialSkin.Controls.MaterialFlatButton btnModificarPsi;
+        private MaterialSkin.Controls.MaterialFlatButton btnModificarUsuario;
         private MaterialSkin.Controls.MaterialFlatButton btnInsertarPsi;
-        private MaterialSkin.Controls.MaterialFlatButton btnBuscarPsi;
         private MaterialSkin.Controls.MaterialFlatButton btnDeshabilitar;
         private MaterialSkin.Controls.MaterialFlatButton btnListarPsi;
         private MaterialSkin.Controls.MaterialFlatButton btnListarTut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompletoTutor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celularTutor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bajoRE;
-        private System.Windows.Forms.DataGridViewImageColumn FotoTutor;
         private MaterialSkin.Controls.MaterialFlatButton btnMostrarFoto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompletoTutor;
+        private System.Windows.Forms.DataGridViewImageColumn FotoTutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoElectronico;
         private System.Windows.Forms.DataGridViewImageColumn foto;
+        private System.Windows.Forms.CheckBox checkSoloTutores;
+        private System.Windows.Forms.CheckBox checkSoloPsicologos;
         private System.Windows.Forms.DataGridView dgvUsuario;
+        private System.Windows.Forms.CheckBox checkSoloActivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreUsuario;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn celularUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activoUsuario;
+        private System.Windows.Forms.DataGridViewImageColumn fotoUsuario;
     }
 }

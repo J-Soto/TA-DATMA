@@ -19,6 +19,7 @@ namespace InterfazDATMA.Administrador
 
         private TutorWS.TutorWSClient daoTutor;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
+        private int cantidadFilas;
 
         public frmOperacionesPersona(frmGestionarModuloAdmin formGestionarModulos, frmPlantillaGestion formPlantilla)
         {
@@ -41,10 +42,6 @@ namespace InterfazDATMA.Administrador
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-
-
-            dgvUsuario.RowCount = 50;
-
             // "psicologos" es una coleción genérica
             BindingList<PsicologoWS.psicologo> psicologos;
             try
@@ -56,15 +53,7 @@ namespace InterfazDATMA.Administrador
                 psicologos = new BindingList<PsicologoWS.psicologo>();
             }
             dgvPsicologos.DataSource = psicologos;
-
-            int i;
             PsicologoWS.psicologo psicologo;
-            for (i=0; i < dgvPsicologos.RowCount; i++)
-            {
-                psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[i].DataBoundItem;
-                dgvUsuario.Rows[i].Cells[0].Value = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
-                dgvUsuario.Rows[i].Cells[1].Value = psicologo.fotoPerfil;
-            }
 
             // "tutores" es una coleción genérica
             BindingList<TutorWS.tutor> tutores;
@@ -80,14 +69,54 @@ namespace InterfazDATMA.Administrador
 
             TutorWS.tutor tutor;
 
-            for (int j = i; j < dgvTutores.RowCount+i; j++)
+
+            cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
+            dgvUsuario.RowCount = cantidadFilas;
+
+            int i;
+            for (i=0; i < dgvPsicologos.RowCount; i++)
             {
-                tutor = (TutorWS.tutor)dgvTutores.Rows[j-i].DataBoundItem;
-                dgvUsuario.Rows[j].Cells[0].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-                dgvUsuario.Rows[j].Cells[1].Value = tutor.fotoPerfil;
+                psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[i].DataBoundItem;
+                dgvUsuario.Rows[i].Cells[0].Value = psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno + " " + psicologo.nombre;
+                dgvUsuario.Rows[i].Cells[1].Value = psicologo.celular;
+                dgvUsuario.Rows[i].Cells[2].Value = psicologo.correo;
+                dgvUsuario.Rows[i].Cells[3].Value = "Psicologo";
+                if (psicologo.activoPsicologo == 1)
+                {
+                    dgvUsuario.Rows[i].Cells[4].Value = "Sí";
+                }
+                else
+                {
+                    dgvUsuario.Rows[i].Cells[4].Value = "No";
+                }
+                dgvUsuario.Rows[i].Cells[5].Value = psicologo.fotoPerfil;
             }
 
 
+
+            for (int j = i; j < dgvTutores.RowCount+i; j++)
+            {
+                tutor = (TutorWS.tutor)dgvTutores.Rows[j-i].DataBoundItem;
+                dgvUsuario.Rows[j].Cells[0].Value = tutor.apellidoPaterno + " " + tutor.apellidoMaterno + " " + tutor.nombre;
+                dgvUsuario.Rows[j].Cells[1].Value = tutor.celular;
+                dgvUsuario.Rows[j].Cells[2].Value = tutor.correo;
+                dgvUsuario.Rows[j].Cells[3].Value = "Tutor";
+                if (tutor.activoTutor == 1)
+                {
+                    dgvUsuario.Rows[j].Cells[4].Value = "Sí";
+                }
+                else
+                {
+                    dgvUsuario.Rows[j].Cells[4].Value = "No";
+                }
+                dgvUsuario.Rows[j].Cells[5].Value = tutor.fotoPerfil;
+            }
+
+            dgvUsuario.RowTemplate.Height = 200;
+
+            dgvUsuario.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            // Ordenar Alfabeticamente el DatagridView
+            this.dgvUsuario.Sort(this.dgvUsuario.Columns[0], ListSortDirection.Ascending);
         }
 
 
@@ -112,28 +141,10 @@ namespace InterfazDATMA.Administrador
                 txtBusqTutor.Text = "";
         }
 
-        private void txtBusqPsi_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (txtBusqPsi.Text == "Nombres y Apellidos")
-                txtBusqPsi.Text = "";
-        }
-
 
         private void dgvPsicologos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            /*PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[e.RowIndex].DataBoundItem;
-            
-            dgvPsicologos.Rows[e.RowIndex].Cells["NombreCompleto"].Value = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
-            dgvPsicologos.Rows[e.RowIndex].Cells["celular"].Value = psicologo.celular;
-            dgvPsicologos.Rows[e.RowIndex].Cells["correoElectronico"].Value = psicologo.correo;
 
-            dgvPsicologos.Rows[e.RowIndex].Cells["foto"].Value = psicologo.fotoPerfil;
-            // Las filas deben tener un alto de 100 pixeles
-            dgvPsicologos.RowTemplate.Height = 100;
-
-            dgvUsuario.Rows[e.RowIndex].Cells[0].Value = dgvPsicologos.Rows[e.RowIndex].Cells["NombreCompleto"].Value;
-            dgvUsuario.Rows[e.RowIndex].Cells[1].Value = dgvPsicologos.Rows[e.RowIndex].Cells["foto"].Value;
-            dgvUsuario.RowTemplate.Height = 100;*/
         }
 
         private void dgvUsuario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -144,22 +155,7 @@ namespace InterfazDATMA.Administrador
 
         private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            //TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
 
-            //dgvTutores.Rows[e.RowIndex].Cells["NombreCompletoTutor"].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-            //dgvTutores.Rows[e.RowIndex].Cells["celularTutor"].Value = tutor.celular;
-            /*Bajos Recursos Económicos*/
-            /*if (tutor.bajoRecursos == 1)
-            {
-                dgvTutores.Rows[e.RowIndex].Cells["bajoRE"].Value = "Sí";
-            }
-            else
-            {
-                dgvTutores.Rows[e.RowIndex].Cells["bajoRE"].Value = "No";
-            }
-            dgvTutores.Rows[e.RowIndex].Cells["FotoTutor"].Value = tutor.fotoPerfil;
-            // Las filas deben tener un alto de 100 pixeles
-            dgvTutores.RowTemplate.Height = 100;*/
         }
 
 
@@ -207,21 +203,6 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void btnBuscarPsi_Click_1(object sender, EventArgs e)
-        {
-            BindingList<PsicologoWS.psicologo> psicologos;
-            try
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre(txtBusqPsi.Text).ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>();
-            }
-            dgvPsicologos.DataSource = psicologos;
-
-        }
-
         private void btnInsertarPsi_Click_1(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(new frmInsertarPsicologo(this, formPlantilla));
@@ -230,15 +211,35 @@ namespace InterfazDATMA.Administrador
 
         private void btnModificarPsi_Click_1(object sender, EventArgs e)
         {
-
-            if (dgvPsicologos.RowCount != 0)
+            // ¿el usuario es psicologo o tutor?
+            if (dgvUsuario.CurrentRow.Cells[3].Value.ToString() == "Psicologo")     // Si es Psicologo
             {
-                PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.CurrentRow.DataBoundItem;
-                frmModificarPsicologo formModificarPsicologo = new frmModificarPsicologo(this, formPlantilla, psicologo);
+                if (dgvPsicologos.RowCount != 0)
+                {
+                    BindingList<PsicologoWS.psicologo> psicologos;
+                    psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre(dgvUsuario.CurrentRow.Cells[0].Value.ToString()).ToList());
+                    dgvPsicologos.DataSource = psicologos;
 
-                formPlantilla.abrirFormulario(formModificarPsicologo);
+                    PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[0].DataBoundItem;
+                    frmModificarPsicologo formModificarPsicologo = new frmModificarPsicologo(this, formPlantilla, psicologo);
+
+                    formPlantilla.abrirFormulario(formModificarPsicologo);
+                }
             }
+            else  // Si es Tutor
+            {
+                if (dgvTutores.RowCount != 0)
+                {
+                    BindingList<TutorWS.tutor> tutores;
+                    tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre(dgvUsuario.CurrentRow.Cells[0].Value.ToString()).ToList());
+                    dgvTutores.DataSource = tutores;
 
+                    TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[0].DataBoundItem;
+                    frmModificarTutor formModificarTutor = new frmModificarTutor(this, formPlantilla, tutor);
+
+                    formPlantilla.abrirFormulario(formModificarTutor);
+                }
+            }
         }
 
         private void btnListarTut_Click_1(object sender, EventArgs e)
@@ -279,12 +280,53 @@ namespace InterfazDATMA.Administrador
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            this.dgvTutores.Columns["FotoTutor"].Visible = false;
+            if (this.dgvUsuario.Columns[5].Visible == true)
+            {
+                this.btnMostrarFoto.Text = "Ocultar Foto";
+                this.dgvUsuario.Columns[5].Visible = false;
+            }
+            else
+            {
+                this.btnMostrarFoto.Text = "Mostrar Foto";
+                this.dgvUsuario.Columns[5].Visible = true;
+            }
         }
 
-        private void frmOperacionesPersona_Load(object sender, EventArgs e)
+        private void txtBusqTutor_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkSoloPsicologos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkSoloPsicologos.Checked)
+            {
+                this.dgvUsuario.Columns[3].Visible = false;     // Oculto la columna de Tipo de Usuario
+                for (int i=0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Tutor")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                this.dgvUsuario.Columns[3].Visible = true;     // Muestro la columna de Tipo de Usuario
+                for (int i = 0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Tutor")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = true;
+                        }
+                    }
+                }
+            }
         }
     }
 }
