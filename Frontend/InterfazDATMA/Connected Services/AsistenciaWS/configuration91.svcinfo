@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="1rjR4RtrnYZAwcZDKN5RQIi1qTXLCiBrf6wWRdly828=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="DEPUTAmywin/P1FFPXHkQeMaHKdV2S9OaOQfPDoRjag=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AsistenciaWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AsistenciaWSPort" contract="AsistenciaWS.AsistenciaWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/DatmaSoftWebServices/AsistenciaWS" bindingConfiguration="AsistenciaWSPortBinding">
+    <endpoint name="AsistenciaWSPort" contract="AsistenciaWS.AsistenciaWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/EnvioEmail/AsistenciaWS" bindingConfiguration="AsistenciaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.215.104:8080/DatmaSoftWebServices/AsistenciaWS</serializedValue>
+          <serializedValue>http://54.157.215.104:8080/EnvioEmail/AsistenciaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

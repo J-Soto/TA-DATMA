@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -622,8 +637,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\ActividadWS\ActividadWS.wsdl" />
-    <None Include="Connected Services\ActividadWS\ActividadWS.xsd">
+    <None Include="Connected Services\ActividadWS\ActividadWS1.wsdl" />
+    <None Include="Connected Services\ActividadWS\ActividadWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.actividad.datasource">
@@ -659,8 +674,8 @@
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.video.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\AsistenciaWS\AsistenciaWS.wsdl" />
-    <None Include="Connected Services\AsistenciaWS\AsistenciaWS.xsd">
+    <None Include="Connected Services\AsistenciaWS\AsistenciaWS1.wsdl" />
+    <None Include="Connected Services\AsistenciaWS\AsistenciaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AsistenciaWS\InterfazDATMA.AsistenciaWS.asistencia.datasource">
@@ -678,8 +693,8 @@
     <None Include="Connected Services\AsistenciaWS\InterfazDATMA.AsistenciaWS.modificarAsistenciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CursoWS\CursoWS.wsdl" />
-    <None Include="Connected Services\CursoWS\CursoWS.xsd">
+    <None Include="Connected Services\CursoWS\CursoWS1.wsdl" />
+    <None Include="Connected Services\CursoWS\CursoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.curso.datasource">
@@ -754,8 +769,8 @@
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.tema.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\DistritoWS\DistritoWS1.wsdl" />
-    <None Include="Connected Services\DistritoWS\DistritoWS1.xsd">
+    <None Include="Connected Services\DistritoWS\DistritoWS.wsdl" />
+    <None Include="Connected Services\DistritoWS\DistritoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\DistritoWS\InterfazDATMA.DistritoWS.distrito.datasource">
@@ -773,8 +788,8 @@
     <None Include="Connected Services\DistritoWS\InterfazDATMA.DistritoWS.modificarDistritoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GrupoWS\GrupoWS.wsdl" />
-    <None Include="Connected Services\GrupoWS\GrupoWS.xsd">
+    <None Include="Connected Services\GrupoWS\GrupoWS1.wsdl" />
+    <None Include="Connected Services\GrupoWS\GrupoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.eliminarGrupoPsicologoResponse.datasource">
@@ -846,8 +861,8 @@
     <None Include="Connected Services\MaterialWS\InterfazDATMA.MaterialWS.video.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
-    <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
+    <None Include="Connected Services\MaterialWS\MaterialWS1.wsdl" />
+    <None Include="Connected Services\MaterialWS\MaterialWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.buscarPsicologoPorIdUsuarioResponse.datasource">
@@ -880,15 +895,15 @@
     <None Include="Connected Services\PsicologoWS\InterfazDATMA.PsicologoWS.verificarDNIResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PsicologoWS\PsicologoWS.wsdl" />
-    <None Include="Connected Services\PsicologoWS\PsicologoWS.xsd">
+    <None Include="Connected Services\PsicologoWS\PsicologoWS1.wsdl" />
+    <None Include="Connected Services\PsicologoWS\PsicologoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReporteWS\InterfazDATMA.ReporteWS.reportePsicologosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
-    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+    <None Include="Connected Services\ReporteWS\ReporteWS1.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.actividad.datasource">
@@ -909,8 +924,8 @@
     <None Include="Connected Services\SemanaWS\InterfazDATMA.SemanaWS.semana.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\SemanaWS\SemanaWS.wsdl" />
-    <None Include="Connected Services\SemanaWS\SemanaWS.xsd">
+    <None Include="Connected Services\SemanaWS\SemanaWS1.wsdl" />
+    <None Include="Connected Services\SemanaWS\SemanaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TemaWS\InterfazDATMA.TemaWS.insertarTemaResponse.datasource">
@@ -925,8 +940,8 @@
     <None Include="Connected Services\TemaWS\InterfazDATMA.TemaWS.tema.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\TemaWS\TemaWS.wsdl" />
-    <None Include="Connected Services\TemaWS\TemaWS.xsd">
+    <None Include="Connected Services\TemaWS\TemaWS1.wsdl" />
+    <None Include="Connected Services\TemaWS\TemaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TutorWS\InterfazDATMA.TutorWS.eliminarTutorResponse.datasource">
@@ -950,9 +965,12 @@
     <None Include="Connected Services\TutorWS\InterfazDATMA.TutorWS.verificarDNIResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\TutorWS\TutorWS.wsdl" />
-    <None Include="Connected Services\TutorWS\TutorWS.xsd">
+    <None Include="Connected Services\TutorWS\TutorWS1.wsdl" />
+    <None Include="Connected Services\TutorWS\TutorWS1.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.enviarDatosUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.insertarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -966,12 +984,12 @@
     <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.verificarUsuarioResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioWS\UsuarioWS.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuarioWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\UsuarioWS\UsuarioWS1.wsdl" />
     <None Include="Connected Services\UsuarioWS\UsuarioWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioWS\UsuarioWS11.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuarioWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -1194,6 +1212,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

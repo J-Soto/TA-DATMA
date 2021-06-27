@@ -21,6 +21,7 @@ namespace InterfazDATMA.Administrador
 
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private PsicologoWS.distrito distrito;
+        private UsuarioWS.UsuarioWSClient daoUsuario;
         private string rutaFoto = "";
 
         public frmInsertarPsicologo(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
@@ -35,6 +36,7 @@ namespace InterfazDATMA.Administrador
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
 
             txtDistrito.ReadOnly = true;
             inicializarComponentes();
@@ -47,9 +49,6 @@ namespace InterfazDATMA.Administrador
             txtApellidoPat.Text = "";
             txtApellidoMat.Text = "";
             txtCorreo.Text = "";
-            txtUser.Text = "";
-            txtPass.Text = "";
-            txtConfirmarPass.Text = "";
             txtDni.Text = "";
             txtTelf.Text = "";
             txtCelular.Text = "";
@@ -87,11 +86,6 @@ namespace InterfazDATMA.Administrador
             {
                 MessageBox.Show("Seleccionar una imagen valida", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-        }
-
-        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -159,9 +153,12 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void frmInsertarPsicologo_Load(object sender, EventArgs e)
-        {
 
+        private (string,string) generarUsuario()
+        {
+            string user = Guid.NewGuid().ToString("N").Substring(0,75);
+            string password = Guid.NewGuid().ToString("N").Substring(0,15);
+            return (user,password);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -207,17 +204,11 @@ namespace InterfazDATMA.Administrador
                 psicologo.fotoPerfil = null;
             }
 
-            psicologo.user = txtUser.Text;
-            psicologo.password = txtPass.Text;
 
             //Validaciones:
             if (psicologo.DNI.Length != 8)
             {
                 MessageBox.Show("El DNI debe tener 8 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (psicologo.password != txtConfirmarPass.Text)
-            {
-                MessageBox.Show("Las contraseñas deben coincidir", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (psicologo.correo.Contains("@") != true)
             {
@@ -236,7 +227,11 @@ namespace InterfazDATMA.Administrador
                             int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
                             if (idPsicologo != 0)
                             {
-                                MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                var credenciales = generarUsuario();
+                                string msgEnvioDatos = "";
+                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, credenciales.Item1, credenciales.Item2) == 1)
+                                    msgEnvioDatos = ". Credenciales enviadas con exito.";
+                                MessageBox.Show("Se ha registrado con exito"+ msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 psicologo.idPersona = idPsicologo;
                                 formPlantilla.abrirFormulario(formOperacionPersona);
                             }

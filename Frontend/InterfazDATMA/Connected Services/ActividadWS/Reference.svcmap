@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/ActividadWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/ActividadWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ActividadWS.wsdl" MetadataType="Wsdl" ID="526b8a02-31ef-4ee1-9840-448b5fb682c0" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/ActividadWS?WSDL" />
-    <MetadataFile FileName="ActividadWS.xsd" MetadataType="Schema" ID="d3d03645-b984-42a5-96d6-97bee3fdc1c8" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/ActividadWS?xsd=1" />
+    <MetadataFile FileName="ActividadWS1.wsdl" MetadataType="Wsdl" ID="339c6588-fd9c-42b4-9b28-35af1e938a35" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/ActividadWS?WSDL" />
+    <MetadataFile FileName="ActividadWS1.xsd" MetadataType="Schema" ID="31a56fbb-0294-4234-bb3b-8e2fcb9b7e9c" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/ActividadWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

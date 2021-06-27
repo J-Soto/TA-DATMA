@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/UsuarioWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/UsuarioWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="395bfbee-abb0-4137-861e-f9884512b15f" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/UsuarioWS?WSDL" />
-    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="b3785ba5-eff5-449e-9a09-d9633750bf98" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/UsuarioWS?xsd=1" />
+    <MetadataFile FileName="UsuarioWS11.wsdl" MetadataType="Wsdl" ID="0e9ac58d-6de7-4b9a-a57c-9ea9a79c2aa0" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/UsuarioWS?WSDL" />
+    <MetadataFile FileName="UsuarioWS11.xsd" MetadataType="Schema" ID="6a60d23c-faa2-40d9-8339-60031c7bdb24" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/UsuarioWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

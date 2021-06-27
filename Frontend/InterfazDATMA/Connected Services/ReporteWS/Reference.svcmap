@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/ReporteWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/ReporteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteWS.wsdl" MetadataType="Wsdl" ID="c4116949-e5f5-466b-b647-03dd653cb782" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/ReporteWS?WSDL" />
-    <MetadataFile FileName="ReporteWS.xsd" MetadataType="Schema" ID="78bf6ca7-d135-4e84-ac8a-8a9f732f7c83" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/ReporteWS?xsd=1" />
+    <MetadataFile FileName="ReporteWS1.wsdl" MetadataType="Wsdl" ID="20ac49e5-d1b7-4d41-ab02-6090b082f4bd" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/ReporteWS?WSDL" />
+    <MetadataFile FileName="ReporteWS1.xsd" MetadataType="Schema" ID="896c750d-34a3-45d2-bd7d-ede7c54adecc" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/ReporteWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

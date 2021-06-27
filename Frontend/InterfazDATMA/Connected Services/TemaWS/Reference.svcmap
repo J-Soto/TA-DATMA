@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/TemaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/TemaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TemaWS.wsdl" MetadataType="Wsdl" ID="00fd1691-52bb-4ecc-b65d-98672fa299d3" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/TemaWS?WSDL" />
-    <MetadataFile FileName="TemaWS.xsd" MetadataType="Schema" ID="e330169d-f144-4f7e-b516-922808dccc0f" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/TemaWS?xsd=1" />
+    <MetadataFile FileName="TemaWS1.xsd" MetadataType="Schema" ID="8328e8aa-d546-45cf-8df5-1b6e5e32f2c5" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/TemaWS?xsd=1" />
+    <MetadataFile FileName="TemaWS1.wsdl" MetadataType="Wsdl" ID="e2cba1f6-779c-43c5-b2f0-23b2f723f500" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/TemaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

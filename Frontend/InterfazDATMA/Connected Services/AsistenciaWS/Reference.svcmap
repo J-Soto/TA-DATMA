@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/AsistenciaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/AsistenciaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AsistenciaWS.xsd" MetadataType="Schema" ID="5706f150-a616-45eb-89e2-27f6aae082fd" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/AsistenciaWS?xsd=1" />
-    <MetadataFile FileName="AsistenciaWS.wsdl" MetadataType="Wsdl" ID="31405ea9-98ae-49d3-af57-a21c01714a22" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/AsistenciaWS?WSDL" />
+    <MetadataFile FileName="AsistenciaWS1.wsdl" MetadataType="Wsdl" ID="6661392c-b3e6-409d-8a88-fe9e621b9075" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/AsistenciaWS?WSDL" />
+    <MetadataFile FileName="AsistenciaWS1.xsd" MetadataType="Schema" ID="f4dfbd03-aaba-4b12-a5a4-db0f9bf44ebc" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/AsistenciaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

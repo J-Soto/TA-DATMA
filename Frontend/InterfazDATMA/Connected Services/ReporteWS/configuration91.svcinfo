@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="XHCe5SXXN7zpLN0LIK8n8OBNGcLaMhm5hNxqHJJWq30=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="vwwvIvlYo1aeuDqg09vKLiaxpV6NN4PEhhFsAKmi57Q=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ReporteWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ReporteWSPort" contract="ReporteWS.ReporteWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/DatmaSoftWebServices/ReporteWS" bindingConfiguration="ReporteWSPortBinding">
+    <endpoint name="ReporteWSPort" contract="ReporteWS.ReporteWS" bindingType="basicHttpBinding" address="http://54.157.215.104:8080/EnvioEmail/ReporteWS" bindingConfiguration="ReporteWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.215.104:8080/DatmaSoftWebServices/ReporteWS</serializedValue>
+          <serializedValue>http://54.157.215.104:8080/EnvioEmail/ReporteWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

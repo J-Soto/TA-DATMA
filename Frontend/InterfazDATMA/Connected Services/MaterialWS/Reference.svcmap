@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.215.104:8080/DatmaSoftWebServices/MaterialWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.215.104:8080/EnvioEmail/MaterialWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MaterialWS.wsdl" MetadataType="Wsdl" ID="4b9db1af-b1c2-41d6-b20d-5903064a6bf8" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/MaterialWS?WSDL" />
-    <MetadataFile FileName="MaterialWS.xsd" MetadataType="Schema" ID="2fb67159-f245-4026-9fa9-65b69ee79e3d" SourceId="1" SourceUrl="http://54.157.215.104:8080/DatmaSoftWebServices/MaterialWS?xsd=1" />
+    <MetadataFile FileName="MaterialWS1.xsd" MetadataType="Schema" ID="3e997328-3b90-42ef-b491-dae26905179e" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/MaterialWS?xsd=1" />
+    <MetadataFile FileName="MaterialWS1.wsdl" MetadataType="Wsdl" ID="630db80c-b69d-493e-b4a4-e2e2b3efaaad" SourceId="1" SourceUrl="http://54.157.215.104:8080/EnvioEmail/MaterialWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

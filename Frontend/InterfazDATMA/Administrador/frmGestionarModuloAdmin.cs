@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmGestionarModuloAdmin : MaterialSkin.Controls.MaterialForm 
+    public partial class frmGestionarModuloAdmin : MaterialSkin.Controls.MaterialForm
     {
         private frmPlantillaGestion plantillaGestion;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
@@ -32,112 +32,8 @@ namespace InterfazDATMA.Administrador
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.Teal200, MaterialSkin.TextShade.WHITE);
 
             plantillaGestion = plantilla;
-
-            daoPsicologo = new PsicologoWS.PsicologoWSClient();
-            daoTutor = new TutorWS.TutorWSClient();
-
-            // Tutores
-            typeof(DataGridView).InvokeMember(
-            "DoubleBuffered",
-            BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
-            null,
-            dgvTutores,
-            new object[] { true });
-            dgvTutores.AutoGenerateColumns = false;
-            dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BindingList<TutorWS.tutor> tutores;
-            try
-            {
-                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre("").ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                tutores = new BindingList<TutorWS.tutor>();
-            }
-            dgvTutores.DataSource = tutores;
-
-
-
-            // Psicologos
-            typeof(DataGridView).InvokeMember(
-            "DoubleBuffered",
-            BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
-            null,
-            dgvPsicologos,
-            new object[] { true });
-            dgvPsicologos.AutoGenerateColumns = false;
-            dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPsicologos.DataSource = daoPsicologo.listarTodosPsicologos();
         }
 
-        public byte[] ResizeImage(byte[] data, int width)
-        {
-            using (var stream = new MemoryStream(data))
-            {
-                var image = Image.FromStream(stream);
-
-                var height = (width * image.Height) / image.Width;
-                var thumbnail = image.GetThumbnailImage(width, height, null, IntPtr.Zero);
-
-                using (var thumbnailStream = new MemoryStream())
-                {
-                    thumbnail.Save(thumbnailStream, ImageFormat.Jpeg);
-                    return thumbnailStream.ToArray();
-                }
-            }
-        }
-
-
-        private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[e.RowIndex].DataBoundItem;
-            dgvTutores.Rows[e.RowIndex].Cells[0].Value = tutor.nombre + " " + tutor.apellidoPaterno + " " + tutor.apellidoMaterno;
-            try
-            {
-                if (tutor.fotoPerfil != null)
-                {
-                    dgvTutores.Rows[e.RowIndex].Cells[1].Value = tutor.fotoPerfil;
-                }
-
-            }
-            catch (Exception ex){
-                System.Console.WriteLine(ex.Message);
-            }
-            dgvTutores.RowTemplate.Height = 100;
-        }
-
-        private void dgvPsicologos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            PsicologoWS.psicologo psi = (PsicologoWS.psicologo)dgvPsicologos.Rows[e.RowIndex].DataBoundItem;
-            dgvPsicologos.Rows[e.RowIndex].Cells[0].Value = psi.nombre + " " + psi.apellidoPaterno + " " + psi.apellidoMaterno;
-            try
-            {
-                if (psi.fotoPerfil != null)
-                {
-                    dgvPsicologos.Rows[e.RowIndex].Cells[1].Value = psi.fotoPerfil;
-                }
-
-            }
-            catch (Exception ex){
-                System.Console.WriteLine(ex.Message);
-            }
-            dgvPsicologos.RowTemplate.Height = 100;
-        }
-
-        private void dgvTutores_SelectionChanged(object sender, EventArgs e)
-        {
-            dgvTutores.ClearSelection();
-        }
-
-        private void dgvPsicologos_SelectionChanged(object sender, EventArgs e)
-        {
-            dgvPsicologos.ClearSelection();
-        }
-
-        private void dgvTutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void dgvPsicologos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -149,42 +45,25 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void lblPsicologosUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnOpPersona_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmOperacionesPersona(this, plantillaGestion));
-
-
-        }
-
-        private void btnOpCurso_Click(object sender, EventArgs e)
-        {
-            plantillaGestion.abrirFormulario(new frmOperacionesCursos(this, plantillaGestion));
-
-        }
-
-        private void dgvTutores_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgvPsicologos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void dgvPsicologos_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBuscarTutor_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmOperacionesCursos(this, plantillaGestion));
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmOperacionesPersona(this, plantillaGestion));
         }
     }
 }

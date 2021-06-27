@@ -45,6 +45,7 @@ namespace InterfazDATMA
                 lCursos = null;
             }
             dgvCursos.DataSource = lCursos;
+            dgvCursos.Refresh();
         }
 
         private void frmCursosDisponibles_Load(object sender, EventArgs e)
@@ -66,15 +67,15 @@ namespace InterfazDATMA
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             CursoWS.curso curso = (CursoWS.curso)dgvCursos.Rows[e.RowIndex].DataBoundItem;
-            dgvCursos.Rows[e.RowIndex].Cells[0].Value = curso.descripcion;
-            dgvCursos.Rows[e.RowIndex].Cells[1].Value = curso.fechaInicio;
-            dgvCursos.Rows[e.RowIndex].Cells[2].Value = curso.fechaFin;
+            dgvCursos.Rows[e.RowIndex].Cells["Modulo"].Value = curso.descripcion;
+            dgvCursos.Rows[e.RowIndex].Cells["FechaIni"].Value = curso.fechaInicio;
+            dgvCursos.Rows[e.RowIndex].Cells["FechaFin"].Value = curso.fechaFin;
             BindingList<PsicologoWS.psicologo> lPsi;
             try
             {
                 lPsi = new BindingList<PsicologoWS.psicologo>(daoPsi.listarPsicologosPorIdCurso(curso.idCurso).ToList());
                 if (lPsi.Count != 0)
-                    dgvCursos.Rows[e.RowIndex].Cells[3].Value = lPsi[0].nombre + " " + lPsi[0].apellidoPaterno + " " + lPsi[0].apellidoMaterno;
+                    dgvCursos.Rows[e.RowIndex].Cells["Encargado"].Value = lPsi[0].nombre + " " + lPsi[0].apellidoPaterno + " " + lPsi[0].apellidoMaterno;
             }
             catch (Exception)
             {
