@@ -727,6 +727,9 @@
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.insertarRequerimientoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosDeTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosDisponiblesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -951,6 +954,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TutorWS\InterfazDATMA.TutorWS.eliminarTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TutorWS\InterfazDATMA.TutorWS.getTutorFromIdUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TutorWS\InterfazDATMA.TutorWS.insertarTutorResponse.datasource">

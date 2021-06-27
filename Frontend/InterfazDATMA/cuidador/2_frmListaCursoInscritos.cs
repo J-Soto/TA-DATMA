@@ -17,6 +17,8 @@ namespace InterfazDATMA
         private frmWalkthrough formAnterior;
         private frmPerfilCuidador formAnterior2;
         private frmPlantillaGestion plantillaGestion;
+        private List<CursoWS.curso> cursos = null;
+        private CursoWS.CursoWSClient daoCuros = new CursoWS.CursoWSClient();
 
         public frmListaCursoInscritos(frmWalkthrough formAnterior,frmPlantillaGestion plantillaGestion)
         {
@@ -25,6 +27,12 @@ namespace InterfazDATMA
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
+
+            var temp = daoCuros.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
+            if (temp is object)
+            {
+                cursos = new List<CursoWS.curso>(temp);
+            }
 
             this.plantillaGestion = plantillaGestion;
             this.formAnterior = formAnterior;

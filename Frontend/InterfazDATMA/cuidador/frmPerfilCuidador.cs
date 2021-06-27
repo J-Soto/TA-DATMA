@@ -15,7 +15,7 @@ namespace InterfazDATMA.cuidador
 {
     public partial class frmPerfilCuidador : MaterialSkin.Controls.MaterialForm 
     {
-        private TutorWS.TutorWSClient daoTutor = new TutorWS.TutorWSClient();
+        private TutorWS.TutorWSClient daoTutor;
         private frmPlantillaGestion plantillaGestion;
         public frmPerfilCuidador(frmPlantillaGestion plantilla)
         {
@@ -26,7 +26,17 @@ namespace InterfazDATMA.cuidador
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey500, MaterialSkin.Primary.BlueGrey700, MaterialSkin.Primary.BlueGrey100, MaterialSkin.Accent.Teal700, MaterialSkin.TextShade.WHITE);
 
             plantillaGestion = plantilla;
-            frmPlantillaGestion.tutor = daoTutor.getTutorFromIdUsuario(frmPlantillaGestion.user.idUsuario);
+            daoTutor = new TutorWS.TutorWSClient();
+            //daoTutor.modificarTutor(new TutorWS.tutor());
+            var tutores = daoTutor.listarTodosTutores();
+            foreach (var tutor in tutores)
+            {
+                if (tutor.idUsuario == frmPlantillaGestion.user.idUsuario)
+                {
+                    frmPlantillaGestion.tutor = tutor;
+                    break;
+                }
+            }
             txtUser.Text = frmPlantillaGestion.tutor.user;
             txtPass.Text = frmPlantillaGestion.tutor.password;
             txtCel.Text = frmPlantillaGestion.tutor.celular;
@@ -45,8 +55,10 @@ namespace InterfazDATMA.cuidador
             {
                 picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
             }
-            catch (Exception)
-            { }
+            catch (Exception ex)
+            {
+             
+            }        
         }
 
 
