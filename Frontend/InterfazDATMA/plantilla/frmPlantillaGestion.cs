@@ -120,5 +120,12 @@ namespace InterfazDATMA.plantilla
             formularioActivo.Close();
             formLogout.Show();
         }
+
+        MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ThemeManager.Theme == MaterialSkinManager.Themes.LIGHT) ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
+        }
     }
 }
