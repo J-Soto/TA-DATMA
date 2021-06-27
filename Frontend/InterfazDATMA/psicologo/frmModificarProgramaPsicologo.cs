@@ -69,16 +69,7 @@ namespace InterfazDATMA
 
         private void inicializarPantalla()
         {
-
-            try
-            {
-                actividadesSemana = new BindingList<SemanaWS.actividad>(daoSemana.listarActividadesPorIdSemana(currentSemana.id).ToList());
-            }
-            catch (Exception ex)
-            {
-                actividadesSemana = new BindingList<SemanaWS.actividad>();
-            }
-
+            actividadesSemana = new BindingList<SemanaWS.actividad>(daoSemana.listarActividadesPorIdSemana(currentSemana.id).ToList());
             dgvReuniones.DataSource = actividadesSemana;
         }
 
@@ -151,15 +142,10 @@ namespace InterfazDATMA
 
         }
 
-        private void bntConfigurarTiempo_Click(object sender, EventArgs e) //Modificar Programa
+        private void bntConfigurarTiempo_Click(object sender, EventArgs e)
         {
-            if(dgvReuniones.RowCount != 0)
-            {
-                SemanaWS.actividad auxActividad = dgvReuniones.CurrentRow.DataBoundItem as SemanaWS.actividad;
-                frmModificarActividad formModificarActividad = new frmModificarActividad(this, formPlantillaGestion, auxActividad);
-
-                formPlantillaGestion.abrirFormulario(formModificarActividad);
-            }
+            frmModificarActividad formModificarActividad = new frmModificarActividad(this, formPlantillaGestion);
+            formPlantillaGestion.abrirFormulario(formModificarActividad);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -191,13 +177,6 @@ namespace InterfazDATMA
 
         public void RefreshDataGridView()
         {
-            dgvReuniones.Refresh();
-        }
-
-        public void refreshDGVModificado()
-        {
-            actividadesSemana = new BindingList<SemanaWS.actividad>(daoSemana.listarActividadesPorIdSemana(currentSemana.id).ToList());
-            dgvReuniones.DataSource = actividadesSemana;
             dgvReuniones.Refresh();
         }
 
