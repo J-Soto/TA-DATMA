@@ -30,16 +30,15 @@ namespace InterfazDATMA
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTema = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSemana = new System.Windows.Forms.Label();
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnirseReunion = new System.Windows.Forms.DataGridViewLinkColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,6 +80,10 @@ namespace InterfazDATMA
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnirseReunion = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -148,6 +151,7 @@ namespace InterfazDATMA
             // 
             // dgvReuniones
             // 
+            this.dgvReuniones.AllowUserToAddRows = false;
             this.dgvReuniones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvReuniones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReuniones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -170,54 +174,26 @@ namespace InterfazDATMA
             this.dgvReuniones.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvReuniones.Location = new System.Drawing.Point(96, 29);
             this.dgvReuniones.Name = "dgvReuniones";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReuniones.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvReuniones.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvReuniones.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvReuniones.RowTemplate.Height = 28;
             this.dgvReuniones.Size = new System.Drawing.Size(1609, 463);
             this.dgvReuniones.TabIndex = 8;
             this.dgvReuniones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReuniones_CellContentClick);
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 8;
-            this.Fecha.Name = "Fecha";
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.MinimumWidth = 8;
-            this.HoraInicio.Name = "HoraInicio";
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraFin.HeaderText = "Hora Fin";
-            this.HoraFin.MinimumWidth = 8;
-            this.HoraFin.Name = "HoraFin";
-            // 
-            // UnirseReunion
-            // 
-            this.UnirseReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UnirseReunion.HeaderText = "Unirse Reunion";
-            this.UnirseReunion.MinimumWidth = 8;
-            this.UnirseReunion.Name = "UnirseReunion";
-            this.UnirseReunion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReuniones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReuniones_CellFormatting);
             // 
             // label4
             // 
@@ -856,6 +832,50 @@ namespace InterfazDATMA
             this.tableLayoutPanel17.Size = new System.Drawing.Size(2016, 1317);
             this.tableLayoutPanel17.TabIndex = 98;
             // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 8;
+            this.Fecha.Name = "Fecha";
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "t";
+            dataGridViewCellStyle3.NullValue = null;
+            this.HoraInicio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.MinimumWidth = 8;
+            this.HoraInicio.Name = "HoraInicio";
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "hh:mm tt";
+            dataGridViewCellStyle4.NullValue = null;
+            this.HoraFin.DefaultCellStyle = dataGridViewCellStyle4;
+            this.HoraFin.HeaderText = "Hora Fin";
+            this.HoraFin.MinimumWidth = 8;
+            this.HoraFin.Name = "HoraFin";
+            // 
+            // UnirseReunion
+            // 
+            this.UnirseReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UnirseReunion.HeaderText = "Unirse Reunion";
+            this.UnirseReunion.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.UnirseReunion.LinkColor = System.Drawing.Color.White;
+            this.UnirseReunion.MinimumWidth = 8;
+            this.UnirseReunion.Name = "UnirseReunion";
+            this.UnirseReunion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.UnirseReunion.VisitedLinkColor = System.Drawing.Color.White;
+            // 
             // frmModificarPrograma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -936,10 +956,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
-        private System.Windows.Forms.DataGridViewLinkColumn UnirseReunion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
@@ -964,5 +980,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
+        private System.Windows.Forms.DataGridViewLinkColumn UnirseReunion;
     }
 }

@@ -53,7 +53,7 @@ namespace InterfazDATMA.psicologo
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgvVideos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Link = new System.Windows.Forms.DataGridViewLinkColumn();
             this.btnAgregarDoc = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnEliminarDoc = new MaterialSkin.Controls.MaterialFlatButton();
@@ -204,6 +204,7 @@ namespace InterfazDATMA.psicologo
             // 
             // dgvDocumentos
             // 
+            this.dgvDocumentos.AllowUserToAddRows = false;
             this.dgvDocumentos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvDocumentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -260,6 +261,7 @@ namespace InterfazDATMA.psicologo
             // 
             // dgvVideos
             // 
+            this.dgvVideos.AllowUserToAddRows = false;
             this.dgvVideos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvVideos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVideos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -273,7 +275,7 @@ namespace InterfazDATMA.psicologo
             this.dgvVideos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvVideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVideos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
+            this.Descripcion,
             this.Link});
             this.dgvVideos.EnableHeadersVisualStyles = false;
             this.dgvVideos.GridColor = System.Drawing.Color.SteelBlue;
@@ -297,21 +299,26 @@ namespace InterfazDATMA.psicologo
             this.dgvVideos.RowTemplate.Height = 28;
             this.dgvVideos.Size = new System.Drawing.Size(521, 270);
             this.dgvVideos.TabIndex = 27;
+            this.dgvVideos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVideos_CellContentClick);
+            this.dgvVideos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvVideos_CellFormatting);
             // 
-            // dataGridViewTextBoxColumn2
+            // Descripcion
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.MinimumWidth = 8;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 150;
             // 
             // Link
             // 
             this.Link.HeaderText = "Link";
+            this.Link.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.Link.LinkColor = System.Drawing.Color.White;
             this.Link.MinimumWidth = 8;
             this.Link.Name = "Link";
             this.Link.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Link.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Link.VisitedLinkColor = System.Drawing.Color.White;
             this.Link.Width = 150;
             // 
             // btnAgregarDoc
@@ -358,6 +365,7 @@ namespace InterfazDATMA.psicologo
             this.btnAgregarVid.TabIndex = 30;
             this.btnAgregarVid.Text = "+";
             this.btnAgregarVid.UseVisualStyleBackColor = true;
+            this.btnAgregarVid.Click += new System.EventHandler(this.btnAgregarVid_Click);
             // 
             // btnEliminarVid
             // 
@@ -373,6 +381,7 @@ namespace InterfazDATMA.psicologo
             this.btnEliminarVid.TabIndex = 31;
             this.btnEliminarVid.Text = "-";
             this.btnEliminarVid.UseVisualStyleBackColor = true;
+            this.btnEliminarVid.Click += new System.EventHandler(this.btnEliminarVid_Click);
             // 
             // btnRegresar
             // 
@@ -466,9 +475,9 @@ namespace InterfazDATMA.psicologo
         private MaterialSkin.Controls.MaterialFlatButton btnEliminarVid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewLinkColumn Link;
         private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
         private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewLinkColumn Link;
     }
 }
