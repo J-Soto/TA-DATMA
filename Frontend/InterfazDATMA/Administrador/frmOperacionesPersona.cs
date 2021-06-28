@@ -56,7 +56,7 @@ namespace InterfazDATMA.Administrador
             BindingList<TutorWS.tutor> tutores;
             try
             {
-                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre("").ToList());
+                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTodosTutores().ToList());
             }
             catch (ArgumentNullException ex)
             {
@@ -78,7 +78,7 @@ namespace InterfazDATMA.Administrador
                 dgvUsuario.Rows[i].Cells[1].Value = psicologo.celular;
                 dgvUsuario.Rows[i].Cells[2].Value = psicologo.correo;
                 dgvUsuario.Rows[i].Cells[3].Value = "Psicologo";
-                if (psicologo.activoPsicologo == 1)
+                if (psicologo.activo == 1)
                 {
                     dgvUsuario.Rows[i].Cells[4].Value = "Sí";
                 }
@@ -98,7 +98,7 @@ namespace InterfazDATMA.Administrador
                 dgvUsuario.Rows[j].Cells[1].Value = tutor.celular;
                 dgvUsuario.Rows[j].Cells[2].Value = tutor.correo;
                 dgvUsuario.Rows[j].Cells[3].Value = "Tutor";
-                if (tutor.activoTutor == 1)
+                if (tutor.activo == 1)
                 {
                     dgvUsuario.Rows[j].Cells[4].Value = "Sí";
                 }
@@ -119,17 +119,6 @@ namespace InterfazDATMA.Administrador
 
         public void inicializarTablas()
         {
-            BindingList<PsicologoWS.psicologo> psicologos;
-            try
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>();
-            }
-            dgvPsicologos.DataSource = psicologos;
-
         }
 
         private void txtBusqTutor_MouseClick(object sender, MouseEventArgs e)
