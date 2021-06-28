@@ -19,13 +19,13 @@ namespace InterfazDATMA
         private frmPerfilCuidador formAnterior2;
         private frmPlantillaGestion plantillaGestion;
         private List<CursoWS.curso> cursos = null;
-        private CursoWS.CursoWSClient daoCuros = new CursoWS.CursoWSClient();
+        private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
 
         public frmListaCursoInscritos(frmWalkthrough formAnterior,frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
             Design.Ini(this);
-            var temp = daoCuros.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
+            var temp = daoCurso.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
             if (temp is object)
             {
                 cursos = new List<CursoWS.curso>(temp);
@@ -47,20 +47,18 @@ namespace InterfazDATMA
             
         }
 
-        private bool verificarCursosDisponibles()
-        {
-            Random rd = new Random();
-            if (rd.Next(2) == 1) return true;
-            else return false;
-        }
         private void btnCursosDisponibles_Click(object sender, EventArgs e)
         {
-            /*
-            bool hayCursos = verificarCursosDisponibles();
-            if (hayCursos) plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion));
-            else plantillaGestion.abrirFormulario(new frmSinCursosDisponibles(this, plantillaGestion));*/
-            plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion));
-
+            var temp = daoCurso.listarCursosDisponibles(frmPlantillaGestion.tutor.idPersona);
+            if (temp is object)
+            {
+                // hay cursos disponibles
+                plantillaGestion.abrirFormulario(new frmCursosDisponibles(this, plantillaGestion, new List<CursoWS.curso>(temp)));
+            } else
+            {
+                // no hay
+                plantillaGestion.abrirFormulario(new frmSinCursosDisponibles(this, plantillaGestion));
+            }
         }
 
         private void btnModulo1_Click(object sender, EventArgs e)

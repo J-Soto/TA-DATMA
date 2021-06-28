@@ -18,11 +18,9 @@ namespace InterfazDATMA
         public frmCursosDisponibles formAnterior;
         private frmPlantillaGestion plantillaGestion;
 
-        private PsicologoWS.PsicologoWSClient daoPsicologo;
-        private CursoWS.CursoWSClient daoCurso;
-        private CursoWS.curso curso;
+        private CursoTutor cursoTutor;
       
-        public frmInformacionCurso(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion)
+        public frmInformacionCurso(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion, CursoTutor cursoTutor)
         {
             InitializeComponent();
             Design.Ini(this);
@@ -31,54 +29,18 @@ namespace InterfazDATMA
 
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
-            this.daoCurso = new CursoWS.CursoWSClient();
-            this.daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            this.cursoTutor = cursoTutor;
 
-            llenar_informacion();
+            LlenarInformacion();
         }
 
-        public void llenar_informacion()
+        private void LlenarInformacion()
         {
-            BindingList<CursoWS.curso> lCursos = null;
-            try
+            lblNombreModulo.Text = cursoTutor.Modulo;
+            lblInformacionEncargada.Text = cursoTutor.Encargado;
+            if (cursoTutor.Psicologo.fotoPerfil is object)
             {
-                lCursos = new BindingList<CursoWS.curso>(daoCurso.listarCursos().ToList());
-                //hACER lISTAR CURSOS POR ID
-                for (int i = 0; i < lCursos.Count; i++)
-                {
-                    if (lCursos[i].idCurso == this.curso.idCurso)
-                    {
-                        this.curso = lCursos[i];
-                        break;
-                    }
-                }
-                lblNombreModulo.Text = this.curso.descripcion;
-                BindingList<PsicologoWS.psicologo> lPsi = null;
-                try
-                {
-                    lPsi = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorIdCurso(this.curso.idCurso).ToList());
-                    PsicologoWS.psicologo psicologo = lPsi[0];
-                    lblInformacionEncargada.Text = psicologo.nombre + " " + psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno;
-
-                    try
-                    {
-
-                    }
-                    catch (Exception)
-                    {
-
-                        throw;
-                    }
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-            }
-            catch (ArgumentNullException)
-            {
-                throw;
+                pictBoxEncargada.Image = (Bitmap)((new ImageConverter()).ConvertFrom(cursoTutor.Psicologo.fotoPerfil));
             }
         }
 
@@ -89,21 +51,10 @@ namespace InterfazDATMA
 
         private void btnVerMas_Click(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCurso(this, plantillaGestion));
-
+            //plantillaGestion.abrirFormulario(new frmDetalleCurso(this, plantillaGestion));
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxFechaFin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxFechaIni_TextChanged(object sender, EventArgs e)
         {
 
         }

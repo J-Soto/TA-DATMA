@@ -18,68 +18,73 @@ namespace InterfazDATMA
         public frmListaCursoInscritos formAnterior;
         private frmPlantillaGestion plantilla;
 
-        private CursoWS.CursoWSClient daoCurso;
-        private PsicologoWS.PsicologoWSClient daoPsi;
-        private PsicologoWS.psicologo psicologo; 
-        public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla)
+        private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
+        private PsicologoWS.PsicologoWSClient daoPsi = new PsicologoWS.PsicologoWSClient();
+        private BindingList<CursoTutor> cursos = null;
+        private List<CursoWS.curso> cursosDisponibles = null;
+
+        public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla, List<CursoWS.curso> cursosDisponibles)
         {
             InitializeComponent();
             Design.Ini(this);
             this.formAnterior = formAnterior;
             this.plantilla = plantilla;
+            this.cursosDisponibles = cursosDisponibles;
 
-            daoCurso = new CursoWS.CursoWSClient();
-            daoPsi = new PsicologoWS.PsicologoWSClient();
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BindingList<CursoWS.curso> lCursos;
-            try
-            {
-                lCursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosDisponibles().ToList());
-            }
-            catch (ArgumentNullException)
-            {
-                lCursos = null;
-            }
-            dgvCursos.DataSource = lCursos;
-            dgvCursos.Refresh();
-        }
-
-        private void frmCursosDisponibles_Load(object sender, EventArgs e)
-        {
-
+            Fetch();
+            dgvCursos.DataSource = cursos;
         }
 
         private void btnInscribirse_Click_1(object sender, EventArgs e)
         {
+            // inscribirse
+            int index = dgvCursos.CurrentCell.RowIndex;
+            daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, cursos[index].Curso.idCurso);
             plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
-
+            cursos.RemoveAt(index);
         }
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)
         {
-            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
+            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla, cursos[dgvCursos.CurrentCell.RowIndex]));
         }
 
-        private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void Fetch()
         {
-            CursoWS.curso curso = (CursoWS.curso)dgvCursos.Rows[e.RowIndex].DataBoundItem;
-            dgvCursos.Rows[e.RowIndex].Cells["Modulo"].Value = curso.descripcion;
-            dgvCursos.Rows[e.RowIndex].Cells["FechaIni"].Value = curso.fechaInicio;
-            dgvCursos.Rows[e.RowIndex].Cells["FechaFin"].Value = curso.fechaFin;
-            BindingList<PsicologoWS.psicologo> lPsi;
-            try
+            cursos = new BindingList<CursoTutor>();
+            foreach (var curso in cursosDisponibles)
             {
-                lPsi = new BindingList<PsicologoWS.psicologo>(daoPsi.listarPsicologosPorIdCurso(curso.idCurso).ToList());
-                if (lPsi.Count != 0)
-                    dgvCursos.Rows[e.RowIndex].Cells["Encargado"].Value = lPsi[0].nombre + " " + lPsi[0].apellidoPaterno + " " + lPsi[0].apellidoMaterno;
+                var psico = daoPsi.listarPsicologosPorIdCurso(curso.idCurso);
+                if (psico is object)
+                {
+                    cursos.Add(new CursoTutor(curso, psico[0]));
+                }
             }
-            catch (Exception)
-            {
-
-                lPsi = null;
-            }
-            
         }
+    }
+
+    public class CursoTutor
+    {
+        private CursoWS.curso curso;
+        private PsicologoWS.psicologo psico;
+
+        public CursoTutor(CursoWS.curso curso, PsicologoWS.psicologo psico)
+        {
+            this.curso = curso;
+            this.psico = psico;
+        }
+
+        public string Encargado { get => psico.nombre + " " + psico.apellidoPaterno + " " + psico.apellidoMaterno; }
+
+        public DateTime FechaInicio { get => curso.fechaInicio; }
+
+        public DateTime FechaFin { get => curso.fechaFin; }
+
+        public string Modulo { get => curso.descripcion; }
+
+        public CursoWS.curso Curso { get => curso; }
+
+        public PsicologoWS.psicologo Psicologo { get => psico; }
     }
 }

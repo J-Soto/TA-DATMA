@@ -56,7 +56,7 @@ namespace InterfazDATMA.Administrador
             BindingList<TutorWS.tutor> tutores;
             try
             {
-                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre("").ToList());
+                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTodosTutores().ToList());
             }
             catch (ArgumentNullException ex)
             {
@@ -78,7 +78,7 @@ namespace InterfazDATMA.Administrador
                 dgvUsuario.Rows[i].Cells[1].Value = psicologo.celular;
                 dgvUsuario.Rows[i].Cells[2].Value = psicologo.correo;
                 dgvUsuario.Rows[i].Cells[3].Value = "Psicologo";
-                if (psicologo.activoPsicologo == 1)
+                if (psicologo.tipo == 1)
                 {
                     dgvUsuario.Rows[i].Cells[4].Value = "Sí";
                 }
@@ -98,7 +98,7 @@ namespace InterfazDATMA.Administrador
                 dgvUsuario.Rows[j].Cells[1].Value = tutor.celular;
                 dgvUsuario.Rows[j].Cells[2].Value = tutor.correo;
                 dgvUsuario.Rows[j].Cells[3].Value = "Tutor";
-                if (tutor.activoTutor == 1)
+                if (tutor.activo == 1)
                 {
                     dgvUsuario.Rows[j].Cells[4].Value = "Sí";
                 }
@@ -119,17 +119,6 @@ namespace InterfazDATMA.Administrador
 
         public void inicializarTablas()
         {
-            BindingList<PsicologoWS.psicologo> psicologos;
-            try
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
-            }
-            catch (ArgumentNullException ex)
-            {
-                psicologos = new BindingList<PsicologoWS.psicologo>();
-            }
-            dgvPsicologos.DataSource = psicologos;
-
         }
 
         private void txtBusqTutor_MouseClick(object sender, MouseEventArgs e)
@@ -251,40 +240,45 @@ namespace InterfazDATMA.Administrador
 
         private void btnDeshabilitar_Click_1(object sender, EventArgs e)
         {
-            if (dgvPsicologos.SelectedRows.Count > 0)
+            if (dgvUsuario.CurrentRow.Cells[3].Value.ToString() == "Psicologo")
             {
-                var resultado = MessageBox.Show("Se eliminará esta persona del sistema. Quiere Continuar", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (resultado == DialogResult.Yes)
-                {
-                    PsicologoWS.psicologo psicologo = new PsicologoWS.psicologo();
-                    psicologo = (PsicologoWS.psicologo)dgvPsicologos.SelectedRows[0].DataBoundItem;
-                    daoPsicologo.eliminarPsicologo(psicologo.idPersona, psicologo.idUsuario);
-                }
+                BindingList<PsicologoWS.psicologo> psicologos;
+                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre(dgvUsuario.CurrentRow.Cells[0].Value.ToString()).ToList());
+                dgvPsicologos.DataSource = psicologos;
 
+                PsicologoWS.psicologo psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[0].DataBoundItem;
+                daoPsicologo.eliminarPsicologo(psicologo.idPersona, psicologo.idUsuario);
+
+                if (dgvUsuario.CurrentRow.Cells[4].Value.ToString() == "Sí")
+                {
+                    dgvUsuario.CurrentRow.Cells[4].Value = "No";
+                }
+                else
+                {
+                    dgvUsuario.CurrentRow.Cells[4].Value = "Sí";
+                }
             }
             else if (dgvTutores.SelectedRows.Count > 0)
             {
-                var resultado = MessageBox.Show("Se eliminará esta persona del sistema. Quiere Continuar", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (resultado == DialogResult.Yes)
-                {
-                    TutorWS.tutor tutor = new TutorWS.tutor();
-                    tutor = (TutorWS.tutor)dgvTutores.SelectedRows[0].DataBoundItem;
-                    daoTutor.eliminarTutor(tutor.idPersona, tutor.idUsuario);
-                }
-            }
+                BindingList<TutorWS.tutor> tutores;
+                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTutoresPorNombre(dgvUsuario.CurrentRow.Cells[0].Value.ToString()).ToList());
+                dgvTutores.DataSource = tutores;
 
+                TutorWS.tutor tutor = (TutorWS.tutor)dgvTutores.Rows[0].DataBoundItem;
+                daoTutor.eliminarTutor(tutor.idPersona, tutor.idUsuario);
+            }
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             if (this.dgvUsuario.Columns[5].Visible == true)
             {
-                this.btnMostrarFoto.Text = "Ocultar Foto";
+                this.btnMostrarFoto.Text = "Mostrar Foto";
                 this.dgvUsuario.Columns[5].Visible = false;
             }
             else
             {
-                this.btnMostrarFoto.Text = "Mostrar Foto";
+                this.btnMostrarFoto.Text = "Ocultar Foto";
                 this.dgvUsuario.Columns[5].Visible = true;
             }
         }
@@ -298,6 +292,7 @@ namespace InterfazDATMA.Administrador
         {
             if (this.checkSoloPsicologos.Checked)
             {
+                this.checkSoloTutores.Enabled = false;
                 this.dgvUsuario.Columns[3].Visible = false;     // Oculto la columna de Tipo de Usuario
                 for (int i=0; i < cantidadFilas; i++)
                 {
@@ -312,12 +307,79 @@ namespace InterfazDATMA.Administrador
             }
             else
             {
+                this.checkSoloTutores.Enabled = true;
                 this.dgvUsuario.Columns[3].Visible = true;     // Muestro la columna de Tipo de Usuario
                 for (int i = 0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
                     {
                         if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Tutor")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void checkSoloTutores_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkSoloTutores.Checked)
+            {
+                this.checkSoloPsicologos.Enabled = false;      
+                this.dgvUsuario.Columns[3].Visible = false;     // Oculto la columna de Tipo de Usuario
+                for (int i = 0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Psicologo")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                this.checkSoloPsicologos.Enabled = true;
+                this.dgvUsuario.Columns[3].Visible = true;     // Muestro la columna de Tipo de Usuario
+                for (int i = 0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Psicologo")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void checkSoloActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkSoloActivos.Checked)
+            {
+                this.dgvUsuario.Columns[4].Visible = false;     // Oculto la columna de Activo
+                for (int i = 0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[4].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[4].Value.ToString() == "No")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                this.dgvUsuario.Columns[4].Visible = true;     // Muestro la columna de Activo
+                for (int i = 0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[4].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[4].Value.ToString() == "No")
                         {
                             this.dgvUsuario.Rows[i].Visible = true;
                         }
