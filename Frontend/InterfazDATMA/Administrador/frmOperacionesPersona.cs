@@ -279,12 +279,12 @@ namespace InterfazDATMA.Administrador
         {
             if (this.dgvUsuario.Columns[5].Visible == true)
             {
-                this.btnMostrarFoto.Text = "Ocultar Foto";
+                this.btnMostrarFoto.Text = "Mostrar Foto";
                 this.dgvUsuario.Columns[5].Visible = false;
             }
             else
             {
-                this.btnMostrarFoto.Text = "Mostrar Foto";
+                this.btnMostrarFoto.Text = "Ocultar Foto";
                 this.dgvUsuario.Columns[5].Visible = true;
             }
         }
@@ -298,6 +298,7 @@ namespace InterfazDATMA.Administrador
         {
             if (this.checkSoloPsicologos.Checked)
             {
+                this.checkSoloTutores.Enabled = false;
                 this.dgvUsuario.Columns[3].Visible = false;     // Oculto la columna de Tipo de Usuario
                 for (int i=0; i < cantidadFilas; i++)
                 {
@@ -312,12 +313,47 @@ namespace InterfazDATMA.Administrador
             }
             else
             {
+                this.checkSoloTutores.Enabled = true;
                 this.dgvUsuario.Columns[3].Visible = true;     // Muestro la columna de Tipo de Usuario
                 for (int i = 0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
                     {
                         if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Tutor")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void checkSoloTutores_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkSoloTutores.Checked)
+            {
+                this.checkSoloPsicologos.Enabled = false;      
+                this.dgvUsuario.Columns[3].Visible = false;     // Oculto la columna de Tipo de Usuario
+                for (int i = 0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Psicologo")
+                        {
+                            this.dgvUsuario.Rows[i].Visible = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                this.checkSoloPsicologos.Enabled = true;
+                this.dgvUsuario.Columns[3].Visible = true;     // Muestro la columna de Tipo de Usuario
+                for (int i = 0; i < cantidadFilas; i++)
+                {
+                    if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
+                    {
+                        if (this.dgvUsuario.Rows[i].Cells[3].Value.ToString() == "Psicologo")
                         {
                             this.dgvUsuario.Rows[i].Visible = true;
                         }

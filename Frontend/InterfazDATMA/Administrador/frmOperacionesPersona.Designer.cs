@@ -58,13 +58,13 @@ namespace InterfazDATMA.Administrador
             this.checkSoloTutores = new System.Windows.Forms.CheckBox();
             this.checkSoloPsicologos = new System.Windows.Forms.CheckBox();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
-            this.checkSoloActivos = new System.Windows.Forms.CheckBox();
             this.nombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celularUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fotoUsuario = new System.Windows.Forms.DataGridViewImageColumn();
+            this.checkSoloActivos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
@@ -373,6 +373,7 @@ namespace InterfazDATMA.Administrador
             this.checkSoloTutores.TabIndex = 47;
             this.checkSoloTutores.Text = "Solo Tutores";
             this.checkSoloTutores.UseVisualStyleBackColor = true;
+            this.checkSoloTutores.CheckedChanged += new System.EventHandler(this.checkSoloTutores_CheckedChanged);
             // 
             // checkSoloPsicologos
             // 
@@ -436,19 +437,6 @@ namespace InterfazDATMA.Administrador
             this.dgvUsuario.Size = new System.Drawing.Size(1230, 778);
             this.dgvUsuario.TabIndex = 49;
             // 
-            // checkSoloActivos
-            // 
-            this.checkSoloActivos.AutoSize = true;
-            this.checkSoloActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkSoloActivos.ForeColor = System.Drawing.Color.White;
-            this.checkSoloActivos.Location = new System.Drawing.Point(467, 142);
-            this.checkSoloActivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.checkSoloActivos.Name = "checkSoloActivos";
-            this.checkSoloActivos.Size = new System.Drawing.Size(147, 29);
-            this.checkSoloActivos.TabIndex = 50;
-            this.checkSoloActivos.Text = "Solo Activos";
-            this.checkSoloActivos.UseVisualStyleBackColor = true;
-            // 
             // nombreUsuario
             // 
             this.nombreUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -479,6 +467,7 @@ namespace InterfazDATMA.Administrador
             this.tipoUsuario.MinimumWidth = 8;
             this.tipoUsuario.Name = "tipoUsuario";
             this.tipoUsuario.ReadOnly = true;
+            this.tipoUsuario.Width = 150;
             // 
             // activoUsuario
             // 
@@ -497,6 +486,19 @@ namespace InterfazDATMA.Administrador
             this.fotoUsuario.Name = "fotoUsuario";
             this.fotoUsuario.ReadOnly = true;
             this.fotoUsuario.Width = 70;
+            // 
+            // checkSoloActivos
+            // 
+            this.checkSoloActivos.AutoSize = true;
+            this.checkSoloActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.checkSoloActivos.ForeColor = System.Drawing.Color.White;
+            this.checkSoloActivos.Location = new System.Drawing.Point(467, 142);
+            this.checkSoloActivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkSoloActivos.Name = "checkSoloActivos";
+            this.checkSoloActivos.Size = new System.Drawing.Size(147, 29);
+            this.checkSoloActivos.TabIndex = 50;
+            this.checkSoloActivos.Text = "Solo Activos";
+            this.checkSoloActivos.UseVisualStyleBackColor = true;
             // 
             // frmOperacionesPersona
             // 
