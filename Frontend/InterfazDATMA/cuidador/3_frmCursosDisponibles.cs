@@ -21,13 +21,15 @@ namespace InterfazDATMA
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
         private PsicologoWS.PsicologoWSClient daoPsi = new PsicologoWS.PsicologoWSClient();
         private BindingList<CursoTutor> cursos = null;
+        private List<CursoWS.curso> cursosDisponibles = null;
 
-        public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla)
+        public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla, List<CursoWS.curso> cursosDisponibles)
         {
             InitializeComponent();
             Design.Ini(this);
             this.formAnterior = formAnterior;
             this.plantilla = plantilla;
+            this.cursosDisponibles = cursosDisponibles;
 
             dgvCursos.AutoGenerateColumns = false;
             Fetch();
@@ -36,8 +38,8 @@ namespace InterfazDATMA
 
         private void btnInscribirse_Click_1(object sender, EventArgs e)
         {
+            // inscribirse
             plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
-
         }
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)
@@ -47,17 +49,13 @@ namespace InterfazDATMA
 
         private void Fetch()
         {
-            var temp = daoCurso.listarCursosDisponibles();
-            if (temp is object)
+            cursos = new BindingList<CursoTutor>();
+            foreach (var curso in cursosDisponibles)
             {
-                cursos = new BindingList<CursoTutor>();
-                foreach (var curso in temp)
+                var psico = daoPsi.listarPsicologosPorIdCurso(curso.idCurso);
+                if (psico is object)
                 {
-                    var psico = daoPsi.listarPsicologosPorIdCurso(curso.idCurso);
-                    if (psico is object)
-                    {
-                        cursos.Add(new CursoTutor(curso, psico[0]));
-                    }
+                    cursos.Add(new CursoTutor(curso, psico[0]));
                 }
             }
         }
