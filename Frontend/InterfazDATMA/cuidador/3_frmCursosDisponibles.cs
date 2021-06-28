@@ -20,7 +20,7 @@ namespace InterfazDATMA
 
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
         private PsicologoWS.PsicologoWSClient daoPsi = new PsicologoWS.PsicologoWSClient();
-        private BindingList<Curso> cursos = null;
+        private BindingList<CursoTutor> cursos = null;
 
         public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla)
         {
@@ -42,7 +42,7 @@ namespace InterfazDATMA
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)
         {
-            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
+            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla, cursos[dgvCursos.CurrentCell.RowIndex]));
         }
 
         private void Fetch()
@@ -50,25 +50,25 @@ namespace InterfazDATMA
             var temp = daoCurso.listarCursosDisponibles();
             if (temp is object)
             {
-                cursos = new BindingList<Curso>();
+                cursos = new BindingList<CursoTutor>();
                 foreach (var curso in temp)
                 {
                     var psico = daoPsi.listarPsicologosPorIdCurso(curso.idCurso);
                     if (psico is object)
                     {
-                        cursos.Add(new Curso(curso, psico[0]));
+                        cursos.Add(new CursoTutor(curso, psico[0]));
                     }
                 }
             }
         }
     }
 
-    public class Curso
+    public class CursoTutor
     {
         private CursoWS.curso curso;
         private PsicologoWS.psicologo psico;
 
-        public Curso(CursoWS.curso curso, PsicologoWS.psicologo psico)
+        public CursoTutor(CursoWS.curso curso, PsicologoWS.psicologo psico)
         {
             this.curso = curso;
             this.psico = psico;
@@ -81,5 +81,9 @@ namespace InterfazDATMA
         public DateTime FechaFin { get => curso.fechaFin; }
 
         public string Modulo { get => curso.descripcion; }
+
+        public CursoWS.curso Curso { get => curso; }
+
+        public PsicologoWS.psicologo Psicologo { get => psico; }
     }
 }
