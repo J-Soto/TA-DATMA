@@ -18,9 +18,10 @@ namespace InterfazDATMA
         public frmListaCursoInscritos formAnterior;
         private frmPlantillaGestion plantilla;
 
-        private CursoWS.CursoWSClient daoCurso;
-        private PsicologoWS.PsicologoWSClient daoPsi;
-        private PsicologoWS.psicologo psicologo; 
+        private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
+        private PsicologoWS.PsicologoWSClient daoPsi = new PsicologoWS.PsicologoWSClient();
+        private BindingList<Curso> cursos = null;
+
         public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla)
         {
             InitializeComponent();
@@ -28,26 +29,9 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
             this.plantilla = plantilla;
 
-            daoCurso = new CursoWS.CursoWSClient();
-            daoPsi = new PsicologoWS.PsicologoWSClient();
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BindingList<CursoWS.curso> lCursos;
-            try
-            {
-                lCursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosDisponibles().ToList());
-            }
-            catch (ArgumentNullException)
-            {
-                lCursos = null;
-            }
-            dgvCursos.DataSource = lCursos;
-            dgvCursos.Refresh();
-        }
-
-        private void frmCursosDisponibles_Load(object sender, EventArgs e)
-        {
-
+            Fetch();
+            dgvCursos.DataSource = cursos;
         }
 
         private void btnInscribirse_Click_1(object sender, EventArgs e)
@@ -61,25 +45,41 @@ namespace InterfazDATMA
             plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
         }
 
-        private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void Fetch()
         {
-            CursoWS.curso curso = (CursoWS.curso)dgvCursos.Rows[e.RowIndex].DataBoundItem;
-            dgvCursos.Rows[e.RowIndex].Cells["Modulo"].Value = curso.descripcion;
-            dgvCursos.Rows[e.RowIndex].Cells["FechaIni"].Value = curso.fechaInicio;
-            dgvCursos.Rows[e.RowIndex].Cells["FechaFin"].Value = curso.fechaFin;
-            BindingList<PsicologoWS.psicologo> lPsi;
-            try
+            var temp = daoCurso.listarCursosDisponibles();
+            if (temp is object)
             {
-                lPsi = new BindingList<PsicologoWS.psicologo>(daoPsi.listarPsicologosPorIdCurso(curso.idCurso).ToList());
-                if (lPsi.Count != 0)
-                    dgvCursos.Rows[e.RowIndex].Cells["Encargado"].Value = lPsi[0].nombre + " " + lPsi[0].apellidoPaterno + " " + lPsi[0].apellidoMaterno;
+                cursos = new BindingList<Curso>();
+                foreach (var curso in temp)
+                {
+                    var psico = daoPsi.listarPsicologosPorIdCurso(curso.idCurso);
+                    if (psico is object)
+                    {
+                        cursos.Add(new Curso(curso, psico[0]));
+                    }
+                }
             }
-            catch (Exception)
-            {
-
-                lPsi = null;
-            }
-            
         }
+    }
+
+    public class Curso
+    {
+        private CursoWS.curso curso;
+        private PsicologoWS.psicologo psico;
+
+        public Curso(CursoWS.curso curso, PsicologoWS.psicologo psico)
+        {
+            this.curso = curso;
+            this.psico = psico;
+        }
+
+        public string Encargado { get => psico.nombre + " " + psico.apellidoPaterno + " " + psico.apellidoMaterno; }
+
+        public DateTime FechaInicio { get => curso.fechaInicio; }
+
+        public DateTime FechaFin { get => curso.fechaFin; }
+
+        public string Modulo { get => curso.descripcion; }
     }
 }
