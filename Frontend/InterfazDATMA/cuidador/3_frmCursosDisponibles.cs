@@ -39,7 +39,10 @@ namespace InterfazDATMA
         private void btnInscribirse_Click_1(object sender, EventArgs e)
         {
             // inscribirse
+            int index = dgvCursos.CurrentCell.RowIndex;
+            daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, cursos[index].Curso.idCurso);
             plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
+            cursos.RemoveAt(index);
         }
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)
