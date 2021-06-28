@@ -29,17 +29,15 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInformacionCurso));
             this.dgvInfCurso = new System.Windows.Forms.DataGridView();
             this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTituloDescripcion = new System.Windows.Forms.Label();
-            this.lblDescripcionCurso = new System.Windows.Forms.Label();
             this.lblTituloEncargado = new System.Windows.Forms.Label();
             this.lblInformacionEncargada = new System.Windows.Forms.Label();
             this.lblMes = new System.Windows.Forms.Label();
@@ -85,11 +83,9 @@ namespace InterfazDATMA
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfCurso)).BeginInit();
@@ -123,12 +119,8 @@ namespace InterfazDATMA
             this.tableLayoutPanel21.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.tableLayoutPanel19.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.tableLayoutPanel22.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
             this.SuspendLayout();
@@ -142,14 +134,14 @@ namespace InterfazDATMA
             this.dgvInfCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvInfCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfCurso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvInfCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoActividad,
@@ -164,22 +156,22 @@ namespace InterfazDATMA
             this.dgvInfCurso.MultiSelect = false;
             this.dgvInfCurso.Name = "dgvInfCurso";
             this.dgvInfCurso.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvInfCurso.RowHeadersVisible = false;
             this.dgvInfCurso.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInfCurso.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInfCurso.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvInfCurso.RowTemplate.Height = 28;
             this.dgvInfCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInfCurso.Size = new System.Drawing.Size(763, 156);
@@ -216,28 +208,6 @@ namespace InterfazDATMA
             this.Fecha.MinimumWidth = 8;
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
-            // 
-            // lblTituloDescripcion
-            // 
-            this.lblTituloDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTituloDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblTituloDescripcion.Location = new System.Drawing.Point(0, 0);
-            this.lblTituloDescripcion.Name = "lblTituloDescripcion";
-            this.lblTituloDescripcion.Size = new System.Drawing.Size(144, 28);
-            this.lblTituloDescripcion.TabIndex = 8;
-            this.lblTituloDescripcion.Text = "Acerca de este Curso";
-            this.lblTituloDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDescripcionCurso
-            // 
-            this.lblDescripcionCurso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDescripcionCurso.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcionCurso.Location = new System.Drawing.Point(0, 0);
-            this.lblDescripcionCurso.Name = "lblDescripcionCurso";
-            this.lblDescripcionCurso.Size = new System.Drawing.Size(301, 37);
-            this.lblDescripcionCurso.TabIndex = 9;
-            this.lblDescripcionCurso.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate fringil" +
-    "la ante, id varius purus mollis non.";
             // 
             // lblTituloEncargado
             // 
@@ -877,7 +847,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.307136F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.59876F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.0941F));
-            this.tableLayoutPanel19.Controls.Add(this.panel13, 1, 1);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(2, 65);
             this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -888,17 +857,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.83099F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(481, 72);
             this.tableLayoutPanel19.TabIndex = 36;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel13.Controls.Add(this.lblDescripcionCurso);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(46, 16);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(301, 37);
-            this.panel13.TabIndex = 0;
             // 
             // tableLayoutPanel18
             // 
@@ -935,7 +893,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.410548F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.92037F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.66908F));
-            this.tableLayoutPanel17.Controls.Add(this.panel11, 1, 1);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 2);
             this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -946,17 +903,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.64103F));
             this.tableLayoutPanel17.Size = new System.Drawing.Size(481, 59);
             this.tableLayoutPanel17.TabIndex = 34;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel11.Controls.Add(this.lblTituloDescripcion);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(47, 13);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(144, 28);
-            this.panel11.TabIndex = 0;
             // 
             // tableLayoutPanel22
             // 
@@ -1037,12 +983,8 @@ namespace InterfazDATMA
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
-            this.tableLayoutPanel19.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.tableLayoutPanel22.ResumeLayout(false);
             this.tableLayoutPanel23.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1051,8 +993,6 @@ namespace InterfazDATMA
 
         #endregion
         private System.Windows.Forms.DataGridView dgvInfCurso;
-        private System.Windows.Forms.Label lblTituloDescripcion;
-        private System.Windows.Forms.Label lblDescripcionCurso;
         private System.Windows.Forms.Label lblTituloEncargado;
         private System.Windows.Forms.Label lblInformacionEncargada;
         private System.Windows.Forms.PictureBox pictBoxEncargada;
@@ -1102,11 +1042,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
     }
