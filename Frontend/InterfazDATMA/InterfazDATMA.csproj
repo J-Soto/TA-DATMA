@@ -859,6 +859,9 @@
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.eliminarGrupoTutorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.grupo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

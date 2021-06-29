@@ -64,7 +64,8 @@ namespace InterfazDATMA
                     foreach (var grupo in grupos)
                     {
                         var psico = daoGrupo.listarPsicologosPorIdGrupo(grupo.idGrupo);
-                        cursos.Add(new CursoTutor(curso, grupo, psico));
+                        int numInscritos = daoGrupo.getGrupoNumInscritos(grupo.idGrupo);
+                        cursos.Add(new CursoTutor(curso, grupo, psico, numInscritos));
                     }
                 }
             }
@@ -75,29 +76,36 @@ namespace InterfazDATMA
     {
         private CursoWS.curso curso;
         private GrupoWS.grupo grupo;
-        private List<GrupoWS.psicologo> psicos;
+        private List<GrupoWS.psicologo> psicos = null;
+        private int numInscritos;
 
-        public CursoTutor(CursoWS.curso curso, GrupoWS.grupo grupo, GrupoWS.psicologo[] psicos)
+        public CursoTutor(CursoWS.curso curso, GrupoWS.grupo grupo, GrupoWS.psicologo[] psicos, int numInscritos)
         {
             this.curso = curso;
             this.grupo = grupo;
-            this.psicos = new List<GrupoWS.psicologo>(psicos);
+            this.numInscritos = numInscritos;
+            if (psicos is object)
+            {
+                this.psicos = new List<GrupoWS.psicologo>(psicos);
+            }
         }
 
         public string Encargado { get { 
+                if (psicos is null)
+                {
+                    return "No hay encargados";
+                }
                 if (psicos.Count == 1)
                 {
                     return psicos[0].nombre + " " + psicos[0].apellidoPaterno + " " + psicos[0].apellidoMaterno;
-                } else
+                } 
+                string res = "";
+                foreach (var psico in psicos)
                 {
-                    string res = "";
-                    foreach (var psico in psicos)
-                    {
-                        res += psico.nombre + " " + psico.apellidoPaterno + " " + psico.apellidoMaterno + ", ";
-                    }
-                    res = res.Substring(0, res.Length - 2);
-                    return res;
+                    res += psico.nombre + " " + psico.apellidoPaterno + " " + psico.apellidoMaterno + ", ";
                 }
+                res = res.Substring(0, res.Length - 2);
+                return res;
             } }
 
         public DateTime FechaInicio { get => curso.fechaInicio; }
@@ -112,6 +120,8 @@ namespace InterfazDATMA
 
         public string Grupo { get => grupo.nombrePromocion; }
 
-        
+        public int  NumInscritos { get => numInscritos; }
+
+        public string NumInscritosStr { get => numInscritos + "/" + grupo.maxCantCuidadores; }
     }
 }

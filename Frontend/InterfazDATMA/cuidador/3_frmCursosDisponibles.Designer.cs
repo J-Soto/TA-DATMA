@@ -302,6 +302,7 @@ namespace InterfazDATMA
             // 
             // numins
             // 
+            this.numins.DataPropertyName = "NumInscritosStr";
             this.numins.HeaderText = "# Ins.";
             this.numins.Name = "numins";
             this.numins.ReadOnly = true;
