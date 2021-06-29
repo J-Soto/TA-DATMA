@@ -377,6 +377,7 @@ namespace InterfazDATMA.Administrador
             {
                 this.checkSoloTutores.Enabled = false;
                 this.dgvUsuario.Columns[3].Visible = false;     // Oculto la columna de Tipo de Usuario
+                cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
                 for (int i=0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
@@ -392,6 +393,7 @@ namespace InterfazDATMA.Administrador
             {
                 this.checkSoloTutores.Enabled = true;
                 this.dgvUsuario.Columns[3].Visible = true;     // Muestro la columna de Tipo de Usuario
+                cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
                 for (int i = 0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
@@ -411,6 +413,7 @@ namespace InterfazDATMA.Administrador
             {
                 this.checkSoloPsicologos.Enabled = false;      
                 this.dgvUsuario.Columns[3].Visible = false;     // Oculto la columna de Tipo de Usuario
+                cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
                 for (int i = 0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
@@ -426,6 +429,7 @@ namespace InterfazDATMA.Administrador
             {
                 this.checkSoloPsicologos.Enabled = true;
                 this.dgvUsuario.Columns[3].Visible = true;     // Muestro la columna de Tipo de Usuario
+                cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
                 for (int i = 0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[3].Value != null)
@@ -444,6 +448,7 @@ namespace InterfazDATMA.Administrador
             if (this.checkSoloActivos.Checked)
             {
                 this.dgvUsuario.Columns[4].Visible = false;     // Oculto la columna de Activo
+                cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
                 for (int i = 0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[4].Value != null)
@@ -458,6 +463,7 @@ namespace InterfazDATMA.Administrador
             else
             {
                 this.dgvUsuario.Columns[4].Visible = true;     // Muestro la columna de Activo
+                cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
                 for (int i = 0; i < cantidadFilas; i++)
                 {
                     if (this.dgvUsuario.Rows[i].Cells[4].Value != null)
