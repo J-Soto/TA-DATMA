@@ -48,9 +48,11 @@ namespace InterfazDATMA
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnInscribirse = new MaterialSkin.Controls.MaterialFlatButton();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numins = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Encargado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Encargado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -165,9 +167,11 @@ namespace InterfazDATMA
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descripcion,
+            this.Grupo,
+            this.numins,
+            this.Encargado,
             this.FechaIni,
-            this.FechaFin,
-            this.Encargado});
+            this.FechaFin});
             this.dgvCursos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
@@ -289,15 +293,42 @@ namespace InterfazDATMA
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
             // 
-            // FechaIni
+            // Grupo
             // 
-            this.FechaIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FechaIni.DataPropertyName = "FechaInicio";
+            this.Grupo.DataPropertyName = "Grupo";
+            this.Grupo.HeaderText = "Grupo";
+            this.Grupo.Name = "Grupo";
+            this.Grupo.ReadOnly = true;
+            // 
+            // numins
+            // 
+            this.numins.HeaderText = "# Ins.";
+            this.numins.Name = "numins";
+            this.numins.ReadOnly = true;
+            // 
+            // Encargado
+            // 
+            this.Encargado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Encargado.DataPropertyName = "Encargado";
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(151)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.FechaIni.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Encargado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Encargado.HeaderText = "Encargado(s)";
+            this.Encargado.MinimumWidth = 10;
+            this.Encargado.Name = "Encargado";
+            this.Encargado.ReadOnly = true;
+            // 
+            // FechaIni
+            // 
+            this.FechaIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaIni.DataPropertyName = "FechaInicio";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(151)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.FechaIni.DefaultCellStyle = dataGridViewCellStyle4;
             this.FechaIni.HeaderText = "Fecha de Inicio";
             this.FechaIni.MinimumWidth = 10;
             this.FechaIni.Name = "FechaIni";
@@ -307,29 +338,15 @@ namespace InterfazDATMA
             // 
             this.FechaFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FechaFin.DataPropertyName = "FechaFin";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(151)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.FechaFin.DefaultCellStyle = dataGridViewCellStyle4;
-            this.FechaFin.HeaderText = "Fecha de Fin";
-            this.FechaFin.MinimumWidth = 10;
-            this.FechaFin.Name = "FechaFin";
-            this.FechaFin.ReadOnly = true;
-            // 
-            // Encargado
-            // 
-            this.Encargado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Encargado.DataPropertyName = "Encargado";
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(151)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.Encargado.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Encargado.HeaderText = "Encargado(a)";
-            this.Encargado.MinimumWidth = 10;
-            this.Encargado.Name = "Encargado";
-            this.Encargado.ReadOnly = true;
+            this.FechaFin.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FechaFin.HeaderText = "Fecha de Fin";
+            this.FechaFin.MinimumWidth = 10;
+            this.FechaFin.Name = "FechaFin";
+            this.FechaFin.ReadOnly = true;
             // 
             // frmCursosDisponibles
             // 
@@ -369,8 +386,10 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numins;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Encargado;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Encargado;
     }
 }
