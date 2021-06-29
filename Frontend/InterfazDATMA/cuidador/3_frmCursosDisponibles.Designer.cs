@@ -295,7 +295,7 @@ namespace InterfazDATMA
             // 
             // Grupo
             // 
-            this.Grupo.DataPropertyName = "Grupo";
+            this.Grupo.DataPropertyName = "GrupoStr";
             this.Grupo.HeaderText = "Grupo";
             this.Grupo.Name = "Grupo";
             this.Grupo.ReadOnly = true;
