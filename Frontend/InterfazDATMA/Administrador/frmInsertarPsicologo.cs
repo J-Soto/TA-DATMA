@@ -154,9 +154,13 @@ namespace InterfazDATMA.Administrador
 
         private (string,string) generarUsuario()
         {
-            string user = Guid.NewGuid().ToString("N").Substring(0,75);
-            string password = Guid.NewGuid().ToString("N").Substring(0,15);
-            return (user,password);
+            string user = Guid.NewGuid().ToString("N");
+            if (user.Length > 75)
+                user = user.Substring(0, 75);
+            string password = Guid.NewGuid().ToString("N");
+            if (password.Length > 15)
+                password = password.Substring(0, 15);
+            return (user, password);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -223,7 +227,7 @@ namespace InterfazDATMA.Administrador
                         try
                         {
                             int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
-                            if (idPsicologo != 0)
+                            if (idPsicologo > 0)
                             {
                                 var credenciales = generarUsuario();
                                 string msgEnvioDatos = "";
@@ -233,6 +237,8 @@ namespace InterfazDATMA.Administrador
                                 psicologo.idPersona = idPsicologo;
                                 formPlantilla.abrirFormulario(formOperacionPersona);
                             }
+                            else
+                                MessageBox.Show("Registro fallido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
                         catch (Exception ex)

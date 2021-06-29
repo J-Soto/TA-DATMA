@@ -105,7 +105,7 @@ namespace InterfazDATMA.Administrador
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception();
+                    Console.WriteLine(ex);
                 }
             }
 
