@@ -21,6 +21,8 @@ namespace InterfazDATMA
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
         private PsicologoWS.PsicologoWSClient daoPsi = new PsicologoWS.PsicologoWSClient();
         private GrupoWS.GrupoWSClient daoGrupo = new GrupoWS.GrupoWSClient();
+        private SemanaWS.SemanaWSClient daoSemana = new SemanaWS.SemanaWSClient();
+        private AsistenciaWS.AsistenciaWSClient daoAsistencia = new AsistenciaWS.AsistenciaWSClient();
 
         private BindingList<CursoTutor> cursos = null;
         private List<CursoWS.curso> cursosDisponibles = null;
@@ -47,6 +49,35 @@ namespace InterfazDATMA
             daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, obj.Curso.idCurso);
             daoGrupo.insertarGrupoTutor(frmPlantillaGestion.tutor.idPersona, obj.Grupo.idGrupo, obj.Grupo.cantInfantes);
             var temp = cursos.ToList();
+
+            //Agregar tutor a las actividades del curso:
+            var auxSemanas = daoCurso.listarSemanasPorIdCurso(obj.Curso.idCurso);
+            if (auxSemanas != null)
+            {
+                BindingList<CursoWS.semana> semanas = new BindingList<CursoWS.semana>(auxSemanas.ToList());
+                foreach(CursoWS.semana recSemanas in semanas)
+                {
+                    var auxActividades = daoSemana.listarActividadesPorIdSemana(recSemanas.id);
+                    if(auxActividades != null)
+                    {
+                        BindingList<SemanaWS.actividad> actividades = new BindingList<SemanaWS.actividad>(auxActividades.ToList());
+                        foreach(SemanaWS.actividad recActividades in actividades)
+                        {
+                            AsistenciaWS.asistencia asistencia = new AsistenciaWS.asistencia();
+                            asistencia.usuario = new AsistenciaWS.usuario();
+                            asistencia.usuario.idUsuario = frmPlantillaGestion.tutor.idUsuario;
+                            asistencia.tipo = 0;
+                            asistencia.descripcion = "No Asistio";
+                            asistencia.actividad = new AsistenciaWS.actividad();
+                            asistencia.actividad.idActividad = recActividades.idActividad;
+                            daoAsistencia.insertarAsistencia(asistencia);
+                        }
+                    }
+                }
+
+            }
+            //
+
             temp.RemoveAll(item => item.Curso.idCurso == obj.Curso.idCurso);
             cursos = new BindingList<CursoTutor>(temp);
             dgvCursos.Refresh();
