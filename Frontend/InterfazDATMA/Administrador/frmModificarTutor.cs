@@ -56,7 +56,7 @@ namespace InterfazDATMA.Administrador
             txtCel.Text = "";
             rbtnHombre.Checked = false;
             rbtnMujer.Checked = false;
-            if (tutor.user != null) btnAsignarUsuario.Enabled = false;
+            if (tutor.user != null || tutor.user!="0") btnAsignarUsuario.Enabled = false;
         }
 
         private void completarDatosTutores()

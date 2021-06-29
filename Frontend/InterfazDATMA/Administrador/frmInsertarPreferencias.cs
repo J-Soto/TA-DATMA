@@ -93,6 +93,8 @@ namespace InterfazDATMA.Administrador
             {
                 try
                 {
+                    tutorAux.user = "0";
+                    tutorAux.password = "admin";
                     int idTutor = daoTutor.insertarTutor(tutorAux);
                     if (idTutor != 0)
                     {
