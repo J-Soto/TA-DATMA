@@ -776,6 +776,9 @@
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.insertarRequerimientoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.insertarTutorCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursoWS\InterfazDATMA.CursoWS.listarCursosDeTutorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -854,6 +857,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.eliminarGrupoTutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GrupoWS\InterfazDATMA.GrupoWS.grupo.datasource">

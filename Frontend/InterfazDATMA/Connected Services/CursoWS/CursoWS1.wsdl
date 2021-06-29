@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://54.157.215.104:8080/EnvioEmail/CursoWS?xsd=1" namespace="http://services.datmasoft.datma.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarCurso">
-    <part name="parameters" element="tns:insertarCurso" />
-  </message>
-  <message name="insertarCursoResponse">
-    <part name="parameters" element="tns:insertarCursoResponse" />
-  </message>
   <message name="eliminarCurso">
     <part name="parameters" element="tns:eliminarCurso" />
   </message>
   <message name="eliminarCursoResponse">
     <part name="parameters" element="tns:eliminarCursoResponse" />
+  </message>
+  <message name="insertarCurso">
+    <part name="parameters" element="tns:insertarCurso" />
+  </message>
+  <message name="insertarCursoResponse">
+    <part name="parameters" element="tns:insertarCursoResponse" />
   </message>
   <message name="modificarCurso">
     <part name="parameters" element="tns:modificarCurso" />
@@ -28,6 +28,18 @@
   </message>
   <message name="listarCursosResponse">
     <part name="parameters" element="tns:listarCursosResponse" />
+  </message>
+  <message name="eliminarPsicologoCurso">
+    <part name="parameters" element="tns:eliminarPsicologoCurso" />
+  </message>
+  <message name="eliminarPsicologoCursoResponse">
+    <part name="parameters" element="tns:eliminarPsicologoCursoResponse" />
+  </message>
+  <message name="insertarTutorCurso">
+    <part name="parameters" element="tns:insertarTutorCurso" />
+  </message>
+  <message name="insertarTutorCursoResponse">
+    <part name="parameters" element="tns:insertarTutorCursoResponse" />
   </message>
   <message name="listarCursosDisponibles">
     <part name="parameters" element="tns:listarCursosDisponibles" />
@@ -47,47 +59,11 @@
   <message name="listarCursosPsicologoResponse">
     <part name="parameters" element="tns:listarCursosPsicologoResponse" />
   </message>
-  <message name="modificarCursoTema">
-    <part name="parameters" element="tns:modificarCursoTema" />
+  <message name="listarSemanasPorIdCurso">
+    <part name="parameters" element="tns:listarSemanasPorIdCurso" />
   </message>
-  <message name="modificarCursoTemaResponse">
-    <part name="parameters" element="tns:modificarCursoTemaResponse" />
-  </message>
-  <message name="insertarRequerimiento">
-    <part name="parameters" element="tns:insertarRequerimiento" />
-  </message>
-  <message name="insertarRequerimientoResponse">
-    <part name="parameters" element="tns:insertarRequerimientoResponse" />
-  </message>
-  <message name="eliminarRequerimiento">
-    <part name="parameters" element="tns:eliminarRequerimiento" />
-  </message>
-  <message name="eliminarRequerimientoResponse">
-    <part name="parameters" element="tns:eliminarRequerimientoResponse" />
-  </message>
-  <message name="eliminarPsicologoCurso">
-    <part name="parameters" element="tns:eliminarPsicologoCurso" />
-  </message>
-  <message name="eliminarPsicologoCursoResponse">
-    <part name="parameters" element="tns:eliminarPsicologoCursoResponse" />
-  </message>
-  <message name="modificarRequerimiento">
-    <part name="parameters" element="tns:modificarRequerimiento" />
-  </message>
-  <message name="modificarRequerimientoResponse">
-    <part name="parameters" element="tns:modificarRequerimientoResponse" />
-  </message>
-  <message name="listarCursosGrupoPsicologo">
-    <part name="parameters" element="tns:listarCursosGrupoPsicologo" />
-  </message>
-  <message name="listarCursosGrupoPsicologoResponse">
-    <part name="parameters" element="tns:listarCursosGrupoPsicologoResponse" />
-  </message>
-  <message name="listarTemasPorIdCurso">
-    <part name="parameters" element="tns:listarTemasPorIdCurso" />
-  </message>
-  <message name="listarTemasPorIdCursoResponse">
-    <part name="parameters" element="tns:listarTemasPorIdCursoResponse" />
+  <message name="listarSemanasPorIdCursoResponse">
+    <part name="parameters" element="tns:listarSemanasPorIdCursoResponse" />
   </message>
   <message name="listarRequerimientoPorIdCurso">
     <part name="parameters" element="tns:listarRequerimientoPorIdCurso" />
@@ -95,23 +71,11 @@
   <message name="listarRequerimientoPorIdCursoResponse">
     <part name="parameters" element="tns:listarRequerimientoPorIdCursoResponse" />
   </message>
-  <message name="listarGruposPorIdCurso">
-    <part name="parameters" element="tns:listarGruposPorIdCurso" />
+  <message name="modificarRequerimiento">
+    <part name="parameters" element="tns:modificarRequerimiento" />
   </message>
-  <message name="listarGruposPorIdCursoResponse">
-    <part name="parameters" element="tns:listarGruposPorIdCursoResponse" />
-  </message>
-  <message name="insertarCursoTema">
-    <part name="parameters" element="tns:insertarCursoTema" />
-  </message>
-  <message name="insertarCursoTemaResponse">
-    <part name="parameters" element="tns:insertarCursoTemaResponse" />
-  </message>
-  <message name="eliminarCursoTema">
-    <part name="parameters" element="tns:eliminarCursoTema" />
-  </message>
-  <message name="eliminarCursoTemaResponse">
-    <part name="parameters" element="tns:eliminarCursoTemaResponse" />
+  <message name="modificarRequerimientoResponse">
+    <part name="parameters" element="tns:modificarRequerimientoResponse" />
   </message>
   <message name="insertarPsicologoCurso">
     <part name="parameters" element="tns:insertarPsicologoCurso" />
@@ -119,26 +83,68 @@
   <message name="insertarPsicologoCursoResponse">
     <part name="parameters" element="tns:insertarPsicologoCursoResponse" />
   </message>
+  <message name="eliminarRequerimiento">
+    <part name="parameters" element="tns:eliminarRequerimiento" />
+  </message>
+  <message name="eliminarRequerimientoResponse">
+    <part name="parameters" element="tns:eliminarRequerimientoResponse" />
+  </message>
+  <message name="listarCursosGrupoPsicologo">
+    <part name="parameters" element="tns:listarCursosGrupoPsicologo" />
+  </message>
+  <message name="listarCursosGrupoPsicologoResponse">
+    <part name="parameters" element="tns:listarCursosGrupoPsicologoResponse" />
+  </message>
+  <message name="insertarCursoTema">
+    <part name="parameters" element="tns:insertarCursoTema" />
+  </message>
+  <message name="insertarCursoTemaResponse">
+    <part name="parameters" element="tns:insertarCursoTemaResponse" />
+  </message>
+  <message name="modificarCursoTema">
+    <part name="parameters" element="tns:modificarCursoTema" />
+  </message>
+  <message name="modificarCursoTemaResponse">
+    <part name="parameters" element="tns:modificarCursoTemaResponse" />
+  </message>
+  <message name="listarTemasPorIdCurso">
+    <part name="parameters" element="tns:listarTemasPorIdCurso" />
+  </message>
+  <message name="listarTemasPorIdCursoResponse">
+    <part name="parameters" element="tns:listarTemasPorIdCursoResponse" />
+  </message>
+  <message name="listarGruposPorIdCurso">
+    <part name="parameters" element="tns:listarGruposPorIdCurso" />
+  </message>
+  <message name="listarGruposPorIdCursoResponse">
+    <part name="parameters" element="tns:listarGruposPorIdCursoResponse" />
+  </message>
+  <message name="eliminarCursoTema">
+    <part name="parameters" element="tns:eliminarCursoTema" />
+  </message>
+  <message name="eliminarCursoTemaResponse">
+    <part name="parameters" element="tns:eliminarCursoTemaResponse" />
+  </message>
+  <message name="insertarRequerimiento">
+    <part name="parameters" element="tns:insertarRequerimiento" />
+  </message>
+  <message name="insertarRequerimientoResponse">
+    <part name="parameters" element="tns:insertarRequerimientoResponse" />
+  </message>
   <message name="listarCursosDeTutor">
     <part name="parameters" element="tns:listarCursosDeTutor" />
   </message>
   <message name="listarCursosDeTutorResponse">
     <part name="parameters" element="tns:listarCursosDeTutorResponse" />
   </message>
-  <message name="listarSemanasPorIdCurso">
-    <part name="parameters" element="tns:listarSemanasPorIdCurso" />
-  </message>
-  <message name="listarSemanasPorIdCursoResponse">
-    <part name="parameters" element="tns:listarSemanasPorIdCursoResponse" />
-  </message>
   <portType name="CursoWS">
-    <operation name="insertarCurso">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoRequest" message="tns:insertarCurso" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
-    </operation>
     <operation name="eliminarCurso">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarCursoRequest" message="tns:eliminarCurso" />
       <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarCursoResponse" message="tns:eliminarCursoResponse" />
+    </operation>
+    <operation name="insertarCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoRequest" message="tns:insertarCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
     </operation>
     <operation name="modificarCurso">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarCursoRequest" message="tns:modificarCurso" />
@@ -147,6 +153,14 @@
     <operation name="listarCursos">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosRequest" message="tns:listarCursos" />
       <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosResponse" message="tns:listarCursosResponse" />
+    </operation>
+    <operation name="eliminarPsicologoCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoRequest" message="tns:eliminarPsicologoCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoResponse" message="tns:eliminarPsicologoCursoResponse" />
+    </operation>
+    <operation name="insertarTutorCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarTutorCursoRequest" message="tns:insertarTutorCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarTutorCursoResponse" message="tns:insertarTutorCursoResponse" />
     </operation>
     <operation name="listarCursosDisponibles">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosDisponiblesRequest" message="tns:listarCursosDisponibles" />
@@ -160,66 +174,62 @@
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosPsicologoRequest" message="tns:listarCursosPsicologo" />
       <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosPsicologoResponse" message="tns:listarCursosPsicologoResponse" />
     </operation>
-    <operation name="modificarCursoTema">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarCursoTemaRequest" message="tns:modificarCursoTema" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarCursoTemaResponse" message="tns:modificarCursoTemaResponse" />
-    </operation>
-    <operation name="insertarRequerimiento">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarRequerimientoRequest" message="tns:insertarRequerimiento" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarRequerimientoResponse" message="tns:insertarRequerimientoResponse" />
-    </operation>
-    <operation name="eliminarRequerimiento">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarRequerimientoRequest" message="tns:eliminarRequerimiento" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarRequerimientoResponse" message="tns:eliminarRequerimientoResponse" />
-    </operation>
-    <operation name="eliminarPsicologoCurso">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoRequest" message="tns:eliminarPsicologoCurso" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarPsicologoCursoResponse" message="tns:eliminarPsicologoCursoResponse" />
-    </operation>
-    <operation name="modificarRequerimiento">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarRequerimientoRequest" message="tns:modificarRequerimiento" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarRequerimientoResponse" message="tns:modificarRequerimientoResponse" />
-    </operation>
-    <operation name="listarCursosGrupoPsicologo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosGrupoPsicologoRequest" message="tns:listarCursosGrupoPsicologo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosGrupoPsicologoResponse" message="tns:listarCursosGrupoPsicologoResponse" />
-    </operation>
-    <operation name="listarTemasPorIdCurso">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarTemasPorIdCursoRequest" message="tns:listarTemasPorIdCurso" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarTemasPorIdCursoResponse" message="tns:listarTemasPorIdCursoResponse" />
+    <operation name="listarSemanasPorIdCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarSemanasPorIdCursoRequest" message="tns:listarSemanasPorIdCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarSemanasPorIdCursoResponse" message="tns:listarSemanasPorIdCursoResponse" />
     </operation>
     <operation name="listarRequerimientoPorIdCurso">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarRequerimientoPorIdCursoRequest" message="tns:listarRequerimientoPorIdCurso" />
       <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarRequerimientoPorIdCursoResponse" message="tns:listarRequerimientoPorIdCursoResponse" />
     </operation>
-    <operation name="listarGruposPorIdCurso">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarGruposPorIdCursoRequest" message="tns:listarGruposPorIdCurso" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarGruposPorIdCursoResponse" message="tns:listarGruposPorIdCursoResponse" />
-    </operation>
-    <operation name="insertarCursoTema">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoTemaRequest" message="tns:insertarCursoTema" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoTemaResponse" message="tns:insertarCursoTemaResponse" />
-    </operation>
-    <operation name="eliminarCursoTema">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarCursoTemaRequest" message="tns:eliminarCursoTema" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarCursoTemaResponse" message="tns:eliminarCursoTemaResponse" />
+    <operation name="modificarRequerimiento">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarRequerimientoRequest" message="tns:modificarRequerimiento" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarRequerimientoResponse" message="tns:modificarRequerimientoResponse" />
     </operation>
     <operation name="insertarPsicologoCurso">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarPsicologoCursoRequest" message="tns:insertarPsicologoCurso" />
       <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarPsicologoCursoResponse" message="tns:insertarPsicologoCursoResponse" />
     </operation>
+    <operation name="eliminarRequerimiento">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarRequerimientoRequest" message="tns:eliminarRequerimiento" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarRequerimientoResponse" message="tns:eliminarRequerimientoResponse" />
+    </operation>
+    <operation name="listarCursosGrupoPsicologo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosGrupoPsicologoRequest" message="tns:listarCursosGrupoPsicologo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosGrupoPsicologoResponse" message="tns:listarCursosGrupoPsicologoResponse" />
+    </operation>
+    <operation name="insertarCursoTema">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoTemaRequest" message="tns:insertarCursoTema" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarCursoTemaResponse" message="tns:insertarCursoTemaResponse" />
+    </operation>
+    <operation name="modificarCursoTema">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarCursoTemaRequest" message="tns:modificarCursoTema" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/modificarCursoTemaResponse" message="tns:modificarCursoTemaResponse" />
+    </operation>
+    <operation name="listarTemasPorIdCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarTemasPorIdCursoRequest" message="tns:listarTemasPorIdCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarTemasPorIdCursoResponse" message="tns:listarTemasPorIdCursoResponse" />
+    </operation>
+    <operation name="listarGruposPorIdCurso">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarGruposPorIdCursoRequest" message="tns:listarGruposPorIdCurso" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarGruposPorIdCursoResponse" message="tns:listarGruposPorIdCursoResponse" />
+    </operation>
+    <operation name="eliminarCursoTema">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarCursoTemaRequest" message="tns:eliminarCursoTema" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/eliminarCursoTemaResponse" message="tns:eliminarCursoTemaResponse" />
+    </operation>
+    <operation name="insertarRequerimiento">
+      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarRequerimientoRequest" message="tns:insertarRequerimiento" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/insertarRequerimientoResponse" message="tns:insertarRequerimientoResponse" />
+    </operation>
     <operation name="listarCursosDeTutor">
       <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosDeTutorRequest" message="tns:listarCursosDeTutor" />
       <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarCursosDeTutorResponse" message="tns:listarCursosDeTutorResponse" />
     </operation>
-    <operation name="listarSemanasPorIdCurso">
-      <input wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarSemanasPorIdCursoRequest" message="tns:listarSemanasPorIdCurso" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/CursoWS/listarSemanasPorIdCursoResponse" message="tns:listarSemanasPorIdCursoResponse" />
-    </operation>
   </portType>
   <binding name="CursoWSPortBinding" type="tns:CursoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarCurso">
+    <operation name="eliminarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -228,7 +238,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCurso">
+    <operation name="insertarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -247,6 +257,24 @@
       </output>
     </operation>
     <operation name="listarCursos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPsicologoCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTutorCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -282,61 +310,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCursoTema">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarRequerimiento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarRequerimiento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarPsicologoCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarRequerimiento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCursosGrupoPsicologo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTemasPorIdCurso">
+    <operation name="listarSemanasPorIdCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -354,25 +328,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarGruposPorIdCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCursoTema">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarCursoTema">
+    <operation name="modificarRequerimiento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -390,7 +346,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCursosDeTutor">
+    <operation name="eliminarRequerimiento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -399,7 +355,70 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarSemanasPorIdCurso">
+    <operation name="listarCursosGrupoPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCursoTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCursoTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTemasPorIdCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarGruposPorIdCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCursoTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarRequerimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosDeTutor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

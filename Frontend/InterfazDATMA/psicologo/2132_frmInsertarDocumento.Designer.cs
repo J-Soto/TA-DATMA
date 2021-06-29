@@ -44,7 +44,7 @@ namespace InterfazDATMA.psicologo
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(80, 85);
+            this.label2.Location = new System.Drawing.Point(103, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 29);
             this.label2.TabIndex = 10;
@@ -52,14 +52,14 @@ namespace InterfazDATMA.psicologo
             // 
             // txtRutaArchivo
             // 
-            this.txtRutaArchivo.Location = new System.Drawing.Point(205, 88);
+            this.txtRutaArchivo.Location = new System.Drawing.Point(228, 127);
             this.txtRutaArchivo.Name = "txtRutaArchivo";
             this.txtRutaArchivo.Size = new System.Drawing.Size(492, 26);
             this.txtRutaArchivo.TabIndex = 11;
             // 
             // btnSubirArchivo
             // 
-            this.btnSubirArchivo.Location = new System.Drawing.Point(729, 88);
+            this.btnSubirArchivo.Location = new System.Drawing.Point(752, 127);
             this.btnSubirArchivo.Name = "btnSubirArchivo";
             this.btnSubirArchivo.Size = new System.Drawing.Size(98, 35);
             this.btnSubirArchivo.TabIndex = 12;
@@ -72,7 +72,7 @@ namespace InterfazDATMA.psicologo
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 155);
+            this.label1.Location = new System.Drawing.Point(54, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 29);
             this.label1.TabIndex = 13;
@@ -80,7 +80,7 @@ namespace InterfazDATMA.psicologo
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(208, 160);
+            this.txtDescripcion.Location = new System.Drawing.Point(231, 199);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(488, 158);
             this.txtDescripcion.TabIndex = 14;
@@ -88,7 +88,7 @@ namespace InterfazDATMA.psicologo
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(318, 414);
+            this.btnCancelar.Location = new System.Drawing.Point(341, 453);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(147, 40);
             this.btnCancelar.TabIndex = 15;
@@ -98,7 +98,7 @@ namespace InterfazDATMA.psicologo
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(534, 417);
+            this.btnGuardar.Location = new System.Drawing.Point(557, 456);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(147, 35);
             this.btnGuardar.TabIndex = 16;

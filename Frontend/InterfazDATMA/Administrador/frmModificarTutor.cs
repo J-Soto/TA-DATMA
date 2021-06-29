@@ -81,12 +81,12 @@ namespace InterfazDATMA.Administrador
                 rbtnMujer.Checked = true;
             }
             // Si se tiene la foto de perfil guardada en BD, esta se carga en PictureBox
-            /*
+
             if (tutor.fotoPerfil != null)
             {
                 MemoryStream ms = new MemoryStream(tutor.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
-            }*/
+            }
             // Distrito
             if (tutor.distrito != null)
                 txtDistrito.Text = tutor.distrito.nombre;

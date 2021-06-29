@@ -50,10 +50,19 @@ namespace InterfazDATMA
         private void btnGuardar_Click(object sender, System.EventArgs e)
         {
             video = new MaterialWS.video();
-            video.descripcion = txtDescripcion.Text;
-            video.linkVideo = txtLinkVideo.Text;
 
-            this.DialogResult = DialogResult.OK;
+            if(txtLinkVideo.Text == "" || txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos","Mensaje de advertencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                video.descripcion = txtDescripcion.Text;
+                video.linkVideo = txtLinkVideo.Text;
+
+                this.DialogResult = DialogResult.OK;
+            }
+
         }
 
         private void btnCancelar_Click(object sender, System.EventArgs e)

@@ -18,68 +18,112 @@ namespace InterfazDATMA
         public frmListaCursoInscritos formAnterior;
         private frmPlantillaGestion plantilla;
 
-        private CursoWS.CursoWSClient daoCurso;
-        private PsicologoWS.PsicologoWSClient daoPsi;
-        private PsicologoWS.psicologo psicologo; 
-        public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla)
+        private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
+        private PsicologoWS.PsicologoWSClient daoPsi = new PsicologoWS.PsicologoWSClient();
+        private GrupoWS.GrupoWSClient daoGrupo = new GrupoWS.GrupoWSClient();
+
+        private BindingList<CursoTutor> cursos = null;
+        private List<CursoWS.curso> cursosDisponibles = null;
+
+        public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla, List<CursoWS.curso> cursosDisponibles)
         {
             InitializeComponent();
             Design.Ini(this);
             this.formAnterior = formAnterior;
             this.plantilla = plantilla;
+            // cursos en el que el psicologo no se ha inscrito
+            this.cursosDisponibles = cursosDisponibles;
 
-            daoCurso = new CursoWS.CursoWSClient();
-            daoPsi = new PsicologoWS.PsicologoWSClient();
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            BindingList<CursoWS.curso> lCursos;
-            try
-            {
-                lCursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosDisponibles().ToList());
-            }
-            catch (ArgumentNullException)
-            {
-                lCursos = null;
-            }
-            dgvCursos.DataSource = lCursos;
-            dgvCursos.Refresh();
-        }
-
-        private void frmCursosDisponibles_Load(object sender, EventArgs e)
-        {
-
+            Fetch();
+            dgvCursos.DataSource = cursos;
         }
 
         private void btnInscribirse_Click_1(object sender, EventArgs e)
         {
+            // inscribirse
+            int index = dgvCursos.CurrentCell.RowIndex;
+            var obj = cursos[index];
+            daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, obj.Curso.idCurso);
+            daoGrupo.insertarGrupoTutor(frmPlantillaGestion.tutor.idPersona, obj.Grupo.idGrupo, obj.Grupo.cantInfantes);
+            var temp = cursos.ToList();
+            temp.RemoveAll(item => item.Curso.idCurso == obj.Curso.idCurso);
+            cursos = new BindingList<CursoTutor>(temp);
+            dgvCursos.Refresh();
             plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
-
         }
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)
         {
-            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla));
+            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla, cursos[dgvCursos.CurrentCell.RowIndex]));
         }
 
-        private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void Fetch()
         {
-            CursoWS.curso curso = (CursoWS.curso)dgvCursos.Rows[e.RowIndex].DataBoundItem;
-            dgvCursos.Rows[e.RowIndex].Cells["Modulo"].Value = curso.descripcion;
-            dgvCursos.Rows[e.RowIndex].Cells["FechaIni"].Value = curso.fechaInicio;
-            dgvCursos.Rows[e.RowIndex].Cells["FechaFin"].Value = curso.fechaFin;
-            BindingList<PsicologoWS.psicologo> lPsi;
-            try
+            cursos = new BindingList<CursoTutor>();
+            foreach (var curso in cursosDisponibles)
             {
-                lPsi = new BindingList<PsicologoWS.psicologo>(daoPsi.listarPsicologosPorIdCurso(curso.idCurso).ToList());
-                if (lPsi.Count != 0)
-                    dgvCursos.Rows[e.RowIndex].Cells["Encargado"].Value = lPsi[0].nombre + " " + lPsi[0].apellidoPaterno + " " + lPsi[0].apellidoMaterno;
+                var grupos = daoGrupo.listarGrupoPorIdCurso(curso.idCurso);
+                if (grupos is object)
+                {
+                    foreach (var grupo in grupos)
+                    {
+                        var psico = daoGrupo.listarPsicologosPorIdGrupo(grupo.idGrupo);
+                        int numInscritos = daoGrupo.getGrupoNumInscritos(grupo.idGrupo);
+                        cursos.Add(new CursoTutor(curso, grupo, psico, numInscritos));
+                    }
+                }
             }
-            catch (Exception)
-            {
-
-                lPsi = null;
-            }
-            
         }
+    }
+
+    public class CursoTutor
+    {
+        private CursoWS.curso curso;
+        private GrupoWS.grupo grupo;
+        private List<GrupoWS.psicologo> psicos = null;
+        private int numInscritos;
+
+        public CursoTutor(CursoWS.curso curso, GrupoWS.grupo grupo, GrupoWS.psicologo[] psicos, int numInscritos)
+        {
+            this.curso = curso;
+            this.grupo = grupo;
+            this.numInscritos = numInscritos;
+            if (psicos is object)
+            {
+                this.psicos = new List<GrupoWS.psicologo>(psicos);
+            }
+        }
+
+        public string Encargado { get { 
+                if (psicos is null)
+                {
+                    return "No hay encargados";
+                }
+                string res = "";
+                foreach (var psico in psicos)
+                {
+                    res += psico.nombre + " " + psico.apellidoPaterno + " " + psico.apellidoMaterno + ", ";
+                }
+                return res.Substring(0, res.Length - 2);
+            } }
+
+        public DateTime FechaInicio { get => curso.fechaInicio; }
+
+        public DateTime FechaFin { get => curso.fechaFin; }
+
+        public string Modulo { get => curso.descripcion; }
+
+        public CursoWS.curso Curso { get => curso; }
+
+        public GrupoWS.psicologo Psicologo { get => psicos[0]; }
+
+        public string GrupoStr { get => grupo.nombrePromocion; }
+
+        public GrupoWS.grupo Grupo { get => grupo; }
+
+        public int  NumInscritos { get => numInscritos; }
+
+        public string NumInscritosStr { get => numInscritos + "/" + grupo.maxCantCuidadores; }
     }
 }
