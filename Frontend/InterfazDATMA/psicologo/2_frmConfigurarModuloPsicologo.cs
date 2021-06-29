@@ -130,17 +130,6 @@ namespace InterfazDATMA
 
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            var insertarSemana = new frmInsertarSemana
-            {
-                IdCurso = curso.idCurso
-            };
-            if (insertarSemana.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-        }
     }
 
     public class SemanaTema: INotifyPropertyChanged
