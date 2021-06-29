@@ -1296,6 +1296,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DATMA logo.png" />
+    <None Include="Imagenes\operacionesPersona.png" />
+    <None Include="Imagenes\operacionesCurso.png" />
+    <None Include="Imagenes\postulante.png" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Barcode.dll" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Chart.dll" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Diagram.dll" />
