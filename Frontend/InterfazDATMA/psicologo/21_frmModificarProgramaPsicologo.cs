@@ -29,12 +29,16 @@ namespace InterfazDATMA
 
         //Semana:
         private SemanaWS.semana currentSemana;
+
+        //Grupo Actual:
+        private int idGrupo;
   
         public frmModificarPrograma(frmConfigurarModuloPsicologo formConfigurarModuloPsicologo, frmPlantillaGestion formPlantillaGestion, GrupoWS.grupo auxGrupo, SemanaWS.semana auxSemana, CursoWS.curso auxCurso, string nombreTema)
         {
             InitializeComponent();
             Design.Ini(this);
-        
+            idGrupo = auxGrupo.idGrupo;
+
             this.formConfigurarModuloPsicologo = formConfigurarModuloPsicologo;
             this.formPlantillaGestion = formPlantillaGestion;
             //this.idCurso = idCurso;
@@ -51,7 +55,7 @@ namespace InterfazDATMA
             //Inicializar Pantalla
             rtxtDescripcion.Text = currentSemana.descripcion;
             rtxtTema.Text = currentSemana.nombre;
-            lblTema.Text = "Tema: " + nombreTema;
+            lblTema.Text = "Tema de la Semana: " + nombreTema;
 
             //Limitar edicion:
             rtxtDescripcion.ReadOnly = true;
@@ -59,6 +63,8 @@ namespace InterfazDATMA
             //rtxtTema.Enabled = false;
 
             dgvReuniones.AutoGenerateColumns = false;
+
+            //dgvReuniones.Sort(dgvReuniones.Columns[3], ListSortDirection.Ascending);
             inicializarPantalla();
         }
 
@@ -113,19 +119,23 @@ namespace InterfazDATMA
             int resultado = daoSemana.modificarSemana(currentSemana);
             formConfigurarModuloPsicologo.refrescarDataGridView(currentSemana);
 
-            //INSERTAR ACTIVIDADES: actividadesSemana
+            
         }
 
         private void btnAsitencia_Click(object sender, EventArgs e)
         {
-            formPlantillaGestion.abrirFormulario(new frmRegistrarAsistenciaCuidadores(this, formPlantillaGestion));
+            if(dgvReuniones.RowCount != 0)
+            {
+                SemanaWS.actividad auxActividad = dgvReuniones.CurrentRow.DataBoundItem as SemanaWS.actividad;
 
+                formPlantillaGestion.abrirFormulario(new frmRegistrarAsistenciaCuidadores(this, formPlantillaGestion, auxActividad.idActividad, idGrupo));
+            }
 
         }
 
         private void btnAgregarReunion_Click(object sender, EventArgs e) //INSERTAR ACTIVIDAD
         {
-            frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id, actividadesSemana);
+            frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id, actividadesSemana, idGrupo);
             formPlantillaGestion.abrirFormulario(formInsertarActividad);
         }
 

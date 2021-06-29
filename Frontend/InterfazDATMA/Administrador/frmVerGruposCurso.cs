@@ -31,7 +31,7 @@ namespace InterfazDATMA.Administrador
         //psicologos
         private BindingList<PsicologoWS.psicologo> psicologosGrupo;
 
-        public frmVerGruposCurso(frmInsertarCurso formInsertarCurso, frmPlantillaGestion formPlantillaGest, BindingList<Grupo_Curso> grupos)
+        public frmVerGruposCurso(frmInsertarCurso formInsertarCurso, frmPlantillaGestion formPlantillaGest, BindingList<Grupo_Curso> grupos, string nombreCurso)
         {
             this.DoubleBuffered = true;
             this.formInsertarCurso = formInsertarCurso;
@@ -48,6 +48,9 @@ namespace InterfazDATMA.Administrador
             dgvGrupos.AutoGenerateColumns = false;
             dgvGrupos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            //
+            lblNombreCurso.Text = "Curso: " + nombreCurso;
+            //
             inicializarPantalla();
         }
 

@@ -37,11 +37,19 @@ namespace InterfazDATMA.psicologo
         //Documentos:
         BindingList<MaterialWS.documento> documentosActividad;
 
-        public frmInsertarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idSemana, BindingList<SemanaWS.actividad> actividadesSemana)
+        //Grupo Actual:
+        private int idGrupo;
+        private GrupoWS.GrupoWSClient daoGrupo;
+
+        //Asistencia:
+        private AsistenciaWS.AsistenciaWSClient daoAsistencia;
+
+        public frmInsertarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idSemana, BindingList<SemanaWS.actividad> actividadesSemana, int idGrupo)
         {
             InitializeComponent();
             dgvDocumentos.AutoGenerateColumns = false;
             dgvVideos.AutoGenerateColumns = false;
+            this.idGrupo = idGrupo;
 
             Design.Ini(this);
             this.formModificarPrograma = formModificarPrograma;
@@ -62,6 +70,8 @@ namespace InterfazDATMA.psicologo
 
             daoActividad = new ActividadWS.ActividadWSClient();
             daoMaterial = new MaterialWS.MaterialWSClient();
+            daoGrupo = new GrupoWS.GrupoWSClient();
+            daoAsistencia = new AsistenciaWS.AsistenciaWSClient();
 
             //Inicializar lista de documentos y videos:
             videosActividad = new BindingList<MaterialWS.video>();
@@ -73,6 +83,9 @@ namespace InterfazDATMA.psicologo
             dgvDocumentos.DataSource = documentosActividad;
 
             this.actividadesSemana = actividadesSemana;
+
+            //
+            //dtpFechaReunion.MinDate = DateTime.Now;
         }
 
 
@@ -101,8 +114,6 @@ namespace InterfazDATMA.psicologo
             
             if (resultado != 0)
             {
-                MessageBox.Show("Se ha guardado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 txtNombreAct.Text = "";
                 dtpFechaReunion.Value = DateTime.Now;
                 dtpHInicio.Value = DateTime.Now;
@@ -136,6 +147,33 @@ namespace InterfazDATMA.psicologo
                     recDocumentos.actividad.idActividad = resultado;
                     daoMaterial.insertarMaterialDocumento(recDocumentos);
                 }
+
+                //Insertar tutores - asistencia:
+                var auxTutores =  daoGrupo.listarTutoresPorIdGrupo(idGrupo);
+                BindingList<GrupoWS.tutor> tutores;
+
+                if(auxTutores != null)
+                {
+                    tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
+                }
+                else
+                {
+                    tutores = new BindingList<GrupoWS.tutor>();
+                }
+
+                foreach(GrupoWS.tutor recTutores in tutores)
+                {
+                    AsistenciaWS.asistencia asist = new AsistenciaWS.asistencia();
+                    asist.actividad = new AsistenciaWS.actividad();
+                    asist.actividad.idActividad = resultado;
+                    asist.usuario = new AsistenciaWS.usuario();
+                    asist.usuario.idUsuario = recTutores.idUsuario;
+                    asist.descripcion = "Nueva asistencia";
+                    asist.tipo = 0; //0 -> no asistio y 1 -> asistio
+                    int aux = daoAsistencia.insertarAsistencia(asist);
+                }
+
+                MessageBox.Show("Se ha guardado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 videosActividad.Clear();
                 documentosActividad.Clear();

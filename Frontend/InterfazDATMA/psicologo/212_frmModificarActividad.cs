@@ -70,6 +70,8 @@ namespace InterfazDATMA.psicologo
             //Actividad:
             currentActividad = auxActividad;
 
+            //
+            //dtpFechaReunion.MinDate = DateTime.Now;
 
             inicializarPantalla();
         }

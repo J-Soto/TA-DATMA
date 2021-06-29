@@ -1011,7 +1011,7 @@ namespace InterfazDATMA.psicologo
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(253, 69);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Link:";
+            this.label5.Text = "Link de Zoom:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel14

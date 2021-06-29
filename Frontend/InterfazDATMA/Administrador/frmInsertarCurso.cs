@@ -58,6 +58,10 @@ namespace InterfazDATMA.Administrador
             btnModificar.Enabled = false;
             curso = new CursoWS.curso();
             inicializarPantalla();
+
+            //
+            //dtpFechaInicial.MinDate = DateTime.Now;
+            //
         }
 
 
@@ -211,8 +215,9 @@ namespace InterfazDATMA.Administrador
             int cantSemanas = Int32.Parse(txtCantSemana.Text);
             DateTime fechaInicialCur = dtpFechaInicial.Value;
             DateTime fechaFinalCur = dtpFechaFin.Value;
+            string auxNombreCurso = txtNombreCurso.Text;
 
-            frmSeleccionarTemasDeCurso formSeleccionarTemaCurso = new frmSeleccionarTemasDeCurso(this, formPlantillaGest, cantSemanas, fechaInicialCur, fechaFinalCur, temasCurso);
+            frmSeleccionarTemasDeCurso formSeleccionarTemaCurso = new frmSeleccionarTemasDeCurso(this, formPlantillaGest, cantSemanas, fechaInicialCur, fechaFinalCur, temasCurso, auxNombreCurso);
             formPlantillaGest.abrirFormulario(formSeleccionarTemaCurso);
 
 
@@ -220,7 +225,9 @@ namespace InterfazDATMA.Administrador
 
         private void btnVerGrupos_Click(object sender, EventArgs e)
         {
-            formVerGruposCurso = new frmVerGruposCurso(this, formPlantillaGest, gruposCurso);
+            string nombreCurso = txtNombreCurso.Text;
+
+            formVerGruposCurso = new frmVerGruposCurso(this, formPlantillaGest, gruposCurso, nombreCurso);
             formPlantillaGest.abrirFormulario(formVerGruposCurso);
 
         }

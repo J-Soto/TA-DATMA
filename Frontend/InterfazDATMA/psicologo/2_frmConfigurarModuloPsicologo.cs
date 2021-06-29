@@ -96,7 +96,7 @@ namespace InterfazDATMA
 
         private void btnListaCuidadores_Click(object sender, EventArgs e)
         {
-            formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla));
+            formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla, grupo.idGrupo));
         }
 
         private void btnInsertarSemana_Click(object sender, EventArgs e)
