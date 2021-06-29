@@ -54,7 +54,6 @@ namespace InterfazDATMA
             var auxSemanas = daoCurso.listarSemanasPorIdCurso(obj.Curso.idCurso);
             if (auxSemanas != null)
             {
-                MessageBox.Show("1");
                 BindingList<CursoWS.semana> semanas = new BindingList<CursoWS.semana>(auxSemanas.ToList());
                 foreach(CursoWS.semana recSemanas in semanas)
                 {
@@ -64,7 +63,6 @@ namespace InterfazDATMA
                         BindingList<SemanaWS.actividad> actividades = new BindingList<SemanaWS.actividad>(auxActividades.ToList());
                         foreach(SemanaWS.actividad recActividades in actividades)
                         {
-                            MessageBox.Show(recActividades.idActividad.ToString());
                             AsistenciaWS.asistencia asistencia = new AsistenciaWS.asistencia();
                             asistencia.usuario = new AsistenciaWS.usuario();
                             asistencia.usuario.idUsuario = frmPlantillaGestion.tutor.idUsuario;
