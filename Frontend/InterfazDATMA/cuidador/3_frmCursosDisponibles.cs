@@ -43,9 +43,14 @@ namespace InterfazDATMA
         {
             // inscribirse
             int index = dgvCursos.CurrentCell.RowIndex;
-            daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, cursos[index].Curso.idCurso);
+            var obj = cursos[index];
+            daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, obj.Curso.idCurso);
+            daoGrupo.insertarGrupoTutor(frmPlantillaGestion.tutor.idPersona, obj.Grupo.idGrupo, obj.Grupo.cantInfantes);
+            var temp = cursos.ToList();
+            temp.RemoveAll(item => item.Curso.idCurso == obj.Curso.idCurso);
+            cursos = new BindingList<CursoTutor>(temp);
+            dgvCursos.Refresh();
             plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
-            cursos.RemoveAt(index);
         }
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)
@@ -95,17 +100,12 @@ namespace InterfazDATMA
                 {
                     return "No hay encargados";
                 }
-                if (psicos.Count == 1)
-                {
-                    return psicos[0].nombre + " " + psicos[0].apellidoPaterno + " " + psicos[0].apellidoMaterno;
-                } 
                 string res = "";
                 foreach (var psico in psicos)
                 {
                     res += psico.nombre + " " + psico.apellidoPaterno + " " + psico.apellidoMaterno + ", ";
                 }
-                res = res.Substring(0, res.Length - 2);
-                return res;
+                return res.Substring(0, res.Length - 2);
             } }
 
         public DateTime FechaInicio { get => curso.fechaInicio; }
@@ -118,7 +118,9 @@ namespace InterfazDATMA
 
         public GrupoWS.psicologo Psicologo { get => psicos[0]; }
 
-        public string Grupo { get => grupo.nombrePromocion; }
+        public string GrupoStr { get => grupo.nombrePromocion; }
+
+        public GrupoWS.grupo Grupo { get => grupo; }
 
         public int  NumInscritos { get => numInscritos; }
 
