@@ -46,6 +46,7 @@ namespace InterfazDATMA
             // inscribirse
             int index = dgvCursos.CurrentCell.RowIndex;
             var obj = cursos[index];
+            // TODO: verificar que los requerimientos esten satisfechos y no se pase de cantidad de inscritos
             daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, obj.Curso.idCurso);
             daoGrupo.insertarGrupoTutor(frmPlantillaGestion.tutor.idPersona, obj.Grupo.idGrupo, obj.Grupo.cantInfantes);
             var temp = cursos.ToList();
