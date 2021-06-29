@@ -260,6 +260,7 @@ namespace InterfazDATMA.Administrador
             tutor.user = credenciales.Item1;
             tutor.password = credenciales.Item2;
             usuarioAsignado = true;
+            btnAsignarUsuario.Enabled = false;
         }
     }
 }

@@ -226,12 +226,15 @@ namespace InterfazDATMA.Administrador
                     {
                         try
                         {
+                            var credenciales = generarUsuario();
+                            psicologo.user = credenciales.Item1;
+                            psicologo.password = credenciales.Item2;
                             int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
                             if (idPsicologo > 0)
                             {
-                                var credenciales = generarUsuario();
+                                //var credenciales = generarUsuario();
                                 string msgEnvioDatos = "";
-                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, credenciales.Item1, credenciales.Item2) == 1)
+                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, psicologo.user, psicologo.password) == 1)
                                     msgEnvioDatos = ". Credenciales enviadas con exito.";
                                 MessageBox.Show("Se ha registrado con exito"+ msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 psicologo.idPersona = idPsicologo;
