@@ -40,7 +40,7 @@ namespace InterfazDATMA
 
 
             daoCurso = new CursoWS.CursoWSClient();
-            label1.Text = "Curso: " + curso.descripcion;
+            lblCurso.Text = "Curso: " + curso.descripcion;
             dgvPrograma.AutoGenerateColumns = false;
             pares = new BindingList<SemanaTema>(Fetch());
             dgvPrograma.DataSource = pares;
@@ -51,7 +51,7 @@ namespace InterfazDATMA
         private List<SemanaTema> Fetch()
         {
             var arr = new List<SemanaTema>();
-            
+
             var semanas = daoCurso.listarSemanasPorIdCurso(curso.idCurso);
             var temas = daoCurso.listarTemasPorIdCurso(curso.idCurso);
 
@@ -77,7 +77,6 @@ namespace InterfazDATMA
             return arr;
         }
 
-        
 
         public void refrescarDataGridView(SemanaWS.semana auxSemana)
         {
@@ -94,31 +93,8 @@ namespace InterfazDATMA
             dgvPrograma.Refresh();
         }
 
-        private void btnListaCuidadores_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla));
-        }
 
-        private void btnInsertarSemana_Click(object sender, EventArgs e)
-        {
-        }
 
-        private void btnModificarSemana_Click(object sender, EventArgs e)
-        {
-            SemanaTema auxSemTema = dgvPrograma.CurrentRow.DataBoundItem as SemanaTema;
-            SemanaWS.semana auxSemana = new SemanaWS.semana();
-            auxSemana.id = auxSemTema.Semana.id;
-            auxSemana.fechaInicio = auxSemTema.Semana.fechaInicio;
-            auxSemana.descripcion = auxSemTema.Semana.descripcion;
-            auxSemana.nombre = auxSemTema.Semana.nombre;
-
-            formPlantilla.abrirFormulario(new frmModificarPrograma(this, formPlantilla, grupo, auxSemana, curso, auxSemTema.Tema.nombre));
-        }
-
-        private void btnListaCursos_Click(object sender, EventArgs e)
-        {
-            formPlantilla.abrirFormulario(formGestionarModulos);
-        }
 
         private void tableLayoutPanel22_Paint(object sender, PaintEventArgs e)
         {
@@ -130,20 +106,34 @@ namespace InterfazDATMA
 
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            var insertarSemana = new frmInsertarSemana
-            {
-                IdCurso = curso.idCurso
-            };
-            if (insertarSemana.ShowDialog() == DialogResult.OK)
-            {
 
-            }
+        private void ModificarSemana_Click(object sender, EventArgs e)
+        {
+            SemanaTema auxSemTema = dgvPrograma.CurrentRow.DataBoundItem as SemanaTema;
+            SemanaWS.semana auxSemana = new SemanaWS.semana();
+            auxSemana.id = auxSemTema.Semana.id;
+            auxSemana.fechaInicio = auxSemTema.Semana.fechaInicio;
+            auxSemana.descripcion = auxSemTema.Semana.descripcion;
+            auxSemana.nombre = auxSemTema.Semana.nombre;
+
+            formPlantilla.abrirFormulario(new frmModificarPrograma(this, formPlantilla, grupo, auxSemana, curso, auxSemTema.Tema.nombre));
+
+
+        }
+
+        private void VolverCursos_Click(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(formGestionarModulos);
+        }
+
+        private void VolverCuidadores_Click(object sender, EventArgs e)
+        {
+            formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla, grupo.idGrupo));
+
         }
     }
 
-    public class SemanaTema: INotifyPropertyChanged
+    public class SemanaTema : INotifyPropertyChanged
     {
         private CursoWS.semana semana;
         private CursoWS.tema tema;

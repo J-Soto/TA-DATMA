@@ -36,10 +36,10 @@ namespace InterfazDATMA
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
             this.Modulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,54 +47,36 @@ namespace InterfazDATMA
             this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Encargado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnMasInfo = new MaterialSkin.Controls.MaterialFlatButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnInscribirse = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnInscribirse = new MaterialSkin.Controls.MaterialButton();
+            this.btnMasInfo = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(101, 0);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(755, 132);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Lista de Cursos Disponibles";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 64);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1620, 919);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(2462, 1434);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -107,7 +89,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1612, 175);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(2454, 278);
             this.tableLayoutPanel5.TabIndex = 48;
             // 
             // tableLayoutPanel3
@@ -118,17 +100,30 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Controls.Add(this.lblTitulo, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 21);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 31);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(959, 132);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1464, 214);
             this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Depth = 0;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblTitulo.Location = new System.Drawing.Point(149, 0);
+            this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(1165, 214);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Lista de Cursos Disponibles";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -136,14 +131,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel4.Controls.Add(this.dgvCursos, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel2, 2, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 183);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 286);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1620, 736);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(2462, 1148);
             this.tableLayoutPanel4.TabIndex = 29;
             // 
             // dgvCursos
@@ -171,7 +166,7 @@ namespace InterfazDATMA
             this.dgvCursos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursos.Location = new System.Drawing.Point(85, 40);
+            this.dgvCursos.Location = new System.Drawing.Point(127, 61);
             this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
@@ -192,7 +187,7 @@ namespace InterfazDATMA
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCursos.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCursos.RowTemplate.Height = 28;
-            this.dgvCursos.Size = new System.Drawing.Size(1288, 654);
+            this.dgvCursos.Size = new System.Drawing.Size(1961, 1025);
             this.dgvCursos.TabIndex = 19;
             // 
             // Modulo
@@ -249,12 +244,13 @@ namespace InterfazDATMA
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.panel7, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnInscribirse, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnMasInfo, 0, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1381, 40);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2096, 61);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -263,103 +259,76 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(235, 654);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(362, 1025);
             this.tableLayoutPanel2.TabIndex = 20;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel7.Controls.Add(this.btnMasInfo);
-            this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(4, 394);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(227, 122);
-            this.panel7.TabIndex = 13;
-            // 
-            // btnMasInfo
-            // 
-            this.btnMasInfo.AutoSize = true;
-            this.btnMasInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMasInfo.Depth = 0;
-            this.btnMasInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMasInfo.Location = new System.Drawing.Point(0, 0);
-            this.btnMasInfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnMasInfo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMasInfo.Name = "btnMasInfo";
-            this.btnMasInfo.Primary = false;
-            this.btnMasInfo.Size = new System.Drawing.Size(227, 122);
-            this.btnMasInfo.TabIndex = 26;
-            this.btnMasInfo.Text = "Ver mas informacion";
-            this.btnMasInfo.UseVisualStyleBackColor = true;
-            this.btnMasInfo.Click += new System.EventHandler(this.btnMasInfo_Click_1);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel6.Controls.Add(this.btnInscribirse);
-            this.panel6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(4, 134);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(227, 122);
-            this.panel6.TabIndex = 14;
             // 
             // btnInscribirse
             // 
-            this.btnInscribirse.AutoSize = true;
+            this.btnInscribirse.AutoSize = false;
             this.btnInscribirse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnInscribirse.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnInscribirse.Depth = 0;
             this.btnInscribirse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInscribirse.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnInscribirse.Location = new System.Drawing.Point(0, 0);
+            this.btnInscribirse.HighEmphasis = true;
+            this.btnInscribirse.Icon = null;
+            this.btnInscribirse.Location = new System.Drawing.Point(4, 211);
             this.btnInscribirse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnInscribirse.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInscribirse.Name = "btnInscribirse";
-            this.btnInscribirse.Primary = false;
-            this.btnInscribirse.Size = new System.Drawing.Size(227, 122);
-            this.btnInscribirse.TabIndex = 25;
+            this.btnInscribirse.Size = new System.Drawing.Size(354, 193);
+            this.btnInscribirse.TabIndex = 28;
             this.btnInscribirse.Text = "Inscribirse";
+            this.btnInscribirse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnInscribirse.UseAccentColor = false;
             this.btnInscribirse.UseVisualStyleBackColor = true;
             this.btnInscribirse.Click += new System.EventHandler(this.btnInscribirse_Click_1);
+            // 
+            // btnMasInfo
+            // 
+            this.btnMasInfo.AutoSize = false;
+            this.btnMasInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMasInfo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnMasInfo.Depth = 0;
+            this.btnMasInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMasInfo.HighEmphasis = true;
+            this.btnMasInfo.Icon = null;
+            this.btnMasInfo.Location = new System.Drawing.Point(4, 621);
+            this.btnMasInfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMasInfo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMasInfo.Name = "btnMasInfo";
+            this.btnMasInfo.Size = new System.Drawing.Size(354, 193);
+            this.btnMasInfo.TabIndex = 29;
+            this.btnMasInfo.Text = "Ver mas informacion";
+            this.btnMasInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnMasInfo.UseAccentColor = false;
+            this.btnMasInfo.UseVisualStyleBackColor = true;
+            this.btnMasInfo.Click += new System.EventHandler(this.btnMasInfo_Click_1);
             // 
             // frmCursosDisponibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1620, 919);
+            this.ClientSize = new System.Drawing.Size(2468, 1501);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmCursosDisponibles";
             this.Text = "Cursos Disponibles";
-            this.Load += new System.EventHandler(this.frmCursosDisponibles_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Panel panel7;
-        private MaterialSkin.Controls.MaterialFlatButton btnMasInfo;
-        private System.Windows.Forms.Panel panel6;
-        private MaterialSkin.Controls.MaterialFlatButton btnInscribirse;
+        //private MaterialSkin.Controls.MaterialFlatButton btnInscribirse;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.DataGridView dgvCursos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -368,5 +337,8 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Encargado;
+        private MaterialSkin.Controls.MaterialButton btnInscribirse;
+        private MaterialSkin.Controls.MaterialButton btnMasInfo;
+        private MaterialSkin.Controls.MaterialLabel lblTitulo;
     }
 }

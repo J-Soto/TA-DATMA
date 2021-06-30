@@ -9,6 +9,8 @@ namespace InterfazDATMA.util
 {
     class Design
     {
+       
+        
         public static void Ini(MaterialSkin.Controls.MaterialForm form )
         {
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;

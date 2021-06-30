@@ -16,8 +16,8 @@ namespace InterfazDATMA
     public partial class frmSinCursosDisponibles : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion plantillaGestion;
-        private frmListaCursoInscritos formAnterior; 
-        public frmSinCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantillaGestion)
+        private frmListaCursoInscritos formAnterior;
+        public frmSinCursosDisponibles(frmListaCursoInscritos formAnterior, frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
             Design.Ini(this);

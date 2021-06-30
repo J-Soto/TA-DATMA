@@ -36,12 +36,22 @@ namespace InterfazDATMA.psicologo
 
         //Documentos:
         BindingList<MaterialWS.documento> documentosActividad;
+        
+        //Grupo Actual:
+        private int idGrupo;
+        private GrupoWS.GrupoWSClient daoGrupo;
+
+        //Asistencia:
+        private AsistenciaWS.AsistenciaWSClient daoAsistencia;
 
         public frmInsertarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idSemana, BindingList<SemanaWS.actividad> actividadesSemana)
         {
             InitializeComponent();
+            
             dgvDocumentos.AutoGenerateColumns = false;
             dgvVideos.AutoGenerateColumns = false;
+            
+
 
             Design.Ini(this);
             this.formModificarPrograma = formModificarPrograma;
@@ -62,6 +72,8 @@ namespace InterfazDATMA.psicologo
 
             daoActividad = new ActividadWS.ActividadWSClient();
             daoMaterial = new MaterialWS.MaterialWSClient();
+            daoGrupo = new GrupoWS.GrupoWSClient();
+            daoAsistencia = new AsistenciaWS.AsistenciaWSClient();
 
             //Inicializar lista de documentos y videos:
             videosActividad = new BindingList<MaterialWS.video>();
@@ -73,16 +85,11 @@ namespace InterfazDATMA.psicologo
             dgvDocumentos.DataSource = documentosActividad;
 
             this.actividadesSemana = actividadesSemana;
+            //
+            //dtpFechaReunion.MinDate = DateTime.Now;
         }
 
 
-
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            formModificarPrograma.RefreshDataGridView();
-            formPlantillaGestion.abrirFormulario(formModificarPrograma);
-        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -96,13 +103,11 @@ namespace InterfazDATMA.psicologo
             actividad.horaFinStr = dtpHFin.Value.ToString();
             actividad.linkZoom = txtLinkZoom.Text;
 
-         
+
             int resultado = daoActividad.insertarActividad(actividad, idSemana);
-            
+
             if (resultado != 0)
             {
-                MessageBox.Show("Se ha guardado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 txtNombreAct.Text = "";
                 dtpFechaReunion.Value = DateTime.Now;
                 dtpHInicio.Value = DateTime.Now;
@@ -120,7 +125,7 @@ namespace InterfazDATMA.psicologo
 
                 actividadesSemana.Add(auxActividad);
 
-                foreach(MaterialWS.video recVideos in videosActividad)
+                foreach (MaterialWS.video recVideos in videosActividad)
                 {
                     recVideos.actividad = new MaterialWS.actividad();
                     recVideos.tipoMaterial = 1; //TIPO MATERIAL -> 1
@@ -137,6 +142,33 @@ namespace InterfazDATMA.psicologo
                     daoMaterial.insertarMaterialDocumento(recDocumentos);
                 }
 
+                //Insertar tutores - asistencia:
+                var auxTutores = daoGrupo.listarTutoresPorIdGrupo(idGrupo);
+                BindingList<GrupoWS.tutor> tutores;
+
+                if (auxTutores != null)
+                {
+                    tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
+                }
+                else
+                {
+                    tutores = new BindingList<GrupoWS.tutor>();
+                }
+
+                foreach (GrupoWS.tutor recTutores in tutores)
+                {
+                    AsistenciaWS.asistencia asist = new AsistenciaWS.asistencia();
+                    asist.actividad = new AsistenciaWS.actividad();
+                    asist.actividad.idActividad = resultado;
+                    asist.usuario = new AsistenciaWS.usuario();
+                    asist.usuario.idUsuario = recTutores.idUsuario;
+                    asist.descripcion = "Nueva asistencia";
+                    asist.tipo = 0; //0 -> no asistio y 1 -> asistio
+                    int aux = daoAsistencia.insertarAsistencia(asist);
+                }
+
+                MessageBox.Show("Se ha guardado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 videosActividad.Clear();
                 documentosActividad.Clear();
 
@@ -145,10 +177,39 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-
-
-        private void btnAgregarVid_Click_1(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
+            formModificarPrograma.RefreshDataGridView();
+            formPlantillaGestion.abrirFormulario(formModificarPrograma);
+        }
+
+
+        private void btnAgregarDoc_Click(object sender, EventArgs e)
+        {
+            frmInsertarDocumento formInsertarDocumento = new frmInsertarDocumento();
+            if (formInsertarDocumento.ShowDialog() == DialogResult.OK && formInsertarDocumento.Documento != null)
+            {
+                documentosActividad.Add(formInsertarDocumento.Documento);
+                dgvDocumentos.Refresh();
+            }
+
+        }
+
+        private void btnEliminarDoc_Click(object sender, EventArgs e)
+        {
+
+            if (dgvDocumentos.RowCount != 0)
+            {
+                MaterialWS.documento auxDocumento = dgvVideos.CurrentRow.DataBoundItem as MaterialWS.documento;
+                documentosActividad.Remove(auxDocumento);
+
+                dgvDocumentos.Refresh();
+            }
+        }
+
+        private void btnAgregarVid_Click(object sender, EventArgs e)
+        {
+
             frmAgregarMaterialPsicologo formAgregarVideo = new frmAgregarMaterialPsicologo();
 
             if (formAgregarVideo.ShowDialog() == DialogResult.OK && formAgregarVideo.Video != null)
@@ -157,9 +218,10 @@ namespace InterfazDATMA.psicologo
 
                 dgvVideos.Refresh();
             }
+
         }
 
-        private void btnEliminarVid_Click_1(object sender, EventArgs e)
+        private void btnEliminarVid_Click(object sender, EventArgs e)
         {
             if (dgvVideos.RowCount != 0)
             {
@@ -172,6 +234,9 @@ namespace InterfazDATMA.psicologo
             }
         }
 
+
+
+        
         private void dgvVideos_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             try
@@ -199,16 +264,6 @@ namespace InterfazDATMA.psicologo
                 catch (Exception ex)
                 {
                 }
-            }
-        }
-
-        private void btnAgregarDoc_Click(object sender, EventArgs e)
-        {
-            frmInsertarDocumento formInsertarDocumento = new frmInsertarDocumento();
-            if(formInsertarDocumento.ShowDialog() == DialogResult.OK && formInsertarDocumento.Documento != null)
-            {
-                documentosActividad.Add(formInsertarDocumento.Documento);
-                dgvDocumentos.Refresh();
             }
         }
 
@@ -253,15 +308,7 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-        private void btnEliminarDoc_Click(object sender, EventArgs e)
-        {
-            if (dgvDocumentos.RowCount != 0)
-            {
-                MaterialWS.documento auxDocumento = dgvVideos.CurrentRow.DataBoundItem as MaterialWS.documento;
-                documentosActividad.Remove(auxDocumento);
+       
 
-                dgvDocumentos.Refresh();
-            }
-        }
     }
 }

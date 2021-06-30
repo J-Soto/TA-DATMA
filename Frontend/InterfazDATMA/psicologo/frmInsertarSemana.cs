@@ -31,7 +31,7 @@ namespace InterfazDATMA
 
         public int IdCurso { get => idCurso; set => idCurso = value; }
 
-  
+
 
         private void frmInsertarSemana_VisibleChanged(object sender, EventArgs e)
         {
@@ -43,8 +43,15 @@ namespace InterfazDATMA
                 dgvTemas.DataSource = temasList;
             }
         }
+
         
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+            Close();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {/*
             var idCursoTema = daoCurso.insertarCursoTema(idCurso, temasList[dgvTemas.CurrentCell.RowIndex].id,
                 (DateTime)dateCursoFechaInicio.GetValue, dateCursoFechaFin.GetValue);
@@ -63,35 +70,6 @@ namespace InterfazDATMA
             daoSemana.insertarSemana(semana, idCursoTema);
             DialogResult = DialogResult.OK;
             */
-        }
-        
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void dateSemanaFechaInicio_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dateCursoFechaInicio_SelectedDateChanged(Nevron.Nov.Dom.NValueChangeEventArgs arg)
-        {
-
-        }
-
-        private void frmInsertarSemana_Load(object sender, EventArgs e)
-        {
 
         }
     }

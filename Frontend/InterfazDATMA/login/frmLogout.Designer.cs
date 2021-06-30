@@ -29,57 +29,90 @@ namespace InterfazDATMA.login
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAceptar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.bAceptar = new MaterialSkin.Controls.MaterialButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAceptar
+            // materialLabel1
             // 
-            this.btnAceptar.AutoSize = true;
-            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAceptar.Depth = 0;
-            this.btnAceptar.Location = new System.Drawing.Point(201, 336);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Primary = false;
-            this.btnAceptar.Size = new System.Drawing.Size(138, 36);
-            this.btnAceptar.TabIndex = 33;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(117, 35);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(338, 71);
+            this.materialLabel1.TabIndex = 38;
+            this.materialLabel1.Text = "Sesion cerrada con exito";
+            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // materialLabel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
-            this.label1.Location = new System.Drawing.Point(116, 152);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 33);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Sesion cerrada con exito";
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(117, 141);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(338, 71);
+            this.materialLabel2.TabIndex = 39;
+            this.materialLabel2.Text = "Gracias por utilizar nuestra aplicacion";
+            this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // bAceptar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
-            this.label2.Location = new System.Drawing.Point(23, 231);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(505, 33);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Gracias por utilizar nuestra aplicacion";
+            this.bAceptar.AutoSize = false;
+            this.bAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bAceptar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bAceptar.Depth = 0;
+            this.bAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bAceptar.HighEmphasis = true;
+            this.bAceptar.Icon = null;
+            this.bAceptar.Location = new System.Drawing.Point(118, 253);
+            this.bAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bAceptar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bAceptar.Name = "bAceptar";
+            this.bAceptar.Size = new System.Drawing.Size(336, 59);
+            this.bAceptar.TabIndex = 40;
+            this.bAceptar.Text = "Aceptar";
+            this.bAceptar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bAceptar.UseAccentColor = false;
+            this.bAceptar.UseVisualStyleBackColor = true;
+            this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.bAceptar, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel2, 1, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 64);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(574, 359);
+            this.tableLayoutPanel1.TabIndex = 41;
             // 
             // frmLogout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(577, 426);
-            this.ControlBox = false;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAceptar);
+            this.ClientSize = new System.Drawing.Size(580, 426);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogout";
@@ -87,14 +120,16 @@ namespace InterfazDATMA.login
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmLogout_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        //private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialButton bAceptar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

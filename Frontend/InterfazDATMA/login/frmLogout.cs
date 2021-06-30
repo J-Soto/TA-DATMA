@@ -28,11 +28,6 @@ namespace InterfazDATMA.login
 
         }
 
-        private void btnAceptar_Click_1(object sender, EventArgs e)
-        {
-
-            Application.Restart();
-        }
 
         private void lblNotificacionActiva_Click(object sender, EventArgs e)
         {
@@ -44,5 +39,9 @@ namespace InterfazDATMA.login
 
         }
 
+        private void bAceptar_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

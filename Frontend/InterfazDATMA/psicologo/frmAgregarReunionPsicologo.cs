@@ -20,42 +20,12 @@ namespace InterfazDATMA
         {
             InitializeComponent();
             Design.Ini(this);
-            dtpInicio.Format= "hh:mm tt";
+            dtpInicio.Format = DateTimePickerFormat.Short;
+            dtpFin.Format= DateTimePickerFormat.Short;
 
-            dtpFin.Format = "hh:mm tt";
-
-            dtpFechaReunion.Format = "hh:mm tt";
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
+            dtpFechaReunion.Format = DateTimePickerFormat.Short;
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGuardarReunion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void frmAgregarReunionPsicologo_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

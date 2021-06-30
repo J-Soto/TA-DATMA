@@ -46,24 +46,23 @@ namespace InterfazDATMA
             }
         }
 
-        private void btnNext_Click_1(object sender, EventArgs e)
-        {
-            estado += 1;
-            cambiarEstado(estado);
-
-        }
-
-        private void btnAnt_Click_1(object sender, EventArgs e)
+        private void btnAnt_Click(object sender, EventArgs e)
         {
             estado -= 1;
             cambiarEstado(estado);
 
         }
 
-        private void btnFinalizar_Click_1(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            estado += 1;
+            cambiarEstado(estado);
+
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this, plantillaGestion));
-
 
         }
     }

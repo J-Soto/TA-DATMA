@@ -35,10 +35,10 @@ namespace InterfazDATMA
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnFinalizar = new MaterialSkin.Controls.MaterialFlatButton();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnNext = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnAnt = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnAnt = new MaterialSkin.Controls.MaterialButton();
+            this.btnNext = new MaterialSkin.Controls.MaterialButton();
+            this.btnFinalizar = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxWalk)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -59,27 +59,27 @@ namespace InterfazDATMA
             this.pictureboxWalk.Location = new System.Drawing.Point(6, 6);
             this.pictureboxWalk.Margin = new System.Windows.Forms.Padding(6);
             this.pictureboxWalk.Name = "pictureboxWalk";
-            this.pictureboxWalk.Size = new System.Drawing.Size(1377, 612);
+            this.pictureboxWalk.Size = new System.Drawing.Size(1372, 693);
             this.pictureboxWalk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureboxWalk.TabIndex = 6;
             this.pictureboxWalk.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 64);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1744, 1125);
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.98103F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.01898F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1738, 1058);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // tableLayoutPanel2
@@ -89,12 +89,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.pictureboxWalk, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(177, 171);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(176, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1389, 781);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1384, 882);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // tableLayoutPanel3
@@ -102,83 +102,92 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.btnFinalizar, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnFinalizar, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 627);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 708);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1383, 151);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1378, 171);
             this.tableLayoutPanel3.TabIndex = 8;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.AutoSize = true;
-            this.btnFinalizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFinalizar.Depth = 0;
-            this.btnFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFinalizar.Location = new System.Drawing.Point(4, 81);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnFinalizar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Primary = false;
-            this.btnFinalizar.Size = new System.Drawing.Size(1375, 64);
-            this.btnFinalizar.TabIndex = 5;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click_1);
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.btnNext, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnAnt, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnNext, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1377, 69);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1372, 79);
             this.tableLayoutPanel4.TabIndex = 9;
-            // 
-            // btnNext
-            // 
-            this.btnNext.AutoSize = true;
-            this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNext.Depth = 0;
-            this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNext.Location = new System.Drawing.Point(692, 6);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnNext.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Primary = false;
-            this.btnNext.Size = new System.Drawing.Size(681, 57);
-            this.btnNext.TabIndex = 4;
-            this.btnNext.Text = "Siguiente";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click_1);
             // 
             // btnAnt
             // 
-            this.btnAnt.AutoSize = true;
             this.btnAnt.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAnt.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnAnt.Depth = 0;
             this.btnAnt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAnt.HighEmphasis = true;
+            this.btnAnt.Icon = null;
             this.btnAnt.Location = new System.Drawing.Point(4, 6);
             this.btnAnt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAnt.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAnt.Name = "btnAnt";
-            this.btnAnt.Primary = false;
-            this.btnAnt.Size = new System.Drawing.Size(680, 57);
-            this.btnAnt.TabIndex = 7;
+            this.btnAnt.Size = new System.Drawing.Size(678, 67);
+            this.btnAnt.TabIndex = 0;
             this.btnAnt.Text = "Anterior";
+            this.btnAnt.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAnt.UseAccentColor = false;
             this.btnAnt.UseVisualStyleBackColor = true;
-            this.btnAnt.Click += new System.EventHandler(this.btnAnt_Click_1);
+            this.btnAnt.Click += new System.EventHandler(this.btnAnt_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNext.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnNext.Depth = 0;
+            this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNext.HighEmphasis = true;
+            this.btnNext.Icon = null;
+            this.btnNext.Location = new System.Drawing.Point(690, 6);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNext.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(678, 67);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = "Siguiente";
+            this.btnNext.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnNext.UseAccentColor = false;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFinalizar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnFinalizar.Depth = 0;
+            this.btnFinalizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFinalizar.HighEmphasis = true;
+            this.btnFinalizar.Icon = null;
+            this.btnFinalizar.Location = new System.Drawing.Point(4, 91);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFinalizar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(1370, 74);
+            this.btnFinalizar.TabIndex = 10;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnFinalizar.UseAccentColor = false;
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // frmWalkthrough
             // 
@@ -211,9 +220,12 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private MaterialSkin.Controls.MaterialFlatButton btnFinalizar;
+      //  private MaterialSkin.Controls.MaterialFlatButton btnFinalizar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private MaterialSkin.Controls.MaterialFlatButton btnNext;
-        private MaterialSkin.Controls.MaterialFlatButton btnAnt;
+        private MaterialSkin.Controls.MaterialButton btnAnt;
+        private MaterialSkin.Controls.MaterialButton btnNext;
+        private MaterialSkin.Controls.MaterialButton btnFinalizar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnNext;
+        // private MaterialSkin.Controls.MaterialFlatButton btnAnt;
     }
 }

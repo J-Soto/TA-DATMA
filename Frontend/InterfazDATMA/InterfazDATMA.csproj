@@ -48,8 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    <Reference Include="MaterialSkin, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.2.2.2.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="Nevron.Nov.Barcode">
       <HintPath>..\Nevron.Nov.Barcode.dll</HintPath>
@@ -110,132 +110,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador\frmBuscarCursosRequerimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmBuscarCursosRequerimiento.Designer.cs">
-      <DependentUpon>frmBuscarCursosRequerimiento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmBuscarPsicologoGrupo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmBuscarPsicologoGrupo.Designer.cs">
-      <DependentUpon>frmBuscarPsicologoGrupo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmCrearGrupo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmCrearGrupo.Designer.cs">
-      <DependentUpon>frmCrearGrupo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmCrearTemaDeCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmCrearTemaDeCurso.Designer.cs">
-      <DependentUpon>frmCrearTemaDeCurso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmGestionarModuloAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmGestionarModuloAdmin.Designer.cs">
-      <DependentUpon>frmGestionarModuloAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarCurso.Designer.cs">
-      <DependentUpon>frmInsertarCurso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarDistrito.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarDistrito.Designer.cs">
-      <DependentUpon>frmInsertarDistrito.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarPreferencias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarPreferencias.Designer.cs">
-      <DependentUpon>frmInsertarPreferencias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarPsicologo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarPsicologo.Designer.cs">
-      <DependentUpon>frmInsertarPsicologo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarTutor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmInsertarTutor.Designer.cs">
-      <DependentUpon>frmInsertarTutor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmListaPsicologos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmListaPsicologos.Designer.cs">
-      <DependentUpon>frmListaPsicologos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmListaTutores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmListaTutores.Designer.cs">
-      <DependentUpon>frmListaTutores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmModificarGrupoCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmModificarGrupoCurso.Designer.cs">
-      <DependentUpon>frmModificarGrupoCurso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmModificarPreferencias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmModificarPreferencias.Designer.cs">
-      <DependentUpon>frmModificarPreferencias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmModificarPsicologo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmModificarPsicologo.Designer.cs">
-      <DependentUpon>frmModificarPsicologo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmModificarTutor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmModificarTutor.Designer.cs">
-      <DependentUpon>frmModificarTutor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmOperacionesCursos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmOperacionesCursos.Designer.cs">
-      <DependentUpon>frmOperacionesCursos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmOperacionesPersona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmOperacionesPersona.Designer.cs">
-      <DependentUpon>frmOperacionesPersona.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmReportePsicologos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmReportePsicologos.Designer.cs">
-      <DependentUpon>frmReportePsicologos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmSeleccionarTemasDeCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmSeleccionarTemasDeCurso.Designer.cs">
-      <DependentUpon>frmSeleccionarTemasDeCurso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\frmVerGruposCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\frmVerGruposCurso.Designer.cs">
-      <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\ActividadWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -295,18 +169,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="cuidador\%28copia%29 2_frmListaCursoInscritos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cuidador\%28copia%29 2_frmListaCursoInscritos.Designer.cs">
-      <DependentUpon>%28copia%29 2_frmListaCursoInscritos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="cuidador\FormAuxiliar-211.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cuidador\FormAuxiliar-211.Designer.cs">
-      <DependentUpon>FormAuxiliar-211.cs</DependentUpon>
     </Compile>
     <Compile Include="cuidador\frmPerfilCuidador.cs">
       <SubType>Form</SubType>
@@ -460,12 +322,6 @@
     <Compile Include="login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="cuidador\%28%29frmMenuUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cuidador\%28%29frmMenuUsuario.Designer.cs">
-      <DependentUpon>%28%29frmMenuUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="psicologo\212_frmModificarActividad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -520,77 +376,6 @@
     <Compile Include="util\Grupo_Curso.cs" />
     <Compile Include="util\Psicologo_Curso.cs" />
     <Compile Include="validacion\Validar.cs" />
-    <EmbeddedResource Include="Administrador\frmBuscarCursosRequerimiento.resx">
-      <DependentUpon>frmBuscarCursosRequerimiento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmBuscarPsicologoGrupo.resx">
-      <DependentUpon>frmBuscarPsicologoGrupo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmCrearGrupo.resx">
-      <DependentUpon>frmCrearGrupo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmCrearTemaDeCurso.resx">
-      <DependentUpon>frmCrearTemaDeCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmGestionarModuloAdmin.resx">
-      <DependentUpon>frmGestionarModuloAdmin.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmInsertarCurso.resx">
-      <DependentUpon>frmInsertarCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmInsertarDistrito.resx">
-      <DependentUpon>frmInsertarDistrito.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmInsertarPreferencias.resx">
-      <DependentUpon>frmInsertarPreferencias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmInsertarPsicologo.resx">
-      <DependentUpon>frmInsertarPsicologo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmInsertarTutor.resx">
-      <DependentUpon>frmInsertarTutor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmListaPsicologos.resx">
-      <DependentUpon>frmListaPsicologos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmListaTutores.resx">
-      <DependentUpon>frmListaTutores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmModificarGrupoCurso.resx">
-      <DependentUpon>frmModificarGrupoCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmModificarPreferencias.resx">
-      <DependentUpon>frmModificarPreferencias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmModificarPsicologo.resx">
-      <DependentUpon>frmModificarPsicologo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmModificarTutor.resx">
-      <DependentUpon>frmModificarTutor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmOperacionesCursos.resx">
-      <DependentUpon>frmOperacionesCursos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmOperacionesPersona.resx">
-      <DependentUpon>frmOperacionesPersona.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmReportePsicologos.resx">
-      <DependentUpon>frmReportePsicologos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmSeleccionarTemasDeCurso.resx">
-      <DependentUpon>frmSeleccionarTemasDeCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\frmVerGruposCurso.resx">
-      <DependentUpon>frmVerGruposCurso.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cuidador\%28copia%29 2_frmListaCursoInscritos.resx">
-      <DependentUpon>%28copia%29 2_frmListaCursoInscritos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cuidador\FormAuxiliar-211.resx">
-      <DependentUpon>FormAuxiliar-211.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="cuidador\frmPerfilCuidador.resx">
       <DependentUpon>frmPerfilCuidador.cs</DependentUpon>
     </EmbeddedResource>
@@ -648,9 +433,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cuidador\%28%29frmMenuUsuario.resx">
-      <DependentUpon>%28%29frmMenuUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\212_frmModificarActividad.resx">
       <DependentUpon>212_frmModificarActividad.cs</DependentUpon>
@@ -1289,7 +1071,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DATMA logo.png" />
+    <Content Include="Imagenes\DATMA logo.png" />
+    <None Include="Imagenes\exit.png" />
+    <None Include="Imagenes\menu.png" />
+    <Content Include="Imagenes\moon.png" />
+    <Content Include="Imagenes\sun.png" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Barcode.dll" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Chart.dll" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Diagram.dll" />

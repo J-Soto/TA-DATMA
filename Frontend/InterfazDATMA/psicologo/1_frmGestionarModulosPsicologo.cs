@@ -26,6 +26,10 @@ namespace InterfazDATMA
         private BindingList<CursoWS.curso> cursos;
         private BindingList<Psicologo_Curso> cursosGrupos; //Contiene el idgrupo y el idcurso
 
+        //actividades
+        private BindingList <ActividadWS.actividad> actividades;
+
+
         //psicologo:
         private PsicologoWS.psicologo psicologo;
         public frmGestionarModulosPsicologo(frmPlantillaGestion plantilla)
@@ -46,19 +50,20 @@ namespace InterfazDATMA
             //        break;
             //    }
             //}
-            
-            
+
+
             psicologo = daoPsicologo.buscarPsicologoPorIdUsuario(frmPlantillaGestion.user.idUsuario);
             frmPlantillaGestion.psico = psicologo;
 
-            
+
             // obtener cursos del psicologo
-            
+
             dgvModulos.AutoGenerateColumns = false;
             try
             {
                 cursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosPsicologo(psicologo.idPersona));
-            } catch (ArgumentNullException)
+            }
+            catch (ArgumentNullException)
             {
                 cursos = new BindingList<CursoWS.curso>();
             }
@@ -68,7 +73,7 @@ namespace InterfazDATMA
 
 
             BindingList<CursoWS.grupo> grupos;
-            
+
             foreach (CursoWS.curso recCurso in cursos)
             {
                 grupos = new BindingList<CursoWS.grupo>(daoCurso.listarCursosGrupoPsicologo(psicologo.idPersona, recCurso.idCurso).ToList());
@@ -85,7 +90,9 @@ namespace InterfazDATMA
                     cursosGrupos.Add(auxCurso);
                 }
             }
-            
+
+
+
             dgvModulos.DataSource = cursosGrupos;
 
 
@@ -117,15 +124,14 @@ namespace InterfazDATMA
         }
 
 
-
-        private void btnAccederModulo_Click_1(object sender, EventArgs e)
+        private void AccederModulo_Click(object sender, EventArgs e)
         {
             Psicologo_Curso auxCurso = dgvModulos.CurrentRow.DataBoundItem as Psicologo_Curso;
 
             var frmConfig = new frmConfigurarModuloPsicologo(this, plantillaGestion, auxCurso);
             plantillaGestion.abrirFormulario(frmConfig);
-        }
 
+        }
         private void dgvModulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Psicologo_Curso psicologo_Curso = dgvModulos.Rows[e.RowIndex].DataBoundItem as Psicologo_Curso;
@@ -134,6 +140,20 @@ namespace InterfazDATMA
             dgvModulos.Rows[e.RowIndex].Cells["Grupo"].Value = psicologo_Curso.Grupo.nombrePromocion;
             dgvModulos.Rows[e.RowIndex].Cells["FechaInicio"].Value = psicologo_Curso.Curso.fechaInicio;
             dgvModulos.Rows[e.RowIndex].Cells["FechaFin"].Value = psicologo_Curso.Curso.fechaFin;
+        }
+        private void frmGestionarModulosPsicologo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }

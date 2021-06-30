@@ -17,6 +17,7 @@ namespace InterfazDATMA.cuidador
     public partial class frmPerfilCuidador : MaterialSkin.Controls.MaterialForm 
     {
         private TutorWS.TutorWSClient daoTutor;
+        private UsuarioWS.UsuarioWSClient daoUsuario;
         private frmPlantillaGestion plantillaGestion;
         public frmPerfilCuidador(frmPlantillaGestion plantilla)
         {
@@ -24,6 +25,7 @@ namespace InterfazDATMA.cuidador
             Design.Ini(this);
             plantillaGestion = plantilla;
             daoTutor = new TutorWS.TutorWSClient();
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
             //daoTutor.modificarTutor(new TutorWS.tutor());
             var tutores = daoTutor.listarTodosTutores();
             foreach (var tutor in tutores)
@@ -44,7 +46,7 @@ namespace InterfazDATMA.cuidador
             txtGen.Text = Convert.ToChar(frmPlantillaGestion.tutor.genero).ToString();
             txtNombre.Text = frmPlantillaGestion.tutor.nombre + " " + frmPlantillaGestion.tutor.apellidoPaterno + " " + frmPlantillaGestion.tutor.apellidoMaterno;
             txtTelef.Text = frmPlantillaGestion.tutor.telefono;
-            if (frmPlantillaGestion.tutor.bajoRecursos==1) txtBajoRec.Text = "No";
+            if (frmPlantillaGestion.tutor.bajoRecursos == 1) txtBajoRec.Text = "No";
             else txtBajoRec.Text = "Si";
             if (frmPlantillaGestion.tutor.gestante == 1) txtGestante.Text = "No";
             else txtGestante.Text = "Si";
@@ -54,8 +56,8 @@ namespace InterfazDATMA.cuidador
             }
             catch (Exception ex)
             {
-             
-            }        
+
+            }
         }
 
 
@@ -82,6 +84,44 @@ namespace InterfazDATMA.cuidador
         private void Correo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this, plantillaGestion));
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (msg == DialogResult.Yes)
+            {
+                UsuarioWS.usuario tempUser = new UsuarioWS.usuario();
+                tempUser.idUsuario = frmPlantillaGestion.user.idUsuario;
+                tempUser.user = txtUser.Text;
+                tempUser.password = txtPass.Text;
+                int resultado = daoUsuario.modificarUsuario(tempUser);
+                if (resultado == 1)
+                {
+                    daoUsuario.enviarDatosUsuario(txtCorreo.Text, tempUser.user, tempUser.password);
+                    MessageBox.Show("Datos cambiados con éxito.", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmPlantillaGestion.user.user = txtUser.Text;
+                    frmPlantillaGestion.user.password = txtPass.Text;
+                }
+                else
+                    MessageBox.Show("Error al cambiar los datos. Intentelo más tarde", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                txtUser.Text = frmPlantillaGestion.user.user;
+                txtPass.Text = frmPlantillaGestion.user.password;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtUser.Text = frmPlantillaGestion.user.user;
+            txtPass.Text = frmPlantillaGestion.user.password;
         }
     }
 }

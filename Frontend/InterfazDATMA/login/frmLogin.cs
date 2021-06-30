@@ -12,7 +12,6 @@ using InterfazDATMA.plantilla;
 using InterfazDATMA;
 using System.ServiceModel;
 using InterfazDATMA.util;
-
 namespace InterfazDATMA
 {
     public partial class frmLogin : MaterialForm
@@ -20,18 +19,17 @@ namespace InterfazDATMA
         private string _user = null;
         private string _password = null;
         private Form formularioActivo = null;
-
+        
         //private UsuarioWSClient daoUsuario;
         private UsuarioWS.UsuarioWSClient daoUsuario;
        
         public frmLogin()
         {
             InitializeComponent();
-
             Design.Ini(this);
             daoUsuario = new UsuarioWS.UsuarioWSClient();
         }
-
+        
         private void clickUsuario(object sender, MouseEventArgs e)
         {            
             if(txtUsuario.Text=="Usuario")
@@ -62,8 +60,14 @@ namespace InterfazDATMA
             }
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void frmLogin_Load(object sender, EventArgs e)
         {
+             
+        }
+
+        private void btnIngresar_Click_1(object sender, EventArgs e)
+        {
+
             UsuarioWS.usuario user = daoUsuario.verificarUsuario(txtUsuario.Text, txtContraseña.Text);
 
             if (user is null)
@@ -77,12 +81,31 @@ namespace InterfazDATMA
             //0->cuidador
             //1->psicologo
             //2->admin
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e)
         {
-             
+
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

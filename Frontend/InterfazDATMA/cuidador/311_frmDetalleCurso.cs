@@ -55,5 +55,15 @@ namespace InterfazDATMA
         {
 
         }
+
+        private void materialLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

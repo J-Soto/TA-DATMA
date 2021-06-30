@@ -16,8 +16,8 @@ namespace InterfazDATMA
     public partial class frmInscripcionHecha : MaterialSkin.Controls.MaterialForm 
     {
         public frmCursosDisponibles formAnterior;
-        private frmPlantillaGestion plantillaGestion; 
-        public frmInscripcionHecha(frmCursosDisponibles formAnterior,frmPlantillaGestion plantillaGestion)
+        private frmPlantillaGestion plantillaGestion;
+        public frmInscripcionHecha(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
             Design.Ini(this);

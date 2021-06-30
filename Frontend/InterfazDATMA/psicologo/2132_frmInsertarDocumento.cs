@@ -27,13 +27,18 @@ namespace InterfazDATMA.psicologo
             Design.Ini(this);
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             documento = new MaterialWS.documento();
 
-            if(auxBytes == null)
+            if (auxBytes == null)
             {
-                MessageBox.Show("Debe subir un archivo","Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Debe subir un archivo", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -42,33 +47,29 @@ namespace InterfazDATMA.psicologo
 
                 this.DialogResult = DialogResult.OK;
             }
+
         }
 
-        private void btnSubirArchivo_Click(object sender, EventArgs e)
+        private void btnSubir_Click(object sender, EventArgs e)
         {
-
             try
             {
-                if(ofdBuscarDoc.ShowDialog() == DialogResult.OK)
+                if (ofdBuscarDoc.ShowDialog() == DialogResult.OK)
                 {
                     string ruta = ofdBuscarDoc.FileName;
                     txtRutaArchivo.Text = ruta;
-                    FileStream archivo = new FileStream(ruta,FileMode.Open,FileAccess.Read);
+                    FileStream archivo = new FileStream(ruta, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(archivo);
-                    auxBytes = br.ReadBytes((int) archivo.Length);
+                    auxBytes = br.ReadBytes((int)archivo.Length);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Debe introducir un documento valido (PDF)", "Mensaje de advertencia", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Debe introducir un documento valido (PDF)", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-        }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
         }
     }
 }

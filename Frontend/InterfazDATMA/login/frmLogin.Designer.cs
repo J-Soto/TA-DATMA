@@ -28,112 +28,250 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtContraseña = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtUsuario = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.btnIngresar = new MaterialSkin.Controls.MaterialButton();
+            this.checkBoxRecordarme = new MaterialSkin.Controls.MaterialCheckbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.checkBoxRecordarme = new MaterialSkin.Controls.MaterialCheckBox();
-            this.btnIngresar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::InterfazDATMA.Properties.Resources.DATMA_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(559, 129);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(289, 356);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtUsuario.Depth = 0;
-            this.txtUsuario.Hint = "";
-            this.txtUsuario.Location = new System.Drawing.Point(525, 552);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PasswordChar = '\0';
-            this.txtUsuario.SelectedText = "";
-            this.txtUsuario.SelectionLength = 0;
-            this.txtUsuario.SelectionStart = 0;
-            this.txtUsuario.Size = new System.Drawing.Size(357, 41);
-            this.txtUsuario.TabIndex = 24;
-            this.txtUsuario.TabStop = false;
-            this.txtUsuario.Text = "Usuario";
-            this.txtUsuario.UseSystemPasswordChar = false;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Depth = 0;
-            this.txtContraseña.Hint = "";
-            this.txtContraseña.Location = new System.Drawing.Point(525, 635);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtContraseña.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtContraseña.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtContraseña.LeadingIcon = null;
+            this.txtContraseña.Location = new System.Drawing.Point(3, 135);
+            this.txtContraseña.MaxLength = 50;
+            this.txtContraseña.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '\0';
-            this.txtContraseña.SelectedText = "";
-            this.txtContraseña.SelectionLength = 0;
-            this.txtContraseña.SelectionStart = 0;
-            this.txtContraseña.Size = new System.Drawing.Size(357, 41);
-            this.txtContraseña.TabIndex = 25;
-            this.txtContraseña.TabStop = false;
+            this.txtContraseña.Password = true;
+            this.txtContraseña.Size = new System.Drawing.Size(645, 50);
+            this.txtContraseña.TabIndex = 11;
             this.txtContraseña.Text = "Password";
-            this.txtContraseña.UseSystemPasswordChar = true;
+            this.txtContraseña.TrailingIcon = null;
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Depth = 0;
+            this.txtUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUsuario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsuario.LeadingIcon = null;
+            this.txtUsuario.Location = new System.Drawing.Point(3, 3);
+            this.txtUsuario.MaxLength = 50;
+            this.txtUsuario.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtUsuario.Multiline = false;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(645, 50);
+            this.txtUsuario.TabIndex = 10;
+            this.txtUsuario.Text = "Usuario";
+            this.txtUsuario.TrailingIcon = null;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(4, 85);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.Size = new System.Drawing.Size(643, 67);
+            this.materialButton2.TabIndex = 9;
+            this.materialButton2.Text = "Olvido su contraseña?";
+            this.materialButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnIngresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnIngresar.Depth = 0;
+            this.btnIngresar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnIngresar.HighEmphasis = true;
+            this.btnIngresar.Icon = null;
+            this.btnIngresar.Location = new System.Drawing.Point(4, 6);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnIngresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(643, 67);
+            this.btnIngresar.TabIndex = 8;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnIngresar.UseAccentColor = false;
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click_1);
             // 
             // checkBoxRecordarme
             // 
-            this.checkBoxRecordarme.AutoSize = true;
             this.checkBoxRecordarme.Depth = 0;
-            this.checkBoxRecordarme.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkBoxRecordarme.Location = new System.Drawing.Point(525, 721);
+            this.checkBoxRecordarme.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkBoxRecordarme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
+            this.checkBoxRecordarme.Location = new System.Drawing.Point(767, 9);
             this.checkBoxRecordarme.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxRecordarme.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkBoxRecordarme.MouseState = MaterialSkin.MouseState.HOVER;
             this.checkBoxRecordarme.Name = "checkBoxRecordarme";
             this.checkBoxRecordarme.Ripple = true;
-            this.checkBoxRecordarme.Size = new System.Drawing.Size(185, 30);
-            this.checkBoxRecordarme.TabIndex = 26;
+            this.checkBoxRecordarme.Size = new System.Drawing.Size(657, 79);
+            this.checkBoxRecordarme.TabIndex = 7;
             this.checkBoxRecordarme.Text = "Recordarme";
+            this.checkBoxRecordarme.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.checkBoxRecordarme.UseVisualStyleBackColor = true;
             // 
-            // btnIngresar
+            // pictureBox1
             // 
-            this.btnIngresar.AutoSize = true;
-            this.btnIngresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnIngresar.Depth = 0;
-            this.btnIngresar.Location = new System.Drawing.Point(539, 818);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnIngresar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Primary = false;
-            this.btnIngresar.Size = new System.Drawing.Size(147, 36);
-            this.btnIngresar.TabIndex = 27;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.ErrorImage = global::InterfazDATMA.Properties.Resources.DATMA_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(770, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(651, 350);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
-            // materialFlatButton2
+            // tableLayoutPanel2
             // 
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.BackColor = System.Drawing.Color.Transparent;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.ForeColor = System.Drawing.Color.Blue;
-            this.materialFlatButton2.Location = new System.Drawing.Point(539, 911);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(353, 36);
-            this.materialFlatButton2.TabIndex = 28;
-            this.materialFlatButton2.Text = "Olivdo su contrasena?";
-            this.materialFlatButton2.UseVisualStyleBackColor = false;
+            this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel9, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel11, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel12, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel14, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 122);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.47619F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.42857F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(2198, 1050);
+            this.tableLayoutPanel2.TabIndex = 20;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 3;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 1, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 842);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 3;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(2192, 205);
+            this.tableLayoutPanel9.TabIndex = 16;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.btnIngresar, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.materialButton2, 0, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(770, 23);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(651, 158);
+            this.tableLayoutPanel10.TabIndex = 14;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 3;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel11.Controls.Add(this.checkBoxRecordarme, 1, 1);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 737);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 3;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(2192, 99);
+            this.tableLayoutPanel11.TabIndex = 17;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 3;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 1, 1);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 365);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 3;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.98934F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.9507F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.05996F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(2192, 366);
+            this.tableLayoutPanel12.TabIndex = 15;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Controls.Add(this.txtContraseña, 0, 1);
+            this.tableLayoutPanel13.Controls.Add(this.txtUsuario, 0, 0);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(770, 61);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 2;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(651, 264);
+            this.tableLayoutPanel13.TabIndex = 13;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 3;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel14.Controls.Add(this.pictureBox1, 1, 0);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 1;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(2192, 356);
+            this.tableLayoutPanel14.TabIndex = 18;
             // 
             // frmLogin
             // 
@@ -141,31 +279,47 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1477, 1250);
-            this.Controls.Add(this.materialFlatButton2);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.checkBoxRecordarme);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(2208, 1178);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmLogin";
             this.Padding = new System.Windows.Forms.Padding(5, 122, 5, 6);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
+        private MaterialSkin.Controls.MaterialTextBox txtContraseña;
+        private MaterialSkin.Controls.MaterialTextBox txtUsuario;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton btnIngresar;
+        private MaterialSkin.Controls.MaterialCheckbox checkBoxRecordarme;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
 
         #endregion
+        /*
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
         private MaterialSkin.Controls.MaterialCheckBox checkBoxRecordarme;
         private MaterialSkin.Controls.MaterialFlatButton btnIngresar;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
+        */
     }
 }

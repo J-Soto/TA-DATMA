@@ -45,5 +45,7 @@ namespace InterfazDATMA
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscritoReunion(this, plantillaGestion));
 
         }
+
+       
     }
 }
