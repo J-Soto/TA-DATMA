@@ -677,6 +677,9 @@
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.insertarActividadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.listarActividadesIdSemanaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ActividadWS\InterfazDATMA.ActividadWS.listarActividadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

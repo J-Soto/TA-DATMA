@@ -83,16 +83,6 @@ namespace InterfazDATMA
             //2->admin
         }
 
-        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void materialButton2_Click(object sender, EventArgs e)
         {
 

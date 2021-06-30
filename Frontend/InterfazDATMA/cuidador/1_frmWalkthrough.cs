@@ -16,7 +16,8 @@ namespace InterfazDATMA
     public partial class frmWalkthrough : MaterialSkin.Controls.MaterialForm 
     {
         private int estado = 1;
-        public frmPlantillaGestion plantillaGestion; 
+        public frmPlantillaGestion plantillaGestion;
+
         public frmWalkthrough(frmPlantillaGestion plantillaGestion)
         {
             this.plantillaGestion = plantillaGestion;
@@ -62,8 +63,8 @@ namespace InterfazDATMA
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this, plantillaGestion));
-
+            frmPlantillaGestion.pasoTutorial = true;
+            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(plantillaGestion));
         }
     }
 }

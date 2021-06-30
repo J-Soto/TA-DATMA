@@ -28,6 +28,11 @@ namespace InterfazDATMA.plantilla
         char tema='D';
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         bool seMuestra;
+        public static bool pasoTutorial = false;
+
+        private TutorWS.TutorWSClient daoTutor = new TutorWS.TutorWSClient();
+        private PsicologoWS.PsicologoWSClient daoPsicologo = new PsicologoWS.PsicologoWSClient();
+
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
@@ -36,12 +41,13 @@ namespace InterfazDATMA.plantilla
             PanelLateral.Hide();
             frmPlantillaGestion.user = user;
             int tipoUser = user.tipo;
-            Usuario.Text = "Usuario:   " + user.nombre + "   " + user.apellidoPaterno + "    "+ user.apellidoMaterno;
             fecha.Text = DateTime.Now.ToLongDateString();
             
             //Psicologo
             if (tipoUser == 1)
             {
+                psico = daoPsicologo.buscarPsicologoPorIdUsuario(user.idUsuario);
+                Usuario.Text = "Usuario:   " + psico.nombre + "   " + psico.apellidoPaterno + "    " + psico.apellidoMaterno;
                 formInicial = new frmGestionarModulosPsicologo(this);
                 abrirFormulario(formInicial);
                 formPerfil = new frmPerfilPsicologo(this);
@@ -57,9 +63,11 @@ namespace InterfazDATMA.plantilla
             //Tutor
             else if (tipoUser == 0)
             {
+                tutor = daoTutor.getTutorFromIdUsuario(user.idUsuario);
+                formPerfil = new frmPerfilCuidador(this);
+                Usuario.Text = "Usuario:   " + tutor.nombre + "   " + tutor.apellidoPaterno + "    " + tutor.apellidoMaterno;
                 formInicial = new frmWalkthrough(this);
                 abrirFormulario(formInicial);
-                formPerfil = new frmPerfilCuidador(this);
             }
 
         }
@@ -109,7 +117,13 @@ namespace InterfazDATMA.plantilla
             else if (tipoUser == 0)
             {
                 formInicial = new frmWalkthrough(this);
-                abrirFormulario(formInicial);
+                if (pasoTutorial)
+                {
+                    abrirFormulario(new frmListaCursoInscritos(this));
+                } else
+                {
+                    abrirFormulario(formInicial);
+                }
             }
             
         }
