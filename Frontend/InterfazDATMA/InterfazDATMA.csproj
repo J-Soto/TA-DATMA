@@ -1045,6 +1045,9 @@
     <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.listarUsuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.modificarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioWS\InterfazDATMA.UsuarioWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

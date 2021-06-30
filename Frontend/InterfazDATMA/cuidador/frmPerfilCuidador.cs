@@ -17,6 +17,7 @@ namespace InterfazDATMA.cuidador
     public partial class frmPerfilCuidador : MaterialSkin.Controls.MaterialForm 
     {
         private TutorWS.TutorWSClient daoTutor;
+        private UsuarioWS.UsuarioWSClient daoUsuario;
         private frmPlantillaGestion plantillaGestion;
         public frmPerfilCuidador(frmPlantillaGestion plantilla)
         {
@@ -24,6 +25,7 @@ namespace InterfazDATMA.cuidador
             Design.Ini(this);
             plantillaGestion = plantilla;
             daoTutor = new TutorWS.TutorWSClient();
+            daoUsuario = new UsuarioWS.UsuarioWSClient();
             //daoTutor.modificarTutor(new TutorWS.tutor());
             var tutores = daoTutor.listarTodosTutores();
             foreach (var tutor in tutores)
@@ -55,20 +57,7 @@ namespace InterfazDATMA.cuidador
             catch (Exception ex)
             {
              
-            }
-
-            txtBajoRec.Enabled = false;
-            txtCel.Enabled = false;
-            txtCorreo.Enabled = false;
-            txtDNI.Enabled = false;
-            txtEdad.Enabled = false;
-            txtFecha.Enabled = false;
-            txtGen.Enabled = false;
-            txtGestante.Enabled = false;
-            txtNombre.Enabled = false;
-            txtTelef.Enabled = false;
-            txtUser.Enabled = false;
-            txtPass.Enabled = false;
+            }        
         }
 
 
@@ -99,36 +88,35 @@ namespace InterfazDATMA.cuidador
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            txtBajoRec.Enabled = true;
-            txtCel.Enabled = true;
-            txtCorreo.Enabled = true;
-            txtDNI.Enabled = true;
-            txtEdad.Enabled = true;
-            txtFecha.Enabled = true;
-            txtGen.Enabled = true;
-            txtGestante.Enabled = true;
-            txtNombre.Enabled = true;
-            txtTelef.Enabled = true;
-            txtUser.Enabled = true;
-            txtPass.Enabled = true;
-            
+            DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (msg == DialogResult.Yes)
+            {
+                UsuarioWS.usuario tempUser = new UsuarioWS.usuario();
+                tempUser.idUsuario = frmPlantillaGestion.user.idUsuario;
+                tempUser.user = txtUser.Text;
+                tempUser.password = txtPass.Text;
+                int resultado = daoUsuario.modificarUsuario(tempUser);
+                if (resultado == 1)
+                {
+                    daoUsuario.enviarDatosUsuario(txtCorreo.Text, tempUser.user, tempUser.password);
+                    MessageBox.Show("Datos cambiados con éxito.", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmPlantillaGestion.user.user = txtUser.Text;
+                    frmPlantillaGestion.user.password = txtPass.Text;
+                }
+                else
+                    MessageBox.Show("Error al cambiar los datos. Intentelo más tarde", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                txtUser.Text = frmPlantillaGestion.user.user;
+                txtPass.Text = frmPlantillaGestion.user.password;
+            }
         }
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            txtBajoRec.Enabled = false;
-            txtCel.Enabled = false;
-            txtCorreo.Enabled = false;
-            txtDNI.Enabled = false;
-            txtEdad.Enabled = false;
-            txtFecha.Enabled = false;
-            txtGen.Enabled = false;
-            txtGestante.Enabled = false;
-            txtNombre.Enabled = false;
-            txtTelef.Enabled = false;
-            txtUser.Enabled = false;
-            txtPass.Enabled = false;
-            
+            txtUser.Text = frmPlantillaGestion.user.user;
+            txtPass.Text = frmPlantillaGestion.user.password;
         }
     }
 }

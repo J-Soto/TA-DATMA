@@ -32,6 +32,12 @@
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
+  <message name="modificarUsuario">
+    <part name="parameters" element="tns:modificarUsuario" />
+  </message>
+  <message name="modificarUsuarioResponse">
+    <part name="parameters" element="tns:modificarUsuarioResponse" />
+  </message>
   <portType name="UsuarioWS">
     <operation name="listarUsuarios">
       <input wsam:Action="http://services.datmasoft.datma.pe/UsuarioWS/listarUsuariosRequest" message="tns:listarUsuarios" />
@@ -49,6 +55,10 @@
       <input wsam:Action="http://services.datmasoft.datma.pe/UsuarioWS/enviarDatosUsuarioRequest" message="tns:enviarDatosUsuario" />
       <output wsam:Action="http://services.datmasoft.datma.pe/UsuarioWS/enviarDatosUsuarioResponse" message="tns:enviarDatosUsuarioResponse" />
       <fault wsam:Action="http://services.datmasoft.datma.pe/UsuarioWS/enviarDatosUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="modificarUsuario">
+      <input wsam:Action="http://services.datmasoft.datma.pe/UsuarioWS/modificarUsuarioRequest" message="tns:modificarUsuario" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/UsuarioWS/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
     </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
@@ -91,6 +101,15 @@
       <fault name="Exception">
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
+    </operation>
+    <operation name="modificarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
     </operation>
   </binding>
   <service name="UsuarioWS">
