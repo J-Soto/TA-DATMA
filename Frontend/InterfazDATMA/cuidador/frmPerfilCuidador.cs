@@ -40,19 +40,19 @@ namespace InterfazDATMA.cuidador
             txtPass.Text = frmPlantillaGestion.tutor.password;
             txtCel.Text = frmPlantillaGestion.tutor.celular;
             txtCorreo.Text = frmPlantillaGestion.tutor.correo;
-            txtDNI.Text = frmPlantillaGestion.tutor.DNI;
+            txtDni.Text = frmPlantillaGestion.tutor.DNI;
             txtEdad.Text = frmPlantillaGestion.tutor.edad.ToString();
-            txtFecha.Text = frmPlantillaGestion.tutor.fechaNacimiento.ToString();
+            txtFechaNac.Text = frmPlantillaGestion.tutor.fechaNacimiento.ToString();
             txtGen.Text = Convert.ToChar(frmPlantillaGestion.tutor.genero).ToString();
-            txtNombre.Text = frmPlantillaGestion.tutor.nombre + " " + frmPlantillaGestion.tutor.apellidoPaterno + " " + frmPlantillaGestion.tutor.apellidoMaterno;
-            txtTelef.Text = frmPlantillaGestion.tutor.telefono;
+            txtNom.Text = frmPlantillaGestion.tutor.nombre + " " + frmPlantillaGestion.tutor.apellidoPaterno + " " + frmPlantillaGestion.tutor.apellidoMaterno;
+            txtTelf.Text = frmPlantillaGestion.tutor.telefono;
             if (frmPlantillaGestion.tutor.bajoRecursos == 1) txtBajoRec.Text = "No";
             else txtBajoRec.Text = "Si";
-            if (frmPlantillaGestion.tutor.gestante == 1) txtGestante.Text = "No";
-            else txtGestante.Text = "Si";
+            if (frmPlantillaGestion.tutor.gestante == 1) txtGest.Text = "No";
+            else txtGest.Text = "Si";
             try
             {
-                picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
+                pictureBox1.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
             }
             catch (Exception ex)
             {
