@@ -18,7 +18,10 @@ namespace InterfazDATMA
         public frmCursosDisponibles formAnterior;
         private frmPlantillaGestion plantillaGestion;
 
+        private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
+
         private CursoTutor cursoTutor;
+        private DateTime daterunner;
         public frmInformacionCurso(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion, CursoTutor cursoTutor)
         {
             InitializeComponent();
@@ -29,6 +32,10 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
             this.cursoTutor = cursoTutor;
+            daterunner = cursoTutor.FechaInicio;
+
+            // obtener actividades
+            var semanas = daoCurso.listarSemanasPorIdCurso(cursoTutor.Curso.idCurso);
 
             LlenarInformacion();
         }
@@ -37,41 +44,41 @@ namespace InterfazDATMA
         {
             lblNombreModulo.Text = cursoTutor.Modulo;
             lblInformacionEncargada.Text = cursoTutor.Encargado;
+            nDateTimeBoxControl2.SelectedDate = cursoTutor.FechaInicio;
+            nDateTimeBoxControl1.SelectedDate = cursoTutor.FechaFin;
+            ActualizarFechaStr();
             if (cursoTutor.Psicologo.fotoPerfil is object)
             {
                 pictBoxEncargada.Image = (Bitmap)((new ImageConverter()).ConvertFrom(cursoTutor.Psicologo.fotoPerfil));
             }
         }
 
-        private void frmInformacionCurso_Load(object sender, EventArgs e)
+        private void ActualizarFechaStr()
         {
-
+            materialLabel4.Text = daterunner.ToString("MMMM").ToUpper() + " 2021";
         }
 
         private void btnVerMas_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCurso(this, plantillaGestion));
-
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtBoxFechaFin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxFechaIni_TextChanged(object sender, EventArgs e)
-        {
-
+            if (daterunner.Month - cursoTutor.FechaInicio.Month > 0)
+            {
+                daterunner.AddMonths(-1);
+                ActualizarFechaStr();
+            }
         }
 
         private void btnSig_Click(object sender, EventArgs e)
         {
-
+            if (cursoTutor.FechaFin.Month - daterunner.Month > 0)
+            {
+                daterunner.AddMonths(1);
+                ActualizarFechaStr();
+            }
         }
     }
 }
