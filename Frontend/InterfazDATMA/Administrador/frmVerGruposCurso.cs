@@ -126,5 +126,12 @@ namespace InterfazDATMA.Administrador
             formPlantillaGest.abrirFormulario(formInsertarCurso);
 
         }
+
+        private void dgvGrupos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            GrupoWS.grupo auxGrupo = dgvGrupos.Rows[e.RowIndex].DataBoundItem as GrupoWS.grupo;
+            dgvGrupos.Rows[e.RowIndex].Cells["Nombre"].Value = auxGrupo.nombrePromocion;
+            dgvGrupos.Rows[e.RowIndex].Cells["MaxTutores"].Value = auxGrupo.maxCantCuidadores;
+        }
     }
 }

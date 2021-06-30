@@ -46,16 +46,17 @@ namespace InterfazDATMA.Administrador
             // 
             // btnModificar
             // 
+            this.btnModificar.AutoSize = false;
             this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnModificar.Depth = 0;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(1156, 425);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.btnModificar.Location = new System.Drawing.Point(977, 64);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(99, 36);
+            this.btnModificar.Size = new System.Drawing.Size(111, 44);
             this.btnModificar.TabIndex = 31;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -65,16 +66,17 @@ namespace InterfazDATMA.Administrador
             // 
             // btnAgregarGrupo
             // 
+            this.btnAgregarGrupo.AutoSize = false;
             this.btnAgregarGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregarGrupo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnAgregarGrupo.Depth = 0;
             this.btnAgregarGrupo.HighEmphasis = true;
             this.btnAgregarGrupo.Icon = null;
-            this.btnAgregarGrupo.Location = new System.Drawing.Point(1315, 588);
-            this.btnAgregarGrupo.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.btnAgregarGrupo.Location = new System.Drawing.Point(1120, 120);
+            this.btnAgregarGrupo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAgregarGrupo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregarGrupo.Name = "btnAgregarGrupo";
-            this.btnAgregarGrupo.Size = new System.Drawing.Size(64, 36);
+            this.btnAgregarGrupo.Size = new System.Drawing.Size(57, 46);
             this.btnAgregarGrupo.TabIndex = 32;
             this.btnAgregarGrupo.Text = "+";
             this.btnAgregarGrupo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -84,16 +86,17 @@ namespace InterfazDATMA.Administrador
             // 
             // btnQuitarGrupo
             // 
+            this.btnQuitarGrupo.AutoSize = false;
             this.btnQuitarGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnQuitarGrupo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnQuitarGrupo.Depth = 0;
             this.btnQuitarGrupo.HighEmphasis = true;
             this.btnQuitarGrupo.Icon = null;
-            this.btnQuitarGrupo.Location = new System.Drawing.Point(1315, 684);
-            this.btnQuitarGrupo.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.btnQuitarGrupo.Location = new System.Drawing.Point(1120, 178);
+            this.btnQuitarGrupo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnQuitarGrupo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnQuitarGrupo.Name = "btnQuitarGrupo";
-            this.btnQuitarGrupo.Size = new System.Drawing.Size(64, 36);
+            this.btnQuitarGrupo.Size = new System.Drawing.Size(57, 44);
             this.btnQuitarGrupo.TabIndex = 33;
             this.btnQuitarGrupo.Text = "-";
             this.btnQuitarGrupo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -103,16 +106,17 @@ namespace InterfazDATMA.Administrador
             // 
             // btnRegresar
             // 
+            this.btnRegresar.AutoSize = false;
             this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRegresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnRegresar.Depth = 0;
             this.btnRegresar.HighEmphasis = true;
             this.btnRegresar.Icon = null;
-            this.btnRegresar.Location = new System.Drawing.Point(1285, 1231);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.btnRegresar.Location = new System.Drawing.Point(1120, 596);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(94, 36);
+            this.btnRegresar.Size = new System.Drawing.Size(130, 57);
             this.btnRegresar.TabIndex = 34;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -125,10 +129,10 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(209, 344);
-            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTutoresUser.Location = new System.Drawing.Point(279, 63);
+            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(327, 51);
+            this.lblTutoresUser.Size = new System.Drawing.Size(244, 37);
             this.lblTutoresUser.TabIndex = 20;
             this.lblTutoresUser.Text = "Grupos Activos:";
             // 
@@ -137,10 +141,10 @@ namespace InterfazDATMA.Administrador
             this.lblNombreCurso.AutoSize = true;
             this.lblNombreCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
             this.lblNombreCurso.ForeColor = System.Drawing.Color.White;
-            this.lblNombreCurso.Location = new System.Drawing.Point(144, 194);
-            this.lblNombreCurso.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombreCurso.Location = new System.Drawing.Point(281, 7);
+            this.lblNombreCurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCurso.Name = "lblNombreCurso";
-            this.lblNombreCurso.Size = new System.Drawing.Size(146, 53);
+            this.lblNombreCurso.Size = new System.Drawing.Size(108, 39);
             this.lblNombreCurso.TabIndex = 30;
             this.lblNombreCurso.Text = "Curso";
             // 
@@ -165,8 +169,7 @@ namespace InterfazDATMA.Administrador
             this.MaxTutores});
             this.dgvGrupos.EnableHeadersVisualStyles = false;
             this.dgvGrupos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvGrupos.Location = new System.Drawing.Point(43, 485);
-            this.dgvGrupos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvGrupos.Location = new System.Drawing.Point(274, 120);
             this.dgvGrupos.Name = "dgvGrupos";
             this.dgvGrupos.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -185,8 +188,9 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvGrupos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvGrupos.RowTemplate.Height = 28;
-            this.dgvGrupos.Size = new System.Drawing.Size(1231, 666);
+            this.dgvGrupos.Size = new System.Drawing.Size(814, 533);
             this.dgvGrupos.TabIndex = 35;
+            this.dgvGrupos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGrupos_CellFormatting);
             // 
             // Nombre
             // 
@@ -206,10 +210,10 @@ namespace InterfazDATMA.Administrador
             // 
             // frmVerGruposCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(2390, 1666);
+            this.ClientSize = new System.Drawing.Size(1300, 774);
             this.ControlBox = false;
             this.Controls.Add(this.dgvGrupos);
             this.Controls.Add(this.lblNombreCurso);
@@ -218,9 +222,7 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblTutoresUser);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmVerGruposCurso";
-            this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
             this.Sizable = false;
             this.Text = "Grupos de Curso";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

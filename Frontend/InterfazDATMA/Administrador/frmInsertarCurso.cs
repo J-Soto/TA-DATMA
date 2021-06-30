@@ -168,26 +168,6 @@ namespace InterfazDATMA.Administrador
 
 
 
-
-
-        private void dgvReq_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            try
-            {
-                CursoWS.curso auxCurso = dgvReq.Rows[e.RowIndex].DataBoundItem as CursoWS.curso;
-
-                dgvReq.Rows[e.RowIndex].Cells["NombreCurso"].Value = auxCurso.descripcion;
-                dgvReq.Rows[e.RowIndex].Cells["FechaInicial"].Value = auxCurso.fechaInicio;
-                dgvReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
-            }
-            catch (Exception ex)
-            {
-
-            }
-
-        }
-
-
         private void dtpFechaInicial_ValueChanged(object sender, EventArgs e)
         {
             if (temasCurso != null) temasCurso.Clear();
@@ -561,6 +541,22 @@ namespace InterfazDATMA.Administrador
             curso = new CursoWS.curso();
             inicializarPantalla();
             btnGuardarCurso.Enabled = true;
+        }
+
+        private void dgvReq_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                CursoWS.curso auxCurso = dgvReq.Rows[e.RowIndex].DataBoundItem as CursoWS.curso;
+
+                dgvReq.Rows[e.RowIndex].Cells["NombreCurso"].Value = auxCurso.descripcion;
+                dgvReq.Rows[e.RowIndex].Cells["FechaInicial"].Value = auxCurso.fechaInicio;
+                dgvReq.Rows[e.RowIndex].Cells["FechaFinal"].Value = auxCurso.fechaFin;
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

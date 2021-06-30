@@ -76,10 +76,15 @@ namespace InterfazDATMA.Administrador
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
-            var index = dgvCursos.CurrentCell.RowIndex;
-            daoCurso.eliminarCurso(cursos[index].idCurso);
-            cursos.RemoveAt(index);
-            UpdateCursosTable();
+            var rpt = MessageBox.Show("¿Desea eliminar el curso seleccionado?","Mensaje de Advertencia",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+
+            if(rpt == DialogResult.Yes)
+            {
+                var index = dgvCursos.CurrentCell.RowIndex;
+                daoCurso.eliminarCurso(cursos[index].idCurso);
+                cursos.RemoveAt(index);
+                UpdateCursosTable();
+            }
 
         }
 

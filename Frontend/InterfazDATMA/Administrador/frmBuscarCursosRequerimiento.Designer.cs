@@ -65,8 +65,7 @@ namespace InterfazDATMA.Administrador
             this.FechaFinal});
             this.dgvCursosReq.EnableHeadersVisualStyles = false;
             this.dgvCursosReq.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursosReq.Location = new System.Drawing.Point(91, 131);
-            this.dgvCursosReq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCursosReq.Location = new System.Drawing.Point(99, 39);
             this.dgvCursosReq.Name = "dgvCursosReq";
             this.dgvCursosReq.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -85,7 +84,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCursosReq.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCursosReq.RowTemplate.Height = 28;
-            this.dgvCursosReq.Size = new System.Drawing.Size(1197, 451);
+            this.dgvCursosReq.Size = new System.Drawing.Size(898, 361);
             this.dgvCursosReq.TabIndex = 29;
             this.dgvCursosReq.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCursosReq_CellFormatting);
             // 
@@ -121,16 +120,17 @@ namespace InterfazDATMA.Administrador
             // 
             // btnSeleccionarCur
             // 
+            this.btnSeleccionarCur.AutoSize = false;
             this.btnSeleccionarCur.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSeleccionarCur.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSeleccionarCur.Depth = 0;
             this.btnSeleccionarCur.HighEmphasis = true;
             this.btnSeleccionarCur.Icon = null;
-            this.btnSeleccionarCur.Location = new System.Drawing.Point(706, 614);
-            this.btnSeleccionarCur.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSeleccionarCur.Location = new System.Drawing.Point(285, 440);
+            this.btnSeleccionarCur.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSeleccionarCur.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSeleccionarCur.Name = "btnSeleccionarCur";
-            this.btnSeleccionarCur.Size = new System.Drawing.Size(118, 36);
+            this.btnSeleccionarCur.Size = new System.Drawing.Size(177, 44);
             this.btnSeleccionarCur.TabIndex = 30;
             this.btnSeleccionarCur.Text = "Seleccionar";
             this.btnSeleccionarCur.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -140,16 +140,17 @@ namespace InterfazDATMA.Administrador
             // 
             // btnCancelar
             // 
+            this.btnCancelar.AutoSize = false;
             this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancelar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnCancelar.Depth = 0;
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(961, 614);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(616, 440);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(158, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(177, 44);
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -159,22 +160,19 @@ namespace InterfazDATMA.Administrador
             // 
             // frmBuscarCursosRequerimiento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1477, 674);
+            this.ClientSize = new System.Drawing.Size(1108, 539);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSeleccionarCur);
             this.Controls.Add(this.dgvCursosReq);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBuscarCursosRequerimiento";
-            this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
             this.Sizable = false;
             this.Text = "Buscar Curso Requisito";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursosReq)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
