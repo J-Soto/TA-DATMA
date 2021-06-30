@@ -47,9 +47,9 @@ namespace InterfazDATMA.plantilla
            
             else if (tipoUser == 2)
             {
-            //    formInicial = new frmGestionarModuloAdmin(this);
-              ///  abrirFormulario(formInicial);
-                //btnPerfil.Enabled = false;
+                forminicial = new frmgestionarmoduloadmin(this);
+               abrirformulario(forminicial);
+                btnperfil.Enabled = false;
             }
             //Tutor
             else if (tipoUser == 0)
@@ -98,8 +98,8 @@ namespace InterfazDATMA.plantilla
             //Administrador
             else if (tipoUser == 2)
             {
-             //   formInicial = new frmGestionarModuloAdmin(this);
-               // abrirFormulario(formInicial);
+                formInicial = new frmGestionarModuloAdmin(this);
+                abrirFormulario(formInicial);
             }
             //Tutor
             else if (tipoUser == 0)
