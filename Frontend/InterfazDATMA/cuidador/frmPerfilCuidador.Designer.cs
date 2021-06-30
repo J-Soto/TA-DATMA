@@ -53,7 +53,6 @@ namespace InterfazDATMA.cuidador
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -118,6 +117,8 @@ namespace InterfazDATMA.cuidador
             this.txtCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel42 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -125,7 +126,6 @@ namespace InterfazDATMA.cuidador
             this.panel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -228,12 +228,12 @@ namespace InterfazDATMA.cuidador
             this.Cursos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cursos.Depth = 0;
             this.Cursos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cursos.Location = new System.Drawing.Point(0, 0);
+            this.Cursos.Location = new System.Drawing.Point(37, 46);
             this.Cursos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Cursos.MouseState = MaterialSkin.MouseState.HOVER;
             this.Cursos.Name = "Cursos";
             this.Cursos.Primary = false;
-            this.Cursos.Size = new System.Drawing.Size(206, 55);
+            this.Cursos.Size = new System.Drawing.Size(124, 51);
             this.Cursos.TabIndex = 57;
             this.Cursos.Text = "Ver Cursos";
             this.Cursos.UseVisualStyleBackColor = true;
@@ -525,32 +525,27 @@ namespace InterfazDATMA.cuidador
             // 
             // tableLayoutPanel15
             // 
-            this.tableLayoutPanel15.ColumnCount = 3;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.02041F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.43367F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.54592F));
-            this.tableLayoutPanel15.Controls.Add(this.panel2, 1, 1);
+            this.tableLayoutPanel15.ColumnCount = 7;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.Controls.Add(this.materialFlatButton1, 3, 1);
+            this.tableLayoutPanel15.Controls.Add(this.materialFlatButton2, 5, 1);
+            this.tableLayoutPanel15.Controls.Add(this.Cursos, 1, 1);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(4, 589);
             this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 3;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.82759F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.82758F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.72414F));
             this.tableLayoutPanel15.Size = new System.Drawing.Size(531, 141);
             this.tableLayoutPanel15.TabIndex = 78;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.panel2.Controls.Add(this.Cursos);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(142, 44);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 55);
-            this.panel2.TabIndex = 0;
             // 
             // tableLayoutPanel7
             // 
@@ -1615,6 +1610,38 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel42.Size = new System.Drawing.Size(1216, 742);
             this.tableLayoutPanel42.TabIndex = 79;
             // 
+            // materialFlatButton1
+            // 
+            this.materialFlatButton1.AutoSize = true;
+            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton1.Depth = 0;
+            this.materialFlatButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialFlatButton1.Location = new System.Drawing.Point(202, 46);
+            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton1.Name = "materialFlatButton1";
+            this.materialFlatButton1.Primary = false;
+            this.materialFlatButton1.Size = new System.Drawing.Size(124, 51);
+            this.materialFlatButton1.TabIndex = 58;
+            this.materialFlatButton1.Text = "Modificar";
+            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton2
+            // 
+            this.materialFlatButton2.AutoSize = true;
+            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton2.Depth = 0;
+            this.materialFlatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialFlatButton2.Location = new System.Drawing.Point(367, 46);
+            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton2.Name = "materialFlatButton2";
+            this.materialFlatButton2.Primary = false;
+            this.materialFlatButton2.Size = new System.Drawing.Size(124, 51);
+            this.materialFlatButton2.TabIndex = 59;
+            this.materialFlatButton2.Text = "Cancelar";
+            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            // 
             // frmPerfilCuidador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1635,8 +1662,7 @@ namespace InterfazDATMA.cuidador
             this.panel6.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
@@ -1735,7 +1761,6 @@ namespace InterfazDATMA.cuidador
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
@@ -1784,5 +1809,7 @@ namespace InterfazDATMA.cuidador
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
     }
 }

@@ -23,6 +23,7 @@ namespace InterfazDATMA
         private GrupoWS.GrupoWSClient daoGrupo = new GrupoWS.GrupoWSClient();
 
         private BindingList<CursoTutor> cursos = null;
+        private BindingList<CursoTutor> cursos2 = null;
         private List<CursoWS.curso> cursosDisponibles = null;
 
         public frmCursosDisponibles(frmListaCursoInscritos formAnterior,frmPlantillaGestion plantilla, List<CursoWS.curso> cursosDisponibles)
@@ -36,6 +37,19 @@ namespace InterfazDATMA
 
             dgvCursos.AutoGenerateColumns = false;
             Fetch();
+            Fetch2();
+            foreach (var curso in cursos2)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Insert(0, new ListViewItem.ListViewSubItem(item, curso.Modulo));
+                item.SubItems.Insert(1, new ListViewItem.ListViewSubItem(item, curso.GrupoStr));
+                item.SubItems.Insert(2, new ListViewItem.ListViewSubItem(item, curso.NumInscritosStr));
+                item.SubItems.Insert(3, new ListViewItem.ListViewSubItem(item, curso.Encargado));
+                item.SubItems.Insert(4, new ListViewItem.ListViewSubItem(item, curso.FechaInicio.ToLongDateString()));
+                item.SubItems.Insert(5, new ListViewItem.ListViewSubItem(item, curso.FechaFin.ToLongDateString()));
+                
+                listCursos.Items.Add(item);
+            }
             dgvCursos.DataSource = cursos;
         }
 
@@ -43,19 +57,42 @@ namespace InterfazDATMA
         {
             // inscribirse
             int index = dgvCursos.CurrentCell.RowIndex;
+            int index2 = listCursos.SelectedIndices[0];
+            
             var obj = cursos[index];
+            var obj2 = cursos2[index2];
+
             daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, obj.Curso.idCurso);
-            daoGrupo.insertarGrupoTutor(frmPlantillaGestion.tutor.idPersona, obj.Grupo.idGrupo, obj.Grupo.cantInfantes);
+            daoCurso.insertarTutorCurso(frmPlantillaGestion.tutor.idPersona, obj.Curso.idCurso);
+            
+            daoGrupo.insertarGrupoTutor(frmPlantillaGestion.tutor.idPersona, obj2.Grupo.idGrupo, obj.Grupo.cantInfantes);
+            daoGrupo.insertarGrupoTutor(frmPlantillaGestion.tutor.idPersona, obj2.Grupo.idGrupo, obj.Grupo.cantInfantes);
+            
             var temp = cursos.ToList();
-            temp.RemoveAll(item => item.Curso.idCurso == obj.Curso.idCurso);
+            var temp2 = cursos2.ToList();
+
+            temp.RemoveAll( item => item.Curso.idCurso == obj.Curso.idCurso);
+            temp2.RemoveAll(item => item.Curso.idCurso == obj2.Curso.idCurso);
+            
             cursos = new BindingList<CursoTutor>(temp);
+            cursos2 = new BindingList<CursoTutor>(temp2);
+            
+            
+            listCursos.Refresh();
             dgvCursos.Refresh();
+            
             plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
         }
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)
         {
-            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla, cursos[dgvCursos.CurrentCell.RowIndex]));
+            //plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla, cursos[dgvCursos.CurrentCell.RowIndex]));
+            plantilla.abrirFormulario(
+                new frmInformacionCurso(
+                    this, 
+                    plantilla, 
+                    cursos2[listCursos.SelectedIndices[0]]));
+            
         }
 
         private void Fetch()
@@ -71,6 +108,24 @@ namespace InterfazDATMA
                         var psico = daoGrupo.listarPsicologosPorIdGrupo(grupo.idGrupo);
                         int numInscritos = daoGrupo.getGrupoNumInscritos(grupo.idGrupo);
                         cursos.Add(new CursoTutor(curso, grupo, psico, numInscritos));
+                    }
+                }
+            }
+        }
+
+        private void Fetch2()
+        {
+            cursos2 = new BindingList<CursoTutor>();
+            foreach (var curso in cursosDisponibles)
+            {
+                var grupos = daoGrupo.listarGrupoPorIdCurso(curso.idCurso);
+                if (grupos is object)
+                {
+                    foreach (var grupo in grupos)
+                    {
+                        var psico = daoGrupo.listarPsicologosPorIdGrupo(grupo.idGrupo);
+                        int numInscritos = daoGrupo.getGrupoNumInscritos(grupo.idGrupo);
+                        cursos2.Add(new CursoTutor(curso, grupo, psico, numInscritos));
                     }
                 }
             }
