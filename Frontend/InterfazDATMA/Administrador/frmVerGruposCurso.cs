@@ -68,13 +68,6 @@ namespace InterfazDATMA.Administrador
             dgvGrupos.DataSource = auxGrupos;
         }
 
-        private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            GrupoWS.grupo auxGrupo = dgvGrupos.Rows[e.RowIndex].DataBoundItem as GrupoWS.grupo;
-            dgvGrupos.Rows[e.RowIndex].Cells["Nombre"].Value = auxGrupo.nombrePromocion;
-            dgvGrupos.Rows[e.RowIndex].Cells["MaxTutores"].Value = auxGrupo.maxCantCuidadores;
-        }
-
 
         public void actualizarDGV(Grupo_Curso grupo)
         {

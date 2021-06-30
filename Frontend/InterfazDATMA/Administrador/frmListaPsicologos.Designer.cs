@@ -43,7 +43,7 @@ namespace InterfazDATMA.Administrador
             this.colTelf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            //this.btnBuscar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,13 +148,17 @@ namespace InterfazDATMA.Administrador
             // 
             // btnBuscar
             // 
-            //resources.ApplyResources(this.btnBuscar, "btnBuscar");
-            //this.btnBuscar.Depth = 0;
-            //this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnBuscar.Name = "btnBuscar";
-            //this.btnBuscar.Primary = false;
-            //this.btnBuscar.UseVisualStyleBackColor = true;
-            //this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            resources.ApplyResources(this.btnBuscar, "btnBuscar");
+            this.btnBuscar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.HighEmphasis = true;
+            this.btnBuscar.Icon = null;
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBuscar.UseAccentColor = false;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // Header
             // 
@@ -162,7 +166,7 @@ namespace InterfazDATMA.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
-            //this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvPsico);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
@@ -189,6 +193,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn colTelf;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private MaterialSkin.Controls.MaterialButton btnBuscar;
         //private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
     }
 }

@@ -55,11 +55,11 @@ namespace InterfazDATMA.Administrador
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.txtDistrito = new System.Windows.Forms.TextBox();
             this.btnSubirFoto = new System.Windows.Forms.Button();
-            //this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
-            //this.btnNuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
-            //this.btnSiguiente = new MaterialSkin.Controls.MaterialFlatButton();
             this.label2 = new System.Windows.Forms.Label();
-            //this.btnAsignarUsuario = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.btnAsignarUsuario = new MaterialSkin.Controls.MaterialButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
+            this.btnSiguiente = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,51 +205,67 @@ namespace InterfazDATMA.Administrador
             this.btnSubirFoto.UseVisualStyleBackColor = true;
             this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
             // 
-            // btnCancelar
-            // 
-            //resources.ApplyResources(this.btnCancelar, "btnCancelar");
-            //this.btnCancelar.Depth = 0;
-            //this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnCancelar.Name = "btnCancelar";
-            //this.btnCancelar.Primary = false;
-            //this.btnCancelar.UseVisualStyleBackColor = true;
-            //this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
-            //// 
-            //// btnNuevoDistrito
-            //// 
-            //resources.ApplyResources(this.btnNuevoDistrito, "btnNuevoDistrito");
-            //this.btnNuevoDistrito.Depth = 0;
-            //this.btnNuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnNuevoDistrito.Name = "btnNuevoDistrito";
-            //this.btnNuevoDistrito.Primary = false;
-            //this.btnNuevoDistrito.UseVisualStyleBackColor = true;
-            //this.btnNuevoDistrito.Click += new System.EventHandler(this.btnNuevoDistrito_Click_1);
-            //// 
-            //// btnSiguiente
-            //// 
-            //resources.ApplyResources(this.btnSiguiente, "btnSiguiente");
-            //this.btnSiguiente.Depth = 0;
-            //this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnSiguiente.Name = "btnSiguiente";
-            //this.btnSiguiente.Primary = false;
-            //this.btnSiguiente.UseVisualStyleBackColor = true;
-            //this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
-            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
             // 
+            // materialButton1
+            // 
+            resources.ApplyResources(this.materialButton1, "materialButton1");
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.btnNuevoDistrito_Click_1);
+            // 
             // btnAsignarUsuario
             // 
-            //resources.ApplyResources(this.btnAsignarUsuario, "btnAsignarUsuario");
-            //this.btnAsignarUsuario.Depth = 0;
-            //this.btnAsignarUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnAsignarUsuario.Name = "btnAsignarUsuario";
-            //this.btnAsignarUsuario.Primary = false;
-            //this.btnAsignarUsuario.UseVisualStyleBackColor = true;
-            //this.btnAsignarUsuario.Click += new System.EventHandler(this.btnAsignarUsuario_Click);
+            resources.ApplyResources(this.btnAsignarUsuario, "btnAsignarUsuario");
+            this.btnAsignarUsuario.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAsignarUsuario.Depth = 0;
+            this.btnAsignarUsuario.HighEmphasis = true;
+            this.btnAsignarUsuario.Icon = null;
+            this.btnAsignarUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAsignarUsuario.Name = "btnAsignarUsuario";
+            this.btnAsignarUsuario.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAsignarUsuario.UseAccentColor = false;
+            this.btnAsignarUsuario.UseVisualStyleBackColor = true;
+            this.btnAsignarUsuario.Click += new System.EventHandler(this.btnAsignarUsuario_Click);
+            // 
+            // btnCancelar
+            // 
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
+            this.btnCancelar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.HighEmphasis = true;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCancelar.UseAccentColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
+            // btnSiguiente
+            // 
+            resources.ApplyResources(this.btnSiguiente, "btnSiguiente");
+            this.btnSiguiente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSiguiente.Depth = 0;
+            this.btnSiguiente.HighEmphasis = true;
+            this.btnSiguiente.Icon = null;
+            this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSiguiente.UseAccentColor = false;
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
             // frmModificarTutor
             // 
@@ -257,11 +273,11 @@ namespace InterfazDATMA.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
-            //this.Controls.Add(this.btnAsignarUsuario);
+            this.Controls.Add(this.btnSiguiente);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAsignarUsuario);
+            this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.label2);
-            //this.Controls.Add(this.btnSiguiente);
-            //this.Controls.Add(this.btnNuevoDistrito);
-            //this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.pbFoto);
@@ -324,6 +340,10 @@ namespace InterfazDATMA.Administrador
         //private MaterialSkin.Controls.MaterialFlatButton btnNuevoDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
         private System.Windows.Forms.Label label2;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton btnAsignarUsuario;
+        private MaterialSkin.Controls.MaterialButton btnCancelar;
+        private MaterialSkin.Controls.MaterialButton btnSiguiente;
         //private MaterialSkin.Controls.MaterialFlatButton btnAsignarUsuario;
     }
 }
