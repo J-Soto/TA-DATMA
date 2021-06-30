@@ -19,6 +19,8 @@ namespace InterfazDATMA
         private frmPlantillaGestion plantillaGestion;
 
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
+        private ActividadWS.ActividadWSClient daoAct = new ActividadWS.ActividadWSClient();
+        private List<ActividadWS.actividad> actividades = new List<ActividadWS.actividad>();
 
         private CursoTutor cursoTutor;
         private DateTime daterunner;
@@ -36,6 +38,17 @@ namespace InterfazDATMA
 
             // obtener actividades
             var semanas = daoCurso.listarSemanasPorIdCurso(cursoTutor.Curso.idCurso);
+            if (semanas is object)
+            {
+                foreach (var semana in semanas)
+                {
+                    var newact = daoAct.listarActividadesIdSemana(semana.id);
+                    if (newact is object)
+                    {
+                        actividades.AddRange(newact);
+                    }
+                }
+            }
 
             LlenarInformacion();
         }
@@ -51,11 +64,19 @@ namespace InterfazDATMA
             {
                 pictBoxEncargada.Image = (Bitmap)((new ImageConverter()).ConvertFrom(cursoTutor.Psicologo.fotoPerfil));
             }
+            ActualizarActividades();
         }
 
         private void ActualizarFechaStr()
         {
             materialLabel4.Text = daterunner.ToString("MMMM").ToUpper() + " 2021";
+        }
+
+        private void ActualizarActividades()
+        {
+            var temp = new List<ActividadWS.actividad>(actividades);
+            temp.RemoveAll(item => item.fecha.Month != daterunner.Month);
+            dgvInfCurso.DataSource = temp;
         }
 
         private void btnVerMas_Click(object sender, EventArgs e)
@@ -67,8 +88,9 @@ namespace InterfazDATMA
         {
             if (daterunner.Month - cursoTutor.FechaInicio.Month > 0)
             {
-                daterunner.AddMonths(-1);
+                daterunner = daterunner.AddMonths(-1);
                 ActualizarFechaStr();
+                ActualizarActividades();
             }
         }
 
@@ -76,8 +98,9 @@ namespace InterfazDATMA
         {
             if (cursoTutor.FechaFin.Month - daterunner.Month > 0)
             {
-                daterunner.AddMonths(1);
+                daterunner = daterunner.AddMonths(1);
                 ActualizarFechaStr();
+                ActualizarActividades();
             }
         }
     }
