@@ -163,7 +163,7 @@
     <value>Fill</value>
   </data>
   <data name="txtDescripcion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14px</value>
+    <value>Microsoft Sans Serif, 14px</value>
   </data>
   <data name="txtDescripcion.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 14</value>

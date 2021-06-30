@@ -32,6 +32,8 @@ namespace InterfazDATMA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarMaterialPsicologo));
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.txtDescripcion = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -48,9 +50,8 @@ namespace InterfazDATMA
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtDescripcion = new MaterialSkin.Controls.MaterialMultiLineTextBox();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.tableLayoutPanel7.SuspendLayout();
+            this.materialCard1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -62,7 +63,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
-            this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialLabel3
@@ -78,6 +78,26 @@ namespace InterfazDATMA
             resources.ApplyResources(this.tableLayoutPanel7, "tableLayoutPanel7");
             this.tableLayoutPanel7.Controls.Add(this.materialCard1, 1, 1);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.txtDescripcion);
+            this.materialCard1.Depth = 0;
+            resources.ApplyResources(this.materialCard1, "materialCard1");
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Depth = 0;
+            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
+            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtDescripcion.Name = "txtDescripcion";
             // 
             // panel1
             // 
@@ -214,26 +234,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel11.Controls.Add(this.materialLabel2, 1, 0);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Depth = 0;
-            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtDescripcion.Name = "txtDescripcion";
-            // 
-            // materialCard1
-            // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.txtDescripcion);
-            this.materialCard1.Depth = 0;
-            resources.ApplyResources(this.materialCard1, "materialCard1");
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            // 
             // frmAgregarMaterialPsicologo
             // 
             resources.ApplyResources(this, "$this");
@@ -245,6 +245,7 @@ namespace InterfazDATMA
             this.Name = "frmAgregarMaterialPsicologo";
             this.Sizable = false;
             this.tableLayoutPanel7.ResumeLayout(false);
+            this.materialCard1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -256,7 +257,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
-            this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

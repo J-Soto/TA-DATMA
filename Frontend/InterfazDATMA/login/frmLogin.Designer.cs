@@ -150,7 +150,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = global::InterfazDATMA.Properties.Resources.DATMA_logo;
+            this.pictureBox1.ErrorImage = global::InterfazDATMA.Properties.Resources.LogoDatmaV2;
             this.pictureBox1.Location = new System.Drawing.Point(770, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(651, 350);
