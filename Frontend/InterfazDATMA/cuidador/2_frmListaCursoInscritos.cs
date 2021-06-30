@@ -15,13 +15,12 @@ namespace InterfazDATMA
 {
     public partial class frmListaCursoInscritos : MaterialSkin.Controls.MaterialForm
     {
-        private frmWalkthrough formAnterior;
         private frmPerfilCuidador formAnterior2;
         private frmPlantillaGestion plantillaGestion;
         private List<CursoWS.curso> cursos = null;
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
 
-        public frmListaCursoInscritos(frmWalkthrough formAnterior,frmPlantillaGestion plantillaGestion)
+        public frmListaCursoInscritos(frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
             Design.Ini(this);
@@ -32,7 +31,6 @@ namespace InterfazDATMA
             }
 
             this.plantillaGestion = plantillaGestion;
-            this.formAnterior = formAnterior;
         }
         public frmListaCursoInscritos(frmPerfilCuidador formAnterior2, frmPlantillaGestion plantillaGestion)
         {
@@ -41,12 +39,6 @@ namespace InterfazDATMA
             this.plantillaGestion = plantillaGestion;
             this.formAnterior2 = formAnterior2;
         }
-
-        private void frmListaCursoInscritos_Load(object sender, EventArgs e)
-        {
-            
-        }
-
       
         private void btnCursosDisponibles_Click(object sender, EventArgs e)
         {
@@ -66,27 +58,16 @@ namespace InterfazDATMA
         private void btnModulo1_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
-
-
         }
 
         private void btnModulo2_Click_1(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
-
-
         }
 
         private void btnModulo3_Click_1(object sender, EventArgs e)
         {
-
             plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

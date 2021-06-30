@@ -62,8 +62,8 @@ namespace InterfazDATMA
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(this, plantillaGestion));
-
+            frmPlantillaGestion.pasoTutorial = true;
+            plantillaGestion.abrirFormulario(new frmListaCursoInscritos(plantillaGestion));
         }
     }
 }

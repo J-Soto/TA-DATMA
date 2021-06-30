@@ -28,6 +28,7 @@ namespace InterfazDATMA.plantilla
         char tema='D';
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         bool seMuestra;
+        public static bool pasoTutorial = false;
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
@@ -109,7 +110,13 @@ namespace InterfazDATMA.plantilla
             else if (tipoUser == 0)
             {
                 formInicial = new frmWalkthrough(this);
-                abrirFormulario(formInicial);
+                if (pasoTutorial)
+                {
+                    abrirFormulario(new frmListaCursoInscritos(this));
+                } else
+                {
+                    abrirFormulario(formInicial);
+                }
             }
             
         }
