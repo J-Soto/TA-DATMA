@@ -55,7 +55,7 @@ namespace InterfazDATMA.Administrador
             Design.Ini(this);
             dgvReq.AutoGenerateColumns = false;
             dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            btnModificar.Visible = false;
+            //btnModificar.Visible = false;
             curso = new CursoWS.curso();
             inicializarPantalla();
 
@@ -353,8 +353,8 @@ namespace InterfazDATMA.Administrador
 
                             MessageBox.Show("Se ha registrado el curso con exito.", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            btnGuardarCurso.Enabled = false;
-                            btnModificar.Enabled = true;
+                            //btnGuardarCurso.Enabled = false;
+                            //btnModificar.Enabled = true;
                         }
                     }
                     else
@@ -549,8 +549,8 @@ namespace InterfazDATMA.Administrador
 
                     MessageBox.Show("Se ha modificado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    btnGuardarCurso.Enabled = false;
-                    btnModificar.Enabled = true;
+                    //btnGuardarCurso.Enabled = false;
+                    //btnModificar.Enabled = true;
                     inicializarPantalla();
                 }
             }
@@ -560,7 +560,7 @@ namespace InterfazDATMA.Administrador
         {
             curso = new CursoWS.curso();
             inicializarPantalla();
-            btnGuardarCurso.Enabled = true;
+            //btnGuardarCurso.Enabled = true;
         }
     }
 }

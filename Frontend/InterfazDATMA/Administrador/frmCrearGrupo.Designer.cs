@@ -38,11 +38,11 @@ namespace InterfazDATMA.Administrador
             this.txtMaxTutores = new System.Windows.Forms.TextBox();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAgregarPsico = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnEliminar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnBack = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnReportePsi = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnAgregarPsico = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnEliminar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnBack = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnReportePsi = new MaterialSkin.Controls.MaterialFlatButton();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,84 +146,84 @@ namespace InterfazDATMA.Administrador
             // 
             // btnAgregarPsico
             // 
-            this.btnAgregarPsico.AutoSize = true;
-            this.btnAgregarPsico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAgregarPsico.Depth = 0;
-            this.btnAgregarPsico.Location = new System.Drawing.Point(1038, 241);
-            this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnAgregarPsico.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAgregarPsico.Name = "btnAgregarPsico";
-            this.btnAgregarPsico.Primary = false;
-            this.btnAgregarPsico.Size = new System.Drawing.Size(26, 36);
-            this.btnAgregarPsico.TabIndex = 30;
-            this.btnAgregarPsico.Text = "+";
-            this.btnAgregarPsico.UseVisualStyleBackColor = true;
-            this.btnAgregarPsico.Click += new System.EventHandler(this.btnAgregarPsico_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.AutoSize = true;
-            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEliminar.Depth = 0;
-            this.btnEliminar.Location = new System.Drawing.Point(1038, 290);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Primary = false;
-            this.btnEliminar.Size = new System.Drawing.Size(21, 36);
-            this.btnEliminar.TabIndex = 31;
-            this.btnEliminar.Text = "-";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.AutoSize = true;
-            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnGuardar.Depth = 0;
-            this.btnGuardar.Location = new System.Drawing.Point(1107, 700);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Primary = false;
-            this.btnGuardar.Size = new System.Drawing.Size(108, 36);
-            this.btnGuardar.TabIndex = 32;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.AutoSize = true;
-            this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBack.Depth = 0;
-            this.btnBack.Location = new System.Drawing.Point(1107, 755);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnBack.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Primary = false;
-            this.btnBack.Size = new System.Drawing.Size(119, 36);
-            this.btnBack.TabIndex = 33;
-            this.btnBack.Text = "Cancelar";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnReportePsi
-            // 
-            this.btnReportePsi.AutoSize = true;
-            this.btnReportePsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnReportePsi.Depth = 0;
-            this.btnReportePsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnReportePsi.Location = new System.Drawing.Point(786, 711);
-            this.btnReportePsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnReportePsi.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnReportePsi.Name = "btnReportePsi";
-            this.btnReportePsi.Primary = false;
-            this.btnReportePsi.Size = new System.Drawing.Size(233, 36);
-            this.btnReportePsi.TabIndex = 34;
-            this.btnReportePsi.Text = "Reporte Psicologos";
-            this.btnReportePsi.UseVisualStyleBackColor = true;
-            this.btnReportePsi.Click += new System.EventHandler(this.btnReportePsi_Click);
+            //this.btnAgregarPsico.AutoSize = true;
+            //this.btnAgregarPsico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnAgregarPsico.Depth = 0;
+            //this.btnAgregarPsico.Location = new System.Drawing.Point(1038, 241);
+            //this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnAgregarPsico.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnAgregarPsico.Name = "btnAgregarPsico";
+            //this.btnAgregarPsico.Primary = false;
+            //this.btnAgregarPsico.Size = new System.Drawing.Size(26, 36);
+            //this.btnAgregarPsico.TabIndex = 30;
+            //this.btnAgregarPsico.Text = "+";
+            //this.btnAgregarPsico.UseVisualStyleBackColor = true;
+            //this.btnAgregarPsico.Click += new System.EventHandler(this.btnAgregarPsico_Click);
+            //// 
+            //// btnEliminar
+            //// 
+            //this.btnEliminar.AutoSize = true;
+            //this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnEliminar.Depth = 0;
+            //this.btnEliminar.Location = new System.Drawing.Point(1038, 290);
+            //this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnEliminar.Name = "btnEliminar";
+            //this.btnEliminar.Primary = false;
+            //this.btnEliminar.Size = new System.Drawing.Size(21, 36);
+            //this.btnEliminar.TabIndex = 31;
+            //this.btnEliminar.Text = "-";
+            //this.btnEliminar.UseVisualStyleBackColor = true;
+            //this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            //// 
+            //// btnGuardar
+            //// 
+            //this.btnGuardar.AutoSize = true;
+            //this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnGuardar.Depth = 0;
+            //this.btnGuardar.Location = new System.Drawing.Point(1107, 700);
+            //this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnGuardar.Name = "btnGuardar";
+            //this.btnGuardar.Primary = false;
+            //this.btnGuardar.Size = new System.Drawing.Size(108, 36);
+            //this.btnGuardar.TabIndex = 32;
+            //this.btnGuardar.Text = "Guardar";
+            //this.btnGuardar.UseVisualStyleBackColor = true;
+            //this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            //// 
+            //// btnBack
+            //// 
+            //this.btnBack.AutoSize = true;
+            //this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnBack.Depth = 0;
+            //this.btnBack.Location = new System.Drawing.Point(1107, 755);
+            //this.btnBack.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnBack.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnBack.Name = "btnBack";
+            //this.btnBack.Primary = false;
+            //this.btnBack.Size = new System.Drawing.Size(119, 36);
+            //this.btnBack.TabIndex = 33;
+            //this.btnBack.Text = "Cancelar";
+            //this.btnBack.UseVisualStyleBackColor = true;
+            //this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            //// 
+            //// btnReportePsi
+            //// 
+            //this.btnReportePsi.AutoSize = true;
+            //this.btnReportePsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnReportePsi.Depth = 0;
+            //this.btnReportePsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            //this.btnReportePsi.Location = new System.Drawing.Point(786, 711);
+            //this.btnReportePsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnReportePsi.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnReportePsi.Name = "btnReportePsi";
+            //this.btnReportePsi.Primary = false;
+            //this.btnReportePsi.Size = new System.Drawing.Size(233, 36);
+            //this.btnReportePsi.TabIndex = 34;
+            //this.btnReportePsi.Text = "Reporte Psicologos";
+            //this.btnReportePsi.UseVisualStyleBackColor = true;
+            //this.btnReportePsi.Click += new System.EventHandler(this.btnReportePsi_Click);
             // 
             // Nombre
             // 
@@ -264,11 +264,11 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1306, 829);
             this.ControlBox = false;
-            this.Controls.Add(this.btnReportePsi);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnAgregarPsico);
+            //this.Controls.Add(this.btnReportePsi);
+            //this.Controls.Add(this.btnBack);
+            //this.Controls.Add(this.btnGuardar);
+            //this.Controls.Add(this.btnEliminar);
+            //this.Controls.Add(this.btnAgregarPsico);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.txtMaxTutores);
@@ -292,11 +292,11 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.TextBox txtMaxTutores;
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.Label label2;
-        private MaterialSkin.Controls.MaterialFlatButton btnAgregarPsico;
-        private MaterialSkin.Controls.MaterialFlatButton btnEliminar;
-        private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
-        private MaterialSkin.Controls.MaterialFlatButton btnBack;
-        private MaterialSkin.Controls.MaterialFlatButton btnReportePsi;
+        //private MaterialSkin.Controls.MaterialFlatButton btnAgregarPsico;
+        //private MaterialSkin.Controls.MaterialFlatButton btnEliminar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnBack;
+        //private MaterialSkin.Controls.MaterialFlatButton btnReportePsi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;

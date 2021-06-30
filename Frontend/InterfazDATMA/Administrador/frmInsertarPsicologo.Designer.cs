@@ -53,9 +53,9 @@ namespace InterfazDATMA.Administrador
             this.btnSubirFoto = new System.Windows.Forms.Button();
             this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
             this.txtDistrito = new System.Windows.Forms.TextBox();
-            this.nuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.nuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -300,53 +300,53 @@ namespace InterfazDATMA.Administrador
             // 
             // nuevoDistrito
             // 
-            this.nuevoDistrito.AutoSize = true;
-            this.nuevoDistrito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.nuevoDistrito.Depth = 0;
-            this.nuevoDistrito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.nuevoDistrito.FlatAppearance.BorderSize = 2;
-            this.nuevoDistrito.Location = new System.Drawing.Point(828, 362);
-            this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
-            this.nuevoDistrito.Name = "nuevoDistrito";
-            this.nuevoDistrito.Primary = false;
-            this.nuevoDistrito.Size = new System.Drawing.Size(202, 36);
-            this.nuevoDistrito.TabIndex = 75;
-            this.nuevoDistrito.Text = "Agregar Distrito";
-            this.nuevoDistrito.UseVisualStyleBackColor = true;
-            this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.AutoSize = true;
-            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancelar.Depth = 0;
-            this.btnCancelar.Location = new System.Drawing.Point(84, 717);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Primary = false;
-            this.btnCancelar.Size = new System.Drawing.Size(119, 36);
-            this.btnCancelar.TabIndex = 75;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.AutoSize = true;
-            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnGuardar.Depth = 0;
-            this.btnGuardar.Location = new System.Drawing.Point(903, 717);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Primary = false;
-            this.btnGuardar.Size = new System.Drawing.Size(108, 36);
-            this.btnGuardar.TabIndex = 76;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            //this.nuevoDistrito.AutoSize = true;
+            //this.nuevoDistrito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.nuevoDistrito.Depth = 0;
+            //this.nuevoDistrito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            //this.nuevoDistrito.FlatAppearance.BorderSize = 2;
+            //this.nuevoDistrito.Location = new System.Drawing.Point(828, 362);
+            //this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.nuevoDistrito.Name = "nuevoDistrito";
+            //this.nuevoDistrito.Primary = false;
+            //this.nuevoDistrito.Size = new System.Drawing.Size(202, 36);
+            //this.nuevoDistrito.TabIndex = 75;
+            //this.nuevoDistrito.Text = "Agregar Distrito";
+            //this.nuevoDistrito.UseVisualStyleBackColor = true;
+            //this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
+            //// 
+            //// btnCancelar
+            //// 
+            //this.btnCancelar.AutoSize = true;
+            //this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnCancelar.Depth = 0;
+            //this.btnCancelar.Location = new System.Drawing.Point(84, 717);
+            //this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnCancelar.Name = "btnCancelar";
+            //this.btnCancelar.Primary = false;
+            //this.btnCancelar.Size = new System.Drawing.Size(119, 36);
+            //this.btnCancelar.TabIndex = 75;
+            //this.btnCancelar.Text = "Cancelar";
+            //this.btnCancelar.UseVisualStyleBackColor = true;
+            //this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            //// 
+            //// btnGuardar
+            //// 
+            //this.btnGuardar.AutoSize = true;
+            //this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnGuardar.Depth = 0;
+            //this.btnGuardar.Location = new System.Drawing.Point(903, 717);
+            //this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnGuardar.Name = "btnGuardar";
+            //this.btnGuardar.Primary = false;
+            //this.btnGuardar.Size = new System.Drawing.Size(108, 36);
+            //this.btnGuardar.TabIndex = 76;
+            //this.btnGuardar.Text = "Guardar";
+            //this.btnGuardar.UseVisualStyleBackColor = true;
+            //this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // pbFoto
             // 
@@ -367,9 +367,9 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1428, 862);
             this.ControlBox = false;
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.nuevoDistrito);
+            //this.Controls.Add(this.btnGuardar);
+            //this.Controls.Add(this.btnCancelar);
+            //this.Controls.Add(this.nuevoDistrito);
             this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.pbFoto);
@@ -430,8 +430,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
         private System.Windows.Forms.TextBox txtDistrito;
-        private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
-        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
-        private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
+        //private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
+        //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
     }
 }

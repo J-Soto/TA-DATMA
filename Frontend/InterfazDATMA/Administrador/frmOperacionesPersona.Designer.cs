@@ -47,14 +47,14 @@ namespace InterfazDATMA.Administrador
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtBusqUser = new System.Windows.Forms.TextBox();
-            this.btnBuscarUser = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnInsertarTutor = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnModificarUsuario = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnInsertarPsi = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnDeshabilitar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnListarPsi = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnListarTut = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnMostrarFoto = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnBuscarUser = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnInsertarTutor = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnModificarUsuario = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnInsertarPsi = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnDeshabilitar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnListarPsi = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnListarTut = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnMostrarFoto = new MaterialSkin.Controls.MaterialFlatButton();
             this.checkSoloTutores = new System.Windows.Forms.CheckBox();
             this.checkSoloPsicologos = new System.Windows.Forms.CheckBox();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
@@ -234,131 +234,131 @@ namespace InterfazDATMA.Administrador
             // 
             // btnBuscarUser
             // 
-            this.btnBuscarUser.AutoSize = true;
-            this.btnBuscarUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBuscarUser.Depth = 0;
-            this.btnBuscarUser.Location = new System.Drawing.Point(1277, 147);
-            this.btnBuscarUser.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnBuscarUser.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBuscarUser.Name = "btnBuscarUser";
-            this.btnBuscarUser.Primary = false;
-            this.btnBuscarUser.Size = new System.Drawing.Size(93, 36);
-            this.btnBuscarUser.TabIndex = 27;
-            this.btnBuscarUser.Text = "Buscar";
-            this.btnBuscarUser.UseVisualStyleBackColor = true;
-            this.btnBuscarUser.Click += new System.EventHandler(this.btnBuscarTutor_Click_1);
-            // 
-            // btnInsertarTutor
-            // 
-            this.btnInsertarTutor.AutoSize = true;
-            this.btnInsertarTutor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnInsertarTutor.Depth = 0;
-            this.btnInsertarTutor.Location = new System.Drawing.Point(1277, 355);
-            this.btnInsertarTutor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnInsertarTutor.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnInsertarTutor.Name = "btnInsertarTutor";
-            this.btnInsertarTutor.Primary = false;
-            this.btnInsertarTutor.Size = new System.Drawing.Size(181, 36);
-            this.btnInsertarTutor.TabIndex = 28;
-            this.btnInsertarTutor.Text = "Insertar Tutor";
-            this.btnInsertarTutor.UseVisualStyleBackColor = true;
-            this.btnInsertarTutor.Click += new System.EventHandler(this.btnInsertarTutor_Click_1);
-            // 
-            // btnModificarUsuario
-            // 
-            this.btnModificarUsuario.AutoSize = true;
-            this.btnModificarUsuario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnModificarUsuario.Depth = 0;
-            this.btnModificarUsuario.Location = new System.Drawing.Point(1277, 441);
-            this.btnModificarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnModificarUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnModificarUsuario.Name = "btnModificarUsuario";
-            this.btnModificarUsuario.Primary = false;
-            this.btnModificarUsuario.Size = new System.Drawing.Size(214, 36);
-            this.btnModificarUsuario.TabIndex = 32;
-            this.btnModificarUsuario.Text = "Modificar Usuario";
-            this.btnModificarUsuario.UseVisualStyleBackColor = true;
-            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarPsi_Click_1);
-            // 
-            // btnInsertarPsi
-            // 
-            this.btnInsertarPsi.AutoSize = true;
-            this.btnInsertarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnInsertarPsi.Depth = 0;
-            this.btnInsertarPsi.Location = new System.Drawing.Point(1277, 264);
-            this.btnInsertarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnInsertarPsi.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnInsertarPsi.Name = "btnInsertarPsi";
-            this.btnInsertarPsi.Primary = false;
-            this.btnInsertarPsi.Size = new System.Drawing.Size(228, 36);
-            this.btnInsertarPsi.TabIndex = 31;
-            this.btnInsertarPsi.Text = "Insertar Psicólogo";
-            this.btnInsertarPsi.UseVisualStyleBackColor = true;
-            this.btnInsertarPsi.Click += new System.EventHandler(this.btnInsertarPsi_Click_1);
-            // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.AutoSize = true;
-            this.btnDeshabilitar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDeshabilitar.Depth = 0;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(1025, 1000);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnDeshabilitar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Primary = false;
-            this.btnDeshabilitar.Size = new System.Drawing.Size(246, 36);
-            this.btnDeshabilitar.TabIndex = 35;
-            this.btnDeshabilitar.Text = "Deshabilitar Usuario";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
-            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click_1);
-            // 
-            // btnListarPsi
-            // 
-            this.btnListarPsi.AutoSize = true;
-            this.btnListarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnListarPsi.Depth = 0;
-            this.btnListarPsi.Location = new System.Drawing.Point(554, 1000);
-            this.btnListarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnListarPsi.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnListarPsi.Name = "btnListarPsi";
-            this.btnListarPsi.Primary = false;
-            this.btnListarPsi.Size = new System.Drawing.Size(213, 36);
-            this.btnListarPsi.TabIndex = 34;
-            this.btnListarPsi.Text = "Listar Psicologos";
-            this.btnListarPsi.UseVisualStyleBackColor = true;
-            this.btnListarPsi.Click += new System.EventHandler(this.btnListarPsi_Click_1);
-            // 
-            // btnListarTut
-            // 
-            this.btnListarTut.AutoSize = true;
-            this.btnListarTut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnListarTut.Depth = 0;
-            this.btnListarTut.Location = new System.Drawing.Point(41, 1000);
-            this.btnListarTut.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnListarTut.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnListarTut.Name = "btnListarTut";
-            this.btnListarTut.Primary = false;
-            this.btnListarTut.Size = new System.Drawing.Size(177, 36);
-            this.btnListarTut.TabIndex = 33;
-            this.btnListarTut.Text = "Listar Tutores";
-            this.btnListarTut.UseVisualStyleBackColor = true;
-            this.btnListarTut.Click += new System.EventHandler(this.btnListarTut_Click_1);
-            // 
-            // btnMostrarFoto
-            // 
-            this.btnMostrarFoto.AutoSize = true;
-            this.btnMostrarFoto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMostrarFoto.Depth = 0;
-            this.btnMostrarFoto.Location = new System.Drawing.Point(642, 142);
-            this.btnMostrarFoto.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnMostrarFoto.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMostrarFoto.Name = "btnMostrarFoto";
-            this.btnMostrarFoto.Primary = false;
-            this.btnMostrarFoto.Size = new System.Drawing.Size(168, 36);
-            this.btnMostrarFoto.TabIndex = 36;
-            this.btnMostrarFoto.Text = "Mostrar Foto";
-            this.btnMostrarFoto.UseVisualStyleBackColor = true;
-            this.btnMostrarFoto.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            //this.btnBuscarUser.AutoSize = true;
+            //this.btnBuscarUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnBuscarUser.Depth = 0;
+            //this.btnBuscarUser.Location = new System.Drawing.Point(1277, 147);
+            //this.btnBuscarUser.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnBuscarUser.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnBuscarUser.Name = "btnBuscarUser";
+            //this.btnBuscarUser.Primary = false;
+            //this.btnBuscarUser.Size = new System.Drawing.Size(93, 36);
+            //this.btnBuscarUser.TabIndex = 27;
+            //this.btnBuscarUser.Text = "Buscar";
+            //this.btnBuscarUser.UseVisualStyleBackColor = true;
+            //this.btnBuscarUser.Click += new System.EventHandler(this.btnBuscarTutor_Click_1);
+            //// 
+            //// btnInsertarTutor
+            //// 
+            //this.btnInsertarTutor.AutoSize = true;
+            //this.btnInsertarTutor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnInsertarTutor.Depth = 0;
+            //this.btnInsertarTutor.Location = new System.Drawing.Point(1277, 355);
+            //this.btnInsertarTutor.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnInsertarTutor.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnInsertarTutor.Name = "btnInsertarTutor";
+            //this.btnInsertarTutor.Primary = false;
+            //this.btnInsertarTutor.Size = new System.Drawing.Size(181, 36);
+            //this.btnInsertarTutor.TabIndex = 28;
+            //this.btnInsertarTutor.Text = "Insertar Tutor";
+            //this.btnInsertarTutor.UseVisualStyleBackColor = true;
+            //this.btnInsertarTutor.Click += new System.EventHandler(this.btnInsertarTutor_Click_1);
+            //// 
+            //// btnModificarUsuario
+            //// 
+            //this.btnModificarUsuario.AutoSize = true;
+            //this.btnModificarUsuario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnModificarUsuario.Depth = 0;
+            //this.btnModificarUsuario.Location = new System.Drawing.Point(1277, 441);
+            //this.btnModificarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnModificarUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnModificarUsuario.Name = "btnModificarUsuario";
+            //this.btnModificarUsuario.Primary = false;
+            //this.btnModificarUsuario.Size = new System.Drawing.Size(214, 36);
+            //this.btnModificarUsuario.TabIndex = 32;
+            //this.btnModificarUsuario.Text = "Modificar Usuario";
+            //this.btnModificarUsuario.UseVisualStyleBackColor = true;
+            //this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarPsi_Click_1);
+            //// 
+            //// btnInsertarPsi
+            //// 
+            //this.btnInsertarPsi.AutoSize = true;
+            //this.btnInsertarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnInsertarPsi.Depth = 0;
+            //this.btnInsertarPsi.Location = new System.Drawing.Point(1277, 264);
+            //this.btnInsertarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnInsertarPsi.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnInsertarPsi.Name = "btnInsertarPsi";
+            //this.btnInsertarPsi.Primary = false;
+            //this.btnInsertarPsi.Size = new System.Drawing.Size(228, 36);
+            //this.btnInsertarPsi.TabIndex = 31;
+            //this.btnInsertarPsi.Text = "Insertar Psicólogo";
+            //this.btnInsertarPsi.UseVisualStyleBackColor = true;
+            //this.btnInsertarPsi.Click += new System.EventHandler(this.btnInsertarPsi_Click_1);
+            //// 
+            //// btnDeshabilitar
+            //// 
+            //this.btnDeshabilitar.AutoSize = true;
+            //this.btnDeshabilitar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnDeshabilitar.Depth = 0;
+            //this.btnDeshabilitar.Location = new System.Drawing.Point(1025, 1000);
+            //this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnDeshabilitar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnDeshabilitar.Name = "btnDeshabilitar";
+            //this.btnDeshabilitar.Primary = false;
+            //this.btnDeshabilitar.Size = new System.Drawing.Size(246, 36);
+            //this.btnDeshabilitar.TabIndex = 35;
+            //this.btnDeshabilitar.Text = "Deshabilitar Usuario";
+            //this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            //this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click_1);
+            //// 
+            //// btnListarPsi
+            //// 
+            //this.btnListarPsi.AutoSize = true;
+            //this.btnListarPsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnListarPsi.Depth = 0;
+            //this.btnListarPsi.Location = new System.Drawing.Point(554, 1000);
+            //this.btnListarPsi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnListarPsi.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnListarPsi.Name = "btnListarPsi";
+            //this.btnListarPsi.Primary = false;
+            //this.btnListarPsi.Size = new System.Drawing.Size(213, 36);
+            //this.btnListarPsi.TabIndex = 34;
+            //this.btnListarPsi.Text = "Listar Psicologos";
+            //this.btnListarPsi.UseVisualStyleBackColor = true;
+            //this.btnListarPsi.Click += new System.EventHandler(this.btnListarPsi_Click_1);
+            //// 
+            //// btnListarTut
+            //// 
+            //this.btnListarTut.AutoSize = true;
+            //this.btnListarTut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnListarTut.Depth = 0;
+            //this.btnListarTut.Location = new System.Drawing.Point(41, 1000);
+            //this.btnListarTut.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnListarTut.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnListarTut.Name = "btnListarTut";
+            //this.btnListarTut.Primary = false;
+            //this.btnListarTut.Size = new System.Drawing.Size(177, 36);
+            //this.btnListarTut.TabIndex = 33;
+            //this.btnListarTut.Text = "Listar Tutores";
+            //this.btnListarTut.UseVisualStyleBackColor = true;
+            //this.btnListarTut.Click += new System.EventHandler(this.btnListarTut_Click_1);
+            //// 
+            //// btnMostrarFoto
+            //// 
+            //this.btnMostrarFoto.AutoSize = true;
+            //this.btnMostrarFoto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnMostrarFoto.Depth = 0;
+            //this.btnMostrarFoto.Location = new System.Drawing.Point(642, 142);
+            //this.btnMostrarFoto.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnMostrarFoto.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnMostrarFoto.Name = "btnMostrarFoto";
+            //this.btnMostrarFoto.Primary = false;
+            //this.btnMostrarFoto.Size = new System.Drawing.Size(168, 36);
+            //this.btnMostrarFoto.TabIndex = 36;
+            //this.btnMostrarFoto.Text = "Mostrar Foto";
+            //this.btnMostrarFoto.UseVisualStyleBackColor = true;
+            //this.btnMostrarFoto.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // checkSoloTutores
             // 
@@ -479,7 +479,7 @@ namespace InterfazDATMA.Administrador
             // fotoUsuario
             // 
             this.fotoUsuario.HeaderText = "Foto";
-            this.fotoUsuario.Image = global::InterfazDATMA.Properties.Resources.postulante;
+            //this.fotoUsuario.Image = global::InterfazDATMA.Properties.Resources.postulante;
             this.fotoUsuario.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.fotoUsuario.MinimumWidth = 8;
             this.fotoUsuario.Name = "fotoUsuario";
@@ -512,14 +512,14 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.dgvUsuario);
             this.Controls.Add(this.checkSoloPsicologos);
             this.Controls.Add(this.checkSoloTutores);
-            this.Controls.Add(this.btnMostrarFoto);
-            this.Controls.Add(this.btnDeshabilitar);
-            this.Controls.Add(this.btnListarPsi);
-            this.Controls.Add(this.btnListarTut);
-            this.Controls.Add(this.btnModificarUsuario);
-            this.Controls.Add(this.btnInsertarPsi);
-            this.Controls.Add(this.btnInsertarTutor);
-            this.Controls.Add(this.btnBuscarUser);
+            //this.Controls.Add(this.btnMostrarFoto);
+            //this.Controls.Add(this.btnDeshabilitar);
+            //this.Controls.Add(this.btnListarPsi);
+            //this.Controls.Add(this.btnListarTut);
+            //this.Controls.Add(this.btnModificarUsuario);
+            //this.Controls.Add(this.btnInsertarPsi);
+            //this.Controls.Add(this.btnInsertarTutor);
+            //this.Controls.Add(this.btnBuscarUser);
             this.Controls.Add(this.txtBusqUser);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.dgvTutores);
@@ -543,14 +543,14 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridView dgvTutores;
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.TextBox txtBusqUser;
-        private MaterialSkin.Controls.MaterialFlatButton btnBuscarUser;
-        private MaterialSkin.Controls.MaterialFlatButton btnInsertarTutor;
-        private MaterialSkin.Controls.MaterialFlatButton btnModificarUsuario;
-        private MaterialSkin.Controls.MaterialFlatButton btnInsertarPsi;
-        private MaterialSkin.Controls.MaterialFlatButton btnDeshabilitar;
-        private MaterialSkin.Controls.MaterialFlatButton btnListarPsi;
-        private MaterialSkin.Controls.MaterialFlatButton btnListarTut;
-        private MaterialSkin.Controls.MaterialFlatButton btnMostrarFoto;
+        //private MaterialSkin.Controls.MaterialFlatButton btnBuscarUser;
+        //private MaterialSkin.Controls.MaterialFlatButton btnInsertarTutor;
+        //private MaterialSkin.Controls.MaterialFlatButton btnModificarUsuario;
+        //private MaterialSkin.Controls.MaterialFlatButton btnInsertarPsi;
+        //private MaterialSkin.Controls.MaterialFlatButton btnDeshabilitar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnListarPsi;
+        //private MaterialSkin.Controls.MaterialFlatButton btnListarTut;
+        //private MaterialSkin.Controls.MaterialFlatButton btnMostrarFoto;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompletoTutor;
         private System.Windows.Forms.DataGridViewImageColumn FotoTutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;

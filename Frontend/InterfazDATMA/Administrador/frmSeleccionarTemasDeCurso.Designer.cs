@@ -47,10 +47,10 @@ namespace InterfazDATMA.Administrador
             this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbNumSemana = new System.Windows.Forms.ComboBox();
             this.lblSemana = new System.Windows.Forms.Label();
-            this.btnCrearTema = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnAgregarTema = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnQuitarTema = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnCrearTema = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnAgregarTema = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnQuitarTema = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
             this.lblNombreCurso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTemas)).BeginInit();
             this.SuspendLayout();
@@ -223,67 +223,67 @@ namespace InterfazDATMA.Administrador
             // 
             // btnCrearTema
             // 
-            this.btnCrearTema.AutoSize = true;
-            this.btnCrearTema.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCrearTema.Depth = 0;
-            this.btnCrearTema.Location = new System.Drawing.Point(628, 358);
-            this.btnCrearTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnCrearTema.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCrearTema.Name = "btnCrearTema";
-            this.btnCrearTema.Primary = false;
-            this.btnCrearTema.Size = new System.Drawing.Size(140, 36);
-            this.btnCrearTema.TabIndex = 25;
-            this.btnCrearTema.Text = "Crear Tema";
-            this.btnCrearTema.UseVisualStyleBackColor = true;
-            this.btnCrearTema.Click += new System.EventHandler(this.btnCrearTema_Click_1);
-            // 
-            // btnAgregarTema
-            // 
-            this.btnAgregarTema.AutoSize = true;
-            this.btnAgregarTema.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAgregarTema.Depth = 0;
-            this.btnAgregarTema.Location = new System.Drawing.Point(1020, 430);
-            this.btnAgregarTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnAgregarTema.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAgregarTema.Name = "btnAgregarTema";
-            this.btnAgregarTema.Primary = false;
-            this.btnAgregarTema.Size = new System.Drawing.Size(26, 36);
-            this.btnAgregarTema.TabIndex = 26;
-            this.btnAgregarTema.Text = "+";
-            this.btnAgregarTema.UseVisualStyleBackColor = true;
-            this.btnAgregarTema.Click += new System.EventHandler(this.btnAgregarTema_Click_1);
-            // 
-            // btnQuitarTema
-            // 
-            this.btnQuitarTema.AutoSize = true;
-            this.btnQuitarTema.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnQuitarTema.Depth = 0;
-            this.btnQuitarTema.Location = new System.Drawing.Point(1020, 486);
-            this.btnQuitarTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnQuitarTema.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnQuitarTema.Name = "btnQuitarTema";
-            this.btnQuitarTema.Primary = false;
-            this.btnQuitarTema.Size = new System.Drawing.Size(21, 36);
-            this.btnQuitarTema.TabIndex = 27;
-            this.btnQuitarTema.Text = "-";
-            this.btnQuitarTema.UseVisualStyleBackColor = true;
-            this.btnQuitarTema.Click += new System.EventHandler(this.btnQuitarTema_Click_1);
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.AutoSize = true;
-            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRegresar.Depth = 0;
-            this.btnRegresar.Location = new System.Drawing.Point(1101, 793);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Primary = false;
-            this.btnRegresar.Size = new System.Drawing.Size(116, 36);
-            this.btnRegresar.TabIndex = 28;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
+            //this.btnCrearTema.AutoSize = true;
+            //this.btnCrearTema.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnCrearTema.Depth = 0;
+            //this.btnCrearTema.Location = new System.Drawing.Point(628, 358);
+            //this.btnCrearTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnCrearTema.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnCrearTema.Name = "btnCrearTema";
+            //this.btnCrearTema.Primary = false;
+            //this.btnCrearTema.Size = new System.Drawing.Size(140, 36);
+            //this.btnCrearTema.TabIndex = 25;
+            //this.btnCrearTema.Text = "Crear Tema";
+            //this.btnCrearTema.UseVisualStyleBackColor = true;
+            //this.btnCrearTema.Click += new System.EventHandler(this.btnCrearTema_Click_1);
+            //// 
+            //// btnAgregarTema
+            //// 
+            //this.btnAgregarTema.AutoSize = true;
+            //this.btnAgregarTema.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnAgregarTema.Depth = 0;
+            //this.btnAgregarTema.Location = new System.Drawing.Point(1020, 430);
+            //this.btnAgregarTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnAgregarTema.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnAgregarTema.Name = "btnAgregarTema";
+            //this.btnAgregarTema.Primary = false;
+            //this.btnAgregarTema.Size = new System.Drawing.Size(26, 36);
+            //this.btnAgregarTema.TabIndex = 26;
+            //this.btnAgregarTema.Text = "+";
+            //this.btnAgregarTema.UseVisualStyleBackColor = true;
+            //this.btnAgregarTema.Click += new System.EventHandler(this.btnAgregarTema_Click_1);
+            //// 
+            //// btnQuitarTema
+            //// 
+            //this.btnQuitarTema.AutoSize = true;
+            //this.btnQuitarTema.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnQuitarTema.Depth = 0;
+            //this.btnQuitarTema.Location = new System.Drawing.Point(1020, 486);
+            //this.btnQuitarTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnQuitarTema.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnQuitarTema.Name = "btnQuitarTema";
+            //this.btnQuitarTema.Primary = false;
+            //this.btnQuitarTema.Size = new System.Drawing.Size(21, 36);
+            //this.btnQuitarTema.TabIndex = 27;
+            //this.btnQuitarTema.Text = "-";
+            //this.btnQuitarTema.UseVisualStyleBackColor = true;
+            //this.btnQuitarTema.Click += new System.EventHandler(this.btnQuitarTema_Click_1);
+            //// 
+            //// btnRegresar
+            //// 
+            //this.btnRegresar.AutoSize = true;
+            //this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnRegresar.Depth = 0;
+            //this.btnRegresar.Location = new System.Drawing.Point(1101, 793);
+            //this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnRegresar.Name = "btnRegresar";
+            //this.btnRegresar.Primary = false;
+            //this.btnRegresar.Size = new System.Drawing.Size(116, 36);
+            //this.btnRegresar.TabIndex = 28;
+            //this.btnRegresar.Text = "Regresar";
+            //this.btnRegresar.UseVisualStyleBackColor = true;
+            //this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
             // 
             // lblNombreCurso
             // 
@@ -304,10 +304,10 @@ namespace InterfazDATMA.Administrador
             this.ClientSize = new System.Drawing.Size(1285, 889);
             this.ControlBox = false;
             this.Controls.Add(this.lblNombreCurso);
-            this.Controls.Add(this.btnRegresar);
-            this.Controls.Add(this.btnQuitarTema);
-            this.Controls.Add(this.btnAgregarTema);
-            this.Controls.Add(this.btnCrearTema);
+            //this.Controls.Add(this.btnRegresar);
+            //this.Controls.Add(this.btnQuitarTema);
+            //this.Controls.Add(this.btnAgregarTema);
+            //this.Controls.Add(this.btnCrearTema);
             this.Controls.Add(this.lblSemana);
             this.Controls.Add(this.cbNumSemana);
             this.Controls.Add(this.dgvTemas);
@@ -341,10 +341,10 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
-        private MaterialSkin.Controls.MaterialFlatButton btnCrearTema;
-        private MaterialSkin.Controls.MaterialFlatButton btnAgregarTema;
-        private MaterialSkin.Controls.MaterialFlatButton btnQuitarTema;
-        private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnCrearTema;
+        //private MaterialSkin.Controls.MaterialFlatButton btnAgregarTema;
+        //private MaterialSkin.Controls.MaterialFlatButton btnQuitarTema;
+        //private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
         private System.Windows.Forms.Label lblNombreCurso;
     }
 }

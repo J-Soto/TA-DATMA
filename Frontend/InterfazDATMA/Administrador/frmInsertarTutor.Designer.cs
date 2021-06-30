@@ -51,9 +51,9 @@ namespace InterfazDATMA.Administrador
             this.txtCel = new System.Windows.Forms.TextBox();
             this.lblGenero = new System.Windows.Forms.Label();
             this.txtDistrito = new System.Windows.Forms.TextBox();
-            this.nuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnSiguiente = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.nuevoDistrito = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnSiguiente = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // lblTutores
@@ -269,51 +269,51 @@ namespace InterfazDATMA.Administrador
             // 
             // nuevoDistrito
             // 
-            this.nuevoDistrito.AutoSize = true;
-            this.nuevoDistrito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.nuevoDistrito.Depth = 0;
-            this.nuevoDistrito.Location = new System.Drawing.Point(828, 362);
-            this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
-            this.nuevoDistrito.Name = "nuevoDistrito";
-            this.nuevoDistrito.Primary = false;
-            this.nuevoDistrito.Size = new System.Drawing.Size(202, 36);
-            this.nuevoDistrito.TabIndex = 108;
-            this.nuevoDistrito.Text = "Agregar Distrito";
-            this.nuevoDistrito.UseVisualStyleBackColor = true;
-            this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
+            //this.nuevoDistrito.AutoSize = true;
+            //this.nuevoDistrito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.nuevoDistrito.Depth = 0;
+            //this.nuevoDistrito.Location = new System.Drawing.Point(828, 362);
+            //this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.nuevoDistrito.Name = "nuevoDistrito";
+            //this.nuevoDistrito.Primary = false;
+            //this.nuevoDistrito.Size = new System.Drawing.Size(202, 36);
+            //this.nuevoDistrito.TabIndex = 108;
+            //this.nuevoDistrito.Text = "Agregar Distrito";
+            //this.nuevoDistrito.UseVisualStyleBackColor = true;
+            //this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.AutoSize = true;
-            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancelar.Depth = 0;
-            this.btnCancelar.Location = new System.Drawing.Point(84, 717);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Primary = false;
-            this.btnCancelar.Size = new System.Drawing.Size(119, 36);
-            this.btnCancelar.TabIndex = 109;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.AutoSize = true;
-            this.btnSiguiente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSiguiente.Depth = 0;
-            this.btnSiguiente.Location = new System.Drawing.Point(903, 717);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Primary = false;
-            this.btnSiguiente.Size = new System.Drawing.Size(116, 36);
-            this.btnSiguiente.TabIndex = 110;
-            this.btnSiguiente.Text = "Siguiente";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            //this.btnCancelar.AutoSize = true;
+            //this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnCancelar.Depth = 0;
+            //this.btnCancelar.Location = new System.Drawing.Point(84, 717);
+            //this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnCancelar.Name = "btnCancelar";
+            //this.btnCancelar.Primary = false;
+            //this.btnCancelar.Size = new System.Drawing.Size(119, 36);
+            //this.btnCancelar.TabIndex = 109;
+            //this.btnCancelar.Text = "Cancelar";
+            //this.btnCancelar.UseVisualStyleBackColor = true;
+            //this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            //// 
+            //// btnSiguiente
+            //// 
+            //this.btnSiguiente.AutoSize = true;
+            //this.btnSiguiente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnSiguiente.Depth = 0;
+            //this.btnSiguiente.Location = new System.Drawing.Point(903, 717);
+            //this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnSiguiente.Name = "btnSiguiente";
+            //this.btnSiguiente.Primary = false;
+            //this.btnSiguiente.Size = new System.Drawing.Size(116, 36);
+            //this.btnSiguiente.TabIndex = 110;
+            //this.btnSiguiente.Text = "Siguiente";
+            //this.btnSiguiente.UseVisualStyleBackColor = true;
+            //this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // frmInsertarTutor
             // 
@@ -322,9 +322,9 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1428, 862);
             this.ControlBox = false;
-            this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.nuevoDistrito);
+            //this.Controls.Add(this.btnSiguiente);
+            //this.Controls.Add(this.btnCancelar);
+            //this.Controls.Add(this.nuevoDistrito);
             this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.txtCel);
@@ -379,8 +379,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.TextBox txtCel;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.TextBox txtDistrito;
-        private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
-        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
-        private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
+        //private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
+        //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
     }
 }

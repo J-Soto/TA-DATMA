@@ -35,9 +35,9 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser = new System.Windows.Forms.Label();
             this.txtNombrePsico = new System.Windows.Forms.TextBox();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
-            this.btnBuscarPsico = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnAgregarPsico = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnBuscarPsico = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnAgregarPsico = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,51 +111,51 @@ namespace InterfazDATMA.Administrador
             // 
             // btnBuscarPsico
             // 
-            this.btnBuscarPsico.AutoSize = true;
-            this.btnBuscarPsico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBuscarPsico.Depth = 0;
-            this.btnBuscarPsico.Location = new System.Drawing.Point(850, 130);
-            this.btnBuscarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnBuscarPsico.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBuscarPsico.Name = "btnBuscarPsico";
-            this.btnBuscarPsico.Primary = false;
-            this.btnBuscarPsico.Size = new System.Drawing.Size(93, 36);
-            this.btnBuscarPsico.TabIndex = 29;
-            this.btnBuscarPsico.Text = "Buscar";
-            this.btnBuscarPsico.UseVisualStyleBackColor = true;
-            this.btnBuscarPsico.Click += new System.EventHandler(this.btnBuscarPsico_Click);
-            // 
-            // btnAgregarPsico
-            // 
-            this.btnAgregarPsico.AutoSize = true;
-            this.btnAgregarPsico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAgregarPsico.Depth = 0;
-            this.btnAgregarPsico.Location = new System.Drawing.Point(399, 588);
-            this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnAgregarPsico.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAgregarPsico.Name = "btnAgregarPsico";
-            this.btnAgregarPsico.Primary = false;
-            this.btnAgregarPsico.Size = new System.Drawing.Size(149, 36);
-            this.btnAgregarPsico.TabIndex = 30;
-            this.btnAgregarPsico.Text = "Seleccionar";
-            this.btnAgregarPsico.UseVisualStyleBackColor = true;
-            this.btnAgregarPsico.Click += new System.EventHandler(this.btnAgregarPsico_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.AutoSize = true;
-            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancelar.Depth = 0;
-            this.btnCancelar.Location = new System.Drawing.Point(655, 588);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Primary = false;
-            this.btnCancelar.Size = new System.Drawing.Size(119, 36);
-            this.btnCancelar.TabIndex = 31;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            //this.btnBuscarPsico.AutoSize = true;
+            //this.btnBuscarPsico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnBuscarPsico.Depth = 0;
+            //this.btnBuscarPsico.Location = new System.Drawing.Point(850, 130);
+            //this.btnBuscarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnBuscarPsico.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnBuscarPsico.Name = "btnBuscarPsico";
+            //this.btnBuscarPsico.Primary = false;
+            //this.btnBuscarPsico.Size = new System.Drawing.Size(93, 36);
+            //this.btnBuscarPsico.TabIndex = 29;
+            //this.btnBuscarPsico.Text = "Buscar";
+            //this.btnBuscarPsico.UseVisualStyleBackColor = true;
+            //this.btnBuscarPsico.Click += new System.EventHandler(this.btnBuscarPsico_Click);
+            //// 
+            //// btnAgregarPsico
+            //// 
+            //this.btnAgregarPsico.AutoSize = true;
+            //this.btnAgregarPsico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnAgregarPsico.Depth = 0;
+            //this.btnAgregarPsico.Location = new System.Drawing.Point(399, 588);
+            //this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnAgregarPsico.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnAgregarPsico.Name = "btnAgregarPsico";
+            //this.btnAgregarPsico.Primary = false;
+            //this.btnAgregarPsico.Size = new System.Drawing.Size(149, 36);
+            //this.btnAgregarPsico.TabIndex = 30;
+            //this.btnAgregarPsico.Text = "Seleccionar";
+            //this.btnAgregarPsico.UseVisualStyleBackColor = true;
+            //this.btnAgregarPsico.Click += new System.EventHandler(this.btnAgregarPsico_Click);
+            //// 
+            //// btnCancelar
+            //// 
+            //this.btnCancelar.AutoSize = true;
+            //this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnCancelar.Depth = 0;
+            //this.btnCancelar.Location = new System.Drawing.Point(655, 588);
+            //this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnCancelar.Name = "btnCancelar";
+            //this.btnCancelar.Primary = false;
+            //this.btnCancelar.Size = new System.Drawing.Size(119, 36);
+            //this.btnCancelar.TabIndex = 31;
+            //this.btnCancelar.Text = "Cancelar";
+            //this.btnCancelar.UseVisualStyleBackColor = true;
+            //this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Nombre
             // 
@@ -196,9 +196,9 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1218, 674);
             this.ControlBox = false;
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAgregarPsico);
-            this.Controls.Add(this.btnBuscarPsico);
+            //this.Controls.Add(this.btnCancelar);
+            //this.Controls.Add(this.btnAgregarPsico);
+            //this.Controls.Add(this.btnBuscarPsico);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.txtNombrePsico);
             this.Controls.Add(this.lblTutoresUser);
@@ -216,9 +216,9 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblTutoresUser;
         private System.Windows.Forms.TextBox txtNombrePsico;
         private System.Windows.Forms.DataGridView dgvPsicologos;
-        private MaterialSkin.Controls.MaterialFlatButton btnBuscarPsico;
-        private MaterialSkin.Controls.MaterialFlatButton btnAgregarPsico;
-        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnBuscarPsico;
+        //private MaterialSkin.Controls.MaterialFlatButton btnAgregarPsico;
+        //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
