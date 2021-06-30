@@ -43,9 +43,7 @@ namespace InterfazDATMA.Administrador
 
             dgvPsicologos.Rows[e.RowIndex].Cells["Nombre"].Value = auxPsicologo.nombre;
             dgvPsicologos.Rows[e.RowIndex].Cells["Apellidos"].Value = auxPsicologo.apellidoPaterno + " " + auxPsicologo.apellidoMaterno;
-            dgvPsicologos.Rows[e.RowIndex].Cells["DNI"].Value = auxPsicologo.DNI;
             dgvPsicologos.Rows[e.RowIndex].Cells["Correo"].Value = auxPsicologo.correo;
-            dgvPsicologos.Rows[e.RowIndex].Cells["User"].Value = auxPsicologo.user;
             dgvPsicologos.Rows[e.RowIndex].Cells["Celular"].Value = auxPsicologo.celular;
         }
 

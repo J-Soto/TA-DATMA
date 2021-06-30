@@ -76,20 +76,20 @@ namespace InterfazDATMA
             }
 
             //Buscar nombre de tutores
-            foreach(ActividadWS.asistencia recAsistencia in asistencias)
-            {
-                GrupoWS.tutor auxTutor = null;
-                foreach (GrupoWS.tutor recTutor in tutores)
-                {
-                    if(recAsistencia.usuario.idPersona == recTutor.idPersona)
-                    {
-                        auxTutor = recTutor;
-                        recAsistencia.usuario.nombre = recTutor.nombre + " " +  recTutor.apellidoPaterno +  " " + recTutor.apellidoMaterno;
-                        break;
-                    }
-                }
-                if (auxTutor != null) tutores.Remove(auxTutor);
-            }
+            //foreach(ActividadWS.asistencia recAsistencia in asistencias)
+            //{
+            //    GrupoWS.tutor auxTutor = null;
+            //    foreach (GrupoWS.tutor recTutor in tutores)
+            //    {
+            //        if(recAsistencia.usuario.idPersona == recTutor.idPersona)
+            //        {
+            //            auxTutor = recTutor;
+            //            recAsistencia.usuario.nombre = recTutor.nombre + " " +  recTutor.apellidoPaterno +  " " + recTutor.apellidoMaterno;
+            //            break;
+            //        }
+            //    }
+            //    if (auxTutor != null) tutores.Remove(auxTutor);
+            //}
 
             dgvAsitencia.DataSource = asistencias;
 
@@ -122,14 +122,14 @@ namespace InterfazDATMA
                 auxAsistencia.actividad = new AsistenciaWS.actividad();
                 auxAsistencia.actividad.idActividad = idActividad;
                 auxAsistencia.tipo = recAsistencia.tipo;
-                if (auxAsistencia.tipo == 1)
-                {
-                    auxAsistencia.descripcion = "Asistio";
-                }
-                else
-                {
-                    auxAsistencia.descripcion = "No  asistio";
-                }
+                //if (auxAsistencia.tipo == 1)
+                //{
+                //    auxAsistencia.descripcion = "Asistio";
+                //}
+                //else
+                //{
+                //    auxAsistencia.descripcion = "No  asistio";
+                //}
                 daoAsistencia.modificarAsistencia(auxAsistencia);
             }
 
@@ -147,7 +147,7 @@ namespace InterfazDATMA
 
             if(auxAsistencia != null)
             {
-                dgvAsitencia.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxAsistencia.usuario.nombre;
+                dgvAsitencia.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxAsistencia.descripcion;
                 if(auxAsistencia.tipo == 0) //No asistio
                 {
                     dgvAsitencia.Rows[e.RowIndex].Cells["Asistencia"].Value = false;

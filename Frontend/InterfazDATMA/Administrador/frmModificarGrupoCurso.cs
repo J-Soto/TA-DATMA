@@ -70,9 +70,7 @@ namespace InterfazDATMA.Administrador
 
                 dgvPsicologos.Rows[e.RowIndex].Cells["Nombre"].Value = auxPsicologo.nombre;
                 dgvPsicologos.Rows[e.RowIndex].Cells["Apellidos"].Value = auxPsicologo.apellidoPaterno + " " + auxPsicologo.apellidoMaterno;
-                dgvPsicologos.Rows[e.RowIndex].Cells["DNI"].Value = auxPsicologo.DNI;
                 dgvPsicologos.Rows[e.RowIndex].Cells["Correo"].Value = auxPsicologo.correo;
-                dgvPsicologos.Rows[e.RowIndex].Cells["User"].Value = auxPsicologo.user;
                 dgvPsicologos.Rows[e.RowIndex].Cells["Celular"].Value = auxPsicologo.celular;
             }catch(Exception ex)
             {
@@ -137,12 +135,33 @@ namespace InterfazDATMA.Administrador
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            grupo.Grupo.maxCantCuidadores = Int32.Parse(txtMaxTutores.Text);
-            grupo.Grupo.nombrePromocion = txtNombreGrupo.Text;
-            grupo.Psicologos = psicologosGrupo;
+     
+            if (txtNombreGrupo.Text != "" && Int32.Parse(txtMaxTutores.Text) != 0)
+            {
+                if (psicologosGrupo.Count != 0)
+                {
+                    grupo.Grupo.maxCantCuidadores = Int32.Parse(txtMaxTutores.Text);
+                    grupo.Grupo.nombrePromocion = txtNombreGrupo.Text;
+                    grupo.Psicologos = psicologosGrupo;
 
-            formPlantillaGest.abrirFormulario(formVerGruposCurso);
-
+                    formPlantillaGest.abrirFormulario(formVerGruposCurso);
+                }
+                else
+                {
+                    MessageBox.Show("Debe introducir un psicologo como minimo.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                if (txtNombreGrupo.Text == "")
+                {
+                    MessageBox.Show("Debe introducir un nombre para el Grupo.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (Int32.Parse(txtMaxTutores.Text) == 0)
+                {
+                    MessageBox.Show("Debe introducir la cantidad maxima de tutores.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)

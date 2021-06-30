@@ -151,14 +151,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="listarCursos">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarCursosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarCursoTema">
     <xs:sequence>
       <xs:element name="idCurso" type="xs:int" />
@@ -172,12 +164,10 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosDisponibles">
-    <xs:sequence>
-      <xs:element name="idTutor" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarCursos">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarCursosDisponiblesResponse">
+  <xs:complexType name="listarCursosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
@@ -197,6 +187,16 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element name="idCursoReq" type="xs:int" />
       <xs:element name="idRequerimiento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosDisponibles">
+    <xs:sequence>
+      <xs:element name="idTutor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosDisponiblesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarTutorCurso">
@@ -273,12 +273,12 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCurso">
+  <xs:complexType name="eliminarCursoTema">
     <xs:sequence>
-      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element name="idCurso_tema" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCursoResponse">
+  <xs:complexType name="eliminarCursoTemaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -302,6 +302,16 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarPsicologoCurso">
     <xs:sequence>
       <xs:element name="idPsicologo" type="xs:int" />
@@ -309,26 +319,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPsicologoCursoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCursoTema">
-    <xs:sequence>
-      <xs:element name="idCurso_tema" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCursoTemaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCurso">
-    <xs:sequence>
-      <xs:element name="idCurso" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCursoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -342,6 +332,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCursoTemaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCurso">
+    <xs:sequence>
+      <xs:element name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCursoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

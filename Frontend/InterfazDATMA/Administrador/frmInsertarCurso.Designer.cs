@@ -61,8 +61,8 @@ namespace InterfazDATMA.Administrador
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnModificar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnLimpiar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnModificar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -179,7 +179,7 @@ namespace InterfazDATMA.Administrador
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(28, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(269, 44);
+            this.label4.Size = new System.Drawing.Size(179, 29);
             this.label4.TabIndex = 27;
             this.label4.Text = "Pre-Requisitos:";
             // 
@@ -434,6 +434,22 @@ namespace InterfazDATMA.Administrador
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Pre-Requisitos de Curso:";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.AutoSize = true;
+            this.btnLimpiar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLimpiar.Depth = 0;
+            this.btnLimpiar.Location = new System.Drawing.Point(1133, 764);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnLimpiar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Primary = false;
+            this.btnLimpiar.Size = new System.Drawing.Size(95, 36);
+            this.btnLimpiar.TabIndex = 47;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // btnModificar
             // 
             this.btnModificar.AutoSize = true;
@@ -449,22 +465,6 @@ namespace InterfazDATMA.Administrador
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.AutoSize = true;
-            this.btnLimpiar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLimpiar.Depth = 0;
-            this.btnLimpiar.Location = new System.Drawing.Point(1133, 599);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnLimpiar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Primary = false;
-            this.btnLimpiar.Size = new System.Drawing.Size(95, 36);
-            this.btnLimpiar.TabIndex = 47;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // frmInsertarCurso
             // 
@@ -527,7 +527,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private MaterialSkin.Controls.MaterialFlatButton btnModificar;
         private MaterialSkin.Controls.MaterialFlatButton btnLimpiar;
+        private MaterialSkin.Controls.MaterialFlatButton btnModificar;
     }
 }

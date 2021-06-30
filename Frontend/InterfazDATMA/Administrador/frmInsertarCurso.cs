@@ -55,7 +55,7 @@ namespace InterfazDATMA.Administrador
             Design.Ini(this);
             dgvReq.AutoGenerateColumns = false;
             dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            btnModificar.Enabled = false;
+            btnModificar.Visible = false;
             curso = new CursoWS.curso();
             inicializarPantalla();
 
@@ -289,66 +289,94 @@ namespace InterfazDATMA.Administrador
             curso.fechaInscripcionSpecified = true;
             curso.cantSemanas = Int32.Parse(txtCantSemana.Text);
 
-            int idCurso = daoCurso.insertarCurso(curso);
-            curso.idCurso = idCurso;
-            if (idCurso != 0)
+            if(gruposCurso.Count != 0)
             {
-                int contSemanas = 0;
-                //Insertar temas
-                foreach (TemaWS.tema recTema in temasCurso)
+                if(temasCurso.Count == curso.cantSemanas)
                 {
-                    recTema.fechaInicioSpecified = true;
-                    recTema.fechaFinSpecified = true;
-                    int idCursoTema = daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
-
-                    //Insertar semanas:
-                    SemanaWS.semana semana = new SemanaWS.semana();
-                    contSemanas++;
-                    semana.nombre = "Editar nombre Semana: " + contSemanas;
-                    semana.descripcion = "Editar";
-                    semana.fechaInicio = recTema.fechaInicio;
-                    semana.fechaInicioSpecified = true;
-                    semana.curso = new SemanaWS.curso();
-                    semana.curso.idCurso = idCurso;
-                    daoSemana.insertarSemana(semana, idCursoTema);
-                }
-
-
-                //Insertar grupos
-                foreach (Grupo_Curso recGruposCurso in gruposCurso)
-                {
-                    int idGrupo = daoGrupo.insertarGrupo(idCurso, recGruposCurso.Grupo);
-                    if (idGrupo != 0)
+                    if(curso.descripcion != "" && curso.cantSemanas != 0)
                     {
-                        //Insertar psicologos
-                        foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                        int idCurso = daoCurso.insertarCurso(curso);
+                        curso.idCurso = idCurso;
+                        if (idCurso != 0)
                         {
-                            daoGrupo.insertarGrupoPsicologo(recPsicologo.idPersona, idGrupo);
+                            int contSemanas = 0;
+                            //Insertar temas
+                            foreach (TemaWS.tema recTema in temasCurso)
+                            {
+                                recTema.fechaInicioSpecified = true;
+                                recTema.fechaFinSpecified = true;
+                                int idCursoTema = daoCurso.insertarCursoTema(idCurso, recTema.id, recTema.fechaInicio, recTema.fechaFin);
+
+                                //Insertar semanas:
+                                SemanaWS.semana semana = new SemanaWS.semana();
+                                contSemanas++;
+                                semana.nombre = "Editar nombre Semana: " + contSemanas;
+                                semana.descripcion = "Editar";
+                                semana.fechaInicio = recTema.fechaInicio;
+                                semana.fechaInicioSpecified = true;
+                                semana.curso = new SemanaWS.curso();
+                                semana.curso.idCurso = idCurso;
+                                daoSemana.insertarSemana(semana, idCursoTema);
+                            }
+
+
+                            //Insertar grupos
+                            foreach (Grupo_Curso recGruposCurso in gruposCurso)
+                            {
+                                int idGrupo = daoGrupo.insertarGrupo(idCurso, recGruposCurso.Grupo);
+                                if (idGrupo != 0)
+                                {
+                                    //Insertar psicologos
+                                    foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                                    {
+                                        daoGrupo.insertarGrupoPsicologo(recPsicologo.idPersona, idGrupo);
+                                    }
+                                }
+                            }
+
+
+
+                            //Insertar Requisitos:
+                            foreach (CursoWS.curso recCursoReq in cursosReq)
+                            {
+                                daoCurso.insertarRequerimiento(idCurso, recCursoReq.idCurso, "Curso Requisito");
+                            }
+
+                            //Insertar Psicologos_Cursos:
+                            foreach (Grupo_Curso recGruposCurso in gruposCurso)
+                            {
+                                foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
+                                {
+                                    daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, idCurso);
+                                }
+                            }
+
+                            MessageBox.Show("Se ha registrado el curso con exito.", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            btnGuardarCurso.Enabled = false;
+                            btnModificar.Enabled = true;
+                        }
+                    }
+                    else
+                    {
+                        if(curso.descripcion == "")
+                        {
+                            MessageBox.Show("Debe introducir un nombre al curso.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if(curso.cantSemanas == 0)
+                        {
+                            MessageBox.Show("La cantidad de semanas no puede ser 0.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
-
-
-
-                //Insertar Requisitos:
-                foreach (CursoWS.curso recCursoReq in cursosReq)
+                else
                 {
-                    daoCurso.insertarRequerimiento(idCurso, recCursoReq.idCurso, "Curso Requisito");
+                    MessageBox.Show("Debe introducir los temas de cada semana del curso.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
-                //Insertar Psicologos_Cursos:
-                foreach (Grupo_Curso recGruposCurso in gruposCurso)
-                {
-                    foreach (PsicologoWS.psicologo recPsicologo in recGruposCurso.Psicologos)
-                    {
-                        daoCurso.insertarPsicologoCurso(recPsicologo.idPersona, idCurso);
-                    }
-                }
-
-                MessageBox.Show("Se ha registrado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                btnGuardarCurso.Enabled = false;
-                btnModificar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Debe introducir un grupo como minimo.","Mensaje de advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
 
         }

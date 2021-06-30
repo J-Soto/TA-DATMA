@@ -154,9 +154,13 @@ namespace InterfazDATMA.Administrador
 
         private (string,string) generarUsuario()
         {
-            string user = Guid.NewGuid().ToString("N").Substring(0,75);
-            string password = Guid.NewGuid().ToString("N").Substring(0,15);
-            return (user,password);
+            string user = Guid.NewGuid().ToString("N");
+            if (user.Length > 75)
+                user = user.Substring(0, 75);
+            string password = Guid.NewGuid().ToString("N");
+            if (password.Length > 15)
+                password = password.Substring(0, 15);
+            return (user, password);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -222,22 +226,27 @@ namespace InterfazDATMA.Administrador
                     {
                         try
                         {
+                            var credenciales = generarUsuario();
+                            psicologo.user = credenciales.Item1;
+                            psicologo.password = credenciales.Item2;
                             int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
-                            if (idPsicologo != 0)
+                            if (idPsicologo > 0)
                             {
-                                var credenciales = generarUsuario();
+                                //var credenciales = generarUsuario();
                                 string msgEnvioDatos = "";
-                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, credenciales.Item1, credenciales.Item2) == 1)
+                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, psicologo.user, psicologo.password) == 1)
                                     msgEnvioDatos = ". Credenciales enviadas con exito.";
                                 MessageBox.Show("Se ha registrado con exito"+ msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 psicologo.idPersona = idPsicologo;
                                 formPlantilla.abrirFormulario(formOperacionPersona);
                             }
+                            else
+                                MessageBox.Show("Registro fallido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
                         catch (Exception ex)
                         {
-                            throw new Exception();
+                            throw new Exception(ex.Message);
                         }
                     }
                 }
