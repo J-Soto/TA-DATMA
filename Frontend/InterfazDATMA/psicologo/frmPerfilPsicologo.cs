@@ -15,33 +15,18 @@ namespace InterfazDATMA.psicologo
 {
     public partial class frmPerfilPsicologo : MaterialSkin.Controls.MaterialForm
     {
-        private PsicologoWS.PsicologoWSClient daoPsicologo;
+        
         private UsuarioWS.UsuarioWSClient daoUsuario;
         private frmPlantillaGestion plantillaGestion;
-        private PsicologoWS.psicologo psico;
 
         public frmPerfilPsicologo(frmPlantillaGestion Plantilla)
         {
             InitializeComponent();
             Design.Ini(this);
             plantillaGestion = Plantilla;
-            daoPsicologo = new PsicologoWS.PsicologoWSClient();
             daoUsuario = new UsuarioWS.UsuarioWSClient();
-            // obtener psicolog a partir del usuario
-            //var psicologos = daoPsicologo.listarTodosPsicologos();
-            //foreach (var psico in psicologos)
-            //{
-            //    if (psico.idUsuario == frmPlantillaGestion.user.idUsuario)
-            //    {
-            //        frmPlantillaGestion.psico = psico;
-            //        break;
-            //    }
-            //}
             txtUser.Enabled = true;
             txtPass.Enabled = true;
-
-            psico = daoPsicologo.buscarPsicologoPorIdUsuario(frmPlantillaGestion.user.idUsuario);
-            frmPlantillaGestion.psico = psico;
 
             txtUser.Text = frmPlantillaGestion.psico.user;
             txtPass.Text = frmPlantillaGestion.psico.password;

@@ -16,7 +16,8 @@ namespace InterfazDATMA
     public partial class frmWalkthrough : MaterialSkin.Controls.MaterialForm 
     {
         private int estado = 1;
-        public frmPlantillaGestion plantillaGestion; 
+        public frmPlantillaGestion plantillaGestion;
+
         public frmWalkthrough(frmPlantillaGestion plantillaGestion)
         {
             this.plantillaGestion = plantillaGestion;

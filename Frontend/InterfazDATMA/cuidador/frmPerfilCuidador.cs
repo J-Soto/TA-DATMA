@@ -16,26 +16,13 @@ namespace InterfazDATMA.cuidador
 {
     public partial class frmPerfilCuidador : MaterialSkin.Controls.MaterialForm 
     {
-        private TutorWS.TutorWSClient daoTutor;
-        private UsuarioWS.UsuarioWSClient daoUsuario;
+        private UsuarioWS.UsuarioWSClient daoUsuario = new UsuarioWS.UsuarioWSClient();
         private frmPlantillaGestion plantillaGestion;
         public frmPerfilCuidador(frmPlantillaGestion plantilla)
         {
             InitializeComponent();
             Design.Ini(this);
             plantillaGestion = plantilla;
-            daoTutor = new TutorWS.TutorWSClient();
-            daoUsuario = new UsuarioWS.UsuarioWSClient();
-            //daoTutor.modificarTutor(new TutorWS.tutor());
-            var tutores = daoTutor.listarTodosTutores();
-            foreach (var tutor in tutores)
-            {
-                if (tutor.idUsuario == frmPlantillaGestion.user.idUsuario)
-                {
-                    frmPlantillaGestion.tutor = tutor;
-                    break;
-                }
-            }
             txtUser.Text = frmPlantillaGestion.tutor.user;
             txtPass.Text = frmPlantillaGestion.tutor.password;
             txtCel.Text = frmPlantillaGestion.tutor.celular;
@@ -54,7 +41,7 @@ namespace InterfazDATMA.cuidador
             {
                 pictureBox1.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.tutor.fotoPerfil));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
