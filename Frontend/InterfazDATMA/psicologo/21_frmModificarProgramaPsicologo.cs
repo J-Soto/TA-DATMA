@@ -181,7 +181,7 @@ namespace InterfazDATMA
 
         private void dgvReuniones_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 4)
             {
                 try
                 {

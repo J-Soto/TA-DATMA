@@ -41,6 +41,10 @@ namespace InterfazDATMA.Administrador
             this.label2 = new System.Windows.Forms.Label();
             this.cbTema = new System.Windows.Forms.ComboBox();
             this.dgvTemas = new System.Windows.Forms.DataGridView();
+            this.Semana = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbNumSemana = new System.Windows.Forms.ComboBox();
             this.lblSemana = new System.Windows.Forms.Label();
             this.lblNombreCurso = new System.Windows.Forms.Label();
@@ -49,10 +53,6 @@ namespace InterfazDATMA.Administrador
             this.btnAgregarTema = new MaterialSkin.Controls.MaterialButton();
             this.btnCrearTema = new MaterialSkin.Controls.MaterialButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Semana = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTemas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +62,7 @@ namespace InterfazDATMA.Administrador
             this.dtpFechaInicial.CalendarMonthBackground = System.Drawing.SystemColors.MenuHighlight;
             this.dtpFechaInicial.CustomFormat = "\"dd/MM/yyyy\"";
             this.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicial.Location = new System.Drawing.Point(199, 73);
+            this.dtpFechaInicial.Location = new System.Drawing.Point(199, 76);
             this.dtpFechaInicial.Name = "dtpFechaInicial";
             this.dtpFechaInicial.Size = new System.Drawing.Size(310, 26);
             this.dtpFechaInicial.TabIndex = 11;
@@ -72,7 +72,7 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(27, 73);
+            this.lblTutoresUser.Location = new System.Drawing.Point(28, 73);
             this.lblTutoresUser.Name = "lblTutoresUser";
             this.lblTutoresUser.Size = new System.Drawing.Size(154, 29);
             this.lblTutoresUser.TabIndex = 13;
@@ -84,7 +84,7 @@ namespace InterfazDATMA.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 121);
+            this.label1.Location = new System.Drawing.Point(21, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 29);
             this.label1.TabIndex = 14;
@@ -165,10 +165,48 @@ namespace InterfazDATMA.Administrador
             this.dgvTemas.TabIndex = 18;
             this.dgvTemas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTemas_CellFormatting);
             // 
+            // Semana
+            // 
+            this.Semana.HeaderText = "Sem.";
+            this.Semana.MinimumWidth = 8;
+            this.Semana.Name = "Semana";
+            this.Semana.ReadOnly = true;
+            this.Semana.Width = 50;
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "Tema";
+            this.NombreCompleto.MinimumWidth = 8;
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 270;
+            // 
+            // FechaInicio
+            // 
+            dataGridViewCellStyle2.Format = "dd/MM/yyy";
+            dataGridViewCellStyle2.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FechaInicio.HeaderText = "Fecha Inicio";
+            this.FechaInicio.MinimumWidth = 8;
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Width = 170;
+            // 
+            // FechaFin
+            // 
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle3.NullValue = null;
+            this.FechaFin.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FechaFin.HeaderText = "Fecha Fin";
+            this.FechaFin.MinimumWidth = 8;
+            this.FechaFin.Name = "FechaFin";
+            this.FechaFin.ReadOnly = true;
+            this.FechaFin.Width = 170;
+            // 
             // cbNumSemana
             // 
             this.cbNumSemana.FormattingEnabled = true;
-            this.cbNumSemana.Location = new System.Drawing.Point(199, 25);
+            this.cbNumSemana.Location = new System.Drawing.Point(199, 29);
             this.cbNumSemana.Name = "cbNumSemana";
             this.cbNumSemana.Size = new System.Drawing.Size(93, 28);
             this.cbNumSemana.TabIndex = 23;
@@ -223,7 +261,7 @@ namespace InterfazDATMA.Administrador
             this.btnQuitarTema.Depth = 0;
             this.btnQuitarTema.HighEmphasis = true;
             this.btnQuitarTema.Icon = null;
-            this.btnQuitarTema.Location = new System.Drawing.Point(1065, 384);
+            this.btnQuitarTema.Location = new System.Drawing.Point(1048, 378);
             this.btnQuitarTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnQuitarTema.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnQuitarTema.Name = "btnQuitarTema";
@@ -242,7 +280,7 @@ namespace InterfazDATMA.Administrador
             this.btnAgregarTema.Depth = 0;
             this.btnAgregarTema.HighEmphasis = true;
             this.btnAgregarTema.Icon = null;
-            this.btnAgregarTema.Location = new System.Drawing.Point(1065, 320);
+            this.btnAgregarTema.Location = new System.Drawing.Point(1048, 320);
             this.btnAgregarTema.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAgregarTema.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregarTema.Name = "btnAgregarTema";
@@ -292,44 +330,6 @@ namespace InterfazDATMA.Administrador
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion Semanas:";
-            // 
-            // Semana
-            // 
-            this.Semana.HeaderText = "Sem.";
-            this.Semana.MinimumWidth = 8;
-            this.Semana.Name = "Semana";
-            this.Semana.ReadOnly = true;
-            this.Semana.Width = 50;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "Tema";
-            this.NombreCompleto.MinimumWidth = 8;
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 270;
-            // 
-            // FechaInicio
-            // 
-            dataGridViewCellStyle2.Format = "dd/MM/yyy";
-            dataGridViewCellStyle2.NullValue = null;
-            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FechaInicio.HeaderText = "Fecha Inicio";
-            this.FechaInicio.MinimumWidth = 8;
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            this.FechaInicio.Width = 170;
-            // 
-            // FechaFin
-            // 
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle3.NullValue = null;
-            this.FechaFin.DefaultCellStyle = dataGridViewCellStyle3;
-            this.FechaFin.HeaderText = "Fecha Fin";
-            this.FechaFin.MinimumWidth = 8;
-            this.FechaFin.Name = "FechaFin";
-            this.FechaFin.ReadOnly = true;
-            this.FechaFin.Width = 170;
             // 
             // frmSeleccionarTemasDeCurso
             // 

@@ -43,6 +43,11 @@ namespace InterfazDATMA
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnirseReunion = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
@@ -80,11 +85,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnirseReunion = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -263,6 +263,61 @@ namespace InterfazDATMA
             this.dgvReuniones.TabIndex = 9;
             this.dgvReuniones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReuniones_CellContentClick_1);
             this.dgvReuniones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReuniones_CellFormatting_1);
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 8;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Fecha.FillWeight = 142.6621F;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 8;
+            this.Fecha.Name = "Fecha";
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "t";
+            dataGridViewCellStyle3.NullValue = null;
+            this.HoraInicio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.HoraInicio.FillWeight = 69.00319F;
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.MinimumWidth = 8;
+            this.HoraInicio.Name = "HoraInicio";
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "hh:mm tt";
+            dataGridViewCellStyle4.NullValue = null;
+            this.HoraFin.DefaultCellStyle = dataGridViewCellStyle4;
+            this.HoraFin.FillWeight = 68.18185F;
+            this.HoraFin.HeaderText = "Hora Fin";
+            this.HoraFin.MinimumWidth = 8;
+            this.HoraFin.Name = "HoraFin";
+            // 
+            // UnirseReunion
+            // 
+            this.UnirseReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UnirseReunion.FillWeight = 120.1531F;
+            this.UnirseReunion.HeaderText = "Unirse Reunion";
+            this.UnirseReunion.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.UnirseReunion.LinkColor = System.Drawing.Color.White;
+            this.UnirseReunion.MinimumWidth = 8;
+            this.UnirseReunion.Name = "UnirseReunion";
+            this.UnirseReunion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.UnirseReunion.VisitedLinkColor = System.Drawing.Color.White;
             // 
             // tableLayoutPanel2
             // 
@@ -888,61 +943,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel17.Size = new System.Drawing.Size(1660, 1264);
             this.tableLayoutPanel17.TabIndex = 98;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 8;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 150;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Fecha.FillWeight = 142.6621F;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 8;
-            this.Fecha.Name = "Fecha";
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "t";
-            dataGridViewCellStyle3.NullValue = null;
-            this.HoraInicio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.HoraInicio.FillWeight = 69.00319F;
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.MinimumWidth = 8;
-            this.HoraInicio.Name = "HoraInicio";
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "hh:mm tt";
-            dataGridViewCellStyle4.NullValue = null;
-            this.HoraFin.DefaultCellStyle = dataGridViewCellStyle4;
-            this.HoraFin.FillWeight = 68.18185F;
-            this.HoraFin.HeaderText = "Hora Fin";
-            this.HoraFin.MinimumWidth = 8;
-            this.HoraFin.Name = "HoraFin";
-            // 
-            // UnirseReunion
-            // 
-            this.UnirseReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UnirseReunion.FillWeight = 120.1531F;
-            this.UnirseReunion.HeaderText = "Unirse Reunion";
-            this.UnirseReunion.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.UnirseReunion.LinkColor = System.Drawing.Color.White;
-            this.UnirseReunion.MinimumWidth = 8;
-            this.UnirseReunion.Name = "UnirseReunion";
-            this.UnirseReunion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.UnirseReunion.VisitedLinkColor = System.Drawing.Color.White;
             // 
             // frmModificarPrograma
             // 

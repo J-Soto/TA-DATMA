@@ -150,7 +150,7 @@ namespace InterfazDATMA.Administrador
             this.btnAgregarPsico.Depth = 0;
             this.btnAgregarPsico.HighEmphasis = true;
             this.btnAgregarPsico.Icon = null;
-            this.btnAgregarPsico.Location = new System.Drawing.Point(374, 542);
+            this.btnAgregarPsico.Location = new System.Drawing.Point(354, 542);
             this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAgregarPsico.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregarPsico.Name = "btnAgregarPsico";
@@ -170,7 +170,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Depth = 0;
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(652, 542);
+            this.btnCancelar.Location = new System.Drawing.Point(640, 542);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
@@ -206,7 +206,7 @@ namespace InterfazDATMA.Administrador
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(400, 7);
+            this.label1.Location = new System.Drawing.Point(443, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(364, 46);
             this.label1.TabIndex = 30;
