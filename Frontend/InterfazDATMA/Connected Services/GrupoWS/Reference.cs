@@ -123,6 +123,16 @@ namespace InterfazDATMA.GrupoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.eliminarGrupoResponse> eliminarGrupoAsync(InterfazDATMA.GrupoWS.eliminarGrupoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/getGrupoNumInscritosRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/getGrupoNumInscritosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse getGrupoNumInscritos(InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/GrupoWS/getGrupoNumInscritosRequest", ReplyAction="http://services.datmasoft.datma.pe/GrupoWS/getGrupoNumInscritosResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse> getGrupoNumInscritosAsync(InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1713,6 +1723,42 @@ namespace InterfazDATMA.GrupoWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getGrupoNumInscritos", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class getGrupoNumInscritosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idGrupo;
+        
+        public getGrupoNumInscritosRequest() {
+        }
+        
+        public getGrupoNumInscritosRequest(int idGrupo) {
+            this.idGrupo = idGrupo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getGrupoNumInscritosResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class getGrupoNumInscritosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public getGrupoNumInscritosResponse() {
+        }
+        
+        public getGrupoNumInscritosResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GrupoWSChannel : InterfazDATMA.GrupoWS.GrupoWS, System.ServiceModel.IClientChannel {
     }
@@ -2007,6 +2053,29 @@ namespace InterfazDATMA.GrupoWS {
             InterfazDATMA.GrupoWS.eliminarGrupoRequest inValue = new InterfazDATMA.GrupoWS.eliminarGrupoRequest();
             inValue.idGrupo = idGrupo;
             return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).eliminarGrupoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse InterfazDATMA.GrupoWS.GrupoWS.getGrupoNumInscritos(InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest request) {
+            return base.Channel.getGrupoNumInscritos(request);
+        }
+        
+        public int getGrupoNumInscritos(int idGrupo) {
+            InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest inValue = new InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest();
+            inValue.idGrupo = idGrupo;
+            InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse retVal = ((InterfazDATMA.GrupoWS.GrupoWS)(this)).getGrupoNumInscritos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse> InterfazDATMA.GrupoWS.GrupoWS.getGrupoNumInscritosAsync(InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest request) {
+            return base.Channel.getGrupoNumInscritosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.GrupoWS.getGrupoNumInscritosResponse> getGrupoNumInscritosAsync(int idGrupo) {
+            InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest inValue = new InterfazDATMA.GrupoWS.getGrupoNumInscritosRequest();
+            inValue.idGrupo = idGrupo;
+            return ((InterfazDATMA.GrupoWS.GrupoWS)(this)).getGrupoNumInscritosAsync(inValue);
         }
     }
 }

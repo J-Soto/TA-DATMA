@@ -71,6 +71,12 @@
   <message name="eliminarGrupoResponse">
     <part name="parameters" element="tns:eliminarGrupoResponse" />
   </message>
+  <message name="getGrupoNumInscritos">
+    <part name="parameters" element="tns:getGrupoNumInscritos" />
+  </message>
+  <message name="getGrupoNumInscritosResponse">
+    <part name="parameters" element="tns:getGrupoNumInscritosResponse" />
+  </message>
   <portType name="GrupoWS">
     <operation name="eliminarGrupoTutor">
       <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoTutorRequest" message="tns:eliminarGrupoTutor" />
@@ -115,6 +121,10 @@
     <operation name="eliminarGrupo">
       <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoRequest" message="tns:eliminarGrupo" />
       <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/eliminarGrupoResponse" message="tns:eliminarGrupoResponse" />
+    </operation>
+    <operation name="getGrupoNumInscritos">
+      <input wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/getGrupoNumInscritosRequest" message="tns:getGrupoNumInscritos" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/GrupoWS/getGrupoNumInscritosResponse" message="tns:getGrupoNumInscritosResponse" />
     </operation>
   </portType>
   <binding name="GrupoWSPortBinding" type="tns:GrupoWS">
@@ -210,6 +220,15 @@
       </output>
     </operation>
     <operation name="eliminarGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGrupoNumInscritos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

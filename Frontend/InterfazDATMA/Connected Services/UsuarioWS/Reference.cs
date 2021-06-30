@@ -427,6 +427,16 @@ namespace InterfazDATMA.UsuarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/UsuarioWS/enviarDatosUsuarioRequest", ReplyAction="http://services.datmasoft.datma.pe/UsuarioWS/enviarDatosUsuarioResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.enviarDatosUsuarioResponse> enviarDatosUsuarioAsync(InterfazDATMA.UsuarioWS.enviarDatosUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/UsuarioWS/modificarUsuarioRequest", ReplyAction="http://services.datmasoft.datma.pe/UsuarioWS/modificarUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.UsuarioWS.modificarUsuarioResponse modificarUsuario(InterfazDATMA.UsuarioWS.modificarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/UsuarioWS/modificarUsuarioRequest", ReplyAction="http://services.datmasoft.datma.pe/UsuarioWS/modificarUsuarioResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.modificarUsuarioResponse> modificarUsuarioAsync(InterfazDATMA.UsuarioWS.modificarUsuarioRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -580,6 +590,42 @@ namespace InterfazDATMA.UsuarioWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarUsuario", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public InterfazDATMA.UsuarioWS.usuario usuario;
+        
+        public modificarUsuarioRequest() {
+        }
+        
+        public modificarUsuarioRequest(InterfazDATMA.UsuarioWS.usuario usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarUsuarioResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class modificarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarUsuarioResponse() {
+        }
+        
+        public modificarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : InterfazDATMA.UsuarioWS.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -701,6 +747,29 @@ namespace InterfazDATMA.UsuarioWS {
             inValue.user = user;
             inValue.password = password;
             return ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).enviarDatosUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.UsuarioWS.modificarUsuarioResponse InterfazDATMA.UsuarioWS.UsuarioWS.modificarUsuario(InterfazDATMA.UsuarioWS.modificarUsuarioRequest request) {
+            return base.Channel.modificarUsuario(request);
+        }
+        
+        public int modificarUsuario(InterfazDATMA.UsuarioWS.usuario usuario) {
+            InterfazDATMA.UsuarioWS.modificarUsuarioRequest inValue = new InterfazDATMA.UsuarioWS.modificarUsuarioRequest();
+            inValue.usuario = usuario;
+            InterfazDATMA.UsuarioWS.modificarUsuarioResponse retVal = ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).modificarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.modificarUsuarioResponse> InterfazDATMA.UsuarioWS.UsuarioWS.modificarUsuarioAsync(InterfazDATMA.UsuarioWS.modificarUsuarioRequest request) {
+            return base.Channel.modificarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.modificarUsuarioResponse> modificarUsuarioAsync(InterfazDATMA.UsuarioWS.usuario usuario) {
+            InterfazDATMA.UsuarioWS.modificarUsuarioRequest inValue = new InterfazDATMA.UsuarioWS.modificarUsuarioRequest();
+            inValue.usuario = usuario;
+            return ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).modificarUsuarioAsync(inValue);
         }
     }
 }
