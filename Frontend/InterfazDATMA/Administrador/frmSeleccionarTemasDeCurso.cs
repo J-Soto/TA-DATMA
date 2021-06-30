@@ -29,7 +29,7 @@ namespace InterfazDATMA.Administrador
 
 
 
-        public frmSeleccionarTemasDeCurso(frmInsertarCurso formInsertarCurso, frmPlantillaGestion formPlantillaGest,int cantSemanas, DateTime fechaInicial, DateTime fechaFinal, BindingList<TemaWS.tema> temas)
+        public frmSeleccionarTemasDeCurso(frmInsertarCurso formInsertarCurso, frmPlantillaGestion formPlantillaGest,int cantSemanas, DateTime fechaInicial, DateTime fechaFinal, BindingList<TemaWS.tema> temas, string nombreCurso)
         {
             this.formInsertarCurso = formInsertarCurso;
             this.formPlantillaGest = formPlantillaGest;
@@ -43,6 +43,9 @@ namespace InterfazDATMA.Administrador
             dgvTemas.AutoGenerateColumns = false;
             dgvTemas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             daoTema = new TemaWS.TemaWSClient();
+
+            //Nombre Curso:
+            lblNombreCurso.Text = "Curso: " + nombreCurso;
 
             //
             dtpFechaInicial.CustomFormat = "dd/MM/yyyy";

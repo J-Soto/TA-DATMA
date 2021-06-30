@@ -38,16 +38,6 @@ namespace InterfazDATMA.Administrador
             tutorAux = tutor;
         }
 
-        private void frmInsertarPreferencias_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chblDispositivos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(formAnterior);
@@ -57,28 +47,105 @@ namespace InterfazDATMA.Administrador
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // Insertar Dispositivos Electronicos
-            tutorAux.dispositivos = 0;
             if (chblDispositivos.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 dispositivo
             {
-                for (int x = 0; x < chblDispositivos.CheckedItems.Count; x++)
+                string disp = "";
+                for (int x = 0; x < chblDispositivos.Items.Count; x++)
                 {
                     if (chblDispositivos.GetItemChecked(x))
                     {
-                        tutorAux.dispositivos = tutorAux.dispositivos + (int)Math.Pow(10, x);
+                        disp += "2";
+                        //tutorAux.dispositivos = tutorAux.dispositivos + (int)Math.Pow(10, x);
                     }
+                    else disp += "1";
                 }
+                tutorAux.dispositivos = Int32.Parse(disp);
             }
             else
             {
-                tutorAux.dispositivos = 0;
+                tutorAux.dispositivos = Int32.Parse(new String('1', chblDispositivos.Items.Count));
             }
 
-            tutorAux.tiposConexion = 1;
-            tutorAux.gestante = 1;
-            tutorAux.turno = 1;
-            tutorAux.dia = 1;
-            tutorAux.bajoRecursos = 1;
-            tutorAux.redesSociales = 1;
+            // Insertar Tipos de Internet
+            if (chblInternet.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 tipo internet
+            {
+                string internet = "";
+                for (int x = 0; x < chblDispositivos.Items.Count; x++)
+                {
+                    if (chblInternet.GetItemChecked(x))
+                    {
+                        internet += "2";
+                    }
+                    else internet += "1";
+                }
+                tutorAux.dispositivos = Int32.Parse(internet);
+            }
+            else
+            {
+                tutorAux.tiposConexion = Int32.Parse(new String('1', chblInternet.Items.Count));
+            }
+
+            // Insertar Turno
+            if (chblTurno.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 turno
+            {
+                string turno = "";
+                for (int x = 0; x < chblTurno.Items.Count; x++)
+                {
+                    if (chblTurno.GetItemChecked(x))
+                    {
+                        turno += "2";
+                    }
+                    else turno += "1";
+                }
+                tutorAux.turno = Int32.Parse(turno);
+            }
+            else
+            {
+                tutorAux.turno = Int32.Parse(new String('1', chblTurno.Items.Count));
+            }
+
+            // Insertar Dias Preferidos
+            if (chblDias.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 dia
+            {
+                string dias = "";
+                for (int x = 0; x < chblDias.Items.Count; x++)
+                {
+                    if (chblDias.GetItemChecked(x))
+                    {
+                        dias += "2";
+                    }
+                    else dias += "1";
+                }
+                tutorAux.dia = Int32.Parse(dias);
+            }
+            else
+            {
+                tutorAux.dia = Int32.Parse(new String('1', chblDias.Items.Count));
+            }
+
+            // Insertar Redes Sociales
+            if (chblRedes.CheckedItems.Count != 0)       // Si fue seleccionado al menos 1 red social
+            {
+                string red = "";
+                for (int x = 0; x < chblRedes.Items.Count; x++)
+                {
+                    if (chblRedes.GetItemChecked(x))
+                    {
+                        red += "2";
+                    }
+                    else red += "1";
+                }
+                tutorAux.redesSociales = Int32.Parse(red);
+            }
+            else
+            {
+                tutorAux.redesSociales = Int32.Parse(new String('1', chblRedes.Items.Count));
+            }
+
+            if (chbGestante.Checked) tutorAux.gestante = 1;
+            else tutorAux.gestante = 0;
+            if (chbRecursos.Checked) tutorAux.bajoRecursos = 1;
+            else tutorAux.bajoRecursos = 0;
 
             //Validaciones:
             if (tutorAux.DNI.Length != 8)
@@ -93,6 +160,8 @@ namespace InterfazDATMA.Administrador
             {
                 try
                 {
+                    tutorAux.user = "0";
+                    tutorAux.password = "admin";
                     int idTutor = daoTutor.insertarTutor(tutorAux);
                     if (idTutor != 0)
                     {
@@ -105,7 +174,7 @@ namespace InterfazDATMA.Administrador
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception();
+                    Console.WriteLine(ex);
                 }
             }
 
