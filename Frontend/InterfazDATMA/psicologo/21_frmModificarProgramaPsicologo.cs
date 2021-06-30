@@ -168,6 +168,7 @@ namespace InterfazDATMA
 
 
         }
+
         private void dgvReuniones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             try

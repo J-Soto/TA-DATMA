@@ -53,7 +53,14 @@ namespace InterfazDATMA
             }
             dgvTutores.DataSource = tutores;
         }
-        private void dgvTutores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+
+        
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formPlantillaGestion.abrirFormulario(formConfigurarModulo);
+        }
+
+        private void dgvTutores_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             GrupoWS.tutor auxTutor = dgvTutores.Rows[e.RowIndex].DataBoundItem as GrupoWS.tutor;
 
@@ -61,10 +68,6 @@ namespace InterfazDATMA
             dgvTutores.Rows[e.RowIndex].Cells["Correo"].Value = auxTutor.correo;
             dgvTutores.Rows[e.RowIndex].Cells["Celular"].Value = auxTutor.celular;
             dgvTutores.Rows[e.RowIndex].Cells["Telefono"].Value = auxTutor.telefono;
-        }
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            formPlantillaGestion.abrirFormulario(formConfigurarModulo);
         }
     }
 }
