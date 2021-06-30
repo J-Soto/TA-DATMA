@@ -49,17 +49,17 @@ namespace InterfazDATMA
         }
         private void inicializarPantalla()
         {
-            var auxTutores = daoGrupo.listarTutoresPorIdGrupo(idGrupo);
-            BindingList<GrupoWS.tutor> tutores;
+            //var auxTutores = daoGrupo.listarTutoresPorIdGrupo(idGrupo);
+            //BindingList<GrupoWS.tutor> tutores;
 
-            if (auxTutores != null)
-            {
-                tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
-            }
-            else
-            {
-                tutores = new BindingList<GrupoWS.tutor>();
-            }
+            //if (auxTutores != null)
+            //{
+            //    tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
+            //}
+            //else
+            //{
+            //    tutores = new BindingList<GrupoWS.tutor>();
+            //}
 
             var auxAsistencias = daoActividad.listarAsistenciasPorIdActividadYGrupo(idActividad, idGrupo);
 
@@ -73,20 +73,20 @@ namespace InterfazDATMA
             }
 
             //Buscar nombre de tutores
-            foreach (ActividadWS.asistencia recAsistencia in asistencias)
-            {
-                GrupoWS.tutor auxTutor = null;
-                foreach (GrupoWS.tutor recTutor in tutores)
-                {
-                    if (recAsistencia.usuario.idPersona == recTutor.idPersona)
-                    {
-                        auxTutor = recTutor;
-                        recAsistencia.usuario.nombre = recTutor.nombre + " " + recTutor.apellidoPaterno + " " + recTutor.apellidoMaterno;
-                        break;
-                    }
-                }
-                if (auxTutor != null) tutores.Remove(auxTutor);
-            }
+            //foreach (ActividadWS.asistencia recAsistencia in asistencias)
+            //{
+            //    GrupoWS.tutor auxTutor = null;
+            //    foreach (GrupoWS.tutor recTutor in tutores)
+            //    {
+            //        if (recAsistencia.usuario.idPersona == recTutor.idPersona)
+            //        {
+            //            auxTutor = recTutor;
+            //            recAsistencia.usuario.nombre = recTutor.nombre + " " + recTutor.apellidoPaterno + " " + recTutor.apellidoMaterno;
+            //            break;
+            //        }
+            //    }
+            //    if (auxTutor != null) tutores.Remove(auxTutor);
+            //}
 
             dgvAsitencia.DataSource = asistencias;
 
@@ -101,7 +101,7 @@ namespace InterfazDATMA
             formPlantillaGestion.abrirFormulario(formModificarPrograma);
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e) //Limpiar todo
         {
             foreach (ActividadWS.asistencia recAsistencia in asistencias)
             {
@@ -113,7 +113,7 @@ namespace InterfazDATMA
 
         }
 
-        private void materialButton2btnGuardarAsistencia_Click(object sender, EventArgs e)
+        private void materialButton2btnGuardarAsistencia_Click(object sender, EventArgs e) //Guardar ASISTENCIA
         {
             foreach (ActividadWS.asistencia recAsistencia in asistencias)
             {
@@ -124,27 +124,27 @@ namespace InterfazDATMA
                 auxAsistencia.actividad = new AsistenciaWS.actividad();
                 auxAsistencia.actividad.idActividad = idActividad;
                 auxAsistencia.tipo = recAsistencia.tipo;
-                if (auxAsistencia.tipo == 1)
-                {
-                    auxAsistencia.descripcion = "Asistio";
-                }
-                else
-                {
-                    auxAsistencia.descripcion = "No  asistio";
-                }
+                //if (auxAsistencia.tipo == 1)
+                //{
+                //    auxAsistencia.descripcion = "Asistio";
+                //}
+                //else
+                //{
+                //    auxAsistencia.descripcion = "No  asistio";
+                //}
                 daoAsistencia.modificarAsistencia(auxAsistencia);
             }
 
             MessageBox.Show("Se ha guardado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void dgvAsitencia_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        
+        private void dgvAsitencia_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             ActividadWS.asistencia auxAsistencia = dgvAsitencia.Rows[e.RowIndex].DataBoundItem as ActividadWS.asistencia;
 
             if (auxAsistencia != null)
             {
-                dgvAsitencia.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxAsistencia.usuario.nombre;
+                dgvAsitencia.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxAsistencia.descripcion;
                 if (auxAsistencia.tipo == 0) //No asistio
                 {
                     dgvAsitencia.Rows[e.RowIndex].Cells["Asistencia"].Value = false;
@@ -154,10 +154,9 @@ namespace InterfazDATMA
                     dgvAsitencia.Rows[e.RowIndex].Cells["Asistencia"].Value = true;
                 }
             }
-
         }
 
-        private void dgvAsitencia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvAsitencia_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 1)
             {
@@ -178,6 +177,5 @@ namespace InterfazDATMA
                 }
             }
         }
-
     }
 }

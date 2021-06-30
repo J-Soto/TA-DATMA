@@ -24,7 +24,9 @@ namespace InterfazDATMA
 
         //cursos:
         private BindingList<CursoWS.curso> cursos;
-        private BindingList<Psicologo_Curso> cursosGrupos; //Contiene el idgrupo y el idcurso
+        private BindingList<Psicologo_Curso> cursosGrupos; //Contiene el idgrupo y el idcurso (Activos)
+        private BindingList<Psicologo_Curso> cursosFinalizado; //(Finalizados)
+        
 
         //actividades
         private BindingList <ActividadWS.actividad> actividades;
@@ -59,6 +61,7 @@ namespace InterfazDATMA
             // obtener cursos del psicologo
 
             dgvModulos.AutoGenerateColumns = false;
+            dgvFinalizado.AutoGenerateColumns = false;
             try
             {
                 cursos = new BindingList<CursoWS.curso>(daoCurso.listarCursosPsicologo(psicologo.idPersona));
@@ -70,7 +73,7 @@ namespace InterfazDATMA
 
 
             cursosGrupos = new BindingList<Psicologo_Curso>();
-
+            cursosFinalizado = new BindingList<Psicologo_Curso>();
 
             BindingList<CursoWS.grupo> grupos;
 
@@ -87,40 +90,14 @@ namespace InterfazDATMA
                     auxCurso.Curso.fechaFin = recCurso.fechaFin;
                     auxCurso.Grupo = recGrupo;
 
-                    cursosGrupos.Add(auxCurso);
+                    if (recCurso.fechaFin.Date < DateTime.Now.Date) cursosFinalizado.Add(auxCurso);
+                    else cursosGrupos.Add(auxCurso);
                 }
             }
 
-
-
             dgvModulos.DataSource = cursosGrupos;
+            dgvFinalizado.DataSource = cursosFinalizado;
 
-
-            //// obtener semanas
-            //var semanas = new List<CursoWS.semana>();
-            //foreach (var curso in cursos)
-            //{
-            //    var temp = daoCurso.listarSemanasPorIdCurso(curso.idCurso);
-            //    if (temp is object)
-            //    {
-            //        semanas.AddRange(temp);
-            //    }
-            //}
-            //// obtener actividades
-            //var actividades = new List<ActividadWS.actividad>();
-            //var allActiv = daoActividad.listarActividad();
-            //foreach (var semana in semanas)
-            //{
-            //    foreach (var activ in allActiv)
-            //    {
-            //        if (activ.idSemana == semana.id)
-            //        {
-            //            actividades.Add(activ);
-            //        }
-            //    }
-            //}
-            //dgvCalendario.AutoGenerateColumns = false;
-            //dgvCalendario.DataSource = new BindingList<ActividadWS.actividad>(actividades);
         }
 
 
@@ -132,15 +109,7 @@ namespace InterfazDATMA
             plantillaGestion.abrirFormulario(frmConfig);
 
         }
-        private void dgvModulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            Psicologo_Curso psicologo_Curso = dgvModulos.Rows[e.RowIndex].DataBoundItem as Psicologo_Curso;
 
-            dgvModulos.Rows[e.RowIndex].Cells["Curso"].Value = psicologo_Curso.Curso.descripcion;
-            dgvModulos.Rows[e.RowIndex].Cells["Grupo"].Value = psicologo_Curso.Grupo.nombrePromocion;
-            dgvModulos.Rows[e.RowIndex].Cells["FechaInicio"].Value = psicologo_Curso.Curso.fechaInicio;
-            dgvModulos.Rows[e.RowIndex].Cells["FechaFin"].Value = psicologo_Curso.Curso.fechaFin;
-        }
         private void frmGestionarModulosPsicologo_Load(object sender, EventArgs e)
         {
 
@@ -154,6 +123,31 @@ namespace InterfazDATMA
         private void label2_Click(object sender, EventArgs e)
         {
         
+        }
+
+        private void dgvModulos_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Psicologo_Curso psicologo_Curso = dgvModulos.Rows[e.RowIndex].DataBoundItem as Psicologo_Curso;
+
+            dgvModulos.Rows[e.RowIndex].Cells["Curso"].Value = psicologo_Curso.Curso.descripcion;
+            dgvModulos.Rows[e.RowIndex].Cells["Grupo"].Value = psicologo_Curso.Grupo.nombrePromocion;
+            dgvModulos.Rows[e.RowIndex].Cells["FechaInicio"].Value = psicologo_Curso.Curso.fechaInicio;
+            dgvModulos.Rows[e.RowIndex].Cells["FechaFin"].Value = psicologo_Curso.Curso.fechaFin;
+        }
+
+        private void dgvFinalizado_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Psicologo_Curso auxPsicologo_Curso = dgvFinalizado.Rows[e.RowIndex].DataBoundItem as Psicologo_Curso;
+
+            dgvFinalizado.Rows[e.RowIndex].Cells["CursoFinalizado"].Value = auxPsicologo_Curso.Curso.descripcion;
+            dgvFinalizado.Rows[e.RowIndex].Cells["GrupoFinalizado"].Value = auxPsicologo_Curso.Grupo.nombrePromocion;
+            dgvFinalizado.Rows[e.RowIndex].Cells["FechaInicioFinalizado"].Value = auxPsicologo_Curso.Curso.fechaInicio;
+            dgvFinalizado.Rows[e.RowIndex].Cells["FechaFinFinalizado"].Value = auxPsicologo_Curso.Curso.fechaFin;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

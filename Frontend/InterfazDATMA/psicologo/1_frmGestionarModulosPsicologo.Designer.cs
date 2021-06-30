@@ -36,11 +36,8 @@ namespace InterfazDATMA
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AccederModulo = new MaterialSkin.Controls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,13 +52,13 @@ namespace InterfazDATMA
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.dgvCalendario = new System.Windows.Forms.DataGridView();
-            this.Actividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFinalizado = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.CursoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GrupoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicioFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFinFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
@@ -69,7 +66,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.materialCard2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFinalizado)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -83,11 +80,11 @@ namespace InterfazDATMA
             this.AccederModulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccederModulo.HighEmphasis = true;
             this.AccederModulo.Icon = null;
-            this.AccederModulo.Location = new System.Drawing.Point(4, 118);
-            this.AccederModulo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.AccederModulo.Location = new System.Drawing.Point(3, 94);
+            this.AccederModulo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.AccederModulo.MouseState = MaterialSkin.MouseState.HOVER;
             this.AccederModulo.Name = "AccederModulo";
-            this.AccederModulo.Size = new System.Drawing.Size(189, 100);
+            this.AccederModulo.Size = new System.Drawing.Size(142, 79);
             this.AccederModulo.TabIndex = 0;
             this.AccederModulo.Text = "ACCEDER CURSO";
             this.AccederModulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -100,20 +97,23 @@ namespace InterfazDATMA
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(68, 30);
+            this.label1.Location = new System.Drawing.Point(51, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 91);
+            this.label1.Size = new System.Drawing.Size(246, 73);
             this.label1.TabIndex = 44;
-            this.label1.Text = "Lista de Cursos Dictando";
+            this.label1.Text = "Lista de Cursos Activos:";
             // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(68, 30);
+            this.label4.Location = new System.Drawing.Point(51, 24);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(327, 91);
+            this.label4.Size = new System.Drawing.Size(246, 73);
             this.label4.TabIndex = 45;
-            this.label4.Text = "Calendario";
+            this.label4.Text = "Lista de Cursos Finalizados:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // materialCard1
             // 
@@ -122,12 +122,12 @@ namespace InterfazDATMA
             this.materialCard1.Depth = 0;
             this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(82, 45);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Location = new System.Drawing.Point(61, 36);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(1063, 542);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard1.Size = new System.Drawing.Size(799, 432);
             this.materialCard1.TabIndex = 47;
             // 
             // dgvModulos
@@ -156,8 +156,7 @@ namespace InterfazDATMA
             this.dgvModulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvModulos.Location = new System.Drawing.Point(14, 14);
-            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvModulos.Location = new System.Drawing.Point(10, 11);
             this.dgvModulos.MultiSelect = false;
             this.dgvModulos.Name = "dgvModulos";
             this.dgvModulos.ReadOnly = true;
@@ -178,8 +177,9 @@ namespace InterfazDATMA
             this.dgvModulos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvModulos.RowTemplate.Height = 28;
             this.dgvModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvModulos.Size = new System.Drawing.Size(1035, 514);
+            this.dgvModulos.Size = new System.Drawing.Size(779, 410);
             this.dgvModulos.TabIndex = 11;
+            this.dgvModulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvModulos_CellFormatting_1);
             // 
             // Curso
             // 
@@ -232,13 +232,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
             this.tableLayoutPanel4.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1358, 152);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1020, 122);
             this.tableLayoutPanel4.TabIndex = 51;
             // 
             // tableLayoutPanel5
@@ -251,14 +252,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 2, 1);
             this.tableLayoutPanel5.Controls.Add(this.materialCard1, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 158);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 126);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1364, 634);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1024, 505);
             this.tableLayoutPanel5.TabIndex = 50;
             // 
             // tableLayoutPanel6
@@ -267,8 +268,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.AccederModulo, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1163, 35);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(873, 28);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 5;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -276,51 +276,51 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(197, 562);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(148, 448);
             this.tableLayoutPanel6.TabIndex = 20;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.269186F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.73081F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.Controls.Add(this.materialCard2, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 950);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 757);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1364, 636);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1024, 507);
             this.tableLayoutPanel1.TabIndex = 52;
             // 
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.dgvCalendario);
+            this.materialCard2.Controls.Add(this.dgvFinalizado);
             this.materialCard2.Depth = 0;
             this.materialCard2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(92, 45);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Location = new System.Drawing.Point(56, 36);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(1230, 544);
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard2.Size = new System.Drawing.Size(807, 434);
             this.materialCard2.TabIndex = 54;
             // 
-            // dgvCalendario
+            // dgvFinalizado
             // 
-            this.dgvCalendario.AllowUserToAddRows = false;
-            this.dgvCalendario.AllowUserToDeleteRows = false;
-            this.dgvCalendario.AllowUserToResizeColumns = false;
-            this.dgvCalendario.AllowUserToResizeRows = false;
-            this.dgvCalendario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dgvCalendario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFinalizado.AllowUserToAddRows = false;
+            this.dgvFinalizado.AllowUserToDeleteRows = false;
+            this.dgvFinalizado.AllowUserToResizeColumns = false;
+            this.dgvFinalizado.AllowUserToResizeRows = false;
+            this.dgvFinalizado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dgvFinalizado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,85 +328,40 @@ namespace InterfazDATMA
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCalendario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvCalendario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCalendario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Actividad,
-            this.Fecha,
-            this.HoraInicio,
-            this.HoraFin});
-            this.dgvCalendario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCalendario.EnableHeadersVisualStyles = false;
-            this.dgvCalendario.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCalendario.Location = new System.Drawing.Point(14, 14);
-            this.dgvCalendario.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCalendario.MultiSelect = false;
-            this.dgvCalendario.Name = "dgvCalendario";
-            this.dgvCalendario.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCalendario.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvCalendario.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCalendario.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvCalendario.RowTemplate.Height = 28;
-            this.dgvCalendario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCalendario.Size = new System.Drawing.Size(1202, 516);
-            this.dgvCalendario.TabIndex = 12;
-            // 
-            // Actividad
-            // 
-            this.Actividad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Actividad.DataPropertyName = "nombre";
-            this.Actividad.HeaderText = "Actividad";
-            this.Actividad.MinimumWidth = 8;
-            this.Actividad.Name = "Actividad";
-            this.Actividad.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.DataPropertyName = "fecha";
-            dataGridViewCellStyle8.Format = "d";
-            dataGridViewCellStyle8.NullValue = null;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 8;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraInicio.DataPropertyName = "horaInicioStr";
-            dataGridViewCellStyle9.Format = "t";
-            dataGridViewCellStyle9.NullValue = null;
-            this.HoraInicio.DefaultCellStyle = dataGridViewCellStyle9;
-            this.HoraInicio.HeaderText = "Hora de Inicio";
-            this.HoraInicio.MinimumWidth = 8;
-            this.HoraInicio.Name = "HoraInicio";
-            this.HoraInicio.ReadOnly = true;
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraFin.DataPropertyName = "horaFinStr";
-            dataGridViewCellStyle10.Format = "t";
-            dataGridViewCellStyle10.NullValue = null;
-            this.HoraFin.DefaultCellStyle = dataGridViewCellStyle10;
-            this.HoraFin.HeaderText = "Hora de Fin";
-            this.HoraFin.MinimumWidth = 8;
-            this.HoraFin.Name = "HoraFin";
-            this.HoraFin.ReadOnly = true;
+            this.dgvFinalizado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvFinalizado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFinalizado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CursoFinalizado,
+            this.GrupoFinalizado,
+            this.FechaInicioFinalizado,
+            this.FechaFinFinalizado});
+            this.dgvFinalizado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFinalizado.EnableHeadersVisualStyles = false;
+            this.dgvFinalizado.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgvFinalizado.Location = new System.Drawing.Point(10, 11);
+            this.dgvFinalizado.MultiSelect = false;
+            this.dgvFinalizado.Name = "dgvFinalizado";
+            this.dgvFinalizado.ReadOnly = true;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFinalizado.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvFinalizado.RowHeadersWidth = 62;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFinalizado.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvFinalizado.RowTemplate.Height = 28;
+            this.dgvFinalizado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFinalizado.Size = new System.Drawing.Size(787, 412);
+            this.dgvFinalizado.TabIndex = 12;
+            this.dgvFinalizado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFinalizado_CellFormatting);
             // 
             // tableLayoutPanel3
             // 
@@ -416,13 +371,14 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
             this.tableLayoutPanel3.Controls.Add(this.label4, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 795);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 633);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1358, 152);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1020, 122);
             this.tableLayoutPanel3.TabIndex = 53;
             this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
@@ -435,25 +391,58 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 64);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 51);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1364, 1586);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 1264);
             this.tableLayoutPanel2.TabIndex = 54;
+            // 
+            // CursoFinalizado
+            // 
+            this.CursoFinalizado.HeaderText = "Curso";
+            this.CursoFinalizado.MinimumWidth = 8;
+            this.CursoFinalizado.Name = "CursoFinalizado";
+            this.CursoFinalizado.ReadOnly = true;
+            this.CursoFinalizado.Width = 150;
+            // 
+            // GrupoFinalizado
+            // 
+            this.GrupoFinalizado.HeaderText = "Grupo";
+            this.GrupoFinalizado.MinimumWidth = 8;
+            this.GrupoFinalizado.Name = "GrupoFinalizado";
+            this.GrupoFinalizado.ReadOnly = true;
+            this.GrupoFinalizado.Width = 150;
+            // 
+            // FechaInicioFinalizado
+            // 
+            this.FechaInicioFinalizado.HeaderText = "FechaInicio";
+            this.FechaInicioFinalizado.MinimumWidth = 8;
+            this.FechaInicioFinalizado.Name = "FechaInicioFinalizado";
+            this.FechaInicioFinalizado.ReadOnly = true;
+            this.FechaInicioFinalizado.Width = 150;
+            // 
+            // FechaFinFinalizado
+            // 
+            this.FechaFinFinalizado.HeaderText = "Fecha Fin";
+            this.FechaFinFinalizado.MinimumWidth = 8;
+            this.FechaFinFinalizado.Name = "FechaFinFinalizado";
+            this.FechaFinFinalizado.ReadOnly = true;
+            this.FechaFinFinalizado.Width = 150;
             // 
             // frmGestionarModulosPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 1653);
+            this.ClientSize = new System.Drawing.Size(1028, 1317);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionarModulosPsicologo";
+            this.Padding = new System.Windows.Forms.Padding(2, 51, 2, 2);
             this.Sizable = false;
             this.Text = "Gestionar Cursos";
             this.Load += new System.EventHandler(this.frmGestionarModulosPsicologo_Load);
@@ -465,7 +454,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFinalizado)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -489,10 +478,10 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
-        private System.Windows.Forms.DataGridView dgvCalendario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Actividad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
+        private System.Windows.Forms.DataGridView dgvFinalizado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CursoFinalizado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GrupoFinalizado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicioFinalizado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaFinFinalizado;
     }
 }

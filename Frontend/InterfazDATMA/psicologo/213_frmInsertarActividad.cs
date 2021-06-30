@@ -44,13 +44,13 @@ namespace InterfazDATMA.psicologo
         //Asistencia:
         private AsistenciaWS.AsistenciaWSClient daoAsistencia;
 
-        public frmInsertarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idSemana, BindingList<SemanaWS.actividad> actividadesSemana)
+        public frmInsertarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idSemana, BindingList<SemanaWS.actividad> actividadesSemana, int idGrupo)
         {
             InitializeComponent();
             
             dgvDocumentos.AutoGenerateColumns = false;
             dgvVideos.AutoGenerateColumns = false;
-            
+            this.idGrupo = idGrupo;
 
 
             Design.Ini(this);
@@ -93,88 +93,103 @@ namespace InterfazDATMA.psicologo
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Inicializar la actividad:
-            actividad = new ActividadWS.actividad();
-
-            actividad.nombre = txtNombreAct.Text;
-            actividad.fecha = dtpFechaReunion.Value;
-            actividad.fechaSpecified = true;
-            actividad.horaInicioStr = dtpHInicio.Value.ToString();
-            actividad.horaFinStr = dtpHFin.Value.ToString();
-            actividad.linkZoom = txtLinkZoom.Text;
-
-
-            int resultado = daoActividad.insertarActividad(actividad, idSemana);
-
-            if (resultado != 0)
+            
+            if(txtNombreAct.Text != ""  && txtLinkZoom.Text != "")
             {
-                txtNombreAct.Text = "";
-                dtpFechaReunion.Value = DateTime.Now;
-                dtpHInicio.Value = DateTime.Now;
-                dtpHFin.Value = DateTime.Now;
-                txtLinkZoom.Text = "";
+                //Inicializar la actividad:
+                actividad = new ActividadWS.actividad();
 
+                actividad.nombre = txtNombreAct.Text;
+                actividad.fecha = dtpFechaReunion.Value;
+                actividad.fechaSpecified = true;
+                actividad.horaInicioStr = dtpHInicio.Value.ToString();
+                actividad.horaFinStr = dtpHFin.Value.ToString();
+                actividad.linkZoom = txtLinkZoom.Text;
 
-                SemanaWS.actividad auxActividad = new SemanaWS.actividad();
-                auxActividad.idActividad = resultado;
-                auxActividad.nombre = actividad.nombre;
-                auxActividad.fecha = actividad.fecha;
-                auxActividad.horaInicioStr = actividad.horaInicioStr;
-                auxActividad.horaFinStr = actividad.horaFinStr;
-                auxActividad.linkZoom = actividad.linkZoom;
+                int resultado = daoActividad.insertarActividad(actividad, idSemana);
 
-                actividadesSemana.Add(auxActividad);
-
-                foreach (MaterialWS.video recVideos in videosActividad)
+                if (resultado != 0)
                 {
-                    recVideos.actividad = new MaterialWS.actividad();
-                    recVideos.tipoMaterial = 1; //TIPO MATERIAL -> 1
-                    recVideos.duracion = ""; //Duracion por defecto
-                    recVideos.actividad.idActividad = resultado;
-                    int aux = daoMaterial.insertarMaterialVideo(recVideos);
+                    txtNombreAct.Text = "";
+                    dtpFechaReunion.Value = DateTime.Now;
+                    dtpHInicio.Value = DateTime.Now;
+                    dtpHFin.Value = DateTime.Now;
+                    txtLinkZoom.Text = "";
+
+
+                    SemanaWS.actividad auxActividad = new SemanaWS.actividad();
+                    auxActividad.idActividad = resultado;
+                    auxActividad.nombre = actividad.nombre;
+                    auxActividad.fecha = actividad.fecha;
+                    auxActividad.horaInicioStr = actividad.horaInicioStr;
+                    auxActividad.horaFinStr = actividad.horaFinStr;
+                    auxActividad.linkZoom = actividad.linkZoom;
+
+                    actividadesSemana.Add(auxActividad);
+
+                    foreach (MaterialWS.video recVideos in videosActividad)
+                    {
+                        recVideos.actividad = new MaterialWS.actividad();
+                        recVideos.tipoMaterial = 1; //TIPO MATERIAL -> 1
+                        recVideos.duracion = ""; //Duracion por defecto
+                        recVideos.actividad.idActividad = resultado;
+                        int aux = daoMaterial.insertarMaterialVideo(recVideos);
+                    }
+
+                    foreach (MaterialWS.documento recDocumentos in documentosActividad)
+                    {
+                        recDocumentos.actividad = new MaterialWS.actividad();
+                        recDocumentos.tipoMaterial = 0; //TIPO MATERIAL -> 0
+                        recDocumentos.actividad.idActividad = resultado;
+                        daoMaterial.insertarMaterialDocumento(recDocumentos);
+                    }
+
+                    //Insertar tutores - asistencia:
+                    var auxTutores = daoGrupo.listarTutoresPorIdGrupo(idGrupo);
+                    BindingList<GrupoWS.tutor> tutores;
+
+                    if (auxTutores != null)
+                    {
+                        tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
+                    }
+                    else
+                    {
+                        tutores = new BindingList<GrupoWS.tutor>();
+                    }
+
+                    foreach (GrupoWS.tutor recTutores in tutores)
+                    {
+                        AsistenciaWS.asistencia asist = new AsistenciaWS.asistencia();
+                        asist.actividad = new AsistenciaWS.actividad();
+                        asist.actividad.idActividad = resultado;
+                        asist.usuario = new AsistenciaWS.usuario();
+                        asist.usuario.idUsuario = recTutores.idUsuario;
+                        asist.descripcion = "Nueva asistencia";
+                        asist.tipo = 0; //0 -> no asistio y 1 -> asistio
+                        int aux = daoAsistencia.insertarAsistencia(asist);
+                    }
+
+                    MessageBox.Show("Se ha guardado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    videosActividad.Clear();
+                    documentosActividad.Clear();
+
+                    dgvDocumentos.Refresh();
+                    dgvVideos.Refresh();
                 }
-
-                foreach (MaterialWS.documento recDocumentos in documentosActividad)
-                {
-                    recDocumentos.actividad = new MaterialWS.actividad();
-                    recDocumentos.tipoMaterial = 0; //TIPO MATERIAL -> 0
-                    recDocumentos.actividad.idActividad = resultado;
-                    daoMaterial.insertarMaterialDocumento(recDocumentos);
-                }
-
-                //Insertar tutores - asistencia:
-                var auxTutores = daoGrupo.listarTutoresPorIdGrupo(idGrupo);
-                BindingList<GrupoWS.tutor> tutores;
-
-                if (auxTutores != null)
-                {
-                    tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
-                }
-                else
-                {
-                    tutores = new BindingList<GrupoWS.tutor>();
-                }
-
-                foreach (GrupoWS.tutor recTutores in tutores)
-                {
-                    AsistenciaWS.asistencia asist = new AsistenciaWS.asistencia();
-                    asist.actividad = new AsistenciaWS.actividad();
-                    asist.actividad.idActividad = resultado;
-                    asist.usuario = new AsistenciaWS.usuario();
-                    asist.usuario.idUsuario = recTutores.idUsuario;
-                    asist.descripcion = "Nueva asistencia";
-                    asist.tipo = 0; //0 -> no asistio y 1 -> asistio
-                    int aux = daoAsistencia.insertarAsistencia(asist);
-                }
-
-                MessageBox.Show("Se ha guardado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                videosActividad.Clear();
-                documentosActividad.Clear();
-
-                dgvDocumentos.Refresh();
-                dgvVideos.Refresh();
             }
+            else
+            {
+                if(txtNombreAct.Text == "")
+                {
+                    MessageBox.Show("Debe colocarle un nombre a la actividad", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if(txtLinkZoom.Text == "")
+                {
+                    MessageBox.Show("Debe colocar el link de zoom para la reunion", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -234,10 +249,7 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-
-
-        
-        private void dgvVideos_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvVideos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             try
             {
@@ -253,7 +265,7 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-        private void dgvVideos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgvVideos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 1)
             {
@@ -267,7 +279,8 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-        private void dgvDocumentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+
+        private void dgvDocumentos_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             try
             {
@@ -283,7 +296,7 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-        private void dgvDocumentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDocumentos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 1)
             {
@@ -293,22 +306,19 @@ namespace InterfazDATMA.psicologo
 
                     sfdPDF.Title = "Guardar PDF";
                     sfdPDF.Filter = "Archivo PDF|*.pdf";
-                    if(sfdPDF.ShowDialog() == DialogResult.OK)
+                    if (sfdPDF.ShowDialog() == DialogResult.OK)
                     {
                         string ruta = sfdPDF.FileName;
-                        File.WriteAllBytes(ruta,auxMaterial.docPDF);
-                        MessageBox.Show("Se ha guardo el archivo exitosamente","Mensaje de Confirmacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        File.WriteAllBytes(ruta, auxMaterial.docPDF);
+                        MessageBox.Show("Se ha guardo el archivo exitosamente", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al guardar el archivo","Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Error al guardar el archivo", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
-
-       
-
     }
 }

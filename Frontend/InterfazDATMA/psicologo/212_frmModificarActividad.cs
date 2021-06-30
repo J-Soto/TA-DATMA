@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using System.IO;
 
 namespace InterfazDATMA.psicologo
 {
@@ -116,76 +117,88 @@ namespace InterfazDATMA.psicologo
         {
 
         }
+        
 
-        private void materialLabel1_Click(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e) //GUARDAR
         {
 
-        }
-
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-            ActividadWS.actividad actividad = new ActividadWS.actividad();
-
-            actividad.idActividad = currentActividad.idActividad;
-            actividad.nombre = txtNombreAct.Text;
-            actividad.fecha = dtpFechaReunion.Value;
-            actividad.fechaSpecified = true;
-            actividad.horaInicioStr = dtpHInicio.Value.ToString();
-            actividad.horaFinStr = dtpHFin.Value.ToString();
-            actividad.linkZoom = txtLinkZoom.Text;
-
-            int resultado = daoActividad.modificarActividad(actividad);
-
-            if (resultado == 1)
+            if (txtNombreAct.Text != "" && txtLinkZoom.Text != "")
             {
-                MessageBox.Show("Se ha modificado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ActividadWS.actividad actividad = new ActividadWS.actividad();
 
-                //Eliminar material
-                foreach (ActividadWS.video recVideos in videosEliminados)
-                {
-                    daoMaterial.eliminarMaterial(recVideos.idMaterial);
-                }
-                foreach (ActividadWS.documento recDocumentos in documentosEliminados)
-                {
-                    daoMaterial.eliminarMaterial(recDocumentos.idMaterial);
-                }
+                actividad.idActividad = currentActividad.idActividad;
+                actividad.nombre = txtNombreAct.Text;
+                actividad.fecha = dtpFechaReunion.Value;
+                actividad.fechaSpecified = true;
+                actividad.horaInicioStr = dtpHInicio.Value.ToString();
+                actividad.horaFinStr = dtpHFin.Value.ToString();
+                actividad.linkZoom = txtLinkZoom.Text;
 
+                int resultado = daoActividad.modificarActividad(actividad);
 
-                //Agregar nuevo material
-                foreach (ActividadWS.video recVideos in videosActividad)
+                if (resultado == 1)
                 {
-                    if (recVideos.idMaterial == -1)
+                    MessageBox.Show("Se ha modificado con exito", "Mensaje de Confimacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Eliminar material
+                    foreach (ActividadWS.video recVideos in videosEliminados)
                     {
-
-                        MaterialWS.video auxVideo = new MaterialWS.video();
-                        auxVideo.actividad = new MaterialWS.actividad();
-                        auxVideo.actividad.idActividad = actividad.idActividad;
-                        auxVideo.descripcion = recVideos.descripcion;
-                        auxVideo.linkVideo = recVideos.linkVideo;
-                        auxVideo.nombre = recVideos.nombre;
-                        auxVideo.tipoMaterial = recVideos.tipoMaterial;
-                        auxVideo.duracion = "";
-
-                        daoMaterial.insertarMaterialVideo(auxVideo);
+                        daoMaterial.eliminarMaterial(recVideos.idMaterial);
                     }
-                }
-
-                foreach (ActividadWS.documento recDocumento in documentosActividad)
-                {
-                    if (recDocumento.idMaterial == -1)
+                    foreach (ActividadWS.documento recDocumentos in documentosEliminados)
                     {
-                        MaterialWS.documento auxDocumento = new MaterialWS.documento();
-                        auxDocumento.actividad = new MaterialWS.actividad();
-                        auxDocumento.actividad.idActividad = actividad.idActividad;
-                        auxDocumento.descripcion = recDocumento.descripcion;
-                        auxDocumento.docPDF = recDocumento.docPDF;
-                        auxDocumento.nombre = recDocumento.nombre;
-                        auxDocumento.tipoMaterial = recDocumento.tipoMaterial;
+                        daoMaterial.eliminarMaterial(recDocumentos.idMaterial);
+                    }
 
-                        daoMaterial.insertarMaterialDocumento(auxDocumento);
+
+                    //Agregar nuevo material
+                    foreach (ActividadWS.video recVideos in videosActividad)
+                    {
+                        if (recVideos.idMaterial == -1)
+                        {
+
+                            MaterialWS.video auxVideo = new MaterialWS.video();
+                            auxVideo.actividad = new MaterialWS.actividad();
+                            auxVideo.actividad.idActividad = actividad.idActividad;
+                            auxVideo.descripcion = recVideos.descripcion;
+                            auxVideo.linkVideo = recVideos.linkVideo;
+                            auxVideo.nombre = recVideos.nombre;
+                            auxVideo.tipoMaterial = recVideos.tipoMaterial;
+                            auxVideo.duracion = "";
+
+                            daoMaterial.insertarMaterialVideo(auxVideo);
+                        }
+                    }
+
+                    foreach (ActividadWS.documento recDocumento in documentosActividad)
+                    {
+                        if (recDocumento.idMaterial == -1)
+                        {
+                            MaterialWS.documento auxDocumento = new MaterialWS.documento();
+                            auxDocumento.actividad = new MaterialWS.actividad();
+                            auxDocumento.actividad.idActividad = actividad.idActividad;
+                            auxDocumento.descripcion = recDocumento.descripcion;
+                            auxDocumento.docPDF = recDocumento.docPDF;
+                            auxDocumento.nombre = recDocumento.nombre;
+                            auxDocumento.tipoMaterial = recDocumento.tipoMaterial;
+
+                            daoMaterial.insertarMaterialDocumento(auxDocumento);
+                        }
                     }
                 }
             }
+            else
+            {
+                if (txtNombreAct.Text == "")
+                {
+                    MessageBox.Show("Debe colocarle un nombre a la actividad", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txtLinkZoom.Text == "")
+                {
+                    MessageBox.Show("Debe colocar el link de zoom para la reunion", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
         }
 
         //REGRESAR
@@ -195,7 +208,7 @@ namespace InterfazDATMA.psicologo
             formPlantillaGestion.abrirFormulario(formModificarPrograma);
         }
 
-        private void materialButton2_Click(object sender, EventArgs e)
+        private void materialButton2_Click(object sender, EventArgs e) //Agregar Documento
         {
             frmInsertarDocumento formInsertarDocumento = new frmInsertarDocumento();
             if (formInsertarDocumento.ShowDialog() == DialogResult.OK && formInsertarDocumento.Documento != null)
@@ -212,12 +225,12 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-        private void materialButton5_Click(object sender, EventArgs e)
+        private void materialButton5_Click(object sender, EventArgs e) //Eliminar Documento
         {
             if (dgvDocumentos.RowCount != 0)
             {
                 ActividadWS.documento auxDocumento = dgvDocumentos.CurrentRow.DataBoundItem as ActividadWS.documento;
-                MessageBox.Show(auxDocumento.idMaterial.ToString());
+                //MessageBox.Show(auxDocumento.idMaterial.ToString());
                 if (auxDocumento.idMaterial != -1)
                 {
                     documentosEliminados.Add(auxDocumento);
@@ -228,7 +241,7 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-        private void materialButton6_Click(object sender, EventArgs e)
+        private void materialButton6_Click(object sender, EventArgs e) //Eliminar Video
         {
 
             if (dgvVideos.RowCount != 0)
@@ -245,7 +258,7 @@ namespace InterfazDATMA.psicologo
             }
         }
 
-        private void materialButton3_Click(object sender, EventArgs e)
+        private void materialButton3_Click(object sender, EventArgs e) //Agregar Video
         {
             frmAgregarMaterialPsicologo formAgregarVideo = new frmAgregarMaterialPsicologo();
 
@@ -264,54 +277,9 @@ namespace InterfazDATMA.psicologo
                 dgvVideos.Refresh();
             }
         }
-
-        private void dgvVideos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+             
+        private void dgvDocumentos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 1)
-            {
-                try
-                {
-                    System.Diagnostics.Process.Start(dgvVideos.Rows[e.RowIndex].Cells["Link"].Value.ToString());
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-        }
-        private void dgvVideos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            try
-            {
-                ActividadWS.video auxVideo = dgvVideos.Rows[e.RowIndex].DataBoundItem as ActividadWS.video;
-                if (auxVideo != null)
-                {
-                    dgvVideos.Rows[e.RowIndex].Cells["Descripcion"].Value = auxVideo.descripcion;
-                    dgvVideos.Rows[e.RowIndex].Cells["Link"].Value = auxVideo.linkVideo;
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-        }
-
-        private void dgvDocumentos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            try
-            {
-                ActividadWS.documento auxDocumento = dgvDocumentos.Rows[e.RowIndex].DataBoundItem as ActividadWS.documento;
-                if (auxDocumento != null)
-                {
-                    dgvDocumentos.Rows[e.RowIndex].Cells["DescripcionDoc"].Value = auxDocumento.descripcion;
-                    dgvDocumentos.Rows[e.RowIndex].Cells["Documento"].Value = "Descargar";
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-        }
-        private void dgvDocumentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*
             if (e.ColumnIndex == 1)
             {
                 try
@@ -333,7 +301,52 @@ namespace InterfazDATMA.psicologo
                     MessageBox.Show("Error al guardar el archivo", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            */
+        }
+
+        private void dgvDocumentos_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                ActividadWS.documento auxDocumento = dgvDocumentos.Rows[e.RowIndex].DataBoundItem as ActividadWS.documento;
+                if (auxDocumento != null)
+                {
+                    dgvDocumentos.Rows[e.RowIndex].Cells["DescripcionDoc"].Value = auxDocumento.descripcion;
+                    dgvDocumentos.Rows[e.RowIndex].Cells["Documento"].Value = "Descargar";
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void dgvVideos_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                ActividadWS.video auxVideo = dgvVideos.Rows[e.RowIndex].DataBoundItem as ActividadWS.video;
+                if (auxVideo != null)
+                {
+                    dgvVideos.Rows[e.RowIndex].Cells["Descripcion"].Value = auxVideo.descripcion;
+                    dgvVideos.Rows[e.RowIndex].Cells["Link"].Value = auxVideo.linkVideo;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void dgvVideos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start(dgvVideos.Rows[e.RowIndex].Cells["Link"].Value.ToString());
+                }
+                catch (Exception ex)
+                {
+                }
+            }
         }
     }
 }

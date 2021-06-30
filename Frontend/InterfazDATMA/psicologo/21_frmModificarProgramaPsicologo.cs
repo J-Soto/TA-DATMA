@@ -60,6 +60,7 @@ namespace InterfazDATMA
 
             //Limitar edicion:
             rtxtDescripcion.ReadOnly = true;
+            rtxtTema.ReadOnly = true;
             //rtxtDescripcion.Enabled = false;
             //rtxtTema.Enabled = false;
 
@@ -84,27 +85,11 @@ namespace InterfazDATMA
             dgvReuniones.DataSource = actividadesSemana;
         }
 
-        private void dgvReuniones_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 3)
-            {
-                try
-                {
-                    System.Diagnostics.Process.Start(dgvReuniones.Rows[e.RowIndex].Cells["UnirseReunion"].Value.ToString());
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-
-        }
 
         private void frmModificarPrograma_Load(object sender, EventArgs e)
         {
 
         }
-
-     
 
         public void RefreshDataGridView()
         {
@@ -118,9 +103,7 @@ namespace InterfazDATMA
             dgvReuniones.Refresh();
         }
 
-
-
-        private void materialButton8_Click(object sender, EventArgs e)
+        private void materialButton8_Click(object sender, EventArgs e) //Boton Asistencia
         {
             if (dgvReuniones.RowCount != 0)
             {
@@ -131,7 +114,7 @@ namespace InterfazDATMA
 
         }
 
-        private void materialButton7_Click(object sender, EventArgs e)
+        private void materialButton7_Click(object sender, EventArgs e) //Modificar Actvidad
         {
 
             if (dgvReuniones.RowCount != 0)
@@ -143,14 +126,14 @@ namespace InterfazDATMA
             }
         }
 
-        private void materialButton4_Click(object sender, EventArgs e)
+        private void materialButton4_Click(object sender, EventArgs e)  //Insertar Actvidad
         {
-            frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id, actividadesSemana);
+            frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id, actividadesSemana, idGrupo);
             formPlantillaGestion.abrirFormulario(formInsertarActividad);
             
         }
 
-        private void materialButton5_Click(object sender, EventArgs e)
+        private void materialButton5_Click(object sender, EventArgs e) //Eliminar Actividad
         {
             if (dgvReuniones.RowCount != 0)
             {
@@ -169,28 +152,6 @@ namespace InterfazDATMA
 
         }
 
-        private void dgvReuniones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            try
-            {
-                SemanaWS.actividad actividad = dgvReuniones.Rows[e.RowIndex].DataBoundItem as SemanaWS.actividad;
-
-                if (actividad != null)
-                {
-                    dgvReuniones.Rows[e.RowIndex].Cells["Fecha"].Value = actividad.fecha;
-                    DateTime auxTime = Convert.ToDateTime(actividad.horaInicioStr);
-                    dgvReuniones.Rows[e.RowIndex].Cells["HoraInicio"].Value = auxTime;
-                    auxTime = Convert.ToDateTime(actividad.horaFinStr);
-                    dgvReuniones.Rows[e.RowIndex].Cells["HoraFin"].Value = auxTime;
-                    dgvReuniones.Rows[e.RowIndex].Cells["UnirseReunion"].Value = actividad.linkZoom;
-                }
-
-            }
-            catch (Exception ex)
-            {
-            }
-
-        }
         private void materialButton6_Click(object sender, EventArgs e)
         {
             formPlantillaGestion.abrirFormulario(formConfigurarModuloPsicologo);
@@ -216,6 +177,43 @@ namespace InterfazDATMA
         private void ListReuniones_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvReuniones_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start(dgvReuniones.Rows[e.RowIndex].Cells["UnirseReunion"].Value.ToString());
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+        }
+
+        private void dgvReuniones_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                SemanaWS.actividad actividad = dgvReuniones.Rows[e.RowIndex].DataBoundItem as SemanaWS.actividad;
+
+                if (actividad != null)
+                {
+                    dgvReuniones.Rows[e.RowIndex].Cells["Nombre"].Value = actividad.nombre;
+                    dgvReuniones.Rows[e.RowIndex].Cells["Fecha"].Value = actividad.fecha;
+                    DateTime auxTime = Convert.ToDateTime(actividad.horaInicioStr);
+                    dgvReuniones.Rows[e.RowIndex].Cells["HoraInicio"].Value = auxTime;
+                    auxTime = Convert.ToDateTime(actividad.horaFinStr);
+                    dgvReuniones.Rows[e.RowIndex].Cells["HoraFin"].Value = auxTime;
+                    dgvReuniones.Rows[e.RowIndex].Cells["UnirseReunion"].Value = actividad.linkZoom;
+                }
+
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

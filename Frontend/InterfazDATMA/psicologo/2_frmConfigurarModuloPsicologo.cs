@@ -96,10 +96,6 @@ namespace InterfazDATMA
 
 
 
-        private void tableLayoutPanel22_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void frmConfigurarModuloPsicologo_Load(object sender, EventArgs e)
         {
@@ -126,7 +122,7 @@ namespace InterfazDATMA
             formPlantilla.abrirFormulario(formGestionarModulos);
         }
 
-        private void VolverCuidadores_Click(object sender, EventArgs e)
+        private void VolverCuidadores_Click(object sender, EventArgs e) //Boton Lista Cuidadores
         {
             formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla, grupo.idGrupo));
 
