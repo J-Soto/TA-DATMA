@@ -30,6 +30,9 @@ namespace InterfazDATMA.Administrador
 
             Design.Ini(this);
             plantillaGestion = plantilla;
+
+            materialButton1.Visible = true;
+            materialButton2.Visible = true;
         }
 
 

@@ -42,10 +42,9 @@ namespace InterfazDATMA.Administrador
             // pictureBox2
             // 
             this.pictureBox2.Enabled = false;
-            this.pictureBox2.Location = new System.Drawing.Point(1212, 225);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(814, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(640, 750);
+            this.pictureBox2.Size = new System.Drawing.Size(407, 456);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -53,10 +52,9 @@ namespace InterfazDATMA.Administrador
             // pictureBox1
             // 
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Location = new System.Drawing.Point(243, 225);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(210, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(640, 750);
+            this.pictureBox1.Size = new System.Drawing.Size(405, 456);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -86,8 +84,8 @@ namespace InterfazDATMA.Administrador
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(652, 1020);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.Location = new System.Drawing.Point(308, 506);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.Size = new System.Drawing.Size(190, 36);
@@ -106,11 +104,11 @@ namespace InterfazDATMA.Administrador
             this.materialButton2.Depth = 0;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(1301, 1020);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.Location = new System.Drawing.Point(923, 506);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
-            this.materialButton2.Size = new System.Drawing.Size(221, 36);
+            this.materialButton2.Size = new System.Drawing.Size(220, 48);
             this.materialButton2.TabIndex = 33;
             this.materialButton2.Text = "Operaciones Cursos";
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -120,21 +118,20 @@ namespace InterfazDATMA.Administrador
             // 
             // frmGestionarModuloAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1440, 864);
             this.ControlBox = false;
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Transparent;
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmGestionarModuloAdmin";
-            this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Sizable = false;
