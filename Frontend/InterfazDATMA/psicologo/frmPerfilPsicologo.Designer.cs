@@ -43,6 +43,10 @@ namespace InterfazDATMA.psicologo
             this.Genero = new System.Windows.Forms.Label();
             this.tableLayoutPanel42 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.Cursos = new MaterialSkin.Controls.MaterialFlatButton();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -105,13 +109,10 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel28 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.Cursos = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             this.tableLayoutPanel42.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -159,7 +160,6 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel27.SuspendLayout();
             this.tableLayoutPanel28.SuspendLayout();
             this.panel19.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPermiso
@@ -372,6 +372,81 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(721, 911);
             this.tableLayoutPanel2.TabIndex = 58;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 7;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel15.Controls.Add(this.materialFlatButton1, 3, 1);
+            this.tableLayoutPanel15.Controls.Add(this.materialFlatButton2, 5, 1);
+            this.tableLayoutPanel15.Controls.Add(this.Cursos, 1, 1);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(4, 732);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 3;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.82758F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.72414F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(713, 175);
+            this.tableLayoutPanel15.TabIndex = 83;
+            // 
+            // materialFlatButton1
+            // 
+            this.materialFlatButton1.AutoSize = true;
+            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton1.Depth = 0;
+            this.materialFlatButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialFlatButton1.Location = new System.Drawing.Point(270, 55);
+            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton1.Name = "materialFlatButton1";
+            this.materialFlatButton1.Primary = false;
+            this.materialFlatButton1.Size = new System.Drawing.Size(170, 66);
+            this.materialFlatButton1.TabIndex = 58;
+            this.materialFlatButton1.Text = "Modificar";
+            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            // 
+            // materialFlatButton2
+            // 
+            this.materialFlatButton2.AutoSize = true;
+            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton2.Depth = 0;
+            this.materialFlatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialFlatButton2.Location = new System.Drawing.Point(492, 55);
+            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton2.Name = "materialFlatButton2";
+            this.materialFlatButton2.Primary = false;
+            this.materialFlatButton2.Size = new System.Drawing.Size(170, 66);
+            this.materialFlatButton2.TabIndex = 59;
+            this.materialFlatButton2.Text = "Cancelar";
+            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
+            // 
+            // Cursos
+            // 
+            this.Cursos.AutoSize = true;
+            this.Cursos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Cursos.Depth = 0;
+            this.Cursos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Cursos.Location = new System.Drawing.Point(48, 55);
+            this.Cursos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Cursos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Cursos.Name = "Cursos";
+            this.Cursos.Primary = false;
+            this.Cursos.Size = new System.Drawing.Size(170, 66);
+            this.Cursos.TabIndex = 57;
+            this.Cursos.Text = "Ver Cursos";
+            this.Cursos.UseVisualStyleBackColor = true;
+            this.Cursos.Click += new System.EventHandler(this.Cursos_Click_1);
             // 
             // tableLayoutPanel7
             // 
@@ -1401,78 +1476,6 @@ namespace InterfazDATMA.psicologo
             this.panel19.Size = new System.Drawing.Size(303, 58);
             this.panel19.TabIndex = 14;
             // 
-            // tableLayoutPanel15
-            // 
-            this.tableLayoutPanel15.ColumnCount = 7;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel15.Controls.Add(this.materialFlatButton1, 3, 1);
-            this.tableLayoutPanel15.Controls.Add(this.materialFlatButton2, 5, 1);
-            this.tableLayoutPanel15.Controls.Add(this.Cursos, 1, 1);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(4, 732);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 3;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.82758F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.72414F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(713, 175);
-            this.tableLayoutPanel15.TabIndex = 83;
-            // 
-            // materialFlatButton1
-            // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialFlatButton1.Location = new System.Drawing.Point(270, 55);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(170, 66);
-            this.materialFlatButton1.TabIndex = 58;
-            this.materialFlatButton1.Text = "Modificar";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
-            // 
-            // materialFlatButton2
-            // 
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialFlatButton2.Location = new System.Drawing.Point(492, 55);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(170, 66);
-            this.materialFlatButton2.TabIndex = 59;
-            this.materialFlatButton2.Text = "Cancelar";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
-            // 
-            // Cursos
-            // 
-            this.Cursos.AutoSize = true;
-            this.Cursos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Cursos.Depth = 0;
-            this.Cursos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cursos.Location = new System.Drawing.Point(48, 55);
-            this.Cursos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Cursos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Cursos.Name = "Cursos";
-            this.Cursos.Primary = false;
-            this.Cursos.Size = new System.Drawing.Size(170, 66);
-            this.Cursos.TabIndex = 57;
-            this.Cursos.Text = "Ver Cursos";
-            this.Cursos.UseVisualStyleBackColor = true;
-            // 
             // frmPerfilPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1488,6 +1491,8 @@ namespace InterfazDATMA.psicologo
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             this.tableLayoutPanel42.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -1535,8 +1540,6 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel27.ResumeLayout(false);
             this.tableLayoutPanel28.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
-            this.tableLayoutPanel15.ResumeLayout(false);
-            this.tableLayoutPanel15.PerformLayout();
             this.ResumeLayout(false);
 
         }

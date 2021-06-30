@@ -562,6 +562,7 @@ namespace InterfazDATMA.cuidador
             this.materialFlatButton1.TabIndex = 58;
             this.materialFlatButton1.Text = "Modificar";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -578,6 +579,7 @@ namespace InterfazDATMA.cuidador
             this.materialFlatButton2.TabIndex = 59;
             this.materialFlatButton2.Text = "Cancelar";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // tableLayoutPanel7
             // 

@@ -55,7 +55,20 @@ namespace InterfazDATMA.cuidador
             catch (Exception ex)
             {
              
-            }        
+            }
+
+            txtBajoRec.Enabled = false;
+            txtCel.Enabled = false;
+            txtCorreo.Enabled = false;
+            txtDNI.Enabled = false;
+            txtEdad.Enabled = false;
+            txtFecha.Enabled = false;
+            txtGen.Enabled = false;
+            txtGestante.Enabled = false;
+            txtNombre.Enabled = false;
+            txtTelef.Enabled = false;
+            txtUser.Enabled = false;
+            txtPass.Enabled = false;
         }
 
 
@@ -82,6 +95,40 @@ namespace InterfazDATMA.cuidador
         private void Correo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            txtBajoRec.Enabled = true;
+            txtCel.Enabled = true;
+            txtCorreo.Enabled = true;
+            txtDNI.Enabled = true;
+            txtEdad.Enabled = true;
+            txtFecha.Enabled = true;
+            txtGen.Enabled = true;
+            txtGestante.Enabled = true;
+            txtNombre.Enabled = true;
+            txtTelef.Enabled = true;
+            txtUser.Enabled = true;
+            txtPass.Enabled = true;
+            
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            txtBajoRec.Enabled = false;
+            txtCel.Enabled = false;
+            txtCorreo.Enabled = false;
+            txtDNI.Enabled = false;
+            txtEdad.Enabled = false;
+            txtFecha.Enabled = false;
+            txtGen.Enabled = false;
+            txtGestante.Enabled = false;
+            txtNombre.Enabled = false;
+            txtTelef.Enabled = false;
+            txtUser.Enabled = false;
+            txtPass.Enabled = false;
+            
         }
     }
 }
