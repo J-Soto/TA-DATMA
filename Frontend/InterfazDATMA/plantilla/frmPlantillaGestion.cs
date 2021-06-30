@@ -64,10 +64,10 @@ namespace InterfazDATMA.plantilla
             else if (tipoUser == 0)
             {
                 tutor = daoTutor.getTutorFromIdUsuario(user.idUsuario);
+                formPerfil = new frmPerfilCuidador(this);
                 Usuario.Text = "Usuario:   " + tutor.nombre + "   " + tutor.apellidoPaterno + "    " + tutor.apellidoMaterno;
                 formInicial = new frmWalkthrough(this);
                 abrirFormulario(formInicial);
-                formPerfil = new frmPerfilCuidador(this);
             }
 
         }
