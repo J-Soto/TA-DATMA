@@ -42,7 +42,7 @@ namespace InterfazDATMA.Administrador
             this.colCel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            //this.btnBuscar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,19 +182,22 @@ namespace InterfazDATMA.Administrador
             // 
             // btnBuscar
             // 
-            //this.btnBuscar.AutoSize = true;
-            //this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            //this.btnBuscar.Depth = 0;
-            //this.btnBuscar.Location = new System.Drawing.Point(1348, 227);
-            //this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            //this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnBuscar.Name = "btnBuscar";
-            //this.btnBuscar.Primary = false;
-            //this.btnBuscar.Size = new System.Drawing.Size(122, 36);
-            //this.btnBuscar.TabIndex = 12;
-            //this.btnBuscar.Text = "Buscar";
-            //this.btnBuscar.UseVisualStyleBackColor = true;
-            //this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.HighEmphasis = true;
+            this.btnBuscar.Icon = null;
+            this.btnBuscar.Location = new System.Drawing.Point(1454, 207);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(158, 36);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBuscar.UseAccentColor = false;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // frmListaTutores
             // 
@@ -203,7 +206,7 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1933, 892);
             this.ControlBox = false;
-            //this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvTutor);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.Header);
@@ -232,6 +235,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn colCel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.TextBox txtBuscar;
+        private MaterialSkin.Controls.MaterialButton btnBuscar;
         //private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
     }
 }

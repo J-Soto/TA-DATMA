@@ -314,24 +314,18 @@
   <data name="&gt;&gt;dgvPsico.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnBuscar.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnBuscar.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="btnBuscar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="btnBuscar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1232, 277</value>
+    <value>1167, 275</value>
   </data>
   <data name="btnBuscar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 6, 4, 6</value>
   </data>
   <data name="btnBuscar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 36</value>
+    <value>158, 36</value>
   </data>
   <data name="btnBuscar.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -343,7 +337,7 @@
     <value>btnBuscar</value>
   </data>
   <data name="&gt;&gt;btnBuscar.Type" xml:space="preserve">
-    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MaterialSkin.Controls.MaterialButton, MaterialSkin, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnBuscar.Parent" xml:space="preserve">
     <value>$this</value>
@@ -427,6 +421,6 @@
     <value>Header</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MaterialSkin.Controls.MaterialForm, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MaterialSkin.Controls.MaterialForm, MaterialSkin, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

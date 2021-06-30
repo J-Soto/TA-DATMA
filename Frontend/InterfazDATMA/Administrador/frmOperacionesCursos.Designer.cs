@@ -37,15 +37,15 @@ namespace InterfazDATMA.Administrador
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.lblTutoresUser = new System.Windows.Forms.Label();
-            //this.btnInsertarCurso = new MaterialSkin.Controls.MaterialFlatButton();
-            //this.btnEliminarCurso = new MaterialSkin.Controls.MaterialFlatButton();
-            //this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantSemanas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTutoresUser = new System.Windows.Forms.Label();
+            this.btnInsertarCurso = new MaterialSkin.Controls.MaterialButton();
+            this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
+            this.btnEliminarCurso = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +73,8 @@ namespace InterfazDATMA.Administrador
             this.CantSemanas});
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursos.Location = new System.Drawing.Point(74, 204);
+            this.dgvCursos.Location = new System.Drawing.Point(99, 255);
+            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -92,67 +93,8 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCursos.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCursos.RowTemplate.Height = 28;
-            this.dgvCursos.Size = new System.Drawing.Size(1132, 586);
+            this.dgvCursos.Size = new System.Drawing.Size(1509, 732);
             this.dgvCursos.TabIndex = 19;
-            // 
-            // lblTutoresUser
-            // 
-            this.lblTutoresUser.AutoSize = true;
-            this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(68, 135);
-            this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(282, 36);
-            this.lblTutoresUser.TabIndex = 20;
-            this.lblTutoresUser.Text = "Cursos Disponibles:";
-            // 
-            // btnInsertarCurso
-            // 
-            //this.btnInsertarCurso.AutoSize = true;
-            //this.btnInsertarCurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            //this.btnInsertarCurso.Depth = 0;
-            //this.btnInsertarCurso.Location = new System.Drawing.Point(1228, 204);
-            //this.btnInsertarCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            //this.btnInsertarCurso.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnInsertarCurso.Name = "btnInsertarCurso";
-            //this.btnInsertarCurso.Primary = false;
-            //this.btnInsertarCurso.Size = new System.Drawing.Size(182, 36);
-            //this.btnInsertarCurso.TabIndex = 25;
-            //this.btnInsertarCurso.Text = "Insertar Curso";
-            //this.btnInsertarCurso.UseVisualStyleBackColor = true;
-            //this.btnInsertarCurso.Click += new System.EventHandler(this.btnInsertarCurso_Click);
-            //// 
-            //// btnEliminarCurso
-            //// 
-            //this.btnEliminarCurso.AutoSize = true;
-            //this.btnEliminarCurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            //this.btnEliminarCurso.Depth = 0;
-            //this.btnEliminarCurso.Location = new System.Drawing.Point(1231, 267);
-            //this.btnEliminarCurso.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            //this.btnEliminarCurso.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnEliminarCurso.Name = "btnEliminarCurso";
-            //this.btnEliminarCurso.Primary = false;
-            //this.btnEliminarCurso.Size = new System.Drawing.Size(179, 36);
-            //this.btnEliminarCurso.TabIndex = 26;
-            //this.btnEliminarCurso.Text = "Eliminar Curso";
-            //this.btnEliminarCurso.UseVisualStyleBackColor = true;
-            //this.btnEliminarCurso.Click += new System.EventHandler(this.btnEliminarCurso_Click);
-            //// 
-            //// btnRegresar
-            //// 
-            //this.btnRegresar.AutoSize = true;
-            //this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            //this.btnRegresar.Depth = 0;
-            //this.btnRegresar.Location = new System.Drawing.Point(1294, 754);
-            //this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            //this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnRegresar.Name = "btnRegresar";
-            //this.btnRegresar.Primary = false;
-            //this.btnRegresar.Size = new System.Drawing.Size(116, 36);
-            //this.btnRegresar.TabIndex = 27;
-            //this.btnRegresar.Text = "Regresar";
-            //this.btnRegresar.UseVisualStyleBackColor = true;
-            //this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // Nombre
             // 
@@ -208,19 +150,90 @@ namespace InterfazDATMA.Administrador
             this.CantSemanas.ReadOnly = true;
             this.CantSemanas.Width = 70;
             // 
+            // lblTutoresUser
+            // 
+            this.lblTutoresUser.AutoSize = true;
+            this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
+            this.lblTutoresUser.Location = new System.Drawing.Point(91, 169);
+            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTutoresUser.Name = "lblTutoresUser";
+            this.lblTutoresUser.Size = new System.Drawing.Size(376, 46);
+            this.lblTutoresUser.TabIndex = 20;
+            this.lblTutoresUser.Text = "Cursos Disponibles:";
+            // 
+            // btnInsertarCurso
+            // 
+            this.btnInsertarCurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnInsertarCurso.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnInsertarCurso.Depth = 0;
+            this.btnInsertarCurso.HighEmphasis = true;
+            this.btnInsertarCurso.Icon = null;
+            this.btnInsertarCurso.Location = new System.Drawing.Point(1675, 278);
+            this.btnInsertarCurso.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnInsertarCurso.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnInsertarCurso.Name = "btnInsertarCurso";
+            this.btnInsertarCurso.Size = new System.Drawing.Size(141, 36);
+            this.btnInsertarCurso.TabIndex = 21;
+            this.btnInsertarCurso.Text = "Insertar Curso";
+            this.btnInsertarCurso.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnInsertarCurso.UseAccentColor = false;
+            this.btnInsertarCurso.UseVisualStyleBackColor = true;
+            this.btnInsertarCurso.Click += new System.EventHandler(this.btnInsertarCurso_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRegresar.Depth = 0;
+            this.btnRegresar.HighEmphasis = true;
+            this.btnRegresar.Icon = null;
+            this.btnRegresar.Location = new System.Drawing.Point(1675, 927);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(158, 36);
+            this.btnRegresar.TabIndex = 22;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRegresar.UseAccentColor = false;
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnEliminarCurso
+            // 
+            this.btnEliminarCurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEliminarCurso.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEliminarCurso.Depth = 0;
+            this.btnEliminarCurso.HighEmphasis = true;
+            this.btnEliminarCurso.Icon = null;
+            this.btnEliminarCurso.Location = new System.Drawing.Point(1675, 396);
+            this.btnEliminarCurso.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEliminarCurso.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEliminarCurso.Name = "btnEliminarCurso";
+            this.btnEliminarCurso.Size = new System.Drawing.Size(140, 36);
+            this.btnEliminarCurso.TabIndex = 22;
+            this.btnEliminarCurso.Text = "Eliminar Curso";
+            this.btnEliminarCurso.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEliminarCurso.UseAccentColor = false;
+            this.btnEliminarCurso.UseVisualStyleBackColor = true;
+            this.btnEliminarCurso.Click += new System.EventHandler(this.btnEliminarCurso_Click);
+            // 
             // frmOperacionesCursos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1451, 929);
+            this.ClientSize = new System.Drawing.Size(1935, 1161);
             this.ControlBox = false;
-            //this.Controls.Add(this.btnRegresar);
-            //this.Controls.Add(this.btnEliminarCurso);
-            //this.Controls.Add(this.btnInsertarCurso);
+            this.Controls.Add(this.btnEliminarCurso);
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.btnInsertarCurso);
             this.Controls.Add(this.lblTutoresUser);
             this.Controls.Add(this.dgvCursos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmOperacionesCursos";
+            this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
             this.Sizable = false;
             this.Text = "Operaciones Cursos";
             this.Load += new System.EventHandler(this.frmOperacionesCursos_Load);
@@ -243,5 +256,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFinal;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInscripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantSemanas;
+        private MaterialSkin.Controls.MaterialButton btnInsertarCurso;
+        private MaterialSkin.Controls.MaterialButton btnRegresar;
+        private MaterialSkin.Controls.MaterialButton btnEliminarCurso;
     }
 }

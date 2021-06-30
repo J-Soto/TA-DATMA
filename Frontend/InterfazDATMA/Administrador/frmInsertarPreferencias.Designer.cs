@@ -41,8 +41,8 @@ namespace InterfazDATMA.Administrador
             this.chblDias = new System.Windows.Forms.CheckedListBox();
             this.chbGestante = new System.Windows.Forms.CheckBox();
             this.chblRedes = new System.Windows.Forms.CheckedListBox();
-            //this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
-            //this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
+            this.btnGuardar = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // lblDispElec
@@ -50,9 +50,10 @@ namespace InterfazDATMA.Administrador
             this.lblDispElec.AutoSize = true;
             this.lblDispElec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblDispElec.ForeColor = System.Drawing.Color.White;
-            this.lblDispElec.Location = new System.Drawing.Point(130, 185);
+            this.lblDispElec.Location = new System.Drawing.Point(173, 231);
+            this.lblDispElec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDispElec.Name = "lblDispElec";
-            this.lblDispElec.Size = new System.Drawing.Size(227, 25);
+            this.lblDispElec.Size = new System.Drawing.Size(317, 31);
             this.lblDispElec.TabIndex = 16;
             this.lblDispElec.Text = "Dispositivos Electrónicos";
             // 
@@ -61,9 +62,10 @@ namespace InterfazDATMA.Administrador
             this.lblDias.AutoSize = true;
             this.lblDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblDias.ForeColor = System.Drawing.Color.White;
-            this.lblDias.Location = new System.Drawing.Point(130, 445);
+            this.lblDias.Location = new System.Drawing.Point(173, 556);
+            this.lblDias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDias.Name = "lblDias";
-            this.lblDias.Size = new System.Drawing.Size(155, 25);
+            this.lblDias.Size = new System.Drawing.Size(215, 31);
             this.lblDias.TabIndex = 18;
             this.lblDias.Text = "Preferencia Días";
             // 
@@ -72,9 +74,10 @@ namespace InterfazDATMA.Administrador
             this.lblTurno.AutoSize = true;
             this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblTurno.ForeColor = System.Drawing.Color.White;
-            this.lblTurno.Location = new System.Drawing.Point(950, 183);
+            this.lblTurno.Location = new System.Drawing.Point(1267, 229);
+            this.lblTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(168, 25);
+            this.lblTurno.Size = new System.Drawing.Size(231, 31);
             this.lblTurno.TabIndex = 19;
             this.lblTurno.Text = "Preferencia Turno";
             // 
@@ -83,9 +86,10 @@ namespace InterfazDATMA.Administrador
             this.lblInternet.AutoSize = true;
             this.lblInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblInternet.ForeColor = System.Drawing.Color.White;
-            this.lblInternet.Location = new System.Drawing.Point(525, 185);
+            this.lblInternet.Location = new System.Drawing.Point(700, 231);
+            this.lblInternet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInternet.Name = "lblInternet";
-            this.lblInternet.Size = new System.Drawing.Size(121, 25);
+            this.lblInternet.Size = new System.Drawing.Size(167, 31);
             this.lblInternet.TabIndex = 21;
             this.lblInternet.Text = "Tipo Internet";
             // 
@@ -94,9 +98,10 @@ namespace InterfazDATMA.Administrador
             this.lblRedes.AutoSize = true;
             this.lblRedes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblRedes.ForeColor = System.Drawing.Color.White;
-            this.lblRedes.Location = new System.Drawing.Point(525, 445);
+            this.lblRedes.Location = new System.Drawing.Point(700, 556);
+            this.lblRedes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRedes.Name = "lblRedes";
-            this.lblRedes.Size = new System.Drawing.Size(148, 25);
+            this.lblRedes.Size = new System.Drawing.Size(203, 31);
             this.lblRedes.TabIndex = 22;
             this.lblRedes.Text = "Redes Sociales";
             // 
@@ -110,10 +115,10 @@ namespace InterfazDATMA.Administrador
             "Laptop",
             "Celular",
             "Tablet"});
-            this.chblDispositivos.Location = new System.Drawing.Point(130, 240);
-            this.chblDispositivos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.chblDispositivos.Location = new System.Drawing.Point(173, 300);
+            this.chblDispositivos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chblDispositivos.Name = "chblDispositivos";
-            this.chblDispositivos.Size = new System.Drawing.Size(328, 96);
+            this.chblDispositivos.Size = new System.Drawing.Size(436, 116);
             this.chblDispositivos.TabIndex = 24;
             // 
             // chbRecursos
@@ -121,10 +126,10 @@ namespace InterfazDATMA.Administrador
             this.chbRecursos.AutoSize = true;
             this.chbRecursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.chbRecursos.ForeColor = System.Drawing.Color.White;
-            this.chbRecursos.Location = new System.Drawing.Point(950, 445);
-            this.chbRecursos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.chbRecursos.Location = new System.Drawing.Point(1267, 556);
+            this.chbRecursos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chbRecursos.Name = "chbRecursos";
-            this.chbRecursos.Size = new System.Drawing.Size(174, 29);
+            this.chbRecursos.Size = new System.Drawing.Size(237, 35);
             this.chbRecursos.TabIndex = 25;
             this.chbRecursos.Text = "Bajos Recursos";
             this.chbRecursos.UseVisualStyleBackColor = true;
@@ -139,10 +144,10 @@ namespace InterfazDATMA.Administrador
             "Plan de Datos",
             "Recarga Diaria",
             "No Cuenta"});
-            this.chblInternet.Location = new System.Drawing.Point(530, 240);
-            this.chblInternet.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.chblInternet.Location = new System.Drawing.Point(707, 300);
+            this.chblInternet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chblInternet.Name = "chblInternet";
-            this.chblInternet.Size = new System.Drawing.Size(343, 96);
+            this.chblInternet.Size = new System.Drawing.Size(456, 116);
             this.chblInternet.TabIndex = 26;
             // 
             // chblTurno
@@ -154,10 +159,10 @@ namespace InterfazDATMA.Administrador
             "Mañana",
             "Tarde ",
             "Noche"});
-            this.chblTurno.Location = new System.Drawing.Point(950, 240);
-            this.chblTurno.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.chblTurno.Location = new System.Drawing.Point(1267, 300);
+            this.chblTurno.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chblTurno.Name = "chblTurno";
-            this.chblTurno.Size = new System.Drawing.Size(342, 73);
+            this.chblTurno.Size = new System.Drawing.Size(455, 88);
             this.chblTurno.TabIndex = 27;
             // 
             // chblDias
@@ -173,10 +178,10 @@ namespace InterfazDATMA.Administrador
             "Viernes",
             "Sábado",
             "Domingo"});
-            this.chblDias.Location = new System.Drawing.Point(130, 500);
-            this.chblDias.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.chblDias.Location = new System.Drawing.Point(173, 625);
+            this.chblDias.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chblDias.Name = "chblDias";
-            this.chblDias.Size = new System.Drawing.Size(328, 165);
+            this.chblDias.Size = new System.Drawing.Size(436, 200);
             this.chblDias.TabIndex = 28;
             // 
             // chbGestante
@@ -184,10 +189,10 @@ namespace InterfazDATMA.Administrador
             this.chbGestante.AutoSize = true;
             this.chbGestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.chbGestante.ForeColor = System.Drawing.Color.White;
-            this.chbGestante.Location = new System.Drawing.Point(950, 525);
-            this.chbGestante.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.chbGestante.Location = new System.Drawing.Point(1267, 656);
+            this.chbGestante.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chbGestante.Name = "chbGestante";
-            this.chbGestante.Size = new System.Drawing.Size(117, 29);
+            this.chbGestante.Size = new System.Drawing.Size(157, 35);
             this.chbGestante.TabIndex = 29;
             this.chbGestante.Text = "Gestante";
             this.chbGestante.UseVisualStyleBackColor = true;
@@ -203,53 +208,59 @@ namespace InterfazDATMA.Administrador
             "Instagram",
             "Telegram",
             "Twitter"});
-            this.chblRedes.Location = new System.Drawing.Point(541, 500);
-            this.chblRedes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.chblRedes.Location = new System.Drawing.Point(721, 625);
+            this.chblRedes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chblRedes.Name = "chblRedes";
-            this.chblRedes.Size = new System.Drawing.Size(343, 119);
+            this.chblRedes.Size = new System.Drawing.Size(456, 144);
             this.chblRedes.TabIndex = 30;
             // 
             // btnRegresar
             // 
-            //this.btnRegresar.AutoSize = true;
-            //this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            //this.btnRegresar.Depth = 0;
-            //this.btnRegresar.Location = new System.Drawing.Point(84, 717);
-            //this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            //this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnRegresar.Name = "btnRegresar";
-            //this.btnRegresar.Primary = false;
-            //this.btnRegresar.Size = new System.Drawing.Size(116, 36);
-            //this.btnRegresar.TabIndex = 40;
-            //this.btnRegresar.Text = "Regresar";
-            //this.btnRegresar.UseVisualStyleBackColor = true;
-            //this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            //// 
-            //// btnGuardar
-            //// 
-            //this.btnGuardar.AutoSize = true;
-            //this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            //this.btnGuardar.Depth = 0;
-            //this.btnGuardar.Location = new System.Drawing.Point(903, 717);
-            //this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            //this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
-            //this.btnGuardar.Name = "btnGuardar";
-            //this.btnGuardar.Primary = false;
-            //this.btnGuardar.Size = new System.Drawing.Size(108, 36);
-            //this.btnGuardar.TabIndex = 41;
-            //this.btnGuardar.Text = "Guardar";
-            //this.btnGuardar.UseVisualStyleBackColor = true;
-            //this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            //// 
+            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRegresar.Depth = 0;
+            this.btnRegresar.HighEmphasis = true;
+            this.btnRegresar.Icon = null;
+            this.btnRegresar.Location = new System.Drawing.Point(246, 940);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(158, 36);
+            this.btnRegresar.TabIndex = 31;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRegresar.UseAccentColor = false;
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnGuardar.Depth = 0;
+            this.btnGuardar.HighEmphasis = true;
+            this.btnGuardar.Icon = null;
+            this.btnGuardar.Location = new System.Drawing.Point(721, 940);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(88, 36);
+            this.btnGuardar.TabIndex = 32;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnGuardar.UseAccentColor = false;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmInsertarPreferencias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1428, 862);
+            this.ClientSize = new System.Drawing.Size(1904, 1078);
             this.ControlBox = false;
-            //this.Controls.Add(this.btnGuardar);
-            //this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.chblRedes);
             this.Controls.Add(this.chbGestante);
             this.Controls.Add(this.chblDias);
@@ -262,8 +273,9 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.lblDias);
             this.Controls.Add(this.lblDispElec);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "frmInsertarPreferencias";
+            this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
             this.Sizable = false;
             this.Text = "Insertar Preferencias";
             this.ResumeLayout(false);
@@ -285,6 +297,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.CheckedListBox chblDias;
         private System.Windows.Forms.CheckBox chbGestante;
         private System.Windows.Forms.CheckedListBox chblRedes;
+        private MaterialSkin.Controls.MaterialButton btnRegresar;
+        private MaterialSkin.Controls.MaterialButton btnGuardar;
         //private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
         //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
     }

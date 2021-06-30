@@ -13,7 +13,7 @@ using InterfazDATMA.util;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmInsertarPreferencias : MaterialSkin.Controls.MaterialForm 
+    public partial class frmInsertarPreferencias : MaterialSkin.Controls.MaterialForm
     {
         private frmPlantillaGestion formPlantilla;
         private frmInsertarTutor formAnterior;
@@ -179,5 +179,6 @@ namespace InterfazDATMA.Administrador
             }
 
         }
+
     }
 }

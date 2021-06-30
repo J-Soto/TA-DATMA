@@ -25,20 +25,22 @@ namespace InterfazDATMA.plantilla
         public static UsuarioWS.usuario user = null;
         public static PsicologoWS.psicologo psico = null;
         public static TutorWS.tutor tutor = null;
-
+        char tema='D';
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         bool seMuestra;
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
-            Design.Ini(this);
+            Design.Ini(this,tema);
             PanelLateral.Width = 0;
             PanelLateral.Hide();
             frmPlantillaGestion.user = user;
             int tipoUser = user.tipo;
             Usuario.Text = "Usuario:   " + user.nombre + "   " + user.apellidoPaterno + "    "+ user.apellidoMaterno;
             fecha.Text = DateTime.Now.ToLongDateString();
+            
             //Psicologo
-            if(tipoUser == 1)
+            if (tipoUser == 1)
             {
                 formInicial = new frmGestionarModulosPsicologo(this);
                 abrirFormulario(formInicial);
@@ -59,6 +61,7 @@ namespace InterfazDATMA.plantilla
                 abrirFormulario(formInicial);
                 formPerfil = new frmPerfilCuidador(this);
             }
+
         }
 
         public void abrirFormulario(MaterialForm formularioAbrir)
@@ -158,18 +161,20 @@ namespace InterfazDATMA.plantilla
             reloj.Text = DateTime.Now.ToLongTimeString();
         }
 
-        MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
+        
 
         private void btnTema_CheckedChanged(object sender, EventArgs e)
-        {
+        { 
             if (ThemeManager.Theme == MaterialSkinManager.Themes.LIGHT)
             {
+                tema = 'D';
                 ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
                 pictureBox4.Image = Properties.Resources.moon;
             }
 
             else
             {
+                tema = 'L';
                 ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
                 pictureBox4.Image = Properties.Resources.sun;
             }

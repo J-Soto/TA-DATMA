@@ -55,12 +55,12 @@ namespace InterfazDATMA.Administrador
             Design.Ini(this);
             dgvReq.AutoGenerateColumns = false;
             dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //btnModificar.Visible = false;
+            btnModificar.Visible = false;
             curso = new CursoWS.curso();
             inicializarPantalla();
 
             //
-            //dtpFechaInicial.MinDate = DateTime.Now;
+            dtpFechaInicial.MinDate = DateTime.Now;
             //
         }
 
@@ -88,10 +88,10 @@ namespace InterfazDATMA.Administrador
             gruposCurso = new BindingList<Grupo_Curso>();
             //Inicializar BindingList CursosRequesito:
             cursosReq = new BindingList<CursoWS.curso>();
-            dgvReq.DataSource = cursosReq;
+            //dgvReq.DataSource = cursosReq;
 
             //Curso
-            //curso = new CursoWS.curso();
+            curso = new CursoWS.curso();
 
             //auxCantSem:
             auxCantSem = 0;
@@ -182,9 +182,9 @@ namespace InterfazDATMA.Administrador
             }
             catch (Exception ex)
             {
-                
+
             }
-            
+
         }
 
 
@@ -353,8 +353,8 @@ namespace InterfazDATMA.Administrador
 
                             MessageBox.Show("Se ha registrado el curso con exito.", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            //btnGuardarCurso.Enabled = false;
-                            //btnModificar.Enabled = true;
+                            btnGuardarCurso.Enabled = false;
+                            btnModificar.Enabled = true;
                         }
                     }
                     else
@@ -549,8 +549,8 @@ namespace InterfazDATMA.Administrador
 
                     MessageBox.Show("Se ha modificado el curso con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    //btnGuardarCurso.Enabled = false;
-                    //btnModificar.Enabled = true;
+                    btnGuardarCurso.Enabled = false;
+                    btnModificar.Enabled = true;
                     inicializarPantalla();
                 }
             }
@@ -560,7 +560,7 @@ namespace InterfazDATMA.Administrador
         {
             curso = new CursoWS.curso();
             inicializarPantalla();
-            //btnGuardarCurso.Enabled = true;
+            btnGuardarCurso.Enabled = true;
         }
     }
 }
