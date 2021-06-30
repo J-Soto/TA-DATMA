@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using InterfazDATMA.cuidador;
 using InterfazDATMA.psicologo;
 using InterfazDATMA.util;
+using InterfazDATMA.Administrador;
 
 namespace InterfazDATMA.plantilla
 {
@@ -47,8 +48,8 @@ namespace InterfazDATMA.plantilla
            
             else if (tipoUser == 2)
             {
-                forminicial = new frmgestionarmoduloadmin(this);
-               abrirformulario(forminicial);
+                formInicial = new frmGestionarModuloAdmin(this);
+                abrirFormulario(formInicial);
                 btnperfil.Enabled = false;
             }
             //Tutor

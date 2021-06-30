@@ -38,8 +38,8 @@ namespace InterfazDATMA.Administrador
             this.NombreCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionarCur = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnSeleccionarCur = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursosReq)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,36 +119,36 @@ namespace InterfazDATMA.Administrador
             this.FechaFinal.Width = 150;
             // 
             // btnSeleccionarCur
-            // 
-            this.btnSeleccionarCur.AutoSize = true;
-            this.btnSeleccionarCur.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSeleccionarCur.Depth = 0;
-            this.btnSeleccionarCur.Location = new System.Drawing.Point(288, 474);
-            this.btnSeleccionarCur.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnSeleccionarCur.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSeleccionarCur.Name = "btnSeleccionarCur";
-            this.btnSeleccionarCur.Primary = false;
-            this.btnSeleccionarCur.Size = new System.Drawing.Size(149, 36);
-            this.btnSeleccionarCur.TabIndex = 32;
-            this.btnSeleccionarCur.Text = "Seleccionar";
-            this.btnSeleccionarCur.UseVisualStyleBackColor = true;
-            this.btnSeleccionarCur.Click += new System.EventHandler(this.btnSeleccionarCur_Click_1);
+            //// 
+            //this.btnSeleccionarCur.AutoSize = true;
+            //this.btnSeleccionarCur.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnSeleccionarCur.Depth = 0;
+            //this.btnSeleccionarCur.Location = new System.Drawing.Point(288, 474);
+            //this.btnSeleccionarCur.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnSeleccionarCur.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnSeleccionarCur.Name = "btnSeleccionarCur";
+            //this.btnSeleccionarCur.Primary = false;
+            //this.btnSeleccionarCur.Size = new System.Drawing.Size(149, 36);
+            //this.btnSeleccionarCur.TabIndex = 32;
+            //this.btnSeleccionarCur.Text = "Seleccionar";
+            //this.btnSeleccionarCur.UseVisualStyleBackColor = true;
+            //this.btnSeleccionarCur.Click += new System.EventHandler(this.btnSeleccionarCur_Click_1);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.AutoSize = true;
-            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancelar.Depth = 0;
-            this.btnCancelar.Location = new System.Drawing.Point(620, 474);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Primary = false;
-            this.btnCancelar.Size = new System.Drawing.Size(119, 36);
-            this.btnCancelar.TabIndex = 33;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            //this.btnCancelar.AutoSize = true;
+            //this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnCancelar.Depth = 0;
+            //this.btnCancelar.Location = new System.Drawing.Point(620, 474);
+            //this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnCancelar.Name = "btnCancelar";
+            //this.btnCancelar.Primary = false;
+            //this.btnCancelar.Size = new System.Drawing.Size(119, 36);
+            //this.btnCancelar.TabIndex = 33;
+            //this.btnCancelar.Text = "Cancelar";
+            //this.btnCancelar.UseVisualStyleBackColor = true;
+            //this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // frmBuscarCursosRequerimiento
             // 
@@ -157,8 +157,8 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1108, 539);
             this.ControlBox = false;
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnSeleccionarCur);
+            //this.Controls.Add(this.btnCancelar);
+            //this.Controls.Add(this.btnSeleccionarCur);
             this.Controls.Add(this.dgvCursosReq);
             this.Name = "frmBuscarCursosRequerimiento";
             this.Sizable = false;
@@ -174,7 +174,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCurso;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicial;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFinal;
-        private MaterialSkin.Controls.MaterialFlatButton btnSeleccionarCur;
-        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnSeleccionarCur;
+        //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
     }
 }

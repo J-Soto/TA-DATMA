@@ -37,9 +37,9 @@ namespace InterfazDATMA.Administrador
             this.NombreDistrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnCancel = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnAceptar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnBuscar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnCancel = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnAceptar = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDistrito)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,51 +125,51 @@ namespace InterfazDATMA.Administrador
             // 
             // btnBuscar
             // 
-            this.btnBuscar.AutoSize = true;
-            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBuscar.Depth = 0;
-            this.btnBuscar.Location = new System.Drawing.Point(883, 81);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Primary = false;
-            this.btnBuscar.Size = new System.Drawing.Size(122, 36);
-            this.btnBuscar.TabIndex = 54;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AutoSize = true;
-            this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancel.Depth = 0;
-            this.btnCancel.Location = new System.Drawing.Point(83, 499);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Primary = false;
-            this.btnCancel.Size = new System.Drawing.Size(156, 36);
-            this.btnCancel.TabIndex = 55;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.AutoSize = true;
-            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAceptar.Depth = 0;
-            this.btnAceptar.Location = new System.Drawing.Point(775, 499);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Primary = false;
-            this.btnAceptar.Size = new System.Drawing.Size(196, 36);
-            this.btnAceptar.TabIndex = 56;
-            this.btnAceptar.Text = "Seleccionar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            //this.btnBuscar.AutoSize = true;
+            //this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnBuscar.Depth = 0;
+            //this.btnBuscar.Location = new System.Drawing.Point(883, 81);
+            //this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            //this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnBuscar.Name = "btnBuscar";
+            //this.btnBuscar.Primary = false;
+            //this.btnBuscar.Size = new System.Drawing.Size(122, 36);
+            //this.btnBuscar.TabIndex = 54;
+            //this.btnBuscar.Text = "Buscar";
+            //this.btnBuscar.UseVisualStyleBackColor = true;
+            //this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            //// 
+            //// btnCancel
+            //// 
+            //this.btnCancel.AutoSize = true;
+            //this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnCancel.Depth = 0;
+            //this.btnCancel.Location = new System.Drawing.Point(83, 499);
+            //this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            //this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnCancel.Name = "btnCancel";
+            //this.btnCancel.Primary = false;
+            //this.btnCancel.Size = new System.Drawing.Size(156, 36);
+            //this.btnCancel.TabIndex = 55;
+            //this.btnCancel.Text = "Cancelar";
+            //this.btnCancel.UseVisualStyleBackColor = true;
+            //this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            //// 
+            //// btnAceptar
+            //// 
+            //this.btnAceptar.AutoSize = true;
+            //this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnAceptar.Depth = 0;
+            //this.btnAceptar.Location = new System.Drawing.Point(775, 499);
+            //this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            //this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnAceptar.Name = "btnAceptar";
+            //this.btnAceptar.Primary = false;
+            //this.btnAceptar.Size = new System.Drawing.Size(196, 36);
+            //this.btnAceptar.TabIndex = 56;
+            //this.btnAceptar.Text = "Seleccionar";
+            //this.btnAceptar.UseVisualStyleBackColor = true;
+            //this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmInsertarDistrito
             // 
@@ -178,9 +178,9 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1190, 550);
             this.ControlBox = false;
-            this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnBuscar);
+            //this.Controls.Add(this.btnAceptar);
+            //this.Controls.Add(this.btnCancel);
+            //this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvDistrito);
@@ -201,8 +201,8 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddistrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreDistrito;
-        private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
-        private MaterialSkin.Controls.MaterialFlatButton btnCancel;
-        private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnCancel;
+        //private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
     }
 }

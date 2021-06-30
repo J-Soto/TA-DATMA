@@ -36,10 +36,10 @@ namespace InterfazDATMA.Administrador
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaxTutores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTutoresUser = new System.Windows.Forms.Label();
-            this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnModificar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnAgregarGrupo = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnQuitarGrupo = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnModificar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnAgregarGrupo = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnQuitarGrupo = new MaterialSkin.Controls.MaterialFlatButton();
             this.lblNombreCurso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
@@ -117,67 +117,67 @@ namespace InterfazDATMA.Administrador
             // 
             // btnRegresar
             // 
-            this.btnRegresar.AutoSize = true;
-            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRegresar.Depth = 0;
-            this.btnRegresar.Location = new System.Drawing.Point(1132, 787);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Primary = false;
-            this.btnRegresar.Size = new System.Drawing.Size(116, 36);
-            this.btnRegresar.TabIndex = 25;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
+            //this.btnRegresar.AutoSize = true;
+            //this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnRegresar.Depth = 0;
+            //this.btnRegresar.Location = new System.Drawing.Point(1132, 787);
+            //this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnRegresar.Name = "btnRegresar";
+            //this.btnRegresar.Primary = false;
+            //this.btnRegresar.Size = new System.Drawing.Size(116, 36);
+            //this.btnRegresar.TabIndex = 25;
+            //this.btnRegresar.Text = "Regresar";
+            //this.btnRegresar.UseVisualStyleBackColor = true;
+            //this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
             // 
             // btnModificar
             // 
-            this.btnModificar.AutoSize = true;
-            this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnModificar.Depth = 0;
-            this.btnModificar.Location = new System.Drawing.Point(925, 225);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Primary = false;
-            this.btnModificar.Size = new System.Drawing.Size(123, 36);
-            this.btnModificar.TabIndex = 26;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
+            //this.btnModificar.AutoSize = true;
+            //this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnModificar.Depth = 0;
+            //this.btnModificar.Location = new System.Drawing.Point(925, 225);
+            //this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnModificar.Name = "btnModificar";
+            //this.btnModificar.Primary = false;
+            //this.btnModificar.Size = new System.Drawing.Size(123, 36);
+            //this.btnModificar.TabIndex = 26;
+            //this.btnModificar.Text = "Modificar";
+            //this.btnModificar.UseVisualStyleBackColor = true;
+            //this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnAgregarGrupo
             // 
-            this.btnAgregarGrupo.AutoSize = true;
-            this.btnAgregarGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAgregarGrupo.Depth = 0;
-            this.btnAgregarGrupo.Location = new System.Drawing.Point(1063, 300);
-            this.btnAgregarGrupo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnAgregarGrupo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAgregarGrupo.Name = "btnAgregarGrupo";
-            this.btnAgregarGrupo.Primary = false;
-            this.btnAgregarGrupo.Size = new System.Drawing.Size(26, 36);
-            this.btnAgregarGrupo.TabIndex = 27;
-            this.btnAgregarGrupo.Text = "+";
-            this.btnAgregarGrupo.UseVisualStyleBackColor = true;
-            this.btnAgregarGrupo.Click += new System.EventHandler(this.btnAgregarGrupo_Click_1);
+            //this.btnAgregarGrupo.AutoSize = true;
+            //this.btnAgregarGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnAgregarGrupo.Depth = 0;
+            //this.btnAgregarGrupo.Location = new System.Drawing.Point(1063, 300);
+            //this.btnAgregarGrupo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnAgregarGrupo.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnAgregarGrupo.Name = "btnAgregarGrupo";
+            //this.btnAgregarGrupo.Primary = false;
+            //this.btnAgregarGrupo.Size = new System.Drawing.Size(26, 36);
+            //this.btnAgregarGrupo.TabIndex = 27;
+            //this.btnAgregarGrupo.Text = "+";
+            //this.btnAgregarGrupo.UseVisualStyleBackColor = true;
+            //this.btnAgregarGrupo.Click += new System.EventHandler(this.btnAgregarGrupo_Click_1);
             // 
             // btnQuitarGrupo
             // 
-            this.btnQuitarGrupo.AutoSize = true;
-            this.btnQuitarGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnQuitarGrupo.Depth = 0;
-            this.btnQuitarGrupo.Location = new System.Drawing.Point(1063, 346);
-            this.btnQuitarGrupo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnQuitarGrupo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnQuitarGrupo.Name = "btnQuitarGrupo";
-            this.btnQuitarGrupo.Primary = false;
-            this.btnQuitarGrupo.Size = new System.Drawing.Size(21, 36);
-            this.btnQuitarGrupo.TabIndex = 28;
-            this.btnQuitarGrupo.Text = "-";
-            this.btnQuitarGrupo.UseVisualStyleBackColor = true;
-            this.btnQuitarGrupo.Click += new System.EventHandler(this.btnQuitarGrupo_Click);
+            //this.btnQuitarGrupo.AutoSize = true;
+            //this.btnQuitarGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnQuitarGrupo.Depth = 0;
+            //this.btnQuitarGrupo.Location = new System.Drawing.Point(1063, 346);
+            //this.btnQuitarGrupo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnQuitarGrupo.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnQuitarGrupo.Name = "btnQuitarGrupo";
+            //this.btnQuitarGrupo.Primary = false;
+            //this.btnQuitarGrupo.Size = new System.Drawing.Size(21, 36);
+            //this.btnQuitarGrupo.TabIndex = 28;
+            //this.btnQuitarGrupo.Text = "-";
+            //this.btnQuitarGrupo.UseVisualStyleBackColor = true;
+            //this.btnQuitarGrupo.Click += new System.EventHandler(this.btnQuitarGrupo_Click);
             // 
             // lblNombreCurso
             // 
@@ -198,10 +198,10 @@ namespace InterfazDATMA.Administrador
             this.ClientSize = new System.Drawing.Size(1320, 911);
             this.ControlBox = false;
             this.Controls.Add(this.lblNombreCurso);
-            this.Controls.Add(this.btnQuitarGrupo);
-            this.Controls.Add(this.btnAgregarGrupo);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnRegresar);
+            //this.Controls.Add(this.btnQuitarGrupo);
+            //this.Controls.Add(this.btnAgregarGrupo);
+            //this.Controls.Add(this.btnModificar);
+            //this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblTutoresUser);
             this.Controls.Add(this.dgvGrupos);
             this.Name = "frmVerGruposCurso";
@@ -218,10 +218,10 @@ namespace InterfazDATMA.Administrador
 
         private System.Windows.Forms.DataGridView dgvGrupos;
         private System.Windows.Forms.Label lblTutoresUser;
-        private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
-        private MaterialSkin.Controls.MaterialFlatButton btnModificar;
-        private MaterialSkin.Controls.MaterialFlatButton btnAgregarGrupo;
-        private MaterialSkin.Controls.MaterialFlatButton btnQuitarGrupo;
+        //private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnModificar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnAgregarGrupo;
+        //private MaterialSkin.Controls.MaterialFlatButton btnQuitarGrupo;
         private System.Windows.Forms.Label lblNombreCurso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaxTutores;

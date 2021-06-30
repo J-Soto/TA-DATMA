@@ -41,8 +41,8 @@ namespace InterfazDATMA.Administrador
             this.lblTurno = new System.Windows.Forms.Label();
             this.lblDias = new System.Windows.Forms.Label();
             this.lblDispElec = new System.Windows.Forms.Label();
-            this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnRegresar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnGuardar = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // chblRedes
@@ -211,35 +211,35 @@ namespace InterfazDATMA.Administrador
             // 
             // btnRegresar
             // 
-            this.btnRegresar.AutoSize = true;
-            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRegresar.Depth = 0;
-            this.btnRegresar.Location = new System.Drawing.Point(646, 624);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Primary = false;
-            this.btnRegresar.Size = new System.Drawing.Size(116, 36);
-            this.btnRegresar.TabIndex = 54;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.AutoSize = true;
-            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnGuardar.Depth = 0;
-            this.btnGuardar.Location = new System.Drawing.Point(873, 624);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Primary = false;
-            this.btnGuardar.Size = new System.Drawing.Size(108, 36);
-            this.btnGuardar.TabIndex = 55;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            //this.btnRegresar.AutoSize = true;
+            //this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnRegresar.Depth = 0;
+            //this.btnRegresar.Location = new System.Drawing.Point(646, 624);
+            //this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnRegresar.Name = "btnRegresar";
+            //this.btnRegresar.Primary = false;
+            //this.btnRegresar.Size = new System.Drawing.Size(116, 36);
+            //this.btnRegresar.TabIndex = 54;
+            //this.btnRegresar.Text = "Regresar";
+            //this.btnRegresar.UseVisualStyleBackColor = true;
+            //this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            //// 
+            //// btnGuardar
+            //// 
+            //this.btnGuardar.AutoSize = true;
+            //this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnGuardar.Depth = 0;
+            //this.btnGuardar.Location = new System.Drawing.Point(873, 624);
+            //this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            //this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnGuardar.Name = "btnGuardar";
+            //this.btnGuardar.Primary = false;
+            //this.btnGuardar.Size = new System.Drawing.Size(108, 36);
+            //this.btnGuardar.TabIndex = 55;
+            //this.btnGuardar.Text = "Guardar";
+            //this.btnGuardar.UseVisualStyleBackColor = true;
+            //this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmModificarPreferencias
             // 
@@ -248,8 +248,8 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.ControlBox = false;
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnRegresar);
+            //this.Controls.Add(this.btnGuardar);
+            //this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.chblRedes);
             this.Controls.Add(this.chbGestante);
             this.Controls.Add(this.chblDias);
@@ -284,7 +284,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblTurno;
         private System.Windows.Forms.Label lblDias;
         private System.Windows.Forms.Label lblDispElec;
-        private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
-        private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnRegresar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
     }
 }

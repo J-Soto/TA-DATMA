@@ -56,7 +56,7 @@ namespace InterfazDATMA.Administrador
             txtCel.Text = "";
             rbtnHombre.Checked = false;
             rbtnMujer.Checked = false;
-            if (tutor.user != null || tutor.user!="0") btnAsignarUsuario.Enabled = false;
+            //if (tutor.user != null || tutor.user!="0") btnAsignarUsuario.Enabled = false;
         }
 
         private void completarDatosTutores()
@@ -260,7 +260,7 @@ namespace InterfazDATMA.Administrador
             tutor.user = credenciales.Item1;
             tutor.password = credenciales.Item2;
             usuarioAsignado = true;
-            btnAsignarUsuario.Enabled = false;
+            //btnAsignarUsuario.Enabled = false;
         }
     }
 }

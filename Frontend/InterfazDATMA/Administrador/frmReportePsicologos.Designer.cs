@@ -31,7 +31,7 @@ namespace InterfazDATMA.Administrador
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePsicologos));
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
-            this.btnDescargar = new MaterialSkin.Controls.MaterialFlatButton();
+            //this.btnDescargar = new MaterialSkin.Controls.MaterialFlatButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
@@ -50,27 +50,27 @@ namespace InterfazDATMA.Administrador
             // 
             // btnDescargar
             // 
-            this.btnDescargar.AutoSize = true;
-            this.btnDescargar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDescargar.Depth = 0;
-            this.btnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnDescargar.Location = new System.Drawing.Point(644, 402);
-            this.btnDescargar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnDescargar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Primary = false;
-            this.btnDescargar.Size = new System.Drawing.Size(91, 36);
-            this.btnDescargar.TabIndex = 35;
-            this.btnDescargar.Text = "Descargar";
-            this.btnDescargar.UseVisualStyleBackColor = true;
-            this.btnDescargar.Click += new System.EventHandler(this.btnReportePsi_Click);
+            //this.btnDescargar.AutoSize = true;
+            //this.btnDescargar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.btnDescargar.Depth = 0;
+            //this.btnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            //this.btnDescargar.Location = new System.Drawing.Point(644, 402);
+            //this.btnDescargar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            //this.btnDescargar.MouseState = MaterialSkin.MouseState.HOVER;
+            //this.btnDescargar.Name = "btnDescargar";
+            //this.btnDescargar.Primary = false;
+            //this.btnDescargar.Size = new System.Drawing.Size(91, 36);
+            //this.btnDescargar.TabIndex = 35;
+            //this.btnDescargar.Text = "Descargar";
+            //this.btnDescargar.UseVisualStyleBackColor = true;
+            //this.btnDescargar.Click += new System.EventHandler(this.btnReportePsi_Click);
             // 
             // frmReportePsicologos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnDescargar);
+            //this.Controls.Add(this.btnDescargar);
             this.Controls.Add(this.axAcroPDF1);
             this.Name = "frmReportePsicologos";
             this.Text = "frmReportePsicologos";
@@ -83,7 +83,7 @@ namespace InterfazDATMA.Administrador
         #endregion
 
         private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
-        private MaterialSkin.Controls.MaterialFlatButton btnDescargar;
+        //private MaterialSkin.Controls.MaterialFlatButton btnDescargar;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
