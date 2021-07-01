@@ -169,7 +169,44 @@ namespace InterfazDATMA.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap postulante
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("postulante", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap operacionesCurso
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("operacionesCurso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap operacionesPersona
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("operacionesPersona", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>

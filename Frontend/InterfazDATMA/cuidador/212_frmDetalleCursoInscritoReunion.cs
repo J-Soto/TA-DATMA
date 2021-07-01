@@ -17,29 +17,24 @@ namespace InterfazDATMA
     {
         public frmDetalleCursoInscrito formAnterior;
         private frmPlantillaGestion plantillaGestion; 
-        public frmDetalleCursoInscritoReunion(frmDetalleCursoInscrito formAnterior, frmPlantillaGestion plantillaGestion)
+        public frmDetalleCursoInscritoReunion(frmDetalleCursoInscrito formAnterior, frmPlantillaGestion plantillaGestion, string link)
         {
             InitializeComponent();
             Design.Ini(this);
             this.plantillaGestion = plantillaGestion;
             this.formAnterior = formAnterior;
-        }
-
-        private void frmDetalleCursoInscritoReunion_Load(object sender, EventArgs e)
-        {
-
+            txtZoom.Text = link;
         }
 
         private void Regresar_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(formAnterior);
-
-
         }
 
-        private void tableLayoutPanel17_Paint(object sender, PaintEventArgs e)
+        private void txtZoom_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            txtZoom.LinkVisited = true;
+            System.Diagnostics.Process.Start(txtZoom.Text);
         }
     }
 }

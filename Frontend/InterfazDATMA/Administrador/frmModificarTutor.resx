@@ -858,34 +858,34 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="materialButton1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+  <data name="AgregarDistrio.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="materialButton1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AgregarDistrio.Location" type="System.Drawing.Point, System.Drawing">
     <value>782, 342</value>
   </data>
-  <data name="materialButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="AgregarDistrio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 6, 4, 6</value>
   </data>
-  <data name="materialButton1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AgregarDistrio.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 36</value>
   </data>
-  <data name="materialButton1.TabIndex" type="System.Int32, mscorlib">
+  <data name="AgregarDistrio.TabIndex" type="System.Int32, mscorlib">
     <value>144</value>
   </data>
-  <data name="materialButton1.Text" xml:space="preserve">
-    <value>materialButton1</value>
+  <data name="AgregarDistrio.Text" xml:space="preserve">
+    <value>Agregar Distritoo</value>
   </data>
-  <data name="&gt;&gt;materialButton1.Name" xml:space="preserve">
-    <value>materialButton1</value>
+  <data name="&gt;&gt;AgregarDistrio.Name" xml:space="preserve">
+    <value>AgregarDistrio</value>
   </data>
-  <data name="&gt;&gt;materialButton1.Type" xml:space="preserve">
+  <data name="&gt;&gt;AgregarDistrio.Type" xml:space="preserve">
     <value>MaterialSkin.Controls.MaterialButton, MaterialSkin, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;materialButton1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AgregarDistrio.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;materialButton1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AgregarDistrio.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="btnAsignarUsuario.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
@@ -967,7 +967,7 @@
     <value>4, 6, 4, 6</value>
   </data>
   <data name="btnSiguiente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 36</value>
+    <value>95, 36</value>
   </data>
   <data name="btnSiguiente.TabIndex" type="System.Int32, mscorlib">
     <value>147</value>

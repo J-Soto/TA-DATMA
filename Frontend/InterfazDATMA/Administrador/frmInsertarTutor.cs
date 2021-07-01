@@ -80,7 +80,43 @@ namespace InterfazDATMA.Administrador
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            TutorWS.tutor tutor = new TutorWS.tutor();
 
+            tutor.nombre = txtNombre.Text;
+            tutor.apellidoPaterno = txtApPat.Text;
+            tutor.apellidoMaterno = txtApMat.Text;
+            tutor.correo = txtCorreo.Text;
+            tutor.DNI = txtDni.Text;
+            tutor.telefono = txtTelf.Text;
+            tutor.celular = txtCel.Text;
+            tutor.fechaNacimiento = dtpFechaNacimiento.Value;
+            tutor.fechaNacimientoSpecified = true;
+            tutor.distrito = new TutorWS.distrito();
+            tutor.distrito = distrito;
+
+            if (rbtnHombre.Checked == true)
+            {
+                tutor.genero = 'M';
+            }
+            else
+            {
+                tutor.genero = 'F';
+            }
+
+            // Se inserta también el tutor para la siguiente pantalla
+            int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
+            if (verificado == -1)
+            {
+                var resultado = MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+                }
+            }
+            else if (verificado == 0)
+                MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

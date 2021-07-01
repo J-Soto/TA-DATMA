@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,40 +17,73 @@ namespace InterfazDATMA
     public partial class frmDetalleCursoInscritoMaterial : MaterialSkin.Controls.MaterialForm 
     {
         public frmDetalleCursoInscrito formAnterior;
-        private frmPlantillaGestion plantillaGestion; 
-        public frmDetalleCursoInscritoMaterial(frmDetalleCursoInscrito formAnterior,frmPlantillaGestion plantillaGestion)
+        private frmPlantillaGestion plantillaGestion;
+        //private ActividadWS.actividad act;
+        private ActividadWS.ActividadWSClient actDao = new ActividadWS.ActividadWSClient();
+        private List<ActividadWS.documento> docs = new List<ActividadWS.documento>();
+        private List<ActividadWS.video> videos = new List<ActividadWS.video>();
+
+        public frmDetalleCursoInscritoMaterial(frmDetalleCursoInscrito formAnterior,frmPlantillaGestion plantillaGestion, string curso, ActividadWS.actividad act)
         {
             InitializeComponent();
             Design.Ini(this);
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
-        }
-       /*
-        private void VisitLink()
-        {
-            linkLabel1.LinkVisited = true;
-            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=QHRuTYtSbJQ");
-        }
-        */
-
-        /*
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           
-            try
+            //this.act = act;
+            NombreCurso.Text = curso;
+            // obtener material
+            var temp = actDao.listarVideosPorIdActividad(act.idActividad);
+            if (temp is object)
             {
-                VisitLink();
+                videos = new List<ActividadWS.video>(temp);
             }
-            catch (Exception ex)
+            var temp1 = actDao.listarDocumentosPorIdActividad(act.idActividad);
+            if (temp1 is object)
             {
-                MessageBox.Show("Unable to open link that was clicked.");
+                docs = new List<ActividadWS.documento>(temp1);
             }
+            dgvDocumentos.AutoGenerateColumns = false;
+            dgvVideos.AutoGenerateColumns = false;
+            dgvDocumentos.DataSource = docs;
+            dgvVideos.DataSource = videos;
         }
-        */
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(formAnterior);
+        }
+
+        private void dgvDocumentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex, row = e.RowIndex;
+            if (col == 1)
+            {
+                var sf = new SaveFileDialog
+                {
+                    Filter = "Archivo PDF (*.pdf)|*.pdf",
+                    Title = "Guardar documento..."
+                };
+
+                if (sf.ShowDialog() == DialogResult.OK)
+                {
+                    using (var fs = new FileStream(sf.FileName, FileMode.Create))
+                    {
+                        // get bytes from text you want to save
+                        byte[] data = docs[row].docPDF;
+                        fs.Write(data, 0, data.Length);
+                        fs.Flush();
+                    }
+                }
+            }
+        }
+
+        private void dgvVideos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex, row = e.RowIndex;
+            if (col == 2)
+            {
+                System.Diagnostics.Process.Start(videos[row].linkVideo);
+            }
         }
     }
 }

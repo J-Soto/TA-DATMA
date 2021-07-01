@@ -29,6 +29,8 @@ namespace InterfazDATMA
             {
                 cursos = new List<CursoWS.curso>(temp);
             }
+            dgvListaCursos.AutoGenerateColumns = false;
+            dgvListaCursos.DataSource = cursos;
 
             this.plantillaGestion = plantillaGestion;
         }
@@ -57,17 +59,23 @@ namespace InterfazDATMA
 
         private void btnModulo1_Click(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+            //plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
         }
 
         private void btnModulo2_Click_1(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+            //plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
         }
 
         private void btnModulo3_Click_1(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+            //plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion));
+        }
+
+        private void dgvListaCursos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(this, plantillaGestion, cursos[index]));
         }
     }
 }
