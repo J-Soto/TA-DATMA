@@ -39,13 +39,10 @@ namespace InterfazDATMA
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.dgvCalendario = new System.Windows.Forms.DataGridView();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCursosDisponibles = new MaterialSkin.Controls.MaterialButton();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCalendario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCursos)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -54,8 +51,8 @@ namespace InterfazDATMA
             this.materialCard2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.materialCard1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaCursos
@@ -216,28 +213,6 @@ namespace InterfazDATMA
             this.materialCard1.Size = new System.Drawing.Size(1003, 1014);
             this.materialCard1.TabIndex = 50;
             // 
-            // dgvCalendario
-            // 
-            this.dgvCalendario.AllowUserToAddRows = false;
-            this.dgvCalendario.AllowUserToDeleteRows = false;
-            this.dgvCalendario.AllowUserToResizeColumns = false;
-            this.dgvCalendario.AllowUserToResizeRows = false;
-            this.dgvCalendario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.dgvCalendario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCalendario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.HoraI,
-            this.HoraF});
-            this.dgvCalendario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCalendario.Location = new System.Drawing.Point(14, 13);
-            this.dgvCalendario.Margin = new System.Windows.Forms.Padding(6);
-            this.dgvCalendario.Name = "dgvCalendario";
-            this.dgvCalendario.ReadOnly = true;
-            this.dgvCalendario.RowHeadersVisible = false;
-            this.dgvCalendario.RowHeadersWidth = 82;
-            this.dgvCalendario.Size = new System.Drawing.Size(975, 988);
-            this.dgvCalendario.TabIndex = 49;
-            // 
             // materialLabel2
             // 
             this.materialLabel2.Depth = 0;
@@ -290,32 +265,16 @@ namespace InterfazDATMA
             this.btnCursosDisponibles.UseVisualStyleBackColor = true;
             this.btnCursosDisponibles.Click += new System.EventHandler(this.btnCursosDisponibles_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // dgvCalendario
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "fecha";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // HoraI
-            // 
-            this.HoraI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraI.DataPropertyName = "horaInicioStr";
-            this.HoraI.HeaderText = "Hora Inicio";
-            this.HoraI.MinimumWidth = 10;
-            this.HoraI.Name = "HoraI";
-            this.HoraI.ReadOnly = true;
-            // 
-            // HoraF
-            // 
-            this.HoraF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraF.DataPropertyName = "horaFinStr";
-            this.HoraF.HeaderText = "Hora Fin";
-            this.HoraF.MinimumWidth = 10;
-            this.HoraF.Name = "HoraF";
-            this.HoraF.ReadOnly = true;
+            this.dgvCalendario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCalendario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCalendario.Location = new System.Drawing.Point(14, 13);
+            this.dgvCalendario.Name = "dgvCalendario";
+            this.dgvCalendario.RowHeadersWidth = 82;
+            this.dgvCalendario.RowTemplate.Height = 33;
+            this.dgvCalendario.Size = new System.Drawing.Size(975, 988);
+            this.dgvCalendario.TabIndex = 0;
             // 
             // frmListaCursoInscritos
             // 
@@ -337,8 +296,8 @@ namespace InterfazDATMA
             this.materialCard2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,11 +319,8 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.DataGridView dgvCalendario;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraF;
+        private System.Windows.Forms.DataGridView dgvCalendario;
     }
 }

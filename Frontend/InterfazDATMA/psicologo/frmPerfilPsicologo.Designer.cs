@@ -40,12 +40,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtPass = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtUser = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.picPerfil = new System.Windows.Forms.PictureBox();
@@ -53,23 +49,15 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtFecha = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtCel = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTelef = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel37 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtDNI = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel41 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
@@ -78,59 +66,71 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel38 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel39 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNombre = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtEdad = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel30 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtGen = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtPass = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtNom = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtDni = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtEdad = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtGen = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtCorreo = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtTelf = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtCel = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtUser = new MaterialSkin.Controls.MaterialTextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtFechaNac = new MaterialSkin.Controls.MaterialTextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel28 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtCorreo = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel42.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).BeginInit();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
-            this.tableLayoutPanel19.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel21.SuspendLayout();
-            this.tableLayoutPanel22.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
             this.tableLayoutPanel24.SuspendLayout();
-            this.tableLayoutPanel25.SuspendLayout();
             this.tableLayoutPanel35.SuspendLayout();
             this.tableLayoutPanel36.SuspendLayout();
-            this.tableLayoutPanel37.SuspendLayout();
             this.tableLayoutPanel41.SuspendLayout();
             this.tableLayoutPanel38.SuspendLayout();
             this.tableLayoutPanel39.SuspendLayout();
-            this.tableLayoutPanel40.SuspendLayout();
             this.tableLayoutPanel32.SuspendLayout();
             this.tableLayoutPanel33.SuspendLayout();
-            this.tableLayoutPanel34.SuspendLayout();
             this.tableLayoutPanel29.SuspendLayout();
             this.tableLayoutPanel30.SuspendLayout();
-            this.tableLayoutPanel31.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
+            this.tableLayoutPanel22.SuspendLayout();
+            this.tableLayoutPanel25.SuspendLayout();
             this.tableLayoutPanel28.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -325,10 +325,10 @@ namespace InterfazDATMA.psicologo
             // 
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.materialLabel12, 0, 0);
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.592814F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.40718F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.materialLabel12, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.ForeColor = System.Drawing.Color.Black;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(50, 20);
@@ -353,35 +353,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel12.Text = "Contrasena";
             this.materialLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel6.Controls.Add(this.txtPass, 1, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(421, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 3;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(410, 114);
-            this.tableLayoutPanel6.TabIndex = 58;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Depth = 0;
-            this.txtPass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPass.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtPass.Location = new System.Drawing.Point(23, 45);
-            this.txtPass.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(363, 22);
-            this.txtPass.TabIndex = 81;
-            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.BackColor = System.Drawing.Color.White;
@@ -405,8 +376,8 @@ namespace InterfazDATMA.psicologo
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.832335F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.16766F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.materialLabel11, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -417,35 +388,6 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(835, 122);
             this.tableLayoutPanel3.TabIndex = 79;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Controls.Add(this.txtUser, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(421, 4);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(410, 114);
-            this.tableLayoutPanel1.TabIndex = 58;
-            // 
-            // txtUser
-            // 
-            this.txtUser.Depth = 0;
-            this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUser.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtUser.Location = new System.Drawing.Point(23, 45);
-            this.txtUser.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(363, 22);
-            this.txtUser.TabIndex = 0;
             // 
             // materialLabel11
             // 
@@ -488,7 +430,7 @@ namespace InterfazDATMA.psicologo
             this.picPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.picPerfil.Name = "picPerfil";
             this.picPerfil.Size = new System.Drawing.Size(835, 534);
-            this.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPerfil.TabIndex = 23;
             this.picPerfil.TabStop = false;
             // 
@@ -549,8 +491,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel28, 2, 0);
             this.tableLayoutPanel18.Controls.Add(this.materialLabel20, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel19, 2, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(4);
@@ -573,35 +515,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel20.TabIndex = 88;
             this.materialLabel20.Text = "Fecha nacimiento";
             this.materialLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel19
-            // 
-            this.tableLayoutPanel19.ColumnCount = 3;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel19.Controls.Add(this.txtFecha, 1, 1);
-            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            this.tableLayoutPanel19.RowCount = 3;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(507, 135);
-            this.tableLayoutPanel19.TabIndex = 58;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Depth = 0;
-            this.txtFecha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFecha.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtFecha.Location = new System.Drawing.Point(28, 54);
-            this.txtFecha.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(450, 27);
-            this.txtFecha.TabIndex = 81;
             // 
             // tableLayoutPanel20
             // 
@@ -629,8 +542,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel25, 2, 0);
             this.tableLayoutPanel21.Controls.Add(this.materialLabel19, 0, 0);
-            this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel22, 2, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel21.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(4);
@@ -653,35 +566,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel19.TabIndex = 87;
             this.materialLabel19.Text = "Celular";
             this.materialLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel22
-            // 
-            this.tableLayoutPanel22.ColumnCount = 3;
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel22.Controls.Add(this.txtCel, 1, 1);
-            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            this.tableLayoutPanel22.RowCount = 3;
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(507, 129);
-            this.tableLayoutPanel22.TabIndex = 58;
-            // 
-            // txtCel
-            // 
-            this.txtCel.Depth = 0;
-            this.txtCel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtCel.Location = new System.Drawing.Point(28, 51);
-            this.txtCel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtCel.Name = "txtCel";
-            this.txtCel.Size = new System.Drawing.Size(450, 25);
-            this.txtCel.TabIndex = 81;
             // 
             // tableLayoutPanel23
             // 
@@ -709,8 +593,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel22, 2, 0);
             this.tableLayoutPanel24.Controls.Add(this.materialLabel18, 0, 0);
-            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 2, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(4);
@@ -733,35 +617,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel18.TabIndex = 86;
             this.materialLabel18.Text = "Telefono";
             this.materialLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel25
-            // 
-            this.tableLayoutPanel25.ColumnCount = 3;
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel25.Controls.Add(this.txtTelef, 1, 1);
-            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
-            this.tableLayoutPanel25.RowCount = 3;
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(507, 129);
-            this.tableLayoutPanel25.TabIndex = 58;
-            // 
-            // txtTelef
-            // 
-            this.txtTelef.Depth = 0;
-            this.txtTelef.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTelef.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtTelef.Location = new System.Drawing.Point(28, 51);
-            this.txtTelef.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtTelef.Name = "txtTelef";
-            this.txtTelef.Size = new System.Drawing.Size(450, 25);
-            this.txtTelef.TabIndex = 81;
             // 
             // tableLayoutPanel35
             // 
@@ -789,8 +644,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel36.Controls.Add(this.tableLayoutPanel10, 2, 0);
             this.tableLayoutPanel36.Controls.Add(this.materialLabel14, 0, 0);
-            this.tableLayoutPanel36.Controls.Add(this.tableLayoutPanel37, 2, 0);
             this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel36.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel36.Margin = new System.Windows.Forms.Padding(4);
@@ -813,35 +668,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel14.TabIndex = 82;
             this.materialLabel14.Text = "Dni";
             this.materialLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel37
-            // 
-            this.tableLayoutPanel37.ColumnCount = 3;
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel37.Controls.Add(this.txtDNI, 1, 1);
-            this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel37.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel37.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel37.Name = "tableLayoutPanel37";
-            this.tableLayoutPanel37.RowCount = 3;
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel37.Size = new System.Drawing.Size(507, 129);
-            this.tableLayoutPanel37.TabIndex = 58;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.Depth = 0;
-            this.txtDNI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDNI.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDNI.Location = new System.Drawing.Point(28, 51);
-            this.txtDNI.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(450, 25);
-            this.txtDNI.TabIndex = 81;
             // 
             // tableLayoutPanel41
             // 
@@ -951,8 +777,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel39.Controls.Add(this.tableLayoutPanel8, 2, 0);
             this.tableLayoutPanel39.Controls.Add(this.materialLabel13, 0, 0);
-            this.tableLayoutPanel39.Controls.Add(this.tableLayoutPanel40, 2, 0);
             this.tableLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel39.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel39.Margin = new System.Windows.Forms.Padding(4);
@@ -975,35 +801,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel13.TabIndex = 81;
             this.materialLabel13.Text = "Nombre";
             this.materialLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel40
-            // 
-            this.tableLayoutPanel40.ColumnCount = 3;
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel40.Controls.Add(this.txtNombre, 1, 1);
-            this.tableLayoutPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel40.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel40.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel40.Name = "tableLayoutPanel40";
-            this.tableLayoutPanel40.RowCount = 3;
-            this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel40.Size = new System.Drawing.Size(507, 129);
-            this.tableLayoutPanel40.TabIndex = 58;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Depth = 0;
-            this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNombre.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNombre.Location = new System.Drawing.Point(28, 51);
-            this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(450, 25);
-            this.txtNombre.TabIndex = 81;
             // 
             // tableLayoutPanel32
             // 
@@ -1031,8 +828,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel33.Controls.Add(this.tableLayoutPanel12, 2, 0);
             this.tableLayoutPanel33.Controls.Add(this.materialLabel15, 0, 0);
-            this.tableLayoutPanel33.Controls.Add(this.tableLayoutPanel34, 2, 0);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel33.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(4);
@@ -1055,35 +852,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel15.TabIndex = 83;
             this.materialLabel15.Text = "Edad";
             this.materialLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel34
-            // 
-            this.tableLayoutPanel34.ColumnCount = 3;
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel34.Controls.Add(this.txtEdad, 1, 1);
-            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
-            this.tableLayoutPanel34.RowCount = 3;
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(507, 129);
-            this.tableLayoutPanel34.TabIndex = 58;
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Depth = 0;
-            this.txtEdad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEdad.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtEdad.Location = new System.Drawing.Point(28, 51);
-            this.txtEdad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(450, 25);
-            this.txtEdad.TabIndex = 81;
             // 
             // tableLayoutPanel29
             // 
@@ -1111,8 +879,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel30.Controls.Add(this.tableLayoutPanel13, 2, 0);
             this.tableLayoutPanel30.Controls.Add(this.materialLabel16, 0, 0);
-            this.tableLayoutPanel30.Controls.Add(this.tableLayoutPanel31, 2, 0);
             this.tableLayoutPanel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel30.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel30.Margin = new System.Windows.Forms.Padding(4);
@@ -1135,35 +903,6 @@ namespace InterfazDATMA.psicologo
             this.materialLabel16.TabIndex = 84;
             this.materialLabel16.Text = "Genero";
             this.materialLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel31
-            // 
-            this.tableLayoutPanel31.ColumnCount = 3;
-            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel31.Controls.Add(this.txtGen, 1, 1);
-            this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel31.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel31.Name = "tableLayoutPanel31";
-            this.tableLayoutPanel31.RowCount = 3;
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(507, 129);
-            this.tableLayoutPanel31.TabIndex = 58;
-            // 
-            // txtGen
-            // 
-            this.txtGen.Depth = 0;
-            this.txtGen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGen.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtGen.Location = new System.Drawing.Point(28, 51);
-            this.txtGen.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtGen.Name = "txtGen";
-            this.txtGen.Size = new System.Drawing.Size(450, 25);
-            this.txtGen.TabIndex = 81;
             // 
             // tableLayoutPanel26
             // 
@@ -1191,8 +930,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel19, 2, 0);
             this.tableLayoutPanel27.Controls.Add(this.materialLabel17, 0, 0);
-            this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel28, 2, 0);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel27.Location = new System.Drawing.Point(61, 22);
             this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(4);
@@ -1216,34 +955,344 @@ namespace InterfazDATMA.psicologo
             this.materialLabel17.Text = "Correo";
             this.materialLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tableLayoutPanel28
+            // txtPass
             // 
-            this.tableLayoutPanel28.ColumnCount = 3;
-            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel28.Controls.Add(this.txtCorreo, 1, 1);
-            this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel28.Location = new System.Drawing.Point(516, 4);
-            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel28.Name = "tableLayoutPanel28";
-            this.tableLayoutPanel28.RowCount = 3;
-            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel28.Size = new System.Drawing.Size(507, 129);
-            this.tableLayoutPanel28.TabIndex = 58;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Depth = 0;
+            this.txtPass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPass.LeadingIcon = null;
+            this.txtPass.Location = new System.Drawing.Point(4, 37);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.MaxLength = 50;
+            this.txtPass.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPass.Multiline = false;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(457, 50);
+            this.txtPass.TabIndex = 83;
+            this.txtPass.Text = "";
+            this.txtPass.TrailingIcon = null;
+            // 
+            // txtNom
+            // 
+            this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNom.Depth = 0;
+            this.txtNom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNom.Enabled = false;
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNom.LeadingIcon = null;
+            this.txtNom.Location = new System.Drawing.Point(4, 41);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNom.MaxLength = 50;
+            this.txtNom.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNom.Multiline = false;
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(501, 50);
+            this.txtNom.TabIndex = 86;
+            this.txtNom.Text = "";
+            this.txtNom.TrailingIcon = null;
+            // 
+            // txtDni
+            // 
+            this.txtDni.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDni.Depth = 0;
+            this.txtDni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDni.Enabled = false;
+            this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDni.LeadingIcon = null;
+            this.txtDni.Location = new System.Drawing.Point(4, 41);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDni.MaxLength = 50;
+            this.txtDni.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDni.Multiline = false;
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(501, 50);
+            this.txtDni.TabIndex = 87;
+            this.txtDni.Text = "";
+            this.txtDni.TrailingIcon = null;
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEdad.Depth = 0;
+            this.txtEdad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEdad.Enabled = false;
+            this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEdad.LeadingIcon = null;
+            this.txtEdad.Location = new System.Drawing.Point(4, 41);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEdad.MaxLength = 50;
+            this.txtEdad.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtEdad.Multiline = false;
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(501, 50);
+            this.txtEdad.TabIndex = 88;
+            this.txtEdad.Text = "";
+            this.txtEdad.TrailingIcon = null;
+            // 
+            // txtGen
+            // 
+            this.txtGen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGen.Depth = 0;
+            this.txtGen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGen.Enabled = false;
+            this.txtGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtGen.LeadingIcon = null;
+            this.txtGen.Location = new System.Drawing.Point(4, 41);
+            this.txtGen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGen.MaxLength = 50;
+            this.txtGen.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtGen.Multiline = false;
+            this.txtGen.Name = "txtGen";
+            this.txtGen.Size = new System.Drawing.Size(501, 50);
+            this.txtGen.TabIndex = 89;
+            this.txtGen.Text = "";
+            this.txtGen.TrailingIcon = null;
             // 
             // txtCorreo
             // 
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Depth = 0;
             this.txtCorreo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCorreo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtCorreo.Location = new System.Drawing.Point(28, 51);
-            this.txtCorreo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtCorreo.Enabled = false;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCorreo.LeadingIcon = null;
+            this.txtCorreo.Location = new System.Drawing.Point(4, 41);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 50;
+            this.txtCorreo.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCorreo.Multiline = false;
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(450, 25);
-            this.txtCorreo.TabIndex = 81;
+            this.txtCorreo.Size = new System.Drawing.Size(501, 50);
+            this.txtCorreo.TabIndex = 90;
+            this.txtCorreo.Text = "";
+            this.txtCorreo.TrailingIcon = null;
+            // 
+            // txtTelf
+            // 
+            this.txtTelf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelf.Depth = 0;
+            this.txtTelf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTelf.Enabled = false;
+            this.txtTelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTelf.LeadingIcon = null;
+            this.txtTelf.Location = new System.Drawing.Point(4, 41);
+            this.txtTelf.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelf.MaxLength = 50;
+            this.txtTelf.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtTelf.Multiline = false;
+            this.txtTelf.Name = "txtTelf";
+            this.txtTelf.Size = new System.Drawing.Size(501, 50);
+            this.txtTelf.TabIndex = 91;
+            this.txtTelf.Text = "";
+            this.txtTelf.TrailingIcon = null;
+            // 
+            // txtCel
+            // 
+            this.txtCel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCel.Depth = 0;
+            this.txtCel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCel.Enabled = false;
+            this.txtCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCel.LeadingIcon = null;
+            this.txtCel.Location = new System.Drawing.Point(4, 41);
+            this.txtCel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCel.MaxLength = 50;
+            this.txtCel.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCel.Multiline = false;
+            this.txtCel.Name = "txtCel";
+            this.txtCel.Size = new System.Drawing.Size(501, 50);
+            this.txtCel.TabIndex = 92;
+            this.txtCel.Text = "";
+            this.txtCel.TrailingIcon = null;
+            // 
+            // txtUser
+            // 
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.Depth = 0;
+            this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUser.LeadingIcon = null;
+            this.txtUser.Location = new System.Drawing.Point(4, 37);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.MaxLength = 50;
+            this.txtUser.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtUser.Multiline = false;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(456, 50);
+            this.txtUser.TabIndex = 94;
+            this.txtUser.Text = "";
+            this.txtUser.TrailingIcon = null;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.txtUser, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(368, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(464, 116);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // txtFechaNac
+            // 
+            this.txtFechaNac.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFechaNac.Depth = 0;
+            this.txtFechaNac.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFechaNac.Enabled = false;
+            this.txtFechaNac.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFechaNac.LeadingIcon = null;
+            this.txtFechaNac.Location = new System.Drawing.Point(4, 42);
+            this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFechaNac.MaxLength = 50;
+            this.txtFechaNac.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtFechaNac.Multiline = false;
+            this.txtFechaNac.Name = "txtFechaNac";
+            this.txtFechaNac.Size = new System.Drawing.Size(501, 50);
+            this.txtFechaNac.TabIndex = 93;
+            this.txtFechaNac.Text = "";
+            this.txtFechaNac.TrailingIcon = null;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.txtPass, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(367, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(465, 116);
+            this.tableLayoutPanel6.TabIndex = 84;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Controls.Add(this.txtNom, 0, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(509, 131);
+            this.tableLayoutPanel8.TabIndex = 87;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.Controls.Add(this.txtDni, 0, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(509, 131);
+            this.tableLayoutPanel10.TabIndex = 88;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel12.Controls.Add(this.txtEdad, 0, 1);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(509, 131);
+            this.tableLayoutPanel12.TabIndex = 89;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel13.Controls.Add(this.txtGen, 0, 1);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 2;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(509, 131);
+            this.tableLayoutPanel13.TabIndex = 90;
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.ColumnCount = 1;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel19.Controls.Add(this.txtCorreo, 0, 1);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 2;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(509, 131);
+            this.tableLayoutPanel19.TabIndex = 91;
+            // 
+            // tableLayoutPanel22
+            // 
+            this.tableLayoutPanel22.ColumnCount = 1;
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel22.Controls.Add(this.txtTelf, 0, 1);
+            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            this.tableLayoutPanel22.RowCount = 2;
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(509, 131);
+            this.tableLayoutPanel22.TabIndex = 92;
+            // 
+            // tableLayoutPanel25
+            // 
+            this.tableLayoutPanel25.ColumnCount = 1;
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel25.Controls.Add(this.txtCel, 0, 1);
+            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
+            this.tableLayoutPanel25.RowCount = 2;
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(509, 131);
+            this.tableLayoutPanel25.TabIndex = 93;
+            // 
+            // tableLayoutPanel28
+            // 
+            this.tableLayoutPanel28.ColumnCount = 1;
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel28.Controls.Add(this.txtFechaNac, 0, 1);
+            this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel28.Location = new System.Drawing.Point(515, 3);
+            this.tableLayoutPanel28.Name = "tableLayoutPanel28";
+            this.tableLayoutPanel28.RowCount = 2;
+            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
+            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(509, 137);
+            this.tableLayoutPanel28.TabIndex = 94;
             // 
             // frmPerfilPsicologo
             // 
@@ -1265,47 +1314,47 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picPerfil)).EndInit();
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
-            this.tableLayoutPanel19.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel21.PerformLayout();
-            this.tableLayoutPanel22.ResumeLayout(false);
             this.tableLayoutPanel23.ResumeLayout(false);
             this.tableLayoutPanel24.ResumeLayout(false);
             this.tableLayoutPanel24.PerformLayout();
-            this.tableLayoutPanel25.ResumeLayout(false);
             this.tableLayoutPanel35.ResumeLayout(false);
             this.tableLayoutPanel36.ResumeLayout(false);
             this.tableLayoutPanel36.PerformLayout();
-            this.tableLayoutPanel37.ResumeLayout(false);
             this.tableLayoutPanel41.ResumeLayout(false);
             this.tableLayoutPanel41.PerformLayout();
             this.tableLayoutPanel38.ResumeLayout(false);
             this.tableLayoutPanel39.ResumeLayout(false);
             this.tableLayoutPanel39.PerformLayout();
-            this.tableLayoutPanel40.ResumeLayout(false);
             this.tableLayoutPanel32.ResumeLayout(false);
             this.tableLayoutPanel33.ResumeLayout(false);
             this.tableLayoutPanel33.PerformLayout();
-            this.tableLayoutPanel34.ResumeLayout(false);
             this.tableLayoutPanel29.ResumeLayout(false);
             this.tableLayoutPanel30.ResumeLayout(false);
             this.tableLayoutPanel30.PerformLayout();
-            this.tableLayoutPanel31.ResumeLayout(false);
             this.tableLayoutPanel26.ResumeLayout(false);
             this.tableLayoutPanel27.ResumeLayout(false);
             this.tableLayoutPanel27.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.tableLayoutPanel25.ResumeLayout(false);
             this.tableLayoutPanel28.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1321,48 +1370,28 @@ namespace InterfazDATMA.psicologo
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel35;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel36;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel37;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel38;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel39;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel40;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel29;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel30;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel31;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel28;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel41;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialLabel txtPass;
-        private MaterialSkin.Controls.MaterialLabel txtUser;
-        private MaterialSkin.Controls.MaterialLabel txtFecha;
-        private MaterialSkin.Controls.MaterialLabel txtCel;
-        private MaterialSkin.Controls.MaterialLabel txtTelef;
-        private MaterialSkin.Controls.MaterialLabel txtDNI;
-        private MaterialSkin.Controls.MaterialLabel txtNombre;
-        private MaterialSkin.Controls.MaterialLabel txtEdad;
-        private MaterialSkin.Controls.MaterialLabel txtGen;
-        private MaterialSkin.Controls.MaterialLabel txtCorreo;
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
         private MaterialSkin.Controls.MaterialLabel materialLabel20;
@@ -1379,5 +1408,25 @@ namespace InterfazDATMA.psicologo
         private MaterialSkin.Controls.MaterialLabel materialLabel17;
         private MaterialSkin.Controls.MaterialButton btnModificar;
         private MaterialSkin.Controls.MaterialButton btnCancelar;
+        private MaterialSkin.Controls.MaterialTextBox txtPass;
+        private MaterialSkin.Controls.MaterialTextBox txtUser;
+        private MaterialSkin.Controls.MaterialTextBox txtCel;
+        private MaterialSkin.Controls.MaterialTextBox txtTelf;
+        private MaterialSkin.Controls.MaterialTextBox txtDni;
+        private MaterialSkin.Controls.MaterialTextBox txtNom;
+        private MaterialSkin.Controls.MaterialTextBox txtEdad;
+        private MaterialSkin.Controls.MaterialTextBox txtGen;
+        private MaterialSkin.Controls.MaterialTextBox txtCorreo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MaterialSkin.Controls.MaterialTextBox txtFechaNac;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel28;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
     }
 }

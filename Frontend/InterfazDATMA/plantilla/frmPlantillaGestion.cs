@@ -25,11 +25,14 @@ namespace InterfazDATMA.plantilla
         public static UsuarioWS.usuario user = null;
         public static PsicologoWS.psicologo psico = null;
         public static TutorWS.tutor tutor = null;
+        public string nombre;
+        public string apP;
+        public string apM;
         char tema='D';
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         bool seMuestra;
         public static bool pasoTutorial = false;
-
+        public int tipoUser;
         private TutorWS.TutorWSClient daoTutor = new TutorWS.TutorWSClient();
         private PsicologoWS.PsicologoWSClient daoPsicologo = new PsicologoWS.PsicologoWSClient();
 
@@ -40,15 +43,18 @@ namespace InterfazDATMA.plantilla
             PanelLateral.Width = 0;
             PanelLateral.Hide();
             frmPlantillaGestion.user = user;
-            int tipoUser = user.tipo;
+            tipoUser = user.tipo;
             fecha.Text = DateTime.Now.ToLongDateString();
             
             //Psicologo
             if (tipoUser == 1)
             {
                 psico = daoPsicologo.buscarPsicologoPorIdUsuario(user.idUsuario);
-                Usuario.Text = "Usuario:   " + psico.nombre + "   " + psico.apellidoPaterno + "    " + psico.apellidoMaterno;
-                formInicial = new frmGestionarModulosPsicologo(this);
+                nombre = psico.nombre;
+                apM = psico.apellidoMaterno;
+                apP = psico.apellidoPaterno;
+                Usuario.Text = "Usuario:   " + nombre + "   " + apP+ "    " + apM;
+                formInicial = new Bienvenida(this);
                 abrirFormulario(formInicial);
                 formPerfil = new frmPerfilPsicologo(this);
             }
@@ -56,7 +62,7 @@ namespace InterfazDATMA.plantilla
            
             else if (tipoUser == 2)
             {
-                formInicial = new frmGestionarModuloAdmin(this);
+                formInicial = new Bienvenida(this);
                 abrirFormulario(formInicial);
                 btnperfil.Enabled = false;
             }
@@ -65,8 +71,11 @@ namespace InterfazDATMA.plantilla
             {
                 tutor = daoTutor.getTutorFromIdUsuario(user.idUsuario);
                 formPerfil = new frmPerfilCuidador(this);
-                Usuario.Text = "Usuario:   " + tutor.nombre + "   " + tutor.apellidoPaterno + "    " + tutor.apellidoMaterno;
-                formInicial = new frmWalkthrough(this);
+                nombre = tutor.nombre;
+                apM = tutor.apellidoMaterno;
+                apP = tutor.apellidoPaterno;
+                Usuario.Text = "Usuario:   " + nombre + "   " + apP + "    " + apM;
+                formInicial = new Bienvenida(this);
                 abrirFormulario(formInicial);
             }
 

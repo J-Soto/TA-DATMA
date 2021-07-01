@@ -22,6 +22,7 @@ namespace InterfazDATMA.cuidador
         {
             InitializeComponent();
             Design.Ini(this);
+            DeshabilitarCampos();
             plantillaGestion = plantilla;
             txtUser.Text = frmPlantillaGestion.tutor.user;
             txtPass.Text = frmPlantillaGestion.tutor.password;
@@ -80,9 +81,11 @@ namespace InterfazDATMA.cuidador
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            HabilitarCampos();
             DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (msg == DialogResult.Yes)
             {
+                HabilitarCampos();
                 UsuarioWS.usuario tempUser = new UsuarioWS.usuario();
                 tempUser.idUsuario = frmPlantillaGestion.user.idUsuario;
                 tempUser.user = txtUser.Text;
@@ -103,8 +106,65 @@ namespace InterfazDATMA.cuidador
                 txtUser.Text = frmPlantillaGestion.user.user;
                 txtPass.Text = frmPlantillaGestion.user.password;
             }
+            DeshabilitarCampos();
         }
 
+        private void  DeshabilitarCampos()
+        {
+            txtBajoRec.Enabled = false;
+            txtBajoRec.ReadOnly = true;
+            txtCel.Enabled = false;
+            txtCel.ReadOnly = true;
+            txtCorreo.Enabled = false;
+            txtCorreo.ReadOnly = true;
+            txtDni.Enabled = false;
+            txtDni.ReadOnly = true;
+            txtEdad.Enabled = false;
+            txtEdad.ReadOnly = true;
+            txtFechaNac.Enabled = false;
+            txtFechaNac.ReadOnly = true;
+            txtGen.Enabled = false;
+            txtGen.ReadOnly = true;
+            txtGest.Enabled = false;
+            txtGest.ReadOnly = true;
+            txtNom.Enabled = false;
+            txtNom.ReadOnly = true;
+            txtPass.Enabled = false;
+            txtPass.ReadOnly = true;
+            txtTelf.Enabled = false;
+            txtTelf.ReadOnly = true;
+            txtUser.Enabled = false;
+            txtUser.ReadOnly = true;
+        }
+
+
+        private void HabilitarCampos()
+        {
+            txtBajoRec.Enabled = true;
+            txtBajoRec.ReadOnly= false;
+            txtCel.Enabled = true;
+            txtCel.ReadOnly = false;
+            txtCorreo.Enabled = true;
+            txtCorreo.ReadOnly = false;
+            txtDni.Enabled = true;
+            txtDni.ReadOnly = false;
+            txtEdad.Enabled = true;
+            txtEdad.ReadOnly = false;
+            txtFechaNac.Enabled = true;
+            txtFechaNac.ReadOnly = false;
+            txtGen.Enabled = true;
+            txtGen.ReadOnly = false;
+            txtGest.Enabled = true;
+            txtGest.ReadOnly = false;
+            txtNom.Enabled = true;
+            txtNom.ReadOnly = false;
+            txtPass.Enabled = true;
+            txtPass.ReadOnly = false;
+            txtTelf.Enabled = true;
+            txtTelf.ReadOnly = false;
+            txtUser.Enabled = true;
+            txtUser.ReadOnly = false;
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             txtUser.Text = frmPlantillaGestion.user.user;

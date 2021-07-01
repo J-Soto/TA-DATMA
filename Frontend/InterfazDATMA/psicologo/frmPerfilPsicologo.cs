@@ -23,6 +23,7 @@ namespace InterfazDATMA.psicologo
         {
             InitializeComponent();
             Design.Ini(this);
+            DeshabilitarCampos();
             plantillaGestion = Plantilla;
             daoUsuario = new UsuarioWS.UsuarioWSClient();
             txtUser.Enabled = true;
@@ -33,12 +34,13 @@ namespace InterfazDATMA.psicologo
             txtPass.Text = frmPlantillaGestion.psico.password;
             txtCel.Text = frmPlantillaGestion.psico.celular;
             txtGen.Text = frmPlantillaGestion.psico.correo;
-            txtDNI.Text = frmPlantillaGestion.psico.DNI;
+            txtDni.Text = frmPlantillaGestion.psico.DNI;
             txtEdad.Text = frmPlantillaGestion.psico.edad.ToString(); 
-            txtFecha.Text = frmPlantillaGestion.psico.fechaNacimiento.ToString();
+            txtFechaNac.Text = frmPlantillaGestion.psico.fechaNacimiento.ToString();
             txtGen.Text = Convert.ToChar(frmPlantillaGestion.psico.genero).ToString();
-            txtNombre.Text = frmPlantillaGestion.psico.nombre + " " + frmPlantillaGestion.psico.apellidoPaterno + " " + frmPlantillaGestion.psico.apellidoMaterno;
-            txtTelef.Text = frmPlantillaGestion.psico.telefono;
+            txtNom.Text = frmPlantillaGestion.psico.nombre + " " + frmPlantillaGestion.psico.apellidoPaterno + " " + frmPlantillaGestion.psico.apellidoMaterno;
+            txtTelf.Text = frmPlantillaGestion.psico.telefono;
+           
             if (frmPlantillaGestion.psico.fotoPerfil is object)
             {
                 picPerfil.Image = (Bitmap)((new ImageConverter()).ConvertFrom(frmPlantillaGestion.psico.fotoPerfil));
@@ -59,6 +61,7 @@ namespace InterfazDATMA.psicologo
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            HabilitarCampos();
             DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (msg == DialogResult.Yes)
             {
@@ -82,7 +85,54 @@ namespace InterfazDATMA.psicologo
                 txtUser.Text = frmPlantillaGestion.user.user;
                 txtPass.Text = frmPlantillaGestion.user.password;
             }
+            DeshabilitarCampos();
+        }
+        private void DeshabilitarCampos()
+        {
+            txtCel.Enabled = false;
+            txtCel.ReadOnly = true;
+            txtCorreo.Enabled = false;
+            txtCorreo.ReadOnly = true;
+            txtDni.Enabled = false;
+            txtDni.ReadOnly = true;
+            txtEdad.Enabled = false;
+            txtEdad.ReadOnly = true;
+            txtFechaNac.Enabled = false;
+            txtFechaNac.ReadOnly = true;
+            txtGen.Enabled = false;
+            txtGen.ReadOnly = true;
+            txtNom.Enabled = false;
+            txtNom.ReadOnly = true;
+            txtPass.Enabled = false;
+            txtPass.ReadOnly = true;
+            txtTelf.Enabled = false;
+            txtTelf.ReadOnly = true;
+            txtUser.Enabled = false;
+            txtUser.ReadOnly = true;
 
+        }
+        private void HabilitarCampos()
+        {
+            txtCel.Enabled = true;
+            txtCel.ReadOnly = false;
+            txtCorreo.Enabled = true;
+            txtCorreo.ReadOnly = false;
+            txtDni.Enabled = true;
+            txtDni.ReadOnly = false;
+            txtEdad.Enabled = true;
+            txtEdad.ReadOnly = false;
+            txtFechaNac.Enabled = true;
+            txtFechaNac.ReadOnly = false;
+            txtGen.Enabled = true;
+            txtGen.ReadOnly = false;
+            txtNom.Enabled = true;
+            txtNom.ReadOnly = false;
+            txtPass.Enabled = true;
+            txtPass.ReadOnly = false;
+            txtTelf.Enabled = true;
+            txtTelf.ReadOnly = false;
+            txtUser.Enabled = true;
+            txtUser.ReadOnly = false;
         }
     }
 }

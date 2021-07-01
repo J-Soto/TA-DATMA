@@ -1048,6 +1048,18 @@
     </None>
     <EmbeddedResource Include="MaterialResources\Resources\Roboto-Medium.ttf" />
     <EmbeddedResource Include="MaterialResources\Resources\Roboto-Regular.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-Black.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-BlackItalic.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-Bold.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-Italic.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-Light.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-LightItalic.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-MediumItalic.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-Regular.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-Thin.ttf" />
+    <EmbeddedResource Include="Fuente_Roboto\Roboto-ThinItalic.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -1282,10 +1294,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Continue.png" />
+    <None Include="Imagenes\Continue.svg" />
+    <None Include="Imagenes\Bienvenida.jpg" />
+    <None Include="Imagenes\Bienvenida2.jpg" />
     <Content Include="Imagenes\DATMA logo.png" />
     <None Include="Imagenes\exit.png" />
     <None Include="Imagenes\menu.png" />
     <Content Include="Imagenes\moon.png" />
+    <Content Include="Imagenes\operacionesCurso.png" />
+    <Content Include="Imagenes\operacionesPersona.png" />
+    <Content Include="Imagenes\postulante.png" />
     <Content Include="Imagenes\sun.png" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Barcode.dll" />
     <Content Include="ReferenciasNevron\Nevron.Nov.Chart.dll" />

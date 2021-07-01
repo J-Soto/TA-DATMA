@@ -41,8 +41,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtLinkVideo = new MaterialSkin.Controls.MaterialTextBox();
-            this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -50,6 +48,8 @@ namespace InterfazDATMA
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtLinkVideo = new MaterialSkin.Controls.MaterialTextBox();
             this.tableLayoutPanel7.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -57,12 +57,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel40.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialLabel3
@@ -149,23 +149,6 @@ namespace InterfazDATMA
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             // 
-            // txtLinkVideo
-            // 
-            this.txtLinkVideo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLinkVideo.Depth = 0;
-            resources.ApplyResources(this.txtLinkVideo, "txtLinkVideo");
-            this.txtLinkVideo.LeadingIcon = null;
-            this.txtLinkVideo.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtLinkVideo.Name = "txtLinkVideo";
-            this.txtLinkVideo.TrailingIcon = null;
-            // 
-            // tableLayoutPanel40
-            // 
-            this.tableLayoutPanel40.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.tableLayoutPanel40, "tableLayoutPanel40");
-            this.tableLayoutPanel40.Controls.Add(this.txtLinkVideo, 1, 1);
-            this.tableLayoutPanel40.Name = "tableLayoutPanel40";
-            // 
             // materialButton2
             // 
             resources.ApplyResources(this.materialButton2, "materialButton2");
@@ -223,8 +206,8 @@ namespace InterfazDATMA
             // 
             resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel40, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel9, 1, 1);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             // 
             // tableLayoutPanel11
@@ -233,6 +216,22 @@ namespace InterfazDATMA
             resources.ApplyResources(this.tableLayoutPanel11, "tableLayoutPanel11");
             this.tableLayoutPanel11.Controls.Add(this.materialLabel2, 1, 0);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            // 
+            // tableLayoutPanel9
+            // 
+            resources.ApplyResources(this.tableLayoutPanel9, "tableLayoutPanel9");
+            this.tableLayoutPanel9.Controls.Add(this.txtLinkVideo, 0, 1);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            // 
+            // txtLinkVideo
+            // 
+            this.txtLinkVideo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLinkVideo.Depth = 0;
+            resources.ApplyResources(this.txtLinkVideo, "txtLinkVideo");
+            this.txtLinkVideo.LeadingIcon = null;
+            this.txtLinkVideo.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtLinkVideo.Name = "txtLinkVideo";
+            this.txtLinkVideo.TrailingIcon = null;
             // 
             // frmAgregarMaterialPsicologo
             // 
@@ -251,12 +250,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel40.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -272,8 +271,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialTextBox txtLinkVideo;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel40;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
@@ -283,5 +280,7 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtDescripcion;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private MaterialSkin.Controls.MaterialTextBox txtLinkVideo;
     }
 }
