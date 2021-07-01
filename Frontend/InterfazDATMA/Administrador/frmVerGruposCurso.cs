@@ -82,6 +82,29 @@ namespace InterfazDATMA.Administrador
             }
         }
 
+        private void btnQuitarGrupo_Click(object sender, EventArgs e)
+        {
+            if (dgvGrupos.RowCount != 0)
+            {
+                var aux = dgvGrupos.CurrentRow.DataBoundItem as GrupoWS.grupo;
+                auxGrupos.Remove(aux);
+
+                Grupo_Curso auxGrupo_Curso = null;
+
+                foreach(Grupo_Curso recGrupoCurso in gruposCurso)
+                {
+                    if(recGrupoCurso.Grupo.idGrupo == aux.idGrupo)
+                    {
+                        auxGrupo_Curso = recGrupoCurso;
+                        break;
+                    }
+                }
+                if (auxGrupo_Curso != null) gruposCurso.Remove(auxGrupo_Curso);
+
+                dgvGrupos.Refresh();
+            }
+        }
+
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
 
@@ -116,10 +139,6 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private void btnQuitarGrupo_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnRegresar_Click_1(object sender, EventArgs e)
         {
