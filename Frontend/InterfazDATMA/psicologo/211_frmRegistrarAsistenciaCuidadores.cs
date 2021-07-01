@@ -124,14 +124,14 @@ namespace InterfazDATMA
                 auxAsistencia.actividad = new AsistenciaWS.actividad();
                 auxAsistencia.actividad.idActividad = idActividad;
                 auxAsistencia.tipo = recAsistencia.tipo;
-                //if (auxAsistencia.tipo == 1)
-                //{
-                //    auxAsistencia.descripcion = "Asistio";
-                //}
-                //else
-                //{
-                //    auxAsistencia.descripcion = "No  asistio";
-                //}
+                if (auxAsistencia.tipo == 1)
+                {
+                    auxAsistencia.descripcion = "Asistio";
+                }
+                else
+                {
+                    auxAsistencia.descripcion = "No  asistio";
+                }
                 daoAsistencia.modificarAsistencia(auxAsistencia);
             }
 

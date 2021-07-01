@@ -103,11 +103,13 @@ namespace InterfazDATMA
 
         private void AccederModulo_Click(object sender, EventArgs e)
         {
-            Psicologo_Curso auxCurso = dgvModulos.CurrentRow.DataBoundItem as Psicologo_Curso;
+            if(dgvModulos.RowCount != 0)
+            {
+                Psicologo_Curso auxCurso = dgvModulos.CurrentRow.DataBoundItem as Psicologo_Curso;
 
-            var frmConfig = new frmConfigurarModuloPsicologo(this, plantillaGestion, auxCurso);
-            plantillaGestion.abrirFormulario(frmConfig);
-
+                var frmConfig = new frmConfigurarModuloPsicologo(this, plantillaGestion, auxCurso);
+                plantillaGestion.abrirFormulario(frmConfig);
+            }
         }
 
         private void frmGestionarModulosPsicologo_Load(object sender, EventArgs e)
