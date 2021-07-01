@@ -347,6 +347,12 @@
     </Compile>
     <Compile Include="MaterialResources\UIManagers\DrawHelper.cs" />
     <Compile Include="MaterialResources\UIManagers\FontManager.cs" />
+    <Compile Include="plantilla\Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plantilla\Bienvenida.Designer.cs">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
+    </Compile>
     <Compile Include="psicologo\2132_frmInsertarDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -571,6 +577,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login\frmLogout.resx">
       <DependentUpon>frmLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plantilla\Bienvenida.resx">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="psicologo\2132_frmInsertarDocumento.resx">
       <DependentUpon>2132_frmInsertarDocumento.cs</DependentUpon>

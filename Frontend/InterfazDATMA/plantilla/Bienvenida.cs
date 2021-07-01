@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using InterfazDATMA.util;
-using MaterialSkin;
 
-namespace WindowsFormsApp1
+using InterfazDATMA.util;
+
+using MaterialSkin;
+namespace InterfazDATMA.plantilla
 {
-    public partial class Form1 : MaterialSkin.Controls.MaterialForm
+    public partial class Bienvenida : MaterialSkin.Controls.MaterialForm
     {
-        public Form1()
+        public Bienvenida()
         {
             InitializeComponent();
-            Design.Ini();
+            Design.Ini(this);
         }
     }
 }
