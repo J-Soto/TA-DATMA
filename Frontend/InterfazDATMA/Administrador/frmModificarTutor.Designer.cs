@@ -188,7 +188,7 @@ namespace InterfazDATMA.Administrador
             // pbFoto
             // 
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.avatarPsicologa;
+            this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.postulante;
             resources.ApplyResources(this.pbFoto, "pbFoto");
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.TabStop = false;

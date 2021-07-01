@@ -241,6 +241,7 @@ namespace InterfazDATMA.Administrador
                     {
                         int idPsicologo = daoPsicologo.modificarPsicologo(psicologo);
                         MessageBox.Show("Se ha guardado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        formOperacionPersona.inicializarTablas();
                         formPlantilla.abrirFormulario(formOperacionPersona);
                     }
                     catch (Exception ex)

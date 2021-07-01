@@ -25,23 +25,58 @@ namespace InterfazDATMA.Administrador
             Design.Ini(this);
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             dgvPsico.AutoGenerateColumns = false;
-            dgvPsico.DataSource = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
+            
+            BindingList<PsicologoWS.psicologo> psicologos;
+            psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
+            
+            dgvPsico.DataSource = psicologos;
+            PsicologoWS.psicologo psicologo;
+
+            for (int i = 0; i < dgvPsico.RowCount-1; i++)
+            {
+                psicologo = (PsicologoWS.psicologo)dgvPsico.Rows[i].DataBoundItem;
+
+                dgvPsico.Rows[i].Cells[0].Value = psicologo.nombre;
+                dgvPsico.Rows[i].Cells[1].Value = psicologo.apellidoMaterno;
+                dgvPsico.Rows[i].Cells[2].Value = psicologo.apellidoPaterno;
+                dgvPsico.Rows[i].Cells[3].Value = psicologo.DNI;
+                dgvPsico.Rows[i].Cells[4].Value = psicologo.fechaNacimiento;
+                dgvPsico.Rows[i].Cells[5].Value = psicologo.edad;
+                dgvPsico.Rows[i].Cells[6].Value = psicologo.telefono;
+                dgvPsico.Rows[i].Cells[7].Value = psicologo.celular;
+                dgvPsico.Rows[i].Cells[8].Value = psicologo.correo;
+            }
         }
 
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            BindingList<PsicologoWS.psicologo> psicos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
-            for (int i = 0; i < psicos.Count; i++)
+            BindingList<PsicologoWS.psicologo> psicologos;
+            try
             {
-                if (!psicos[i].nombre.Contains(txtBuscar.Text))
-                {
-                    psicos.RemoveAt(i);
-                    i--;
-                }
+                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorNombre(txtBuscar.Text).ToList());
             }
-            dgvPsico.DataSource = psicos;
+            catch (ArgumentNullException ex)
+            {
+                psicologos = new BindingList<PsicologoWS.psicologo>();
+            }
+            dgvPsico.DataSource = psicologos;
+            PsicologoWS.psicologo psicologo;
 
+            for (int i = 0; i < dgvPsico.RowCount - 1; i++)
+            {
+                psicologo = (PsicologoWS.psicologo)dgvPsico.Rows[i].DataBoundItem;
+
+                dgvPsico.Rows[i].Cells[0].Value = psicologo.nombre;
+                dgvPsico.Rows[i].Cells[1].Value = psicologo.apellidoMaterno;
+                dgvPsico.Rows[i].Cells[2].Value = psicologo.apellidoPaterno;
+                dgvPsico.Rows[i].Cells[3].Value = psicologo.DNI;
+                dgvPsico.Rows[i].Cells[4].Value = psicologo.fechaNacimiento;
+                dgvPsico.Rows[i].Cells[5].Value = psicologo.edad;
+                dgvPsico.Rows[i].Cells[6].Value = psicologo.telefono;
+                dgvPsico.Rows[i].Cells[7].Value = psicologo.celular;
+                dgvPsico.Rows[i].Cells[8].Value = psicologo.correo;
+            }
         }
     }
 

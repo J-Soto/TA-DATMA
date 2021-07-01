@@ -236,6 +236,7 @@ namespace InterfazDATMA.Administrador
                 }
                 MessageBox.Show("Se ha modificado con exito el Tutor."+msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Ventana de Operaciones Persona
+                formAnterior.formOperacionPersona.inicializarTablas();
                 formPlantilla.abrirFormulario(formAnterior.formOperacionPersona);
             }
             catch (Exception ex)
