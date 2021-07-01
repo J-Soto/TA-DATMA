@@ -31,33 +31,33 @@ namespace InterfazDATMA
             temp = temp.Where(curso => curso != null).ToArray();        //eliminamos los null
             cursos = new List<CursoWS.curso>(temp);
             int i = 0;
-            foreach (var curso in cursos)
-            {
-                if (curso != null)
-                {
-                    var temp2 = daoCurso.listarSemanasPorIdCurso(curso.idCurso);    //semanas de cada curso
-                    temp2 = temp2.Where(semana => semana != null).ToArray();        //eliminamos los null
-                    foreach (var semana in temp2)
-                    {
-                        var temp3 = daoActividad.listarActividadesIdSemana(semana.id); //actividades de cada semana
-                        if(temp3!= null)
-                        {
-                            foreach (var actividad in temp3)
-                            {
-                                if (actividad != null)
-                                {
-                                    ActividadWS.actividad aux = new ActividadWS.actividad();
-                                    aux = actividad;
-                                    Tuple<string, string, string, string> aux2 = new Tuple<string, string, string, string>(curso.descripcion, aux.fecha.ToLongDateString(), aux.horaInicioStr, aux.horaFinStr);
-                                    calendario.Insert(i,aux2);
-                                    i++;
+            //foreach (var curso in cursos)
+            //{
+            //    if (curso != null)
+            //    {
+            //        var temp2 = daoCurso.listarSemanasPorIdCurso(curso.idCurso);    //semanas de cada curso
+            //        temp2 = temp2.Where(semana => semana != null).ToArray();        //eliminamos los null
+            //        foreach (var semana in temp2)
+            //        {
+            //            var temp3 = daoActividad.listarActividadesIdSemana(semana.id); //actividades de cada semana
+            //            if(temp3!= null)
+            //            {
+            //                foreach (var actividad in temp3)
+            //                {
+            //                    if (actividad != null)
+            //                    {
+            //                        ActividadWS.actividad aux = new ActividadWS.actividad();
+            //                        aux = actividad;
+            //                        Tuple<string, string, string, string> aux2 = new Tuple<string, string, string, string>(curso.descripcion, aux.fecha.ToLongDateString(), aux.horaInicioStr, aux.horaFinStr);
+            //                        calendario.Insert(i,aux2);
+            //                        i++;
 
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
             
             dgvListaCursos.AutoGenerateColumns = false;
             DataTable dt = new DataTable();
