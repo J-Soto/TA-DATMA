@@ -213,10 +213,6 @@ namespace InterfazDATMA.Administrador
             {
                 MessageBox.Show("El número de teléfono no puede empezar con cero", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (tutor.password.Length == 5) // Si la contraseña tiene 5 caracteres
-            {
-                MessageBox.Show("La contraseña debe tener al menos 5 caracteres", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else if (!Char.IsLetter(tutor.correo[0]) || tutor.correo.Contains("@") != true || (tutor.correo.Contains(".com") || tutor.correo.Contains(".pe")) != true)       // El correo debe tener el @, iniciar con .com o .pe y además debe comenzar con una letra
             {
                 MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
