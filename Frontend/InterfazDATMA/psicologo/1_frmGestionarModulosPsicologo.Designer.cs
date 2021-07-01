@@ -53,12 +53,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.dgvFinalizado = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CursoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrupoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicioFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFinFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
@@ -285,7 +285,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.269186F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.73081F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 270F));
             this.tableLayoutPanel1.Controls.Add(this.materialCard2, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 757);
@@ -305,12 +305,12 @@ namespace InterfazDATMA
             this.materialCard2.Depth = 0;
             this.materialCard2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(56, 36);
+            this.materialCard2.Location = new System.Drawing.Point(49, 36);
             this.materialCard2.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard2.Size = new System.Drawing.Size(807, 434);
+            this.materialCard2.Size = new System.Drawing.Size(694, 434);
             this.materialCard2.TabIndex = 54;
             // 
             // dgvFinalizado
@@ -359,9 +359,41 @@ namespace InterfazDATMA
             this.dgvFinalizado.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvFinalizado.RowTemplate.Height = 28;
             this.dgvFinalizado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFinalizado.Size = new System.Drawing.Size(787, 412);
+            this.dgvFinalizado.Size = new System.Drawing.Size(674, 412);
             this.dgvFinalizado.TabIndex = 12;
             this.dgvFinalizado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFinalizado_CellFormatting);
+            // 
+            // CursoFinalizado
+            // 
+            this.CursoFinalizado.HeaderText = "Curso";
+            this.CursoFinalizado.MinimumWidth = 8;
+            this.CursoFinalizado.Name = "CursoFinalizado";
+            this.CursoFinalizado.ReadOnly = true;
+            this.CursoFinalizado.Width = 150;
+            // 
+            // GrupoFinalizado
+            // 
+            this.GrupoFinalizado.HeaderText = "Grupo";
+            this.GrupoFinalizado.MinimumWidth = 8;
+            this.GrupoFinalizado.Name = "GrupoFinalizado";
+            this.GrupoFinalizado.ReadOnly = true;
+            this.GrupoFinalizado.Width = 150;
+            // 
+            // FechaInicioFinalizado
+            // 
+            this.FechaInicioFinalizado.HeaderText = "FechaInicio";
+            this.FechaInicioFinalizado.MinimumWidth = 8;
+            this.FechaInicioFinalizado.Name = "FechaInicioFinalizado";
+            this.FechaInicioFinalizado.ReadOnly = true;
+            this.FechaInicioFinalizado.Width = 150;
+            // 
+            // FechaFinFinalizado
+            // 
+            this.FechaFinFinalizado.HeaderText = "Fecha Fin";
+            this.FechaFinFinalizado.MinimumWidth = 8;
+            this.FechaFinFinalizado.Name = "FechaFinFinalizado";
+            this.FechaFinFinalizado.ReadOnly = true;
+            this.FechaFinFinalizado.Width = 150;
             // 
             // tableLayoutPanel3
             // 
@@ -401,38 +433,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 1264);
             this.tableLayoutPanel2.TabIndex = 54;
-            // 
-            // CursoFinalizado
-            // 
-            this.CursoFinalizado.HeaderText = "Curso";
-            this.CursoFinalizado.MinimumWidth = 8;
-            this.CursoFinalizado.Name = "CursoFinalizado";
-            this.CursoFinalizado.ReadOnly = true;
-            this.CursoFinalizado.Width = 150;
-            // 
-            // GrupoFinalizado
-            // 
-            this.GrupoFinalizado.HeaderText = "Grupo";
-            this.GrupoFinalizado.MinimumWidth = 8;
-            this.GrupoFinalizado.Name = "GrupoFinalizado";
-            this.GrupoFinalizado.ReadOnly = true;
-            this.GrupoFinalizado.Width = 150;
-            // 
-            // FechaInicioFinalizado
-            // 
-            this.FechaInicioFinalizado.HeaderText = "FechaInicio";
-            this.FechaInicioFinalizado.MinimumWidth = 8;
-            this.FechaInicioFinalizado.Name = "FechaInicioFinalizado";
-            this.FechaInicioFinalizado.ReadOnly = true;
-            this.FechaInicioFinalizado.Width = 150;
-            // 
-            // FechaFinFinalizado
-            // 
-            this.FechaFinFinalizado.HeaderText = "Fecha Fin";
-            this.FechaFinFinalizado.MinimumWidth = 8;
-            this.FechaFinFinalizado.Name = "FechaFinFinalizado";
-            this.FechaFinFinalizado.ReadOnly = true;
-            this.FechaFinFinalizado.Width = 150;
             // 
             // frmGestionarModulosPsicologo
             // 
