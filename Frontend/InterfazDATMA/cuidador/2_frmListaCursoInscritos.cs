@@ -27,6 +27,7 @@ namespace InterfazDATMA
             InitializeComponent();
             Design.Ini(this);
             var temp = daoCurso.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
+            
             temp = temp.Where(curso => curso != null).ToArray();        //eliminamos los null
             cursos = new List<CursoWS.curso>(temp);
             int i = 0;
