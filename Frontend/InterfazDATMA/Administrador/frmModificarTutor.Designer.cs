@@ -56,7 +56,7 @@ namespace InterfazDATMA.Administrador
             this.txtDistrito = new System.Windows.Forms.TextBox();
             this.btnSubirFoto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.AgregarDistrio = new MaterialSkin.Controls.MaterialButton();
             this.btnAsignarUsuario = new MaterialSkin.Controls.MaterialButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnSiguiente = new MaterialSkin.Controls.MaterialButton();
@@ -211,19 +211,19 @@ namespace InterfazDATMA.Administrador
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
             // 
-            // materialButton1
+            // AgregarDistrio
             // 
-            resources.ApplyResources(this.materialButton1, "materialButton1");
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.btnNuevoDistrito_Click_1);
+            resources.ApplyResources(this.AgregarDistrio, "AgregarDistrio");
+            this.AgregarDistrio.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.AgregarDistrio.Depth = 0;
+            this.AgregarDistrio.HighEmphasis = true;
+            this.AgregarDistrio.Icon = null;
+            this.AgregarDistrio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.AgregarDistrio.Name = "AgregarDistrio";
+            this.AgregarDistrio.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.AgregarDistrio.UseAccentColor = false;
+            this.AgregarDistrio.UseVisualStyleBackColor = true;
+            this.AgregarDistrio.Click += new System.EventHandler(this.btnNuevoDistrito_Click_1);
             // 
             // btnAsignarUsuario
             // 
@@ -276,7 +276,7 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAsignarUsuario);
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.AgregarDistrio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.txtDistrito);
@@ -340,7 +340,7 @@ namespace InterfazDATMA.Administrador
         //private MaterialSkin.Controls.MaterialFlatButton btnNuevoDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
         private System.Windows.Forms.Label label2;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton AgregarDistrio;
         private MaterialSkin.Controls.MaterialButton btnAsignarUsuario;
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnSiguiente;
