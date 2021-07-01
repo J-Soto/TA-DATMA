@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>InterfazDATMA.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialSkin">
       <HintPath>..\MaterialSkin.2.2.2.1\lib\net461\MaterialSkin.dll</HintPath>
@@ -952,6 +955,9 @@
     <None Include="Connected Services\PsicologoWS\PsicologoWS1.wsdl" />
     <None Include="Connected Services\PsicologoWS\PsicologoWS1.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteWS\InterfazDATMA.ReporteWS.reportePreferenciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\InterfazDATMA.ReporteWS.reportePsicologosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

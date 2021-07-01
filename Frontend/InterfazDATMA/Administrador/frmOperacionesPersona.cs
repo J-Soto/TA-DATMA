@@ -482,5 +482,11 @@ namespace InterfazDATMA.Administrador
         {
             this.inicializarTablas();
         }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            ReporteTutor reporte = new ReporteTutor();
+            reporte.Show();
+        }
     }
 }

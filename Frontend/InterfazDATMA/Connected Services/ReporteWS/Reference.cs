@@ -16,12 +16,47 @@ namespace InterfazDATMA.ReporteWS {
     public interface ReporteWS {
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://services.datmasoft.datma.pe/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ReporteWS/reportePreferenciasRequest", ReplyAction="http://services.datmasoft.datma.pe/ReporteWS/reportePreferenciasResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        InterfazDATMA.ReporteWS.reportePreferenciasResponse reportePreferencias(InterfazDATMA.ReporteWS.reportePreferenciasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ReporteWS/reportePreferenciasRequest", ReplyAction="http://services.datmasoft.datma.pe/ReporteWS/reportePreferenciasResponse")]
+        System.Threading.Tasks.Task<InterfazDATMA.ReporteWS.reportePreferenciasResponse> reportePreferenciasAsync(InterfazDATMA.ReporteWS.reportePreferenciasRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://services.datmasoft.datma.pe/).
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ReporteWS/reportePsicologosRequest", ReplyAction="http://services.datmasoft.datma.pe/ReporteWS/reportePsicologosResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         InterfazDATMA.ReporteWS.reportePsicologosResponse reportePsicologos(InterfazDATMA.ReporteWS.reportePsicologosRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.datmasoft.datma.pe/ReporteWS/reportePsicologosRequest", ReplyAction="http://services.datmasoft.datma.pe/ReporteWS/reportePsicologosResponse")]
         System.Threading.Tasks.Task<InterfazDATMA.ReporteWS.reportePsicologosResponse> reportePsicologosAsync(InterfazDATMA.ReporteWS.reportePsicologosRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePreferencias", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class reportePreferenciasRequest {
+        
+        public reportePreferenciasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePreferenciasResponse", WrapperNamespace="http://services.datmasoft.datma.pe/", IsWrapped=true)]
+    public partial class reportePreferenciasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public byte[] @return;
+        
+        public reportePreferenciasResponse() {
+        }
+        
+        public reportePreferenciasResponse(byte[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -76,6 +111,27 @@ namespace InterfazDATMA.ReporteWS {
         
         public ReporteWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InterfazDATMA.ReporteWS.reportePreferenciasResponse InterfazDATMA.ReporteWS.ReporteWS.reportePreferencias(InterfazDATMA.ReporteWS.reportePreferenciasRequest request) {
+            return base.Channel.reportePreferencias(request);
+        }
+        
+        public byte[] reportePreferencias() {
+            InterfazDATMA.ReporteWS.reportePreferenciasRequest inValue = new InterfazDATMA.ReporteWS.reportePreferenciasRequest();
+            InterfazDATMA.ReporteWS.reportePreferenciasResponse retVal = ((InterfazDATMA.ReporteWS.ReporteWS)(this)).reportePreferencias(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InterfazDATMA.ReporteWS.reportePreferenciasResponse> InterfazDATMA.ReporteWS.ReporteWS.reportePreferenciasAsync(InterfazDATMA.ReporteWS.reportePreferenciasRequest request) {
+            return base.Channel.reportePreferenciasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InterfazDATMA.ReporteWS.reportePreferenciasResponse> reportePreferenciasAsync() {
+            InterfazDATMA.ReporteWS.reportePreferenciasRequest inValue = new InterfazDATMA.ReporteWS.reportePreferenciasRequest();
+            return ((InterfazDATMA.ReporteWS.ReporteWS)(this)).reportePreferenciasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
