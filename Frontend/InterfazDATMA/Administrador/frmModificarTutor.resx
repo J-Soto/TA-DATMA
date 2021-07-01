@@ -324,9 +324,6 @@
   <data name="&gt;&gt;txtApPat.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="dtpFechaNacimiento.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="dtpFechaNacimiento.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
@@ -791,6 +788,9 @@
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
