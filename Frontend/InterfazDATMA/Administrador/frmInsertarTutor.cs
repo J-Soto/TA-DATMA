@@ -103,20 +103,52 @@ namespace InterfazDATMA.Administrador
                 tutor.genero = 'F';
             }
 
-            // Se inserta también el tutor para la siguiente pantalla
-            int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
-            if (verificado == -1)
+
+            //Validaciones:
+            if (tutor.DNI.Length != 8)  // Si el DNI es una cadena diferente de longitud 8
             {
-                var resultado = MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resultado == DialogResult.Yes)
-                {
-                    formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
-                }
+                MessageBox.Show("El DNI debe tener 8 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (verificado == 0)
-                MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (tutor.DNI[0] == '0')    // Si el DNI inicia con cero 
+            {
+                MessageBox.Show("El DNI no puede empezar con cero.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.celular.Length != 9) // Si el celular es una cadena diferente de longitud 9
+            {
+                MessageBox.Show("El número de celular debe tener 9 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.celular[0] != '9')   // Si el numero de celular no empieza con 9
+            {
+                MessageBox.Show("El número de celular debe empezar con nueve.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.telefono.Length != 7)    // Si el número de telefono inicia con 7
+            {
+                MessageBox.Show("El telefono debe tener 7 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (tutor.telefono[0] == '0')       // Si el numero de telefono inicia con cero
+            {
+                MessageBox.Show("El número de teléfono no puede empezar con cero", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (!Char.IsLetter(tutor.correo[0]) || tutor.correo.Contains("@") != true || (tutor.correo.Contains(".com") || tutor.correo.Contains(".pe")) != true)       // El correo debe tener el @, iniciar con .com o .pe y además debe comenzar con una letra
+            {
+                MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else
-                formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+            {
+                int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
+                if (verificado == -1)
+                {
+                    var resultado = MessageBox.Show("No se ha podido verificar el DNI. Quiere continuar?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+                    }
+                }
+                else if (verificado == 0)
+                    MessageBox.Show("El DNI no concuerda con los nombres", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    formPlantilla.abrirFormulario(new frmInsertarPreferencias(this, formPlantilla, tutor));
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

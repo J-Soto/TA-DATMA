@@ -205,11 +205,31 @@ namespace InterfazDATMA.Administrador
 
 
             //Validaciones:
-            if (psicologo.DNI.Length != 8)
+            if (psicologo.DNI.Length != 8)  // Si el DNI es una cadena diferente de longitud 8
             {
-                MessageBox.Show("El DNI debe tener 8 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El DNI debe tener 8 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (psicologo.correo.Contains("@") != true)
+            else if (psicologo.DNI[0] == '0')    // Si el DNI inicia con cero 
+            {
+                MessageBox.Show("El DNI no puede empezar con cero.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (psicologo.celular.Length != 9) // Si el celular es una cadena diferente de longitud 9
+            {
+                MessageBox.Show("El número de celular debe tener 9 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (psicologo.celular[0] != '9')   // Si el numero de celular no empieza con 9
+            {
+                MessageBox.Show("El número de celular debe empezar con nueve.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (psicologo.telefono.Length != 7)    // Si el número de telefono inicia con 7
+            {
+                MessageBox.Show("El telefono debe tener 7 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (psicologo.telefono[0] == '0')       // Si el numero de telefono inicia con cero
+            {
+                MessageBox.Show("El número de teléfono no puede empezar con cero", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (!Char.IsLetter(psicologo.correo[0]) || psicologo.correo.Contains("@") != true || (psicologo.correo.Contains(".com") || psicologo.correo.Contains(".pe")) != true)       // El correo debe tener el @, iniciar con .com o .pe y además debe comenzar con una letra
             {
                 MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
