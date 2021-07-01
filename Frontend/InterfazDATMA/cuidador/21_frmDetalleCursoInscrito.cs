@@ -56,7 +56,7 @@ namespace InterfazDATMA
             dgvSemanas.DataSource = semanas;
             dgvActividades.DataSource = actividades[0];
             txtSemanaDescripcion.Text = semanas[0].descripcion;
-            txtNombreCurso.Text = curso.descripcion;
+            txtNombreCurso.Text = "Curso: " + curso.descripcion;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -78,7 +78,9 @@ namespace InterfazDATMA
 
         private void btnReuniones_Click(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscritoReunion(this, plantillaGestion));
+            int semanaInd = dgvSemanas.CurrentCell.RowIndex, actInd = dgvActividades.CurrentCell.RowIndex;
+            var activ = actividades[semanaInd][actInd];
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscritoReunion(this, plantillaGestion, activ.linkZoom));
         }
     }
 }
