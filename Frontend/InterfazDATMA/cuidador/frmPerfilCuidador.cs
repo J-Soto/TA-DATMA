@@ -168,5 +168,7 @@ namespace InterfazDATMA.cuidador
             txtUser.Text = frmPlantillaGestion.user.user;
             txtPass.Text = frmPlantillaGestion.user.password;
         }
+
+       
     }
 }

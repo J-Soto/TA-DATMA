@@ -579,8 +579,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel28.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel28.Name = "tableLayoutPanel28";
             this.tableLayoutPanel28.RowCount = 2;
-            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.35766F));
+            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.64233F));
             this.tableLayoutPanel28.Size = new System.Drawing.Size(509, 137);
             this.tableLayoutPanel28.TabIndex = 94;
             // 
@@ -592,7 +592,7 @@ namespace InterfazDATMA.psicologo
             this.txtFechaNac.Enabled = false;
             this.txtFechaNac.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtFechaNac.LeadingIcon = null;
-            this.txtFechaNac.Location = new System.Drawing.Point(4, 42);
+            this.txtFechaNac.Location = new System.Drawing.Point(4, 35);
             this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaNac.MaxLength = 50;
             this.txtFechaNac.MouseState = MaterialSkin.MouseState.OUT;
@@ -664,8 +664,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel25.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 2;
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.66412F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.33588F));
             this.tableLayoutPanel25.Size = new System.Drawing.Size(509, 131);
             this.tableLayoutPanel25.TabIndex = 93;
             // 
@@ -677,7 +677,7 @@ namespace InterfazDATMA.psicologo
             this.txtCel.Enabled = false;
             this.txtCel.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCel.LeadingIcon = null;
-            this.txtCel.Location = new System.Drawing.Point(4, 41);
+            this.txtCel.Location = new System.Drawing.Point(4, 34);
             this.txtCel.Margin = new System.Windows.Forms.Padding(4);
             this.txtCel.MaxLength = 50;
             this.txtCel.MouseState = MaterialSkin.MouseState.OUT;
@@ -749,8 +749,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel22.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 2;
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.42748F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.57252F));
             this.tableLayoutPanel22.Size = new System.Drawing.Size(509, 131);
             this.tableLayoutPanel22.TabIndex = 92;
             // 
@@ -762,7 +762,7 @@ namespace InterfazDATMA.psicologo
             this.txtTelf.Enabled = false;
             this.txtTelf.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTelf.LeadingIcon = null;
-            this.txtTelf.Location = new System.Drawing.Point(4, 41);
+            this.txtTelf.Location = new System.Drawing.Point(4, 35);
             this.txtTelf.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelf.MaxLength = 50;
             this.txtTelf.MouseState = MaterialSkin.MouseState.OUT;
@@ -834,8 +834,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel10.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.13741F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.86259F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(509, 131);
             this.tableLayoutPanel10.TabIndex = 88;
             // 
@@ -847,7 +847,7 @@ namespace InterfazDATMA.psicologo
             this.txtDni.Enabled = false;
             this.txtDni.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDni.LeadingIcon = null;
-            this.txtDni.Location = new System.Drawing.Point(4, 41);
+            this.txtDni.Location = new System.Drawing.Point(4, 33);
             this.txtDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtDni.MaxLength = 50;
             this.txtDni.MouseState = MaterialSkin.MouseState.OUT;
@@ -1001,8 +1001,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel8.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.37405F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.62595F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(509, 131);
             this.tableLayoutPanel8.TabIndex = 87;
             // 
@@ -1014,7 +1014,7 @@ namespace InterfazDATMA.psicologo
             this.txtNom.Enabled = false;
             this.txtNom.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNom.LeadingIcon = null;
-            this.txtNom.Location = new System.Drawing.Point(4, 41);
+            this.txtNom.Location = new System.Drawing.Point(4, 32);
             this.txtNom.Margin = new System.Windows.Forms.Padding(4);
             this.txtNom.MaxLength = 50;
             this.txtNom.MouseState = MaterialSkin.MouseState.OUT;
@@ -1086,8 +1086,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel12.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.66412F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.33588F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(509, 131);
             this.tableLayoutPanel12.TabIndex = 89;
             // 
@@ -1099,7 +1099,7 @@ namespace InterfazDATMA.psicologo
             this.txtEdad.Enabled = false;
             this.txtEdad.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEdad.LeadingIcon = null;
-            this.txtEdad.Location = new System.Drawing.Point(4, 41);
+            this.txtEdad.Location = new System.Drawing.Point(4, 34);
             this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEdad.MaxLength = 50;
             this.txtEdad.MouseState = MaterialSkin.MouseState.OUT;
@@ -1171,8 +1171,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel13.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.66412F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.33588F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(509, 131);
             this.tableLayoutPanel13.TabIndex = 90;
             // 
@@ -1184,7 +1184,7 @@ namespace InterfazDATMA.psicologo
             this.txtGen.Enabled = false;
             this.txtGen.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtGen.LeadingIcon = null;
-            this.txtGen.Location = new System.Drawing.Point(4, 41);
+            this.txtGen.Location = new System.Drawing.Point(4, 34);
             this.txtGen.Margin = new System.Windows.Forms.Padding(4);
             this.txtGen.MaxLength = 50;
             this.txtGen.MouseState = MaterialSkin.MouseState.OUT;
@@ -1256,8 +1256,8 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel19.Location = new System.Drawing.Point(515, 3);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 2;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.55173F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.61069F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.38931F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(509, 131);
             this.tableLayoutPanel19.TabIndex = 91;
             // 
@@ -1269,7 +1269,7 @@ namespace InterfazDATMA.psicologo
             this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCorreo.LeadingIcon = null;
-            this.txtCorreo.Location = new System.Drawing.Point(4, 41);
+            this.txtCorreo.Location = new System.Drawing.Point(4, 31);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.MaxLength = 50;
             this.txtCorreo.MouseState = MaterialSkin.MouseState.OUT;
