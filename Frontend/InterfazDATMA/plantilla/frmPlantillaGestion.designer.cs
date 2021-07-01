@@ -343,7 +343,7 @@ namespace InterfazDATMA.plantilla
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = global::InterfazDATMA.Properties.Resources.sun;
+            this.pictureBox4.Image = global::InterfazDATMA.Properties.Resources.moon;
             this.pictureBox4.Location = new System.Drawing.Point(17, 23);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(37, 54);

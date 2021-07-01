@@ -17,17 +17,19 @@ namespace InterfazDATMA.Administrador
 {
     public partial class ReporteTutor : MaterialSkin.Controls.MaterialForm
     {
+        private ReporteWS.ReporteWSClient daoReporte;
         private byte[] archivo;
         public ReporteTutor()
         {
             InitializeComponent();
             Design.Ini(this);
-            private ReporteWS.ReporteWSClient daoReporte;
-        daoReporte = new ReporteWS.ReporteWSClient();
-            this.archivo = daoReporte.reportePsicologos();
-            var path = Path.GetTempFileName();
-        File.WriteAllBytes(path, this.archivo);
-        axAcroPDF1.LoadFile(path);
+            //private ReporteWS.ReporteWSClient daoReporte;
+            // daoReporte = new ReporteWS.ReporteWSClient();
+            //this.archivo = daoReporte.reportePsicologos();
+            //var path = Path.GetTempFileName();
+            //File.WriteAllBytes(path, this.archivo);
+            //axAcroPDF1.LoadFile(path);
+        }
        private void btnReportePsi_Click(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
