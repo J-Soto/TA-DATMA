@@ -27,6 +27,7 @@ namespace InterfazDATMA.psicologo
             daoUsuario = new UsuarioWS.UsuarioWSClient();
             txtUser.Enabled = true;
             txtPass.Enabled = true;
+            
 
             txtUser.Text = frmPlantillaGestion.psico.user;
             txtPass.Text = frmPlantillaGestion.psico.password;
