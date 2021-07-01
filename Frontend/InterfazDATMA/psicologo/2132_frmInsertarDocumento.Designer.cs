@@ -173,7 +173,7 @@ namespace InterfazDATMA.psicologo
             this.btnSubir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSubir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(240, 124);
+            this.btnSubir.Size = new System.Drawing.Size(239, 124);
             this.btnSubir.TabIndex = 21;
             this.btnSubir.Text = "...";
             this.btnSubir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -282,7 +282,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel27.ColumnCount = 3;
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.81609F));
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.18391F));
-            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel27.Controls.Add(this.btnSubir, 1, 1);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel27.Location = new System.Drawing.Point(1856, 0);
@@ -521,7 +521,7 @@ namespace InterfazDATMA.psicologo
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInsertarDocumento";
             this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
             this.Text = "Insertar Documento";
