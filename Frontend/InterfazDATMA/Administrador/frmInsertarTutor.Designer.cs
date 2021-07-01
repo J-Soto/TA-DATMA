@@ -274,7 +274,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Depth = 0;
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(117, 630);
+            this.btnCancelar.Location = new System.Drawing.Point(318, 600);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
@@ -312,7 +312,7 @@ namespace InterfazDATMA.Administrador
             this.btnSiguiente.Depth = 0;
             this.btnSiguiente.HighEmphasis = true;
             this.btnSiguiente.Icon = null;
-            this.btnSiguiente.Location = new System.Drawing.Point(670, 618);
+            this.btnSiguiente.Location = new System.Drawing.Point(638, 600);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSiguiente.Name = "btnSiguiente";

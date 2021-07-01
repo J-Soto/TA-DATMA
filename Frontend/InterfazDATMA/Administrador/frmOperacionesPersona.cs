@@ -33,12 +33,14 @@ namespace InterfazDATMA.Administrador
 
             this.formPlantilla = formPlantilla;
             this.formGestionarModulos = formGestionarModulos;
+
             inicializarTablas();
         }
 
 
         public void inicializarTablas()
         {
+
             // dgvTutores
             dgvTutores.AutoGenerateColumns = false;
             dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -242,7 +244,6 @@ namespace InterfazDATMA.Administrador
         private void btnInsertarTutor_Click_1(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(new frmInsertarTutor(this, formPlantilla));
-
         }
 
         private void btnModificarTutor_Click_1(object sender, EventArgs e)
@@ -261,7 +262,6 @@ namespace InterfazDATMA.Administrador
         private void btnInsertarPsi_Click_1(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(new frmInsertarPsicologo(this, formPlantilla));
-
         }
 
         private void btnModificarPsi_Click_1(object sender, EventArgs e)
@@ -476,6 +476,11 @@ namespace InterfazDATMA.Administrador
                     }
                 }
             }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            this.inicializarTablas();
         }
     }
 }

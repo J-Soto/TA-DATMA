@@ -64,6 +64,7 @@ namespace InterfazDATMA.Administrador
             this.btnModificarUsuario = new MaterialSkin.Controls.MaterialButton();
             this.btnBuscarUser = new MaterialSkin.Controls.MaterialButton();
             this.Header = new System.Windows.Forms.Label();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
@@ -514,6 +515,25 @@ namespace InterfazDATMA.Administrador
             this.Header.TabIndex = 59;
             this.Header.Text = "Lista de Usuarios";
             // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(1176, 352);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Size = new System.Drawing.Size(131, 36);
+            this.materialButton1.TabIndex = 60;
+            this.materialButton1.Text = "Actualizar";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
             // frmOperacionesPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -521,6 +541,7 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1430, 771);
             this.ControlBox = false;
+            this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.Header);
             this.Controls.Add(this.btnBuscarUser);
             this.Controls.Add(this.btnModificarUsuario);
@@ -584,5 +605,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn activoUsuario;
         private System.Windows.Forms.DataGridViewImageColumn fotoUsuario;
         private System.Windows.Forms.Label Header;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }

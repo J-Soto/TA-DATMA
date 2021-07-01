@@ -167,7 +167,6 @@ namespace InterfazDATMA.Administrador
                     {
                         MessageBox.Show("Se ha registrado con exito", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tutorAux.idPersona = idTutor;
-                        formAnterior.formOperacionPersona.inicializarTablas();
                         formPlantilla.abrirFormulario(formAnterior.formOperacionPersona);
                     }
 
