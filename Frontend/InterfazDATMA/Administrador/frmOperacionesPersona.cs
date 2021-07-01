@@ -350,7 +350,7 @@ namespace InterfazDATMA.Administrador
         {
             if (this.dgvUsuario.Columns[5].Visible == true)
             {
-               // this.btnMostrarFoto.Text = "Mostrar Foto";
+                this.btnMostrarFoto.Text = "Mostrar Foto";
                 this.dgvUsuario.Columns[5].Visible = false;
                 foreach (DataGridViewRow row in dgvUsuario.Rows)
                 {
@@ -360,7 +360,7 @@ namespace InterfazDATMA.Administrador
             }
             else
             {
-              //  this.btnMostrarFoto.Text = "Ocultar Foto";
+                this.btnMostrarFoto.Text = "Ocultar Foto";
                 this.dgvUsuario.Columns[5].Visible = true;
                 foreach (DataGridViewRow row in dgvUsuario.Rows)
                 {
