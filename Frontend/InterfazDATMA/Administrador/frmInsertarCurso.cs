@@ -55,7 +55,8 @@ namespace InterfazDATMA.Administrador
             Design.Ini(this);
             //dgvReq.AutoGenerateColumns = false;
             //dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            btnModificar.Visible = false;
+            //btnModificar.Visible = false;
+            btnModificar.Enabled = false;
             curso = new CursoWS.curso();
             inicializarPantalla();
 
@@ -481,7 +482,7 @@ namespace InterfazDATMA.Administrador
                             }
                         }
                     }
-
+                    /*
                     //LLena la lista de requerimientos ya existentes en el curso
                     BindingList<CursoWS.requerimiento> reqExistentes;
                     try
@@ -502,7 +503,7 @@ namespace InterfazDATMA.Administrador
                     {
                         daoCurso.insertarRequerimiento(this.curso.idCurso, recCursoReq.idCurso, "Curso Requisito");
                     }
-
+                    */
                     //LLena la lista de psicologos ya existentes en el curso
                     BindingList<PsicologoWS.psicologo> psiExistentes;
                     try
@@ -531,7 +532,7 @@ namespace InterfazDATMA.Administrador
 
                     btnGuardarCurso.Enabled = false;
                     btnModificar.Enabled = true;
-                    inicializarPantalla();
+                    //inicializarPantalla();
                 }
             }
         }
@@ -541,6 +542,7 @@ namespace InterfazDATMA.Administrador
             curso = new CursoWS.curso();
             inicializarPantalla();
             btnGuardarCurso.Enabled = true;
+            btnModificar.Enabled = false;
         }
 
         private void dgvReq_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
