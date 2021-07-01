@@ -518,7 +518,6 @@ namespace InterfazDATMA.Administrador
             // fotoUsuario
             // 
             this.fotoUsuario.HeaderText = "Foto";
-            this.fotoUsuario.Image = global::InterfazDATMA.Properties.Resources.postulante;
             this.fotoUsuario.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.fotoUsuario.MinimumWidth = 8;
             this.fotoUsuario.Name = "fotoUsuario";
