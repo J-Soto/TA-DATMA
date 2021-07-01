@@ -48,8 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaterialSkin, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MaterialSkin.2.2.2.1\lib\net461\MaterialSkin.dll</HintPath>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\MaterialSkin.2.2.2.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="Nevron.Nov.Barcode">
       <HintPath>..\Nevron.Nov.Barcode.dll</HintPath>
