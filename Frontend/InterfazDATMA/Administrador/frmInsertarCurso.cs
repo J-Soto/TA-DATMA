@@ -55,7 +55,7 @@ namespace InterfazDATMA.Administrador
             Design.Ini(this);
             //dgvReq.AutoGenerateColumns = false;
             //dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //btnModificar.Visible = false;
+            btnModificar.Visible = false;
             btnModificar.Enabled = false;
             curso = new CursoWS.curso();
             inicializarPantalla();
