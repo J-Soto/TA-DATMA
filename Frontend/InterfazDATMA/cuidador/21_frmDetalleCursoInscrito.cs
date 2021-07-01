@@ -73,7 +73,9 @@ namespace InterfazDATMA
 
         private void btnMaterial_Click(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscritoMaterial(this, plantillaGestion));
+            int semanaInd = dgvSemanas.CurrentCell.RowIndex, actInd = dgvActividades.CurrentCell.RowIndex;
+            var activ = actividades[semanaInd][actInd];
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscritoMaterial(this, plantillaGestion, curso.descripcion, activ));
         }
 
         private void btnReuniones_Click(object sender, EventArgs e)

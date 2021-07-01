@@ -59,6 +59,7 @@ namespace InterfazDATMA
             this.txtZoom.TabStop = true;
             this.txtZoom.Text = "google.com";
             this.txtZoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtZoom.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtZoom_LinkClicked);
             // 
             // pictureBox2
             // 

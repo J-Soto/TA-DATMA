@@ -16,36 +16,18 @@ namespace InterfazDATMA
     public partial class frmDetalleCursoInscritoMaterial : MaterialSkin.Controls.MaterialForm 
     {
         public frmDetalleCursoInscrito formAnterior;
-        private frmPlantillaGestion plantillaGestion; 
-        public frmDetalleCursoInscritoMaterial(frmDetalleCursoInscrito formAnterior,frmPlantillaGestion plantillaGestion)
+        private frmPlantillaGestion plantillaGestion;
+        private ActividadWS.actividad act;
+
+        public frmDetalleCursoInscritoMaterial(frmDetalleCursoInscrito formAnterior,frmPlantillaGestion plantillaGestion, string curso, ActividadWS.actividad act)
         {
             InitializeComponent();
             Design.Ini(this);
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
+            this.act = act;
+            NombreCurso.Text = curso;
         }
-       /*
-        private void VisitLink()
-        {
-            linkLabel1.LinkVisited = true;
-            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=QHRuTYtSbJQ");
-        }
-        */
-
-        /*
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           
-            try
-            {
-                VisitLink();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to open link that was clicked.");
-            }
-        }
-        */
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {

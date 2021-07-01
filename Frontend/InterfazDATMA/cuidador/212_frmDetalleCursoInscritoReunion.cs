@@ -30,5 +30,11 @@ namespace InterfazDATMA
         {
             plantillaGestion.abrirFormulario(formAnterior);
         }
+
+        private void txtZoom_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtZoom.LinkVisited = true;
+            System.Diagnostics.Process.Start(txtZoom.Text);
+        }
     }
 }
