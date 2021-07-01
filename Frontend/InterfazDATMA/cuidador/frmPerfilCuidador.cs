@@ -22,7 +22,7 @@ namespace InterfazDATMA.cuidador
         {
             InitializeComponent();
             Design.Ini(this);
-            DeshabilitarCampos();
+            HabilitarCampos();
             plantillaGestion = plantilla;
             txtUser.Text = frmPlantillaGestion.tutor.user;
             txtPass.Text = frmPlantillaGestion.tutor.password;
@@ -81,7 +81,6 @@ namespace InterfazDATMA.cuidador
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            HabilitarCampos();
             DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (msg == DialogResult.Yes)
             {
@@ -106,7 +105,6 @@ namespace InterfazDATMA.cuidador
                 txtUser.Text = frmPlantillaGestion.user.user;
                 txtPass.Text = frmPlantillaGestion.user.password;
             }
-            DeshabilitarCampos();
         }
 
         private void  DeshabilitarCampos()

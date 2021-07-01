@@ -23,7 +23,7 @@ namespace InterfazDATMA.psicologo
         {
             InitializeComponent();
             Design.Ini(this);
-            DeshabilitarCampos();
+            HabilitarCampos();
             plantillaGestion = Plantilla;
             daoUsuario = new UsuarioWS.UsuarioWSClient();
             txtUser.Enabled = true;
@@ -61,7 +61,6 @@ namespace InterfazDATMA.psicologo
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            HabilitarCampos();
             DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (msg == DialogResult.Yes)
             {
@@ -85,7 +84,6 @@ namespace InterfazDATMA.psicologo
                 txtUser.Text = frmPlantillaGestion.user.user;
                 txtPass.Text = frmPlantillaGestion.user.password;
             }
-            DeshabilitarCampos();
         }
         private void DeshabilitarCampos()
         {
