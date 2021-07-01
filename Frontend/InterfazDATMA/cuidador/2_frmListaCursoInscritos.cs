@@ -72,6 +72,10 @@ namespace InterfazDATMA
                 dt.Rows.Add(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
             }
             dgvCalendario.DataSource = dt;
+            dgvCalendario.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvCalendario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvCalendario.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvCalendario.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvListaCursos.DataSource = cursos;
             
             this.plantillaGestion = plantillaGestion;
