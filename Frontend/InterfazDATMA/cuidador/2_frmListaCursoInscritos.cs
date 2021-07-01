@@ -40,7 +40,7 @@ namespace InterfazDATMA
             //        foreach (var semana in temp2)
             //        {
             //            var temp3 = daoActividad.listarActividadesIdSemana(semana.id); //actividades de cada semana
-            //            if(temp3!= null)
+            //            if (temp3 != null)
             //            {
             //                foreach (var actividad in temp3)
             //                {
@@ -49,7 +49,7 @@ namespace InterfazDATMA
             //                        ActividadWS.actividad aux = new ActividadWS.actividad();
             //                        aux = actividad;
             //                        Tuple<string, string, string, string> aux2 = new Tuple<string, string, string, string>(curso.descripcion, aux.fecha.ToLongDateString(), aux.horaInicioStr, aux.horaFinStr);
-            //                        calendario.Insert(i,aux2);
+            //                        calendario.Insert(i, aux2);
             //                        i++;
 
             //                    }
@@ -58,7 +58,7 @@ namespace InterfazDATMA
             //        }
             //    }
             //}
-            
+
             dgvListaCursos.AutoGenerateColumns = false;
             DataTable dt = new DataTable();
             dt.Columns.Add("Curso", typeof(string));
@@ -71,11 +71,11 @@ namespace InterfazDATMA
                 //row.
                 dt.Rows.Add(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
             }
-            dgvCalendario.DataSource = dt;
-            dgvCalendario.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvCalendario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvCalendario.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvCalendario.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvCalendario.DataSource = dt;
+            //dgvCalendario.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvCalendario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvCalendario.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvCalendario.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvListaCursos.DataSource = cursos;
             
             this.plantillaGestion = plantillaGestion;
