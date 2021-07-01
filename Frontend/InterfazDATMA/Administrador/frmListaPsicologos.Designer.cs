@@ -38,7 +38,6 @@ namespace InterfazDATMA.Administrador
             this.colApMat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTelf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,13 +66,13 @@ namespace InterfazDATMA.Administrador
             this.colApMat,
             this.colDNI,
             this.colFechaNac,
-            this.colGen,
             this.colEdad,
             this.colTelf,
             this.colCel,
             this.colEmail});
             resources.ApplyResources(this.dgvPsico, "dgvPsico");
             this.dgvPsico.Name = "dgvPsico";
+            this.dgvPsico.RowHeadersVisible = false;
             this.dgvPsico.RowTemplate.Height = 33;
             // 
             // colNombre
@@ -110,13 +109,6 @@ namespace InterfazDATMA.Administrador
             resources.ApplyResources(this.colFechaNac, "colFechaNac");
             this.colFechaNac.Name = "colFechaNac";
             this.colFechaNac.ReadOnly = true;
-            // 
-            // colGen
-            // 
-            this.colGen.DataPropertyName = "genero";
-            resources.ApplyResources(this.colGen, "colGen");
-            this.colGen.Name = "colGen";
-            this.colGen.ReadOnly = true;
             // 
             // colEdad
             // 
@@ -183,17 +175,16 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvPsico;
+        private MaterialSkin.Controls.MaterialButton btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApPat;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApMat;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaNac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEdad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTelf;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
-        private MaterialSkin.Controls.MaterialButton btnBuscar;
         //private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
     }
 }

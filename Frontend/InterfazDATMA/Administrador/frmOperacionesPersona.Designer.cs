@@ -38,8 +38,6 @@ namespace InterfazDATMA.Administrador
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTutores = new System.Windows.Forms.Label();
-            this.lblPsicologo = new System.Windows.Forms.Label();
             this.dgvTutores = new System.Windows.Forms.DataGridView();
             this.NombreCompletoTutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FotoTutor = new System.Windows.Forms.DataGridViewImageColumn();
@@ -50,6 +48,12 @@ namespace InterfazDATMA.Administrador
             this.checkSoloTutores = new System.Windows.Forms.CheckBox();
             this.checkSoloPsicologos = new System.Windows.Forms.CheckBox();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
+            this.nombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celularUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoUsuario = new System.Windows.Forms.DataGridViewImageColumn();
             this.checkSoloActivos = new System.Windows.Forms.CheckBox();
             this.btnListarTut = new MaterialSkin.Controls.MaterialButton();
             this.btnListarPsi = new MaterialSkin.Controls.MaterialButton();
@@ -59,40 +63,12 @@ namespace InterfazDATMA.Administrador
             this.btnInsertarTutor = new MaterialSkin.Controls.MaterialButton();
             this.btnModificarUsuario = new MaterialSkin.Controls.MaterialButton();
             this.btnBuscarUser = new MaterialSkin.Controls.MaterialButton();
-            this.nombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celularUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotoUsuario = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Header = new System.Windows.Forms.Label();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTutores
-            // 
-            this.lblTutores.AutoSize = true;
-            this.lblTutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblTutores.ForeColor = System.Drawing.Color.White;
-            this.lblTutores.Location = new System.Drawing.Point(1110, 15);
-            this.lblTutores.Name = "lblTutores";
-            this.lblTutores.Size = new System.Drawing.Size(79, 25);
-            this.lblTutores.TabIndex = 14;
-            this.lblTutores.Text = "Tutores";
-            this.lblTutores.Visible = false;
-            // 
-            // lblPsicologo
-            // 
-            this.lblPsicologo.AutoSize = true;
-            this.lblPsicologo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblPsicologo.ForeColor = System.Drawing.Color.White;
-            this.lblPsicologo.Location = new System.Drawing.Point(1244, 14);
-            this.lblPsicologo.Name = "lblPsicologo";
-            this.lblPsicologo.Size = new System.Drawing.Size(107, 25);
-            this.lblPsicologo.TabIndex = 18;
-            this.lblPsicologo.Text = "Psicólogos";
-            this.lblPsicologo.Visible = false;
             // 
             // dgvTutores
             // 
@@ -237,7 +213,7 @@ namespace InterfazDATMA.Administrador
             this.checkSoloTutores.AutoSize = true;
             this.checkSoloTutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkSoloTutores.ForeColor = System.Drawing.Color.White;
-            this.checkSoloTutores.Location = new System.Drawing.Point(41, 83);
+            this.checkSoloTutores.Location = new System.Drawing.Point(57, 83);
             this.checkSoloTutores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkSoloTutores.Name = "checkSoloTutores";
             this.checkSoloTutores.Size = new System.Drawing.Size(150, 29);
@@ -251,7 +227,7 @@ namespace InterfazDATMA.Administrador
             this.checkSoloPsicologos.AutoSize = true;
             this.checkSoloPsicologos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkSoloPsicologos.ForeColor = System.Drawing.Color.White;
-            this.checkSoloPsicologos.Location = new System.Drawing.Point(245, 85);
+            this.checkSoloPsicologos.Location = new System.Drawing.Point(251, 83);
             this.checkSoloPsicologos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkSoloPsicologos.Name = "checkSoloPsicologos";
             this.checkSoloPsicologos.Size = new System.Drawing.Size(178, 29);
@@ -308,12 +284,63 @@ namespace InterfazDATMA.Administrador
             this.dgvUsuario.Size = new System.Drawing.Size(1080, 445);
             this.dgvUsuario.TabIndex = 49;
             // 
+            // nombreUsuario
+            // 
+            this.nombreUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreUsuario.HeaderText = "Nombre Completo";
+            this.nombreUsuario.MinimumWidth = 8;
+            this.nombreUsuario.Name = "nombreUsuario";
+            this.nombreUsuario.ReadOnly = true;
+            // 
+            // celularUsuario
+            // 
+            this.celularUsuario.HeaderText = "Celular";
+            this.celularUsuario.MinimumWidth = 8;
+            this.celularUsuario.Name = "celularUsuario";
+            this.celularUsuario.ReadOnly = true;
+            this.celularUsuario.Width = 90;
+            // 
+            // correoUsuario
+            // 
+            this.correoUsuario.HeaderText = "Correo Electrónico";
+            this.correoUsuario.MinimumWidth = 8;
+            this.correoUsuario.Name = "correoUsuario";
+            this.correoUsuario.ReadOnly = true;
+            this.correoUsuario.Width = 170;
+            // 
+            // tipoUsuario
+            // 
+            this.tipoUsuario.HeaderText = "Usuario";
+            this.tipoUsuario.MinimumWidth = 8;
+            this.tipoUsuario.Name = "tipoUsuario";
+            this.tipoUsuario.ReadOnly = true;
+            this.tipoUsuario.Width = 150;
+            // 
+            // activoUsuario
+            // 
+            this.activoUsuario.HeaderText = "Activo";
+            this.activoUsuario.MinimumWidth = 8;
+            this.activoUsuario.Name = "activoUsuario";
+            this.activoUsuario.ReadOnly = true;
+            this.activoUsuario.Width = 80;
+            // 
+            // fotoUsuario
+            // 
+            this.fotoUsuario.HeaderText = "Foto";
+            this.fotoUsuario.Image = global::InterfazDATMA.Properties.Resources.postulante;
+            this.fotoUsuario.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.fotoUsuario.MinimumWidth = 8;
+            this.fotoUsuario.Name = "fotoUsuario";
+            this.fotoUsuario.ReadOnly = true;
+            this.fotoUsuario.Visible = false;
+            this.fotoUsuario.Width = 78;
+            // 
             // checkSoloActivos
             // 
             this.checkSoloActivos.AutoSize = true;
             this.checkSoloActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkSoloActivos.ForeColor = System.Drawing.Color.White;
-            this.checkSoloActivos.Location = new System.Drawing.Point(467, 80);
+            this.checkSoloActivos.Location = new System.Drawing.Point(467, 83);
             this.checkSoloActivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkSoloActivos.Name = "checkSoloActivos";
             this.checkSoloActivos.Size = new System.Drawing.Size(147, 29);
@@ -390,9 +417,9 @@ namespace InterfazDATMA.Administrador
             this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDeshabilitar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(187, 36);
+            this.btnDeshabilitar.Size = new System.Drawing.Size(193, 36);
             this.btnDeshabilitar.TabIndex = 54;
-            this.btnDeshabilitar.Text = "Deshabilitar Usuario";
+            this.btnDeshabilitar.Text = "Des/Habilitar Usuario";
             this.btnDeshabilitar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeshabilitar.UseAccentColor = false;
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
@@ -475,56 +502,37 @@ namespace InterfazDATMA.Administrador
             this.btnBuscarUser.UseVisualStyleBackColor = true;
             this.btnBuscarUser.Click += new System.EventHandler(this.btnBuscarTutor_Click_1);
             // 
-            // nombreUsuario
+            // Header
             // 
-            this.nombreUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreUsuario.HeaderText = "Nombre Completo";
-            this.nombreUsuario.MinimumWidth = 8;
-            this.nombreUsuario.Name = "nombreUsuario";
-            this.nombreUsuario.ReadOnly = true;
+            this.Header.AutoSize = true;
+            this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Header.Font = new System.Drawing.Font("Century Gothic", 25F);
+            this.Header.ForeColor = System.Drawing.Color.White;
+            this.Header.Location = new System.Drawing.Point(240, 2);
+            this.Header.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(416, 61);
+            this.Header.TabIndex = 59;
+            this.Header.Text = "Lista de Usuarios";
             // 
-            // celularUsuario
+            // materialButton1
             // 
-            this.celularUsuario.HeaderText = "Celular";
-            this.celularUsuario.MinimumWidth = 8;
-            this.celularUsuario.Name = "celularUsuario";
-            this.celularUsuario.ReadOnly = true;
-            this.celularUsuario.Width = 90;
-            // 
-            // correoUsuario
-            // 
-            this.correoUsuario.HeaderText = "Correo Electrónico";
-            this.correoUsuario.MinimumWidth = 8;
-            this.correoUsuario.Name = "correoUsuario";
-            this.correoUsuario.ReadOnly = true;
-            this.correoUsuario.Width = 170;
-            // 
-            // tipoUsuario
-            // 
-            this.tipoUsuario.HeaderText = "Usuario";
-            this.tipoUsuario.MinimumWidth = 8;
-            this.tipoUsuario.Name = "tipoUsuario";
-            this.tipoUsuario.ReadOnly = true;
-            this.tipoUsuario.Width = 150;
-            // 
-            // activoUsuario
-            // 
-            this.activoUsuario.HeaderText = "Activo";
-            this.activoUsuario.MinimumWidth = 8;
-            this.activoUsuario.Name = "activoUsuario";
-            this.activoUsuario.ReadOnly = true;
-            this.activoUsuario.Width = 80;
-            // 
-            // fotoUsuario
-            // 
-            this.fotoUsuario.HeaderText = "Foto";
-            this.fotoUsuario.Image = global::InterfazDATMA.Properties.Resources.postulante;
-            this.fotoUsuario.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.fotoUsuario.MinimumWidth = 8;
-            this.fotoUsuario.Name = "fotoUsuario";
-            this.fotoUsuario.ReadOnly = true;
-            this.fotoUsuario.Visible = false;
-            this.fotoUsuario.Width = 78;
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(1176, 352);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Size = new System.Drawing.Size(131, 36);
+            this.materialButton1.TabIndex = 60;
+            this.materialButton1.Text = "Actualizar";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // frmOperacionesPersona
             // 
@@ -533,6 +541,8 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1430, 771);
             this.ControlBox = false;
+            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.Header);
             this.Controls.Add(this.btnBuscarUser);
             this.Controls.Add(this.btnModificarUsuario);
             this.Controls.Add(this.btnInsertarTutor);
@@ -548,8 +558,6 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.txtBusqUser);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.dgvTutores);
-            this.Controls.Add(this.lblPsicologo);
-            this.Controls.Add(this.lblTutores);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmOperacionesPersona";
             this.Sizable = false;
@@ -563,8 +571,6 @@ namespace InterfazDATMA.Administrador
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTutores;
-        private System.Windows.Forms.Label lblPsicologo;
         private System.Windows.Forms.DataGridView dgvTutores;
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.TextBox txtBusqUser;
@@ -598,5 +604,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn activoUsuario;
         private System.Windows.Forms.DataGridViewImageColumn fotoUsuario;
+        private System.Windows.Forms.Label Header;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }

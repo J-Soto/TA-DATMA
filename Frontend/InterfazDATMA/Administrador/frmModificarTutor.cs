@@ -205,10 +205,6 @@ namespace InterfazDATMA.Administrador
             {
                 MessageBox.Show("El número de celular debe empezar con nueve.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (tutor.user.Length < 4)     // Si el usuario tiene menos de 4 caracteres
-            {
-                MessageBox.Show("El usuario debe tener al menos 4 caracteres", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else if (tutor.telefono.Length != 7)    // Si el número de telefono inicia con 7
             {
                 MessageBox.Show("El telefono debe tener 7 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);

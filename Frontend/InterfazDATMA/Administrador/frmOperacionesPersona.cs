@@ -33,6 +33,14 @@ namespace InterfazDATMA.Administrador
 
             this.formPlantilla = formPlantilla;
             this.formGestionarModulos = formGestionarModulos;
+
+            inicializarTablas();
+        }
+
+
+        public void inicializarTablas()
+        {
+
             // dgvTutores
             dgvTutores.AutoGenerateColumns = false;
             dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -75,7 +83,7 @@ namespace InterfazDATMA.Administrador
             dgvUsuario.RowCount = cantidadFilas;
 
             int i;
-            for (i=0; i < dgvPsicologos.RowCount; i++)
+            for (i = 0; i < dgvPsicologos.RowCount; i++)
             {
                 psicologo = (PsicologoWS.psicologo)dgvPsicologos.Rows[i].DataBoundItem;
                 dgvUsuario.Rows[i].Cells[0].Value = psicologo.apellidoPaterno + " " + psicologo.apellidoMaterno + " " + psicologo.nombre;
@@ -95,9 +103,9 @@ namespace InterfazDATMA.Administrador
 
 
 
-            for (int j = i; j < dgvTutores.RowCount+i; j++)
+            for (int j = i; j < dgvTutores.RowCount + i; j++)
             {
-                tutor = (TutorWS.tutor)dgvTutores.Rows[j-i].DataBoundItem;
+                tutor = (TutorWS.tutor)dgvTutores.Rows[j - i].DataBoundItem;
                 dgvUsuario.Rows[j].Cells[0].Value = tutor.apellidoPaterno + " " + tutor.apellidoMaterno + " " + tutor.nombre;
                 dgvUsuario.Rows[j].Cells[1].Value = tutor.celular;
                 dgvUsuario.Rows[j].Cells[2].Value = tutor.correo;
@@ -119,11 +127,6 @@ namespace InterfazDATMA.Administrador
             dgvUsuario.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             // Ordenar Alfabeticamente el DatagridView
             this.dgvUsuario.Sort(this.dgvUsuario.Columns[0], ListSortDirection.Ascending);
-        }
-
-
-        public void inicializarTablas()
-        {
         }
 
         private void txtBusqTutor_MouseClick(object sender, MouseEventArgs e)
@@ -241,7 +244,6 @@ namespace InterfazDATMA.Administrador
         private void btnInsertarTutor_Click_1(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(new frmInsertarTutor(this, formPlantilla));
-
         }
 
         private void btnModificarTutor_Click_1(object sender, EventArgs e)
@@ -260,7 +262,6 @@ namespace InterfazDATMA.Administrador
         private void btnInsertarPsi_Click_1(object sender, EventArgs e)
         {
             formPlantilla.abrirFormulario(new frmInsertarPsicologo(this, formPlantilla));
-
         }
 
         private void btnModificarPsi_Click_1(object sender, EventArgs e)
@@ -475,6 +476,11 @@ namespace InterfazDATMA.Administrador
                     }
                 }
             }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            this.inicializarTablas();
         }
     }
 }
