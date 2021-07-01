@@ -84,8 +84,8 @@ namespace InterfazDATMA
 
             temp.RemoveAll(item => item.Curso.idCurso == obj.Curso.idCurso);
             cursos = new BindingList<CursoTutor>(temp);
-            dgvCursos.Refresh();
-            plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla));
+            dgvCursos.DataSource = cursos;
+            plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla, obj));
         }
 
         private void btnMasInfo_Click_1(object sender, EventArgs e)

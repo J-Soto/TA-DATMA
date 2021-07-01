@@ -46,14 +46,13 @@ namespace InterfazDATMA
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dgvVideos = new System.Windows.Forms.DataGridView();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.URL = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.NombreCurso = new MaterialSkin.Controls.MaterialLabel();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.URL = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -249,7 +248,6 @@ namespace InterfazDATMA
             this.dgvVideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVideos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Descripcion,
-            this.Duracion,
             this.URL});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
@@ -287,33 +285,6 @@ namespace InterfazDATMA
             this.dgvVideos.Size = new System.Drawing.Size(834, 205);
             this.dgvVideos.TabIndex = 12;
             this.dgvVideos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVideos_CellContentClick);
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.DataPropertyName = "descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 10;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Duracion
-            // 
-            this.Duracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Duracion.DataPropertyName = "duracion";
-            this.Duracion.HeaderText = "Duracion";
-            this.Duracion.MinimumWidth = 10;
-            this.Duracion.Name = "Duracion";
-            this.Duracion.ReadOnly = true;
-            // 
-            // URL
-            // 
-            this.URL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.URL.DataPropertyName = "linkVideo";
-            this.URL.HeaderText = "URL";
-            this.URL.MinimumWidth = 10;
-            this.URL.Name = "URL";
-            this.URL.ReadOnly = true;
             // 
             // tableLayoutPanel1
             // 
@@ -402,6 +373,24 @@ namespace InterfazDATMA
             this.NombreCurso.Text = "NombreCurso";
             this.NombreCurso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.DataPropertyName = "descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.MinimumWidth = 10;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // URL
+            // 
+            this.URL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.URL.DataPropertyName = "linkVideo";
+            this.URL.HeaderText = "URL";
+            this.URL.MinimumWidth = 10;
+            this.URL.Name = "URL";
+            this.URL.ReadOnly = true;
+            // 
             // frmDetalleCursoInscritoMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,10 +430,9 @@ namespace InterfazDATMA
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialButton btnRegresar;
         private System.Windows.Forms.DataGridView dgvDocumentos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duracion;
-        private System.Windows.Forms.DataGridViewLinkColumn URL;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewLinkColumn URL;
     }
 }
