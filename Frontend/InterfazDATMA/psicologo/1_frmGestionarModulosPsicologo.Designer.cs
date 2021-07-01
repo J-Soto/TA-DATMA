@@ -53,12 +53,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.dgvFinalizado = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CursoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrupoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicioFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFinFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
@@ -155,7 +155,7 @@ namespace InterfazDATMA
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvModulos.Location = new System.Drawing.Point(13, 14);
-            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvModulos.MultiSelect = false;
             this.dgvModulos.Name = "dgvModulos";
             this.dgvModulos.ReadOnly = true;
@@ -167,6 +167,7 @@ namespace InterfazDATMA
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvModulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvModulos.RowHeadersVisible = false;
             this.dgvModulos.RowHeadersWidth = 62;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,7 +269,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.Controls.Add(this.AccederModulo, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(1164, 35);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 5;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -285,7 +286,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.269186F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.73081F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 361F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 362F));
             this.tableLayoutPanel1.Controls.Add(this.materialCard2, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 948);
@@ -310,7 +311,7 @@ namespace InterfazDATMA
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
-            this.materialCard2.Size = new System.Drawing.Size(925, 540);
+            this.materialCard2.Size = new System.Drawing.Size(924, 540);
             this.materialCard2.TabIndex = 54;
             // 
             // dgvFinalizado
@@ -339,7 +340,7 @@ namespace InterfazDATMA
             this.dgvFinalizado.EnableHeadersVisualStyles = false;
             this.dgvFinalizado.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvFinalizado.Location = new System.Drawing.Point(13, 14);
-            this.dgvFinalizado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvFinalizado.Margin = new System.Windows.Forms.Padding(4);
             this.dgvFinalizado.MultiSelect = false;
             this.dgvFinalizado.Name = "dgvFinalizado";
             this.dgvFinalizado.ReadOnly = true;
@@ -351,6 +352,7 @@ namespace InterfazDATMA
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvFinalizado.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvFinalizado.RowHeadersVisible = false;
             this.dgvFinalizado.RowHeadersWidth = 62;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,9 +362,41 @@ namespace InterfazDATMA
             this.dgvFinalizado.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvFinalizado.RowTemplate.Height = 28;
             this.dgvFinalizado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFinalizado.Size = new System.Drawing.Size(899, 512);
+            this.dgvFinalizado.Size = new System.Drawing.Size(898, 512);
             this.dgvFinalizado.TabIndex = 12;
             this.dgvFinalizado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFinalizado_CellFormatting);
+            // 
+            // CursoFinalizado
+            // 
+            this.CursoFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CursoFinalizado.HeaderText = "Curso";
+            this.CursoFinalizado.MinimumWidth = 8;
+            this.CursoFinalizado.Name = "CursoFinalizado";
+            this.CursoFinalizado.ReadOnly = true;
+            // 
+            // GrupoFinalizado
+            // 
+            this.GrupoFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GrupoFinalizado.HeaderText = "Grupo";
+            this.GrupoFinalizado.MinimumWidth = 8;
+            this.GrupoFinalizado.Name = "GrupoFinalizado";
+            this.GrupoFinalizado.ReadOnly = true;
+            // 
+            // FechaInicioFinalizado
+            // 
+            this.FechaInicioFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaInicioFinalizado.HeaderText = "FechaInicio";
+            this.FechaInicioFinalizado.MinimumWidth = 8;
+            this.FechaInicioFinalizado.Name = "FechaInicioFinalizado";
+            this.FechaInicioFinalizado.ReadOnly = true;
+            // 
+            // FechaFinFinalizado
+            // 
+            this.FechaFinFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaFinFinalizado.HeaderText = "Fecha Fin";
+            this.FechaFinFinalizado.MinimumWidth = 8;
+            this.FechaFinFinalizado.Name = "FechaFinFinalizado";
+            this.FechaFinFinalizado.ReadOnly = true;
             // 
             // tableLayoutPanel3
             // 
@@ -403,38 +437,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1365, 1580);
             this.tableLayoutPanel2.TabIndex = 54;
             // 
-            // CursoFinalizado
-            // 
-            this.CursoFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CursoFinalizado.HeaderText = "Curso";
-            this.CursoFinalizado.MinimumWidth = 8;
-            this.CursoFinalizado.Name = "CursoFinalizado";
-            this.CursoFinalizado.ReadOnly = true;
-            // 
-            // GrupoFinalizado
-            // 
-            this.GrupoFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GrupoFinalizado.HeaderText = "Grupo";
-            this.GrupoFinalizado.MinimumWidth = 8;
-            this.GrupoFinalizado.Name = "GrupoFinalizado";
-            this.GrupoFinalizado.ReadOnly = true;
-            // 
-            // FechaInicioFinalizado
-            // 
-            this.FechaInicioFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FechaInicioFinalizado.HeaderText = "FechaInicio";
-            this.FechaInicioFinalizado.MinimumWidth = 8;
-            this.FechaInicioFinalizado.Name = "FechaInicioFinalizado";
-            this.FechaInicioFinalizado.ReadOnly = true;
-            // 
-            // FechaFinFinalizado
-            // 
-            this.FechaFinFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FechaFinFinalizado.HeaderText = "Fecha Fin";
-            this.FechaFinFinalizado.MinimumWidth = 8;
-            this.FechaFinFinalizado.Name = "FechaFinFinalizado";
-            this.FechaFinFinalizado.ReadOnly = true;
-            // 
             // frmGestionarModulosPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -442,7 +444,7 @@ namespace InterfazDATMA
             this.ClientSize = new System.Drawing.Size(1371, 1646);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionarModulosPsicologo";
             this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Sizable = false;
