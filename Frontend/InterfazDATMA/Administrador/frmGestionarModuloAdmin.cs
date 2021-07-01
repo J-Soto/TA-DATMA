@@ -33,9 +33,6 @@ namespace InterfazDATMA.Administrador
 
             materialButton1.Visible = true;
             materialButton2.Visible = true;
-
-            string fullpath = Path.Combine(Application.StartupPath, string.Format());
-            pictureBox1.Image = new System.Drawing.Bitmap(fullpath);
         }
 
 

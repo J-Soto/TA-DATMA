@@ -42,7 +42,6 @@ namespace InterfazDATMA.Administrador
             // pictureBox2
             // 
             this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = global::InterfazDATMA.Properties.Resources.operacionesCurso;
             this.pictureBox2.Location = new System.Drawing.Point(814, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(407, 456);
@@ -53,7 +52,6 @@ namespace InterfazDATMA.Administrador
             // pictureBox1
             // 
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::InterfazDATMA.Properties.Resources.operacionesPersona;
             this.pictureBox1.Location = new System.Drawing.Point(210, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(405, 456);
