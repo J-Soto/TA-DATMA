@@ -60,22 +60,22 @@ namespace InterfazDATMA
             //}
 
             dgvListaCursos.AutoGenerateColumns = false;
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Curso", typeof(string));
-            dt.Columns.Add("Fecha", typeof(string));
-            dt.Columns.Add("Hora Inicio", typeof(string));
-            dt.Columns.Add("Hora Fin", typeof(string));
-            foreach (var tuple in calendario)
-            {
-                //DataRow row = new DataRow()
-                //row.
-                dt.Rows.Add(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
-            }
-            dgvCalendario.DataSource = dt;
-            dgvCalendario.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvCalendario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvCalendario.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvCalendario.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("Curso", typeof(string));
+            //dt.Columns.Add("Fecha", typeof(string));
+            //dt.Columns.Add("Hora Inicio", typeof(string));
+            //dt.Columns.Add("Hora Fin", typeof(string));
+            //foreach (var tuple in calendario)
+            //{
+            //    //DataRow row = new DataRow()
+            //    //row.
+            //    dt.Rows.Add(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
+            //}
+            //dgvCalendario.DataSource = dt;
+            //dgvCalendario.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvCalendario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvCalendario.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvCalendario.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvListaCursos.DataSource = cursos;
 
             this.plantillaGestion = plantillaGestion;
