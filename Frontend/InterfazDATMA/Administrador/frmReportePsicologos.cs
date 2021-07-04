@@ -1,5 +1,7 @@
 ﻿using InterfazDATMA.util;
 
+using MaterialSkin;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +17,16 @@ namespace InterfazDATMA.Administrador
 {
     public partial class frmReportePsicologos : MaterialSkin.Controls.MaterialForm
     {
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private ReporteWS.ReporteWSClient daoReporte;
         private byte[] archivo;
         public frmReportePsicologos()
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             daoReporte = new ReporteWS.ReporteWSClient();
             this.archivo = daoReporte.reportePsicologos();
             var path = Path.GetTempFileName();

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace InterfazDATMA
 {
@@ -21,12 +22,15 @@ namespace InterfazDATMA
         private BindingList<TemaWS.tema> temasList;
         private int idCurso;
 
-        
 
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmInsertarSemana()
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
         public int IdCurso { get => idCurso; set => idCurso = value; }

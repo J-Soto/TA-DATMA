@@ -129,10 +129,13 @@
     <value>NoControl</value>
   </data>
   <data name="materialLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 0</value>
+    <value>92, 0</value>
+  </data>
+  <data name="materialLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="materialLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>615, 371</value>
+    <value>822, 460</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="materialLabel3.TabIndex" type="System.Int32, mscorlib">
@@ -166,13 +169,13 @@
     <value>Microsoft Sans Serif, 14px</value>
   </data>
   <data name="txtDescripcion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 14</value>
+    <value>17, 17</value>
   </data>
   <data name="txtDescripcion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 2, 4, 2</value>
   </data>
   <data name="txtDescripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1032, 240</value>
+    <value>1378, 300</value>
   </data>
   <data name="txtDescripcion.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -196,16 +199,16 @@
     <value>Fill</value>
   </data>
   <data name="materialCard1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 51</value>
+    <value>97, 63</value>
   </data>
   <data name="materialCard1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>13, 14, 13, 14</value>
+    <value>17, 17, 17, 17</value>
   </data>
   <data name="materialCard1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>13, 14, 13, 14</value>
+    <value>17, 17, 17, 17</value>
   </data>
   <data name="materialCard1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1058, 268</value>
+    <value>1412, 334</value>
   </data>
   <data name="materialCard1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -229,13 +232,13 @@
     <value>0, 0</value>
   </data>
   <data name="tableLayoutPanel7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="tableLayoutPanel7.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="tableLayoutPanel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 371</value>
+    <value>1607, 460</value>
   </data>
   <data name="tableLayoutPanel7.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -259,13 +262,13 @@
     <value>Fill</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>858, 130</value>
+    <value>1145, 161</value>
   </data>
   <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1205, 371</value>
+    <value>1607, 460</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -295,16 +298,16 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 130</value>
+    <value>5, 161</value>
   </data>
   <data name="tableLayoutPanel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="tableLayoutPanel4.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>846, 371</value>
+    <value>1130, 460</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -328,7 +331,7 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 632</value>
+    <value>0, 784</value>
   </data>
   <data name="tableLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -337,7 +340,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2225, 632</value>
+    <value>2967, 784</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -355,7 +358,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel4" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38.40726,Percent,54.57604,Percent,7.065949" /&gt;&lt;Rows Styles="Percent,20,Percent,60,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel4" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38.42265,Percent,54.49949,Percent,7.065949" /&gt;&lt;Rows Styles="Percent,20,Percent,60,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="materialLabel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -367,10 +370,13 @@
     <value>NoControl</value>
   </data>
   <data name="materialLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 9</value>
+    <value>132, 11</value>
+  </data>
+  <data name="materialLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="materialLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1723, 162</value>
+    <value>2298, 202</value>
   </data>
   <data name="materialLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -400,16 +406,16 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 67</value>
+    <value>104, 83</value>
   </data>
   <data name="tableLayoutPanel10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="tableLayoutPanel10.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="tableLayoutPanel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1922, 181</value>
+    <value>2563, 225</value>
   </data>
   <data name="tableLayoutPanel10.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -448,7 +454,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2225, 316</value>
+    <value>2967, 392</value>
   </data>
   <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -478,10 +484,13 @@
     <value>NoControl</value>
   </data>
   <data name="materialLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 0</value>
+    <value>92, 0</value>
+  </data>
+  <data name="materialLabel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="materialLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>622, 179</value>
+    <value>830, 222</value>
   </data>
   <data name="materialLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -517,13 +526,13 @@
     <value>NoControl</value>
   </data>
   <data name="materialButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 6</value>
+    <value>93, 7</value>
   </data>
   <data name="materialButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 6, 4, 6</value>
+    <value>5, 7, 5, 7</value>
   </data>
   <data name="materialButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 173</value>
+    <value>742, 217</value>
   </data>
   <data name="materialButton2.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -556,13 +565,13 @@
     <value>NoControl</value>
   </data>
   <data name="materialButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1449, 69</value>
+    <value>1932, 85</value>
   </data>
   <data name="materialButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 6, 4, 6</value>
+    <value>5, 7, 5, 7</value>
   </data>
   <data name="materialButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 177</value>
+    <value>728, 221</value>
   </data>
   <data name="materialButton1.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -589,16 +598,16 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 65</value>
+    <value>4, 80</value>
   </data>
   <data name="tableLayoutPanel8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 2, 4, 2</value>
   </data>
   <data name="tableLayoutPanel8.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tableLayoutPanel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1439, 185</value>
+    <value>1919, 231</value>
   </data>
   <data name="tableLayoutPanel8.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -628,7 +637,7 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1264</value>
+    <value>0, 1568</value>
   </data>
   <data name="tableLayoutPanel6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -637,7 +646,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2225, 316</value>
+    <value>2967, 392</value>
   </data>
   <data name="tableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -673,16 +682,16 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 69</value>
+    <value>5, 85</value>
   </data>
   <data name="tableLayoutPanel11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="tableLayoutPanel11.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tableLayoutPanel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>846, 179</value>
+    <value>1128, 222</value>
   </data>
   <data name="tableLayoutPanel11.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -703,7 +712,7 @@
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="materialLabel2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,7.815275,Percent,74.24512,Percent,17.86667" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel9.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="txtLinkVideo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -712,10 +721,10 @@
     <value>Roboto, 16px</value>
   </data>
   <data name="txtLinkVideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 55</value>
+    <value>5, 68</value>
   </data>
   <data name="txtLinkVideo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="txtLinkVideo.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
@@ -724,7 +733,7 @@
     <value>False</value>
   </data>
   <data name="txtLinkVideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1204, 50</value>
+    <value>1525, 50</value>
   </data>
   <data name="txtLinkVideo.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -748,13 +757,16 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>857, 68</value>
+    <value>1142, 84</value>
+  </data>
+  <data name="tableLayoutPanel9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tableLayoutPanel9.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tableLayoutPanel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1212, 181</value>
+    <value>1609, 224</value>
   </data>
   <data name="tableLayoutPanel9.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -772,13 +784,13 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel9.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txtLinkVideo" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20,Absolute,20" /&gt;&lt;Rows Styles="Percent,28.44828,Percent,71.55173" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txtLinkVideo" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,74,Absolute,27,Absolute,27" /&gt;&lt;Rows Styles="Percent,28.44828,Percent,71.55173" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 316</value>
+    <value>0, 392</value>
   </data>
   <data name="tableLayoutPanel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -787,7 +799,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2225, 316</value>
+    <value>2967, 392</value>
   </data>
   <data name="tableLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -805,22 +817,22 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel5.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel11" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel9" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38.40726,Percent,54.77793,Percent,6.864065" /&gt;&lt;Rows Styles="Percent,20.52632,Percent,58.94737,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel11" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel9" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38.40726,Percent,54.5332,Percent,7.11156" /&gt;&lt;Rows Styles="Percent,20.52632,Percent,58.94737,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 64</value>
+    <value>4, 79</value>
   </data>
   <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2225, 1580</value>
+    <value>2967, 1960</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -844,16 +856,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>12, 25</value>
+    <value>16, 31</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>2231, 1646</value>
+    <value>2975, 2041</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 64, 3, 2</value>
+    <value>4, 79, 4, 2</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmAgregarMaterialPsicologo</value>

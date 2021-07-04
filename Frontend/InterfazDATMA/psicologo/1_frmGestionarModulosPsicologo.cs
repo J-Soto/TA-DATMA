@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using InterfazDATMA;
 using InterfazDATMA.plantilla;
 using InterfazDATMA.util;
+
+using MaterialSkin;
 using MaterialSkin.Controls;
 
 
@@ -22,6 +24,7 @@ namespace InterfazDATMA
         private CursoWS.CursoWSClient daoCurso;
         private ActividadWS.ActividadWSClient daoActividad;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         //cursos:
         private BindingList<CursoWS.curso> cursos;
         private BindingList<Psicologo_Curso> cursosGrupos; //Contiene el idgrupo y el idcurso (Activos)
@@ -38,6 +41,8 @@ namespace InterfazDATMA
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             plantillaGestion = plantilla;
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             daoCurso = new CursoWS.CursoWSClient();

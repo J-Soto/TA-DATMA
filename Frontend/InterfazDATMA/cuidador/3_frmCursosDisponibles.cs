@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MaterialSkin;
 using InterfazDATMA.util;
 namespace InterfazDATMA
 {
@@ -18,6 +18,7 @@ namespace InterfazDATMA
         public frmListaCursoInscritos formAnterior;
         private frmPlantillaGestion plantilla;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
         private PsicologoWS.PsicologoWSClient daoPsi = new PsicologoWS.PsicologoWSClient();
         private GrupoWS.GrupoWSClient daoGrupo = new GrupoWS.GrupoWSClient();
@@ -29,9 +30,10 @@ namespace InterfazDATMA
 
         public frmCursosDisponibles(frmListaCursoInscritos formAnterior, frmPlantillaGestion plantilla, List<CursoWS.curso> cursosDisponibles)
         {
-
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT; 
             this.formAnterior = formAnterior;
             this.plantilla = plantilla;
             // cursos en el que el psicologo no se ha inscrito

@@ -21,10 +21,13 @@ namespace InterfazDATMA.psicologo
 
         public documento Documento { get => documento; set => documento = value; }
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmInsertarDocumento()
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
             txtDescripcion.Text = "";
             txtRutaArchivo.Text = "";

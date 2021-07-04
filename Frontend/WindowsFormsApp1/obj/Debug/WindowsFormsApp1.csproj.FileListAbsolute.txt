@@ -30,3 +30,4 @@ C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache

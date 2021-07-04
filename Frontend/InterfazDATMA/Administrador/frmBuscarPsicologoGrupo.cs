@@ -1,5 +1,6 @@
 ﻿using InterfazDATMA.util;
 
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,9 @@ namespace InterfazDATMA.Administrador
         private BindingList<PsicologoWS.psicologo> psicologos;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private PsicologoWS.psicologo psicologoSelected = null;
-        
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
+
         public PsicologoWS.psicologo PsicologoSelected { get => psicologoSelected; set => psicologoSelected = value; }
 
         public frmBuscarPsicologoGrupo()
@@ -28,6 +31,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
@@ -71,6 +76,12 @@ namespace InterfazDATMA.Administrador
                 this.DialogResult = DialogResult.OK;
             }
 
+        }
+
+        private void btnReportePsi_Click(object sender, EventArgs e)
+        {
+            frmReportePsicologos reporte = new frmReportePsicologos();
+            reporte.Show();
         }
     }
 }

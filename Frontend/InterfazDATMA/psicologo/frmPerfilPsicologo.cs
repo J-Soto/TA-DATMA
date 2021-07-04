@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.psicologo
 {
@@ -19,10 +20,13 @@ namespace InterfazDATMA.psicologo
         private UsuarioWS.UsuarioWSClient daoUsuario;
         private frmPlantillaGestion plantillaGestion;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmPerfilPsicologo(frmPlantillaGestion Plantilla)
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             HabilitarCampos();
             plantillaGestion = Plantilla;
             daoUsuario = new UsuarioWS.UsuarioWSClient();

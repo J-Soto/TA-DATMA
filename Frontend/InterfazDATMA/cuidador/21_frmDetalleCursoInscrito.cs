@@ -11,11 +11,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using InterfazDATMA.util;
+using MaterialSkin;
+
 namespace InterfazDATMA
 {
     public partial class frmDetalleCursoInscrito : MaterialSkin.Controls.MaterialForm 
     {
         public frmListaCursoInscritos formAnterior;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private frmPlantillaGestion plantillaGestion;
         private CursoWS.curso curso;
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
@@ -27,6 +31,8 @@ namespace InterfazDATMA
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
             this.curso = curso;

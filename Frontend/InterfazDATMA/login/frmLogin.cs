@@ -28,6 +28,7 @@ namespace InterfazDATMA
             InitializeComponent();
             Design.Ini(this);
             daoUsuario = new UsuarioWS.UsuarioWSClient();
+            this.AcceptButton = btnIngresar; 
         }
         
         private void clickUsuario(object sender, MouseEventArgs e)
@@ -90,12 +91,13 @@ namespace InterfazDATMA
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtUsuario.Text == "Usuario") txtUsuario.Text = " ";
+            
         }
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-
+           if (txtContraseña.Text == "Password") txtContraseña.Text = " ";
         }
     }
 }

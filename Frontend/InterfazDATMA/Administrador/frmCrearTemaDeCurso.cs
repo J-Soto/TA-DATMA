@@ -1,5 +1,6 @@
 ﻿using InterfazDATMA.util;
 
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,8 @@ namespace InterfazDATMA.Administrador
     public partial class frmCrearTemaDeCurso : MaterialSkin.Controls.MaterialForm 
     {
         private TemaWS.TemaWSClient daoTema;
-        
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
         public frmCrearTemaDeCurso()
         {
@@ -24,6 +26,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             daoTema = new TemaWS.TemaWSClient();
             inicializarPantalla();
         }

@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
@@ -21,6 +22,8 @@ namespace InterfazDATMA.Administrador
         public frmOperacionesPersona formOperacionPersona;
 
         private TutorWS.TutorWSClient daoTutor;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
         private TutorWS.tutor tutor;
         private string rutaFoto = "";
@@ -33,6 +36,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.tutor = tutor;
             
             this.formPlantilla = formPlantilla;

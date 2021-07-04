@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
@@ -18,6 +19,8 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantilla;
         private frmInsertarTutor formAnterior;
         private TutorWS.tutor tutorAux;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private TutorWS.TutorWSClient daoTutor;
         public frmInsertarPreferencias(frmInsertarTutor formAnterior, frmPlantillaGestion formPlantilla, TutorWS.tutor tutor)
         {
@@ -25,6 +28,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formPlantilla = formPlantilla;
             this.formAnterior = formAnterior;
             daoTutor = new TutorWS.TutorWSClient();

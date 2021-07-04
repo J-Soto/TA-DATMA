@@ -11,17 +11,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.cuidador
 {
     public partial class frmPerfilCuidador : MaterialSkin.Controls.MaterialForm 
     {
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private UsuarioWS.UsuarioWSClient daoUsuario = new UsuarioWS.UsuarioWSClient();
         private frmPlantillaGestion plantillaGestion;
         public frmPerfilCuidador(frmPlantillaGestion plantilla)
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             HabilitarCampos();
             plantillaGestion = plantilla;
             txtUser.Text = frmPlantillaGestion.tutor.user;

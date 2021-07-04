@@ -11,12 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.psicologo
 {
     public partial class frmInsertarActividad : MaterialSkin.Controls.MaterialForm
     {
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private frmModificarPrograma formModificarPrograma;
         private frmPlantillaGestion formPlantillaGestion;
 
@@ -62,6 +64,8 @@ namespace InterfazDATMA.psicologo
 
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formModificarPrograma = formModificarPrograma;
             this.formPlantillaGestion = formPlantillaGestion;
 

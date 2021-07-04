@@ -10,11 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
     public partial class frmInsertarDistrito : MaterialSkin.Controls.MaterialForm 
     {
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private DistritoWS.DistritoWSClient daoDistrito;
         public DistritoWS.distrito distrito;
         public frmInsertarDistrito()
@@ -23,6 +26,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             daoDistrito = new DistritoWS.DistritoWSClient();
 
             dgvDistrito.AutoGenerateColumns = false;
