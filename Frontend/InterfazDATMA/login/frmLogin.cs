@@ -91,13 +91,13 @@ namespace InterfazDATMA
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Usuario") txtUsuario.Text = " ";
+            if (txtUsuario.Text == "Usuario") txtUsuario.Text = "";
             
         }
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-           if (txtContraseña.Text == "Password") txtContraseña.Text = " ";
+           if (txtContraseña.Text == "Password") txtContraseña.Text = "";
         }
     }
 }
