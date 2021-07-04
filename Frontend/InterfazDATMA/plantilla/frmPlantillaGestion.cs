@@ -193,14 +193,14 @@ namespace InterfazDATMA.plantilla
             {
                 Design.tema = 'd';
                 ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
-                btnTema.Text = "Oscuro";
+                btnTema.Text = "          Oscuro";
                 pictureBox4.Image = Properties.Resources.moon;
             }
 
             else
             {
                 Design.tema = 'l';
-                btnTema.Text = "Claro";
+                btnTema.Text = "          Claro";
                 ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
                 pictureBox4.Image = Properties.Resources.sun;
             }
