@@ -66,6 +66,7 @@ namespace InterfazDATMA.psicologo
         private void btnModificar_Click(object sender, EventArgs e)
         {
             DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?\nNuevo Usuario: " + txtUser.Text + "\nNueva Contraseña: " + txtPass.Text,
+                "Mensaje de Confirmación",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (msg == DialogResult.Yes)
             {
                 UsuarioWS.usuario tempUser = new UsuarioWS.usuario();

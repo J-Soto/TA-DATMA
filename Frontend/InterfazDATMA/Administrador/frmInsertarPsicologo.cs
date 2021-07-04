@@ -139,10 +139,10 @@ namespace InterfazDATMA.Administrador
             {
                 if (frmDistrito.distrito != null)
                 {
-                    distrito = new PsicologoWS.distrito();
-                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
-                    distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = distrito.nombre;
+                    this.distrito = new PsicologoWS.distrito();
+                    this.distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    this.distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = this.distrito.nombre;
                 }
             }
 
@@ -256,7 +256,6 @@ namespace InterfazDATMA.Administrador
                             int idPsicologo = daoPsicologo.insertarPsicologo(psicologo);
                             if (idPsicologo > 0)
                             {
-                                //var credenciales = generarUsuario();
                                 string msgEnvioDatos = "";
                                 if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, psicologo.user, psicologo.password,psicologo.nombre+" "+
                                     psicologo.apellidoPaterno+" "+psicologo.apellidoMaterno,"",0) == 1)

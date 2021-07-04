@@ -60,6 +60,9 @@
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="user" type="xs:string" />
       <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+      <xs:element minOccurs="0" name="mensaje" type="xs:string" />
+      <xs:element name="motivo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="enviarDatosUsuarioResponse">
