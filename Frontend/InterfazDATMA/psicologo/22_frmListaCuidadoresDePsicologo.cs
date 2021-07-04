@@ -47,7 +47,7 @@ namespace InterfazDATMA
             var auxTutores = daoGrupo.listarTutoresPorIdGrupo(idGrupo);
             if (auxTutores != null)
             {
-                tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
+                tutores = new BindingList<GrupoWS.tutor>(auxTutores.OrderBy(x => x.nombre).ToList());
             }
             else
             {

@@ -220,7 +220,6 @@ namespace InterfazDATMA
             // 
             this.dgvReuniones.AllowUserToAddRows = false;
             this.dgvReuniones.AllowUserToDeleteRows = false;
-            this.dgvReuniones.AllowUserToResizeColumns = false;
             this.dgvReuniones.AllowUserToResizeRows = false;
             this.dgvReuniones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvReuniones.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -844,8 +843,8 @@ namespace InterfazDATMA
             // 
             this.tableLayoutPanel13.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel13.ColumnCount = 2;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.86803F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.13198F));
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel14, 0, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 3);
@@ -869,7 +868,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(907, 90);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(1316, 90);
             this.tableLayoutPanel14.TabIndex = 1;
             // 
             // lblTema
@@ -878,10 +877,10 @@ namespace InterfazDATMA
             this.lblTema.Depth = 0;
             this.lblTema.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTema.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTema.Location = new System.Drawing.Point(69, 0);
+            this.lblTema.Location = new System.Drawing.Point(100, 0);
             this.lblTema.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTema.Name = "lblTema";
-            this.lblTema.Size = new System.Drawing.Size(743, 90);
+            this.lblTema.Size = new System.Drawing.Size(1081, 90);
             this.lblTema.TabIndex = 100;
             this.lblTema.Text = "Programa: Que aprenderás";
             // 
@@ -1041,14 +1040,14 @@ namespace InterfazDATMA
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialLabel lblTema;
         private System.Windows.Forms.DataGridView dgvReuniones;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private MaterialSkin.Controls.MaterialTextBox rtxtTema;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private MaterialSkin.Controls.MaterialTextBox rtxtDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewLinkColumn UnirseReunion;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private MaterialSkin.Controls.MaterialTextBox rtxtTema;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        private MaterialSkin.Controls.MaterialTextBox rtxtDescripcion;
     }
 }
