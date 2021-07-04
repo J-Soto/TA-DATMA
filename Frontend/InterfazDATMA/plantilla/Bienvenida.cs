@@ -24,6 +24,7 @@ namespace InterfazDATMA.plantilla
             this.plantillaGestion = plantillaGestion;
             InitializeComponent();
             Design.Ini(this);
+            label1.Font = new Font("Arial",50f, FontStyle.Bold);
             Mensaje();
         }
 
