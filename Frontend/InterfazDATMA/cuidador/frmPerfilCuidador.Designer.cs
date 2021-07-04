@@ -38,16 +38,19 @@ namespace InterfazDATMA.cuidador
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel46 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel83 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl4 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBajoRec = new MaterialSkin.Controls.MaterialTextBox();
             this.lblBajosRecursos = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel47 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel81 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtGest = new MaterialSkin.Controls.MaterialTextBox();
             this.lblGestante = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel48 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel49 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtPass = new MaterialSkin.Controls.MaterialTextBox();
             this.lblPass = new MaterialSkin.Controls.MaterialLabel();
@@ -55,27 +58,32 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel52 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.txtUser = new MaterialSkin.Controls.MaterialTextBox();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.lblUsuario = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel54 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel55 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel56 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel57 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl12 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.txtFechaNac = new MaterialSkin.Controls.MaterialTextBox();
             this.lblFechaNac = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel59 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel60 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl11 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCel = new MaterialSkin.Controls.MaterialTextBox();
             this.lblCel = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel62 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel63 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl10 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.txtTelf = new MaterialSkin.Controls.MaterialTextBox();
             this.lblTel = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel65 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel66 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl6 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.txtDni = new MaterialSkin.Controls.MaterialTextBox();
             this.lblDni = new MaterialSkin.Controls.MaterialLabel();
@@ -86,36 +94,28 @@ namespace InterfazDATMA.cuidador
             this.lblPeriodo = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel69 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel70 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl5 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtNom = new MaterialSkin.Controls.MaterialTextBox();
             this.lblNombre = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel72 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel73 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl7 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.txtEdad = new MaterialSkin.Controls.MaterialTextBox();
             this.lblEdad = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel75 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel76 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl8 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.txtGen = new MaterialSkin.Controls.MaterialTextBox();
             this.lblGen = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel78 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel79 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl9 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCorreo = new MaterialSkin.Controls.MaterialTextBox();
             this.lblCorreo = new MaterialSkin.Controls.MaterialLabel();
-            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl4 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl5 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl6 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl7 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl8 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl9 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl10 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl11 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl12 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel43.SuspendLayout();
             this.tableLayoutPanel44.SuspendLayout();
             this.tableLayoutPanel45.SuspendLayout();
@@ -331,6 +331,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel83.Size = new System.Drawing.Size(883, 120);
             this.tableLayoutPanel83.TabIndex = 85;
             // 
+            // nLabelControl4
+            // 
+            this.nLabelControl4.AutoSize = false;
+            this.nLabelControl4.DesignTimeState = resources.GetString("nLabelControl4.DesignTimeState");
+            this.nLabelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl4.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl4.Name = "nLabelControl4";
+            this.nLabelControl4.Size = new System.Drawing.Size(347, 114);
+            this.nLabelControl4.TabIndex = 85;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -417,6 +427,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel81.Size = new System.Drawing.Size(883, 120);
             this.tableLayoutPanel81.TabIndex = 84;
             // 
+            // nLabelControl3
+            // 
+            this.nLabelControl3.AutoSize = false;
+            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
+            this.nLabelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl3.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl3.Name = "nLabelControl3";
+            this.nLabelControl3.Size = new System.Drawing.Size(347, 114);
+            this.nLabelControl3.TabIndex = 85;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -502,6 +522,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel49.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel49.Size = new System.Drawing.Size(883, 120);
             this.tableLayoutPanel49.TabIndex = 79;
+            // 
+            // nLabelControl2
+            // 
+            this.nLabelControl2.AutoSize = false;
+            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
+            this.nLabelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl2.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl2.Name = "nLabelControl2";
+            this.nLabelControl2.Size = new System.Drawing.Size(347, 114);
+            this.nLabelControl2.TabIndex = 85;
             // 
             // tableLayoutPanel1
             // 
@@ -622,6 +652,16 @@ namespace InterfazDATMA.cuidador
             this.txtUser.Text = "";
             this.txtUser.TrailingIcon = null;
             // 
+            // nLabelControl1
+            // 
+            this.nLabelControl1.AutoSize = false;
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl1.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl1.Name = "nLabelControl1";
+            this.nLabelControl1.Size = new System.Drawing.Size(347, 114);
+            this.nLabelControl1.TabIndex = 82;
+            // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
@@ -736,6 +776,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel57.Size = new System.Drawing.Size(1085, 141);
             this.tableLayoutPanel57.TabIndex = 80;
             // 
+            // nLabelControl12
+            // 
+            this.nLabelControl12.AutoSize = false;
+            this.nLabelControl12.DesignTimeState = resources.GetString("nLabelControl12.DesignTimeState");
+            this.nLabelControl12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl12.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl12.Name = "nLabelControl12";
+            this.nLabelControl12.Size = new System.Drawing.Size(428, 135);
+            this.nLabelControl12.TabIndex = 90;
+            // 
             // tableLayoutPanel11
             // 
             this.tableLayoutPanel11.ColumnCount = 1;
@@ -822,6 +872,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel60.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel60.Size = new System.Drawing.Size(1085, 135);
             this.tableLayoutPanel60.TabIndex = 79;
+            // 
+            // nLabelControl11
+            // 
+            this.nLabelControl11.AutoSize = false;
+            this.nLabelControl11.DesignTimeState = resources.GetString("nLabelControl11.DesignTimeState");
+            this.nLabelControl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl11.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl11.Name = "nLabelControl11";
+            this.nLabelControl11.Size = new System.Drawing.Size(428, 129);
+            this.nLabelControl11.TabIndex = 89;
             // 
             // tableLayoutPanel10
             // 
@@ -910,6 +970,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel63.Size = new System.Drawing.Size(1085, 135);
             this.tableLayoutPanel63.TabIndex = 79;
             // 
+            // nLabelControl10
+            // 
+            this.nLabelControl10.AutoSize = false;
+            this.nLabelControl10.DesignTimeState = resources.GetString("nLabelControl10.DesignTimeState");
+            this.nLabelControl10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl10.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl10.Name = "nLabelControl10";
+            this.nLabelControl10.Size = new System.Drawing.Size(428, 129);
+            this.nLabelControl10.TabIndex = 88;
+            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
@@ -996,6 +1066,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel66.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel66.Size = new System.Drawing.Size(1085, 135);
             this.tableLayoutPanel66.TabIndex = 79;
+            // 
+            // nLabelControl6
+            // 
+            this.nLabelControl6.AutoSize = false;
+            this.nLabelControl6.DesignTimeState = resources.GetString("nLabelControl6.DesignTimeState");
+            this.nLabelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl6.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl6.Name = "nLabelControl6";
+            this.nLabelControl6.Size = new System.Drawing.Size(428, 129);
+            this.nLabelControl6.TabIndex = 85;
             // 
             // tableLayoutPanel5
             // 
@@ -1170,6 +1250,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel70.Size = new System.Drawing.Size(1085, 135);
             this.tableLayoutPanel70.TabIndex = 79;
             // 
+            // nLabelControl5
+            // 
+            this.nLabelControl5.AutoSize = false;
+            this.nLabelControl5.DesignTimeState = resources.GetString("nLabelControl5.DesignTimeState");
+            this.nLabelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl5.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl5.Name = "nLabelControl5";
+            this.nLabelControl5.Size = new System.Drawing.Size(428, 129);
+            this.nLabelControl5.TabIndex = 85;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
@@ -1255,6 +1345,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel73.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel73.Size = new System.Drawing.Size(1085, 135);
             this.tableLayoutPanel73.TabIndex = 79;
+            // 
+            // nLabelControl7
+            // 
+            this.nLabelControl7.AutoSize = false;
+            this.nLabelControl7.DesignTimeState = resources.GetString("nLabelControl7.DesignTimeState");
+            this.nLabelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl7.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl7.Name = "nLabelControl7";
+            this.nLabelControl7.Size = new System.Drawing.Size(428, 129);
+            this.nLabelControl7.TabIndex = 85;
             // 
             // tableLayoutPanel6
             // 
@@ -1343,6 +1443,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel76.Size = new System.Drawing.Size(1085, 135);
             this.tableLayoutPanel76.TabIndex = 79;
             // 
+            // nLabelControl8
+            // 
+            this.nLabelControl8.AutoSize = false;
+            this.nLabelControl8.DesignTimeState = resources.GetString("nLabelControl8.DesignTimeState");
+            this.nLabelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl8.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl8.Name = "nLabelControl8";
+            this.nLabelControl8.Size = new System.Drawing.Size(428, 129);
+            this.nLabelControl8.TabIndex = 86;
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
@@ -1430,6 +1540,16 @@ namespace InterfazDATMA.cuidador
             this.tableLayoutPanel79.Size = new System.Drawing.Size(1085, 135);
             this.tableLayoutPanel79.TabIndex = 79;
             // 
+            // nLabelControl9
+            // 
+            this.nLabelControl9.AutoSize = false;
+            this.nLabelControl9.DesignTimeState = resources.GetString("nLabelControl9.DesignTimeState");
+            this.nLabelControl9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl9.Location = new System.Drawing.Point(3, 3);
+            this.nLabelControl9.Name = "nLabelControl9";
+            this.nLabelControl9.Size = new System.Drawing.Size(428, 129);
+            this.nLabelControl9.TabIndex = 87;
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
@@ -1478,126 +1598,6 @@ namespace InterfazDATMA.cuidador
             this.lblCorreo.TabIndex = 85;
             this.lblCorreo.Text = "c";
             this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // nLabelControl1
-            // 
-            this.nLabelControl1.AutoSize = false;
-            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
-            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl1.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl1.Name = "nLabelControl1";
-            this.nLabelControl1.Size = new System.Drawing.Size(347, 114);
-            this.nLabelControl1.TabIndex = 82;
-            // 
-            // nLabelControl2
-            // 
-            this.nLabelControl2.AutoSize = false;
-            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
-            this.nLabelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl2.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl2.Name = "nLabelControl2";
-            this.nLabelControl2.Size = new System.Drawing.Size(347, 114);
-            this.nLabelControl2.TabIndex = 85;
-            // 
-            // nLabelControl3
-            // 
-            this.nLabelControl3.AutoSize = false;
-            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
-            this.nLabelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl3.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl3.Name = "nLabelControl3";
-            this.nLabelControl3.Size = new System.Drawing.Size(347, 114);
-            this.nLabelControl3.TabIndex = 85;
-            // 
-            // nLabelControl4
-            // 
-            this.nLabelControl4.AutoSize = false;
-            this.nLabelControl4.DesignTimeState = resources.GetString("nLabelControl4.DesignTimeState");
-            this.nLabelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl4.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl4.Name = "nLabelControl4";
-            this.nLabelControl4.Size = new System.Drawing.Size(347, 114);
-            this.nLabelControl4.TabIndex = 85;
-            // 
-            // nLabelControl5
-            // 
-            this.nLabelControl5.AutoSize = false;
-            this.nLabelControl5.DesignTimeState = resources.GetString("nLabelControl5.DesignTimeState");
-            this.nLabelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl5.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl5.Name = "nLabelControl5";
-            this.nLabelControl5.Size = new System.Drawing.Size(428, 129);
-            this.nLabelControl5.TabIndex = 85;
-            // 
-            // nLabelControl6
-            // 
-            this.nLabelControl6.AutoSize = false;
-            this.nLabelControl6.DesignTimeState = resources.GetString("nLabelControl6.DesignTimeState");
-            this.nLabelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl6.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl6.Name = "nLabelControl6";
-            this.nLabelControl6.Size = new System.Drawing.Size(428, 129);
-            this.nLabelControl6.TabIndex = 85;
-            // 
-            // nLabelControl7
-            // 
-            this.nLabelControl7.AutoSize = false;
-            this.nLabelControl7.DesignTimeState = resources.GetString("nLabelControl7.DesignTimeState");
-            this.nLabelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl7.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl7.Name = "nLabelControl7";
-            this.nLabelControl7.Size = new System.Drawing.Size(428, 129);
-            this.nLabelControl7.TabIndex = 85;
-            // 
-            // nLabelControl8
-            // 
-            this.nLabelControl8.AutoSize = false;
-            this.nLabelControl8.DesignTimeState = resources.GetString("nLabelControl8.DesignTimeState");
-            this.nLabelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl8.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl8.Name = "nLabelControl8";
-            this.nLabelControl8.Size = new System.Drawing.Size(428, 129);
-            this.nLabelControl8.TabIndex = 86;
-            // 
-            // nLabelControl9
-            // 
-            this.nLabelControl9.AutoSize = false;
-            this.nLabelControl9.DesignTimeState = resources.GetString("nLabelControl9.DesignTimeState");
-            this.nLabelControl9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl9.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl9.Name = "nLabelControl9";
-            this.nLabelControl9.Size = new System.Drawing.Size(428, 129);
-            this.nLabelControl9.TabIndex = 87;
-            // 
-            // nLabelControl10
-            // 
-            this.nLabelControl10.AutoSize = false;
-            this.nLabelControl10.DesignTimeState = resources.GetString("nLabelControl10.DesignTimeState");
-            this.nLabelControl10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl10.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl10.Name = "nLabelControl10";
-            this.nLabelControl10.Size = new System.Drawing.Size(428, 129);
-            this.nLabelControl10.TabIndex = 88;
-            // 
-            // nLabelControl11
-            // 
-            this.nLabelControl11.AutoSize = false;
-            this.nLabelControl11.DesignTimeState = resources.GetString("nLabelControl11.DesignTimeState");
-            this.nLabelControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl11.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl11.Name = "nLabelControl11";
-            this.nLabelControl11.Size = new System.Drawing.Size(428, 129);
-            this.nLabelControl11.TabIndex = 89;
-            // 
-            // nLabelControl12
-            // 
-            this.nLabelControl12.AutoSize = false;
-            this.nLabelControl12.DesignTimeState = resources.GetString("nLabelControl12.DesignTimeState");
-            this.nLabelControl12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl12.Location = new System.Drawing.Point(3, 3);
-            this.nLabelControl12.Name = "nLabelControl12";
-            this.nLabelControl12.Size = new System.Drawing.Size(428, 135);
-            this.nLabelControl12.TabIndex = 90;
             // 
             // frmPerfilCuidador
             // 
