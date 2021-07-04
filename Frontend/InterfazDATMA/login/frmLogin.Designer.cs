@@ -65,9 +65,9 @@
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Password = true;
-            this.txtContraseña.Size = new System.Drawing.Size(417, 50);
+            this.txtContraseña.Size = new System.Drawing.Size(626, 50);
             this.txtContraseña.TabIndex = 11;
-            this.txtContraseña.Text = "Password";
+            this.txtContraseña.Text = "";
             this.txtContraseña.TrailingIcon = null;
             this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
@@ -83,7 +83,7 @@
             this.txtUsuario.MouseState = MaterialSkin.MouseState.OUT;
             this.txtUsuario.Multiline = false;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(417, 50);
+            this.txtUsuario.Size = new System.Drawing.Size(626, 50);
             this.txtUsuario.TabIndex = 10;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.TrailingIcon = null;
