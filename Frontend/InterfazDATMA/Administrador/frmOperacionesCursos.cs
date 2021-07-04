@@ -78,7 +78,30 @@ namespace InterfazDATMA.Administrador
 
         private int eliminarCursoSeleccionado(int idCurso)
         {
-            return 1;
+            int resultado = 0;
+            try
+            {
+                //Lista temas existentes en curso
+                BindingList<CursoWS.tema> temasExistentes = null;
+                try
+                {
+                    temasExistentes = new BindingList<CursoWS.tema>(daoCurso.listarTemasPorIdCurso(idCurso).ToList());
+                }
+                catch (Exception) {}
+                //Elimina la lista de temas ya existentes en el curso
+                foreach (CursoWS.tema item in temasExistentes)
+                {
+                    daoCurso.eliminarCursoTema(item.id_curso_tema);
+                }
+                resultado = daoCurso.eliminarCurso(idCurso);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return resultado;
+            
         }
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
@@ -117,7 +140,13 @@ namespace InterfazDATMA.Administrador
             }
             else
             {
-
+                frmJustificacionCursoEliminado formJustificacion = new frmJustificacionCursoEliminado();
+                if (formJustificacion.ShowDialog() == DialogResult.OK)
+                {
+                    eliminarCursoSeleccionado(cursos[index].idCurso);
+                    cursos.RemoveAt(index);
+                    UpdateCursosTable();
+                }
             }
 
             
