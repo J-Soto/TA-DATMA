@@ -169,7 +169,7 @@ namespace InterfazDATMA.plantilla
         {
             if (seMuestra)
             {
-                if (PanelLateral.Width >= (this.Width * 0.01)) timer.Stop();
+                if (PanelLateral.Width >= (this.Width * 0.02)) timer.Stop();
                 PanelLateral.Width += 200;
             }
             else

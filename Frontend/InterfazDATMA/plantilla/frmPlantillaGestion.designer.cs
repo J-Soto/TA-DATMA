@@ -65,6 +65,7 @@ namespace InterfazDATMA.plantilla
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.clock = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.Panel.SuspendLayout();
             this.Header.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -85,6 +86,7 @@ namespace InterfazDATMA.plantilla
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel
@@ -131,7 +133,7 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.708801F));
             this.tableLayoutPanel1.Controls.Add(this.Usuario, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -194,9 +196,9 @@ namespace InterfazDATMA.plantilla
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::InterfazDATMA.Properties.Resources.menu;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 21);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(163, 124);
+            this.pictureBox2.Size = new System.Drawing.Size(125, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -569,6 +571,23 @@ namespace InterfazDATMA.plantilla
             this.clock.Enabled = true;
             this.clock.Tick += new System.EventHandler(this.clock_Tick);
             // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.746479F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.25352F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox2, 1, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(19, 3);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 3;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.47573F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.52427F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(163, 124);
+            this.tableLayoutPanel8.TabIndex = 3;
+            // 
             // frmPlantillaGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -602,6 +621,7 @@ namespace InterfazDATMA.plantilla
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tableLayoutPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -643,5 +663,6 @@ namespace InterfazDATMA.plantilla
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton btnperfil;
         private MaterialSkin.Controls.MaterialCard materialCard1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
     }
 }
