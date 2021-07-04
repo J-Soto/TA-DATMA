@@ -74,8 +74,8 @@ namespace InterfazDATMA.Administrador
             this.CantSemanas});
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvCursos.Location = new System.Drawing.Point(263, 140);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCursos.Location = new System.Drawing.Point(132, 73);
+            this.dgvCursos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -94,7 +94,7 @@ namespace InterfazDATMA.Administrador
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCursos.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCursos.RowTemplate.Height = 28;
-            this.dgvCursos.Size = new System.Drawing.Size(1295, 635);
+            this.dgvCursos.Size = new System.Drawing.Size(648, 330);
             this.dgvCursos.TabIndex = 19;
             // 
             // Nombre
@@ -156,10 +156,10 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(252, 58);
-            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTutoresUser.Location = new System.Drawing.Point(126, 30);
+            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(509, 63);
+            this.lblTutoresUser.Size = new System.Drawing.Size(257, 31);
             this.lblTutoresUser.TabIndex = 20;
             this.lblTutoresUser.Text = "Cursos Disponibles:";
             // 
@@ -171,11 +171,11 @@ namespace InterfazDATMA.Administrador
             this.btnInsertarCurso.Depth = 0;
             this.btnInsertarCurso.HighEmphasis = true;
             this.btnInsertarCurso.Icon = null;
-            this.btnInsertarCurso.Location = new System.Drawing.Point(1627, 140);
-            this.btnInsertarCurso.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnInsertarCurso.Location = new System.Drawing.Point(814, 73);
+            this.btnInsertarCurso.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnInsertarCurso.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInsertarCurso.Name = "btnInsertarCurso";
-            this.btnInsertarCurso.Size = new System.Drawing.Size(212, 55);
+            this.btnInsertarCurso.Size = new System.Drawing.Size(106, 29);
             this.btnInsertarCurso.TabIndex = 21;
             this.btnInsertarCurso.Text = "Insertar Curso";
             this.btnInsertarCurso.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -191,11 +191,11 @@ namespace InterfazDATMA.Administrador
             this.btnRegresar.Depth = 0;
             this.btnRegresar.HighEmphasis = true;
             this.btnRegresar.Icon = null;
-            this.btnRegresar.Location = new System.Drawing.Point(1627, 720);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegresar.Location = new System.Drawing.Point(814, 374);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(212, 55);
+            this.btnRegresar.Size = new System.Drawing.Size(106, 29);
             this.btnRegresar.TabIndex = 22;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -211,11 +211,11 @@ namespace InterfazDATMA.Administrador
             this.btnEliminarCurso.Depth = 0;
             this.btnEliminarCurso.HighEmphasis = true;
             this.btnEliminarCurso.Icon = null;
-            this.btnEliminarCurso.Location = new System.Drawing.Point(1628, 208);
-            this.btnEliminarCurso.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEliminarCurso.Location = new System.Drawing.Point(814, 108);
+            this.btnEliminarCurso.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEliminarCurso.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminarCurso.Name = "btnEliminarCurso";
-            this.btnEliminarCurso.Size = new System.Drawing.Size(211, 55);
+            this.btnEliminarCurso.Size = new System.Drawing.Size(106, 29);
             this.btnEliminarCurso.TabIndex = 22;
             this.btnEliminarCurso.Text = "Eliminar Curso";
             this.btnEliminarCurso.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -231,11 +231,11 @@ namespace InterfazDATMA.Administrador
             this.btnReporte.Depth = 0;
             this.btnReporte.HighEmphasis = true;
             this.btnReporte.Icon = null;
-            this.btnReporte.Location = new System.Drawing.Point(1628, 627);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnReporte.Location = new System.Drawing.Point(814, 326);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnReporte.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(211, 55);
+            this.btnReporte.Size = new System.Drawing.Size(106, 29);
             this.btnReporte.TabIndex = 23;
             this.btnReporte.Text = "Reporte";
             this.btnReporte.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -244,10 +244,10 @@ namespace InterfazDATMA.Administrador
             // 
             // frmOperacionesCursos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1931, 1021);
+            this.ClientSize = new System.Drawing.Size(977, 505);
             this.ControlBox = false;
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnEliminarCurso);
@@ -255,9 +255,9 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.btnInsertarCurso);
             this.Controls.Add(this.lblTutoresUser);
             this.Controls.Add(this.dgvCursos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmOperacionesCursos";
-            this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
+            this.Padding = new System.Windows.Forms.Padding(2, 42, 2, 2);
             this.Sizable = false;
             this.Text = "Operaciones Cursos";
             this.Load += new System.EventHandler(this.frmOperacionesCursos_Load);

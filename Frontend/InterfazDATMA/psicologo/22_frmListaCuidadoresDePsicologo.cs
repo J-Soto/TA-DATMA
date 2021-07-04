@@ -26,7 +26,7 @@ namespace InterfazDATMA
         //Grupo:
         private int idGrupo;
 
-        public frmListaCuidadoresDePsicologo(frmConfigurarModuloPsicologo formConfigurarModulo, frmPlantillaGestion formPlantillaGestion, int idGrupo)
+        public frmListaCuidadoresDePsicologo(frmConfigurarModuloPsicologo formConfigurarModulo, frmPlantillaGestion formPlantillaGestion, int idGrupo, CursoWS.curso curso, GrupoWS.grupo grupo)
         {
             InitializeComponent();
             Design.Ini(this);
@@ -34,6 +34,8 @@ namespace InterfazDATMA
             this.formConfigurarModulo = formConfigurarModulo;
             this.formPlantillaGestion = formPlantillaGestion;
             this.idGrupo = idGrupo;
+
+            lblInformacion.Text = "Curso: " + curso.descripcion + "   >   Grupo: " + grupo.nombrePromocion;
 
             daoGrupo = new GrupoWS.GrupoWSClient();
 
@@ -45,7 +47,7 @@ namespace InterfazDATMA
             var auxTutores = daoGrupo.listarTutoresPorIdGrupo(idGrupo);
             if (auxTutores != null)
             {
-                tutores = new BindingList<GrupoWS.tutor>(auxTutores.ToList());
+                tutores = new BindingList<GrupoWS.tutor>(auxTutores.OrderBy(x => x.nombre).ToList());
             }
             else
             {
@@ -67,7 +69,6 @@ namespace InterfazDATMA
             dgvTutores.Rows[e.RowIndex].Cells["NombreCompleto"].Value = auxTutor.nombre + " " + auxTutor.apellidoPaterno + " " + auxTutor.apellidoMaterno;
             dgvTutores.Rows[e.RowIndex].Cells["Correo"].Value = auxTutor.correo;
             dgvTutores.Rows[e.RowIndex].Cells["Celular"].Value = auxTutor.celular;
-            dgvTutores.Rows[e.RowIndex].Cells["Telefono"].Value = auxTutor.telefono;
         }
     }
 }

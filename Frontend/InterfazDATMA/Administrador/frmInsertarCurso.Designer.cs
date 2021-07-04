@@ -73,9 +73,9 @@ namespace InterfazDATMA.Administrador
             this.lbl.ForeColor = System.Drawing.Color.White;
             this.lbl.Location = new System.Drawing.Point(89, 215);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(208, 29);
+            this.lbl.Size = new System.Drawing.Size(284, 44);
             this.lbl.TabIndex = 18;
-            this.lbl.Text = "Fecha Inscripcion:";
+            this.lbl.Text = "Fecha Creacion:";
             // 
             // label1
             // 
