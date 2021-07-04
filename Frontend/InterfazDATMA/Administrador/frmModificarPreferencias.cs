@@ -236,7 +236,8 @@ namespace InterfazDATMA.Administrador
                 //Se verifica la signacion de un usuario
                 if (this.formAnterior.usuarioAsignado && resultado>0)
                 {
-                    if (daoUsuario.enviarDatosUsuario(tutor.correo, tutor.user, tutor.password) == 1)
+                    if (daoUsuario.enviarDatosUsuario(tutor.correo, tutor.user, tutor.password,tutor.nombre+" "+tutor.apellidoPaterno+" "+
+                        tutor.apellidoMaterno,"",0) == 1)
                         msgEnvioDatos = " Credenciales Enviadas con exito.";
                 }
                 MessageBox.Show("Se ha modificado con exito el Tutor."+msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

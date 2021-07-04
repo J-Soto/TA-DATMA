@@ -258,7 +258,8 @@ namespace InterfazDATMA.Administrador
                             {
                                 //var credenciales = generarUsuario();
                                 string msgEnvioDatos = "";
-                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, psicologo.user, psicologo.password) == 1)
+                                if (this.daoUsuario.enviarDatosUsuario(psicologo.correo, psicologo.user, psicologo.password,psicologo.nombre+" "+
+                                    psicologo.apellidoPaterno+" "+psicologo.apellidoMaterno,"",0) == 1)
                                     msgEnvioDatos = ". Credenciales enviadas con exito.";
                                 MessageBox.Show("Se ha registrado con exito"+ msgEnvioDatos, "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 psicologo.idPersona = idPsicologo;
