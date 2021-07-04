@@ -22,6 +22,9 @@ namespace InterfazDATMA.Administrador
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private CursoWS.CursoWSClient daoCurso;
         private GrupoWS.GrupoWSClient daoGrupo;
+        private SemanaWS.SemanaWSClient daoSemana;
+        private PsicologoWS.PsicologoWSClient daoPsicologo;
+        private UsuarioWS.UsuarioWSClient daoUsuario;
         private BindingList<CursoWS.curso> cursos;
 
         public frmOperacionesCursos(frmGestionarModuloAdmin formGestionarModuloAdmin, frmPlantillaGestion formPlantillaGest)
@@ -30,6 +33,9 @@ namespace InterfazDATMA.Administrador
             this.formPlantillaGest = formPlantillaGest;
             this.daoCurso = new CursoWS.CursoWSClient();
             this.daoGrupo = new GrupoWS.GrupoWSClient();
+            this.daoSemana = new SemanaWS.SemanaWSClient();
+            this.daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            this.daoUsuario = new UsuarioWS.UsuarioWSClient();
             this.DoubleBuffered = true;
             InitializeComponent();
 
@@ -81,9 +87,107 @@ namespace InterfazDATMA.Administrador
 
         }
 
-        private int eliminarCursoSeleccionado(int idCurso)
+        private int eliminarCursoSeleccionado(int idCurso,string mensaje)
         {
-            return 1;
+            int resultado = 0;
+            try
+            {
+                //Lista temas existentes en curso
+                BindingList<CursoWS.tema> temasExistentes;
+                try
+                {
+                    temasExistentes = new BindingList<CursoWS.tema>(daoCurso.listarTemasPorIdCurso(idCurso).ToList());
+                }
+                catch (Exception) {
+                    temasExistentes = new BindingList<CursoWS.tema>();
+                }
+                //Elimina la lista de temas ya existentes en el curso
+                foreach (CursoWS.tema item in temasExistentes)
+                {
+                    daoCurso.eliminarCursoTema(item.id_curso_tema);
+                }
+                //LLena la lista de psicologos ya existentes en el curso
+                BindingList<PsicologoWS.psicologo> psiExistentes;
+                try
+                {
+                    psiExistentes = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarPsicologosPorIdCurso(idCurso).ToList());
+                }
+                catch (Exception)
+                {
+                    psiExistentes = new BindingList<PsicologoWS.psicologo>();
+                }
+                //Eliminar lista de psicologos ya existentes
+                foreach (PsicologoWS.psicologo item in psiExistentes)
+                {
+                    daoCurso.eliminarPsicologoCurso(item.idPersona, idCurso);
+                }
+                //Listar semanas de un curso
+                BindingList<CursoWS.semana> semanasExistentes;
+                try
+                {
+                    semanasExistentes = new BindingList<CursoWS.semana>(daoCurso.listarSemanasPorIdCurso(idCurso).ToList());
+                }
+                catch (Exception) 
+                {
+                    semanasExistentes = new BindingList<CursoWS.semana>();
+                }
+                //Elimina las semanas ya existentes
+                foreach (CursoWS.semana item in semanasExistentes)
+                {
+                    daoSemana.eliminarSemana(item.id);
+                }
+                //listar grupos del curso
+                BindingList<CursoWS.grupo> gruposExistentes = null;
+                try
+                {
+                    gruposExistentes = new BindingList<CursoWS.grupo>(daoCurso.listarGruposPorIdCurso(idCurso).ToList());
+                    foreach (CursoWS.grupo item in gruposExistentes)
+                    {
+                        //LLena la lista de psicologos ya existentes en el grupo
+                        BindingList<GrupoWS.psicologo> psicologosExistentes;
+                        try
+                        {
+                            psicologosExistentes = new BindingList<GrupoWS.psicologo>(daoGrupo.listarPsicologosPorIdGrupo(item.idGrupo).ToList());
+                        }
+                        catch (Exception)
+                        {
+                            psicologosExistentes = new BindingList<GrupoWS.psicologo>();
+                        }
+                        //Elimina la lista de psicologos ya existentes en el grupo
+                        foreach (GrupoWS.psicologo psi in psicologosExistentes)
+                        {
+                            daoUsuario.enviarDatosUsuario(psi.correo,psi.user,psi.password,psi.nombre+" "+psi.apellidoPaterno+" "+psi.apellidoMaterno,
+                                mensaje,2);
+                            daoGrupo.eliminarGrupoPsicologo(psi.idPersona, item.idGrupo);
+                        }
+                        //LLena la lista de tutores ya existentes en el grupo
+                        BindingList<GrupoWS.tutor> tutoresExistentes;
+                        try
+                        {
+                            tutoresExistentes = new BindingList<GrupoWS.tutor>(daoGrupo.listarTutoresPorIdGrupo(item.idGrupo).ToList());
+                        }
+                        catch (Exception)
+                        {
+                            tutoresExistentes = new BindingList<GrupoWS.tutor>();
+                        }
+                        //Elimina la lista de tutores ya existentes en el grupo
+                        foreach (GrupoWS.tutor tut in tutoresExistentes)
+                        {
+                            daoUsuario.enviarDatosUsuario(tut.correo, tut.user, tut.password, tut.nombre + " " + tut.apellidoPaterno + " " +
+                                tut.apellidoMaterno, mensaje, 2);
+                            daoGrupo.eliminarGrupoTutor(tut.idPersona, item.idGrupo);
+                        }
+                    }
+                }
+                catch (Exception) {}
+
+                resultado = daoCurso.eliminarCurso(idCurso);
+            }
+            catch (Exception)
+            {
+            }
+            return resultado;
+            
         }
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
@@ -105,37 +209,36 @@ namespace InterfazDATMA.Administrador
                         nTutores += lTutores.Count;
                     }
                     catch (Exception) {}
-                    
                 }
             }
             catch (Exception) {}
 
-            if (nTutores == 0)
-            {
+            if (nTutores >= 0)
+            {/*
                 var rpt = MessageBox.Show("¿Desea eliminar el curso seleccionado?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (rpt == DialogResult.Yes)
                 {
                     eliminarCursoSeleccionado(cursos[index].idCurso);
                     cursos.RemoveAt(index);
                     UpdateCursosTable();
+                }*/
+                frmJustificacionCursoEliminado formJustificacion = new frmJustificacionCursoEliminado(nTutores,cursos[index].descripcion);
+                if (formJustificacion.ShowDialog() == DialogResult.OK)
+                {
+                    int resultado = eliminarCursoSeleccionado(cursos[index].idCurso, formJustificacion.mensaje);
+                    if (resultado == 1)
+                    {
+                        MessageBox.Show("Curso eliminado con exito.", "Mensaje de Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cursos.RemoveAt(index);
+                        UpdateCursosTable();
+                    }
                 }
             }
-            else
-            {
-
-            }
-
-            
-
-            
-
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             formPlantillaGest.abrirFormulario(formGestionarModuloAdmin);
-
-
         }
     }
 }
