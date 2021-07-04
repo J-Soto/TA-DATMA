@@ -46,7 +46,7 @@ namespace InterfazDATMA.validacion
             else
             {
                 e.Handled = true;
-                MessageBox.Show("Solo numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Solo se puede insertar números", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
