@@ -34,6 +34,9 @@ namespace InterfazDATMA
         //Grupo Actual:
         private int idGrupo;
 
+        //Curso Actual:
+        CursoWS.curso currentCurso;
+
         public frmModificarPrograma(frmConfigurarModuloPsicologo formConfigurarModuloPsicologo, frmPlantillaGestion formPlantillaGestion, GrupoWS.grupo auxGrupo, SemanaWS.semana auxSemana, CursoWS.curso auxCurso, string nombreTema)
         {
             InitializeComponent();
@@ -44,7 +47,11 @@ namespace InterfazDATMA
             this.formPlantillaGestion = formPlantillaGestion;
             //this.idCurso = idCurso;
 
-            currentSemana = auxSemana;
+            //Semana Actual:
+            this.currentSemana = auxSemana;
+
+            //Curso Actual:
+            this.currentCurso = auxCurso;
 
             daoSemana = new SemanaWS.SemanaWSClient();
             daoCurso = new CursoWS.CursoWSClient();
@@ -109,7 +116,7 @@ namespace InterfazDATMA
             {
                 SemanaWS.actividad auxActividad = dgvReuniones.CurrentRow.DataBoundItem as SemanaWS.actividad;
 
-                formPlantillaGestion.abrirFormulario(new frmRegistrarAsistenciaCuidadores(this, formPlantillaGestion, auxActividad.idActividad, idGrupo));
+                formPlantillaGestion.abrirFormulario(new frmRegistrarAsistenciaCuidadores(this, formPlantillaGestion, auxActividad.idActividad, idGrupo, auxActividad, currentCurso.descripcion));
             }
 
         }
@@ -120,7 +127,7 @@ namespace InterfazDATMA
             if (dgvReuniones.RowCount != 0)
             {
                 SemanaWS.actividad auxActividad = dgvReuniones.CurrentRow.DataBoundItem as SemanaWS.actividad;
-                frmModificarActividad formModificarActividad = new frmModificarActividad(this, formPlantillaGestion, auxActividad);
+                frmModificarActividad formModificarActividad = new frmModificarActividad(this, formPlantillaGestion, auxActividad, currentSemana, currentCurso.descripcion);
 
                 formPlantillaGestion.abrirFormulario(formModificarActividad);
             }
@@ -128,7 +135,7 @@ namespace InterfazDATMA
 
         private void materialButton4_Click(object sender, EventArgs e)  //Insertar Actvidad
         {
-            frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id, actividadesSemana, idGrupo);
+            frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id, actividadesSemana, idGrupo, currentSemana, currentCurso.descripcion);
             formPlantillaGestion.abrirFormulario(formInsertarActividad);
             
         }

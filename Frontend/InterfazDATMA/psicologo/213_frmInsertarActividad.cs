@@ -44,7 +44,13 @@ namespace InterfazDATMA.psicologo
         //Asistencia:
         private AsistenciaWS.AsistenciaWSClient daoAsistencia;
 
-        public frmInsertarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idSemana, BindingList<SemanaWS.actividad> actividadesSemana, int idGrupo)
+        //Semana Actual:
+        private SemanaWS.semana currentSemana;
+
+        //Curso Actual:
+        private string nombreCurso;
+
+        public frmInsertarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idSemana, BindingList<SemanaWS.actividad> actividadesSemana, int idGrupo, SemanaWS.semana currentSemana, string nombreCurso)
         {
             InitializeComponent();
             
@@ -52,12 +58,19 @@ namespace InterfazDATMA.psicologo
             dgvVideos.AutoGenerateColumns = false;
             this.idGrupo = idGrupo;
 
-
+            lblCurso.Text = "Curso: " + nombreCurso + "\n\nNueva Actividad: ";
+            lblSemana.Text = "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy");
+            
             Design.Ini(this);
             this.formModificarPrograma = formModificarPrograma;
             this.formPlantillaGestion = formPlantillaGestion;
 
+            //Curso:
+            this.nombreCurso = nombreCurso;
+
+            //Semana:
             this.idSemana = idSemana;
+            this.currentSemana = currentSemana;
 
             dtpHInicio.CustomFormat = "hh:mm tt";
             dtpHInicio.Format = DateTimePickerFormat.Custom;
@@ -93,8 +106,9 @@ namespace InterfazDATMA.psicologo
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
-            if(txtNombreAct.Text != ""  && txtLinkZoom.Text != "")
+            DateTime auxFechaReu = dtpFechaReunion.Value;
+
+            if(txtNombreAct.Text != ""  && txtLinkZoom.Text != "" && dtpHInicio.Value.TimeOfDay < dtpHFin.Value.TimeOfDay && currentSemana.fechaInicio.Date <= auxFechaReu.Date && auxFechaReu.Date < currentSemana.fechaInicio.AddDays(7))
             {
                 //Inicializar la actividad:
                 actividad = new ActividadWS.actividad();
@@ -188,6 +202,15 @@ namespace InterfazDATMA.psicologo
                 {
                     MessageBox.Show("Debe colocar el link de zoom para la reunion", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if (!(currentSemana.fechaInicio.Date <= auxFechaReu.Date && auxFechaReu.Date <
+                currentSemana.fechaInicio.AddDays(7)))
+                {
+                    MessageBox.Show("Debe introducir una fecha dentro del rango permitido: \nFecha Inicio: "+currentSemana.fechaInicio.Date.ToString("dd/MM/yyyy") + " - Fecha Fin: "+currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy"), "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (dtpHInicio.Value.TimeOfDay >= dtpHFin.Value.TimeOfDay)
+                {
+                    MessageBox.Show("La Hora de Inicio de la actividad no puede ser mayor a la Hora de Fin.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
 
         }
@@ -215,10 +238,14 @@ namespace InterfazDATMA.psicologo
 
             if (dgvDocumentos.RowCount != 0)
             {
-                MaterialWS.documento auxDocumento = dgvVideos.CurrentRow.DataBoundItem as MaterialWS.documento;
-                documentosActividad.Remove(auxDocumento);
+                var rpt = MessageBox.Show("¿Esta seguro que desea eliminar el material seleccionado?","Mensaje de Confirmacion",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
 
-                dgvDocumentos.Refresh();
+                if(rpt == DialogResult.Yes)
+                {
+                    MaterialWS.documento auxDocumento = dgvVideos.CurrentRow.DataBoundItem as MaterialWS.documento;
+                    documentosActividad.Remove(auxDocumento);
+                    dgvDocumentos.Refresh();
+                }
             }
         }
 
@@ -240,12 +267,14 @@ namespace InterfazDATMA.psicologo
         {
             if (dgvVideos.RowCount != 0)
             {
-                MaterialWS.video auxVideo = dgvVideos.CurrentRow.DataBoundItem as MaterialWS.video;
-                videosActividad.Remove(auxVideo);
+                var rpt = MessageBox.Show("¿Esta seguro que desea eliminar el material seleccionado?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-
-
-                dgvVideos.Refresh();
+                if(rpt == DialogResult.Yes)
+                {
+                    MaterialWS.video auxVideo = dgvVideos.CurrentRow.DataBoundItem as MaterialWS.video;
+                    videosActividad.Remove(auxVideo);
+                    dgvVideos.Refresh();
+                }
             }
         }
 

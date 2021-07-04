@@ -105,16 +105,17 @@ namespace InterfazDATMA
 
         private void ModificarSemana_Click(object sender, EventArgs e)
         {
-            SemanaTema auxSemTema = dgvPrograma.CurrentRow.DataBoundItem as SemanaTema;
-            SemanaWS.semana auxSemana = new SemanaWS.semana();
-            auxSemana.id = auxSemTema.Semana.id;
-            auxSemana.fechaInicio = auxSemTema.Semana.fechaInicio;
-            auxSemana.descripcion = auxSemTema.Semana.descripcion;
-            auxSemana.nombre = auxSemTema.Semana.nombre;
+            if(dgvPrograma.RowCount != 0)
+            {
+                SemanaTema auxSemTema = dgvPrograma.CurrentRow.DataBoundItem as SemanaTema;
+                SemanaWS.semana auxSemana = new SemanaWS.semana();
+                auxSemana.id = auxSemTema.Semana.id;
+                auxSemana.fechaInicio = auxSemTema.Semana.fechaInicio;
+                auxSemana.descripcion = auxSemTema.Semana.descripcion;
+                auxSemana.nombre = auxSemTema.Semana.nombre;
 
-            formPlantilla.abrirFormulario(new frmModificarPrograma(this, formPlantilla, grupo, auxSemana, curso, auxSemTema.Tema.nombre));
-
-
+                formPlantilla.abrirFormulario(new frmModificarPrograma(this, formPlantilla, grupo, auxSemana, curso, auxSemTema.Tema.nombre));
+            }
         }
 
         private void VolverCursos_Click(object sender, EventArgs e)
@@ -124,7 +125,7 @@ namespace InterfazDATMA
 
         private void VolverCuidadores_Click(object sender, EventArgs e) //Boton Lista Cuidadores
         {
-            formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla, grupo.idGrupo));
+            formPlantilla.abrirFormulario(new frmListaCuidadoresDePsicologo(this, formPlantilla, grupo.idGrupo, curso, grupo));
 
         }
     }

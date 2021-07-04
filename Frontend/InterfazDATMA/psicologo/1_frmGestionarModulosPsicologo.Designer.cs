@@ -29,36 +29,38 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AccederModulo = new MaterialSkin.Controls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.dgvModulos = new System.Windows.Forms.DataGridView();
-            this.Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.dgvFinalizado = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CursoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrupoFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicioFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFinFinalizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
@@ -80,11 +82,11 @@ namespace InterfazDATMA
             this.AccederModulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccederModulo.HighEmphasis = true;
             this.AccederModulo.Icon = null;
-            this.AccederModulo.Location = new System.Drawing.Point(4, 118);
-            this.AccederModulo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.AccederModulo.Location = new System.Drawing.Point(3, 94);
+            this.AccederModulo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.AccederModulo.MouseState = MaterialSkin.MouseState.HOVER;
             this.AccederModulo.Name = "AccederModulo";
-            this.AccederModulo.Size = new System.Drawing.Size(189, 100);
+            this.AccederModulo.Size = new System.Drawing.Size(142, 79);
             this.AccederModulo.TabIndex = 0;
             this.AccederModulo.Text = "ACCEDER CURSO";
             this.AccederModulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -97,18 +99,20 @@ namespace InterfazDATMA
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(68, 30);
+            this.label1.Location = new System.Drawing.Point(51, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 92);
+            this.label1.Size = new System.Drawing.Size(246, 73);
             this.label1.TabIndex = 44;
             this.label1.Text = "Lista de Cursos Activos:";
             // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(68, 30);
+            this.label4.Location = new System.Drawing.Point(51, 24);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(327, 92);
+            this.label4.Size = new System.Drawing.Size(246, 73);
             this.label4.TabIndex = 45;
             this.label4.Text = "Lista de Cursos Finalizados:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -120,12 +124,12 @@ namespace InterfazDATMA
             this.materialCard1.Depth = 0;
             this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(81, 45);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
+            this.materialCard1.Location = new System.Drawing.Point(61, 36);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
-            this.materialCard1.Size = new System.Drawing.Size(1066, 540);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard1.Size = new System.Drawing.Size(799, 432);
             this.materialCard1.TabIndex = 47;
             // 
             // dgvModulos
@@ -137,14 +141,14 @@ namespace InterfazDATMA
             this.dgvModulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvModulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvModulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvModulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvModulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Curso,
@@ -154,39 +158,217 @@ namespace InterfazDATMA
             this.dgvModulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvModulos.EnableHeadersVisualStyles = false;
             this.dgvModulos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvModulos.Location = new System.Drawing.Point(13, 14);
-            this.dgvModulos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvModulos.Location = new System.Drawing.Point(10, 11);
             this.dgvModulos.MultiSelect = false;
             this.dgvModulos.Name = "dgvModulos";
             this.dgvModulos.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvModulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvModulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvModulos.RowHeadersVisible = false;
             this.dgvModulos.RowHeadersWidth = 62;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvModulos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvModulos.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvModulos.RowTemplate.Height = 28;
             this.dgvModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvModulos.Size = new System.Drawing.Size(1040, 512);
+            this.dgvModulos.Size = new System.Drawing.Size(779, 410);
             this.dgvModulos.TabIndex = 11;
             this.dgvModulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvModulos_CellFormatting_1);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.849885F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.61539F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
+            this.tableLayoutPanel4.Controls.Add(this.label1, 1, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1020, 122);
+            this.tableLayoutPanel4.TabIndex = 51;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.materialCard1, 1, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 126);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1024, 505);
+            this.tableLayoutPanel5.TabIndex = 50;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.AccederModulo, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(873, 28);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(148, 448);
+            this.tableLayoutPanel6.TabIndex = 20;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.269186F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.73081F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.tableLayoutPanel1.Controls.Add(this.materialCard2, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 757);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1024, 507);
+            this.tableLayoutPanel1.TabIndex = 52;
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.dgvFinalizado);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(49, 36);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard2.Size = new System.Drawing.Size(692, 434);
+            this.materialCard2.TabIndex = 54;
+            // 
+            // dgvFinalizado
+            // 
+            this.dgvFinalizado.AllowUserToAddRows = false;
+            this.dgvFinalizado.AllowUserToDeleteRows = false;
+            this.dgvFinalizado.AllowUserToResizeColumns = false;
+            this.dgvFinalizado.AllowUserToResizeRows = false;
+            this.dgvFinalizado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dgvFinalizado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFinalizado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvFinalizado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFinalizado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CursoFinalizado,
+            this.GrupoFinalizado,
+            this.FechaInicioFinalizado,
+            this.FechaFinFinalizado});
+            this.dgvFinalizado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFinalizado.EnableHeadersVisualStyles = false;
+            this.dgvFinalizado.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgvFinalizado.Location = new System.Drawing.Point(10, 11);
+            this.dgvFinalizado.MultiSelect = false;
+            this.dgvFinalizado.Name = "dgvFinalizado";
+            this.dgvFinalizado.ReadOnly = true;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFinalizado.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvFinalizado.RowHeadersVisible = false;
+            this.dgvFinalizado.RowHeadersWidth = 62;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFinalizado.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.dgvFinalizado.RowTemplate.Height = 28;
+            this.dgvFinalizado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFinalizado.Size = new System.Drawing.Size(672, 412);
+            this.dgvFinalizado.TabIndex = 12;
+            this.dgvFinalizado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFinalizado_CellFormatting);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.849885F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.61539F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
+            this.tableLayoutPanel3.Controls.Add(this.label4, 1, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 633);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1020, 122);
+            this.tableLayoutPanel3.TabIndex = 53;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 51);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 1264);
+            this.tableLayoutPanel2.TabIndex = 54;
             // 
             // Curso
             // 
             this.Curso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Curso.DataPropertyName = "descripcion";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Curso.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Curso.DefaultCellStyle = dataGridViewCellStyle13;
             this.Curso.HeaderText = "Curso";
             this.Curso.MinimumWidth = 8;
             this.Curso.Name = "Curso";
@@ -204,9 +386,10 @@ namespace InterfazDATMA
             // 
             this.FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FechaInicio.DataPropertyName = "fechaInicio";
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle3.NullValue = null;
-            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle14.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle14;
             this.FechaInicio.HeaderText = "Fecha Inicio";
             this.FechaInicio.MinimumWidth = 8;
             this.FechaInicio.Name = "FechaInicio";
@@ -216,155 +399,14 @@ namespace InterfazDATMA
             // 
             this.FechaFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FechaFin.DataPropertyName = "fechaFin";
-            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle4.NullValue = null;
-            this.FechaFin.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle15.NullValue = null;
+            this.FechaFin.DefaultCellStyle = dataGridViewCellStyle15;
             this.FechaFin.HeaderText = "Fecha Fin";
             this.FechaFin.MinimumWidth = 8;
             this.FechaFin.Name = "FechaFin";
             this.FechaFin.ReadOnly = true;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.849885F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.61539F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
-            this.tableLayoutPanel4.Controls.Add(this.label1, 1, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1359, 154);
-            this.tableLayoutPanel4.TabIndex = 51;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 2, 1);
-            this.tableLayoutPanel5.Controls.Add(this.materialCard1, 1, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 158);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1365, 632);
-            this.tableLayoutPanel5.TabIndex = 50;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.AccederModulo, 0, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1164, 35);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(197, 560);
-            this.tableLayoutPanel6.TabIndex = 20;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.269186F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.73081F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 362F));
-            this.tableLayoutPanel1.Controls.Add(this.materialCard2, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 948);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1365, 632);
-            this.tableLayoutPanel1.TabIndex = 52;
-            // 
-            // materialCard2
-            // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.dgvFinalizado);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(65, 45);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
-            this.materialCard2.Size = new System.Drawing.Size(924, 540);
-            this.materialCard2.TabIndex = 54;
-            // 
-            // dgvFinalizado
-            // 
-            this.dgvFinalizado.AllowUserToAddRows = false;
-            this.dgvFinalizado.AllowUserToDeleteRows = false;
-            this.dgvFinalizado.AllowUserToResizeColumns = false;
-            this.dgvFinalizado.AllowUserToResizeRows = false;
-            this.dgvFinalizado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dgvFinalizado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFinalizado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvFinalizado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFinalizado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CursoFinalizado,
-            this.GrupoFinalizado,
-            this.FechaInicioFinalizado,
-            this.FechaFinFinalizado});
-            this.dgvFinalizado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFinalizado.EnableHeadersVisualStyles = false;
-            this.dgvFinalizado.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvFinalizado.Location = new System.Drawing.Point(13, 14);
-            this.dgvFinalizado.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvFinalizado.MultiSelect = false;
-            this.dgvFinalizado.Name = "dgvFinalizado";
-            this.dgvFinalizado.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFinalizado.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvFinalizado.RowHeadersVisible = false;
-            this.dgvFinalizado.RowHeadersWidth = 62;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvFinalizado.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvFinalizado.RowTemplate.Height = 28;
-            this.dgvFinalizado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFinalizado.Size = new System.Drawing.Size(898, 512);
-            this.dgvFinalizado.TabIndex = 12;
-            this.dgvFinalizado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFinalizado_CellFormatting);
             // 
             // CursoFinalizado
             // 
@@ -385,6 +427,8 @@ namespace InterfazDATMA
             // FechaInicioFinalizado
             // 
             this.FechaInicioFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FechaInicioFinalizado.DefaultCellStyle = dataGridViewCellStyle19;
             this.FechaInicioFinalizado.HeaderText = "FechaInicio";
             this.FechaInicioFinalizado.MinimumWidth = 8;
             this.FechaInicioFinalizado.Name = "FechaInicioFinalizado";
@@ -393,60 +437,22 @@ namespace InterfazDATMA
             // FechaFinFinalizado
             // 
             this.FechaFinFinalizado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FechaFinFinalizado.DefaultCellStyle = dataGridViewCellStyle20;
             this.FechaFinFinalizado.HeaderText = "Fecha Fin";
             this.FechaFinFinalizado.MinimumWidth = 8;
             this.FechaFinFinalizado.Name = "FechaFinFinalizado";
             this.FechaFinFinalizado.ReadOnly = true;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.849885F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.61539F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
-            this.tableLayoutPanel3.Controls.Add(this.label4, 1, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 792);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1359, 154);
-            this.tableLayoutPanel3.TabIndex = 53;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 64);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1365, 1580);
-            this.tableLayoutPanel2.TabIndex = 54;
-            // 
             // frmGestionarModulosPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 1646);
+            this.ClientSize = new System.Drawing.Size(1028, 1317);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionarModulosPsicologo";
-            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
+            this.Padding = new System.Windows.Forms.Padding(2, 51, 2, 2);
             this.Sizable = false;
             this.Text = "Gestionar Cursos";
             this.Load += new System.EventHandler(this.frmGestionarModulosPsicologo_Load);
@@ -478,11 +484,11 @@ namespace InterfazDATMA
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dgvModulos;
+        private System.Windows.Forms.DataGridView dgvFinalizado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Curso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
-        private System.Windows.Forms.DataGridView dgvFinalizado;
         private System.Windows.Forms.DataGridViewTextBoxColumn CursoFinalizado;
         private System.Windows.Forms.DataGridViewTextBoxColumn GrupoFinalizado;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicioFinalizado;

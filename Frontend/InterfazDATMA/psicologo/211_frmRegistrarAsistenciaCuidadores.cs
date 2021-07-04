@@ -29,13 +29,15 @@ namespace InterfazDATMA
         private AsistenciaWS.AsistenciaWSClient daoAsistencia;
         BindingList<ActividadWS.asistencia> asistencias;
 
-        public frmRegistrarAsistenciaCuidadores(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idActividad, int idGrupo)
+        public frmRegistrarAsistenciaCuidadores(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, int idActividad, int idGrupo, SemanaWS.actividad actividad, string nombreCurso)
         {
             InitializeComponent();
             this.idActividad = idActividad;
             this.idGrupo = idGrupo;
 
             dgvAsitencia.AutoGenerateColumns = false;
+
+            lblInformacion.Text = "Curso: " + nombreCurso + "   >   Actividad: " + actividad.nombre + "   >   Fecha Act: " + actividad.fecha.ToString("dd/MM/yy");
 
             Design.Ini(this);
             this.formModificarPrograma = formModificarPrograma;
