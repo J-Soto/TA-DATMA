@@ -67,7 +67,7 @@ namespace InterfazDATMA
 
             if (auxAsistencias != null)
             {
-                asistencias = new BindingList<ActividadWS.asistencia>(auxAsistencias.ToList());
+                asistencias = new BindingList<ActividadWS.asistencia>(auxAsistencias.OrderBy(x => x.descripcion).ToList());
             }
             else
             {

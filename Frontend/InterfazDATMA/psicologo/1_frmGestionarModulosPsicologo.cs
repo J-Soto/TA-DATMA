@@ -95,9 +95,9 @@ namespace InterfazDATMA
                 }
             }
 
+
             dgvModulos.DataSource = cursosGrupos;
             dgvFinalizado.DataSource = cursosFinalizado;
-
         }
 
 

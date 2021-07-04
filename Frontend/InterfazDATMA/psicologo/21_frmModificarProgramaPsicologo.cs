@@ -63,7 +63,7 @@ namespace InterfazDATMA
             //Inicializar Pantalla
             rtxtDescripcion.Text = currentSemana.descripcion;
             rtxtTema.Text = currentSemana.nombre;
-            lblTema.Text = "Tema de la Semana: " + nombreTema;
+            lblTema.Text = "Curso: " + auxCurso.descripcion + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy");
 
             //Limitar edicion:
             rtxtDescripcion.ReadOnly = true;
@@ -73,7 +73,7 @@ namespace InterfazDATMA
 
             dgvReuniones.AutoGenerateColumns = false;
 
-            //dgvReuniones.Sort(dgvReuniones.Columns[3], ListSortDirection.Ascending);
+            //dgvReuniones.Sort(dgvReuniones.Columns[1], ListSortDirection.Ascending);
             inicializarPantalla();
         }
 
@@ -82,7 +82,7 @@ namespace InterfazDATMA
         {
             try
             {
-                actividadesSemana = new BindingList<SemanaWS.actividad>(daoSemana.listarActividadesPorIdSemana(currentSemana.id).ToList());
+                actividadesSemana = new BindingList<SemanaWS.actividad>(daoSemana.listarActividadesPorIdSemana(currentSemana.id).OrderBy(x=>x.fecha).ToList());
             }
             catch (Exception ex)
             {
@@ -101,11 +101,14 @@ namespace InterfazDATMA
         public void RefreshDataGridView()
         {
             dgvReuniones.Refresh();
+            var aux = actividadesSemana.ToList();
+            actividadesSemana = new BindingList<SemanaWS.actividad>(aux.OrderBy(x=>x.fecha).ToList());
+            dgvReuniones.DataSource = actividadesSemana;
         }
 
         public void refreshDGVModificado()
         {
-            actividadesSemana = new BindingList<SemanaWS.actividad>(daoSemana.listarActividadesPorIdSemana(currentSemana.id).ToList());
+            actividadesSemana = new BindingList<SemanaWS.actividad>(daoSemana.listarActividadesPorIdSemana(currentSemana.id).OrderBy(x => x.fecha).ToList());
             dgvReuniones.DataSource = actividadesSemana;
             dgvReuniones.Refresh();
         }
@@ -137,7 +140,6 @@ namespace InterfazDATMA
         {
             frmInsertarActividad formInsertarActividad = new frmInsertarActividad(this, formPlantillaGestion, currentSemana.id, actividadesSemana, idGrupo, currentSemana, currentCurso.descripcion);
             formPlantillaGestion.abrirFormulario(formInsertarActividad);
-            
         }
 
         private void materialButton5_Click(object sender, EventArgs e) //Eliminar Actividad
@@ -172,13 +174,26 @@ namespace InterfazDATMA
 
         private void materialButton3_Click(object sender, EventArgs e)
         {
-            currentSemana.nombre = rtxtTema.Text;
-            currentSemana.descripcion = rtxtDescripcion.Text;
-            currentSemana.curso = new SemanaWS.curso();
-            int resultado = daoSemana.modificarSemana(currentSemana);
-            formConfigurarModuloPsicologo.refrescarDataGridView(currentSemana);
+            if(rtxtTema.Text != "" && rtxtDescripcion.Text != "")
+            {
+                currentSemana.nombre = rtxtTema.Text;
+                currentSemana.descripcion = rtxtDescripcion.Text;
+                currentSemana.curso = new SemanaWS.curso();
+                int resultado = daoSemana.modificarSemana(currentSemana);
+                formConfigurarModuloPsicologo.refrescarDataGridView(currentSemana);
 
-            //INSERTAR ACTIVIDADES: actividadesSemana
+                lblTema.Text = "Curso: " + currentCurso.descripcion + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                if(rtxtDescripcion.Text == "")
+                {
+                    MessageBox.Show("Debe introducir una descripcion para la semana.","Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }else if (rtxtTema.Text == "")
+                {
+                    MessageBox.Show("Debe introducir un nombre para la semana", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void ListReuniones_SelectedIndexChanged(object sender, EventArgs e)
