@@ -173,6 +173,12 @@
     <Compile Include="Administrador\frmInsertarTutor.Designer.cs">
       <DependentUpon>frmInsertarTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\frmJustificacionCursoEliminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmJustificacionCursoEliminado.Designer.cs">
+      <DependentUpon>frmJustificacionCursoEliminado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\frmListaTotal.Designer.cs" />
     <Compile Include="Administrador\frmModificarGrupoCurso.cs">
       <SubType>Form</SubType>
@@ -535,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmInsertarTutor.resx">
       <DependentUpon>frmInsertarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmJustificacionCursoEliminado.resx">
+      <DependentUpon>frmJustificacionCursoEliminado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmModificarGrupoCurso.resx">
       <DependentUpon>frmModificarGrupoCurso.cs</DependentUpon>

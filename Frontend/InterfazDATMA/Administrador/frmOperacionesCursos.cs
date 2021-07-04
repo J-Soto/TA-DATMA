@@ -18,6 +18,7 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantillaGest;
         private frmGestionarModuloAdmin formGestionarModuloAdmin;
         private CursoWS.CursoWSClient daoCurso;
+        private GrupoWS.GrupoWSClient daoGrupo;
         private BindingList<CursoWS.curso> cursos;
 
         public frmOperacionesCursos(frmGestionarModuloAdmin formGestionarModuloAdmin, frmPlantillaGestion formPlantillaGest)
@@ -25,6 +26,7 @@ namespace InterfazDATMA.Administrador
             this.formGestionarModuloAdmin = formGestionarModuloAdmin;
             this.formPlantillaGest = formPlantillaGest;
             this.daoCurso = new CursoWS.CursoWSClient();
+            this.daoGrupo = new GrupoWS.GrupoWSClient();
             this.DoubleBuffered = true;
             InitializeComponent();
 
@@ -74,17 +76,53 @@ namespace InterfazDATMA.Administrador
 
         }
 
+        private int eliminarCursoSeleccionado(int idCurso)
+        {
+            return 1;
+        }
+
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
-            var rpt = MessageBox.Show("¿Desea eliminar el curso seleccionado?","Mensaje de Advertencia",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-
-            if(rpt == DialogResult.Yes)
+            //Verificar Tutores inscritos en curso
+            var index = dgvCursos.CurrentCell.RowIndex;
+            BindingList<CursoWS.grupo> lGrupos = null;
+            int nTutores = 0;
+            try
             {
-                var index = dgvCursos.CurrentCell.RowIndex;
-                daoCurso.eliminarCurso(cursos[index].idCurso);
-                cursos.RemoveAt(index);
-                UpdateCursosTable();
+                //Verifica grupos
+                lGrupos = new BindingList<CursoWS.grupo>(daoCurso.listarGruposPorIdCurso(index).ToList());
+                foreach (CursoWS.grupo item in lGrupos)
+                {
+                    BindingList<GrupoWS.tutor> lTutores = null;
+                    try
+                    {
+                        lTutores = new BindingList<GrupoWS.tutor>(daoGrupo.listarTutoresPorIdGrupo(item.idGrupo).ToList());
+                        nTutores += lTutores.Count;
+                    }
+                    catch (Exception) {}
+                    
+                }
             }
+            catch (Exception) {}
+
+            if (nTutores == 0)
+            {
+                var rpt = MessageBox.Show("¿Desea eliminar el curso seleccionado?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (rpt == DialogResult.Yes)
+                {
+                    eliminarCursoSeleccionado(cursos[index].idCurso);
+                    cursos.RemoveAt(index);
+                    UpdateCursosTable();
+                }
+            }
+            else
+            {
+
+            }
+
+            
+
+            
 
         }
 
