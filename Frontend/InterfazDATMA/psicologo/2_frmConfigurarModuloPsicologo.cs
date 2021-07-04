@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA
 {
@@ -22,12 +23,15 @@ namespace InterfazDATMA
         private GrupoWS.grupo grupo; //Grupo que pertenece al curso
         private CursoWS.CursoWSClient daoCurso;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private BindingList<SemanaTema> pares;
 
         public frmConfigurarModuloPsicologo(frmGestionarModulosPsicologo formGestionarModulos, frmPlantillaGestion formPlantilla, Psicologo_Curso auxCurso)
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formPlantilla = formPlantilla;
             this.formGestionarModulos = formGestionarModulos;
             //Curso:

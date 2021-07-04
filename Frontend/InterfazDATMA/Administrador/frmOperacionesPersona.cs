@@ -10,12 +10,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
     public partial class frmOperacionesPersona : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private frmGestionarModuloAdmin formGestionarModulos;
 
         private TutorWS.TutorWSClient daoTutor;
@@ -28,6 +31,8 @@ namespace InterfazDATMA.Administrador
             this.DoubleBuffered = true;
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             daoTutor = new TutorWS.TutorWSClient();
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
 

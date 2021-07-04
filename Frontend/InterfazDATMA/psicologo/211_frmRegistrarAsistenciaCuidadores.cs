@@ -10,11 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA
 {
     public partial class frmRegistrarAsistenciaCuidadores : MaterialSkin.Controls.MaterialForm 
     {
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private frmModificarPrograma formModificarPrograma;
         private frmPlantillaGestion formPlantillaGestion;
         //Actividad:
@@ -40,6 +43,8 @@ namespace InterfazDATMA
             lblInformacion.Text = "Curso: " + nombreCurso + "   >   Actividad: " + actividad.nombre + "   >   Fecha Act: " + actividad.fecha.ToString("dd/MM/yy");
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formModificarPrograma = formModificarPrograma;
             this.formPlantillaGestion = formPlantillaGestion;
 

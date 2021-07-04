@@ -28,7 +28,6 @@ namespace InterfazDATMA.plantilla
         public string nombre;
         public string apP;
         public string apM;
-        char tema='D';
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         bool seMuestra;
         public static bool pasoTutorial = false;
@@ -39,7 +38,9 @@ namespace InterfazDATMA.plantilla
         public frmPlantillaGestion(UsuarioWS.usuario user)
         {
             InitializeComponent();
-            Design.Ini(this,tema);
+            Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             PanelLateral.Width = 0;
             PanelLateral.Hide();
             frmPlantillaGestion.user = user;
@@ -169,7 +170,7 @@ namespace InterfazDATMA.plantilla
         {
             if (seMuestra)
             {
-                if (PanelLateral.Width >= (this.Width * 0.01)) timer.Stop();
+                if (PanelLateral.Width >= (this.Width * 0.02)) timer.Stop();
                 PanelLateral.Width += 200;
             }
             else
@@ -190,14 +191,16 @@ namespace InterfazDATMA.plantilla
         { 
             if (ThemeManager.Theme == MaterialSkinManager.Themes.LIGHT)
             {
-                tema = 'D';
+                Design.tema = 'd';
                 ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+                btnTema.Text = "          Oscuro";
                 pictureBox4.Image = Properties.Resources.moon;
             }
 
             else
             {
-                tema = 'L';
+                Design.tema = 'l';
+                btnTema.Text = "          Claro";
                 ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
                 pictureBox4.Image = Properties.Resources.sun;
             }

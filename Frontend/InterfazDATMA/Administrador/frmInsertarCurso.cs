@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using MaterialSkin;
+
 namespace InterfazDATMA.Administrador
 {
     public partial class frmInsertarCurso : MaterialSkin.Controls.MaterialForm 
@@ -20,6 +22,8 @@ namespace InterfazDATMA.Administrador
         private CursoWS.CursoWSClient daoCurso;
         private CursoWS.curso curso;
 
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         //temas
         private BindingList<TemaWS.tema> temasCurso;
 
@@ -53,6 +57,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             //dgvReq.AutoGenerateColumns = false;
             //dgvReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             btnModificar.Visible = false;

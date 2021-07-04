@@ -1,4 +1,7 @@
-﻿using System;
+﻿using InterfazDATMA.util;
+using MaterialSkin;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +13,15 @@ using System.Windows.Forms;
 
 namespace InterfazDATMA.Administrador
 {
-    public partial class frmJustificacionCursoEliminado : Form
+    public partial class frmJustificacionCursoEliminado : MaterialSkin.Controls.MaterialForm
     {
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmJustificacionCursoEliminado()
         {
             InitializeComponent();
+            Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
     }
 }

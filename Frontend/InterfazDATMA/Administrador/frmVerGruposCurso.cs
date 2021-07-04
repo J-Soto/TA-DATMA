@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
@@ -19,6 +20,7 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantillaGest;
 
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
         /////////
         //grupos
@@ -38,6 +40,8 @@ namespace InterfazDATMA.Administrador
             this.formPlantillaGest = formPlantillaGest;
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
             gruposCurso = grupos;
 

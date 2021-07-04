@@ -11,15 +11,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using InterfazDATMA.util;
+using MaterialSkin;
+
 namespace InterfazDATMA
 {
     public partial class frmAgregarReunionPsicologo : MaterialSkin.Controls.MaterialForm
     {
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmAgregarReunionPsicologo()
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             dtpInicio.Format = DateTimePickerFormat.Short;
             dtpFin.Format= DateTimePickerFormat.Short;
 

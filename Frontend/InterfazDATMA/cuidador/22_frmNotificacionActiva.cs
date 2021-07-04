@@ -10,15 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace InterfazDATMA
 {
-    public partial class frmNotificacionActiva : MaterialSkin.Controls.MaterialForm 
+    public partial class frmNotificacionActiva : MaterialSkin.Controls.MaterialForm
     {
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmNotificacionActiva()
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
 

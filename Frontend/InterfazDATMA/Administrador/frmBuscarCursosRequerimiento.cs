@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
@@ -19,6 +20,7 @@ namespace InterfazDATMA.Administrador
         private CursoWS.CursoWSClient daoCurso;
         private CursoWS.curso curso_Req;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private DateTime cursoInicio;
 
         public curso Curso_Req { get => curso_Req; set => curso_Req = value; }
@@ -29,7 +31,9 @@ namespace InterfazDATMA.Administrador
             this.cursoInicio = cursoInicio;
             InitializeComponent();
 
-            Design.Ini(this); 
+            Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             dgvCursosReq.AutoGenerateColumns = false;
             dgvCursosReq.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 

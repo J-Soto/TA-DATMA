@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
 using System.IO;
+using MaterialSkin;
 
 namespace InterfazDATMA.psicologo
 {
     public partial class frmModificarActividad : MaterialSkin.Controls.MaterialForm
     {
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private frmModificarPrograma formModificarPrograma;
         private frmPlantillaGestion formPlantillaGestion;
 
@@ -43,6 +45,9 @@ namespace InterfazDATMA.psicologo
         public frmModificarActividad(frmModificarPrograma formModificarPrograma, frmPlantillaGestion formPlantillaGestion, SemanaWS.actividad auxActividad, SemanaWS.semana currentSemana, string nombreCurso)
         {
             InitializeComponent();
+            Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
             dgvDocumentos.AutoGenerateColumns = false;
             dgvDocumentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -383,6 +388,11 @@ namespace InterfazDATMA.psicologo
                 {
                 }
             }
+        }
+
+        private void tableLayoutPanel17_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

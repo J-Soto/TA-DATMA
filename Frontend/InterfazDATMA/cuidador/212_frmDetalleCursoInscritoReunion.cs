@@ -11,16 +11,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using InterfazDATMA.util;
+using MaterialSkin;
+
 namespace InterfazDATMA
 {
     public partial class frmDetalleCursoInscritoReunion : MaterialSkin.Controls.MaterialForm 
     {
         public frmDetalleCursoInscrito formAnterior;
-        private frmPlantillaGestion plantillaGestion; 
+        private frmPlantillaGestion plantillaGestion;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmDetalleCursoInscritoReunion(frmDetalleCursoInscrito formAnterior, frmPlantillaGestion plantillaGestion, string link)
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.plantillaGestion = plantillaGestion;
             this.formAnterior = formAnterior;
             txtZoom.Text = link;

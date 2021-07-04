@@ -12,12 +12,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
     public partial class frmInsertarPsicologo : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmOperacionesPersona formOperacionPersona;
 
         private PsicologoWS.PsicologoWSClient daoPsicologo;
@@ -31,6 +34,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
             daoPsicologo = new PsicologoWS.PsicologoWSClient();

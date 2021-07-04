@@ -11,10 +11,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 using InterfazDATMA.util;
+using MaterialSkin;
+
 namespace InterfazDATMA
 {
     public partial class frmListaCursoInscritos : MaterialSkin.Controls.MaterialForm
     {
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private frmPerfilCuidador formAnterior2;
         private frmPlantillaGestion plantillaGestion;
         private List<CursoWS.curso> cursos = null;
@@ -26,6 +30,8 @@ namespace InterfazDATMA
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             var temp = daoCurso.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
             
             temp = temp.Where(curso => curso != null).ToArray();        //eliminamos los null

@@ -14,11 +14,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
     public partial class frmGestionarModuloAdmin : MaterialSkin.Controls.MaterialForm
     {
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private frmPlantillaGestion plantillaGestion;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private TutorWS.TutorWSClient daoTutor;
@@ -29,6 +32,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             plantillaGestion = plantilla;
 
             materialButton1.Visible = true;

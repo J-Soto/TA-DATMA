@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA
 {
@@ -18,6 +19,7 @@ namespace InterfazDATMA
         public frmCursosDisponibles formAnterior;
         private frmPlantillaGestion plantillaGestion;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
         private ActividadWS.ActividadWSClient daoAct = new ActividadWS.ActividadWSClient();
         private List<ActividadWS.actividad> actividades = new List<ActividadWS.actividad>();
@@ -28,6 +30,8 @@ namespace InterfazDATMA
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             dgvInfCurso.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInfCurso.AutoGenerateColumns = false;
 

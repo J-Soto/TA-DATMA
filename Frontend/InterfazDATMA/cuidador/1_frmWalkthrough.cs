@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 
 using InterfazDATMA.util;
+using MaterialSkin;
+
 namespace InterfazDATMA
 {
     public partial class frmWalkthrough : MaterialSkin.Controls.MaterialForm 
@@ -18,11 +20,14 @@ namespace InterfazDATMA
         private int estado = 1;
         public frmPlantillaGestion plantillaGestion;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmWalkthrough(frmPlantillaGestion plantillaGestion)
         {
             this.plantillaGestion = plantillaGestion;
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             cambiarEstado(estado);
         }
 

@@ -3,6 +3,7 @@ using MaterialSkin.Controls;
 using InterfazDATMA.util;
 
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace InterfazDATMA
 {
@@ -14,10 +15,13 @@ namespace InterfazDATMA
         public video Video { get => video; set => video = value; }
 
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmAgregarMaterialPsicologo()
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
         private void materialButton1_Click(object sender, System.EventArgs e)

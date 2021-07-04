@@ -29,9 +29,9 @@ namespace InterfazDATMA.Administrador
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTutoresUser = new System.Windows.Forms.Label();
             this.txtNombrePsico = new System.Windows.Forms.TextBox();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
@@ -43,6 +43,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnBuscarPsico = new MaterialSkin.Controls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReportePsi = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,17 +52,19 @@ namespace InterfazDATMA.Administrador
             this.lblTutoresUser.AutoSize = true;
             this.lblTutoresUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTutoresUser.ForeColor = System.Drawing.Color.White;
-            this.lblTutoresUser.Location = new System.Drawing.Point(127, 79);
+            this.lblTutoresUser.Location = new System.Drawing.Point(226, 122);
+            this.lblTutoresUser.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTutoresUser.Name = "lblTutoresUser";
-            this.lblTutoresUser.Size = new System.Drawing.Size(221, 29);
+            this.lblTutoresUser.Size = new System.Drawing.Size(289, 37);
             this.lblTutoresUser.TabIndex = 16;
             this.lblTutoresUser.Text = "Nombre Psicologo:";
             // 
             // txtNombrePsico
             // 
-            this.txtNombrePsico.Location = new System.Drawing.Point(354, 82);
+            this.txtNombrePsico.Location = new System.Drawing.Point(629, 127);
+            this.txtNombrePsico.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNombrePsico.Name = "txtNombrePsico";
-            this.txtNombrePsico.Size = new System.Drawing.Size(453, 26);
+            this.txtNombrePsico.Size = new System.Drawing.Size(802, 38);
             this.txtNombrePsico.TabIndex = 17;
             // 
             // dgvPsicologos
@@ -71,14 +74,14 @@ namespace InterfazDATMA.Administrador
             this.dgvPsicologos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvPsicologos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPsicologos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPsicologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPsicologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPsicologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPsicologos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -87,26 +90,27 @@ namespace InterfazDATMA.Administrador
             this.Celular});
             this.dgvPsicologos.EnableHeadersVisualStyles = false;
             this.dgvPsicologos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPsicologos.Location = new System.Drawing.Point(132, 146);
+            this.dgvPsicologos.Location = new System.Drawing.Point(235, 226);
+            this.dgvPsicologos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dgvPsicologos.Name = "dgvPsicologos";
             this.dgvPsicologos.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPsicologos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPsicologos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPsicologos.RowHeadersWidth = 62;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvPsicologos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvPsicologos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPsicologos.RowTemplate.Height = 28;
-            this.dgvPsicologos.Size = new System.Drawing.Size(898, 361);
+            this.dgvPsicologos.Size = new System.Drawing.Size(1596, 560);
             this.dgvPsicologos.TabIndex = 26;
             this.dgvPsicologos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPsicologos_CellFormatting);
             // 
@@ -150,11 +154,11 @@ namespace InterfazDATMA.Administrador
             this.btnAgregarPsico.Depth = 0;
             this.btnAgregarPsico.HighEmphasis = true;
             this.btnAgregarPsico.Icon = null;
-            this.btnAgregarPsico.Location = new System.Drawing.Point(354, 542);
-            this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnAgregarPsico.Location = new System.Drawing.Point(235, 840);
+            this.btnAgregarPsico.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.btnAgregarPsico.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregarPsico.Name = "btnAgregarPsico";
-            this.btnAgregarPsico.Size = new System.Drawing.Size(167, 44);
+            this.btnAgregarPsico.Size = new System.Drawing.Size(297, 68);
             this.btnAgregarPsico.TabIndex = 27;
             this.btnAgregarPsico.Text = "Seleccionar";
             this.btnAgregarPsico.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -170,11 +174,11 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Depth = 0;
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(640, 542);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCancelar.Location = new System.Drawing.Point(595, 840);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(167, 44);
+            this.btnCancelar.Size = new System.Drawing.Size(297, 68);
             this.btnCancelar.TabIndex = 28;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -190,11 +194,11 @@ namespace InterfazDATMA.Administrador
             this.btnBuscarPsico.Depth = 0;
             this.btnBuscarPsico.HighEmphasis = true;
             this.btnBuscarPsico.Icon = null;
-            this.btnBuscarPsico.Location = new System.Drawing.Point(827, 75);
-            this.btnBuscarPsico.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnBuscarPsico.Location = new System.Drawing.Point(1470, 116);
+            this.btnBuscarPsico.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.btnBuscarPsico.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscarPsico.Name = "btnBuscarPsico";
-            this.btnBuscarPsico.Size = new System.Drawing.Size(122, 42);
+            this.btnBuscarPsico.Size = new System.Drawing.Size(217, 65);
             this.btnBuscarPsico.TabIndex = 29;
             this.btnBuscarPsico.Text = "Buscar";
             this.btnBuscarPsico.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -206,19 +210,41 @@ namespace InterfazDATMA.Administrador
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(443, 20);
+            this.label1.Location = new System.Drawing.Point(788, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 46);
+            this.label1.Size = new System.Drawing.Size(487, 63);
             this.label1.TabIndex = 30;
             this.label1.Text = "Buscar Psicologos:";
             // 
+            // btnReportePsi
+            // 
+            this.btnReportePsi.AutoSize = false;
+            this.btnReportePsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnReportePsi.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnReportePsi.Depth = 0;
+            this.btnReportePsi.HighEmphasis = true;
+            this.btnReportePsi.Icon = null;
+            this.btnReportePsi.Location = new System.Drawing.Point(1474, 840);
+            this.btnReportePsi.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.btnReportePsi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnReportePsi.Name = "btnReportePsi";
+            this.btnReportePsi.Size = new System.Drawing.Size(357, 68);
+            this.btnReportePsi.TabIndex = 31;
+            this.btnReportePsi.Text = "Reporte Psicologos";
+            this.btnReportePsi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnReportePsi.UseAccentColor = false;
+            this.btnReportePsi.UseVisualStyleBackColor = true;
+            this.btnReportePsi.Click += new System.EventHandler(this.btnReportePsi_Click);
+            // 
             // frmBuscarPsicologoGrupo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1154, 605);
+            this.ClientSize = new System.Drawing.Size(2052, 938);
             this.ControlBox = false;
+            this.Controls.Add(this.btnReportePsi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscarPsico);
             this.Controls.Add(this.btnCancelar);
@@ -226,7 +252,9 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.txtNombrePsico);
             this.Controls.Add(this.lblTutoresUser);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "frmBuscarPsicologoGrupo";
+            this.Padding = new System.Windows.Forms.Padding(5, 99, 5, 5);
             this.Sizable = false;
             this.Text = "Buscar Psicologos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).EndInit();
@@ -251,5 +279,6 @@ namespace InterfazDATMA.Administrador
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnBuscarPsico;
         private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialButton btnReportePsi;
     }
 }

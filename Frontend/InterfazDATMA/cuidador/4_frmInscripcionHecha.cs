@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using InterfazDATMA.util;
+using MaterialSkin;
+
 namespace InterfazDATMA
 {
     public partial class frmInscripcionHecha : MaterialSkin.Controls.MaterialForm 
@@ -18,10 +20,14 @@ namespace InterfazDATMA
         public frmCursosDisponibles formAnterior;
         private frmPlantillaGestion plantillaGestion;
         private CursoTutor ct;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmInscripcionHecha(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion, CursoTutor ct)
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
             this.ct = ct;

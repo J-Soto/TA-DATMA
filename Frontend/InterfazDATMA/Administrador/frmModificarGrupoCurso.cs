@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace InterfazDATMA.Administrador
 {
@@ -19,6 +20,8 @@ namespace InterfazDATMA.Administrador
 
         private frmVerGruposCurso formVerGruposCurso;
         private frmPlantillaGestion formPlantillaGest;
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
         private BindingList<PsicologoWS.psicologo> psicologosGrupo; //Total
         private BindingList<PsicologoWS.psicologo> psicologoTemporales; //Se introducen al momento de guardar
@@ -35,6 +38,8 @@ namespace InterfazDATMA.Administrador
             InitializeComponent();
 
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
             dgvPsicologos.AutoGenerateColumns = false;
             dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

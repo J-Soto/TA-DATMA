@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
+
 namespace InterfazDATMA.Administrador
 {
     public partial class frmSeleccionarTemasDeCurso : MaterialSkin.Controls.MaterialForm 
@@ -18,6 +20,7 @@ namespace InterfazDATMA.Administrador
         private frmInsertarCurso formInsertarCurso;
         private frmPlantillaGestion formPlantillaGest;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         //Semanas
         private int numSemanas;
         private DateTime fechaInicialCurso;
@@ -40,6 +43,8 @@ namespace InterfazDATMA.Administrador
             this.DoubleBuffered = true;
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             dgvTemas.AutoGenerateColumns = false;
             dgvTemas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             daoTema = new TemaWS.TemaWSClient();

@@ -17,12 +17,16 @@ namespace InterfazDATMA.Administrador
 {
     public partial class ReporteTutor : MaterialSkin.Controls.MaterialForm
     {
+
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         private byte[] archivo;
         private ReporteWS.ReporteWSClient daoReporte;
         public ReporteTutor()
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             daoReporte = new ReporteWS.ReporteWSClient();
             this.archivo = daoReporte.reportePreferencias();
             var path = Path.GetTempFileName();

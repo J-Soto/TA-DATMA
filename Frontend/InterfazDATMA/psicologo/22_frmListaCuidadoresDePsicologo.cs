@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfazDATMA.util;
+using MaterialSkin;
 
 namespace InterfazDATMA
 {
@@ -19,6 +20,7 @@ namespace InterfazDATMA
         private frmConfigurarModuloPsicologo formConfigurarModulo;
         private frmPlantillaGestion formPlantillaGestion;
 
+        public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         //Tutores:
         private GrupoWS.GrupoWSClient daoGrupo;
         private BindingList<GrupoWS.tutor> tutores;
@@ -30,6 +32,8 @@ namespace InterfazDATMA
         {
             InitializeComponent();
             Design.Ini(this);
+            if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
+            else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             dgvTutores.AutoGenerateColumns = false;
             this.formConfigurarModulo = formConfigurarModulo;
             this.formPlantillaGestion = formPlantillaGestion;
