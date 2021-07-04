@@ -86,7 +86,8 @@ namespace InterfazDATMA.cuidador
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?", "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult msg = MessageBox.Show("Seguro que quiere modificar los datos?\nNuevo Usuario: "+txtUser.Text+"\nNueva Contraseña: "+txtPass.Text,
+                "Mensaje de Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (msg == DialogResult.Yes)
             {
                 HabilitarCampos();
@@ -97,7 +98,7 @@ namespace InterfazDATMA.cuidador
                 int resultado = daoUsuario.modificarUsuario(tempUser);
                 if (resultado == 1)
                 {
-                    daoUsuario.enviarDatosUsuario(txtCorreo.Text, tempUser.user, tempUser.password);
+                    daoUsuario.enviarDatosUsuario(txtCorreo.Text, tempUser.user, tempUser.password, txtNom.Text, "", 1);
                     MessageBox.Show("Datos cambiados con éxito.", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmPlantillaGestion.user.user = txtUser.Text;
                     frmPlantillaGestion.user.password = txtPass.Text;

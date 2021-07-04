@@ -5,41 +5,11 @@
       <xsd:import schemaLocation="http://54.157.215.104:8080/EnvioEmail/ActividadWS?xsd=1" namespace="http://services.datmasoft.datma.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarActividad">
-    <part name="parameters" element="tns:listarActividad" />
-  </message>
-  <message name="listarActividadResponse">
-    <part name="parameters" element="tns:listarActividadResponse" />
-  </message>
-  <message name="listarAsistenciasPorIdActividadYGrupo">
-    <part name="parameters" element="tns:listarAsistenciasPorIdActividadYGrupo" />
-  </message>
-  <message name="listarAsistenciasPorIdActividadYGrupoResponse">
-    <part name="parameters" element="tns:listarAsistenciasPorIdActividadYGrupoResponse" />
-  </message>
-  <message name="listarActividadesIdSemana">
-    <part name="parameters" element="tns:listarActividadesIdSemana" />
-  </message>
-  <message name="listarActividadesIdSemanaResponse">
-    <part name="parameters" element="tns:listarActividadesIdSemanaResponse" />
-  </message>
   <message name="eliminarActividad">
     <part name="parameters" element="tns:eliminarActividad" />
   </message>
   <message name="eliminarActividadResponse">
     <part name="parameters" element="tns:eliminarActividadResponse" />
-  </message>
-  <message name="listarVideosPorIdActividad">
-    <part name="parameters" element="tns:listarVideosPorIdActividad" />
-  </message>
-  <message name="listarVideosPorIdActividadResponse">
-    <part name="parameters" element="tns:listarVideosPorIdActividadResponse" />
-  </message>
-  <message name="insertarActividad">
-    <part name="parameters" element="tns:insertarActividad" />
-  </message>
-  <message name="insertarActividadResponse">
-    <part name="parameters" element="tns:insertarActividadResponse" />
   </message>
   <message name="modificarActividad">
     <part name="parameters" element="tns:modificarActividad" />
@@ -47,94 +17,79 @@
   <message name="modificarActividadResponse">
     <part name="parameters" element="tns:modificarActividadResponse" />
   </message>
+  <message name="insertarActividad">
+    <part name="parameters" element="tns:insertarActividad" />
+  </message>
+  <message name="insertarActividadResponse">
+    <part name="parameters" element="tns:insertarActividadResponse" />
+  </message>
+  <message name="listarActividad">
+    <part name="parameters" element="tns:listarActividad" />
+  </message>
+  <message name="listarActividadResponse">
+    <part name="parameters" element="tns:listarActividadResponse" />
+  </message>
+  <message name="listarVideosPorIdActividad">
+    <part name="parameters" element="tns:listarVideosPorIdActividad" />
+  </message>
+  <message name="listarVideosPorIdActividadResponse">
+    <part name="parameters" element="tns:listarVideosPorIdActividadResponse" />
+  </message>
   <message name="listarDocumentosPorIdActividad">
     <part name="parameters" element="tns:listarDocumentosPorIdActividad" />
   </message>
   <message name="listarDocumentosPorIdActividadResponse">
     <part name="parameters" element="tns:listarDocumentosPorIdActividadResponse" />
   </message>
+  <message name="listarActividadesIdSemana">
+    <part name="parameters" element="tns:listarActividadesIdSemana" />
+  </message>
+  <message name="listarActividadesIdSemanaResponse">
+    <part name="parameters" element="tns:listarActividadesIdSemanaResponse" />
+  </message>
+  <message name="listarAsistenciasPorIdActividadYGrupo">
+    <part name="parameters" element="tns:listarAsistenciasPorIdActividadYGrupo" />
+  </message>
+  <message name="listarAsistenciasPorIdActividadYGrupoResponse">
+    <part name="parameters" element="tns:listarAsistenciasPorIdActividadYGrupoResponse" />
+  </message>
   <portType name="ActividadWS">
-    <operation name="listarActividad">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
-    </operation>
-    <operation name="listarAsistenciasPorIdActividadYGrupo">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGrupoRequest" message="tns:listarAsistenciasPorIdActividadYGrupo" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGrupoResponse" message="tns:listarAsistenciasPorIdActividadYGrupoResponse" />
-    </operation>
-    <operation name="listarActividadesIdSemana">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadesIdSemanaRequest" message="tns:listarActividadesIdSemana" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadesIdSemanaResponse" message="tns:listarActividadesIdSemanaResponse" />
-    </operation>
     <operation name="eliminarActividad">
       <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadRequest" message="tns:eliminarActividad" />
       <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/eliminarActividadResponse" message="tns:eliminarActividadResponse" />
-    </operation>
-    <operation name="listarVideosPorIdActividad">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadRequest" message="tns:listarVideosPorIdActividad" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadResponse" message="tns:listarVideosPorIdActividadResponse" />
-    </operation>
-    <operation name="insertarActividad">
-      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest" message="tns:insertarActividad" />
-      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse" message="tns:insertarActividadResponse" />
     </operation>
     <operation name="modificarActividad">
       <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadRequest" message="tns:modificarActividad" />
       <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/modificarActividadResponse" message="tns:modificarActividadResponse" />
     </operation>
+    <operation name="insertarActividad">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadRequest" message="tns:insertarActividad" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/insertarActividadResponse" message="tns:insertarActividadResponse" />
+    </operation>
+    <operation name="listarActividad">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
+    </operation>
+    <operation name="listarVideosPorIdActividad">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadRequest" message="tns:listarVideosPorIdActividad" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarVideosPorIdActividadResponse" message="tns:listarVideosPorIdActividadResponse" />
+    </operation>
     <operation name="listarDocumentosPorIdActividad">
       <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarDocumentosPorIdActividadRequest" message="tns:listarDocumentosPorIdActividad" />
       <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarDocumentosPorIdActividadResponse" message="tns:listarDocumentosPorIdActividadResponse" />
     </operation>
+    <operation name="listarActividadesIdSemana">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadesIdSemanaRequest" message="tns:listarActividadesIdSemana" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarActividadesIdSemanaResponse" message="tns:listarActividadesIdSemanaResponse" />
+    </operation>
+    <operation name="listarAsistenciasPorIdActividadYGrupo">
+      <input wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGrupoRequest" message="tns:listarAsistenciasPorIdActividadYGrupo" />
+      <output wsam:Action="http://services.datmasoft.datma.pe/ActividadWS/listarAsistenciasPorIdActividadYGrupoResponse" message="tns:listarAsistenciasPorIdActividadYGrupoResponse" />
+    </operation>
   </portType>
   <binding name="ActividadWSPortBinding" type="tns:ActividadWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarActividad">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarAsistenciasPorIdActividadYGrupo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarActividadesIdSemana">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarActividad">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarVideosPorIdActividad">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarActividad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -152,7 +107,52 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="insertarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarVideosPorIdActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarDocumentosPorIdActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarActividadesIdSemana">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAsistenciasPorIdActividadYGrupo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -97,7 +97,7 @@ namespace InterfazDATMA.plantilla
             this.Panel.Controls.Add(this.PanelLateral);
             this.Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel.Location = new System.Drawing.Point(4, 79);
-            this.Panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel.Margin = new System.Windows.Forms.Padding(4);
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(3133, 1843);
             this.Panel.TabIndex = 0;
@@ -107,7 +107,7 @@ namespace InterfazDATMA.plantilla
             this.pnlContenedor.BackColor = System.Drawing.Color.Transparent;
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(453, 161);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(2680, 1682);
             this.pnlContenedor.TabIndex = 25;
@@ -118,7 +118,7 @@ namespace InterfazDATMA.plantilla
             this.Header.Controls.Add(this.tableLayoutPanel1);
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(453, 0);
-            this.Header.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Header.Margin = new System.Windows.Forms.Padding(4);
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(2680, 161);
             this.Header.TabIndex = 24;
@@ -139,7 +139,7 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -168,7 +168,7 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel3.Controls.Add(this.fecha, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(1629, 4);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -204,11 +204,11 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.746479F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.25352F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel8.Controls.Add(this.pictureBox2, 1, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(26, 4);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.47573F));
@@ -223,9 +223,9 @@ namespace InterfazDATMA.plantilla
             this.pictureBox2.Image = global::InterfazDATMA.Properties.Resources.menu;
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(18, 26);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 97);
+            this.pictureBox2.Size = new System.Drawing.Size(166, 97);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -236,7 +236,7 @@ namespace InterfazDATMA.plantilla
             this.PanelLateral.Controls.Add(this.panel7);
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLateral.Location = new System.Drawing.Point(0, 0);
-            this.PanelLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelLateral.Margin = new System.Windows.Forms.Padding(4);
             this.PanelLateral.Name = "PanelLateral";
             this.PanelLateral.Size = new System.Drawing.Size(453, 1843);
             this.PanelLateral.TabIndex = 19;
@@ -248,7 +248,7 @@ namespace InterfazDATMA.plantilla
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel7.Margin = new System.Windows.Forms.Padding(5);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(453, 1843);
             this.panel7.TabIndex = 19;
@@ -319,7 +319,7 @@ namespace InterfazDATMA.plantilla
             this.btnTema.Ripple = true;
             this.btnTema.Size = new System.Drawing.Size(209, 133);
             this.btnTema.TabIndex = 0;
-            this.btnTema.Text = "          TEMA";
+            this.btnTema.Text = "          Oscuro";
             this.btnTema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTema.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTema.UseVisualStyleBackColor = false;
@@ -334,7 +334,7 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel6.Controls.Add(this.pictureBox5, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(107, 1135);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -348,7 +348,7 @@ namespace InterfazDATMA.plantilla
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = global::InterfazDATMA.Properties.Resources.exit;
             this.pictureBox5.Location = new System.Drawing.Point(23, 29);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(49, 67);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -364,7 +364,7 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel5.Controls.Add(this.pictureBox4, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(107, 468);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -378,7 +378,7 @@ namespace InterfazDATMA.plantilla
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = global::InterfazDATMA.Properties.Resources.moon;
             this.pictureBox4.Location = new System.Drawing.Point(23, 29);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(49, 67);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,7 +390,7 @@ namespace InterfazDATMA.plantilla
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(5, 71);
-            this.panel9.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel9.Margin = new System.Windows.Forms.Padding(5);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(93, 123);
             this.panel9.TabIndex = 2;
@@ -404,7 +404,7 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel4.Controls.Add(this.pictureBox1, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(107, 70);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -418,7 +418,7 @@ namespace InterfazDATMA.plantilla
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::InterfazDATMA.Properties.Resources.producto;
             this.pictureBox1.Location = new System.Drawing.Point(23, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -430,7 +430,7 @@ namespace InterfazDATMA.plantilla
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(5, 270);
-            this.panel10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel10.Margin = new System.Windows.Forms.Padding(5);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(93, 123);
             this.panel10.TabIndex = 4;
@@ -440,7 +440,7 @@ namespace InterfazDATMA.plantilla
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(5, 1136);
-            this.panel11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel11.Margin = new System.Windows.Forms.Padding(5);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(93, 123);
             this.panel11.TabIndex = 8;
@@ -450,7 +450,7 @@ namespace InterfazDATMA.plantilla
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel8.Controls.Add(this.button4);
             this.panel8.Location = new System.Drawing.Point(5, 1269);
-            this.panel8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel8.Margin = new System.Windows.Forms.Padding(5);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(3, 57);
             this.panel8.TabIndex = 5;
@@ -467,7 +467,7 @@ namespace InterfazDATMA.plantilla
             this.button4.Image = global::InterfazDATMA.Properties.Resources.empleados;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(3, 57);
             this.button4.TabIndex = 4;
@@ -478,7 +478,7 @@ namespace InterfazDATMA.plantilla
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel1.Location = new System.Drawing.Point(5, 469);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(93, 123);
             this.panel1.TabIndex = 9;
@@ -513,7 +513,7 @@ namespace InterfazDATMA.plantilla
             this.tableLayoutPanel7.Controls.Add(this.pictureBox6, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(107, 269);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -527,7 +527,7 @@ namespace InterfazDATMA.plantilla
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Image = global::InterfazDATMA.Properties.Resources.empleados;
             this.pictureBox6.Location = new System.Drawing.Point(23, 29);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(49, 67);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -581,7 +581,7 @@ namespace InterfazDATMA.plantilla
             this.panel12.Controls.Add(this.pictureBox3);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(453, 472);
             this.panel12.TabIndex = 0;
@@ -591,7 +591,7 @@ namespace InterfazDATMA.plantilla
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = global::InterfazDATMA.Properties.Resources.LogoDatmaV2;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(453, 472);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -617,7 +617,7 @@ namespace InterfazDATMA.plantilla
             this.ClientSize = new System.Drawing.Size(3141, 1926);
             this.ControlBox = false;
             this.Controls.Add(this.Panel);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmPlantillaGestion";
             this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

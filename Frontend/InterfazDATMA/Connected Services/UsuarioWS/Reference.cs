@@ -562,13 +562,28 @@ namespace InterfazDATMA.UsuarioWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string password;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombreCompleto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string mensaje;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.datmasoft.datma.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int motivo;
+        
         public enviarDatosUsuarioRequest() {
         }
         
-        public enviarDatosUsuarioRequest(string correo, string user, string password) {
+        public enviarDatosUsuarioRequest(string correo, string user, string password, string nombreCompleto, string mensaje, int motivo) {
             this.correo = correo;
             this.user = user;
             this.password = password;
+            this.nombreCompleto = nombreCompleto;
+            this.mensaje = mensaje;
+            this.motivo = motivo;
         }
     }
     
@@ -727,11 +742,14 @@ namespace InterfazDATMA.UsuarioWS {
             return base.Channel.enviarDatosUsuario(request);
         }
         
-        public int enviarDatosUsuario(string correo, string user, string password) {
+        public int enviarDatosUsuario(string correo, string user, string password, string nombreCompleto, string mensaje, int motivo) {
             InterfazDATMA.UsuarioWS.enviarDatosUsuarioRequest inValue = new InterfazDATMA.UsuarioWS.enviarDatosUsuarioRequest();
             inValue.correo = correo;
             inValue.user = user;
             inValue.password = password;
+            inValue.nombreCompleto = nombreCompleto;
+            inValue.mensaje = mensaje;
+            inValue.motivo = motivo;
             InterfazDATMA.UsuarioWS.enviarDatosUsuarioResponse retVal = ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).enviarDatosUsuario(inValue);
             return retVal.@return;
         }
@@ -741,11 +759,14 @@ namespace InterfazDATMA.UsuarioWS {
             return base.Channel.enviarDatosUsuarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.enviarDatosUsuarioResponse> enviarDatosUsuarioAsync(string correo, string user, string password) {
+        public System.Threading.Tasks.Task<InterfazDATMA.UsuarioWS.enviarDatosUsuarioResponse> enviarDatosUsuarioAsync(string correo, string user, string password, string nombreCompleto, string mensaje, int motivo) {
             InterfazDATMA.UsuarioWS.enviarDatosUsuarioRequest inValue = new InterfazDATMA.UsuarioWS.enviarDatosUsuarioRequest();
             inValue.correo = correo;
             inValue.user = user;
             inValue.password = password;
+            inValue.nombreCompleto = nombreCompleto;
+            inValue.mensaje = mensaje;
+            inValue.motivo = motivo;
             return ((InterfazDATMA.UsuarioWS.UsuarioWS)(this)).enviarDatosUsuarioAsync(inValue);
         }
         

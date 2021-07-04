@@ -15,8 +15,9 @@ namespace InterfazDATMA.Administrador
 {
     public partial class frmJustificacionCursoEliminado : MaterialSkin.Controls.MaterialForm
     {
+        public string mensaje;
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
-        public frmJustificacionCursoEliminado()
+        public frmJustificacionCursoEliminado(int nTutores,string nombreCruso)
         {
             InitializeComponent();
             Design.Ini(this);
