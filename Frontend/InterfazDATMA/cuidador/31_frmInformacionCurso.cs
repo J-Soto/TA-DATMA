@@ -76,10 +76,18 @@ namespace InterfazDATMA
                 pictBoxEncargada.Image = (Bitmap)((new ImageConverter()).ConvertFrom(cursoTutor.Psicologo[0].fotoPerfil));
             }
             // estilos
+            TableStyles.ApplyStyles(dgvPsicologos);
+            TableStyles.ApplyStyles(dgvInfCurso);
+            /*
             dgvPsicologos.DefaultCellStyle = dgvInfCurso.DefaultCellStyle;
             dgvPsicologos.ColumnHeadersDefaultCellStyle = dgvInfCurso.ColumnHeadersDefaultCellStyle;
+            dgvPsicologos.BorderStyle = dgvInfCurso.BorderStyle;
+            dgvPsicologos.ColumnHeadersBorderStyle = dgvInfCurso.ColumnHeadersBorderStyle;
             dgvPsicologos.RowHeadersDefaultCellStyle = dgvInfCurso.RowHeadersDefaultCellStyle;
             dgvPsicologos.RowsDefaultCellStyle = dgvInfCurso.RowsDefaultCellStyle;
+            dgvPsicologos.BackgroundColor = dgvInfCurso.BackgroundColor;
+            dgvPsicologos.GridColor = dgvInfCurso.GridColor;
+            dgvPsicologos.EnableHeadersVisualStyles = dgvInfCurso.EnableHeadersVisualStyles;*/
         }
 
         private void btnVerMas_Click(object sender, EventArgs e)

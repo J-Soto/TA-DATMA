@@ -86,7 +86,7 @@ namespace InterfazDATMA
         private void dgvVideos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int col = e.ColumnIndex, row = e.RowIndex;
-            if (col == 2)
+            if (col == 1)
             {
                 System.Diagnostics.Process.Start(videos[row].linkVideo);
             }

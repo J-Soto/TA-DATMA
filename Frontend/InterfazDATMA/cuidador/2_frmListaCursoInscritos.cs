@@ -35,6 +35,8 @@ namespace InterfazDATMA
             dgvListaCursos.AutoGenerateColumns = false;
             FetchCursos();
 
+            TableStyles.CopyStyles(dgvListaCursos);
+
             //foreach (var curso in cursos)
             //{
             //    if (curso != null)

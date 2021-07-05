@@ -208,4 +208,35 @@ namespace InterfazDATMA.plantilla
 
         
     }
+
+    public class TableStyles
+    {
+        private static DataGridView clone = new DataGridView();
+
+        public static void CopyStyles(DataGridView src)
+        {
+            clone.DefaultCellStyle = src.DefaultCellStyle;
+            clone.ColumnHeadersDefaultCellStyle = src.ColumnHeadersDefaultCellStyle;
+            clone.BorderStyle = src.BorderStyle;
+            clone.ColumnHeadersBorderStyle = src.ColumnHeadersBorderStyle;
+            clone.RowHeadersDefaultCellStyle = src.RowHeadersDefaultCellStyle;
+            clone.RowsDefaultCellStyle = src.RowsDefaultCellStyle;
+            clone.BackgroundColor = src.BackgroundColor;
+            clone.GridColor = src.GridColor;
+            clone.EnableHeadersVisualStyles = src.EnableHeadersVisualStyles;
+        }
+
+        public static void ApplyStyles(DataGridView dest)
+        {
+            dest.DefaultCellStyle = clone.DefaultCellStyle;
+            dest.ColumnHeadersDefaultCellStyle = clone.ColumnHeadersDefaultCellStyle;
+            dest.BorderStyle = clone.BorderStyle;
+            dest.ColumnHeadersBorderStyle = clone.ColumnHeadersBorderStyle;
+            dest.RowHeadersDefaultCellStyle = clone.RowHeadersDefaultCellStyle;
+            dest.RowsDefaultCellStyle = clone.RowsDefaultCellStyle;
+            dest.BackgroundColor = clone.BackgroundColor;
+            dest.GridColor = clone.GridColor;
+            dest.EnableHeadersVisualStyles = clone.EnableHeadersVisualStyles;
+        }
+    }
 }
