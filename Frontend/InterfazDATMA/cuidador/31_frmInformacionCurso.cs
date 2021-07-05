@@ -14,7 +14,7 @@ using MaterialSkin;
 
 namespace InterfazDATMA
 {
-    public partial class frmInformacionCurso : MaterialSkin.Controls.MaterialForm 
+    public partial class frmInformacionCurso : MaterialSkin.Controls.MaterialForm
     {
         public frmCursosDisponibles formAnterior;
         private frmPlantillaGestion plantillaGestion;
@@ -82,41 +82,9 @@ namespace InterfazDATMA
             dgvPsicologos.RowsDefaultCellStyle = dgvInfCurso.RowsDefaultCellStyle;
         }
 
-        private void ActualizarFechaStr()
-        {
-            materialLabel4.Text = daterunner.ToString("MMMM").ToUpper() + " " + daterunner.ToString("yyyy");
-        }
-
-        private void ActualizarActividades()
-        {
-            var temp = new List<ActividadWS.actividad>(actividades);
-            temp.RemoveAll(item => item.fecha.Month != daterunner.Month);
-            dgvInfCurso.DataSource = temp;
-        }
-
         private void btnVerMas_Click(object sender, EventArgs e)
         {
             plantillaGestion.abrirFormulario(new frmDetalleCurso(this, plantillaGestion));
-        }
-
-        private void btnAnterior_Click(object sender, EventArgs e)
-        {
-            if (daterunner.Month - cursoTutor.FechaInicio.Month > 0)
-            {
-                daterunner = daterunner.AddMonths(-1);
-                ActualizarFechaStr();
-                ActualizarActividades();
-            }
-        }
-
-        private void btnSig_Click(object sender, EventArgs e)
-        {
-            if (cursoTutor.FechaFin.Month - daterunner.Month > 0)
-            {
-                daterunner = daterunner.AddMonths(1);
-                ActualizarFechaStr();
-                ActualizarActividades();
-            }
         }
 
         private void dgvPsicologos_CellClick(object sender, DataGridViewCellEventArgs e)

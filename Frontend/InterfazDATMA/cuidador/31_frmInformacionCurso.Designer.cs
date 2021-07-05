@@ -29,15 +29,11 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInformacionCurso));
             this.dgvInfCurso = new System.Windows.Forms.DataGridView();
-            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictBoxEncargada = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,15 +49,12 @@ namespace InterfazDATMA
             this.nLabelControl5 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.nDateTimeBoxControl2 = new Nevron.Nov.WinFormControls.NDateTimeBoxControl();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVerMas = new MaterialSkin.Controls.MaterialButton();
+            this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNombreModulo = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnAnterior = new MaterialSkin.Controls.MaterialButton();
-            this.btnSig = new MaterialSkin.Controls.MaterialButton();
             this.nLabelControl6 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,6 +70,10 @@ namespace InterfazDATMA
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxEncargada)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -112,14 +109,14 @@ namespace InterfazDATMA
             this.dgvInfCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvInfCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfCurso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInfCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoActividad,
@@ -133,54 +130,26 @@ namespace InterfazDATMA
             this.dgvInfCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvInfCurso.MultiSelect = false;
             this.dgvInfCurso.Name = "dgvInfCurso";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInfCurso.RowHeadersVisible = false;
             this.dgvInfCurso.RowHeadersWidth = 62;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInfCurso.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInfCurso.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInfCurso.RowTemplate.Height = 28;
             this.dgvInfCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInfCurso.Size = new System.Drawing.Size(865, 134);
             this.dgvInfCurso.TabIndex = 18;
-            // 
-            // TipoActividad
-            // 
-            this.TipoActividad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoActividad.HeaderText = "Nombre de Actividad";
-            this.TipoActividad.MinimumWidth = 8;
-            this.TipoActividad.Name = "TipoActividad";
-            // 
-            // HoraIni
-            // 
-            this.HoraIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraIni.HeaderText = "Hora de Inicio";
-            this.HoraIni.MinimumWidth = 8;
-            this.HoraIni.Name = "HoraIni";
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraFin.HeaderText = "Hora de Fin";
-            this.HoraFin.MinimumWidth = 8;
-            this.HoraFin.Name = "HoraFin";
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 8;
-            this.Fecha.Name = "Fecha";
             // 
             // pictBoxEncargada
             // 
@@ -401,7 +370,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.17414F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.957784F));
-            this.tableLayoutPanel6.Controls.Add(this.btnVerMas, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.btnRegresar, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(206, 2);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -413,28 +382,26 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.Size = new System.Drawing.Size(200, 54);
             this.tableLayoutPanel6.TabIndex = 27;
             // 
-            // btnVerMas
+            // btnRegresar
             // 
-            this.btnVerMas.AutoSize = false;
-            this.btnVerMas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnVerMas.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnVerMas.Depth = 0;
-            this.btnVerMas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVerMas.Enabled = false;
-            this.btnVerMas.HighEmphasis = true;
-            this.btnVerMas.Icon = null;
-            this.btnVerMas.Location = new System.Drawing.Point(101, 13);
-            this.btnVerMas.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnVerMas.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnVerMas.Name = "btnVerMas";
-            this.btnVerMas.Size = new System.Drawing.Size(88, 26);
-            this.btnVerMas.TabIndex = 0;
-            this.btnVerMas.Text = "Ver Mas";
-            this.btnVerMas.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnVerMas.UseAccentColor = false;
-            this.btnVerMas.UseVisualStyleBackColor = true;
-            this.btnVerMas.Visible = false;
-            this.btnVerMas.Click += new System.EventHandler(this.btnVerMas_Click);
+            this.btnRegresar.AutoSize = false;
+            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRegresar.Depth = 0;
+            this.btnRegresar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegresar.HighEmphasis = true;
+            this.btnRegresar.Icon = null;
+            this.btnRegresar.Location = new System.Drawing.Point(101, 13);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(88, 26);
+            this.btnRegresar.TabIndex = 0;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRegresar.UseAccentColor = false;
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -511,9 +478,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.69697F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.0101F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.575758F));
-            this.tableLayoutPanel13.Controls.Add(this.materialLabel4, 5, 0);
-            this.tableLayoutPanel13.Controls.Add(this.btnAnterior, 3, 0);
-            this.tableLayoutPanel13.Controls.Add(this.btnSig, 7, 0);
             this.tableLayoutPanel13.Controls.Add(this.nLabelControl6, 1, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(2, 2);
@@ -523,62 +487,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(950, 47);
             this.tableLayoutPanel13.TabIndex = 31;
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(509, 0);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(130, 47);
-            this.materialLabel4.TabIndex = 39;
-            this.materialLabel4.Text = "MAYO 2021";
-            this.materialLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.AutoSize = false;
-            this.btnAnterior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAnterior.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnAnterior.Depth = 0;
-            this.btnAnterior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAnterior.HighEmphasis = true;
-            this.btnAnterior.Icon = null;
-            this.btnAnterior.Location = new System.Drawing.Point(255, 3);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnAnterior.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(144, 41);
-            this.btnAnterior.TabIndex = 0;
-            this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnAnterior.UseAccentColor = false;
-            this.btnAnterior.UseVisualStyleBackColor = true;
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
-            // 
-            // btnSig
-            // 
-            this.btnSig.AutoSize = false;
-            this.btnSig.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSig.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSig.Depth = 0;
-            this.btnSig.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSig.HighEmphasis = true;
-            this.btnSig.Icon = null;
-            this.btnSig.Location = new System.Drawing.Point(773, 3);
-            this.btnSig.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnSig.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSig.Name = "btnSig";
-            this.btnSig.Size = new System.Drawing.Size(157, 41);
-            this.btnSig.TabIndex = 1;
-            this.btnSig.Text = "Siguiente";
-            this.btnSig.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSig.UseAccentColor = false;
-            this.btnSig.UseVisualStyleBackColor = true;
-            this.btnSig.Click += new System.EventHandler(this.btnSig_Click);
             // 
             // nLabelControl6
             // 
@@ -814,6 +722,7 @@ namespace InterfazDATMA
             this.dgvPsicologos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPsicologos.Size = new System.Drawing.Size(240, 74);
             this.dgvPsicologos.TabIndex = 0;
+            this.dgvPsicologos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPsicologos_CellClick);
             // 
             // Nombre
             // 
@@ -822,6 +731,38 @@ namespace InterfazDATMA
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
+            // 
+            // TipoActividad
+            // 
+            this.TipoActividad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoActividad.DataPropertyName = "descripcion";
+            this.TipoActividad.HeaderText = "Nombre de Actividad";
+            this.TipoActividad.MinimumWidth = 8;
+            this.TipoActividad.Name = "TipoActividad";
+            // 
+            // HoraIni
+            // 
+            this.HoraIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoraIni.DataPropertyName = "horaInicioStr";
+            this.HoraIni.HeaderText = "Hora de Inicio";
+            this.HoraIni.MinimumWidth = 8;
+            this.HoraIni.Name = "HoraIni";
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoraFin.DataPropertyName = "horaFinStr";
+            this.HoraFin.HeaderText = "Hora de Fin";
+            this.HoraFin.MinimumWidth = 8;
+            this.HoraFin.Name = "HoraFin";
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha.DataPropertyName = "fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 8;
+            this.Fecha.Name = "Fecha";
             // 
             // frmInformacionCurso
             // 
@@ -893,15 +834,8 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialButton btnVerMas;
-        private MaterialSkin.Controls.MaterialButton btnAnterior;
-        private MaterialSkin.Controls.MaterialButton btnSig;
+        private MaterialSkin.Controls.MaterialButton btnRegresar;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraIni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl5;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl4;
@@ -910,5 +844,9 @@ namespace InterfazDATMA
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl7;
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraIni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }
