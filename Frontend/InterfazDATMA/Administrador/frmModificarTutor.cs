@@ -22,10 +22,12 @@ namespace InterfazDATMA.Administrador
         public frmOperacionesPersona formOperacionPersona;
 
         private TutorWS.TutorWSClient daoTutor;
+        private DistritoWS.DistritoWSClient daoDistrito;
 
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
         private TutorWS.tutor tutor;
+        private TutorWS.distrito distrito;
         private string rutaFoto = "";
 
         public bool usuarioAsignado = false;
@@ -44,7 +46,6 @@ namespace InterfazDATMA.Administrador
             this.formOperacionPersona = formOperacionPersona;
 
 
-            txtDistrito.ReadOnly = true;
             daoTutor = new TutorWS.TutorWSClient();
             inicializarComponentes();
             completarDatosTutores();
@@ -52,6 +53,13 @@ namespace InterfazDATMA.Administrador
 
         private void inicializarComponentes()
         {
+            daoDistrito = new DistritoWS.DistritoWSClient();
+            //this.distrito = new TutorWS.distrito();
+            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+            cboDistrito.DataSource = distritos;
+            cboDistrito.DisplayMember = "nombre";
+
+            cboDistrito.SelectedIndex = cboDistrito.FindStringExact(tutor.distrito.nombre);
             txtNombre.Text = "";
             txtApPat.Text = "";
             txtApMat.Text = "";
@@ -93,9 +101,6 @@ namespace InterfazDATMA.Administrador
                 MemoryStream ms = new MemoryStream(tutor.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
-            // Distrito
-            if (tutor.distrito != null)
-                txtDistrito.Text = tutor.distrito.nombre;
         }
 
         private void rbtnMujer_Click(object sender, EventArgs e)
@@ -153,7 +158,7 @@ namespace InterfazDATMA.Administrador
                 {
                     tutor.distrito.idDistrito = frmDistrito.distrito.idDistrito;
                     tutor.distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = tutor.distrito.nombre;
+                    cboDistrito.SelectedIndex = cboDistrito.FindStringExact(tutor.distrito.nombre);
                 }
             }
 
@@ -259,6 +264,12 @@ namespace InterfazDATMA.Administrador
             tutor.password = credenciales.Item2;
             usuarioAsignado = true;
             btnAsignarUsuario.Enabled = false;
+        }
+
+        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tutor.distrito.idDistrito = ((DistritoWS.distrito)cboDistrito.SelectedItem).idDistrito;
+            tutor.distrito.nombre = ((DistritoWS.distrito)cboDistrito.SelectedItem).nombre;
         }
     }
 }

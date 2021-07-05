@@ -53,19 +53,18 @@ namespace InterfazDATMA.Administrador
             this.lblNombre = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
-            this.txtDistrito = new System.Windows.Forms.TextBox();
             this.nuevoDistrito = new MaterialSkin.Controls.MaterialButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnGuardar = new MaterialSkin.Controls.MaterialButton();
+            this.cboDistrito = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubirFoto
             // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(1086, 274);
-            this.btnSubirFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSubirFoto.Location = new System.Drawing.Point(724, 178);
             this.btnSubirFoto.Name = "btnSubirFoto";
-            this.btnSubirFoto.Size = new System.Drawing.Size(45, 35);
+            this.btnSubirFoto.Size = new System.Drawing.Size(30, 23);
             this.btnSubirFoto.TabIndex = 104;
             this.btnSubirFoto.Text = "...";
             this.btnSubirFoto.UseVisualStyleBackColor = true;
@@ -76,9 +75,10 @@ namespace InterfazDATMA.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(786, 274);
+            this.label1.Location = new System.Drawing.Point(524, 178);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 25);
+            this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 102;
             this.label1.Text = "Foto";
             // 
@@ -87,80 +87,73 @@ namespace InterfazDATMA.Administrador
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblGenero.ForeColor = System.Drawing.Color.White;
-            this.lblGenero.Location = new System.Drawing.Point(786, 222);
+            this.lblGenero.Location = new System.Drawing.Point(524, 144);
+            this.lblGenero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(77, 25);
+            this.lblGenero.Size = new System.Drawing.Size(56, 17);
             this.lblGenero.TabIndex = 92;
             this.lblGenero.Text = "Genero";
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(910, 168);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCelular.Location = new System.Drawing.Point(607, 109);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(248, 26);
+            this.txtCelular.Size = new System.Drawing.Size(167, 20);
             this.txtCelular.TabIndex = 91;
             this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // txtTelf
             // 
-            this.txtTelf.Location = new System.Drawing.Point(910, 114);
-            this.txtTelf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelf.Location = new System.Drawing.Point(607, 74);
             this.txtTelf.Name = "txtTelf";
-            this.txtTelf.Size = new System.Drawing.Size(248, 26);
+            this.txtTelf.Size = new System.Drawing.Size(167, 20);
             this.txtTelf.TabIndex = 90;
             this.txtTelf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelf_KeyPress_1);
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(910, 66);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDni.Location = new System.Drawing.Point(607, 43);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(248, 26);
+            this.txtDni.Size = new System.Drawing.Size(167, 20);
             this.txtDni.TabIndex = 89;
             this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(291, 330);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCorreo.Location = new System.Drawing.Point(194, 214);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(415, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(278, 20);
             this.txtCorreo.TabIndex = 88;
             // 
             // txtApellidoMat
             // 
-            this.txtApellidoMat.Location = new System.Drawing.Point(291, 170);
-            this.txtApellidoMat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellidoMat.Location = new System.Drawing.Point(194, 110);
             this.txtApellidoMat.Name = "txtApellidoMat";
-            this.txtApellidoMat.Size = new System.Drawing.Size(248, 26);
+            this.txtApellidoMat.Size = new System.Drawing.Size(167, 20);
             this.txtApellidoMat.TabIndex = 86;
             // 
             // txtApellidoPat
             // 
-            this.txtApellidoPat.Location = new System.Drawing.Point(291, 115);
-            this.txtApellidoPat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellidoPat.Location = new System.Drawing.Point(194, 75);
             this.txtApellidoPat.Name = "txtApellidoPat";
-            this.txtApellidoPat.Size = new System.Drawing.Size(248, 26);
+            this.txtApellidoPat.Size = new System.Drawing.Size(167, 20);
             this.txtApellidoPat.TabIndex = 85;
             // 
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(291, 222);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(194, 144);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(415, 26);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(278, 20);
             this.dtpFechaNacimiento.TabIndex = 84;
             // 
             // rbtnHombre
             // 
             this.rbtnHombre.AutoSize = true;
             this.rbtnHombre.ForeColor = System.Drawing.Color.White;
-            this.rbtnHombre.Location = new System.Drawing.Point(910, 222);
-            this.rbtnHombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbtnHombre.Location = new System.Drawing.Point(607, 144);
             this.rbtnHombre.Name = "rbtnHombre";
-            this.rbtnHombre.Size = new System.Drawing.Size(105, 24);
+            this.rbtnHombre.Size = new System.Drawing.Size(73, 17);
             this.rbtnHombre.TabIndex = 83;
             this.rbtnHombre.TabStop = true;
             this.rbtnHombre.Text = "Masculino";
@@ -171,10 +164,9 @@ namespace InterfazDATMA.Administrador
             // 
             this.rbtnMujer.AutoSize = true;
             this.rbtnMujer.ForeColor = System.Drawing.Color.White;
-            this.rbtnMujer.Location = new System.Drawing.Point(1054, 222);
-            this.rbtnMujer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbtnMujer.Location = new System.Drawing.Point(703, 144);
             this.rbtnMujer.Name = "rbtnMujer";
-            this.rbtnMujer.Size = new System.Drawing.Size(105, 24);
+            this.rbtnMujer.Size = new System.Drawing.Size(71, 17);
             this.rbtnMujer.TabIndex = 82;
             this.rbtnMujer.TabStop = true;
             this.rbtnMujer.Text = "Femenino";
@@ -183,10 +175,9 @@ namespace InterfazDATMA.Administrador
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(291, 65);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(194, 42);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(415, 26);
+            this.txtNombre.Size = new System.Drawing.Size(278, 20);
             this.txtNombre.TabIndex = 81;
             // 
             // lblApMat
@@ -194,9 +185,10 @@ namespace InterfazDATMA.Administrador
             this.lblApMat.AutoSize = true;
             this.lblApMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblApMat.ForeColor = System.Drawing.Color.White;
-            this.lblApMat.Location = new System.Drawing.Point(39, 170);
+            this.lblApMat.Location = new System.Drawing.Point(26, 110);
+            this.lblApMat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApMat.Name = "lblApMat";
-            this.lblApMat.Size = new System.Drawing.Size(159, 25);
+            this.lblApMat.Size = new System.Drawing.Size(114, 17);
             this.lblApMat.TabIndex = 80;
             this.lblApMat.Text = "Apellido Materno";
             // 
@@ -205,9 +197,10 @@ namespace InterfazDATMA.Administrador
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(39, 330);
+            this.lblCorreo.Location = new System.Drawing.Point(26, 214);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(72, 25);
+            this.lblCorreo.Size = new System.Drawing.Size(51, 17);
             this.lblCorreo.TabIndex = 79;
             this.lblCorreo.Text = "Correo";
             // 
@@ -216,9 +209,10 @@ namespace InterfazDATMA.Administrador
             this.lblDni.AutoSize = true;
             this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblDni.ForeColor = System.Drawing.Color.White;
-            this.lblDni.Location = new System.Drawing.Point(786, 68);
+            this.lblDni.Location = new System.Drawing.Point(524, 44);
+            this.lblDni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(45, 25);
+            this.lblDni.Size = new System.Drawing.Size(31, 17);
             this.lblDni.TabIndex = 78;
             this.lblDni.Text = "DNI";
             // 
@@ -227,9 +221,10 @@ namespace InterfazDATMA.Administrador
             this.lblDistrito.AutoSize = true;
             this.lblDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblDistrito.ForeColor = System.Drawing.Color.White;
-            this.lblDistrito.Location = new System.Drawing.Point(39, 274);
+            this.lblDistrito.Location = new System.Drawing.Point(26, 178);
+            this.lblDistrito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDistrito.Name = "lblDistrito";
-            this.lblDistrito.Size = new System.Drawing.Size(71, 25);
+            this.lblDistrito.Size = new System.Drawing.Size(52, 17);
             this.lblDistrito.TabIndex = 77;
             this.lblDistrito.Text = "Distrito";
             // 
@@ -238,9 +233,10 @@ namespace InterfazDATMA.Administrador
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblCelular.ForeColor = System.Drawing.Color.White;
-            this.lblCelular.Location = new System.Drawing.Point(786, 170);
+            this.lblCelular.Location = new System.Drawing.Point(524, 110);
+            this.lblCelular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(74, 25);
+            this.lblCelular.Size = new System.Drawing.Size(52, 17);
             this.lblCelular.TabIndex = 76;
             this.lblCelular.Text = "Celular";
             // 
@@ -249,9 +245,10 @@ namespace InterfazDATMA.Administrador
             this.lblApPat.AutoSize = true;
             this.lblApPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblApPat.ForeColor = System.Drawing.Color.White;
-            this.lblApPat.Location = new System.Drawing.Point(39, 115);
+            this.lblApPat.Location = new System.Drawing.Point(26, 75);
+            this.lblApPat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApPat.Name = "lblApPat";
-            this.lblApPat.Size = new System.Drawing.Size(155, 25);
+            this.lblApPat.Size = new System.Drawing.Size(112, 17);
             this.lblApPat.TabIndex = 75;
             this.lblApPat.Text = "Apellido Paterno";
             // 
@@ -260,9 +257,10 @@ namespace InterfazDATMA.Administrador
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblFechaNacimiento.ForeColor = System.Drawing.Color.White;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(39, 222);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(26, 144);
+            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(196, 25);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(141, 17);
             this.lblFechaNacimiento.TabIndex = 74;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
@@ -271,9 +269,10 @@ namespace InterfazDATMA.Administrador
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblTelefono.Location = new System.Drawing.Point(786, 115);
+            this.lblTelefono.Location = new System.Drawing.Point(524, 75);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(89, 25);
+            this.lblTelefono.Size = new System.Drawing.Size(64, 17);
             this.lblTelefono.TabIndex = 73;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -282,9 +281,10 @@ namespace InterfazDATMA.Administrador
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(39, 65);
+            this.lblNombre.Location = new System.Drawing.Point(26, 42);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(91, 25);
+            this.lblNombre.Size = new System.Drawing.Size(65, 17);
             this.lblNombre.TabIndex = 72;
             this.lblNombre.Text = "Nombres";
             // 
@@ -292,22 +292,13 @@ namespace InterfazDATMA.Administrador
             // 
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Image = global::InterfazDATMA.Properties.Resources.postulante;
-            this.pbFoto.Location = new System.Drawing.Point(910, 274);
-            this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbFoto.Location = new System.Drawing.Point(607, 178);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(167, 192);
+            this.pbFoto.Size = new System.Drawing.Size(112, 125);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 103;
             this.pbFoto.TabStop = false;
             this.pbFoto.WaitOnLoad = true;
-            // 
-            // txtDistrito
-            // 
-            this.txtDistrito.Location = new System.Drawing.Point(291, 272);
-            this.txtDistrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDistrito.Name = "txtDistrito";
-            this.txtDistrito.Size = new System.Drawing.Size(248, 26);
-            this.txtDistrito.TabIndex = 106;
             // 
             // nuevoDistrito
             // 
@@ -316,8 +307,8 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.Depth = 0;
             this.nuevoDistrito.HighEmphasis = true;
             this.nuevoDistrito.Icon = null;
-            this.nuevoDistrito.Location = new System.Drawing.Point(597, 269);
-            this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.nuevoDistrito.Location = new System.Drawing.Point(398, 175);
+            this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
             this.nuevoDistrito.Name = "nuevoDistrito";
             this.nuevoDistrito.Size = new System.Drawing.Size(155, 36);
@@ -335,8 +326,8 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Depth = 0;
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(886, 559);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCancelar.Location = new System.Drawing.Point(591, 363);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(96, 36);
@@ -354,8 +345,8 @@ namespace InterfazDATMA.Administrador
             this.btnGuardar.Depth = 0;
             this.btnGuardar.HighEmphasis = true;
             this.btnGuardar.Icon = null;
-            this.btnGuardar.Location = new System.Drawing.Point(1040, 559);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(693, 363);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(88, 36);
@@ -366,17 +357,26 @@ namespace InterfazDATMA.Administrador
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
+            // cboDistrito
+            // 
+            this.cboDistrito.FormattingEnabled = true;
+            this.cboDistrito.Location = new System.Drawing.Point(194, 178);
+            this.cboDistrito.Name = "cboDistrito";
+            this.cboDistrito.Size = new System.Drawing.Size(167, 21);
+            this.cboDistrito.TabIndex = 110;
+            this.cboDistrito.SelectedIndexChanged += new System.EventHandler(this.cboDistrito_SelectedIndexChanged);
+            // 
             // frmModificarPsicologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1254, 723);
+            this.ClientSize = new System.Drawing.Size(836, 470);
             this.ControlBox = false;
+            this.Controls.Add(this.cboDistrito);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.nuevoDistrito);
-            this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.btnSubirFoto);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.label1);
@@ -400,9 +400,7 @@ namespace InterfazDATMA.Administrador
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmModificarPsicologo";
-            this.Padding = new System.Windows.Forms.Padding(4, 98, 4, 5);
             this.Sizable = false;
             this.Text = "frmModificarPsicologo";
             this.Load += new System.EventHandler(this.frmModificarPsicologo_Load);
@@ -438,10 +436,10 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
-        private System.Windows.Forms.TextBox txtDistrito;
         private MaterialSkin.Controls.MaterialButton nuevoDistrito;
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnGuardar;
+        private System.Windows.Forms.ComboBox cboDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
         //private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;

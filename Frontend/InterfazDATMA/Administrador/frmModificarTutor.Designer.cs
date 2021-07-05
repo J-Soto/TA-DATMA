@@ -53,13 +53,13 @@ namespace InterfazDATMA.Administrador
             this.lblNombre = new System.Windows.Forms.Label();
             this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.txtDistrito = new System.Windows.Forms.TextBox();
             this.btnSubirFoto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.AgregarDistrio = new MaterialSkin.Controls.MaterialButton();
             this.btnAsignarUsuario = new MaterialSkin.Controls.MaterialButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnSiguiente = new MaterialSkin.Controls.MaterialButton();
+            this.cboDistrito = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,11 +193,6 @@ namespace InterfazDATMA.Administrador
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.TabStop = false;
             // 
-            // txtDistrito
-            // 
-            resources.ApplyResources(this.txtDistrito, "txtDistrito");
-            this.txtDistrito.Name = "txtDistrito";
-            // 
             // btnSubirFoto
             // 
             resources.ApplyResources(this.btnSubirFoto, "btnSubirFoto");
@@ -267,19 +262,26 @@ namespace InterfazDATMA.Administrador
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
+            // cboDistrito
+            // 
+            this.cboDistrito.FormattingEnabled = true;
+            resources.ApplyResources(this.cboDistrito, "cboDistrito");
+            this.cboDistrito.Name = "cboDistrito";
+            this.cboDistrito.SelectedIndexChanged += new System.EventHandler(this.cboDistrito_SelectedIndexChanged);
+            // 
             // frmModificarTutor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
+            this.Controls.Add(this.cboDistrito);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAsignarUsuario);
             this.Controls.Add(this.AgregarDistrio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSubirFoto);
-            this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblGenero);
@@ -333,7 +335,6 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtDistrito;
         private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
         private System.Windows.Forms.Button btnSubirFoto;
         //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
@@ -344,6 +345,7 @@ namespace InterfazDATMA.Administrador
         private MaterialSkin.Controls.MaterialButton btnAsignarUsuario;
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnSiguiente;
+        private System.Windows.Forms.ComboBox cboDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnAsignarUsuario;
     }
 }

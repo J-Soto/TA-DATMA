@@ -21,6 +21,7 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantilla;
         public frmOperacionesPersona formOperacionPersona;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
+        private DistritoWS.DistritoWSClient daoDistrito;
 
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
@@ -43,7 +44,6 @@ namespace InterfazDATMA.Administrador
             this.formOperacionPersona = formOperacionPersona;
 
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
-            txtDistrito.ReadOnly = true;
             inicializarComponentes();
             completarDatosPsicologos();
 
@@ -52,6 +52,12 @@ namespace InterfazDATMA.Administrador
 
         private void inicializarComponentes()
         {
+            daoDistrito = new DistritoWS.DistritoWSClient();
+            this.distrito = new PsicologoWS.distrito();
+            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+            cboDistrito.DataSource = distritos;
+            cboDistrito.DisplayMember = "nombre";
+
             txtNombre.Text = "";
             txtApellidoPat.Text = "";
             txtApellidoMat.Text = "";
@@ -92,9 +98,6 @@ namespace InterfazDATMA.Administrador
                 MemoryStream ms = new MemoryStream(psicologo.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
-            // Distrito
-            if (psicologo.distrito != null)
-                txtDistrito.Text = psicologo.distrito.nombre;
         }
 
         private void rbtnMujer_Click(object sender, EventArgs e)
@@ -165,7 +168,7 @@ namespace InterfazDATMA.Administrador
                     distrito = new PsicologoWS.distrito();
                     distrito.idDistrito = formDistrito.distrito.idDistrito;
                     distrito.nombre = formDistrito.distrito.nombre;
-                    txtDistrito.Text = distrito.nombre;
+                    cboDistrito.SelectedIndex = cboDistrito.FindStringExact(distrito.nombre);
                     psicologo.distrito = distrito;
                 }
             }
@@ -276,6 +279,13 @@ namespace InterfazDATMA.Administrador
 
             }
 
+        }
+
+        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.distrito.idDistrito = ((DistritoWS.distrito)cboDistrito.SelectedItem).idDistrito;
+            this.distrito.nombre = ((DistritoWS.distrito)cboDistrito.SelectedItem).nombre;
+            psicologo.distrito = distrito;
         }
     }
 }
