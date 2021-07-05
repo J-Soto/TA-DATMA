@@ -1304,6 +1304,7 @@
     <None Include="Imagenes\Continue.svg" />
     <None Include="Imagenes\Bienvenida.jpg" />
     <None Include="Imagenes\Bienvenida2.jpg" />
+    <None Include="Imagenes\Close.png" />
     <Content Include="Imagenes\DATMA logo.png" />
     <None Include="Imagenes\exit.png" />
     <None Include="Imagenes\menu.png" />
