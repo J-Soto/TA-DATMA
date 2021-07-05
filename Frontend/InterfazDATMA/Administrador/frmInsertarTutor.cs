@@ -25,6 +25,7 @@ namespace InterfazDATMA.Administrador
 
         private TutorWS.distrito distrito;
         private TutorWS.TutorWSClient daoTutor;
+        private DistritoWS.DistritoWSClient daoDistrito;
 
         public frmInsertarTutor(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
         {
@@ -37,13 +38,18 @@ namespace InterfazDATMA.Administrador
             this.formPlantilla = formPlantilla;
             this.formOperacionPersona = formOperacionPersona;
 
-            txtDistrito.ReadOnly = true;
             daoTutor = new TutorWS.TutorWSClient();
             inicializarComponentes();
         }
 
         private void inicializarComponentes()
         {
+            daoDistrito = new DistritoWS.DistritoWSClient();
+            this.distrito = new TutorWS.distrito();
+            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
+            cboDistrito.DataSource = distritos;
+            cboDistrito.DisplayMember = "nombre";
+
             txtNombre.Text = "";
             txtApPat.Text = "";
             txtApMat.Text = "";
@@ -77,7 +83,7 @@ namespace InterfazDATMA.Administrador
                     distrito = new TutorWS.distrito();
                     distrito.idDistrito = frmDistrito.distrito.idDistrito;
                     distrito.nombre = frmDistrito.distrito.nombre;
-                    txtDistrito.Text = distrito.nombre;
+                    cboDistrito.SelectedIndex = cboDistrito.FindStringExact(distrito.nombre);
                 }
             }
 
@@ -97,7 +103,7 @@ namespace InterfazDATMA.Administrador
             tutor.fechaNacimiento = dtpFechaNacimiento.Value;
             tutor.fechaNacimientoSpecified = true;
             tutor.distrito = new TutorWS.distrito();
-            tutor.distrito = distrito;
+            tutor.distrito = this.distrito;
 
             if (rbtnHombre.Checked == true)
             {
@@ -160,6 +166,12 @@ namespace InterfazDATMA.Administrador
         {
             formPlantilla.abrirFormulario(formOperacionPersona);
 
+        }
+
+        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.distrito.idDistrito = ((DistritoWS.distrito)cboDistrito.SelectedItem).idDistrito;
+            this.distrito.nombre = ((DistritoWS.distrito)cboDistrito.SelectedItem).nombre;
         }
     }
 }
