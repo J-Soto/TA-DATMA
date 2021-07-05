@@ -44,7 +44,7 @@ namespace InterfazDATMA
 
 
             daoCurso = new CursoWS.CursoWSClient();
-            lblCurso.Text = "Curso: " + curso.descripcion;
+            //lblCurso.Text = "Curso: " + curso.descripcion;
             dgvPrograma.AutoGenerateColumns = false;
             pares = new BindingList<SemanaTema>(Fetch());
             dgvPrograma.DataSource = pares;

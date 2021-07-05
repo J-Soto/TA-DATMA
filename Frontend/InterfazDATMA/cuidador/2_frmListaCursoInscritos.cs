@@ -32,10 +32,9 @@ namespace InterfazDATMA
             Design.Ini(this);
             if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
             else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
-
+            dgvListaCursos.AutoGenerateColumns = false;
             FetchCursos();
 
-            int i = 0;
             //foreach (var curso in cursos)
             //{
             //    if (curso != null)
@@ -63,8 +62,6 @@ namespace InterfazDATMA
             //        }
             //    }
             //}
-
-            dgvListaCursos.AutoGenerateColumns = false;
             //DataTable dt = new DataTable();
             //dt.Columns.Add("Curso", typeof(string));
             //dt.Columns.Add("Fecha", typeof(string));
