@@ -68,7 +68,7 @@ namespace InterfazDATMA
             //Inicializar Pantalla
             rtxtDescripcion.Text = currentSemana.descripcion;
             rtxtTema.Text = currentSemana.nombre;
-            lblTema.Text = "Curso: " + auxCurso.descripcion + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy");
+            //lblTema.Text = "Curso: " + auxCurso.descripcion + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy");
 
             //Limitar edicion:
             rtxtDescripcion.ReadOnly = true;
@@ -187,7 +187,7 @@ namespace InterfazDATMA
                 int resultado = daoSemana.modificarSemana(currentSemana);
                 formConfigurarModuloPsicologo.refrescarDataGridView(currentSemana);
 
-                lblTema.Text = "Curso: " + currentCurso.descripcion + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy");
+                //lblTema.Text = "Curso: " + currentCurso.descripcion + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy");
             }
             else
             {
