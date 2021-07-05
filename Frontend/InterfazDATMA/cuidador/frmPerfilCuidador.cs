@@ -30,7 +30,6 @@ namespace InterfazDATMA.cuidador
             HabilitarCampos();
             plantillaGestion = plantilla;
             txtUser.Text = frmPlantillaGestion.tutor.user;
-            txtPass.Text = frmPlantillaGestion.tutor.password;
             txtCel.Text = frmPlantillaGestion.tutor.celular;
             txtCorreo.Text = frmPlantillaGestion.tutor.correo;
             txtDni.Text = frmPlantillaGestion.tutor.DNI;
