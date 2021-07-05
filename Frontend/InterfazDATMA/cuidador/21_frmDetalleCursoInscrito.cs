@@ -36,7 +36,9 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
             this.curso = curso;
-            
+
+            TableStyles.CopyStyles(dgvSemanas);
+            TableStyles.CopyStyles(dgvActividades);
             dgvSemanas.AutoGenerateColumns = false;
             dgvActividades.AutoGenerateColumns = false;
 
