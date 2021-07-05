@@ -265,10 +265,10 @@
     <value>Fill</value>
   </data>
   <data name="nLabelControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 5</value>
+    <value>91, 3</value>
   </data>
   <data name="nLabelControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>819, 449</value>
+    <value>823, 453</value>
   </data>
   <data name="nLabelControl3.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
@@ -364,10 +364,10 @@
     <value>Fill</value>
   </data>
   <data name="nLabelControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 16</value>
+    <value>131, 14</value>
   </data>
   <data name="nLabelControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2296, 191</value>
+    <value>2300, 195</value>
   </data>
   <data name="nLabelControl1.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
@@ -631,10 +631,10 @@
     <value>Fill</value>
   </data>
   <data name="nLabelControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 5</value>
+    <value>91, 3</value>
   </data>
   <data name="nLabelControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>828, 211</value>
+    <value>832, 215</value>
   </data>
   <data name="nLabelControl2.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>

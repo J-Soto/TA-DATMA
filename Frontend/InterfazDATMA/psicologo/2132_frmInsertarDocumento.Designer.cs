@@ -148,7 +148,7 @@ namespace InterfazDATMA.psicologo
             this.btnSubir.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnSubir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(312, 154);
+            this.btnSubir.Size = new System.Drawing.Size(311, 154);
             this.btnSubir.TabIndex = 21;
             this.btnSubir.Text = "...";
             this.btnSubir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -257,7 +257,7 @@ namespace InterfazDATMA.psicologo
             this.tableLayoutPanel27.ColumnCount = 3;
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.81609F));
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.18391F));
-            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel27.Controls.Add(this.btnSubir, 1, 1);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel27.Location = new System.Drawing.Point(2475, 0);
@@ -346,9 +346,9 @@ namespace InterfazDATMA.psicologo
             this.nLabelControl2.AutoSize = false;
             this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
             this.nLabelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl2.Location = new System.Drawing.Point(49, 182);
+            this.nLabelControl2.Location = new System.Drawing.Point(48, 181);
             this.nLabelControl2.Name = "nLabelControl2";
-            this.nLabelControl2.Size = new System.Drawing.Size(813, 118);
+            this.nLabelControl2.Size = new System.Drawing.Size(815, 120);
             this.nLabelControl2.TabIndex = 92;
             // 
             // tableLayoutPanel23
@@ -446,9 +446,9 @@ namespace InterfazDATMA.psicologo
             this.nLabelControl1.AutoSize = false;
             this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
             this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl1.Location = new System.Drawing.Point(49, 181);
+            this.nLabelControl1.Location = new System.Drawing.Point(48, 180);
             this.nLabelControl1.Name = "nLabelControl1";
-            this.nLabelControl1.Size = new System.Drawing.Size(813, 116);
+            this.nLabelControl1.Size = new System.Drawing.Size(815, 118);
             this.nLabelControl1.TabIndex = 92;
             // 
             // tableLayoutPanel26
@@ -516,7 +516,7 @@ namespace InterfazDATMA.psicologo
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmInsertarDocumento";
             this.Padding = new System.Windows.Forms.Padding(5, 99, 5, 5);
             this.Text = "Insertar Documento";
