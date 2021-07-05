@@ -48,7 +48,7 @@ namespace InterfazDATMA
         {
             video = new MaterialWS.video();
 
-            if (txtLinkVideo.Text == "" || txtDescripcion.Text == "")
+            if (txtLinkVideo.Text.Trim() == "" || txtDescripcion.Text.Trim() == "")
             {
                 MessageBox.Show("Debe llenar todos los campos", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

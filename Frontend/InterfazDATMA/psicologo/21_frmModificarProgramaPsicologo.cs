@@ -179,7 +179,7 @@ namespace InterfazDATMA
 
         private void materialButton3_Click(object sender, EventArgs e)
         {
-            if(rtxtTema.Text != "" && rtxtDescripcion.Text != "")
+            if(rtxtTema.Text.Trim() != "" && rtxtDescripcion.Text.Trim() != "")
             {
                 currentSemana.nombre = rtxtTema.Text;
                 currentSemana.descripcion = rtxtDescripcion.Text;
@@ -191,10 +191,10 @@ namespace InterfazDATMA
             }
             else
             {
-                if(rtxtDescripcion.Text == "")
+                if(rtxtDescripcion.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe introducir una descripcion para la semana.","Mensaje de Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                }else if (rtxtTema.Text == "")
+                }else if (rtxtTema.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe introducir un nombre para la semana", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

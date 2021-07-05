@@ -280,7 +280,7 @@ namespace InterfazDATMA.Administrador
             {
                 if(temasCurso.Count == curso.cantSemanas)
                 {
-                    if(curso.descripcion != "" && curso.cantSemanas != 0)
+                    if(curso.descripcion.Trim() != "" && curso.cantSemanas != 0)
                     {
                         int idCurso = daoCurso.insertarCurso(curso);
                         curso.idCurso = idCurso;
@@ -346,7 +346,7 @@ namespace InterfazDATMA.Administrador
                     }
                     else
                     {
-                        if(curso.descripcion == "")
+                        if(curso.descripcion.Trim() == "")
                         {
                             MessageBox.Show("Debe introducir un nombre al curso.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }

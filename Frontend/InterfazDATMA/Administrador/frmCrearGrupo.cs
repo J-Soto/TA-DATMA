@@ -146,7 +146,7 @@ namespace InterfazDATMA.Administrador
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(txtNombreGrupo.Text != "" && Int32.Parse(txtMaxTutores.Text) != 0)
+            if(txtNombreGrupo.Text.Trim() != "" && Int32.Parse(txtMaxTutores.Text) != 0)
             {
                 if(psicologosGrupo.Count != 0)
                 {
@@ -164,7 +164,7 @@ namespace InterfazDATMA.Administrador
             }
             else
             {
-                if(txtNombreGrupo.Text == "")
+                if(txtNombreGrupo.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe introducir un nombre para el Grupo.", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
