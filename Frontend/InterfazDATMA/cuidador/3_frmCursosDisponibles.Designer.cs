@@ -36,10 +36,10 @@ namespace InterfazDATMA
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCursosDisponibles));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
             this.Modulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +52,7 @@ namespace InterfazDATMA
             this.btnInscribirse = new MaterialSkin.Controls.MaterialButton();
             this.btnMasInfo = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -102,7 +103,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.Controls.Add(this.lblTitulo, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.nLabelControl1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 25);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -111,20 +112,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1136, 164);
             this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Depth = 0;
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTitulo.Location = new System.Drawing.Point(117, 0);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(900, 164);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Lista de Cursos Disponibles";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel4
             // 
@@ -350,6 +337,16 @@ namespace InterfazDATMA
             this.materialCard1.Size = new System.Drawing.Size(1508, 777);
             this.materialCard1.TabIndex = 48;
             // 
+            // nLabelControl1
+            // 
+            this.nLabelControl1.AutoSize = false;
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl1.Location = new System.Drawing.Point(116, 3);
+            this.nLabelControl1.Name = "nLabelControl1";
+            this.nLabelControl1.Size = new System.Drawing.Size(902, 158);
+            this.nLabelControl1.TabIndex = 92;
+            // 
             // frmCursosDisponibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -383,7 +380,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MaterialSkin.Controls.MaterialButton btnInscribirse;
         private MaterialSkin.Controls.MaterialButton btnMasInfo;
-        private MaterialSkin.Controls.MaterialLabel lblTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Encargado;
@@ -391,5 +387,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
         private MaterialSkin.Controls.MaterialCard materialCard1;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
     }
 }

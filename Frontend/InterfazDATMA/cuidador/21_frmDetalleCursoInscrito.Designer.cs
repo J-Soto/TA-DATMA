@@ -29,13 +29,16 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetalleCursoInscrito));
             this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
             this.dgvSemanas = new System.Windows.Forms.DataGridView();
-            this.txtNombreCurso = new MaterialSkin.Controls.MaterialLabel();
+            this.Semana = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSemanaDescripcion = new MaterialSkin.Controls.MaterialMultiLineTextBox();
-            this.txtSemana = new MaterialSkin.Controls.MaterialLabel();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnReuniones = new MaterialSkin.Controls.MaterialButton();
             this.btnMaterial = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -43,12 +46,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Semana = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
@@ -58,6 +55,10 @@ namespace InterfazDATMA
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSemanas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
@@ -65,7 +66,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.materialCard3.SuspendLayout();
@@ -75,6 +75,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel26.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegresar
@@ -109,31 +110,25 @@ namespace InterfazDATMA
             this.Semana});
             this.dgvSemanas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSemanas.Location = new System.Drawing.Point(13, 14);
-            this.dgvSemanas.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvSemanas.Margin = new System.Windows.Forms.Padding(6);
             this.dgvSemanas.MultiSelect = false;
             this.dgvSemanas.Name = "dgvSemanas";
             this.dgvSemanas.ReadOnly = true;
             this.dgvSemanas.RowHeadersVisible = false;
             this.dgvSemanas.RowHeadersWidth = 82;
             this.dgvSemanas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSemanas.Size = new System.Drawing.Size(1590, 367);
+            this.dgvSemanas.Size = new System.Drawing.Size(1589, 367);
             this.dgvSemanas.TabIndex = 1;
             this.dgvSemanas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSemanas_CellClick);
             // 
-            // txtNombreCurso
+            // Semana
             // 
-            this.txtNombreCurso.BackColor = System.Drawing.Color.White;
-            this.txtNombreCurso.Depth = 0;
-            this.txtNombreCurso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNombreCurso.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNombreCurso.Location = new System.Drawing.Point(60, 29);
-            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.txtNombreCurso.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombreCurso.Name = "txtNombreCurso";
-            this.txtNombreCurso.Size = new System.Drawing.Size(559, 89);
-            this.txtNombreCurso.TabIndex = 2;
-            this.txtNombreCurso.Text = "Curso: ";
-            this.txtNombreCurso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Semana.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Semana.DataPropertyName = "nombre";
+            this.Semana.HeaderText = "Nombre";
+            this.Semana.MinimumWidth = 10;
+            this.Semana.Name = "Semana";
+            this.Semana.ReadOnly = true;
             // 
             // txtSemanaDescripcion
             // 
@@ -144,28 +139,13 @@ namespace InterfazDATMA
             this.txtSemanaDescripcion.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSemanaDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtSemanaDescripcion.Location = new System.Drawing.Point(40, 43);
-            this.txtSemanaDescripcion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSemanaDescripcion.Margin = new System.Windows.Forms.Padding(6);
             this.txtSemanaDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSemanaDescripcion.Name = "txtSemanaDescripcion";
             this.txtSemanaDescripcion.ReadOnly = true;
-            this.txtSemanaDescripcion.Size = new System.Drawing.Size(261, 318);
+            this.txtSemanaDescripcion.Size = new System.Drawing.Size(262, 318);
             this.txtSemanaDescripcion.TabIndex = 3;
             this.txtSemanaDescripcion.Text = "";
-            // 
-            // txtSemana
-            // 
-            this.txtSemana.BackColor = System.Drawing.Color.White;
-            this.txtSemana.Depth = 0;
-            this.txtSemana.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSemana.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtSemana.Location = new System.Drawing.Point(64, 14);
-            this.txtSemana.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.txtSemana.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtSemana.Name = "txtSemana";
-            this.txtSemana.Size = new System.Drawing.Size(558, 119);
-            this.txtSemana.TabIndex = 4;
-            this.txtSemana.Text = "Semana";
-            this.txtSemana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgvActividades
             // 
@@ -181,7 +161,7 @@ namespace InterfazDATMA
             this.HoraFin});
             this.dgvActividades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvActividades.Location = new System.Drawing.Point(12, 14);
-            this.dgvActividades.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvActividades.Margin = new System.Windows.Forms.Padding(6);
             this.dgvActividades.MultiSelect = false;
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.ReadOnly = true;
@@ -191,19 +171,41 @@ namespace InterfazDATMA
             this.dgvActividades.Size = new System.Drawing.Size(1645, 509);
             this.dgvActividades.TabIndex = 5;
             // 
-            // materialLabel1
+            // dataGridViewTextBoxColumn1
             // 
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(69, 14);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(1918, 119);
-            this.materialLabel1.TabIndex = 6;
-            this.materialLabel1.Text = "Actividad";
-            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // FechaInicio
+            // 
+            this.FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaInicio.DataPropertyName = "fecha";
+            this.FechaInicio.HeaderText = "Fecha Inicial";
+            this.FechaInicio.MinimumWidth = 10;
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoraInicio.DataPropertyName = "horaInicioStr";
+            this.HoraInicio.HeaderText = "Hora Inicial";
+            this.HoraInicio.MinimumWidth = 10;
+            this.HoraInicio.Name = "HoraInicio";
+            this.HoraInicio.ReadOnly = true;
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoraFin.DataPropertyName = "horaFinStr";
+            this.HoraFin.HeaderText = "Hora Final";
+            this.HoraFin.MinimumWidth = 10;
+            this.HoraFin.Name = "HoraFin";
+            this.HoraFin.ReadOnly = true;
             // 
             // btnReuniones
             // 
@@ -324,77 +326,13 @@ namespace InterfazDATMA
             this.panel6.Size = new System.Drawing.Size(293, 103);
             this.panel6.TabIndex = 14;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // FechaInicio
-            // 
-            this.FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FechaInicio.DataPropertyName = "fecha";
-            this.FechaInicio.HeaderText = "Fecha Inicial";
-            this.FechaInicio.MinimumWidth = 10;
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraInicio.DataPropertyName = "horaInicioStr";
-            this.HoraInicio.HeaderText = "Hora Inicial";
-            this.HoraInicio.MinimumWidth = 10;
-            this.HoraInicio.Name = "HoraInicio";
-            this.HoraInicio.ReadOnly = true;
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraFin.DataPropertyName = "horaFinStr";
-            this.HoraFin.HeaderText = "Hora Final";
-            this.HoraFin.MinimumWidth = 10;
-            this.HoraFin.Name = "HoraFin";
-            this.HoraFin.ReadOnly = true;
-            // 
-            // Semana
-            // 
-            this.Semana.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Semana.DataPropertyName = "nombre";
-            this.Semana.HeaderText = "Nombre";
-            this.Semana.MinimumWidth = 10;
-            this.Semana.Name = "Semana";
-            this.Semana.ReadOnly = true;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.076172F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.23828F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.636719F));
-            this.tableLayoutPanel5.Controls.Add(this.materialLabel1, 1, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 789);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(2048, 149);
-            this.tableLayoutPanel5.TabIndex = 50;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.012404F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.98759F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 362F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 363F));
             this.tableLayoutPanel1.Controls.Add(this.materialCard2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.materialCard3, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -420,7 +358,7 @@ namespace InterfazDATMA
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
-            this.materialCard2.Size = new System.Drawing.Size(1616, 395);
+            this.materialCard2.Size = new System.Drawing.Size(1615, 395);
             this.materialCard2.TabIndex = 54;
             // 
             // materialCard3
@@ -430,12 +368,12 @@ namespace InterfazDATMA
             this.materialCard3.Depth = 0;
             this.materialCard3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(1707, 37);
+            this.materialCard3.Location = new System.Drawing.Point(1706, 37);
             this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard3.Name = "materialCard3";
             this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(335, 395);
+            this.materialCard3.Size = new System.Drawing.Size(336, 395);
             this.materialCard3.TabIndex = 55;
             // 
             // tableLayoutPanel3
@@ -450,7 +388,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.809264F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.6485F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(307, 367);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(308, 367);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -460,7 +398,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.832031F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.83203F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.28711F));
-            this.tableLayoutPanel6.Controls.Add(this.txtSemana, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.nLabelControl1, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 161);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
@@ -514,7 +452,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.330883F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.06618F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.52243F));
-            this.tableLayoutPanel26.Controls.Add(this.txtNombreCurso, 1, 1);
+            this.tableLayoutPanel26.Controls.Add(this.nLabelControl2, 1, 1);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel26.Location = new System.Drawing.Point(3, 2);
             this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -549,6 +487,55 @@ namespace InterfazDATMA
             this.tableLayoutPanel7.Size = new System.Drawing.Size(2056, 1570);
             this.tableLayoutPanel7.TabIndex = 62;
             // 
+            // nLabelControl2
+            // 
+            this.nLabelControl2.AutoSize = false;
+            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
+            this.nLabelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl2.Location = new System.Drawing.Point(57, 32);
+            this.nLabelControl2.Name = "nLabelControl2";
+            this.nLabelControl2.Size = new System.Drawing.Size(565, 83);
+            this.nLabelControl2.TabIndex = 94;
+            // 
+            // nLabelControl1
+            // 
+            this.nLabelControl1.AutoSize = false;
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl1.Location = new System.Drawing.Point(61, 17);
+            this.nLabelControl1.Name = "nLabelControl1";
+            this.nLabelControl1.Size = new System.Drawing.Size(564, 113);
+            this.nLabelControl1.TabIndex = 95;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.076172F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.23828F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.636719F));
+            this.tableLayoutPanel5.Controls.Add(this.nLabelControl3, 1, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 789);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(2048, 149);
+            this.tableLayoutPanel5.TabIndex = 50;
+            // 
+            // nLabelControl3
+            // 
+            this.nLabelControl3.AutoSize = false;
+            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
+            this.nLabelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl3.Location = new System.Drawing.Point(66, 17);
+            this.nLabelControl3.Name = "nLabelControl3";
+            this.nLabelControl3.Size = new System.Drawing.Size(1924, 113);
+            this.nLabelControl3.TabIndex = 97;
+            // 
             // frmDetalleCursoInscrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -557,7 +544,7 @@ namespace InterfazDATMA
             this.ClientSize = new System.Drawing.Size(2064, 1637);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel7);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDetalleCursoInscrito";
             this.Padding = new System.Windows.Forms.Padding(4, 63, 4, 4);
             this.Text = "DATMA";
@@ -570,7 +557,6 @@ namespace InterfazDATMA
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard3.ResumeLayout(false);
@@ -580,6 +566,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel26.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -588,11 +575,8 @@ namespace InterfazDATMA
 
         private MaterialSkin.Controls.MaterialButton btnRegresar;
         private System.Windows.Forms.DataGridView dgvSemanas;
-        private MaterialSkin.Controls.MaterialLabel txtNombreCurso;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtSemanaDescripcion;
-        private MaterialSkin.Controls.MaterialLabel txtSemana;
         private System.Windows.Forms.DataGridView dgvActividades;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton btnReuniones;
         private MaterialSkin.Controls.MaterialButton btnMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -605,7 +589,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Semana;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private MaterialSkin.Controls.MaterialCard materialCard3;
@@ -615,5 +598,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl3;
     }
 }
