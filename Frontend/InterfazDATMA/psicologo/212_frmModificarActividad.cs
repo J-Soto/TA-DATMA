@@ -62,7 +62,7 @@ namespace InterfazDATMA.psicologo
             this.formModificarPrograma = formModificarPrograma;
             this.formPlantillaGestion = formPlantillaGestion;
 
-            lblCurso.Text = "Curso: " + nombreCurso + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy") + "\n\nEditar Actividad:";
+            lblCurso.WidgetText = "Curso: " + nombreCurso + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy") + "\nEditar Actividad:";
 
             videosEliminados = new BindingList<ActividadWS.video>();
             documentosEliminados = new BindingList<ActividadWS.documento>();

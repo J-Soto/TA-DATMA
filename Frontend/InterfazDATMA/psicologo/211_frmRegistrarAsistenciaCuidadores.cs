@@ -40,7 +40,7 @@ namespace InterfazDATMA
 
             dgvAsitencia.AutoGenerateColumns = false;
 
-            lblInformacion.Text = "Curso: " + nombreCurso + "   >   Actividad: " + actividad.nombre + "   >   Fecha Act: " + actividad.fecha.ToString("dd/MM/yy");
+            lblInformacion.WidgetText = "Curso: " + nombreCurso + "   >   Actividad: " + actividad.nombre + "   >   Fecha Act: " + actividad.fecha.ToString("dd/MM/yy");
 
             Design.Ini(this);
             if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;

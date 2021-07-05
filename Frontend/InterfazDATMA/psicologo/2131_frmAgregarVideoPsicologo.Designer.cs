@@ -36,7 +36,9 @@ namespace InterfazDATMA
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
@@ -45,11 +47,9 @@ namespace InterfazDATMA
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.txtLinkVideo = new MaterialSkin.Controls.MaterialTextBox();
-            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel7.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -114,12 +114,24 @@ namespace InterfazDATMA
             this.tableLayoutPanel4.Controls.Add(this.nLabelControl3, 1, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             // 
+            // nLabelControl3
+            // 
+            resources.ApplyResources(this.nLabelControl3, "nLabelControl3");
+            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
+            this.nLabelControl3.Name = "nLabelControl3";
+            // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.tableLayoutPanel10, "tableLayoutPanel10");
             this.tableLayoutPanel10.Controls.Add(this.nLabelControl1, 1, 1);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            // 
+            // nLabelControl1
+            // 
+            resources.ApplyResources(this.nLabelControl1, "nLabelControl1");
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Name = "nLabelControl1";
             // 
             // tableLayoutPanel2
             // 
@@ -196,6 +208,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel11.Controls.Add(this.nLabelControl2, 1, 0);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             // 
+            // nLabelControl2
+            // 
+            resources.ApplyResources(this.nLabelControl2, "nLabelControl2");
+            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
+            this.nLabelControl2.Name = "nLabelControl2";
+            // 
             // tableLayoutPanel9
             // 
             resources.ApplyResources(this.tableLayoutPanel9, "tableLayoutPanel9");
@@ -211,24 +229,6 @@ namespace InterfazDATMA
             this.txtLinkVideo.MouseState = MaterialSkin.MouseState.OUT;
             this.txtLinkVideo.Name = "txtLinkVideo";
             this.txtLinkVideo.TrailingIcon = null;
-            // 
-            // nLabelControl1
-            // 
-            resources.ApplyResources(this.nLabelControl1, "nLabelControl1");
-            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
-            this.nLabelControl1.Name = "nLabelControl1";
-            // 
-            // nLabelControl2
-            // 
-            resources.ApplyResources(this.nLabelControl2, "nLabelControl2");
-            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
-            this.nLabelControl2.Name = "nLabelControl2";
-            // 
-            // nLabelControl3
-            // 
-            resources.ApplyResources(this.nLabelControl3, "nLabelControl3");
-            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
-            this.nLabelControl3.Name = "nLabelControl3";
             // 
             // frmAgregarMaterialPsicologo
             // 

@@ -45,3 +45,15 @@ C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsA
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Lab10\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Lab10\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Lab10\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Lab10\Frontend\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
