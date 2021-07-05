@@ -68,12 +68,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxEncargada)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -705,38 +705,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel23.Size = new System.Drawing.Size(958, 581);
             this.tableLayoutPanel23.TabIndex = 35;
             // 
-            // TipoActividad
-            // 
-            this.TipoActividad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoActividad.DataPropertyName = "descripcion";
-            this.TipoActividad.HeaderText = "Nombre de Actividad";
-            this.TipoActividad.MinimumWidth = 8;
-            this.TipoActividad.Name = "TipoActividad";
-            // 
-            // HoraIni
-            // 
-            this.HoraIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraIni.DataPropertyName = "horaInicioStr";
-            this.HoraIni.HeaderText = "Hora de Inicio";
-            this.HoraIni.MinimumWidth = 8;
-            this.HoraIni.Name = "HoraIni";
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoraFin.DataPropertyName = "horaFinStr";
-            this.HoraFin.HeaderText = "Hora de Fin";
-            this.HoraFin.MinimumWidth = 8;
-            this.HoraFin.Name = "HoraFin";
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.DataPropertyName = "fecha";
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 8;
-            this.Fecha.Name = "Fecha";
-            // 
             // Nombre
             // 
             this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -764,6 +732,38 @@ namespace InterfazDATMA
             this.dgvPsicologos.Size = new System.Drawing.Size(241, 74);
             this.dgvPsicologos.TabIndex = 0;
             this.dgvPsicologos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPsicologos_CellClick);
+            // 
+            // TipoActividad
+            // 
+            this.TipoActividad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoActividad.DataPropertyName = "nombre";
+            this.TipoActividad.HeaderText = "Nombre de Actividad";
+            this.TipoActividad.MinimumWidth = 8;
+            this.TipoActividad.Name = "TipoActividad";
+            // 
+            // HoraIni
+            // 
+            this.HoraIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoraIni.DataPropertyName = "horaInicioStr";
+            this.HoraIni.HeaderText = "Hora de Inicio";
+            this.HoraIni.MinimumWidth = 8;
+            this.HoraIni.Name = "HoraIni";
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoraFin.DataPropertyName = "horaFinStr";
+            this.HoraFin.HeaderText = "Hora de Fin";
+            this.HoraFin.MinimumWidth = 8;
+            this.HoraFin.Name = "HoraFin";
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha.DataPropertyName = "fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 8;
+            this.Fecha.Name = "Fecha";
             // 
             // frmInformacionCurso
             // 
@@ -843,11 +843,11 @@ namespace InterfazDATMA
         private Nevron.Nov.WinFormControls.NLabelControl lblNombreModulo;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl6;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl7;
+        private System.Windows.Forms.DataGridView dgvPsicologos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridView dgvPsicologos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

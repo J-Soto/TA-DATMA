@@ -43,8 +43,9 @@ namespace InterfazDATMA
             this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnInscribirse = new MaterialSkin.Controls.MaterialButton();
             this.btnMasInfo = new MaterialSkin.Controls.MaterialButton();
+            this.btnInscribirse = new MaterialSkin.Controls.MaterialButton();
+            this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
             this.Modulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,7 +72,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 33);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -88,7 +89,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -106,7 +107,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.Controls.Add(this.nLabelControl1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 13);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -118,9 +119,9 @@ namespace InterfazDATMA
             this.nLabelControl1.AutoSize = false;
             this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
             this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl1.Location = new System.Drawing.Point(58, 2);
+            this.nLabelControl1.Location = new System.Drawing.Point(59, 3);
             this.nLabelControl1.Name = "nLabelControl1";
-            this.nLabelControl1.Size = new System.Drawing.Size(450, 81);
+            this.nLabelControl1.Size = new System.Drawing.Size(448, 79);
             this.nLabelControl1.TabIndex = 92;
             // 
             // tableLayoutPanel4
@@ -148,11 +149,13 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.btnMasInfo, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnInscribirse, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnMasInfo, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnRegresar, 0, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(815, 25);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -160,8 +163,30 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(141, 414);
             this.tableLayoutPanel2.TabIndex = 20;
+            // 
+            // btnMasInfo
+            // 
+            this.btnMasInfo.AutoSize = false;
+            this.btnMasInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMasInfo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnMasInfo.Depth = 0;
+            this.btnMasInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMasInfo.HighEmphasis = true;
+            this.btnMasInfo.Icon = null;
+            this.btnMasInfo.Location = new System.Drawing.Point(2, 167);
+            this.btnMasInfo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMasInfo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMasInfo.Name = "btnMasInfo";
+            this.btnMasInfo.Size = new System.Drawing.Size(137, 76);
+            this.btnMasInfo.TabIndex = 31;
+            this.btnMasInfo.Text = "Ver mas informacion";
+            this.btnMasInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnMasInfo.UseAccentColor = false;
+            this.btnMasInfo.UseVisualStyleBackColor = true;
+            this.btnMasInfo.Click += new System.EventHandler(this.btnMasInfo_Click);
             // 
             // btnInscribirse
             // 
@@ -184,26 +209,26 @@ namespace InterfazDATMA
             this.btnInscribirse.UseVisualStyleBackColor = true;
             this.btnInscribirse.Click += new System.EventHandler(this.btnInscribirse_Click_1);
             // 
-            // btnMasInfo
+            // btnRegresar
             // 
-            this.btnMasInfo.AutoSize = false;
-            this.btnMasInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMasInfo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnMasInfo.Depth = 0;
-            this.btnMasInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMasInfo.HighEmphasis = true;
-            this.btnMasInfo.Icon = null;
-            this.btnMasInfo.Location = new System.Drawing.Point(2, 249);
-            this.btnMasInfo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnMasInfo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMasInfo.Name = "btnMasInfo";
-            this.btnMasInfo.Size = new System.Drawing.Size(137, 76);
-            this.btnMasInfo.TabIndex = 29;
-            this.btnMasInfo.Text = "Ver mas informacion";
-            this.btnMasInfo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnMasInfo.UseAccentColor = false;
-            this.btnMasInfo.UseVisualStyleBackColor = true;
-            this.btnMasInfo.Click += new System.EventHandler(this.btnMasInfo_Click_1);
+            this.btnRegresar.AutoSize = false;
+            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRegresar.Depth = 0;
+            this.btnRegresar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegresar.HighEmphasis = true;
+            this.btnRegresar.Icon = null;
+            this.btnRegresar.Location = new System.Drawing.Point(2, 249);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(137, 76);
+            this.btnRegresar.TabIndex = 29;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRegresar.UseAccentColor = false;
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // materialCard1
             // 
@@ -248,7 +273,7 @@ namespace InterfazDATMA
             this.dgvCursos.EnableHeadersVisualStyles = false;
             this.dgvCursos.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvCursos.Location = new System.Drawing.Point(6, 7);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCursos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCursos.MultiSelect = false;
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
@@ -377,8 +402,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridView dgvCursos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private MaterialSkin.Controls.MaterialButton btnInscribirse;
-        private MaterialSkin.Controls.MaterialButton btnMasInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Encargado;
@@ -387,5 +410,8 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
+        private MaterialSkin.Controls.MaterialButton btnRegresar;
+        private MaterialSkin.Controls.MaterialButton btnMasInfo;
+        private MaterialSkin.Controls.MaterialButton btnInscribirse;
     }
 }
