@@ -57,7 +57,10 @@ namespace InterfazDATMA.psicologo
             InitializeComponent();
             
             dgvDocumentos.AutoGenerateColumns = false;
+            dgvDocumentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVideos.AutoGenerateColumns = false;
+            dgvVideos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
             this.idGrupo = idGrupo;
 
             lblCurso.Text = "Curso: " + nombreCurso + "   >   " + "Semana: " + currentSemana.nombre + "   >   Duracion: " + currentSemana.fechaInicio.ToString("dd/MM/yyyy") + " - " + currentSemana.fechaInicio.AddDays(6).ToString("dd/MM/yyyy") + "\n\nNueva Actividad:";
@@ -112,7 +115,7 @@ namespace InterfazDATMA.psicologo
         {
             DateTime auxFechaReu = dtpFechaReunion.Value;
 
-            if(txtNombreAct.Text != ""  && txtLinkZoom.Text != "" && dtpHInicio.Value.TimeOfDay < dtpHFin.Value.TimeOfDay && currentSemana.fechaInicio.Date <= auxFechaReu.Date && auxFechaReu.Date < currentSemana.fechaInicio.AddDays(7))
+            if(txtNombreAct.Text.Trim() != ""  && txtLinkZoom.Text.Trim() != "" && dtpHInicio.Value.TimeOfDay < dtpHFin.Value.TimeOfDay && currentSemana.fechaInicio.Date <= auxFechaReu.Date && auxFechaReu.Date < currentSemana.fechaInicio.AddDays(7))
             {
                 //Inicializar la actividad:
                 actividad = new ActividadWS.actividad();
@@ -198,11 +201,11 @@ namespace InterfazDATMA.psicologo
             }
             else
             {
-                if(txtNombreAct.Text == "")
+                if(txtNombreAct.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe colocarle un nombre a la actividad", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if(txtLinkZoom.Text == "")
+                else if(txtLinkZoom.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe colocar el link de zoom para la reunion", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

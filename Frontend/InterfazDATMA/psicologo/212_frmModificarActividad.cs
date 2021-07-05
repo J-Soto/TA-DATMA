@@ -52,6 +52,7 @@ namespace InterfazDATMA.psicologo
             dgvDocumentos.AutoGenerateColumns = false;
             dgvDocumentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVideos.AutoGenerateColumns = false;
+            dgvVideos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -142,7 +143,7 @@ namespace InterfazDATMA.psicologo
         {
             DateTime auxFechaReu = dtpFechaReunion.Value;
 
-            if (txtNombreAct.Text != "" && txtLinkZoom.Text != "" && dtpHInicio.Value.TimeOfDay < dtpHFin.Value.TimeOfDay && currentSemana.fechaInicio.Date <= auxFechaReu.Date && auxFechaReu.Date < currentSemana.fechaInicio.AddDays(7))
+            if (txtNombreAct.Text.Trim() != "" && txtLinkZoom.Text.Trim() != "" && dtpHInicio.Value.TimeOfDay < dtpHFin.Value.TimeOfDay && currentSemana.fechaInicio.Date <= auxFechaReu.Date && auxFechaReu.Date < currentSemana.fechaInicio.AddDays(7))
             {
                 ActividadWS.actividad actividad = new ActividadWS.actividad();
 
@@ -210,11 +211,11 @@ namespace InterfazDATMA.psicologo
             }
             else
             {
-                if (txtNombreAct.Text == "")
+                if (txtNombreAct.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe colocarle un nombre a la actividad", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (txtLinkZoom.Text == "")
+                else if (txtLinkZoom.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe colocar el link de zoom para la reunion", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }else if (!(currentSemana.fechaInicio.Date <= auxFechaReu.Date && auxFechaReu.Date <

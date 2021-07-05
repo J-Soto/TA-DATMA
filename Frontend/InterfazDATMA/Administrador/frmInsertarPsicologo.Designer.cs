@@ -82,6 +82,7 @@ namespace InterfazDATMA.Administrador
             this.txtCelular.Size = new System.Drawing.Size(248, 26);
             this.txtCelular.TabIndex = 58;
             this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
+            this.txtCelular.Validating += new System.ComponentModel.CancelEventHandler(this.txtCelular_Validating);
             // 
             // txtTelf
             // 
@@ -110,6 +111,7 @@ namespace InterfazDATMA.Administrador
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(415, 26);
             this.txtCorreo.TabIndex = 55;
+            this.txtCorreo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreo_Validating);
             // 
             // txtApellidoMat
             // 
@@ -126,6 +128,7 @@ namespace InterfazDATMA.Administrador
             this.txtApellidoPat.Name = "txtApellidoPat";
             this.txtApellidoPat.Size = new System.Drawing.Size(415, 26);
             this.txtApellidoPat.TabIndex = 52;
+            this.txtApellidoPat.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoPat_Validating);
             // 
             // dtpFechaNacimiento
             // 
@@ -172,6 +175,7 @@ namespace InterfazDATMA.Administrador
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(415, 26);
             this.txtNombre.TabIndex = 48;
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // lblApMat
             // 
@@ -325,7 +329,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(96, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(92, 36);
             this.btnCancelar.TabIndex = 74;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -344,7 +348,7 @@ namespace InterfazDATMA.Administrador
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(88, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(86, 36);
             this.btnGuardar.TabIndex = 75;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -363,7 +367,7 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
             this.nuevoDistrito.Name = "nuevoDistrito";
-            this.nuevoDistrito.Size = new System.Drawing.Size(155, 36);
+            this.nuevoDistrito.Size = new System.Drawing.Size(150, 36);
             this.nuevoDistrito.TabIndex = 76;
             this.nuevoDistrito.Text = "Agregar Distrito";
             this.nuevoDistrito.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;

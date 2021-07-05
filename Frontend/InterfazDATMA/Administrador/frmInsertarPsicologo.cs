@@ -231,6 +231,7 @@ namespace InterfazDATMA.Administrador
                 this.errorProvider.SetError(txtTelf, "");
             }
 
+            // txtCelular
             if (psicologo.celular.Length != 9 || psicologo.celular[0] != '9')  // El telefono debe tener 7 dígitos
             {
                 this.errorProvider.SetError(txtCelular, "El número de celular debe tener 9 dígitos y empezar con 9.");
@@ -241,6 +242,7 @@ namespace InterfazDATMA.Administrador
                 this.errorProvider.SetError(txtCelular, "");
             }
 
+            // txtNombre
             if (psicologo.nombre == "")
             {
                 this.errorProvider.SetError(txtNombre, "Es requerido ingresar el nombre.");
@@ -251,6 +253,7 @@ namespace InterfazDATMA.Administrador
                 this.errorProvider.SetError(txtNombre, "");
             }
 
+            // txtApellidoPat
             if (psicologo.apellidoPaterno == "")
             {
                 this.errorProvider.SetError(txtApellidoPat, "Es requerido ingresar el apellido paterno.");
@@ -259,16 +262,6 @@ namespace InterfazDATMA.Administrador
             else
             {
                 this.errorProvider.SetError(txtApellidoPat, "");
-            }
-
-            if (psicologo.apellidoMaterno == "")
-            {
-                this.errorProvider.SetError(txtApellidoMat, "Es requerido ingresar el apellido materno.");
-                validacionCorrecta = false;
-            }
-            else
-            {
-                this.errorProvider.SetError(txtApellidoMat, "");
             }
 
             if (psicologo.fechaNacimiento.Year > 2003)
@@ -311,6 +304,7 @@ namespace InterfazDATMA.Administrador
                 this.errorProvider.SetError(btnSubirFoto, "");
             }
 
+            // txtCorreo
             if (psicologo.correo != "") 
             {
                 if (!Char.IsLetter(psicologo.correo[0]) || psicologo.correo.Contains("@") != true || !(psicologo.correo.IndexOf(".", psicologo.correo.IndexOf("@")) > psicologo.correo.IndexOf("@")))
@@ -414,6 +408,61 @@ namespace InterfazDATMA.Administrador
             else
             {
                 this.errorProvider.SetError(txtTelf, "");
+            }
+        }
+
+        private void txtCelular_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtCelular.Text.Length != 9 || txtCelular.Text[0] != '9')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtCelular, "El número de celular debe tener 9 dígitos y empezar con 9.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCelular, "");
+            }
+        }
+
+        private void txtNombre_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                this.errorProvider.SetError(txtNombre, "Es requerido ingresar el nombre.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtNombre, "");
+            }
+        }
+
+        private void txtApellidoPat_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtApellidoPat.Text == "")
+            {
+                this.errorProvider.SetError(txtApellidoPat, "Es requerido ingresar el apellido paterno.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtApellidoPat, "");
+            }
+        }
+
+        private void txtCorreo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtCorreo.Text != "")
+            {
+                if (!Char.IsLetter(txtCorreo.Text[0]) || txtCorreo.Text.Contains("@") != true || !(txtCorreo.Text.IndexOf(".", txtCorreo.Text.IndexOf("@")) > txtCorreo.Text.IndexOf("@")))
+                {
+                    this.errorProvider.SetError(txtCorreo, "Ingrese un correo válido.");
+                }
+                else
+                {
+                    this.errorProvider.SetError(txtCorreo, "");
+                }
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCorreo, "Es requerido ingresar un correo.");
             }
         }
 

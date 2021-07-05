@@ -48,7 +48,7 @@ namespace InterfazDATMA.psicologo
             }
             else
             {
-                if(txtDescripcion.Text != "")
+                if(txtDescripcion.Text.Trim() != "")
                 {
                     documento.docPDF = auxBytes;
                     documento.descripcion = txtDescripcion.Text;
