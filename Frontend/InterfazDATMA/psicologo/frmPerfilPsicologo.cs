@@ -137,5 +137,10 @@ namespace InterfazDATMA.psicologo
             txtUser.Enabled = true;
             txtUser.ReadOnly = false;
         }
+
+        private void frmPerfilPsicologo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
