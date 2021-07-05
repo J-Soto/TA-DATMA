@@ -50,12 +50,13 @@ namespace InterfazDATMA
             this.VolverCuidadores = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ModificarSemana = new MaterialSkin.Controls.MaterialButton();
-            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
+            this.lblCurso = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel15.SuspendLayout();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrograma)).BeginInit();
@@ -63,6 +64,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel18.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel26.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
@@ -131,7 +133,7 @@ namespace InterfazDATMA
             this.dgvPrograma.EnableHeadersVisualStyles = false;
             this.dgvPrograma.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvPrograma.Location = new System.Drawing.Point(13, 14);
-            this.dgvPrograma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPrograma.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPrograma.Name = "dgvPrograma";
             this.dgvPrograma.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -285,6 +287,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.330883F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.06618F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.52243F));
+            this.tableLayoutPanel26.Controls.Add(this.lblCurso, 1, 1);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel26.Location = new System.Drawing.Point(3, 2);
             this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -376,6 +379,16 @@ namespace InterfazDATMA
             this.tableLayoutPanel20.Size = new System.Drawing.Size(393, 62);
             this.tableLayoutPanel20.TabIndex = 61;
             // 
+            // nLabelControl1
+            // 
+            this.nLabelControl1.AutoSize = false;
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl1.Location = new System.Drawing.Point(7, 6);
+            this.nLabelControl1.Name = "nLabelControl1";
+            this.nLabelControl1.Size = new System.Drawing.Size(362, 49);
+            this.nLabelControl1.TabIndex = 92;
+            // 
             // tableLayoutPanel24
             // 
             this.tableLayoutPanel24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -466,15 +479,15 @@ namespace InterfazDATMA
             this.ModificarSemana.UseVisualStyleBackColor = true;
             this.ModificarSemana.Click += new System.EventHandler(this.ModificarSemana_Click);
             // 
-            // nLabelControl1
+            // lblCurso
             // 
-            this.nLabelControl1.AutoSize = false;
-            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
-            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl1.Location = new System.Drawing.Point(7, 6);
-            this.nLabelControl1.Name = "nLabelControl1";
-            this.nLabelControl1.Size = new System.Drawing.Size(362, 49);
-            this.nLabelControl1.TabIndex = 92;
+            this.lblCurso.AutoSize = false;
+            this.lblCurso.DesignTimeState = resources.GetString("lblCurso.DesignTimeState");
+            this.lblCurso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCurso.Location = new System.Drawing.Point(39, 23);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(382, 55);
+            this.lblCurso.TabIndex = 93;
             // 
             // frmConfigurarModuloPsicologo
             // 
@@ -484,7 +497,7 @@ namespace InterfazDATMA
             this.ClientSize = new System.Drawing.Size(1412, 1199);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConfigurarModuloPsicologo";
             this.Padding = new System.Windows.Forms.Padding(4, 80, 4, 4);
             this.Sizable = false;
@@ -497,6 +510,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel18.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel26.ResumeLayout(false);
             this.tableLayoutPanel27.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
@@ -530,5 +544,6 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn Tema;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
+        private Nevron.Nov.WinFormControls.NLabelControl lblCurso;
     }
 }
