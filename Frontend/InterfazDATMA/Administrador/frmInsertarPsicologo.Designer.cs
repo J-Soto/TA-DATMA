@@ -29,6 +29,7 @@ namespace InterfazDATMA.Administrador
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblGenero = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtTelf = new System.Windows.Forms.TextBox();
@@ -57,7 +58,9 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnGuardar = new MaterialSkin.Controls.MaterialButton();
             this.nuevoDistrito = new MaterialSkin.Controls.MaterialButton();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGenero
@@ -88,6 +91,7 @@ namespace InterfazDATMA.Administrador
             this.txtTelf.Size = new System.Drawing.Size(248, 26);
             this.txtTelf.TabIndex = 57;
             this.txtTelf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelf_KeyPress);
+            this.txtTelf.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelf_Validating);
             // 
             // txtDni
             // 
@@ -97,6 +101,7 @@ namespace InterfazDATMA.Administrador
             this.txtDni.Size = new System.Drawing.Size(248, 26);
             this.txtDni.TabIndex = 56;
             this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
+            this.txtDni.Validating += new System.ComponentModel.CancelEventHandler(this.txtDni_Validating);
             // 
             // txtCorreo
             // 
@@ -167,7 +172,6 @@ namespace InterfazDATMA.Administrador
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(415, 26);
             this.txtNombre.TabIndex = 48;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblApMat
             // 
@@ -198,9 +202,9 @@ namespace InterfazDATMA.Administrador
             this.lblDni.ForeColor = System.Drawing.Color.White;
             this.lblDni.Location = new System.Drawing.Point(830, 148);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(41, 25);
+            this.lblDni.Size = new System.Drawing.Size(45, 25);
             this.lblDni.TabIndex = 45;
-            this.lblDni.Text = "Dni";
+            this.lblDni.Text = "DNI";
             // 
             // lblDistrito
             // 
@@ -367,10 +371,15 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.UseVisualStyleBackColor = true;
             this.nuevoDistrito.Click += new System.EventHandler(this.nuevoDistrito_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmInsertarPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1428, 862);
             this.ControlBox = false;
@@ -405,8 +414,8 @@ namespace InterfazDATMA.Administrador
             this.Name = "frmInsertarPsicologo";
             this.Sizable = false;
             this.Text = "Insertar Psicólogo";
-            this.Load += new System.EventHandler(this.frmInsertarPsicologo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,6 +450,7 @@ namespace InterfazDATMA.Administrador
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnGuardar;
         private MaterialSkin.Controls.MaterialButton nuevoDistrito;
+        private System.Windows.Forms.ErrorProvider errorProvider;
         //private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
         //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;

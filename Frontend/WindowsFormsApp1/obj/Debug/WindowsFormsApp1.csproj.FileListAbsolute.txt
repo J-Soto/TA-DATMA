@@ -1,13 +1,3 @@
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\J-Soto\TA-DATMA\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\J-Soto\TA-DATMA\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\J-Soto\TA-DATMA\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
@@ -31,15 +21,3 @@ C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\Solo-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
