@@ -30,20 +30,20 @@ namespace InterfazDATMA.Administrador
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJustificacionCursoEliminado));
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
+            this.lbl2 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
-            this.textBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.lbl1 = new Nevron.Nov.WinFormControls.NLabelControl();
+            this.txt = new MaterialSkin.Controls.MaterialTextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
+            this.btnAceptar = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -55,25 +55,25 @@ namespace InterfazDATMA.Administrador
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialButton1
+            // btnCancelar
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(0, 0);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.Size = new System.Drawing.Size(489, 161);
-            this.materialButton1.TabIndex = 54;
-            this.materialButton1.Text = "Cancelar";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.btnCancelar.AutoSize = false;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelar.HighEmphasis = true;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(0, 0);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(489, 161);
+            this.btnCancelar.TabIndex = 54;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCancelar.UseAccentColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -125,7 +125,7 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel5.Controls.Add(this.nLabelControl2, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.lbl2, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(215, 40);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
@@ -137,15 +137,15 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1685, 101);
             this.tableLayoutPanel5.TabIndex = 62;
             // 
-            // nLabelControl2
+            // lbl2
             // 
-            this.nLabelControl2.AutoSize = false;
-            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
-            this.nLabelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl2.Location = new System.Drawing.Point(87, 8);
-            this.nLabelControl2.Name = "nLabelControl2";
-            this.nLabelControl2.Size = new System.Drawing.Size(1510, 84);
-            this.nLabelControl2.TabIndex = 94;
+            this.lbl2.AutoSize = false;
+            this.lbl2.DesignTimeState = resources.GetString("lbl2.DesignTimeState");
+            this.lbl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl2.Location = new System.Drawing.Point(87, 8);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(1510, 84);
+            this.lbl2.TabIndex = 94;
             // 
             // tableLayoutPanel2
             // 
@@ -174,7 +174,7 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel10.Controls.Add(this.nLabelControl1, 1, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl1, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(215, 40);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4);
@@ -186,33 +186,33 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel10.Size = new System.Drawing.Size(1685, 101);
             this.tableLayoutPanel10.TabIndex = 61;
             // 
-            // nLabelControl1
+            // lbl1
             // 
-            this.nLabelControl1.AutoSize = false;
-            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
-            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nLabelControl1.Location = new System.Drawing.Point(87, 8);
-            this.nLabelControl1.Name = "nLabelControl1";
-            this.nLabelControl1.Size = new System.Drawing.Size(1510, 84);
-            this.nLabelControl1.TabIndex = 93;
+            this.lbl1.AutoSize = false;
+            this.lbl1.DesignTimeState = resources.GetString("lbl1.DesignTimeState");
+            this.lbl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1.Location = new System.Drawing.Point(87, 8);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(1510, 84);
+            this.lbl1.TabIndex = 93;
             // 
-            // textBox1
+            // txt
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Depth = 0;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textBox1.LeadingIcon = null;
-            this.textBox1.Location = new System.Drawing.Point(89, 12);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.textBox1.Multiline = false;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1506, 50);
-            this.textBox1.TabIndex = 85;
-            this.textBox1.Text = "";
-            this.textBox1.TrailingIcon = null;
+            this.txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt.Depth = 0;
+            this.txt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt.LeadingIcon = null;
+            this.txt.Location = new System.Drawing.Point(89, 12);
+            this.txt.Margin = new System.Windows.Forms.Padding(5);
+            this.txt.MaxLength = 50;
+            this.txt.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt.Multiline = false;
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(1506, 50);
+            this.txt.TabIndex = 85;
+            this.txt.Text = "";
+            this.txt.TrailingIcon = null;
             // 
             // tableLayoutPanel4
             // 
@@ -241,7 +241,7 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel6.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.txt, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(215, 58);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
@@ -264,7 +264,7 @@ namespace InterfazDATMA.Administrador
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.47662F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.12376F));
             this.tableLayoutPanel7.Controls.Add(this.panel9, 3, 1);
-            this.tableLayoutPanel7.Controls.Add(this.btnRegresar, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.btnAceptar, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 637);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -279,7 +279,7 @@ namespace InterfazDATMA.Administrador
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Controls.Add(this.materialButton1);
+            this.panel9.Controls.Add(this.btnCancelar);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(1324, 57);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -287,25 +287,25 @@ namespace InterfazDATMA.Administrador
             this.panel9.Size = new System.Drawing.Size(489, 161);
             this.panel9.TabIndex = 15;
             // 
-            // btnRegresar
+            // btnAceptar
             // 
-            this.btnRegresar.AutoSize = false;
-            this.btnRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRegresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnRegresar.Depth = 0;
-            this.btnRegresar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRegresar.HighEmphasis = true;
-            this.btnRegresar.Icon = null;
-            this.btnRegresar.Location = new System.Drawing.Point(302, 62);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.btnRegresar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(484, 151);
-            this.btnRegresar.TabIndex = 54;
-            this.btnRegresar.Text = "Aceptar";
-            this.btnRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnRegresar.UseAccentColor = false;
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnAceptar.AutoSize = false;
+            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAceptar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAceptar.Depth = 0;
+            this.btnAceptar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAceptar.HighEmphasis = true;
+            this.btnAceptar.Icon = null;
+            this.btnAceptar.Location = new System.Drawing.Point(302, 62);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(484, 151);
+            this.btnAceptar.TabIndex = 54;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAceptar.UseAccentColor = false;
+            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // frmJustificacionCursoEliminado
             // 
@@ -332,19 +332,19 @@ namespace InterfazDATMA.Administrador
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton btnCancelar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl2;
+        private Nevron.Nov.WinFormControls.NLabelControl lbl2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
+        private Nevron.Nov.WinFormControls.NLabelControl lbl1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private MaterialSkin.Controls.MaterialTextBox textBox1;
+        private MaterialSkin.Controls.MaterialTextBox txt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Panel panel9;
-        private MaterialSkin.Controls.MaterialButton btnRegresar;
+        private MaterialSkin.Controls.MaterialButton btnAceptar;
     }
 }
