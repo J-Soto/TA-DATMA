@@ -114,7 +114,7 @@ namespace InterfazDATMA
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            
+            formAnterior.FetchCursos();
             plantilla.abrirFormulario(formAnterior);
         }
     }

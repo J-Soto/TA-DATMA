@@ -32,10 +32,9 @@ namespace InterfazDATMA
             Design.Ini(this);
             if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
             else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            var temp = daoCurso.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
-            
-            temp = temp.Where(curso => curso != null).ToArray();        //eliminamos los null
-            cursos = new List<CursoWS.curso>(temp);
+
+            FetchCursos();
+
             int i = 0;
             //foreach (var curso in cursos)
             //{
@@ -82,10 +81,18 @@ namespace InterfazDATMA
             //dgvCalendario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             //dgvCalendario.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             //dgvCalendario.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvListaCursos.DataSource = cursos;
 
             this.plantillaGestion = plantillaGestion;
         }
+
+        public void FetchCursos()
+        {
+            var temp = daoCurso.listarCursosDeTutor(frmPlantillaGestion.tutor.idPersona);
+            temp = temp.Where(curso => curso != null).ToArray();        //eliminamos los null
+            cursos = new List<CursoWS.curso>(temp);
+            dgvListaCursos.DataSource = cursos;
+        }
+
         public frmListaCursoInscritos(frmPerfilCuidador formAnterior2, frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
