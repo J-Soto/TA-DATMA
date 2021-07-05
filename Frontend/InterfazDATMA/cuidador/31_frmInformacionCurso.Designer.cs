@@ -68,12 +68,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvPsicologos = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxEncargada)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -705,33 +705,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel23.Size = new System.Drawing.Size(958, 581);
             this.tableLayoutPanel23.TabIndex = 35;
             // 
-            // dgvPsicologos
-            // 
-            this.dgvPsicologos.AllowUserToAddRows = false;
-            this.dgvPsicologos.AllowUserToDeleteRows = false;
-            this.dgvPsicologos.AllowUserToResizeColumns = false;
-            this.dgvPsicologos.AllowUserToResizeRows = false;
-            this.dgvPsicologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPsicologos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre});
-            this.dgvPsicologos.Location = new System.Drawing.Point(31, 21);
-            this.dgvPsicologos.MultiSelect = false;
-            this.dgvPsicologos.Name = "dgvPsicologos";
-            this.dgvPsicologos.ReadOnly = true;
-            this.dgvPsicologos.RowHeadersVisible = false;
-            this.dgvPsicologos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPsicologos.Size = new System.Drawing.Size(240, 74);
-            this.dgvPsicologos.TabIndex = 0;
-            this.dgvPsicologos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPsicologos_CellClick);
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
             // TipoActividad
             // 
             this.TipoActividad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -763,6 +736,34 @@ namespace InterfazDATMA
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.MinimumWidth = 8;
             this.Fecha.Name = "Fecha";
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // dgvPsicologos
+            // 
+            this.dgvPsicologos.AllowUserToAddRows = false;
+            this.dgvPsicologos.AllowUserToDeleteRows = false;
+            this.dgvPsicologos.AllowUserToResizeColumns = false;
+            this.dgvPsicologos.AllowUserToResizeRows = false;
+            this.dgvPsicologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPsicologos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre});
+            this.dgvPsicologos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPsicologos.Location = new System.Drawing.Point(31, 21);
+            this.dgvPsicologos.MultiSelect = false;
+            this.dgvPsicologos.Name = "dgvPsicologos";
+            this.dgvPsicologos.ReadOnly = true;
+            this.dgvPsicologos.RowHeadersVisible = false;
+            this.dgvPsicologos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPsicologos.Size = new System.Drawing.Size(241, 74);
+            this.dgvPsicologos.TabIndex = 0;
+            this.dgvPsicologos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPsicologos_CellClick);
             // 
             // frmInformacionCurso
             // 
@@ -842,11 +843,11 @@ namespace InterfazDATMA
         private Nevron.Nov.WinFormControls.NLabelControl lblNombreModulo;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl6;
         private Nevron.Nov.WinFormControls.NLabelControl nLabelControl7;
-        private System.Windows.Forms.DataGridView dgvPsicologos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridView dgvPsicologos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }
