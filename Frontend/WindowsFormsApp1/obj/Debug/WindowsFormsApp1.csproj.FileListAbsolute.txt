@@ -37,7 +37,6 @@ C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsA
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
-C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
