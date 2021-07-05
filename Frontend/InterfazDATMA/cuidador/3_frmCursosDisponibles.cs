@@ -158,7 +158,7 @@ namespace InterfazDATMA
 
         public CursoWS.curso Curso { get => curso; }
 
-        public GrupoWS.psicologo Psicologo { get => psicos[0]; }
+        public List<GrupoWS.psicologo> Psicologo { get => psicos; }
 
         public string GrupoStr { get => grupo.nombrePromocion; }
 
