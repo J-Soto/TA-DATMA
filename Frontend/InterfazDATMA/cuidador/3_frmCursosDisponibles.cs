@@ -82,19 +82,12 @@ namespace InterfazDATMA
                 }
 
             }
-            //
 
             temp.RemoveAll(item => item.Curso.idCurso == obj.Curso.idCurso);
             cursos = new BindingList<CursoTutor>(temp);
             dgvCursos.DataSource = cursos;
             plantilla.abrirFormulario(new frmInscripcionHecha(this, plantilla, obj));
         }
-
-        private void btnMasInfo_Click_1(object sender, EventArgs e)
-        {
-            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla, cursos[dgvCursos.CurrentCell.RowIndex]));
-        }
-
 
         private void Fetch()
         {
@@ -112,6 +105,17 @@ namespace InterfazDATMA
                     }
                 }
             }
+        }
+
+        private void btnMasInfo_Click(object sender, EventArgs e)
+        {
+            plantilla.abrirFormulario(new frmInformacionCurso(this, plantilla, cursos[dgvCursos.CurrentCell.RowIndex]));
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formAnterior.FetchCursos();
+            plantilla.abrirFormulario(formAnterior);
         }
     }
 
@@ -158,7 +162,7 @@ namespace InterfazDATMA
 
         public CursoWS.curso Curso { get => curso; }
 
-        public GrupoWS.psicologo Psicologo { get => psicos[0]; }
+        public List<GrupoWS.psicologo> Psicologo { get => psicos; }
 
         public string GrupoStr { get => grupo.nombrePromocion; }
 

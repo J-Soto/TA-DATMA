@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="nLabelControl1.DesignTimeState" xml:space="preserve">
+    <value>eNqdVt9r01AUPmk7V/ezbiKiQzvROTcYIkNEFGbbtCt0WbFdN32Rbi2uLOvGusrmW5N3FXwTX/0TfNf/wCcRwX/Af0EEz3eT3KRpUjq77nKTfN+5537fuSdNENG7jy8+ff6uZt+Pbs9++Xoy1vk5QhThBxlzIUqk8CydznSSPOcvFSIxHst53FfiPOTJ/nT+Mou5VDQ2yQJXijYa8aKYqvkMsMpDPL2KeNSgFh1TlZJUozqPaWrTEd874P8kZcTzQ75q8mybdMa0yLjlXyHqXwG5VURi3+orvfhYOJ4/vfihM+LP9cEXVoxZG685+GEfvuOE1nqx8TNgz4djZxQfdsSP/UPdpo9J0xXH9B88xITpj/0SjPslSOLpBAqKTWyy6TD6lE3Osb3HtMsG7wRIOdFHymXXWtXBTw5mlcQnAvGRUPxo3/idD8PWqVkz3/AMdVNeSxtbEStKqaA8gOZXMLAMr1gC1PYSXx3w1RJt8JHCVYHPxDYjdCqxLLs82+c7SsyR3xiyz1upaN62cyxVigpM0kSmTDlhXS0K9iM2UCljA+YdDwUKa8h0ky2oCSssUtQlYTRnPSRUuIZEtmxwbBDwMxs85AMvesAwRANjlXfQoJecjrOLcz7aXbKaVWm9KMpLw1ZSrNMO7TER2rZZ3RplOZDOf1YYnDYz6eHKJVPMOBKd6MjGxkPXyTJ2h+O3uEvVeQZmlVM9kFycPnPGw5XmZIXrzrZgo7nsSKAWlcvAjYi6Qv9D50P+DWac2hy3DMv5adRDTpEllgL9emiJ5USih/aJa4knTkK9xYacjd/2OQ8rNo3h+0yzKOO+YguklHj115Iy4XN2waOGrM+S2L8uSZMeDS6AlfKw5sDC3aecG94x8BRLwqOG2O4ajzUZLeGJNoWjvM6KolTUswuqdknanTVyMubsqlArCtbShkWidS7aNkOrKKHuvpV0CVJCVKvOO7CgTlM2brpQWdh58ZLVRYK+Drfgwi8BjqrdEKcGioHSRO6CFHNI91zSNZDGbXsg8R7D0USs44fza5HjTo98K4V9Du7ifwo7qLFTYYI/EbtDkHqviksuQXTrUUFoijWqAUSp5yOXOA/iVCgxJxK3utOxX+F5N8xFhIkLhdvcCooMPxGvhm5djfsu5QYokwGUoDUTjjG/yHplqYO9pWBGeIeaDpPdpeiysKhf8a6KjGviZ4PPpaDiTYtjoYvKCXLoHzN9Ous=</value>
+  </data>
   <metadata name="Modulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

@@ -117,54 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="materialLabel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="materialLabel3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14px</value>
-  </data>
-  <data name="materialLabel3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="materialLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 0</value>
-  </data>
-  <data name="materialLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="materialLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 297</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="materialLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="materialLabel3.Text" xml:space="preserve">
-    <value>Descripcion:</value>
-  </data>
-  <data name="materialLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;materialLabel3.Name" xml:space="preserve">
-    <value>materialLabel3</value>
-  </data>
-  <data name="&gt;&gt;materialLabel3.Type" xml:space="preserve">
-    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialLabel3.Parent" xml:space="preserve">
-    <value>tableLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;materialLabel3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tableLayoutPanel7.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtDescripcion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtDescripcion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14px</value>
   </data>
@@ -288,6 +249,36 @@
   <data name="tableLayoutPanel4.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="nLabelControl3.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nLabelControl3.DesignTimeState" xml:space="preserve">
+    <value>eNqdVk1PE1EUvdMWqC0fFYwxhmgxiggJMYaoC02wZVqalGHClIpuTGkbaSiFUGqAXWf2auLOuPUnuHGl/8CVceMf8C+48d77Zt5MpzNNsTTDfJxz333nnPemKQB4/+nV5y8/1dyH5O7ct++n492vCYAIPlizElEABc+y2bUu4Dl+oRiJ4bFUoPtKHA8FsD/d38hCLujmIxDgsm6jqV6UTtXCGmGV6/Q0SaNAHdpQhWNowBH+b8AhtMC8468Q9Vegscs88I/6aj8+Fo7HTz9+5IL40QH44qo5Z+M1Bz/mw3ed0lo/Nn4B7KVw7Kziwyb82L/Qa+q4NFVxTP2Fhxib+tQvwYRfgjQ9naTAoKktOIEO2noGacijqSewh+ZWA6ScHCDlimut6uCnhrNK4lOB+EgoPjmwfvfjmFgVG9ZbPKPclDay5k5EVDGKymPSnAKuoQxvUAJK9DJeHeLVMmzjkqGrIlRgFxFNMFCWPTw7wDtKzJHfHLHXk6Fbd+0ejbKukEkad4qUU9RVUGg+PIFyiSZg3fNQSGGNOn2OFtTYCkGKuiQ6WnMeEiVco0Z2bHBsGPALGzziAy95wGSIRox1nEEDXmM7zixGfbT7IDYjY1PneGk0lQzqVIV9JJK2HVS3Bjks1MQ/UYZWm5X2cOWQGWQcI76OR4GNh46TQ2wV67d5l6oys4KtHkourT5r1sOV5uTYdWdaZKO14kig6so1wiU4Vw2s38AkUP8NZJzZHDeGpcIM5SGvyIhliH4zNGJ5bvTIXnFtfuI01B826tn8Y6/zsLBpCD9AmqBM+MIWSDFw9HNJmfQ5u+hRQ+bT4Pk3JWnKo8FlYmU8rHli0d0t7K2NzDq/Rc7ZI/Ee2cBjTVZLeapN01LeREUpKurFBVV7JO3tmnoy5+1UqGWFxtLGuNE6hraD0ApFqHffSrsEKSGltYkzEFBnUzZvu1AZ7AI2UeEIVf073KILv0pwSu02rxpSjCgt6p1JMYf0wCXdINKEbQ9JvI9w2kTE8qP1K8hxZ498J4V9Sdyl/xR2WGOnwwR/xrOjIvV+FZddAu/WSSa0eIxKAFHq+cQlLhBxOpSY58bF7nTiV3jBLXOFysRZ4Q5uBTrCT/nV0Kur+dCl3CLKVAAlaMyU/I0G4pWlDveWIjPCd6iZMNldSlMGCwaFd507rvHPBp9LQeHN8rJocnKCHPoHRdc0bQ==</value>
+  </data>
+  <data name="nLabelControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="nLabelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 2</value>
+  </data>
+  <data name="nLabelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 293</value>
+  </data>
+  <data name="nLabelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl3.Name" xml:space="preserve">
+    <value>nLabelControl3</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl3.Type" xml:space="preserve">
+    <value>Nevron.Nov.WinFormControls.NLabelControl, Nevron.Nov.WinFormControls, Version=21.5.12.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl3.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tableLayoutPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -316,7 +307,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel4.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="materialLabel3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,7.829182,Percent,73.30961,Percent,18.66667" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="nLabelControl3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,7.829182,Percent,73.30961,Percent,18.66667" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -351,47 +342,38 @@
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel4" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38.42265,Percent,54.49949,Percent,7.065949" /&gt;&lt;Rows Styles="Percent,20,Percent,60,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="materialLabel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="materialLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14px</value>
-  </data>
-  <data name="materialLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="materialLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 7</value>
-  </data>
-  <data name="materialLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="materialLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1292, 130</value>
-  </data>
-  <data name="materialLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="materialLabel1.Text" xml:space="preserve">
-    <value>Agregar Video:</value>
-  </data>
-  <data name="materialLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;materialLabel1.Name" xml:space="preserve">
-    <value>materialLabel1</value>
-  </data>
-  <data name="&gt;&gt;materialLabel1.Type" xml:space="preserve">
-    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialLabel1.Parent" xml:space="preserve">
-    <value>tableLayoutPanel10</value>
-  </data>
-  <data name="&gt;&gt;materialLabel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tableLayoutPanel10.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="nLabelControl1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nLabelControl1.DesignTimeState" xml:space="preserve">
+    <value>eNqdVk1PE1EUvdMWqHxWMMYYosUoIiTEGGKM0QTaTksTGCZMqejGlEKkobSGDwPuOrNzoSbujFs37t3jnzBuXLnjL7jx3Dczb6bTmaZYyGOmc859951z7x1SRPTxy8uv33+q+U9DW1NnP06GW2eDRDE8yFmpOJGCq2w21+rHNX5pJZbAWiry90oSS5GcT+sPWOCSbj4lG1zWHTTHi/OlWswxVknz01EsS/SKDmgHawV/01SmGm3jvkmPybwTjBMPxuEMyt/4c/5usROfCMW7GXfi+y6I7++C31g0pxy85uIHAviWG1rrxCYvgL0UjZ1UAtjBIPYvtVs7LK1VXGt/YUmEWzsSaW0WNjboiI5h7CmsLcDUI9qFwdUQKUe7SLngWau6+LHerJL4VCg+Fokf6hq/9XnA7o1V6z2uuG5Kq1lzM2ZHMVaUR6z5dV4gwxtI0IQY87hr4m6eNtA4fLeCut8Cok4GZNnF1T6+URKu/Gaf01WGbt11cjTKusImaSJTUE6gq03h84gDlEt8AOuej8IKa5zpM9FjbIVNinskXq0pH4krXONENh1wohfwcwfcFwDP+cBsiMaMZZyghgGwK0/RH6DdJ3skGWu6KC+Nj5KBTlXaE/OjiSJr4Ex5BKrjxw7D3WalfVy5ZQaMAzFnDhxsMnKfPLBVxD+kHPBVwawg1abkcvdZkz6uNCcvXHePxTZaC64Eqq5cY9ygqKsa4tdQCZx/DYxTh+OVYak4wfVQUGSJZZh+M7LECiLR107HHYonbkKdxcY5m+dOn0cVmwb4Pmg2ZSRQbKEUA7u/lZTRgLOzPjVkfRri/HVJGvNpcJlZGR9rmln87TpyOwSTPeUt2aOaOO4q1m0ZLeWLNs6tvAZFuVTUiwuqtknanjXnZE47VaGWFd5LGxCJ8uvuGFB+5QXmVtojSAm5Wus4gQ11h7J524PKwi4iiYoooWpwws168KsM56rdEF3DijGlwbkLUsIlPfBIN5g04tjDEu8BzkPEbj/uX5ucdGfkBynsC+bO/aewvRo7HiX4kjgdB9npVHHeI4hpPSQIDbFHJYQo9XziEWeYOB5JLIjE7el0FFR4xgtzhcMkhcLHGAU64Cfi1dCuq/nQo9xiylgIJWzPlGvMb7JfWWpvbyk2I3pCTUTJ7lHqsrCoW/Eui4y3xb8NAZfCijcr2qIuKifMoX+61TjF</value>
+  </data>
+  <data name="nLabelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="nLabelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 9</value>
+  </data>
+  <data name="nLabelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1292, 126</value>
+  </data>
+  <data name="nLabelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl1.Name" xml:space="preserve">
+    <value>nLabelControl1</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl1.Type" xml:space="preserve">
+    <value>Nevron.Nov.WinFormControls.NLabelControl, Nevron.Nov.WinFormControls, Version=21.5.12.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel10</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tableLayoutPanel10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -421,7 +403,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel10.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="materialLabel1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,5,Percent,90,Percent,5" /&gt;&lt;Rows Styles="Percent,5,Percent,90,Percent,5" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="nLabelControl1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,5,Percent,90,Percent,5" /&gt;&lt;Rows Styles="Percent,5,Percent,90,Percent,5" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel2.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
@@ -461,45 +443,6 @@
   </data>
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel10" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,3.364738,Percent,86.81023,Percent,9.892328" /&gt;&lt;Rows Styles="Percent,20,Percent,60,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="materialLabel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="materialLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 14px</value>
-  </data>
-  <data name="materialLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="materialLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 0</value>
-  </data>
-  <data name="materialLabel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="materialLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>467, 143</value>
-  </data>
-  <data name="materialLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="materialLabel2.Text" xml:space="preserve">
-    <value>Video (Link):</value>
-  </data>
-  <data name="materialLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;materialLabel2.Name" xml:space="preserve">
-    <value>materialLabel2</value>
-  </data>
-  <data name="&gt;&gt;materialLabel2.Type" xml:space="preserve">
-    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialLabel2.Parent" xml:space="preserve">
-    <value>tableLayoutPanel11</value>
-  </data>
-  <data name="&gt;&gt;materialLabel2.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="materialButton2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -666,6 +609,36 @@
   <data name="tableLayoutPanel11.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="nLabelControl2.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nLabelControl2.DesignTimeState" xml:space="preserve">
+    <value>eNqdVk1PE1EUvdMWqFCggjHGEC3GDz4SYgwxmkiCbaelSRkmtlR0Y0rbQMNADaUG3HVmrybujFt/gjsX+g9cGTfGvX/BjffeefNmOp1pigVeZjrn3HffOffeIQkA7z6++PT5h5p7P7E7//XbaaL7ZRwggg+yViIKoOBVJpPtRvAaf6EYieFaLtD3ShyXAohP9zeykAu6+RBscEUXaIoXpUu1kCWsMkdPE7RAE+rQgBakYAGKeHcEB7AI5i1/jKg/Rpzp9PneWO/Hx8Lx+OnHj5wTPzoAv7Zuzgu85uDHfPiuE1rrx8bPgb0Qjp1TfNhxP/Yv9NqakLYqjq0/cYmxrWt+CSb9EqTo6RSVDFp6BCfQgWM4Q2vzaPAJ7KO9tQAppwZIuepaqzr46eGskvhkID4Sip8YGL/7Yczui03rDV5R3ZQ3M+ZOxI5SKioPSPOrtKAMr1CCFoqxgnctvFuBbWwauitCFXYRYUAJZdnHq0P8Rok58psjoqNKunVH5Fiq6AqZpHGmSDlFXW0KnYcPUCnTAaxFD4UU1ijTp9xvZIVNirokWq15D4kqXKNEdgQ4Ngz4mQCP+MDLHjAZohFjA0/QhD1MxznFqI92F+xxVNrSubw0OkoadarhnNhjbTuobh1yGMjAHzsMdZuV8nDllmlkHPPMORbYeOg+OcTWMH4bsoivMbOKqbYkl7rPmvNwpTk5dt05FtlorToSqLpyhXDjYgK28W+X828i40xw3DIsF2apHvKKLLE00a+HllieE30pOq7NT5yE+ouNcjb/iD4PKzYN4YdIsymTvmILpJRw99eSMuVzdsmjhqzPEp/fkKRpjwYXiZX2sG4Ti759grm1kUme0pbkUZOPu4lrXUZLeqLNUCtvoaJUKur5BVV7JO3NmnIyb4uqUCsK7aWNcaINLNoOQqtUQr1zK+USpIRUrQaewIY6Q9m86UJlYRcwiSqXUM0/4ZZc+GWCU9Vuc9eQYga/dRuCFHNI91zSNSJNCntI4gOE0xCx24/61ybHnRn5Vgr7nLjL/ynssMbOhAn+mE9HQRr9Kq64BJ7WE0w44j2qAUSp5yOXuEDEmVBinhO3p9OJX+EFN8wlChNnhTs4CnSEn/KroVdX875LuUGU6QBK0J5Jx5hfYL+y1OHeUmRG+ISaDZPdpRiysGBQ8W5wxnX+t8HnUlDxZrgtDK6cIIf+AWQFM+4=</value>
+  </data>
+  <data name="nLabelControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="nLabelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 2</value>
+  </data>
+  <data name="nLabelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>467, 139</value>
+  </data>
+  <data name="nLabelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl2.Name" xml:space="preserve">
+    <value>nLabelControl2</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl2.Type" xml:space="preserve">
+    <value>Nevron.Nov.WinFormControls.NLabelControl, Nevron.Nov.WinFormControls, Version=21.5.12.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel11</value>
+  </data>
+  <data name="&gt;&gt;nLabelControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tableLayoutPanel11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -694,7 +667,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel11.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="materialLabel2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,7.815275,Percent,74.24512,Percent,17.86667" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="nLabelControl2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,7.815275,Percent,74.24512,Percent,17.86667" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel9.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>

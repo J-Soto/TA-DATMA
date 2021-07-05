@@ -29,6 +29,7 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinCursosDisponibles));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -37,12 +38,12 @@ namespace InterfazDATMA
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnNotif = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnNotif = new MaterialSkin.Controls.MaterialButton();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
+            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
+            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -101,7 +102,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel4.Controls.Add(this.materialLabel2, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.nLabelControl2, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(224, 105);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -139,7 +140,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel10.Controls.Add(this.materialLabel1, 1, 1);
+            this.tableLayoutPanel10.Controls.Add(this.nLabelControl3, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(224, 71);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -204,6 +205,27 @@ namespace InterfazDATMA
             this.tableLayoutPanel9.Size = new System.Drawing.Size(1759, 210);
             this.tableLayoutPanel9.TabIndex = 61;
             // 
+            // btnNotif
+            // 
+            this.btnNotif.AutoSize = false;
+            this.btnNotif.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNotif.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnNotif.Depth = 0;
+            this.btnNotif.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNotif.HighEmphasis = true;
+            this.btnNotif.Icon = null;
+            this.btnNotif.Location = new System.Drawing.Point(91, 16);
+            this.btnNotif.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNotif.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNotif.Name = "btnNotif";
+            this.btnNotif.Size = new System.Drawing.Size(1575, 177);
+            this.btnNotif.TabIndex = 0;
+            this.btnNotif.Text = "Notificarme";
+            this.btnNotif.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnNotif.UseAccentColor = false;
+            this.btnNotif.UseVisualStyleBackColor = true;
+            this.btnNotif.Click += new System.EventHandler(this.btnNotificar_Click_1);
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -231,7 +253,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Controls.Add(this.materialLabel3, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.nLabelControl1, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(223, 105);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -242,65 +264,35 @@ namespace InterfazDATMA
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1759, 300);
             this.tableLayoutPanel7.TabIndex = 61;
             // 
-            // materialLabel1
+            // nLabelControl1
             // 
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(91, 9);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(1581, 179);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Lista de Cursos Disponibles";
-            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nLabelControl1.AutoSize = false;
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl1.Location = new System.Drawing.Point(90, 18);
+            this.nLabelControl1.Name = "nLabelControl1";
+            this.nLabelControl1.Size = new System.Drawing.Size(1577, 264);
+            this.nLabelControl1.TabIndex = 83;
             // 
-            // materialLabel2
+            // nLabelControl2
             // 
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(91, 15);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(1581, 271);
-            this.materialLabel2.TabIndex = 1;
-            this.materialLabel2.Text = "Disculpe, pero actualmente no hay cursos disponibles";
-            this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nLabelControl2.AutoSize = false;
+            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
+            this.nLabelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl2.Location = new System.Drawing.Point(91, 18);
+            this.nLabelControl2.Name = "nLabelControl2";
+            this.nLabelControl2.Size = new System.Drawing.Size(1581, 265);
+            this.nLabelControl2.TabIndex = 84;
             // 
-            // materialLabel3
+            // nLabelControl3
             // 
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(90, 15);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(1577, 270);
-            this.materialLabel3.TabIndex = 1;
-            this.materialLabel3.Text = "Te notificaremos cuando haya nuevos cursos";
-            this.materialLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnNotif
-            // 
-            this.btnNotif.AutoSize = false;
-            this.btnNotif.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNotif.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnNotif.Depth = 0;
-            this.btnNotif.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNotif.HighEmphasis = true;
-            this.btnNotif.Icon = null;
-            this.btnNotif.Location = new System.Drawing.Point(91, 16);
-            this.btnNotif.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnNotif.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNotif.Name = "btnNotif";
-            this.btnNotif.Size = new System.Drawing.Size(1575, 177);
-            this.btnNotif.TabIndex = 0;
-            this.btnNotif.Text = "Notificarme";
-            this.btnNotif.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnNotif.UseAccentColor = false;
-            this.btnNotif.UseVisualStyleBackColor = true;
-            this.btnNotif.Click += new System.EventHandler(this.btnNotificar_Click_1);
+            this.nLabelControl3.AutoSize = false;
+            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
+            this.nLabelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl3.Location = new System.Drawing.Point(91, 12);
+            this.nLabelControl3.Name = "nLabelControl3";
+            this.nLabelControl3.Size = new System.Drawing.Size(1581, 173);
+            this.nLabelControl3.TabIndex = 86;
             // 
             // frmSinCursosDisponibles
             // 
@@ -339,9 +331,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton btnNotif;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl2;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl3;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
     }
 }

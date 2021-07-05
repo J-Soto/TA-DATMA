@@ -39,7 +39,7 @@ namespace InterfazDATMA
             this.formPlantillaGestion = formPlantillaGestion;
             this.idGrupo = idGrupo;
 
-            lblInformacion.Text = "Curso: " + curso.descripcion + "   >   Grupo: " + grupo.nombrePromocion;
+            lblInformacion.WidgetText = "Curso: " + curso.descripcion + "   >   Grupo: " + grupo.nombrePromocion;
 
             daoGrupo = new GrupoWS.GrupoWSClient();
 

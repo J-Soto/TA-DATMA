@@ -14,7 +14,7 @@ using MaterialSkin;
 
 namespace InterfazDATMA
 {
-    public partial class frmInformacionCurso : MaterialSkin.Controls.MaterialForm 
+    public partial class frmInformacionCurso : MaterialSkin.Controls.MaterialForm
     {
         public frmCursosDisponibles formAnterior;
         private frmPlantillaGestion plantillaGestion;
@@ -23,6 +23,7 @@ namespace InterfazDATMA
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
         private ActividadWS.ActividadWSClient daoAct = new ActividadWS.ActividadWSClient();
         private List<ActividadWS.actividad> actividades = new List<ActividadWS.actividad>();
+        private List<PsicologoInfo> psicologos = new List<PsicologoInfo>();
 
         private CursoTutor cursoTutor;
         private DateTime daterunner;
@@ -32,8 +33,8 @@ namespace InterfazDATMA
             Design.Ini(this);
             if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
             else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            dgvInfCurso.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInfCurso.AutoGenerateColumns = false;
+            dgvPsicologos.AutoGenerateColumns = false;
 
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
@@ -54,33 +55,31 @@ namespace InterfazDATMA
                 }
             }
 
+            // crear lista de psicologos
+            foreach (var psico in cursoTutor.Psicologo)
+            {
+                psicologos.Add(new PsicologoInfo(psico));
+            }
+
             LlenarInformacion();
         }
 
         public void LlenarInformacion()
         {
             lblNombreModulo.Text = cursoTutor.Modulo;
-            lblInformacionEncargada.Text = cursoTutor.Encargado;
+            dgvPsicologos.DataSource = psicologos;
+            dgvInfCurso.DataSource = actividades;
             nDateTimeBoxControl2.SelectedDate = cursoTutor.FechaInicio;
             nDateTimeBoxControl1.SelectedDate = cursoTutor.FechaFin;
-            ActualizarFechaStr();
-            if (cursoTutor.Psicologo.fotoPerfil is object)
+            if (cursoTutor.Psicologo[0].fotoPerfil is object)
             {
-                pictBoxEncargada.Image = (Bitmap)((new ImageConverter()).ConvertFrom(cursoTutor.Psicologo.fotoPerfil));
+                pictBoxEncargada.Image = (Bitmap)((new ImageConverter()).ConvertFrom(cursoTutor.Psicologo[0].fotoPerfil));
             }
-            ActualizarActividades();
-        }
-
-        private void ActualizarFechaStr()
-        {
-            materialLabel4.Text = daterunner.ToString("MMMM").ToUpper() + " 2021";
-        }
-
-        private void ActualizarActividades()
-        {
-            var temp = new List<ActividadWS.actividad>(actividades);
-            temp.RemoveAll(item => item.fecha.Month != daterunner.Month);
-            dgvInfCurso.DataSource = temp;
+            // estilos
+            dgvPsicologos.DefaultCellStyle = dgvInfCurso.DefaultCellStyle;
+            dgvPsicologos.ColumnHeadersDefaultCellStyle = dgvInfCurso.ColumnHeadersDefaultCellStyle;
+            dgvPsicologos.RowHeadersDefaultCellStyle = dgvInfCurso.RowHeadersDefaultCellStyle;
+            dgvPsicologos.RowsDefaultCellStyle = dgvInfCurso.RowsDefaultCellStyle;
         }
 
         private void btnVerMas_Click(object sender, EventArgs e)
@@ -88,24 +87,31 @@ namespace InterfazDATMA
             plantillaGestion.abrirFormulario(new frmDetalleCurso(this, plantillaGestion));
         }
 
-        private void btnAnterior_Click(object sender, EventArgs e)
+        private void dgvPsicologos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (daterunner.Month - cursoTutor.FechaInicio.Month > 0)
+            int index = e.RowIndex;
+            var psico = cursoTutor.Psicologo[index];
+            if (psico.fotoPerfil is object)
             {
-                daterunner = daterunner.AddMonths(-1);
-                ActualizarFechaStr();
-                ActualizarActividades();
+                pictBoxEncargada.Image = (Bitmap)((new ImageConverter()).ConvertFrom(psico.fotoPerfil));
             }
         }
 
-        private void btnSig_Click(object sender, EventArgs e)
+        public class PsicologoInfo
         {
-            if (cursoTutor.FechaFin.Month - daterunner.Month > 0)
+            private GrupoWS.psicologo psico;
+
+            public PsicologoInfo(GrupoWS.psicologo psico)
             {
-                daterunner = daterunner.AddMonths(1);
-                ActualizarFechaStr();
-                ActualizarActividades();
+                this.psico = psico;
             }
+
+            public string Nombre { get => psico.nombre + " " + psico.apellidoPaterno + " " + psico.apellidoMaterno; }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            plantillaGestion.abrirFormulario(formAnterior);
         }
     }
 }

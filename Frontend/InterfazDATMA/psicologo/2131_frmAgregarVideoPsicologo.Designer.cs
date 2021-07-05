@@ -30,17 +30,16 @@ namespace InterfazDATMA
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarMaterialPsicologo));
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.txtDescripcion = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -48,6 +47,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.txtLinkVideo = new MaterialSkin.Controls.MaterialTextBox();
             this.tableLayoutPanel7.SuspendLayout();
@@ -64,13 +64,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.Depth = 0;
-            resources.ApplyResources(this.materialLabel3, "materialLabel3");
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
             // 
             // tableLayoutPanel7
             // 
@@ -118,22 +111,27 @@ namespace InterfazDATMA
             // 
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
-            this.tableLayoutPanel4.Controls.Add(this.materialLabel3, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.nLabelControl3, 1, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             // 
-            // materialLabel1
+            // nLabelControl3
             // 
-            this.materialLabel1.Depth = 0;
-            resources.ApplyResources(this.materialLabel1, "materialLabel1");
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
+            resources.ApplyResources(this.nLabelControl3, "nLabelControl3");
+            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
+            this.nLabelControl3.Name = "nLabelControl3";
             // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.tableLayoutPanel10, "tableLayoutPanel10");
-            this.tableLayoutPanel10.Controls.Add(this.materialLabel1, 1, 1);
+            this.tableLayoutPanel10.Controls.Add(this.nLabelControl1, 1, 1);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            // 
+            // nLabelControl1
+            // 
+            resources.ApplyResources(this.nLabelControl1, "nLabelControl1");
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Name = "nLabelControl1";
             // 
             // tableLayoutPanel2
             // 
@@ -141,13 +139,6 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel10, 1, 1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.Depth = 0;
-            resources.ApplyResources(this.materialLabel2, "materialLabel2");
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
             // 
             // materialButton2
             // 
@@ -214,8 +205,14 @@ namespace InterfazDATMA
             // 
             this.tableLayoutPanel11.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.tableLayoutPanel11, "tableLayoutPanel11");
-            this.tableLayoutPanel11.Controls.Add(this.materialLabel2, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.nLabelControl2, 1, 0);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            // 
+            // nLabelControl2
+            // 
+            resources.ApplyResources(this.nLabelControl2, "nLabelControl2");
+            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
+            this.nLabelControl2.Name = "nLabelControl2";
             // 
             // tableLayoutPanel9
             // 
@@ -261,16 +258,12 @@ namespace InterfazDATMA
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
@@ -282,5 +275,8 @@ namespace InterfazDATMA
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtDescripcion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private MaterialSkin.Controls.MaterialTextBox txtLinkVideo;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl3;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl2;
     }
 }

@@ -29,6 +29,7 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarPrograma));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,7 +40,7 @@ namespace InterfazDATMA
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblActividades = new MaterialSkin.Controls.MaterialLabel();
+            this.nLabelControl4 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
@@ -67,13 +68,13 @@ namespace InterfazDATMA
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.rtxtTema = new MaterialSkin.Controls.MaterialTextBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.lblSemana = new MaterialSkin.Controls.MaterialLabel();
+            this.nLabelControl2 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.rtxtDescripcion = new MaterialSkin.Controls.MaterialTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblDescripcion = new MaterialSkin.Controls.MaterialLabel();
+            this.nLabelControl3 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
@@ -81,7 +82,7 @@ namespace InterfazDATMA
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTema = new MaterialSkin.Controls.MaterialLabel();
+            this.lblTema = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
@@ -155,9 +156,9 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.429134F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.5315F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel5.Controls.Add(this.lblActividades, 1, 1);
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.38903F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.21157F));
+            this.tableLayoutPanel5.Controls.Add(this.nLabelControl4, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -168,18 +169,15 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1517, 119);
             this.tableLayoutPanel5.TabIndex = 49;
             // 
-            // lblActividades
+            // nLabelControl4
             // 
-            this.lblActividades.BackColor = System.Drawing.Color.White;
-            this.lblActividades.Depth = 0;
-            this.lblActividades.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblActividades.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblActividades.Location = new System.Drawing.Point(70, 11);
-            this.lblActividades.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblActividades.Name = "lblActividades";
-            this.lblActividades.Size = new System.Drawing.Size(912, 95);
-            this.lblActividades.TabIndex = 103;
-            this.lblActividades.Text = "Actividades:";
+            this.nLabelControl4.AutoSize = false;
+            this.nLabelControl4.DesignTimeState = resources.GetString("nLabelControl4.DesignTimeState");
+            this.nLabelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl4.Location = new System.Drawing.Point(70, 14);
+            this.nLabelControl4.Name = "nLabelControl4";
+            this.nLabelControl4.Size = new System.Drawing.Size(470, 89);
+            this.nLabelControl4.TabIndex = 104;
             // 
             // tableLayoutPanel4
             // 
@@ -637,7 +635,7 @@ namespace InterfazDATMA
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Controls.Add(this.lblSemana);
+            this.panel14.Controls.Add(this.nLabelControl2);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(3, 2);
             this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -645,18 +643,15 @@ namespace InterfazDATMA
             this.panel14.Size = new System.Drawing.Size(466, 86);
             this.panel14.TabIndex = 14;
             // 
-            // lblSemana
+            // nLabelControl2
             // 
-            this.lblSemana.BackColor = System.Drawing.Color.White;
-            this.lblSemana.Depth = 0;
-            this.lblSemana.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSemana.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblSemana.Location = new System.Drawing.Point(0, 0);
-            this.lblSemana.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblSemana.Name = "lblSemana";
-            this.lblSemana.Size = new System.Drawing.Size(466, 86);
-            this.lblSemana.TabIndex = 101;
-            this.lblSemana.Text = "Nombre:";
+            this.nLabelControl2.AutoSize = false;
+            this.nLabelControl2.DesignTimeState = resources.GetString("nLabelControl2.DesignTimeState");
+            this.nLabelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl2.Location = new System.Drawing.Point(0, 0);
+            this.nLabelControl2.Name = "nLabelControl2";
+            this.nLabelControl2.Size = new System.Drawing.Size(466, 86);
+            this.nLabelControl2.TabIndex = 92;
             // 
             // tableLayoutPanel8
             // 
@@ -733,7 +728,7 @@ namespace InterfazDATMA
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.lblDescripcion);
+            this.panel4.Controls.Add(this.nLabelControl3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -741,18 +736,15 @@ namespace InterfazDATMA
             this.panel4.Size = new System.Drawing.Size(467, 86);
             this.panel4.TabIndex = 14;
             // 
-            // lblDescripcion
+            // nLabelControl3
             // 
-            this.lblDescripcion.BackColor = System.Drawing.Color.White;
-            this.lblDescripcion.Depth = 0;
-            this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDescripcion.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblDescripcion.Location = new System.Drawing.Point(0, 0);
-            this.lblDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(467, 86);
-            this.lblDescripcion.TabIndex = 102;
-            this.lblDescripcion.Text = "Descripcion:";
+            this.nLabelControl3.AutoSize = false;
+            this.nLabelControl3.DesignTimeState = resources.GetString("nLabelControl3.DesignTimeState");
+            this.nLabelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl3.Location = new System.Drawing.Point(0, 0);
+            this.nLabelControl3.Name = "nLabelControl3";
+            this.nLabelControl3.Size = new System.Drawing.Size(467, 86);
+            this.nLabelControl3.TabIndex = 92;
             // 
             // tableLayoutPanel12
             // 
@@ -843,8 +835,8 @@ namespace InterfazDATMA
             // 
             this.tableLayoutPanel13.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel13.ColumnCount = 2;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.86803F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.13198F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.32304F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.676953F));
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel14, 0, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 3);
@@ -860,29 +852,26 @@ namespace InterfazDATMA
             // 
             this.tableLayoutPanel14.ColumnCount = 3;
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.078959F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.89117F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.69301F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.291793F));
             this.tableLayoutPanel14.Controls.Add(this.lblTema, 1, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 15);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(1316, 90);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(1460, 90);
             this.tableLayoutPanel14.TabIndex = 1;
             // 
             // lblTema
             // 
-            this.lblTema.BackColor = System.Drawing.Color.White;
-            this.lblTema.Depth = 0;
+            this.lblTema.AutoSize = false;
+            this.lblTema.DesignTimeState = resources.GetString("lblTema.DesignTimeState");
             this.lblTema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTema.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTema.Location = new System.Drawing.Point(69, 0);
-            this.lblTema.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTema.Location = new System.Drawing.Point(77, 3);
             this.lblTema.Name = "lblTema";
-            this.lblTema.Size = new System.Drawing.Size(1111, 90);
-            this.lblTema.TabIndex = 100;
-            this.lblTema.Text = "Programa: Que aprenderás";
+            this.lblTema.Size = new System.Drawing.Size(1361, 84);
+            this.lblTema.TabIndex = 101;
             // 
             // tableLayoutPanel15
             // 
@@ -1027,18 +1016,14 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private MaterialSkin.Controls.MaterialLabel lblActividades;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialButton materialButton5;
         private MaterialSkin.Controls.MaterialButton materialButton4;
         private MaterialSkin.Controls.MaterialButton materialButton7;
         private MaterialSkin.Controls.MaterialButton materialButton8;
         private MaterialSkin.Controls.MaterialButton materialButton6;
-        private MaterialSkin.Controls.MaterialLabel lblSemana;
-        private MaterialSkin.Controls.MaterialLabel lblDescripcion;
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialLabel lblTema;
         private System.Windows.Forms.DataGridView dgvReuniones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private MaterialSkin.Controls.MaterialTextBox rtxtTema;
@@ -1049,5 +1034,9 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewLinkColumn UnirseReunion;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl4;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl2;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl3;
+        private Nevron.Nov.WinFormControls.NLabelControl lblTema;
     }
 }

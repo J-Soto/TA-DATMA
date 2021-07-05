@@ -29,6 +29,7 @@ namespace InterfazDATMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetalleCursoInscritoMaterial));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,19 +41,19 @@ namespace InterfazDATMA
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.MaterialCurso = new MaterialSkin.Controls.MaterialLabel();
+            this.nLabelControl1 = new Nevron.Nov.WinFormControls.NLabelControl();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.dgvDocumentos = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dgvVideos = new System.Windows.Forms.DataGridView();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.URL = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRegresar = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.NombreCurso = new MaterialSkin.Controls.MaterialLabel();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.URL = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.NombreCurso = new Nevron.Nov.WinFormControls.NLabelControl();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -94,7 +95,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel2.Controls.Add(this.materialCard1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(47, 71);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -105,12 +106,12 @@ namespace InterfazDATMA
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.Controls.Add(this.MaterialCurso, 0, 1);
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.97315F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.02685F));
+            this.tableLayoutPanel6.Controls.Add(this.nLabelControl1, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -119,20 +120,15 @@ namespace InterfazDATMA
             this.tableLayoutPanel6.Size = new System.Drawing.Size(856, 43);
             this.tableLayoutPanel6.TabIndex = 48;
             // 
-            // MaterialCurso
+            // nLabelControl1
             // 
-            this.MaterialCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.MaterialCurso.Depth = 0;
-            this.MaterialCurso.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.MaterialCurso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MaterialCurso.Location = new System.Drawing.Point(2, 4);
-            this.MaterialCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.MaterialCurso.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialCurso.Name = "MaterialCurso";
-            this.MaterialCurso.Size = new System.Drawing.Size(308, 34);
-            this.MaterialCurso.TabIndex = 0;
-            this.MaterialCurso.Text = "Materiales";
-            this.MaterialCurso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nLabelControl1.AutoSize = false;
+            this.nLabelControl1.DesignTimeState = resources.GetString("nLabelControl1.DesignTimeState");
+            this.nLabelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nLabelControl1.Location = new System.Drawing.Point(2, 6);
+            this.nLabelControl1.Name = "nLabelControl1";
+            this.nLabelControl1.Size = new System.Drawing.Size(355, 30);
+            this.nLabelControl1.TabIndex = 99;
             // 
             // materialCard1
             // 
@@ -143,10 +139,10 @@ namespace InterfazDATMA
             this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(7, 54);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(7);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(7);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.materialCard1.Size = new System.Drawing.Size(846, 417);
             this.materialCard1.TabIndex = 49;
             // 
@@ -183,7 +179,7 @@ namespace InterfazDATMA
             this.dgvDocumentos.EnableHeadersVisualStyles = false;
             this.dgvDocumentos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.dgvDocumentos.Location = new System.Drawing.Point(9, 216);
-            this.dgvDocumentos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDocumentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDocumentos.Name = "dgvDocumentos";
             this.dgvDocumentos.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -260,7 +256,7 @@ namespace InterfazDATMA
             this.dgvVideos.EnableHeadersVisualStyles = false;
             this.dgvVideos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.dgvVideos.Location = new System.Drawing.Point(7, 7);
-            this.dgvVideos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvVideos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvVideos.MultiSelect = false;
             this.dgvVideos.Name = "dgvVideos";
             this.dgvVideos.ReadOnly = true;
@@ -286,6 +282,24 @@ namespace InterfazDATMA
             this.dgvVideos.TabIndex = 12;
             this.dgvVideos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVideos_CellContentClick);
             // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.DataPropertyName = "descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.MinimumWidth = 10;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // URL
+            // 
+            this.URL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.URL.DataPropertyName = "linkVideo";
+            this.URL.HeaderText = "URL";
+            this.URL.MinimumWidth = 10;
+            this.URL.Name = "URL";
+            this.URL.ReadOnly = true;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -295,7 +309,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(47, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -311,7 +325,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel3.Controls.Add(this.btnRegresar, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(604, 2);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
@@ -349,7 +363,7 @@ namespace InterfazDATMA
             this.tableLayoutPanel5.Controls.Add(this.NombreCurso, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -360,36 +374,13 @@ namespace InterfazDATMA
             // 
             // NombreCurso
             // 
-            this.NombreCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(54)))));
-            this.NombreCurso.Depth = 0;
-            this.NombreCurso.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.NombreCurso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.NombreCurso.Location = new System.Drawing.Point(2, 6);
-            this.NombreCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.NombreCurso.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NombreCurso.AutoSize = false;
+            this.NombreCurso.DesignTimeState = resources.GetString("NombreCurso.DesignTimeState");
+            this.NombreCurso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NombreCurso.Location = new System.Drawing.Point(2, 8);
             this.NombreCurso.Name = "NombreCurso";
-            this.NombreCurso.Size = new System.Drawing.Size(308, 48);
-            this.NombreCurso.TabIndex = 0;
-            this.NombreCurso.Text = "NombreCurso";
-            this.NombreCurso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.DataPropertyName = "descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 10;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // URL
-            // 
-            this.URL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.URL.DataPropertyName = "linkVideo";
-            this.URL.HeaderText = "URL";
-            this.URL.MinimumWidth = 10;
-            this.URL.Name = "URL";
-            this.URL.ReadOnly = true;
+            this.NombreCurso.Size = new System.Drawing.Size(354, 44);
+            this.NombreCurso.TabIndex = 98;
             // 
             // frmDetalleCursoInscritoMaterial
             // 
@@ -423,10 +414,8 @@ namespace InterfazDATMA
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private MaterialSkin.Controls.MaterialLabel NombreCurso;
         private System.Windows.Forms.DataGridView dgvVideos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private MaterialSkin.Controls.MaterialLabel MaterialCurso;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialButton btnRegresar;
         private System.Windows.Forms.DataGridView dgvDocumentos;
@@ -434,5 +423,7 @@ namespace InterfazDATMA
         private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewLinkColumn URL;
+        private Nevron.Nov.WinFormControls.NLabelControl nLabelControl1;
+        private Nevron.Nov.WinFormControls.NLabelControl NombreCurso;
     }
 }
