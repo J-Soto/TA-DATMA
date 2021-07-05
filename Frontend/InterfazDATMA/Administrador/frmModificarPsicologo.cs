@@ -21,7 +21,6 @@ namespace InterfazDATMA.Administrador
         private frmPlantillaGestion formPlantilla;
         public frmOperacionesPersona formOperacionPersona;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
-        private DistritoWS.DistritoWSClient daoDistrito;
 
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
@@ -44,6 +43,7 @@ namespace InterfazDATMA.Administrador
             this.formOperacionPersona = formOperacionPersona;
 
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            txtDistrito.ReadOnly = true;
             inicializarComponentes();
             completarDatosPsicologos();
 
@@ -52,12 +52,6 @@ namespace InterfazDATMA.Administrador
 
         private void inicializarComponentes()
         {
-            daoDistrito = new DistritoWS.DistritoWSClient();
-            this.distrito = new PsicologoWS.distrito();
-            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-            cboDistrito.DataSource = distritos;
-            cboDistrito.DisplayMember = "nombre";
-
             txtNombre.Text = "";
             txtApellidoPat.Text = "";
             txtApellidoMat.Text = "";
@@ -98,6 +92,9 @@ namespace InterfazDATMA.Administrador
                 MemoryStream ms = new MemoryStream(psicologo.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
+            // Distrito
+            if (psicologo.distrito != null)
+                txtDistrito.Text = psicologo.distrito.nombre;
         }
 
         private void rbtnMujer_Click(object sender, EventArgs e)
@@ -112,17 +109,17 @@ namespace InterfazDATMA.Administrador
             rbtnHombre.Checked = true;
         }
 
-        private void txtTelf_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void txtTelf_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
         }
 
         private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-
-        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
         }
@@ -168,7 +165,7 @@ namespace InterfazDATMA.Administrador
                     distrito = new PsicologoWS.distrito();
                     distrito.idDistrito = formDistrito.distrito.idDistrito;
                     distrito.nombre = formDistrito.distrito.nombre;
-                    cboDistrito.SelectedIndex = cboDistrito.FindStringExact(distrito.nombre);
+                    txtDistrito.Text = distrito.nombre;
                     psicologo.distrito = distrito;
                 }
             }
@@ -213,35 +210,129 @@ namespace InterfazDATMA.Administrador
 
 
             //Validaciones:
-            if (psicologo.DNI.Length != 8)  // Si el DNI es una cadena diferente de longitud 8
+            bool validacionCorrecta = true;
+
+            // txtDni
+            if (psicologo.DNI.Length != 8 || psicologo.DNI[0] == '0')  // El DNI debe tener 8 dígitos
             {
-                MessageBox.Show("El DNI debe tener 8 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (psicologo.DNI[0] == '0')    // Si el DNI inicia con cero 
-            {
-                MessageBox.Show("El DNI no puede empezar con cero.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (psicologo.celular.Length != 9) // Si el celular es una cadena diferente de longitud 9
-            {
-                MessageBox.Show("El número de celular debe tener 9 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (psicologo.celular[0] != '9')   // Si el numero de celular no empieza con 9
-            {
-                MessageBox.Show("El número de celular debe empezar con nueve.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (psicologo.telefono.Length != 7)    // Si el número de telefono inicia con 7
-            {
-                MessageBox.Show("El telefono debe tener 7 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (psicologo.telefono[0] == '0')       // Si el numero de telefono inicia con cero
-            {
-                MessageBox.Show("El número de teléfono no puede empezar con cero", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (!Char.IsLetter(psicologo.correo[0]) || psicologo.correo.Contains("@") != true || (psicologo.correo.Contains(".com") || psicologo.correo.Contains(".pe")) != true)       // El correo debe tener el @, iniciar con .com o .pe y además debe comenzar con una letra
-            {
-                MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.errorProvider.SetError(txtDni, "El DNI debe tener 8 dígitos.");
+                validacionCorrecta = false;
             }
             else
+            {
+                this.errorProvider.SetError(txtDni, "");
+            }
+
+            // txtTelf
+            if (psicologo.telefono.Length != 7 || psicologo.telefono[0] == '0')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtTelf, "El telefono debe tener 7 dígitos.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtTelf, "");
+            }
+
+            // txtCelular
+            if (psicologo.celular.Length != 9 || psicologo.celular[0] != '9')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtCelular, "El número de celular debe tener 9 dígitos y empezar con 9.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCelular, "");
+            }
+
+            // txtNombre
+            if (psicologo.nombre == "")
+            {
+                this.errorProvider.SetError(txtNombre, "Es requerido ingresar el nombre.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtNombre, "");
+            }
+
+            // txtApellidoPat
+            if (psicologo.apellidoPaterno == "")
+            {
+                this.errorProvider.SetError(txtApellidoPat, "Es requerido ingresar el apellido paterno.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtApellidoPat, "");
+            }
+
+
+            // dtpFechaNacimiento
+            if (psicologo.fechaNacimiento.Year > 2003)
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "Es requerido ingresar una fecha de nacimiento válida.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "");
+            }
+
+            // txtDistrito
+            if (psicologo.distrito == null)
+            {
+                this.errorProvider.SetError(txtDistrito, "Es requerido ingresar un distrito.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtDistrito, "");
+            }
+
+            // rbtnMujer
+            if (psicologo.genero == 2)
+            {
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(rbtnMujer, "");
+            }
+
+            // btnSubirFoto
+            if (psicologo.fotoPerfil == null)
+            {
+                this.errorProvider.SetError(btnSubirFoto, "Debe ingresar una foto para el perfil del psicólogo.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(btnSubirFoto, "");
+            }
+
+            // txtCorreo
+            if (psicologo.correo != "")
+            {
+                if (!Char.IsLetter(psicologo.correo[0]) || psicologo.correo.Contains("@") != true || !(psicologo.correo.IndexOf(".", psicologo.correo.IndexOf("@")) > psicologo.correo.IndexOf("@")))
+                {
+                    this.errorProvider.SetError(txtCorreo, "Ingrese un correo válido.");
+                    validacionCorrecta = false;
+                }
+                else
+                {
+                    this.errorProvider.SetError(txtCorreo, "");
+                }
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCorreo, "Es requerido ingresar un correo.");
+                validacionCorrecta = false;
+            }
+
+
+            if (validacionCorrecta)
             {
                 int verificado = daoPsicologo.verificarDNI(psicologo.DNI, psicologo.nombre, psicologo.apellidoPaterno, psicologo.apellidoMaterno);
                 if (verificado == -1)
@@ -278,14 +369,139 @@ namespace InterfazDATMA.Administrador
                 }
 
             }
+            else
+            {
+                MessageBox.Show("Faltan datos o están incorrectos. Revisar nuevamente.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
-        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtDni_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            this.distrito.idDistrito = ((DistritoWS.distrito)cboDistrito.SelectedItem).idDistrito;
-            this.distrito.nombre = ((DistritoWS.distrito)cboDistrito.SelectedItem).nombre;
-            psicologo.distrito = distrito;
+            if (txtDni.Text.Length != 8 || txtDni.Text[0] == '0')  // El DNI debe tener 8 dígitos
+            {
+                this.errorProvider.SetError(txtDni, "El DNI debe tener 8 dígitos.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtDni, "");
+            }
         }
+
+        private void txtTelf_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtTelf.Text.Length != 7 || txtTelf.Text[0] == '0')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtTelf, "El telefono debe tener 7 dígitos.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtTelf, "");
+            }
+        }
+
+        private void txtCelular_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtCelular.Text.Length != 9 || txtCelular.Text[0] != '9')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtCelular, "El número de celular debe tener 9 dígitos y empezar con 9.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCelular, "");
+            }
+        }
+
+        private void txtNombre_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                this.errorProvider.SetError(txtNombre, "Es requerido ingresar el nombre.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtNombre, "");
+            }
+        }
+
+        private void txtApellidoPat_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtApellidoPat.Text == "")
+            {
+                this.errorProvider.SetError(txtApellidoPat, "Es requerido ingresar el apellido paterno.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtApellidoPat, "");
+            }
+        }
+
+        private void txtCorreo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtCorreo.Text != "")
+            {
+                if (!Char.IsLetter(txtCorreo.Text[0]) || txtCorreo.Text.Contains("@") != true || !(txtCorreo.Text.IndexOf(".", txtCorreo.Text.IndexOf("@")) > txtCorreo.Text.IndexOf("@")))
+                {
+                    this.errorProvider.SetError(txtCorreo, "Ingrese un correo válido.");
+                }
+                else
+                {
+                    this.errorProvider.SetError(txtCorreo, "");
+                }
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCorreo, "Es requerido ingresar un correo.");
+            }
+        }
+
+        private void dtpFechaNacimiento_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (dtpFechaNacimiento.Value.Year > 2003)
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "Es requerido ingresar una fecha de nacimiento válida.");
+            }
+            else
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "");
+            }
+        }
+
+        private void txtDistrito_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtDistrito.Text == null)
+            {
+                this.errorProvider.SetError(txtDistrito, "Es requerido ingresar un distrito.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtDistrito, "");
+            }
+        }
+
+        private void rbtnMujer_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (rbtnMujer.Checked == false && rbtnHombre.Checked == false)
+            {
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
+            }
+            else
+            {
+                this.errorProvider.SetError(rbtnMujer, "");
+            }
+        }
+
+        private void btnSubirFoto_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (rutaFoto != "")
+            {
+                this.errorProvider.SetError(btnSubirFoto, "Debe ingresar una foto para el perfil del psicólogo.");
+            }
+            else
+            {
+                this.errorProvider.SetError(btnSubirFoto, "");
+            }
+        }
+
     }
 }

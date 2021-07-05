@@ -29,15 +29,16 @@ namespace InterfazDATMA.Administrador
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarTutor));
             this.label1 = new System.Windows.Forms.Label();
             this.lblGenero = new System.Windows.Forms.Label();
-            this.txtCel = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtTelf = new System.Windows.Forms.TextBox();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtApMat = new System.Windows.Forms.TextBox();
-            this.txtApPat = new System.Windows.Forms.TextBox();
+            this.txtApellidoMat = new System.Windows.Forms.TextBox();
+            this.txtApellidoPat = new System.Windows.Forms.TextBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.rbtnHombre = new System.Windows.Forms.RadioButton();
             this.rbtnMujer = new System.Windows.Forms.RadioButton();
@@ -53,14 +54,15 @@ namespace InterfazDATMA.Administrador
             this.lblNombre = new System.Windows.Forms.Label();
             this.ofdSubirFoto = new System.Windows.Forms.OpenFileDialog();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.txtDistrito = new System.Windows.Forms.TextBox();
             this.btnSubirFoto = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.AgregarDistrio = new MaterialSkin.Controls.MaterialButton();
             this.btnAsignarUsuario = new MaterialSkin.Controls.MaterialButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnSiguiente = new MaterialSkin.Controls.MaterialButton();
-            this.cboDistrito = new System.Windows.Forms.ComboBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,40 +77,46 @@ namespace InterfazDATMA.Administrador
             this.lblGenero.ForeColor = System.Drawing.Color.White;
             this.lblGenero.Name = "lblGenero";
             // 
-            // txtCel
+            // txtCelular
             // 
-            resources.ApplyResources(this.txtCel, "txtCel");
-            this.txtCel.Name = "txtCel";
+            resources.ApplyResources(this.txtCelular, "txtCelular");
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Validating += new System.ComponentModel.CancelEventHandler(this.txtCelular_Validating);
             // 
             // txtTelf
             // 
             resources.ApplyResources(this.txtTelf, "txtTelf");
             this.txtTelf.Name = "txtTelf";
+            this.txtTelf.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelf_Validating);
             // 
             // txtDni
             // 
             resources.ApplyResources(this.txtDni, "txtDni");
             this.txtDni.Name = "txtDni";
+            this.txtDni.Validating += new System.ComponentModel.CancelEventHandler(this.txtDni_Validating);
             // 
             // txtCorreo
             // 
             resources.ApplyResources(this.txtCorreo, "txtCorreo");
             this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreo_Validating);
             // 
-            // txtApMat
+            // txtApellidoMat
             // 
-            resources.ApplyResources(this.txtApMat, "txtApMat");
-            this.txtApMat.Name = "txtApMat";
+            resources.ApplyResources(this.txtApellidoMat, "txtApellidoMat");
+            this.txtApellidoMat.Name = "txtApellidoMat";
             // 
-            // txtApPat
+            // txtApellidoPat
             // 
-            resources.ApplyResources(this.txtApPat, "txtApPat");
-            this.txtApPat.Name = "txtApPat";
+            resources.ApplyResources(this.txtApellidoPat, "txtApellidoPat");
+            this.txtApellidoPat.Name = "txtApellidoPat";
+            this.txtApellidoPat.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoPat_Validating);
             // 
             // dtpFechaNacimiento
             // 
             resources.ApplyResources(this.dtpFechaNacimiento, "dtpFechaNacimiento");
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Validating += new System.ComponentModel.CancelEventHandler(this.dtpFechaNacimiento_Validating);
             // 
             // rbtnHombre
             // 
@@ -125,11 +133,13 @@ namespace InterfazDATMA.Administrador
             this.rbtnMujer.Name = "rbtnMujer";
             this.rbtnMujer.TabStop = true;
             this.rbtnMujer.UseVisualStyleBackColor = true;
+            this.rbtnMujer.Validating += new System.ComponentModel.CancelEventHandler(this.rbtnMujer_Validating);
             // 
             // txtNombre
             // 
             resources.ApplyResources(this.txtNombre, "txtNombre");
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // lblApMat
             // 
@@ -193,18 +203,18 @@ namespace InterfazDATMA.Administrador
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.TabStop = false;
             // 
+            // txtDistrito
+            // 
+            resources.ApplyResources(this.txtDistrito, "txtDistrito");
+            this.txtDistrito.Name = "txtDistrito";
+            this.txtDistrito.Validating += new System.ComponentModel.CancelEventHandler(this.txtDistrito_Validating);
+            // 
             // btnSubirFoto
             // 
             resources.ApplyResources(this.btnSubirFoto, "btnSubirFoto");
             this.btnSubirFoto.Name = "btnSubirFoto";
             this.btnSubirFoto.UseVisualStyleBackColor = true;
             this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click_1);
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
             // 
             // AgregarDistrio
             // 
@@ -262,12 +272,10 @@ namespace InterfazDATMA.Administrador
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
-            // cboDistrito
+            // errorProvider
             // 
-            this.cboDistrito.FormattingEnabled = true;
-            resources.ApplyResources(this.cboDistrito, "cboDistrito");
-            this.cboDistrito.Name = "cboDistrito";
-            this.cboDistrito.SelectedIndexChanged += new System.EventHandler(this.cboDistrito_SelectedIndexChanged);
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // frmModificarTutor
             // 
@@ -275,22 +283,21 @@ namespace InterfazDATMA.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
-            this.Controls.Add(this.cboDistrito);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAsignarUsuario);
             this.Controls.Add(this.AgregarDistrio);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSubirFoto);
+            this.Controls.Add(this.txtDistrito);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblGenero);
-            this.Controls.Add(this.txtCel);
+            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtTelf);
             this.Controls.Add(this.txtDni);
             this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtApMat);
-            this.Controls.Add(this.txtApPat);
+            this.Controls.Add(this.txtApellidoMat);
+            this.Controls.Add(this.txtApellidoPat);
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.rbtnHombre);
             this.Controls.Add(this.rbtnMujer);
@@ -307,6 +314,7 @@ namespace InterfazDATMA.Administrador
             this.Name = "frmModificarTutor";
             this.Sizable = false;
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,12 +324,12 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblGenero;
-        private System.Windows.Forms.TextBox txtCel;
+        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtTelf;
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtApMat;
-        private System.Windows.Forms.TextBox txtApPat;
+        private System.Windows.Forms.TextBox txtApellidoMat;
+        private System.Windows.Forms.TextBox txtApellidoPat;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.RadioButton rbtnHombre;
         private System.Windows.Forms.RadioButton rbtnMujer;
@@ -335,17 +343,14 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtDistrito;
         private System.Windows.Forms.OpenFileDialog ofdSubirFoto;
         private System.Windows.Forms.Button btnSubirFoto;
-        //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
-        //private MaterialSkin.Controls.MaterialFlatButton btnNuevoDistrito;
-        //private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
-        private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialButton AgregarDistrio;
         private MaterialSkin.Controls.MaterialButton btnAsignarUsuario;
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnSiguiente;
-        private System.Windows.Forms.ComboBox cboDistrito;
+        private System.Windows.Forms.ErrorProvider errorProvider;
         //private MaterialSkin.Controls.MaterialFlatButton btnAsignarUsuario;
     }
 }

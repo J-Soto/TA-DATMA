@@ -19,15 +19,17 @@ namespace InterfazDATMA.Administrador
     public partial class frmInsertarPsicologo : MaterialSkin.Controls.MaterialForm 
     {
         private frmPlantillaGestion formPlantilla;
-        
+
+        private TutorWS.TutorWSClient daoTutor;
+        private PsicologoWS.PsicologoWSClient daoPsicologo;
+        private int cantidadFilas;
+        private int cantidadFilasBuscar;
 
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmOperacionesPersona formOperacionPersona;
 
-        private PsicologoWS.PsicologoWSClient daoPsicologo;
         private PsicologoWS.distrito distrito;
         private UsuarioWS.UsuarioWSClient daoUsuario;
-        private DistritoWS.DistritoWSClient daoDistrito;
         private string rutaFoto = "";
 
         public frmInsertarPsicologo(frmOperacionesPersona formOperacionPersona, frmPlantillaGestion formPlantilla)
@@ -43,17 +45,15 @@ namespace InterfazDATMA.Administrador
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
             daoUsuario = new UsuarioWS.UsuarioWSClient();
 
+            daoTutor = new TutorWS.TutorWSClient();
+            daoPsicologo = new PsicologoWS.PsicologoWSClient();
+
+            txtDistrito.ReadOnly = true;
             inicializarComponentes();
         }
 
         private void inicializarComponentes()
         {
-            daoDistrito = new DistritoWS.DistritoWSClient();
-            this.distrito = new PsicologoWS.distrito();
-            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-            cboDistrito.DataSource = distritos;
-            cboDistrito.DisplayMember = "nombre";
-
             txtNombre.Text = "";
             txtApellidoPat.Text = "";
             txtApellidoMat.Text = "";
@@ -116,6 +116,21 @@ namespace InterfazDATMA.Administrador
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
+            if (frmDistrito.ShowDialog() == DialogResult.OK)
+            {
+                if (frmDistrito.distrito != null)
+                {
+                    distrito = new PsicologoWS.distrito();
+                    distrito.idDistrito = frmDistrito.distrito.idDistrito;
+                    distrito.nombre = frmDistrito.distrito.nombre;
+                    txtDistrito.Text = distrito.nombre;
+                }
+            }
+        }
+
         private void nuevoDistrito_Click(object sender, EventArgs e)
         {
             frmInsertarDistrito frmDistrito = new frmInsertarDistrito();
@@ -126,7 +141,7 @@ namespace InterfazDATMA.Administrador
                     this.distrito = new PsicologoWS.distrito();
                     this.distrito.idDistrito = frmDistrito.distrito.idDistrito;
                     this.distrito.nombre = frmDistrito.distrito.nombre;
-                    cboDistrito.SelectedIndex = cboDistrito.FindStringExact(distrito.nombre);
+                    txtDistrito.Text = this.distrito.nombre;
                 }
             }
         }
@@ -160,16 +175,136 @@ namespace InterfazDATMA.Administrador
             psicologo.fechaNacimientoSpecified = true;
             psicologo.distrito = new PsicologoWS.distrito();
             psicologo.distrito = distrito;
-            psicologo.correo = txtCorreo.Text;
 
-            psicologo.DNI = txtDni.Text;
+            /*-------------------------------------------------------------------------*/
+            // dgvTutores
+            dgvTutores.AutoGenerateColumns = false;
+            dgvTutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            // dgvPsicologos
+            dgvPsicologos.AutoGenerateColumns = false;
+            dgvPsicologos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+
+            // "psicologos" es una coleción genérica
+            BindingList<PsicologoWS.psicologo> psicologos;
+            try
+            {
+                psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
+            }
+            catch (ArgumentNullException ex)
+            {
+                psicologos = new BindingList<PsicologoWS.psicologo>();
+            }
+            dgvPsicologos.DataSource = psicologos;
+            PsicologoWS.psicologo psicologoAux;
+
+            // "tutores" es una coleción genérica
+            BindingList<TutorWS.tutor> tutores;
+            try
+            {
+                tutores = new BindingList<TutorWS.tutor>(daoTutor.listarTodosTutores().ToList());
+            }
+            catch (ArgumentNullException ex)
+            {
+                tutores = new BindingList<TutorWS.tutor>();
+            }
+            dgvTutores.DataSource = tutores;
+            TutorWS.tutor tutorAux;
+
+
+            cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
+
+
+            // Bucles de Inserción
+            int i;
+            bool encontrado = false;
+            bool encontradoCelular = false;
+            bool encontradoDNI = false;
+            for (i = 0; i < dgvPsicologos.RowCount; i++)
+            {
+                psicologoAux = (PsicologoWS.psicologo)dgvPsicologos.Rows[i].DataBoundItem;
+                if (psicologoAux.correo == txtCorreo.Text)
+                {
+                    // Si ya está el correo, sale un mensaje que indique ello
+                    encontrado = true;
+                }
+
+                if (txtCelular.Text != "")
+                {
+                    if (Int64.Parse(psicologoAux.celular) == Int64.Parse(txtCelular.Text))
+                    {
+                        encontradoCelular = true;
+                    }
+                }
+
+                if (txtDni.Text != "")
+                {
+                    if (Int64.Parse(psicologoAux.DNI) == Int64.Parse(txtDni.Text))
+                    {
+                        encontradoDNI = true;
+                    }
+                }
+
+            }
+
+            for (int j = i; j < dgvTutores.RowCount + i; j++)
+            {
+                tutorAux = (TutorWS.tutor)dgvTutores.Rows[j - i].DataBoundItem;
+                if (tutorAux.correo == txtCorreo.Text)
+                {
+                    // Si ya está el correo, sale un mensaje que indique ello
+                    encontrado = true;
+                }
+                if (txtCelular.Text != "")
+                {
+                    if (Int64.Parse(tutorAux.celular) == Int64.Parse(txtCelular.Text))
+                    {
+                        encontradoCelular = true;
+                    }
+                }
+                if(txtDni.Text != "")
+                {
+                    if (Int64.Parse(tutorAux.DNI) == Int64.Parse(txtDni.Text))
+                    {
+                        encontradoDNI = true;
+                    }
+                }
+            }
+
+            if (encontrado == false)
+            {
+                psicologo.correo = txtCorreo.Text;
+            }
+            else
+            {
+                psicologo.correo = "";
+            }
+
+            if (encontradoCelular == false)
+            {
+                psicologo.celular = txtCelular.Text;
+            }
+            else
+            {
+                psicologo.celular = "";
+            }
+
+            if (encontradoDNI == false)
+            {
+                psicologo.DNI = txtDni.Text;
+            }
+            else
+            {
+                psicologo.DNI = "";
+            }
+            /*-------------------------------------------------------------------------*/
+
 
             //Por defecto
             psicologo.tipo = 0;
 
 
             psicologo.telefono = txtTelf.Text;
-            psicologo.celular = txtCelular.Text;
             if (rbtnHombre.Checked == true)
             {
                 psicologo.genero = 'M';
@@ -255,6 +390,8 @@ namespace InterfazDATMA.Administrador
                 this.errorProvider.SetError(txtApellidoPat, "");
             }
 
+
+            // dtpFechaNacimiento
             if (psicologo.fechaNacimiento.Year > 2003)
             {
                 this.errorProvider.SetError(dtpFechaNacimiento, "Es requerido ingresar una fecha de nacimiento válida.");
@@ -264,7 +401,8 @@ namespace InterfazDATMA.Administrador
             {
                 this.errorProvider.SetError(dtpFechaNacimiento, "");
             }
-            /*
+
+            // txtDistrito
             if (psicologo.distrito == null)
             {
                 this.errorProvider.SetError(txtDistrito, "Es requerido ingresar un distrito.");
@@ -274,10 +412,11 @@ namespace InterfazDATMA.Administrador
             {
                 this.errorProvider.SetError(txtDistrito, "");
             }
-            */
+
+            // rbtnMujer
             if (psicologo.genero == 2)
             {
-                this.errorProvider.SetError(rbtnMujer, "Es requerido ingresar un genéro.");
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
                 validacionCorrecta = false;
             }
             else
@@ -285,6 +424,7 @@ namespace InterfazDATMA.Administrador
                 this.errorProvider.SetError(rbtnMujer, "");
             }
 
+            // btnSubirFoto
             if (psicologo.fotoPerfil == null)
             {
                 this.errorProvider.SetError(btnSubirFoto, "Debe ingresar una foto para el perfil del psicólogo.");
@@ -315,7 +455,7 @@ namespace InterfazDATMA.Administrador
             }
 
 
-            if(validacionCorrecta)
+            if(validacionCorrecta && encontrado == false && encontradoCelular == false && encontradoDNI == false)
             {
                 int verificado = daoPsicologo.verificarDNI(psicologo.DNI, psicologo.nombre, psicologo.apellidoPaterno, psicologo.apellidoMaterno);
                 if (verificado == -1)
@@ -372,9 +512,36 @@ namespace InterfazDATMA.Administrador
                 }
 
             }
+            else if (validacionCorrecta && encontradoDNI == true)
+            {
+                MessageBox.Show("El DNI ya se encuentra registrado en el sistema.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (validacionCorrecta && encontrado == true)
+            {
+                MessageBox.Show("El correo electrónico ya se encuentra registrado en el sistema.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (validacionCorrecta && encontradoCelular == true)
+            {
+                MessageBox.Show("El número de celular ya se encuentra registrado en el sistema.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!validacionCorrecta && encontradoDNI == true)
+            {
+                MessageBox.Show("Faltan datos o están incorrectos, además el DNI ya se encuentra registrado en el sistema. Revisar nuevamente.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.errorProvider.SetError(txtDni, "El DNI ya se encuentra registrado en el sistema.");
+            }
+            else if (!validacionCorrecta && encontrado == true)
+            {
+                MessageBox.Show("Faltan datos o están incorrectos, además el correo electrónico ya se encuentra registrado en el sistema. Revisar nuevamente.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.errorProvider.SetError(txtCorreo, "El correo electrónico ya se encuentra registrado en el sistema.");
+            }
+            else if (!validacionCorrecta && encontradoCelular == true)
+            {
+                MessageBox.Show("Faltan datos o están incorrectos, además el número de celular ya se encuentra registrado en el sistema. Revisar nuevamente.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.errorProvider.SetError(txtCelular, "El número de celular ya se encuentra registrado en el sistema.");
+            }
             else
             {
-                MessageBox.Show("Datos incorrectos. Revisar nuevamente.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Faltan datos o están incorrectos. Revisar nuevamente.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -457,10 +624,53 @@ namespace InterfazDATMA.Administrador
             }
         }
 
-        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
+        private void dtpFechaNacimiento_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            this.distrito.idDistrito = ((DistritoWS.distrito)cboDistrito.SelectedItem).idDistrito;
-            this.distrito.nombre = ((DistritoWS.distrito)cboDistrito.SelectedItem).nombre;
+            if (dtpFechaNacimiento.Value.Year > 2003)
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "Es requerido ingresar una fecha de nacimiento válida.");
+            }
+            else
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "");
+            }
         }
+
+        private void txtDistrito_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtDistrito.Text == null)
+            {
+                this.errorProvider.SetError(txtDistrito, "Es requerido ingresar un distrito.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtDistrito, "");
+            }
+        }
+
+        private void rbtnMujer_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (rbtnMujer.Checked == false && rbtnHombre.Checked == false)
+            {
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
+            }
+            else
+            {
+                this.errorProvider.SetError(rbtnMujer, "");
+            }
+        }
+
+        private void btnSubirFoto_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (rutaFoto != "")
+            {
+                this.errorProvider.SetError(btnSubirFoto, "Debe ingresar una foto para el perfil del psicólogo.");
+            }
+            else
+            {
+                this.errorProvider.SetError(btnSubirFoto, "");
+            }
+        }
+
     }
 }

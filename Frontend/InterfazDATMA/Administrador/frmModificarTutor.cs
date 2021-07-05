@@ -22,12 +22,10 @@ namespace InterfazDATMA.Administrador
         public frmOperacionesPersona formOperacionPersona;
 
         private TutorWS.TutorWSClient daoTutor;
-        private DistritoWS.DistritoWSClient daoDistrito;
 
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
         private TutorWS.tutor tutor;
-        private TutorWS.distrito distrito;
         private string rutaFoto = "";
 
         public bool usuarioAsignado = false;
@@ -46,6 +44,7 @@ namespace InterfazDATMA.Administrador
             this.formOperacionPersona = formOperacionPersona;
 
 
+            txtDistrito.ReadOnly = true;
             daoTutor = new TutorWS.TutorWSClient();
             inicializarComponentes();
             completarDatosTutores();
@@ -53,31 +52,23 @@ namespace InterfazDATMA.Administrador
 
         private void inicializarComponentes()
         {
-            daoDistrito = new DistritoWS.DistritoWSClient();
-            //this.distrito = new TutorWS.distrito();
-            BindingList<DistritoWS.distrito> distritos = new BindingList<DistritoWS.distrito>(daoDistrito.lisrarTodosDistritos().ToList());
-            cboDistrito.DataSource = distritos;
-            cboDistrito.DisplayMember = "nombre";
-
-            cboDistrito.SelectedIndex = cboDistrito.FindStringExact(tutor.distrito.nombre);
             txtNombre.Text = "";
-            txtApPat.Text = "";
-            txtApMat.Text = "";
+            txtApellidoPat.Text = "";
+            txtApellidoMat.Text = "";
             txtCorreo.Text = "";
             txtDni.Text = "";
             txtTelf.Text = "";
-            txtCel.Text = "";
+            txtCelular.Text = "";
             rbtnHombre.Checked = false;
             rbtnMujer.Checked = false;
-            if (tutor.user!=null)
-                if(!tutor.user.Equals("0")) btnAsignarUsuario.Enabled = false;
+            if (tutor.user != null || tutor.user!="0") btnAsignarUsuario.Enabled = false;
         }
 
         private void completarDatosTutores()
         {
             txtNombre.Text = tutor.nombre;
-            txtApPat.Text = tutor.apellidoPaterno;
-            txtApMat.Text = tutor.apellidoMaterno;
+            txtApellidoPat.Text = tutor.apellidoPaterno;
+            txtApellidoMat.Text = tutor.apellidoMaterno;
             txtCorreo.Text = tutor.correo;
             /* La contraseña no se muestra*/
             //txtPass.Text = tutor.password;
@@ -85,7 +76,7 @@ namespace InterfazDATMA.Administrador
             /*----------------------------*/
             txtDni.Text = tutor.DNI;
             txtTelf.Text = tutor.telefono;
-            txtCel.Text = tutor.celular;
+            txtCelular.Text = tutor.celular;
             if (tutor.genero == 'M')
             {
                 rbtnHombre.Checked = true;
@@ -101,6 +92,9 @@ namespace InterfazDATMA.Administrador
                 MemoryStream ms = new MemoryStream(tutor.fotoPerfil);
                 pbFoto.Image = new Bitmap(ms);
             }
+            // Distrito
+            if (tutor.distrito != null)
+                txtDistrito.Text = tutor.distrito.nombre;
         }
 
         private void rbtnMujer_Click(object sender, EventArgs e)
@@ -158,7 +152,7 @@ namespace InterfazDATMA.Administrador
                 {
                     tutor.distrito.idDistrito = frmDistrito.distrito.idDistrito;
                     tutor.distrito.nombre = frmDistrito.distrito.nombre;
-                    cboDistrito.SelectedIndex = cboDistrito.FindStringExact(tutor.distrito.nombre);
+                    txtDistrito.Text = tutor.distrito.nombre;
                 }
             }
 
@@ -174,12 +168,12 @@ namespace InterfazDATMA.Administrador
         {
             // TextBox
             tutor.nombre = txtNombre.Text;
-            tutor.apellidoPaterno = txtApPat.Text;
-            tutor.apellidoMaterno = txtApMat.Text;
+            tutor.apellidoPaterno = txtApellidoPat.Text;
+            tutor.apellidoMaterno = txtApellidoMat.Text;
             tutor.correo = txtCorreo.Text;
             tutor.DNI = txtDni.Text;
             tutor.telefono = txtTelf.Text;
-            tutor.celular = txtCel.Text;
+            tutor.celular = txtCelular.Text;
             tutor.fechaNacimiento = dtpFechaNacimiento.Value;
             tutor.fechaNacimientoSpecified = true;
             // RadioButton
@@ -200,35 +194,118 @@ namespace InterfazDATMA.Administrador
             }
 
             //Validaciones:
-            if (tutor.DNI.Length != 8)  // Si el DNI es una cadena diferente de longitud 8
+            bool validacionCorrecta = true;
+
+            // txtDni
+            if (tutor.DNI.Length != 8 || tutor.DNI[0] == '0')  // El DNI debe tener 8 dígitos
             {
-                MessageBox.Show("El DNI debe tener 8 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (tutor.DNI[0] == '0')    // Si el DNI inicia con cero 
-            {
-                MessageBox.Show("El DNI no puede empezar con cero.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (tutor.celular.Length != 9) // Si el celular es una cadena diferente de longitud 9
-            {
-                MessageBox.Show("El número de celular debe tener 9 digitos.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (tutor.celular[0] != '9')   // Si el numero de celular no empieza con 9
-            {
-                MessageBox.Show("El número de celular debe empezar con nueve.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (tutor.telefono.Length != 7)    // Si el número de telefono inicia con 7
-            {
-                MessageBox.Show("El telefono debe tener 7 digitos", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if(tutor.telefono[0] == '0')       // Si el numero de telefono inicia con cero
-            {
-                MessageBox.Show("El número de teléfono no puede empezar con cero", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (!Char.IsLetter(tutor.correo[0]) || tutor.correo.Contains("@") != true || (tutor.correo.Contains(".com") || tutor.correo.Contains(".pe")) != true)       // El correo debe tener el @, iniciar con .com o .pe y además debe comenzar con una letra
-            {
-                MessageBox.Show("Correo invalido", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.errorProvider.SetError(txtDni, "El DNI debe tener 8 dígitos.");
+                validacionCorrecta = false;
             }
             else
+            {
+                this.errorProvider.SetError(txtDni, "");
+            }
+
+            // txtTelf
+            if (tutor.telefono.Length != 7 || tutor.telefono[0] == '0')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtTelf, "El telefono debe tener 7 dígitos.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtTelf, "");
+            }
+
+            // txtCelular
+            if (tutor.celular.Length != 9 || tutor.celular[0] != '9')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtCelular, "El número de celular debe tener 9 dígitos y empezar con 9.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCelular, "");
+            }
+
+            // txtNombre
+            if (tutor.nombre == "")
+            {
+                this.errorProvider.SetError(txtNombre, "Es requerido ingresar el nombre.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtNombre, "");
+            }
+
+            // txtApellidoPat
+            if (tutor.apellidoPaterno == "")
+            {
+                this.errorProvider.SetError(txtApellidoPat, "Es requerido ingresar el apellido paterno.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtApellidoPat, "");
+            }
+
+
+            // dtpFechaNacimiento
+            if (tutor.fechaNacimiento.Year > 2003)
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "Es requerido ingresar una fecha de nacimiento válida.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "");
+            }
+
+            // txtDistrito
+            if (tutor.distrito == null)
+            {
+                this.errorProvider.SetError(txtDistrito, "Es requerido ingresar un distrito.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(txtDistrito, "");
+            }
+
+            // rbtnMujer
+            if (tutor.genero == 2)
+            {
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
+                validacionCorrecta = false;
+            }
+            else
+            {
+                this.errorProvider.SetError(rbtnMujer, "");
+            }
+
+            // txtCorreo
+            if (tutor.correo != "")
+            {
+                if (!Char.IsLetter(tutor.correo[0]) || tutor.correo.Contains("@") != true || !(tutor.correo.IndexOf(".", tutor.correo.IndexOf("@")) > tutor.correo.IndexOf("@")))
+                {
+                    this.errorProvider.SetError(txtCorreo, "Ingrese un correo válido.");
+                    validacionCorrecta = false;
+                }
+                else
+                {
+                    this.errorProvider.SetError(txtCorreo, "");
+                }
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCorreo, "Es requerido ingresar un correo.");
+                validacionCorrecta = false;
+            }
+
+
+            if (validacionCorrecta)
             {
                 int verificado = daoTutor.verificarDNI(tutor.DNI, tutor.nombre, tutor.apellidoPaterno, tutor.apellidoMaterno);
                 if (verificado == -1)
@@ -245,8 +322,127 @@ namespace InterfazDATMA.Administrador
                     // AVANZA
                     formPlantilla.abrirFormulario(new frmModificarPreferencias(this, formPlantilla, tutor));
             }
+            else
+            {
+                MessageBox.Show("Faltan datos o están incorrectos. Revisar nuevamente.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        
+
+        private void txtDni_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtDni.Text.Length != 8 || txtDni.Text[0] == '0')  // El DNI debe tener 8 dígitos
+            {
+                this.errorProvider.SetError(txtDni, "El DNI debe tener 8 dígitos.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtDni, "");
+            }
+        }
+
+        private void txtTelf_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtTelf.Text.Length != 7 || txtTelf.Text[0] == '0')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtTelf, "El telefono debe tener 7 dígitos.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtTelf, "");
+            }
+        }
+
+        private void txtCelular_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtCelular.Text.Length != 9 || txtCelular.Text[0] != '9')  // El telefono debe tener 7 dígitos
+            {
+                this.errorProvider.SetError(txtCelular, "El número de celular debe tener 9 dígitos y empezar con 9.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCelular, "");
+            }
+        }
+
+        private void txtNombre_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                this.errorProvider.SetError(txtNombre, "Es requerido ingresar el nombre.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtNombre, "");
+            }
+        }
+
+        private void txtApellidoPat_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtApellidoPat.Text == "")
+            {
+                this.errorProvider.SetError(txtApellidoPat, "Es requerido ingresar el apellido paterno.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtApellidoPat, "");
+            }
+        }
+
+        private void txtCorreo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtCorreo.Text != "")
+            {
+                if (!Char.IsLetter(txtCorreo.Text[0]) || txtCorreo.Text.Contains("@") != true || !(txtCorreo.Text.IndexOf(".", txtCorreo.Text.IndexOf("@")) > txtCorreo.Text.IndexOf("@")))
+                {
+                    this.errorProvider.SetError(txtCorreo, "Ingrese un correo válido.");
+                }
+                else
+                {
+                    this.errorProvider.SetError(txtCorreo, "");
+                }
+            }
+            else
+            {
+                this.errorProvider.SetError(txtCorreo, "Es requerido ingresar un correo.");
+            }
+        }
+
+        private void dtpFechaNacimiento_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (dtpFechaNacimiento.Value.Year > 2003)
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "Es requerido ingresar una fecha de nacimiento válida.");
+            }
+            else
+            {
+                this.errorProvider.SetError(dtpFechaNacimiento, "");
+            }
+        }
+
+        private void txtDistrito_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtDistrito.Text == null)
+            {
+                this.errorProvider.SetError(txtDistrito, "Es requerido ingresar un distrito.");
+            }
+            else
+            {
+                this.errorProvider.SetError(txtDistrito, "");
+            }
+        }
+
+        private void rbtnMujer_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (rbtnMujer.Checked == false && rbtnHombre.Checked == false)
+            {
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
+            }
+            else
+            {
+                this.errorProvider.SetError(rbtnMujer, "");
+            }
+        }
+
         private (string, string) generarUsuario()
         {
             string user = Guid.NewGuid().ToString("N");
@@ -264,12 +460,6 @@ namespace InterfazDATMA.Administrador
             tutor.password = credenciales.Item2;
             usuarioAsignado = true;
             btnAsignarUsuario.Enabled = false;
-        }
-
-        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tutor.distrito.idDistrito = ((DistritoWS.distrito)cboDistrito.SelectedItem).idDistrito;
-            tutor.distrito.nombre = ((DistritoWS.distrito)cboDistrito.SelectedItem).nombre;
         }
     }
 }

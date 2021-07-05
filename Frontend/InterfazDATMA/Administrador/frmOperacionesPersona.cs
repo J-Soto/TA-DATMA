@@ -33,6 +33,7 @@ namespace InterfazDATMA.Administrador
             Design.Ini(this);
             if (Design.tema == 'd') ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
             else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
+
             daoTutor = new TutorWS.TutorWSClient();
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
 
@@ -87,6 +88,7 @@ namespace InterfazDATMA.Administrador
             cantidadFilas = dgvPsicologos.RowCount + dgvTutores.RowCount;
             dgvUsuario.RowCount = cantidadFilas;
 
+            // Bucles de Inserción
             int i;
             for (i = 0; i < dgvPsicologos.RowCount; i++)
             {
