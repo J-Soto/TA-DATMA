@@ -39,6 +39,7 @@ namespace InterfazDATMA
 
             TableStyles.CopyStyles(dgvSemanas);
             TableStyles.CopyStyles(dgvActividades);
+
             dgvSemanas.AutoGenerateColumns = false;
             dgvActividades.AutoGenerateColumns = false;
 

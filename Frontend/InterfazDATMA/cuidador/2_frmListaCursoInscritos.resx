@@ -123,4 +123,16 @@
   <data name="nLabelControl3.DesignTimeState" xml:space="preserve">
     <value>eNqdVs1OE2EUvdMWqPwLxqghWowiQkKMIcSFGmw7LU1gaJxS0Y0pbSMNpRigBljZmb2auDNufQT3+gauiBtfwDcwbrznzm+nHVLkZ5jOnHPnfuec7w7jRPTh88svX0/VzMehrelv34+GW6eDRBG+kTZnokQKn6VS6dYUn/MPrUZifCzkcF2J8yFH9lfrD7OYS3lDJwtczNto1IviVM2lgVWWcPcq6lGNDuiQSpSgClX5mKIm7fO1Pf5NcPkG/y3zlRqjcM24HaweDVZHX0Vp6kd1uRMfC8fzVye+75z4/nD828fLxrSN1xz8QADfckprndj4ObAXwrFTSgA7GMT+pXbDh13DFcfwn3yIieGPghKMBCVI4O4owsQmN9hKmHzMBmfZ1EPaZnvLXaQcPUP6Rc9a1cGP9WaVix/vio+E4ofOrN/6NGDtmDXzHZ8hN4W1lLEZsaroq8oDaH4NB5bhDUuwx2Is8Kc9/rRAG5x3fFrl/bDFiDrpLMs2n+3yFSXmyG/02XtNz5t37B71Yl6BSZp0ypQj1tWiYD2ygGIBCzDv+ihQWEOnz9iCilhhkaIeCUdz2kdCwjU0smmDY72An9vgvgB43geGIRoYK7yCGr3idpxV9Ado98gaVPp6XuKlYSlJ1qlMO0yEtk1Wt0IZLlTnb6sMdpuZ8HHdRyaZsS9TaN/GxkOfk2FsmesfUJrxZWGWZEI5XOw+c8rHdc3JiOvOsmCjuehIoOaVK8ANSq4wG2ucBPSP+Xdsc7wYFnKTyENWcSOWBP1GaMSy0uhre8cdyB2noc6woWfjt73Pw8KmMXyXaRZlJBC2rhSdn37iUkYDzs751HDzqcv66y5pzKfBRbCSPtYMWLj6lHvD+6Uqb5AT8agmy13jY8WtNu6rNoGtvM6KIirq+QVV2yRt7xo9GTN2KtSigmdpA9JolUPbZGgJEWqfWwmP4EqItNZ5BRbUGcrGLQ/qBjsnL9i6NBiYcHMe/DLgSO2G7BooBkoDvQsp5pDue6TrII3Y9kDiHYZjiFjbD/vXIsedGfneFfYFuPP/KWyvxk6ECf5EVoci1U4VFzyCTOshITTkGaUuRFfPhx5xFsSJUGJWGrem02FQ4VmvzCWUiYvCTR4FeYYfyauhXVdjyaPcBGWsC6XbM8cdY36R9cpSe3tLwYzwCTUZJrtHqbvBorPCuyIdV+TfhoBL3cKbkm1Rl+R0c+gfTzY6hQ==</value>
   </data>
+  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HoraIni.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HoraFin.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
