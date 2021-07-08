@@ -91,16 +91,36 @@ namespace InterfazDATMA
                 get => actividad.fecha;
             }
 
-            public string HoraIni
+            public DateTime HoraIni
             {
-                //get => Convert.ToDateTime(actividad.horaInicioStr);
-                get => actividad.horaInicioStr;
+                get {
+                    DateTime temp;
+                    try
+                    {
+                        temp = Convert.ToDateTime(actividad.horaInicioStr);
+                    } catch (Exception)
+                    {
+                        temp = DateTime.Today;
+                    }
+                    return temp;
+                }
             }
 
-            public string HoraFin
+            public DateTime HoraFin
             {
-                //get => Convert.ToDateTime(actividad.horaFinStr);
-                get => actividad.horaFinStr;
+                get
+                {
+                    DateTime temp;
+                    try
+                    {
+                        temp = Convert.ToDateTime(actividad.horaFinStr);
+                    }
+                    catch (Exception)
+                    {
+                        temp = DateTime.Today;
+                    }
+                    return temp;
+                }
             }
         }
 

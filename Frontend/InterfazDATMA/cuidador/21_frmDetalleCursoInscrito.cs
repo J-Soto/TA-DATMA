@@ -66,7 +66,7 @@ namespace InterfazDATMA
             dgvSemanas.DataSource = semanas;
             dgvActividades.DataSource = actividades[0];
             txtSemanaDescripcion.Text = semanas[0].descripcion;
-            txtNombreCurso.Text = "Curso: " + curso.descripcion;
+            txtNombreCurso.WidgetText = "Curso: " + curso.descripcion;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
