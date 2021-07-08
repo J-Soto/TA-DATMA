@@ -38,7 +38,9 @@ namespace InterfazDATMA.Administrador
 
             txtNombrePsico.Text = "";
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
-            psicologos = new BindingList<PsicologoWS.psicologo>(daoPsicologo.listarTodosPsicologos().ToList());
+            var auxPsicologos = daoPsicologo.listarPsicologosPorNombre("");
+            if (auxPsicologos != null) psicologos = new BindingList<PsicologoWS.psicologo>(auxPsicologos.ToList());
+            else psicologos = new BindingList<PsicologoWS.psicologo>();
             dgvPsicologos.DataSource = psicologos;
         }
 
