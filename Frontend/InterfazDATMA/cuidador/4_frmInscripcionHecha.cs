@@ -19,10 +19,11 @@ namespace InterfazDATMA
     {
         public frmCursosDisponibles formAnterior;
         private frmPlantillaGestion plantillaGestion;
+        private frmListaCursoInscritos formAnterior2;
         private CursoTutor ct;
 
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
-        public frmInscripcionHecha(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion, CursoTutor ct)
+        public frmInscripcionHecha(frmCursosDisponibles formAnterior, frmPlantillaGestion plantillaGestion, CursoTutor ct, frmListaCursoInscritos formAnterior2)
         {
             InitializeComponent();
             Design.Ini(this);
@@ -30,12 +31,13 @@ namespace InterfazDATMA
             else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
+            this.formAnterior2 = formAnterior2;
             this.ct = ct;
         }
 
         private void btnIrCurso_Click_1(object sender, EventArgs e)
         {
-            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(null, plantillaGestion, ct.Curso));
+            plantillaGestion.abrirFormulario(new frmDetalleCursoInscrito(formAnterior2, plantillaGestion, ct.Curso));
         }
 
         private void btnIrLista_Click_1(object sender, EventArgs e)
