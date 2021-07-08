@@ -66,7 +66,7 @@ namespace InterfazDATMA
             dgvActividades.DataSource = actividades[0];
             txtSemanaDescripcion.Text = semanas[0].descripcion;
             
-            if (!curso.descripcion.Contains("Curso"))
+            if (curso.descripcion.Contains("Curso"))
             {
                 txtNombreCurso.WidgetText = curso.descripcion;
             } else
