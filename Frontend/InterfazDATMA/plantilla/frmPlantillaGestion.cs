@@ -208,7 +208,7 @@ namespace InterfazDATMA.plantilla
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 

@@ -24,8 +24,8 @@ namespace InterfazDATMA
         private List<CursoWS.curso> cursos = null;
         private CursoWS.CursoWSClient daoCurso = new CursoWS.CursoWSClient();
         private ActividadWS.ActividadWSClient daoActividad = new ActividadWS.ActividadWSClient();
-        private SemanaWS.SemanaWSClient daoSemana = new SemanaWS.SemanaWSClient();
-        private List<Tuple<string, string, string, string>> calendario = new List<Tuple<string, string, string, string>>();
+        private List<InfoActividad> infoActividades = new List<InfoActividad>();
+
         public frmListaCursoInscritos(frmPlantillaGestion plantillaGestion)
         {
             InitializeComponent();
@@ -37,51 +37,70 @@ namespace InterfazDATMA
 
             TableStyles.CopyStyles(dgvListaCursos);
 
-            //foreach (var curso in cursos)
-            //{
-            //    if (curso != null)
-            //    {
-            //        var temp2 = daoCurso.listarSemanasPorIdCurso(curso.idCurso);    //semanas de cada curso
-            //        temp2 = temp2.Where(semana => semana != null).ToArray();        //eliminamos los null
-            //        foreach (var semana in temp2)
-            //        {
-            //            var temp3 = daoActividad.listarActividadesIdSemana(semana.id); //actividades de cada semana
-            //            if (temp3 != null)
-            //            {
-            //                foreach (var actividad in temp3)
-            //                {
-            //                    if (actividad != null)
-            //                    {
-            //                        ActividadWS.actividad aux = new ActividadWS.actividad();
-            //                        aux = actividad;
-            //                        Tuple<string, string, string, string> aux2 = new Tuple<string, string, string, string>(curso.descripcion, aux.fecha.ToLongDateString(), aux.horaInicioStr, aux.horaFinStr);
-            //                        calendario.Insert(i, aux2);
-            //                        i++;
+            foreach (var curso in cursos)
+            {
+                if (curso is object)
+                {
+                    var temp2 = daoCurso.listarSemanasPorIdCurso(curso.idCurso);    //semanas de cada curso
+                    if (temp2 is object)
+                    {
+                        foreach (var semana in temp2)
+                        {
+                            var temp3 = daoActividad.listarActividadesIdSemana(semana.id); //actividades de cada semana
+                            if (temp3 is object)
+                            {
+                                foreach (var actividad in temp3)
+                                {
+                                    if (actividad is object)
+                                    {
+                                        infoActividades.Add(new InfoActividad(curso, actividad));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
-            //DataTable dt = new DataTable();
-            //dt.Columns.Add("Curso", typeof(string));
-            //dt.Columns.Add("Fecha", typeof(string));
-            //dt.Columns.Add("Hora Inicio", typeof(string));
-            //dt.Columns.Add("Hora Fin", typeof(string));
-            //foreach (var tuple in calendario)
-            //{
-            //    //DataRow row = new DataRow()
-            //    //row.
-            //    dt.Rows.Add(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
-            //}
-            //dgvCalendario.DataSource = dt;
-            //dgvCalendario.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dgvCalendario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dgvCalendario.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dgvCalendario.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TableStyles.ApplyStyles(dgvCalendario);
+            dgvCalendario.AutoGenerateColumns = false;
+            dgvCalendario.DataSource = infoActividades;
+            
 
             this.plantillaGestion = plantillaGestion;
+        }
+
+        private class InfoActividad
+        {
+            private CursoWS.curso curso;
+            private ActividadWS.actividad actividad;
+
+            public InfoActividad(CursoWS.curso curso, ActividadWS.actividad actividad)
+            {
+                this.curso = curso;
+                this.actividad = actividad;
+            }
+
+            public string Curso
+            {
+                get => curso.descripcion;
+            }
+
+            public DateTime Fecha
+            {
+                get => actividad.fecha;
+            }
+
+            public DateTime HoraIni
+            {
+                get => Convert.ToDateTime(actividad.horaInicioStr);
+                //get => actividad.horaInicioStr;
+            }
+
+            public DateTime HoraFin
+            {
+                get => Convert.ToDateTime(actividad.horaFinStr);
+            }
         }
 
         public void FetchCursos()

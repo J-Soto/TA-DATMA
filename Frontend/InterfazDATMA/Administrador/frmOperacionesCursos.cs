@@ -44,6 +44,7 @@ namespace InterfazDATMA.Administrador
             else ThemeManager.Theme = MaterialSkinManager.Themes.LIGHT;
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            btnReporte.Visible = false;
             FetchCursos();
             UpdateCursosTable();
         }

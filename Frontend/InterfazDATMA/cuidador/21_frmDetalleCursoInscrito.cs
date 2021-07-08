@@ -36,9 +36,13 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
             this.curso = curso;
+
             
-            dgvSemanas.AutoGenerateColumns = false;
+            TableStyles.ApplyStyles(dgvActividades);
+            TableStyles.ApplyStyles(dgvSemanas);
+
             dgvActividades.AutoGenerateColumns = false;
+            dgvSemanas.AutoGenerateColumns = false;
 
             // obtener semanas y actividades
             var temp = daoCurso.listarSemanasPorIdCurso(curso.idCurso);
