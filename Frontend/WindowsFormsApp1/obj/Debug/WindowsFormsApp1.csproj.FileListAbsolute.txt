@@ -56,3 +56,4 @@ C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplet
 C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Lab10\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\DUXAT\Documents\Uni\2021-1\LP2\TA\TA-LP2-Fronted\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Gian Pierre\Source\Repos\TA-DATMA\Frontend\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache

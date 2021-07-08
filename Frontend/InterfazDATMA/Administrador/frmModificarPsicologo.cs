@@ -78,6 +78,7 @@ namespace InterfazDATMA.Administrador
             txtDni.Text = psicologo.DNI;
             txtTelf.Text = psicologo.telefono;
             txtCelular.Text = psicologo.celular;
+            dtpFechaNacimiento.Value = psicologo.fechaNacimiento;
             if (psicologo.genero == 'M')
             {
                 rbtnHombre.Checked = true;

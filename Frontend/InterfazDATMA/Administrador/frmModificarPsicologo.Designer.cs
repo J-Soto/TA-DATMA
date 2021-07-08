@@ -59,6 +59,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnGuardar = new MaterialSkin.Controls.MaterialButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Header = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -333,7 +334,7 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
             this.nuevoDistrito.Name = "nuevoDistrito";
-            this.nuevoDistrito.Size = new System.Drawing.Size(150, 36);
+            this.nuevoDistrito.Size = new System.Drawing.Size(155, 36);
             this.nuevoDistrito.TabIndex = 107;
             this.nuevoDistrito.Text = "Agregar Distrito";
             this.nuevoDistrito.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -352,7 +353,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(96, 36);
             this.btnCancelar.TabIndex = 108;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -371,7 +372,7 @@ namespace InterfazDATMA.Administrador
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(86, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(88, 36);
             this.btnGuardar.TabIndex = 109;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -384,6 +385,18 @@ namespace InterfazDATMA.Administrador
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // Header
+            // 
+            this.Header.AutoSize = true;
+            this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Header.Font = new System.Drawing.Font("Century Gothic", 25F);
+            this.Header.ForeColor = System.Drawing.Color.White;
+            this.Header.Location = new System.Drawing.Point(291, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(502, 61);
+            this.Header.TabIndex = 110;
+            this.Header.Text = "Modificar Psicólogo";
+            // 
             // frmModificarPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -391,6 +404,7 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1254, 723);
             this.ControlBox = false;
+            this.Controls.Add(this.Header);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.nuevoDistrito);
@@ -462,6 +476,7 @@ namespace InterfazDATMA.Administrador
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnGuardar;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label Header;
         //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;
         //private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;

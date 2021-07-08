@@ -95,7 +95,7 @@ namespace InterfazDATMA.Administrador
                     txtDistrito.Text = distrito.nombre;
                 }
             }
-
+            this.errorProvider.SetError(txtDistrito, "");
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
@@ -206,7 +206,7 @@ namespace InterfazDATMA.Administrador
             }
 
             // rbtnMujer
-            if (tutor.genero == 2)
+            if (rbtnMujer.Checked == false && rbtnHombre.Checked == false)
             {
                 this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
                 validacionCorrecta = false;
@@ -377,6 +377,18 @@ namespace InterfazDATMA.Administrador
         {
             formPlantilla.abrirFormulario(formOperacionPersona);
 
+        }
+
+        private void rbtnHombre_Validating(object sender, CancelEventArgs e)
+        {
+            if (rbtnMujer.Checked == false && rbtnHombre.Checked == false)
+            {
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
+            }
+            else
+            {
+                this.errorProvider.SetError(rbtnMujer, "");
+            }
         }
     }
 }

@@ -61,6 +61,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnSiguiente = new MaterialSkin.Controls.MaterialButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Header = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -277,12 +278,20 @@ namespace InterfazDATMA.Administrador
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // Header
+            // 
+            resources.ApplyResources(this.Header, "Header");
+            this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Header.ForeColor = System.Drawing.Color.White;
+            this.Header.Name = "Header";
+            // 
             // frmModificarTutor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ControlBox = false;
+            this.Controls.Add(this.Header);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAsignarUsuario);
@@ -351,6 +360,7 @@ namespace InterfazDATMA.Administrador
         private MaterialSkin.Controls.MaterialButton btnCancelar;
         private MaterialSkin.Controls.MaterialButton btnSiguiente;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label Header;
         //private MaterialSkin.Controls.MaterialFlatButton btnAsignarUsuario;
     }
 }

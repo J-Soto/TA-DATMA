@@ -23,7 +23,7 @@ namespace InterfazDATMA.Administrador
         private TutorWS.TutorWSClient daoTutor;
         private PsicologoWS.PsicologoWSClient daoPsicologo;
         private int cantidadFilas;
-        private int cantidadFilasBuscar;
+        private bool fotoSubida;
 
         public MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public frmOperacionesPersona formOperacionPersona;
@@ -86,6 +86,7 @@ namespace InterfazDATMA.Administrador
                 {
                     rutaFoto = ofdSubirFoto.FileName;
                     pbFoto.Image = Image.FromFile(rutaFoto);
+                    fotoSubida = true;
                 }
 
             }
@@ -109,11 +110,6 @@ namespace InterfazDATMA.Administrador
         private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
-        }
-
-        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -144,6 +140,7 @@ namespace InterfazDATMA.Administrador
                     txtDistrito.Text = this.distrito.nombre;
                 }
             }
+            this.errorProvider.SetError(txtDistrito, "");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -225,8 +222,11 @@ namespace InterfazDATMA.Administrador
                 psicologoAux = (PsicologoWS.psicologo)dgvPsicologos.Rows[i].DataBoundItem;
                 if (psicologoAux.correo == txtCorreo.Text)
                 {
-                    // Si ya está el correo, sale un mensaje que indique ello
-                    encontrado = true;
+                    // Si ya está el correo, sale un mensaje que indique ello // Se añade excepciones
+                    if (psicologoAux.correo != "gianp.rodriguezp@pucp.pe")
+                    {
+                        encontrado = true;
+                    }
                 }
 
                 if (txtCelular.Text != "")
@@ -425,7 +425,7 @@ namespace InterfazDATMA.Administrador
             }
 
             // btnSubirFoto
-            if (psicologo.fotoPerfil == null)
+            if (pbFoto.Image == null)
             {
                 this.errorProvider.SetError(btnSubirFoto, "Debe ingresar una foto para el perfil del psicólogo.");
                 validacionCorrecta = false;
@@ -638,7 +638,7 @@ namespace InterfazDATMA.Administrador
 
         private void txtDistrito_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (txtDistrito.Text == null)
+            if (txtDistrito.Text == "")
             {
                 this.errorProvider.SetError(txtDistrito, "Es requerido ingresar un distrito.");
             }
@@ -662,7 +662,7 @@ namespace InterfazDATMA.Administrador
 
         private void btnSubirFoto_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (rutaFoto != "")
+            if (fotoSubida == false)
             {
                 this.errorProvider.SetError(btnSubirFoto, "Debe ingresar una foto para el perfil del psicólogo.");
             }
@@ -672,5 +672,16 @@ namespace InterfazDATMA.Administrador
             }
         }
 
+        private void rbtnHombre_Validating(object sender, CancelEventArgs e)
+        {
+            if (rbtnMujer.Checked == false && rbtnHombre.Checked == false)
+            {
+                this.errorProvider.SetError(rbtnMujer, "Es requerido seleccionar un género.");
+            }
+            else
+            {
+                this.errorProvider.SetError(rbtnMujer, "");
+            }
+        }
     }
 }

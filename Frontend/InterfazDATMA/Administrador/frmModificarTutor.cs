@@ -77,6 +77,7 @@ namespace InterfazDATMA.Administrador
             txtDni.Text = tutor.DNI;
             txtTelf.Text = tutor.telefono;
             txtCelular.Text = tutor.celular;
+            dtpFechaNacimiento.Value = tutor.fechaNacimiento;
             if (tutor.genero == 'M')
             {
                 rbtnHombre.Checked = true;

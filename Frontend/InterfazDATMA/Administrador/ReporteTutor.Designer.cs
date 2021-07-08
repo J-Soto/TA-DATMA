@@ -43,8 +43,8 @@ namespace InterfazDATMA.Administrador
             this.btnDescargar.Depth = 0;
             this.btnDescargar.HighEmphasis = true;
             this.btnDescargar.Icon = null;
-            this.btnDescargar.Location = new System.Drawing.Point(815, 363);
-            this.btnDescargar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnDescargar.Location = new System.Drawing.Point(1137, 479);
+            this.btnDescargar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDescargar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDescargar.Name = "btnDescargar";
             this.btnDescargar.Size = new System.Drawing.Size(106, 36);
@@ -61,22 +61,22 @@ namespace InterfazDATMA.Administrador
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(301, 72);
+            this.axAcroPDF1.Location = new System.Drawing.Point(248, 87);
+            this.axAcroPDF1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(351, 337);
+            this.axAcroPDF1.Size = new System.Drawing.Size(791, 428);
             this.axAcroPDF1.TabIndex = 3;
             // 
             // ReporteTutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 425);
+            this.ClientSize = new System.Drawing.Size(1800, 654);
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.btnDescargar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReporteTutor";
-            this.Padding = new System.Windows.Forms.Padding(2, 33, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(3, 51, 3, 3);
             this.Text = "ReporteTutor";
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);

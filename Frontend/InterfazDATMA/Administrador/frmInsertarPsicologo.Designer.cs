@@ -71,6 +71,7 @@ namespace InterfazDATMA.Administrador
             this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Header = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutores)).BeginInit();
@@ -152,7 +153,7 @@ namespace InterfazDATMA.Administrador
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(415, 26);
             this.dtpFechaNacimiento.TabIndex = 51;
-            this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
+            this.dtpFechaNacimiento.Validating += new System.ComponentModel.CancelEventHandler(this.dtpFechaNacimiento_Validating);
             // 
             // rbtnHombre
             // 
@@ -167,6 +168,7 @@ namespace InterfazDATMA.Administrador
             this.rbtnHombre.Text = "Masculino";
             this.rbtnHombre.UseVisualStyleBackColor = true;
             this.rbtnHombre.Click += new System.EventHandler(this.rbtnHombre_Click);
+            this.rbtnHombre.Validating += new System.ComponentModel.CancelEventHandler(this.rbtnHombre_Validating);
             // 
             // rbtnMujer
             // 
@@ -181,6 +183,7 @@ namespace InterfazDATMA.Administrador
             this.rbtnMujer.Text = "Femenino";
             this.rbtnMujer.UseVisualStyleBackColor = true;
             this.rbtnMujer.Click += new System.EventHandler(this.rbtnMujer_Click);
+            this.rbtnMujer.Validating += new System.ComponentModel.CancelEventHandler(this.rbtnMujer_Validating);
             // 
             // txtNombre
             // 
@@ -311,6 +314,7 @@ namespace InterfazDATMA.Administrador
             this.btnSubirFoto.Text = "...";
             this.btnSubirFoto.UseVisualStyleBackColor = true;
             this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click);
+            this.btnSubirFoto.Validating += new System.ComponentModel.CancelEventHandler(this.btnSubirFoto_Validating);
             // 
             // txtDistrito
             // 
@@ -319,6 +323,7 @@ namespace InterfazDATMA.Administrador
             this.txtDistrito.Name = "txtDistrito";
             this.txtDistrito.Size = new System.Drawing.Size(248, 26);
             this.txtDistrito.TabIndex = 73;
+            this.txtDistrito.Validating += new System.ComponentModel.CancelEventHandler(this.txtDistrito_Validating);
             // 
             // pbFoto
             // 
@@ -343,7 +348,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(96, 36);
             this.btnCancelar.TabIndex = 74;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -362,7 +367,7 @@ namespace InterfazDATMA.Administrador
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(86, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(88, 36);
             this.btnGuardar.TabIndex = 75;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -381,7 +386,7 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
             this.nuevoDistrito.Name = "nuevoDistrito";
-            this.nuevoDistrito.Size = new System.Drawing.Size(150, 36);
+            this.nuevoDistrito.Size = new System.Drawing.Size(155, 36);
             this.nuevoDistrito.TabIndex = 76;
             this.nuevoDistrito.Text = "Agregar Distrito";
             this.nuevoDistrito.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -518,6 +523,18 @@ namespace InterfazDATMA.Administrador
             this.foto.ReadOnly = true;
             this.foto.Width = 70;
             // 
+            // Header
+            // 
+            this.Header.AutoSize = true;
+            this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Header.Font = new System.Drawing.Font("Century Gothic", 25F);
+            this.Header.ForeColor = System.Drawing.Color.White;
+            this.Header.Location = new System.Drawing.Point(291, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(436, 61);
+            this.Header.TabIndex = 79;
+            this.Header.Text = "Nuevo Psicólogo";
+            // 
             // frmInsertarPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -526,6 +543,7 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1254, 723);
             this.ControlBox = false;
+            this.Controls.Add(this.Header);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.dgvTutores);
             this.Controls.Add(this.nuevoDistrito);
@@ -604,6 +622,7 @@ namespace InterfazDATMA.Administrador
         private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewImageColumn foto;
+        private System.Windows.Forms.Label Header;
         //private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
         //private MaterialSkin.Controls.MaterialFlatButton btnGuardar;

@@ -56,6 +56,7 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito = new MaterialSkin.Controls.MaterialButton();
             this.btnSiguiente = new MaterialSkin.Controls.MaterialButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Header = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,6 +196,7 @@ namespace InterfazDATMA.Administrador
             this.rbtnHombre.Text = "Masculino";
             this.rbtnHombre.UseVisualStyleBackColor = true;
             this.rbtnHombre.Click += new System.EventHandler(this.rbtnHombre_Click);
+            this.rbtnHombre.Validating += new System.ComponentModel.CancelEventHandler(this.rbtnHombre_Validating);
             // 
             // dtpFechaNacimiento
             // 
@@ -293,7 +295,7 @@ namespace InterfazDATMA.Administrador
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(96, 36);
             this.btnCancelar.TabIndex = 108;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -312,7 +314,7 @@ namespace InterfazDATMA.Administrador
             this.nuevoDistrito.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nuevoDistrito.MouseState = MaterialSkin.MouseState.HOVER;
             this.nuevoDistrito.Name = "nuevoDistrito";
-            this.nuevoDistrito.Size = new System.Drawing.Size(150, 36);
+            this.nuevoDistrito.Size = new System.Drawing.Size(155, 36);
             this.nuevoDistrito.TabIndex = 109;
             this.nuevoDistrito.Text = "Agregar Distrito";
             this.nuevoDistrito.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -331,7 +333,7 @@ namespace InterfazDATMA.Administrador
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(92, 36);
+            this.btnSiguiente.Size = new System.Drawing.Size(95, 36);
             this.btnSiguiente.TabIndex = 110;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -344,6 +346,18 @@ namespace InterfazDATMA.Administrador
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // Header
+            // 
+            this.Header.AutoSize = true;
+            this.Header.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Header.Font = new System.Drawing.Font("Century Gothic", 25F);
+            this.Header.ForeColor = System.Drawing.Color.White;
+            this.Header.Location = new System.Drawing.Point(291, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(318, 61);
+            this.Header.TabIndex = 111;
+            this.Header.Text = "Nuevo Tutor";
+            // 
             // frmInsertarTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -351,6 +365,7 @@ namespace InterfazDATMA.Administrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(107)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1254, 723);
             this.ControlBox = false;
+            this.Controls.Add(this.Header);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.nuevoDistrito);
             this.Controls.Add(this.btnCancelar);
@@ -413,6 +428,7 @@ namespace InterfazDATMA.Administrador
         private MaterialSkin.Controls.MaterialButton nuevoDistrito;
         private MaterialSkin.Controls.MaterialButton btnSiguiente;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label Header;
         //private MaterialSkin.Controls.MaterialFlatButton nuevoDistrito;
         //private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
         //private MaterialSkin.Controls.MaterialFlatButton btnSiguiente;
