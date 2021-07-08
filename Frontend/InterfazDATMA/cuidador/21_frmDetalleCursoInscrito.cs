@@ -36,8 +36,6 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
             this.curso = curso;
-
-            
             TableStyles.ApplyStyles(dgvActividades);
             TableStyles.ApplyStyles(dgvSemanas);
 
@@ -56,7 +54,8 @@ namespace InterfazDATMA
                     if (acti is object)
                     {
                         actividades.Add(new List<ActividadWS.actividad>(acti));
-                    } else
+                    }
+                    else
                     {
                         actividades.Add(new List<ActividadWS.actividad>());
                     }
@@ -66,11 +65,19 @@ namespace InterfazDATMA
             dgvSemanas.DataSource = semanas;
             dgvActividades.DataSource = actividades[0];
             txtSemanaDescripcion.Text = semanas[0].descripcion;
-            txtNombreCurso.WidgetText = "Curso: " + curso.descripcion;
+            
+            if (!curso.descripcion.Contains("Curso"))
+            {
+                txtNombreCurso.WidgetText = curso.descripcion;
+            } else
+            {
+                txtNombreCurso.WidgetText = "Curso " + curso.descripcion;
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
+            formAnterior.FetchCursos();
             plantillaGestion.abrirFormulario(formAnterior);
         }
 

@@ -36,7 +36,7 @@ namespace InterfazDATMA
             this.formAnterior = formAnterior;
             this.plantillaGestion = plantillaGestion;
             //this.act = act;
-            NombreCurso.Text = curso;
+            NombreCurso.WidgetText = curso;
             // obtener material
             var temp = actDao.listarVideosPorIdActividad(act.idActividad);
             if (temp is object)
